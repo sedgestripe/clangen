@@ -325,6 +325,7 @@ class StartScreen(Screens):
         game.load_settings()
 
 
+# what is a class
 class SwitchClanScreen(Screens):
     """
     TODO: DOCS
