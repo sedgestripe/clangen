@@ -38,6 +38,9 @@ from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
 from scripts.game_structure.windows import SaveError
 from scripts.game_structure.windows import RetireScreen, DeputyScreen, NameKitsWindow
 
+grad_name = ""
+grad_ID = ""
+
 class Events:
     """
     TODO: DOCS
@@ -60,6 +63,7 @@ class Events:
         """
         TODO: DOCS
         """
+
         if self.checks == [-1,-1,-1] and game.clan.your_cat and game.clan.your_cat.inheritance:
             self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), None]
             if game.clan.leader:
@@ -1046,6 +1050,27 @@ class Events:
                 ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
             ceremony_txt = ceremony_txt.replace('app1', str(Cat.all_cats[game.clan.your_cat.apprentice[-1]].name))
             game.cur_events_list.insert(0, Single_Event(ceremony_txt))
+
+    def check_graduating_app(self):
+        print("Your apprentice graduated") # for testing
+        try:
+            resource_dir = "resources/dicts/events/lifegen_events/"
+            with open(f"{resource_dir}ceremonies.json",
+                        encoding="ascii") as read_file:
+                    self.d_txt = ujson.loads(read_file.read())
+            ceremony_txt = random.choice(self.d_txt['graduating_app ' + game.clan.your_cat.status])
+            if game.clan.leader:
+                ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+            ceremony_txt = ceremony_txt.replace('app1', str(Cat.all_cats[game.clan.your_cat.apprentice[-1]].name))
+            try:
+                ceremony_txt = ceremony_txt.replace('t_c', str(Cat.all_cats[game.clan.your_cat.apprentice[-1]].name))
+            except:
+                ceremony_txt = ceremony_txt.replace('t_c', 'a real cat')
+            print(ceremony_txt) # for testing
+            game.cur_events_list.insert(
+                0, Single_Event(f'{ceremony_txt}', "ceremony")) # <- issue here
+        except:
+            print("Your apprentice graduated, but event text could not be shown. Congrats?")
 
     def check_gain_mate(self, checks):
         
@@ -2171,6 +2196,10 @@ class Events:
                             preparedness = "prepared"
 
                     if cat.status == 'apprentice':
+                        grad_ID = cat.ID
+                        grad_ID = str(grad_ID)
+                        if grad_ID == game.clan.your_cat.apprentice[0]:
+                            self.check_graduating_app()
                         self.ceremony(cat, 'warrior', preparedness)
                         self.ceremony_accessory = True
                         self.gain_accessories(cat)
