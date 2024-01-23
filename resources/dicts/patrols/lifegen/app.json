@@ -803,7 +803,7 @@
         "chance_of_success": 40,
         "success_outcomes": [
             {
-                "text": "You jump to your paws excitedly, running after you mentor to explore the territory, they escort you through the scenery showing you places in the territory you never knew existed!",
+                "text": "You jump to your paws excitedly, running after your mentor to explore the territory, they escort you through the scenery showing you places in the territory you never knew existed!",
                 "exp": 20,
                 "weight": 20
             }
@@ -962,7 +962,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "As you head out, the territory seems to grow into a maze, every tree and rock looks the same, as you begin to panic, a patrol of warriors stumble upon you looking surprised to see you alone, you mentor happens to be in the patrol and they scold you for being so reckless, immediately taking you home.",
+                "text": "As you head out, the territory seems to grow into a maze, every tree and rock looks the same, as you begin to panic, a patrol of warriors stumble upon you looking surprised to see you alone, your mentor happens to be in the patrol and they scold you for being so reckless, immediately taking you home.",
                 "exp": 0,
                 "weight": 20
             }
