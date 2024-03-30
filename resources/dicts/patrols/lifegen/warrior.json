@@ -667,5 +667,86 @@
                 "weight": 20
             }
         ]
-    }
+    },
+	{
+		"patrol_id": "lifegen_warrior_19",
+        "biome": [
+            "Beach"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "border"
+        ],
+        "patrol_art": "lg_warrior_default",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "As the salty sea air hits your nose and stings your eyes, you notice something green and long on the shoreline.",
+        "decline_text": "Curiosity killed the cat, and you don't want to be an example of that. You quickly turn around and walk away.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+		    {
+                "text": "How fun! Seaweed has no actual use, but popping the bubbles on it is fun!",
+                "exp": 15,
+                "weight": 20
+            },
+            {
+                "text": "Seaweed! You decide to gather some of the pieces to take it to the medicine cat den. Wash it out to remove the salt and it could be beneficial as makeshift cobwebs to dress wounds.",
+                "exp": 15,
+                "weight": 20,
+				"stat_skill": ["HEALER,1", "INNOVATOR,1"]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Seaweed. You are unimpressed by the long tendrils and turn away. Nothing useful there.",
+                "exp": 0,
+                "weight": 20
+			}
+		]
+	},
+	{
+		"patrol_id": "lifegen_warrior_20",
+        "biome": [
+            "Beach"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "hunting",
+			"small_prey"
+        ],
+        "patrol_art": "lg_warrior_default",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "As you walk across the shore, you notice a few twolegs clustered around. They are all holding long, brown rods. Next to them is a blue-and-white box with a tantalizing scent wafting from it.",
+        "decline_text": "Twolegs are bad news. You quickly and quietly leave the area, making a mental note to warn the clan of their presence.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+		    {
+                "text": "You sneak towards the twolegs and their box. As you get closer, you realize the scent is of fish. You reach into the box while no one is looking and hook a fish with your claws, running away before anyone could spot you.",
+                "exp": 15,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Upon getting closer to the box, you realize it's filled with fish. Excited, you rush towards it before a twoleg picks you up. You hiss as the twoleg tries to subdue you. Raking your claws against its arm, it yowls and lets you go. You run away without a second thought.",
+                "exp": 0,
+                "weight": 20
+			}
+		]
+	}
 ]
