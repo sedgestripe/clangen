@@ -573,7 +573,7 @@
             "Hates making mistakes",
             "Is afraid of being in the way",
             "Was shadowing r_c all day",
-            "Feels as if {PRONOUN/m_c/subject} {VERB/m_c/don't/does} not have much talent",
+            "Feels as if {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} have much talent",
             "Prefers others taking the lead",
             "Cowering from the loud, towering birds",
             "Is fearful {PRONOUN/m_c/poss} mistakes will harm {PRONOUN/m_c/poss} Clanmates",
@@ -648,7 +648,31 @@
         ],
         "main_trait_constraint": [
             "bossy"
-        ]   
+        ]
+    },
+    {
+        "id": "patient_kit",
+        "thoughts": [
+            "Is sitting idly for {PRONOUN/m_c/poss} turn",
+            "Is staring at a cacoon, waiting for the butterfly to immerge",
+            "Isn't in a rush wanting to be an apprentice",
+            "Waiting for the elders to wake up and hear more stories"
+        ],
+        "main_trait_constraint": [
+            "patient"
+        ]
+    },
+    {
+        "id": "secretive_kit",
+        "thoughts": [
+            "Knows the best spot to watch sunsets",
+            "Heard r_c's secrets from within an earshot",
+            "Rummage in a Clanmate's nest",
+            "Is the best cat to bring secrets to"
+        ],
+        "main_trait_constraint": [
+            "secretive"
+        ]    
     },
     {
         "id": "manipulative_kit",

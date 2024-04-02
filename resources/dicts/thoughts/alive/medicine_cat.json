@@ -20,6 +20,20 @@
         ]
     },
     {
+        "id": "arrogant_medicine_cat",
+        "thoughts": [
+            "Parade {PRONOUN/m_c/poss} respected rank around others",
+            "Brag {PRONOUN/m_c/subject} didn't have to follow the Warrior Code",
+            "Claim {PRONOUN/m_c/subject}'ll find more herbs than previous healers",
+            "Bluntly claim {PRONOUN/m_c/subject} can choose who {PRONOUN/m_c/subject}'ll heal",
+            "Taunt Clanmates they're alive because of {PRONOUN/m_c/object}",
+            "Proclaim StarClan never gave {PRONOUN/m_c/object} vague omens"
+        ],
+        "main_trait_constraint": [
+            "arrogant"
+        ]    
+    },
+    {
         "id": "ambitious_medicine_cat",
         "thoughts": [
             "Insists on taking on more tasks",
@@ -78,7 +92,8 @@
         "id": "careful_medicine_cat",
         "thoughts": [
             "Counts and recounts the poppy seeds",
-            "Makes sure none of the herbs get mixed up"
+            "Makes sure none of the herbs get mixed up",
+            "Stored herbs by its scents and designs"
         ],
         "main_trait_constraint": [
             "careful"
@@ -124,6 +139,16 @@
         "main_trait_constraint": [
             "compassionate"
         ]
+    },  
+    {
+        "id": "competitive_medicine_cat",
+        "thoughts": [
+            "Racing through the territory collecting herbs",
+            "Brags {PRONOUN/m_c/subject}'ll heal the most patients than previous healers"
+        ],
+        "main_trait_constraint": [
+            "competitive"
+        ]     
     },
     {
         "id": "confident_medicine_cat",
@@ -134,11 +159,25 @@
         "main_trait_constraint": [
             "confident"
         ]
+    },  
+    {
+        "id": "cunning_medicine_cat",
+        "thoughts": [
+            "Is using an alternative herbical {PRONOUN/m_c/subject} found better than the orginal",
+            "Design a pouch to carry more herbs",
+            "Effortlessly swipe some herbs into a prey"
+        ],
+        "main_trait_constraint": [
+            "cunning"
+        ]     
     },
     {
         "id": "daring_medicine_cat",
         "thoughts": [
-            "Steals catmint from a Twoleg garden"
+            "Steals catmint from a Twoleg garden",
+            "Is testing out obscured herbs",
+            "Travelling far to seek out more herbs",
+            "Collecting herbs in dangerous locations"
         ],
         "main_trait_constraint": [
             "daring"
@@ -161,6 +200,76 @@
         "main_trait_constraint": [
             "fierce"
         ]
+    },  
+    {
+        "id": "flamboyant_medicine_cat",
+        "thoughts": [
+            "Is redesigning the medicine den with alluring trickets and flowers",
+            "Hisses at a Clanmate if they don't want the herbs, they can leave",
+            "Nose crunkle at certain herb scents",
+            "Is using the leftover herbs as an assessory"
+        ],
+        "main_trait_constraint": [
+            "flamboyant"
+        ]
+    },  
+    {
+        "id": "flexible_medicine_cat",
+        "thoughts": [
+            "Can switch patients effortlessly",
+            "Is traveling with a myriad of herbs",
+            "Is composed when {PRONOUN/m_c/poss} schedule was changed"
+        ],
+        "main_trait_constraint": [
+            "flexible"
+        ]     
+    },
+    {
+        "id": "gloomy_medicine_cat",
+        "thoughts": [
+            "Is shaken at the amount of cats in the medicine den",
+            "Seldomly gives the bad news of a Clanmate's health",
+            "Panics when a single herbs goes missing",
+            "Believes StarClan is punishing {PRONOUN/m_c/object} whenever a new illness appears",
+            "Regrets following this path",
+            "Sigh heavily, knowing {PRONOUN/m_c/subject} can't save loved ones",
+            "Believes c_n will be destoryed by another outbreak",
+            "Wants to let {PRONOUN/m_c/poss} pelt down",
+            "Believes outbreaks are inevilable",
+            "Sees minor inconviences as signs of destruction from StarClan"
+        ],
+        "main_trait_constraint": [
+            "gloomy"
+        ]    
+    },
+    {
+        "id": "grumpy_medicine_cat",
+        "thoughts": [
+            "Grumbles sorting through herbs for a minor stomachache",
+            "Tossing out rowdy kits from the medicine den",
+            "Is blunt as a razor claw",
+            "Threaten to shove the sour herbs down a patient's throat",
+            "Doesn't have the patience to treat whinny cats",
+            "Is opinionated on how to treat wounds",
+            "Hissing at Clanmates getting in {PRONOUN/m_c/poss} way",
+            "Hisses at StarClan's vague warnings and omens"
+        ],
+        "main_trait_constraint": [
+            "grumpy"
+        ]
+    },
+    {
+        "id": "humble_medicine_cat",
+        "thoughts": [
+            "Is graceful to StarClan for herbs, even if a miminal is found",
+            "Is dejected at the number of cats visiting the medicine den",
+            "Promised to heal as much as {PRONOUN/m_c/subject} can",
+            "Is baseful at compliments {PRONOUN/m_c/subject} receive from Clanmates",
+            "Is saying that {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} deserve {PRONOUN/m_c/poss} full name"
+        ],
+        "main_trait_constraint": [
+            "humble"
+        ]    
     },
     {
         "id": "insecure_medicine_cat",
@@ -182,7 +291,10 @@
             "Wishes the warriors shared an interest in herbs",
             "Wants to talk to the leader about having a new apprentice",
             "Wishes for an apprentice, as {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a bit lonely",
-            "Hasn't talked to any warriors for a few days"
+            "Hasn't talked to any warriors for a few days",
+            "Prefers the comfort and solace inside the medicine den",
+            "Would only ecscape the medicine to grab a prey",
+            "Felt more at home in the medicine than anywhere else"
         ],
         "main_trait_constraint": [
             "lonesome"
@@ -191,7 +303,8 @@
     {
         "id": "loving_medicine_cat",
         "thoughts": [
-            "Watches over some newborn kits"
+            "Watches over some newborn kits",
+            "Gently paw over some newborn kits asleep"
         ],
         "main_trait_constraint": [
             "loving"
@@ -199,6 +312,17 @@
         "random_status_constraint":[
             "newborn"
         ]
+    },  
+    {
+        "id": "loving_medicine_cat",
+        "thoughts": [
+            "Wraps {PRONOUN/m_c/poss} tail over a Clanmate, ressurring them with a smile",
+            "Is giving sick cats company with small talks and laughters",
+            "Was repeatedly told to eat"
+        ],
+        "main_trait_constraint": [
+            "loving"
+        ]     
     },
     {
         "id": "loyal_medicine_cat",
@@ -211,9 +335,23 @@
         ]
     },
     {
+        "id": "oblivious_medicine_cat",
+        "thoughts": [
+            "Was running around for a certain herb that was already used",
+            "Didn't notice the herb that was already in {PRONOUN/m_c/poss} paw",
+            "Realized {PRONOUN/m_c/subject} didn't need a crucial herb for a spliter",
+            "Was cobwebs meant for wounds or stomachaches?",
+            "Was lost collecting herbs. Again."
+        ],
+        "main_trait_constraint": [
+            "oblivious"
+        ]    
+    },
+    {
         "id": "nervous_medicine_cat",
         "thoughts": [
-            "Recounts the amount of catmint in {PRONOUN/m_c/poss} stores"
+            "Recounts the amount of catmint in {PRONOUN/m_c/poss} stores",
+            "Panics when a single herb goes missing"
         ],
         "main_trait_constraint": [
             "nervous"
@@ -223,11 +361,28 @@
         "id": "playful_medicine_cat",
         "thoughts": [
             "Excitedly teaches the kits about basic herbs",
-            "Indulges the kits as they play hide and seek around the medicine den"
+            "Indulges the kits as they play hide and seek around the medicine den",
+            "Creating games for nervous kits visting the medicine den"
         ],
         "main_trait_constraint": [
             "playful"
         ]
+    },
+    {
+        "id": "rebellious_medicine_cat",
+        "thoughts": [
+            "Refuses to share gossip at the half-moon meeting",
+            "Refuses to give another Clan's medicine cat some herbs",
+            "Grumbles at StarClan sticking their nose in {PRONOUN/m_c/poss} affairs",
+            "Is planning to trespass into rival Clans' borders",
+            "Refuses to follow medicical traditions",
+            "Has no qualms debating against StarClan",
+            "Has no qualms debating against {PRONOUN/m_c/poss} leader",
+            "Ponders swaying omens for {PRONOUN/m_c/self}"
+        ],
+        "main_trait_constraint": [
+            "rebellious"
+        ]    
     },
     {
         "id": "responsible_medicine_cat",
@@ -260,7 +415,8 @@
     {
         "id": "sneaky_medicine_cat",
         "thoughts": [
-            "Seems to be hiding something in the medicine {PRONOUN/m_c/subject} {VERB/m_c/give/gives} to the leader"
+            "Seems to be hiding something in the medicine {PRONOUN/m_c/subject} {VERB/m_c/give/gives} to the leader",
+            "Concealed herbs in order to leave camp"
         ],
         "main_trait_constraint": [
             "sneaky"
@@ -286,6 +442,18 @@
         "main_trait_constraint": [
             "strict"
         ]
+    },
+    {
+        "id": "stoic_medicine_cat",
+        "thoughts": [
+            "Stare silently at writhing Clanmates in pain",
+            "Ears twitch at the distress yowls of an injuried cat",
+            "Doesn't seem bothered by the bloodstain on {PRONOUN/m_c/poss} pelt",
+            "Have seen every wound and scars"
+        ],
+        "main_trait_constraint": [
+            "stoic"
+        ]    
     },
     {
         "id": "thoughtful_medicine_cat",
