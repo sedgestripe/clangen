@@ -193,7 +193,7 @@
     {
         "id": "apprentice_dead_dark_forest_warrior",
         "thoughts": [
-            "Even though {PRONOUN/m_c/subject} heard the stories about {PRONOUN/r_c/object}, {PRONOUN/m_c/subject} wonders if r_c is truly evil as everyone claimed",
+            "Even though {PRONOUN/m_c/subject} heard the stories about {PRONOUN/r_c/object}, wonders if r_c is truly evil as everyone claimed",
             "Thought {PRONOUN/m_c/subject} saw r_c in {PRONOUN/m_c/poss} dreams last night",
             "Debating if {PRONOUN/m_c/subject} should train secretly by r_c"
         ],
@@ -344,7 +344,7 @@
             "Is a very quick learner",
             "Is sure {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} doing a good job today",
             "Knows {PRONOUN/m_c/subject} will get picked first for today's hunting patrol",
-            "Puffs up {PRONOUN/m_c/poss} chest out as {PRONOUN/m_c/subject} strunt",
+            "Puffs up {PRONOUN/m_c/poss} chest out as {PRONOUN/m_c/subject} strut",
             "Proudly announces {PRONOUN/m_c/poss} name when entering an area",
             "Pose heroically, hoping the leader will take notice of {PRONOUN/m_c/poss} potential"
         ],
@@ -403,7 +403,8 @@
         "thoughts": [
             "Is looking to challenge a warrior to a sparring match",
             "Is pretty sure r_c would lose in a fight with {PRONOUN/m_c/object}",
-            "Doesn't listen to r_c's advice"
+            "Doesn't listen to r_c's advice",
+            "Told r_c to not hold back while sparring with {PRONOUN/m_c/object}"
         ],
         "main_status_constraint": [
             "apprentice"

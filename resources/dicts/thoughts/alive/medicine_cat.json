@@ -163,7 +163,7 @@
     {
         "id": "cunning_medicine_cat",
         "thoughts": [
-            "Is using an alternative herbical {PRONOUN/m_c/subject} found better than the orginal",
+            "Is using an alternative herb {PRONOUN/m_c/subject} found better than the orginal",
             "Design a pouch to carry more herbs",
             "Effortlessly swipe some herbs into a prey"
         ],

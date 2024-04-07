@@ -99,7 +99,7 @@
             "Is pondering recent dreams {PRONOUN/m_c/subject} {VERB/m_c/have/has} had... perhaps from the Dark Forest?",
             "Can hear the venomous voice of Dark Forest cats in {PRONOUN/m_c/poss} ears, whispering concerning events yet to come",
             "Was thrusted into a sunless landscape in {PRONOUN/m_c/poss} dreams, luminous, uncannily eyes watching {PRONOUN/m_c/object}",
-            "Was startled awake when a black, smokey creature launched from the shadows and tried to claw at {PRONOUN/m_c/poss} throat"
+            "Was startled awake when a black, smokey creature launched from the shadows and tried to claw at {PRONOUN/m_c/object}"
         ],
         "random_living_status": [
             "darkforest"
@@ -120,7 +120,18 @@
         ],
         "main_trait_constraint": [
             "adventurous"
-        ]      
+        ]   
+    },
+    {
+        "id": "aloof_leader",
+        "thoughts": [
+            "Believes {PRONOUN/m_c/subject} need to eat in {PRONOUN/m_c/poss} nest alone than with {PRONOUN/m_c/poss} Clanmates",
+            "Refuses to indulge {PRONOUN/m_c/self} in petty Clan dramas",
+            "Is difficult relating to {PRONOUN/m_c/poss} Clanmates"
+        ],
+        "main_trait_constraint": [
+            "aloof"
+        ]
     },
     {
         "id": "ambitious_leader",
@@ -205,7 +216,7 @@
             "Is slashing at a 'disloyal' warrior",
             "Is swearing the Clan is plotting against {PRONOUN/m_c/object}",
             "Isn't afraid to claw a fur off of a Clanmate for disobeying {PRONOUN/m_c/object}",
-            "During a skrimish, sinks {PRONOUN/m_c/poss} fangs shut on a rival cat's throat untill blood melted on {PRONOUN/m_c/poss} tongue",
+            "During a skrimish, sinks {PRONOUN/m_c/poss} fangs shut on a rival cat's throat",
             "Rake a claw on a cat's muzzle for debating against {PRONOUN/m_c/object}",
             "Is ready to tear off a cat's coat for c_n"
         ],
@@ -299,7 +310,8 @@
             "Would rather spend {PRONOUN/m_c/poss} day alone",
             "Is using harsh words through a distressing event",
             "Is willing to humiliate a cat for disobeying {PRONOUN/m_c/object}",
-            "Was seen yowling at a crying cat instead of comforting them"
+            "Was seen yowling at a crying cat instead of comforting them",
+            "Doesn't want to appear weak in front of {PRONOUN/m_c/poss} Clanmates"
         ],
         "main_trait_constraint": [
             "cold"
@@ -331,11 +343,11 @@
             "Was too busy prattling nonsense to even begin a Clan meeting",
             "Repeatedly chatter about {PRONOUN/m_c/poss} legacy",
             "Self-proclaimed c_n is StarClan's favorite Clan",
-            "Having a downtime by furnishing {PRONOUN/m_c/poss} coat with alluring flowering and trickets",
+            "Having a downtime by furnishing {PRONOUN/m_c/poss} coat with alluring items",
             "Hopes to sophisticate c_n",
             "Is combing out {PRONOUN/m_c/poss} coat with {PRONOUN/m_c/poss} tongue until it's shiny",
             "Took the time to cleaning out any unkempt mess from {PRONOUN/m_c/poss} sight",
-            "Is strunting throughout the camp with a waving tail",
+            "Is struting throughout the camp with a waving tail",
             "Has an eccentric style",
             "Is overdramatic"
         ],
@@ -477,14 +489,14 @@
             "Can smooth even the prickly of cats",
             "The plausibility to send fear in others is low, but never zero",
             "Will unveil the wrath of a smiling cat to trespassers",
-            "Is systematically creating patrols and overseeing Clanmates taking care of",
+            "Is simultaneously creating patrols and overseeing Clanmates taking care of",
             "Is a bit iffy being looked down upon for being soft",
             "Is a second parent to {PRONOUN/m_c/poss} Clanmates",
             "Is overbearing to be included in everything",
             "{PRONOUN/m_c/poss/CAP} overprotectiveness prevented work to be done",
             "Has prioritizes defending more than fighting",
             "Pondering promoting kits to apprentices when they're a bit older",
-            "Can't help but envision if the other Clans' kits are unloved and need to be brought to c_n instead"
+            "Ponders if the other Clans' kits are unloved and need to be in c_n instead"
         ],
         "main_trait_constraint": [
             "loving"
@@ -536,7 +548,7 @@
     {
         "id": "nervous_leader",
         "thoughts": [
-            "Feels as if {PRONOUN/m_c/subject}{VERB/m_c/'s/'re} a constant target",
+            "Feels like a constant target",
             "Doesn't feel like {PRONOUN/m_c/subject} {VERB/m_c/has/have} nine lives",
             "Wants to improve c_n, but doesn't know how",
             "Is distraught {PRONOUN/m_c/subject} might accidently initiate a war",
@@ -586,7 +598,7 @@
             "Would often be in {PRONOUN/m_c/poss} own world",
             "Accidently bumped into r_c, meowing {PRONOUN/m_c/subject} didn't notice {PRONOUN/r_c/object}",
             "Called r_c another name",
-            "Didn't notice the litters of features attached to {PRONOUN/m_c/poss} fur"
+            "Didn't notice the feathers attached to {PRONOUN/m_c/poss} fur"
         ],
         "main_trait_constraint": [
             "oblivious"

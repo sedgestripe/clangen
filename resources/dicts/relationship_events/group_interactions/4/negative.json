@@ -43,5 +43,50 @@
 				"dislike": "increase"
 			}
 		}
-	}
+	},
+	{
+			"id": "group_4_negative_spar",
+			"cat_amount": 4,
+			"intensity": "low",
+			"interactions": ["Under the gist to improve their strenght as a team, m_c and r_c1 paired together and arranged a spar against r_c2 and r_c3 team. Throughout the heated session, m_c and r_c1 took turn displaying no mercy against their purposely chosen opponents, celebrating the unrestrained tussle. As the other team collect themselves, r_c2 and r_c3 snarl silently, glaring with a glint of revenge."],
+			"relationship_constraint": {
+				"m_c_to_r_c2": ["dislike_10"],
+				"r_c1_to_r_c2": ["dislike_10"],
+				"m_c_to_r_c3": ["dislike_10"],
+				"r_c1_to_r_c3": ["dislike_10"]
+			},
+			"specific_reaction":{
+				"m_c_to_r_c1": {
+					"comfortable": "increase"
+				},
+				"m_c_to_r_c2": {
+					"platonic": "decrease",
+					"dislike": "increase"
+				},
+				"r_c1_to_r_c2": {
+					"platonic": "decrease",
+					"dislike": "increase"
+				},
+				"r_c2_to_m_c":{
+					"dislike": "increase"
+				},
+				"r_c2_to_r_c1":{
+					"dislike": "increase"
+				},
+				"m_c_to_r_c3": {
+					"platonic": "decrease",
+					"dislike": "increase"
+				},
+				"r_c1_to_r_c3": {
+					"platonic": "decrease",
+					"dislike": "increase"
+				},
+				"r_c3_to_m_c":{
+					"dislike": "increase"
+				},
+				"r_c3_to_r_c1":{
+					"dislike": "increase"
+				}
+		    }
+	    }
 ]

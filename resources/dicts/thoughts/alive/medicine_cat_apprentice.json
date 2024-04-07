@@ -386,7 +386,56 @@
         ],
         "main_trait_constraint": [
             "charismatic"
-        ]        
+        ]
+    },
+    {
+        "id": "strict_medicine_cat_apprentice",
+        "thoughts": [
+            "Hiss at everyone for disturbing {PRONOUN/m_c/poss} arranged herbal stock",
+            "Refuses to sway from traditional herbal practices",
+            "Has a firm schedule everyone should heed to",
+            "Has a difficult time following {PRONOUN/m_c/poss} mentor's opposing teachings"
+        ],
+        "main_trait_constraint": [
+            "strict"
+        ] 
+    },
+    {
+        "id": "careful_medicine_cat_apprentice",
+        "thoughts": [
+            "Wants to hang herbs in elevated height away from curious kits",
+            "Spent {PRONOUN/m_c/poss} break recounting herbs",
+            "Took a long time bandaging a minor injury",
+            "Is flustered after caught using the majority of the Clan's herb for a running nose",
+            "Following behind warrior apprentices, believing one of them will be injuried any minute"
+        ],
+        "main_trait_constraint": [
+            "careful"
+        ] 
+    },
+    {
+        "id": "oblivious_medicine_cat_apprentice",
+        "thoughts": [
+            "Had to be told multiple about the affects same herb",
+            "Was found staring at a ladybug than tending to a patient",
+            "Suggest swooping the Moonpool into mosses",
+            "Suggest taking the Moonpool and pushing it closer to camp"
+        ],
+        "main_trait_constraint": [
+            "oblivious"
+        ] 
+    },
+    {
+        "id": "cold_medicine_cat_apprentice",
+        "thoughts": [
+            "Shrug {PRONOUN/m_c/poss} shoulders at the thought of healing reckless cats",
+            "Hisses at curious kits out of the medicine den",
+            "Stare silently at a deceased cat {PRONOUN/m_c/subject} came across",
+            "Believes sickness is naturally, no need to wail nonsense"
+        ],
+        "main_trait_constraint": [
+            "cold"
+        ] 
     },
     {
         "id": "nice_medicine_cat_apprentice",
