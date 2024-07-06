@@ -1035,7 +1035,11 @@ class TalkScreen(Screens):
                 else:
                     if "they_born_blind" in tags:
                         continue
+<<<<<<< Updated upstream
                     if "they_went_blind" not in tags:
+=======
+                    if "they_went_blind" not in tags and "only_they_went_blind" not in tags:
+>>>>>>> Stashed changes
                         if "they_blind" not in tags:
                             continue
 
