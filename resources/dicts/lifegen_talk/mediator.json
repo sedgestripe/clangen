@@ -993,6 +993,113 @@
     ],
     "neurotic_app4": [
         [
+<<<<<<< Updated upstream
+=======
+            "warrior",
+            "silly",
+            "random_cat",
+            "they_went_blind"
+        ],
+        [
+            "Oh no! I heard you and r_w fighting earlier, but I was so busy I couldn't come over! What all happened?",
+            "[The mediator tilts their head curiously, and you explain the situation - you two were, admittedly, having a childish scuffle over the results of a patrol.]",
+            "Huh... Oh! I know! Bring r_w here. If you're not happy with your last patrol together, maybe you two should go on another patrol... in your MINDS!",
+            "[You're confused, but they're the mediator, not you. You begrudgingly drag r_w all the way over to the farthest corner of camp.]",
+            "Okay, so... Imagine this. You're in the forest, and it has trees. And they're BIG trees. And inside the big trees, there are big owls with big claws, waiting to jump out and nab you at any given opportunity...",
+            "[t_c leads you and r_w on a fantastical adventure using only their words. You and r_w both have made-up stats based on your real life characteristics, and the group uses a bundle of sticks to decide outcomes. At first, you didn't think this silly exercise would do anything but waste your time, but by the end, you feel as though that bad patrol never really mattered.]"
+        ]
+    ],
+    "silly_mediator_clouds": [
+        [
+            "Any",
+            "trust",
+            "silly",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "[You woke up on the wrong side of the nest today and need someone to talk to about it. You figure that t_c must be the best choice as someone trained in listening to cats, and slowly pad up to {PRONOUN/t_c/object}.]",
+            "So, what did you want to tell me, y_c?",
+            "[You tell t_c all about what's bothered you recently. You were awoken in the middle of the night by an insomniac kit and couldn't get back to sleep. Then, you were taken on a dawn patrol where you slipped and fell in the mud in front of a cat you adore, and only barely got it off before you approached t_c.]",
+            "[That isn't the least of today for you, but you figure they must get the message by now.]",
+            "Huh... yeah, those days suck, don't they? When it feels like you must've done something to upset StarClan?",
+            "Well, I don't mean to change the topic, but look at the clouds today! That one looks like a cat smiling at you, doesn't it? Do you think it could be a member of StarClan cheering you on?",
+            "And this beautiful flower. I think it matches your pelt quite nicely, y_c!",
+            "See, y_c, I don't think StarClan hates you. Even if today was bad, they're still sending you subtle messages that they're still on your side.",
+            "And, heck, if they do, then send me to the Dark Forest! I don't wanna be around cats that hate you!",
+            "Uh. But maybe I also don't want to be around the cats in the Dark Forest. Just, like, perhaps. Hehe."
+        ]
+    ],
+    "silly_mediator_savetheprey": [
+        [
+            "Any",
+            "silly",
+            "newleaf",
+            "greenleaf",
+            "leaf-fall",
+            "they_blind"
+        ],
+        [
+            "y_c! Your humble Clan mediator, t_c, has a plan, and I need you to help me go through with it!",
+            "We've been hunting too much recently, and the prey is starting to dwindle. This could spell the end if we don't let it repopulate - we don't want to worsen leaf-bare, after all.",
+            "Not to mention the rumors I overheard at the last Gathering. Two o_cClan apprentices were snickering to themselves saying that we must've been hunting outside of our territory because the prey inside of it was seemingly so scarce.",
+            "Of course, these problems could be fixed with a simple contribution to me so I can figure out what action we should take.",
+            "What kind of contribution, you ask? Well, a tiny morsel of fresh-kill delivered right to my den, of course!",
+            "[t_c puffs out their chest, satisfied with their hard work.]"
+        ]
+    ],
+    "Introspective_mentor_H8": [
+        [
+            "they_introspective",
+            "from_mentor",
+            "they_mediator",
+            "you_mediator_apprentice",
+            "neutral",
+            "clan_has_kits"
+        ],
+        [
+            "Hey, hey, hey... what happened? What's wrong? You were doing so well meditating those kits, then just froze.",
+            "You got nervous?",
+            "Oh, well that's fine! Don't beat yourself up about it. We've all gotten nervous in our apprentice days!"
+        ]
+    ],
+    "Introspective_mentor_H9": [
+        [
+            "they_introspective",
+            "from_mentor",
+            "they_mediator",
+            "you_mediator_apprentice",
+            "dislike"
+        ],
+        [
+            "I understand it's hard to meditate sometimes, but did you really have to yell at poor r_a like that?",
+            "{PRONOUN/r_a/subject/CAP} were already having a bad day--",
+            "Oh, forget it for now. I'll speak to you later once I fix this."
+        ]
+    ],
+    "Introspective_mentor_H10": [
+        [
+            "they_introspective",
+            "from_mentor",
+            "they_mediator",
+            "you_mediator_apprentice",
+            "platonic_like"
+        ],
+        [
+            "[t_c has been sitting around, {PRONOUN/t_c/poss} eyes watching l_n and d_n curiosity from a distance.]",
+            "Shhh, y_c. I suppose I can make this a teaching lesson of some sort... Look closely.",
+            "Do you see how d_n's tail is swishing around while l_n talks? They're not agreeing on something. Now, if I remember correctly, on the third swish of a tail...",
+            "[d_n makes a remark you didn't quite make out but from the look on l_n's face, it must have been shocking indeed.]",
+            "I was correct! This is why you always observe, y_c. It'll help you tremendously when meditating, I promise.",
+            "Now, if you'll excuse me... I must know what happened. I can be a bit nosy."
+        ]
+    ],
+    "youdeaf_R19": [
+        [
+            "only_you_deaf",
+            "you_deaf",
+            "you_leader",
+>>>>>>> Stashed changes
             "no_kit",
             "neurotic",
             "upstanding"

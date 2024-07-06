@@ -2263,5 +2263,1000 @@
         [
             "Rude!"
         ]
+<<<<<<< Updated upstream
+=======
+    ],
+    "bioparent_unlawfulGuy1": [
+        [
+            "from_parent",
+            "unlawful",
+            "any"
+        ],
+        [
+            "[t_c glances around briefly. After making sure you are the only one that could hear {PRONOUN/t_c/object}, {PRONOUN/t_c/subject} catch your gaze and hold it there.]",
+            "The Clan won't choose you over their petty wars, but I will. You share my blood and that is all that matters."
+        ]
+    ],
+    "adoptparent_unlawfulGuy1": [
+        [
+            "adopted_parent",
+            "unlawful",
+            "no_kit"
+        ],
+        [
+            "[You trot to your nest after a particularly exhausting day of carrying out your duties.]",
+            "[It seems to be lined with a soft material only made by Twolegs, and it smells strongly of t_c]",
+            "[You're reminded of when you were adopted by {PRONOUN/t_c/object}, how safe and welcomed you felt. You can't remember the last time you slept so well.]"
+        ]
+    ],
+    "biosib_unlawfulGuy1": [
+        [
+            "sibling",
+            "unlawful",
+            "no_kit"
+        ],
+        [
+            "[t_c glances around briefly. After making sure you are the only one that could hear {PRONOUN/t_c/object}, {PRONOUN/t_c/subject} catch your gaze and hold it there.]",
+            "The Clan won't choose you over their petty wars, but I will. You share my blood and that is all that matters."
+        ]
+    ],
+    "biokit_unlawfulGuy1": [
+        [
+            "from_your_kit",
+            "unlawful",
+            "no_kit"
+        ],
+        [
+            "[t_c glances around briefly. After making sure you are the only one that could hear {PRONOUN/t_c/object}, {PRONOUN/t_c/subject} catch your gaze and hold it there.]",
+            "The Clan won't choose you over their petty wars, but I will. You share my blood, and that is all that matters."
+        ]
+    ],
+    "sc_sc_Guy": [
+        [
+            "you_sc",
+            "they_sc",
+            "unlawful",
+            "any"
+        ],
+        [
+            "[You notice t_c sitting near the border with a pile of mice.]",
+            "Ah, y_c! Wanna see what I do for entertainment?",
+            "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/throw/throws} one of the mice into the Dark Forest. You watch as a shadow slinks forward... and more shadows gather...]",
+            "[t_c whoops and hollers at the fighting.]"
+        ]
+    ],
+    "deaf_J1": [
+        [
+            "they_deaf",
+            "you_deaf",
+            "they_blind",
+            "only_you_blind",
+            "any"
+        ],
+        [
+            "[You smell t_c approach, but {PRONOUN/t_c/subject} {VERB/t_c/bump/bumps} into you before {PRONOUN/t_c/subject} {VERB/t_c/notice/notices} the same.]",
+            "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/give/gives} your side an apologetic tap before {PRONOUN/t_c/subject} {VERB/t_c/continue/continues} on {PRONOUN/t_c/poss} way.]"
+        ]
+    ],
+    "deaf_J2": [
+        [
+            "they_deaf",
+            "they_blind",
+            "you_deaf",
+            "you_blind",
+            "they_shunned",
+            "any"
+        ],
+        [
+            "[You can't tell if t_c's scent has a hint of blood to it now, or if you're just imagining that.]"
+        ]
+    ],
+    "deaf_J3": [
+        [
+            "they_deaf",
+            "they_blind",
+            "you_deaf",
+            "you_blind",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "[t_c never gets as close to you as {PRONOUN/t_c/subject} used to.]"
+        ]
+    ],
+    "deaf_J4": [
+        [
+            "they_deaf",
+            "they_blind",
+            "you_deaf",
+            "you_blind",
+            "both_shunned",
+            "any"
+        ],
+        [
+            "[t_c is the only cat who will lay next to you anymore.]"
+        ]
+    ],
+    "deaf_J5": [
+        [
+            "they_deaf",
+            "they_blind",
+            "you_deaf",
+            "you_blind",
+            "you_dead",
+            "any"
+        ],
+        [
+            "[t_c seems confused at your presence.]"
+        ]
+    ],
+    "deaf_J6": [
+        [
+            "they_deaf",
+            "they_blind",
+            "you_deaf",
+            "you_blind",
+            "they_dead",
+            "any"
+        ],
+        [
+            "[t_c's ghostly presence kind of freaks you out.]"
+        ]
+    ],
+    "deaf_J6_2": [
+        [
+            "they_deaf",
+            "you_deaf",
+            "they_sc",
+            "you_dead",
+            "any",
+            "unabashed",
+            "silly"
+        ],
+        [
+            "[t_c seems to be having a fun time sending butterflies floating into the faces of r_w1 and r_w2 while they're out on patrol.]",
+            "[Maybe not every StarClan cat should be granted the power to send omens...]"
+        ]
+    ],
+    "deaf_J6_3": [
+        [
+            "they_deaf",
+            "you_deaf",
+            "they_dead",
+            "any"
+        ],
+        [
+            "[t_c wraps {PRONOUN/t_c/poss} tail around you to comfort you during a difficult day.]",
+            "[{PRONOUN/t_c/poss/CAP} ghost tail feels weird. You brush it off.]"
+        ]
+    ],
+    "deaf_J6_4": [
+        [
+            "they_deaf",
+            "only_you_deaf",
+            "they_dead",
+            "any"
+        ],
+        [
+            "[It's sometimes hard to tell what t_c is signing to you, with {PRONOUN/t_c/poss} paws being semi-transparent and all.]",
+            "[You still appreciate it regardless.]"
+        ]
+    ],
+    "deaf_J6_5~1": [
+        [
+            "they_deaf",
+            "only_you_deaf",
+            "they_dead",
+            "they_ancientspirit",
+            "any"
+        ],
+        [
+            "[Every time you sign at them, t_c just blinks at you curiously.]",
+            "[You'd expected such an ancient dead cat to have all of the knowledge in the world, but maybe c_nClan sign language didn't exist back in {PRONOUN/t_c/poss} day.]",
+            "[Maybe you should teach {PRONOUN/t_c/object} sometime.]"
+        ]
+    ],
+    "deaf_J6_5~2": [
+        [
+            "they_deaf",
+            "only_you_deaf",
+            "they_dead",
+            "they_ancientspirit",
+            "any",
+            "clan_has_kits",
+            "connected"
+        ],
+        [
+            "[You spot t_c once more, having come to visit the Clan.]",
+            "[{PRONOUN/t_c/subject/CAP}{VERB/t_c/'re/'s} watching r_q give a sign language lesson to the kits, and mirroring the signs to {PRONOUN/t_c/self}. {PRONOUN/t_c/subject/CAP} {VERB/t_c/haven't/hasn't} noticed you.]",
+            "[You decide to leave {PRONOUN/t_c/object} be so {PRONOUN/t_c/subject} can focus.]"
+        ]
+    ],
+    "deaf_J6_5~3": [
+        [
+            "they_deaf",
+            "only_you_deaf",
+            "they_dead",
+            "they_ancientspirit",
+            "any",
+            "connected"
+        ],
+        [
+            "[t_c runs up to you, looking excited.]",
+            "..!",
+            "[t_c sits back on {PRONOUN/t_c/poss} haunches to sign to you! It's a bit clunky, but {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} communicating clearly.]",
+            "[t_c has just asked you how you like Clan life. You sign back, and {PRONOUN/t_c/subject} {VERB/t_c/look/looks} elated to have understood you.]",
+            "[It seems that even ancient spirits like t_c can learn new skills!]"
+        ]
+    ],
+    "deaf_J7": [
+        [
+            "they_deaf",
+            "they_blind",
+            "you_deaf",
+            "you_blind",
+            "you_dead",
+            "they_dead",
+            "any"
+        ],
+        [
+            "[t_c brushes {PRONOUN/t_c/poss} ghostly pelt against yours.]"
+        ]
+    ],
+    "deaf_J7_2": [
+        [
+            "they_deaf",
+            "they_blind",
+            "you_deaf",
+            "you_blind",
+            "you_dead",
+            "they_dead",
+            "any"
+        ],
+        [
+            "[t_c accidentally runs into you, but your bodies simply pass through each other.]"
+        ]
+    ],
+    "deaf_J8": [
+        [
+            "any",
+            "only_you_deaf",
+            "they_deaf",
+            "only_you_blind",
+            "they_blind"
+        ],
+        [
+            "[You and t_c roll around in the sun together.]"
+        ]
+    ],
+    "df_to_trainee_connected_J1~1": [
+        [
+            "they_df",
+            "you_kitten",
+            "they_older",
+            "they_cool",
+            "they_ancientspirit",
+            "connected",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Hey, there, kit. What's your name?",
+            "y_c? That's a great name. A nice, strong name.",
+            "Do you know where you are?",
+            "Mhm. Yes, you're in the Dark Forest.",
+            "You're very smart for knowing that, little kit. Do your Clanmates know how smart you are?",
+            "They probably don't. Those living Clan cats don't know anything.",
+            "You're different than them, though. You'd do well here.",
+            "Not yet, though. Come back when you're a bit older, and I'll show you around, okay?"
+        ]
+    ],
+    "df_to_trainee_connected_J1~2": [
+        [
+            "they_df",
+            "you_dftrainee",
+            "they_cool",
+            "from_df_mentor",
+            "they_ancientspirit",
+            "connected",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Hey, there, kit! I knew you'd come back!",
+            "Or, I guess you're not a kit anymore, eh?",
+            "Well, you might as well be, here.",
+            "Let's start training."
+        ]
+    ],
+    "df_to_trainee_connected_J1~3": [
+        [
+            "they_df",
+            "you_dftrainee",
+            "they_cool",
+            "from_df_mentor",
+            "they_ancientspirit",
+            "connected",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Get back up! Again!",
+            "[After falling to the ground during training, t_c swipes {PRONOUN/t_c/poss} claws over your ears and hisses at you to get back up.]",
+            "[You're more exhausted than you thought was possible. If you could just fall asleep, you could wake up back in the Clan...]",
+            "Eyes open, apprentice! Try again!",
+            "[You wobble to your paws, ready to practice this battle move one more time.]",
+            "[t_c isn't as nice to you now as {PRONOUN/t_c/subject} {VERB/t_c/were/was} when you were a kit...]"
+        ]
+    ],
+    "gnn_youdeaf_J1": [
+        [
+            "you_deaf",
+            "only_you_deaf",
+            "any"
+        ],
+        [
+            "[You watch t_c's mouth moving from across camp. You wonder what {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} saying.]"
+        ]
+    ],
+    "youdeafkit_R102": [
+        [
+            "only_you_deaf",
+            "you_deaf",
+            "you_kitten",
+            "they_any"
+        ],
+        [
+            "[t_c is talking to you, forgetting you can't actually hear {PRONOUN/t_c/object}. {PRONOUN/t_c/subject/CAP}{VERB/t_c/'re/'s} close enough though that you can feel the vibration of {PRONOUN/t_c/poss} voice.]",
+            "[Despite not understanding a thing, you bask in the soothing rumble.]",
+            "[{PRONOUN/t_c/subject/CAP} eventually {VERB/t_c/realise/realises} {PRONOUN/t_c/poss} mistake and {VERB/t_c/apologise/apologises} but you shake it off with a smile.]",
+            "[It was fun to 'listen' anyways!]"
+        ]
+    ],
+    "gnn_youdeaf_J2": [
+        [
+            "you_deaf",
+            "only_they_deaf",
+            "you_blind",
+            "they_blind",
+            "any"
+        ],
+        [
+            "[You and t_c both sit outside during some light rain, enjoying the cool mist on your faces.]"
+        ]
+    ],
+    "gnn_youdeaf_J2_2": [
+        [
+            "you_deaf",
+            "they_deaf",
+            "you_blind",
+            "only_they_blind",
+            "any"
+        ],
+        [
+            "*Puuuurrrrrr...* *Snoooorrreee...*",
+            "[It's a lazy day today.]"
+        ]
+    ],
+    "gnn_youdeaf_J2_3": [
+        [
+            "only_you_deaf",
+            "they_deaf",
+            "you_blind",
+            "they_blind",
+            "any"
+        ],
+        [
+            "[t_c trips as you walk side by side through camp. You feel {PRONOUN/t_c/poss} body shaking with laughter as you help {PRONOUN/t_c/object} up.]"
+        ]
+    ],
+    "gnn_youdeaf_J2_4": [
+        [
+            "you_deaf",
+            "they_deaf",
+            "only_you_blind",
+            "they_blind",
+            "any"
+        ],
+        [
+            "[t_c helps you navigate the camp after a storm has left the clearing covered in puddles.]",
+            "[The two of you delicately dodge the puddles, grab a meal from the fresh kill pile, and return to a safe, dry den to eat.]"
+        ]
+    ],
+    "gnn_youdeaf_J3": [
+        [
+            "you_deaf",
+            "they_deaf",
+            "you_blind",
+            "they_blind",
+            "they_grieving",
+            "any"
+        ],
+        [
+            "[t_c clearly doesn't feel like talking right now.]"
+        ]
+    ],
+    "gnn_youdeaf_J4": [
+        [
+            "you_deaf",
+            "they_deaf",
+            "you_blind",
+            "they_blind",
+            "they_grieving",
+            "you_grieving",
+            "any"
+        ],
+        [
+            "[t_c clearly doesn't feel like talking right now.]"
+        ]
+    ],
+    "gnn_youdeaf_J5": [
+        [
+            "you_deaf",
+            "they_deaf",
+            "you_blind",
+            "they_blind",
+            "you_grieving",
+            "any"
+        ],
+        [
+            "[t_c kneads {PRONOUN/t_c/poss} paws into your back while you doze off. It's a nice feeling, and the comfort in your body is able to momentarily distract you from the pain in your heart.]"
+        ]
+    ],
+    "silly_like_sibdance": [
+        [
+            "silly",
+            "platonic_like",
+            "sibling",
+            "they_song",
+            "they_app",
+            "they_kit",
+            "You_sameage",
+            "they_blind"
+        ],
+        [
+            "Hey! Hey, hey, y_c! Hey!",
+            "We should do something together sometime! Like... a sibling song! After all...",
+            "[t_c whips out the confident pose {PRONOUN/t_c/subject} always {VERB/t_c/do/does} when {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} about to start singing.]",
+            "We are siblings, and we care for each other!"
+        ]
+    ],
+    "silly_like_song": [
+        [
+            "Any",
+            "silly",
+            "platonic_like",
+            "they_song",
+            "they_app",
+            "they_kit",
+            "You_sameage",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "I had an idea for a new song! Wanna hear it?",
+            "What? 'I'm busy'? Well, that's perfect! Unwilling listeners are the best kind!",
+            "Ah-hem...",
+            "[t_c begins to sing one of {PRONOUN/t_c/poss} usual goofy songs. You don't understand how {PRONOUN/t_c/subject}{VERB/t_c/'ve/'s} managed to make a song so catchy when it's about being unable to taste a moon made of mice.]"
+        ]
+    ],
+    "silly_comfort_1": [
+        [
+            "Any",
+            "silly",
+            "comfort"
+        ],
+        [
+            "[t_c snuggles up next to you with a piece of prey in {PRONOUN/t_c/poss} mouth, dropping it between you two. It's fairly large, just enough to feed two cats.]",
+            "Here, I brought enough to share, y_c! Can't get enough good ol' bonding time these days. Heh, but it can't be worse than whatever's going on with o_cClan's leader, right?",
+            "...Man.",
+            "[t_c sighs, taking a bite of the prey. {PRONOUN/t_c/subject} {VERB/t_c/let/lets} it sit in {PRONOUN/t_c/poss} mouth for a moment as {PRONOUN/t_c/subject} {VERB/t_c/chew/chews} it, seeming to have trouble with the giant piece {PRONOUN/t_c/subject} took.",
+            "Then, {PRONOUN/t_c/poss} eyes widen massively, and for a moment you're worried {PRONOUN/t_c/subject} might be choking...]",
+            "[...nope. t_c is just about to talk with {PRONOUN/t_c/poss} mouth full.]",
+            "Oh! Mmm-mm, y_c! You woulfn't guess what I saw ta' other day!",
+            "So, out in 'da territory, mhm? 'N there was a tiny... a lil' buf! A stickbuf!",
+            "[t_c finally swallows, taking another big breath of fresh air.]",
+            "And he was, like, that big! And he did a little dance, and it was funny, and I named him Goofter."
+        ]
+    ],
+    "silly_trust_theone": [
+        [
+            "Any",
+            "silly",
+            "trust",
+            "non-related"
+        ],
+        [
+            "Oh, StarClan... How do I say this?",
+            "Whenever I look into your eyes, y_c, I see my favorite cat. Your smile. That voice I'm so envious of. Your delicate gait. The way you silently slink into a hunting crouch, the way you so consistently avoid your least favorite fresh-kill...",
+            "The way you do everything so... perfectly. It captivates me. Really, it does. I think you might be...",
+            "...the one.",
+            "...To randomly receive a frog from the second coolest cat of all time, t_c!",
+            "[t_c perfectly places a frog on your head, then steps back and laughs. You're dumbfounded.]"
+        ]
+    ],
+    "silly_trust_eaves": [
+        [
+            "Any",
+            "silly",
+            "unlawful",
+            "trust",
+            "random_cat",
+            "you_blind",
+            "they_went_blind"
+        ],
+        [
+            "Sometimes I like to climb onto the highest surfaces of the camp in the middle of the night when only the guards can see.",
+            "It's really peaceful, actually. Every cat in c_nClan is in their dens, and it's completely quiet, save for the murmurs of the guards and the night animals.",
+            "Actually, speaking of \"the murmurs of the guards,\" do you want to hear some info I caught on r_c while eavesdropping? Don't worry, it's not incriminating."
+        ]
+    ],
+    "silly_trust_abstraction": [
+        [
+            "Any",
+            "silly",
+            "trust",
+            "random_cat"
+        ],
+        [
+            "Wanna know something weird I've noticed lately?",
+            "Isn't it always so weird when your head does the thing when you get a bunch of positive feedback, but then there's The One Thing and you always get hung up on The One Thing?",
+            "I don't wanna name names, but I've also been noticing it with this one other cat lately, too! Even if they're normally so good against criticism.",
+            "Heck, if even that cat feels that way sometimes, maybe we should come up with a name for it! Like, uh...",
+            "[t_c looks around, and {PRONOUN/t_c/poss} eyes fixate on a decaying leaf that's fallen from a tree.]",
+            "Maybe we should ask that leaf! They look like they have good ideas."
+        ]
+    ],
+    "silly_trust_porcupine": [
+        [
+            "Any",
+            "silly",
+            "trust",
+            "random_cat"
+        ],
+        [
+            "Can I tell ya something, y_c? You gotta promise not to tell any other cat. This matter is between us and the porcupine.",
+            "Last night, I couldn't sleep, so I was out on a walk. And there was this little guy... I dunno who he was, but he was like, a little porcupine, or something.",
+            "And I asked him for his name! But I think that might've translated to an insult in porcupine language, because he got really defensive all of a sudden! About to attack me and everything.",
+            "So I ran away. I didn't mean to offend him at all, but I didn't want to get hurt! I went out again this morning to try and apologize, but I couldn't find him anywhere.",
+            "So if you see a little porcupine, about the size of three paws, brown and white? That one? Would you please tell him I didn't mean to offend him?"
+        ]
+    ],
+    "silly_murder_goose": [
+        [
+            "Any",
+            "silly",
+            "you_shunned",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "I'm not a silly enough mouse for this!"
+        ]
+    ],
+    "silly_murder_forgiveness": [
+        [
+            "Any",
+            "silly",
+            "you_shunned",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Don't worry, y_c. I believe in second chances.",
+            "BUT.",
+            "Not when I'm supposed to forgive you for ending a cat's life!"
+        ]
+    ],
+    "silly_murder_shoulder": [
+        [
+            "Any",
+            "silly",
+            "you_shunned",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "y_c, I know you have a Dark Forest cat on your shoulder, but what in StarClan happened to the other?"
+        ]
+    ],
+    "silly_murder_caution": [
+        [
+            "Any",
+            "silly",
+            "you_shunned"
+        ],
+        [
+            "Uh... so... y_c. How's your day?",
+            "Catch any... fresh-kill?",
+            "[t_c's eyes dart around like dragonflies. {PRONOUN/t_c/subject/CAP} {VERB/t_c/aren't/isn't} good at hiding when {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} nervous, {VERB/t_c/are/is} {PRONOUN/t_c/subject}?]"
+        ]
+    ],
+    "silly_murder_thunderpath": [
+        [
+            "Any",
+            "silly",
+            "you_shunned",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Sounds like no cat's slowing you down on the Thunderpath to the Dark Forest, are they?"
+        ]
+    ],
+    "silly_youinjured_den": [
+        [
+            "Any",
+            "silly",
+            "you_injured",
+            "platonic_like",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "y_c! How are you doing?",
+	        "...Hey, what do you mean, 'Surprised it's not you in here, t_c'?"
+        ]
+    ],
+    "silly_youinjured_invite": [
+        [
+            "Any",
+            "silly",
+            "you_silly",
+            "you_injured",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "y_c, what did you do this time? And why didn't you invite me?"
+        ]
+    ],
+    "silly_youhurt_see": [
+        [
+            "Any",
+            "silly",
+            "you_injured",
+            "you_ill",
+            "you_blind"
+        ],
+        [
+            "y_c! It's good to see you in here-",
+	        "Well, it's not good to see you in here, but it's good to see you, like, in general."
+        ]
+    ],
+    "silly_youill_gift": [
+        [
+            "Any",
+            "silly",
+            "sweet",
+            "you_ill",
+            "you_blind",
+            "they_blind",
+            "they_hearing"
+        ],
+        [
+            "Hi, y_c! I heard you were sick, so I brought you this...",
+            "[t_c places a daisy on your head.]",
+            "I dunno, it seemed like something you'd like. I hope you get well soon!"
+        ]
+    ],
+    "silly_youill_toad": [
+        [
+            "Any",
+            "silly",
+            "you_ill",
+            "random_cat",
+            "they_blind"
+        ],
+        [
+            "[t_c runs into the medicine den with an exasperated look on {PRONOUN/t_c/poss} face.]",
+            "y_c! y_c, what do you call a frog with stumpy legs that lives in dry environments?",
+            "You call that a toad! You call that a TOAD, but r_c doesn't seem to get that!",
+            "...Oh. Oh, you're croaking like one too, are you okay?"
+        ]
+    ],
+    "shunned_sc_H1": [
+        [
+            "any",
+            "you_shunned",
+            "they_sc"
+        ],
+        [
+            "[t_c looks at you with narrowed eyes and huffs.]",
+            "Go back to where you came from. You're not welcome here."
+        ]
+    ],
+    "shunned_sc_H2": [
+        [
+            "any",
+            "you_shunned",
+            "they_sc"
+        ],
+        [
+            "There is so much hate within your presence, it darkens our pure clouds.",
+            "c_nClan was right to shun you, y_c.",
+            "You must realize that to be at peace."
+        ]
+    ],
+    "shunned_connected_J1~1": {
+        "tags": [
+            "no_kit",
+            "you_shunned",
+            "any",
+            "min_platonic_30",
+            "you_blind",
+            "they_blind"
+        ],
+        "intro": [
+            "Where do you think you'll go when you die?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "The Dark Forest",
+                "next_scene": "death_df"
+            },
+            "choice2": {
+                "text": "StarClan",
+                "next_scene": "death_sc"
+            }
+        },
+        "death_df": [
+            "Really? Don't be so hard on yourself.",
+            "I'm sure StarClan will forgive you...",
+            "[{VERB/t_c/Do/Does} {PRONOUN/t_c/subject} really believe that?]"
+        ],
+        "death_sc": [
+            "I'm glad! I think so too."
+        ]
+    },
+    "shunned_connected_J1~2": [
+        [
+            "no_kit",
+            "they_dead",
+            "any",
+            "min_platonic_30",
+            "you_sc",
+            "connected",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Hey, didn't I tell you you'd wind up in StarClan?",
+            "I guess you weren't as evil as you thought, hehe."
+        ]
+    ],
+    "dead_skill_J1": [
+        [
+            "they_song",
+            "they_sc",
+            "you_sc",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "[t_c harmonises with the birdsong around you.]",
+            "[Your life in StarClan always has a soundtrack!]"
+        ]
+    ],
+    "dfcat_J1~1": [
+        [
+            "you_kitten",
+            "they_dftrainee",
+            "they_older",
+            "you_dark",
+            "neurotic",
+            "upstanding",
+            "assertive",
+            "silly"
+        ],
+        [
+            "[You notice t_c across camp, talking to one of those scary Dark Forest cats. {PRONOUN/t_c/subject/CAP} {VERB/t_c/look/looks} upset, so you run up to make sure that the spirit isn't being too mean.]",
+            "Aah! y_c, what do you need? You shouldn't be this close to the edge of camp.",
+            "... What are you talking about? There's... there's no other cat...",
+            "Um...",
+            "[{PRONOUN/t_c/poss/CAP} voice drops to a whisper.]",
+            "You see {PRONOUN/rdf_c/object}, too?",
+            "Wait for me by the nursery. I'll be back in camp shortly.",
+            "Go."
+        ]
+    ],
+    "dfcat_J1~2": [
+        [
+            "you_kitten",
+            "they_dftrainee",
+            "they_older",
+            "you_dark",
+            "neurotic",
+            "upstanding",
+            "assertive",
+            "silly",
+            "connected"
+        ],
+        [
+            "[You notice the mysterious shadow of a Dark Forest cat at the edge of camp. Intrigued, you begin walking towards it.]",
+            "[Suddenly, though, t_c has swept you aside, sending you tumbling onto the ground. When you sit up, the shadow is gone.]",
+            "[t_c speaks to you in a hushed, urgent voice.]",
+            "Don't talk to them, y_c, do you hear me? They're dangerous. No matter how nice they are, don't listen.",
+            "[t_c finally notices the Clanmates staring at {PRONOUN/t_c/object}.]",
+            "Ahem. Sorry. Thought I saw the shadow of a hawk..."
+        ]
+    ],
+    "dfcat_J1~3": [
+        [
+            "any",
+            "they_dftrainee",
+            "you_dftrainee",
+            "they_older",
+            "you_dark",
+            "neurotic",
+            "upstanding",
+            "assertive",
+            "silly",
+            "connected"
+        ],
+        [
+            "[Anytime t_c sees you in the Dark Forest, {PRONOUN/t_c/subject} {VERB/t_c/look/looks} disappointed that you didn't take {PRONOUN/t_c/poss} advice.]",
+            "[But you can't feel too bad, as if {PRONOUN/t_c/subject} really believed it, {PRONOUN/t_c/subject} wouldn't be here {PRONOUN/t_c/self}, would {PRONOUN/t_c/subject}?]"
+        ]
+    ],
+    "parent_gift_J1~1": [
+        [
+            "from_parent",
+            "neutral",
+            "you_kitten",
+            "brooding",
+            "assertive",
+            "neurotic",
+            "newleaf",
+            "greenleaf"
+        ],
+        [
+            "[You race up to your {PRONOUN/t_c/parent} with a bright yellow flower in your mouth.]",
+            "Hm? Oh, y_c.",
+            "... No, thank you. I don't really have anywhere to put that.",
+            "Maybe r_m would like it."
+        ]
+    ],
+    "parent_gift_J1~2": [
+        [
+            "from_parent",
+            "you_kitten",
+            "brooding",
+            "assertive",
+            "neurotic",
+            "connected"
+        ],
+        [
+            "[Since t_c didn't like the flower you tried to give {PRONOUN/t_c/object} before, you approach {PRONOUN/t_c/object} this time with a different gift.]",
+            "What's this? A feather?",
+            "Did you get that from the fresh-kill pile? You're not supposed to be getting your own prey.",
+            "[t_c must not understand what a gift is...]"
+        ]
+    ],
+    "parent_gift_J1~3": [
+        [
+            "from_parent",
+            "brooding",
+            "max_dislike_10",
+            "assertive",
+            "neurotic",
+            "connected"
+        ],
+        [
+            "Hello, y_c. I, uh, I got you something.",
+            "[t_c turns around and pulls out a small, shiny snail shell from where it was hidden behind {PRONOUN/t_c/object}.]",
+            "r_d says you told {PRONOUN/r_d/object} about the gift you got me before. I guess I should've just... taken it, even if it wasn't necessarily practical.",
+            "So, I got you one too. It can't be used for anything, but it looks pretty, and you can keep it by your nest, or something.",
+            "You're a good kit. Sorry for not doing very well at telling you that."
+        ]
+    ],
+    "gnn_youdeaf_J6": [
+        [
+            "only_you_went_deaf",
+            "any",
+            "they_hearing",
+            "they_silly",
+            "they_unabashed"
+        ],
+        [
+            "[While lazing around in camp, you hum idly to yourself. Though you can't hear it, the vibrations feel nice in your throat.]",
+            "[You notice some movement out of the corner of your eye and find t_c, their body jostling with laughter.]",
+            "[t_c points up to {PRONOUN/t_c/poss} ear, then to you, as {PRONOUN/t_c/subject} {VERB/t_c/continue/continues} laughing. There must be something funny about how your voice sounds!]",
+            "[You continue humming with a smile as t_c continues to listen, thoroughly entertained.]"
+        ]
+    ],
+    "df_shunned_J1": [
+        [
+            "they_df",
+            "you_shunned",
+            "they_kitten",
+            "you_any"
+        ],
+        [
+           "Are you gonna stay here forever?",
+           "Wh... what do you mean no? Your Clan threw you out, didn't they?",
+           "Don't leave me!"
+        ]
+    ],
+    "shunned_deaf_J1": [
+        [
+            "you_shunned",
+            "they_dead",
+            "you_deaf",
+            "any"
+        ],
+        [
+            "[t_c looks at you very curiously, but makes no attempt to communicate.]"
+        ]
+    ],
+    "shunned_deaf_J2": [
+        [
+            "you_shunned",
+            "they_sc",
+            "they_dead",
+            "you_deaf",
+            "any"
+        ],
+        [
+            "[t_c is looking at you with pity.]",
+            "[You flash them a harsh glare. A ghost shouldn't be sympathising with a killer.]"
+        ]
+    ],
+    "shunned_deaf_J3": [
+        [
+            "you_shunned",
+            "they_ur",
+            "they_dead",
+            "you_deaf",
+            "any"
+        ],
+        [
+            "[t_c is looking at you with pity.]",
+            "[You flash them a harsh glare. A ghost shouldn't be sympathising with a killer.]"
+        ]
+    ],
+    "shunned_deaf_R1": [
+        [
+            "you_shunned",
+            "they_df",
+            "you_deaf",
+            "any"
+        ],
+        [
+            "[t_c approaches you. You stand warily before {PRONOUN/t_c/object}.]",
+            "[After regarding you a moment, {PRONOUN/t_c/subject} {VERB/t_c/dip/dips} {PRONOUN/t_c/poss} head to you before walking on.]",
+            "[Your Clanmates in the waking world have shunned you, but here you have earned some respect it seems.]"
+        ]
+    ],
+    "shunned_deaf_R2": [
+        [
+            "you_shunned",
+            "you_deaf",
+            "they_df",
+            "any"
+        ],
+        [
+            "[With your shun in the Clan, you've never felt more alone. But here in the Dark Forest you are treated the same as always- or so you think.]",
+            "[t_c has never attempted to sign to you before. {PRONOUN/t_c/subject/CAP} {VERB/t_c/do/does} today, though, to your surprise.]",
+            "[When asked how you're holding up, you have to take a moment to take it in.]",
+            "[Perhaps you're not alone after all.]"
+        ]
+    ],
+    "shunned_deaf_R3": [
+        [
+            "you_shunned",
+            "they_sc",
+            "you_deaf",
+            "they_deaf",
+            "any"
+        ],
+        [
+            "[t_c looks at you with disdain. {PRONOUN/t_c/subject/CAP} {VERB/t_c/don't/doesn't} even brother wasting effort trying to tell you how {PRONOUN/t_c/subject} {VERB/t_c/feel/feels} about you.]",
+            "[The stars have never made you feel more alone than they do now.]"
+        ]
+>>>>>>> Stashed changes
     ]
 }

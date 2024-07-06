@@ -1099,5 +1099,115 @@
             "*Sigh* Can't you see I have more important things to do, y_c?",
             "Go back to catching mice, or whatever."
         ]
+<<<<<<< Updated upstream
+=======
+    ],
+    "eldershunned_H1": [
+        [
+            "they_shunned",
+            "they_elder",
+            "you_any",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "To shun me in my old age... How dare they? Such little respect."
+        ]
+    ],
+    "eldershunned_H2": [
+        [
+            "they_shunned",
+            "they_elder",
+            "you_any",
+            "you_younger",
+            "dislike",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "My bones might be croaking and my health might be deteriorating, but that won't stop me from hurting you, youngling."
+        ]
+    ],
+    "eldershunned_H3": [
+        [
+            "they_shunned",
+            "they_elder",
+            "you_any",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Ughh, finally, I was granted peace and quiet away from these offending o_cClan members.",
+            "And yet you still bother me.",
+            "Scram!"
+        ]
+    ],
+    "silly_elder_greetings": [
+        [
+            "Any",
+            "they_elder",
+            "you_younger",
+            "silly",
+            "no_kit",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Oh, hi, y_c! It's been a while since you've said hello to me.",
+            "Well, whatcha been up to? Heroically defeat any large dogs recently?",
+            "Hmm... no? What about overthrowing a corrupt o_cClan? Banishing a mew-levolent Dark Forest cat?",
+            "Oh, your life is so boring, y_c!"
+        ]
+    ],
+    "silly_elder_yawn": [
+        [
+            "Any",
+            "they_elder",
+            "you_younger",
+            "silly",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Yawn... I don't want to get up... y_c, would you bring me a mouse from the fresh-kill pile?",
+            "Why'd I say \"yawn\" out loud, you ask?",
+            "Well, because I'm- *yawn*",
+            "Fox-dung! I'm trying to think about yawning without actually yawning! And I clearly failed! I need a failure mouse right now, y_c! Bring me my failure mouse! Your elders command you!"
+        ]
+    ],
+    "silly_elder_bossy": [
+        [
+            "Any",
+            "silly",
+            "they_elder",
+            "assertive",
+            "they_blind"
+        ],
+        [
+            "Maybe it's nice to be an elder, after all. At first it was boring, but now I've learned to finally take advantage of it!",
+            "I get to tell people to do whatever I want them to, and they actually go through with it because I'm an elder!",
+            "'Bring me my fresh-kill!' ,'Get these ticks off my back!'",
+            "Maybe the apprentices think I'm bossy and argumentative, but when they're elders, they'll finally realize I was right all along. Because I was.",
+            "[t_c puffs out their chest in victory.]"
+        ]
+    ],
+    "youdeaf_R19": [
+        [
+            "only_you_deaf",
+            "you_deaf",
+            "you_leader",
+            "no_kit",
+            "they_warrior",
+            "they_elder",
+            "they_mediator"
+            
+        ],
+        [
+            "[t_c comes to sit with you as you watch the Clan. Everything is going well and you bask in that knowledge.]",
+            "[But after a moment, {PRONOUN/t_c/subject} {VERB/t_c/bring/brings} up a good point with a quick signal. You need to think about a dog that was recently spotted on the territory.]",
+            "[You sign to t_c for {PRONOUN/t_c/poss} opinion. Between the two of you, you come up with a solid plan to drive off the dog.]",
+            "[Your head lifts as your ears wriggle and your whiskers twitch in the sign for 'thank you' before getting up to visit d_n and tell {PRONOUN/d_n/object} the plan.]"
+        ]
+>>>>>>> Stashed changes
     ]
 }
