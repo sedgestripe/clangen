@@ -1169,19 +1169,6 @@
             "Maybe you should see the medicine cat about it."
         ]
     ],
-    "assertive_dislike": [
-        [
-            "Any",
-            "assertive",
-            "cool",
-            "silly",
-            "hate"
-        ],
-        [
-            "Hey y_c. Why don't you jump off a cliff? It's a new thing every cat in the Clan is trying.",
-            "[t_c is staring at you resentfully.]"
-        ]
-    ],
     "introspective_dep": [
         [
             "apprentice",

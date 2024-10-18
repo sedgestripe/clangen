@@ -39,6 +39,11 @@
                     "gloomy",
                     "mellow"
                 ]
+            },
+            {
+                "text": "It is not the first time water pooled into the nursery, and you reckon it will not be the last. The older kittens know the drill and wander away to find dry ground, while you pick up the younger kittens to follow. You feel a prideful swell in your heart as the older kittens play a game of 'don't touch the water!' to distract the younglings.",
+                "exp": 10,
+                "weight": 15
             }
         ],
         "fail_outcomes": [
@@ -57,6 +62,22 @@
                         "injuries": ["running nose"]
                     }
                 ]
+            },
+            {
+                "text": "With a disgusted gasp, you hurry away from the pooling water. Lost in the <i>horrible</i> mental image of your well-groomed pelt being ruined by the rain water, you completely neglect your duty to evacuate the kittens to a dry area. The kittens huff and whine as they get wet, and you're - rightfully - blamed for their misfortune.",
+                "exp": 0,
+                "weight": 20,
+                "stat_trait": [
+                    "charismatic",
+                    "shameless",
+                    "flamboyant",
+                    "childish"
+                ]
+            },
+            {
+                "text": "A little water doesn't hurt anyone! You decide to take advantage of the opportunity and jump into the overflowing puddles, showing a spout of joyful fun. Some of the kittens decide to join you, and what was once a scary experience, turns into a water fight!",
+                "exp": 0,
+                "weight": 20
             }
         ]
     },
@@ -85,11 +106,55 @@
                 "text": "You promptly organize a search party, and with combined efforts, the kit is found playing near the elders' den, unaware of the panic. Your decisiveness ensures the kit's safety.",
                 "exp": 10,
                 "weight": 20
+            },
+            {
+                "text": "While everycat is frantically looking for the kitten, you smile knowingly as you hear muffled giggles from deep within the nursery. Though knowing exactly where they are, you call out for the kitten and sneak around their hiding place, pouncing the rascal with a playful roar. The kittens safety is top priority, but so is fun.",
+                "exp": 10,
+                "weight": 20,
+                "stat_trait": [
+                    "thoughtful",
+                    "calm",
+                    "flexible",
+                    "wise",
+                    "righteous",
+                    "lonesome",
+                    "gloomy",
+                    "mellow"
+                ]
+            },
+            {
+                "text": "Instead of organizing a search party, you calmly wander around the camp until you see a ghosty cat floating in the distance. Approaching, you ask if the cat has seen the kitten anywhere and they point you in the direct of the elder's den. You thank the ghost and walk off with a smile - sometimes it's more beneficial to ask than to panic.",
+                "exp": 10,
+                "weight": 15,
+                "stat_skill": ["GHOST,1"],
+                "new_cat": [
+                    ["meeting", "residence:ur"]
+                ]
+            },
+            {
+                "text": "As the search party is undergoing investigation, you practically turn all the camps dens upside down. Soon enough, you hear laughter near the warriors den and find the kitten... playing by themself? You call out and they scramble to stop what they're doing with a nervous expression. You shake it off as only an imaginary friend.",
+                "exp": 10,
+                "weight": 5
             }
         ],
         "fail_outcomes": [
             {
                 "text": "Despite the frantic search, it's an elder who eventually finds the kit.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "As the search comes to an end, the hope dwindles as no cat is able to find the missing kitten. You refuse to give up hope and search the nursery again... only to find the kitten sprawled out underneath one of the nests, sleeping deeply. You almost have the nerve to be angry, but instead take a breath of relief. This could have been much worse.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "Night falls and the search is still transpiring, but the kitten is still deemed missing. Every den has been searched, the border and surrounding territory is clear, but still no sight of the kitten. Just as you're about to panic, the kitten tumbles out of the surrounding greenery with a grin and a red muzzle, stating they found a berry bush!",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "Just as you're about to panic, a border patrol wanders into the camp with a sheepish kitten held by the scruff. You scold the kitten and tell them it's dangerous to wander around on their own! The kitten snidely claims that they weren't alone - they were with the patrol!",
                 "exp": 0,
                 "weight": 20
             }
@@ -120,6 +185,27 @@
                 "text": "Recognizing the symptoms, you immediately consult the medicine cat. Under their care, the kit quickly recovers. Your prompt action is commended.",
                 "exp": 10,
                 "weight": 20
+            },
+            {
+                "text": "You immediately recognize the symptoms and decide the cough is not bad enough to consult the medicine cat. Instead, you search around the nursery for herbs and treat the kitten yourself with much success.",
+                "exp": 10,
+                "weight": 20,
+                "stat_skill": ["HEALER,1"]
+            },
+            {
+                "text": "Despite being a queen, you trained for this! It's not uncommon for a kitten to fall sick because of spreading diseases, and in your humble opinion all queens should know basic remedies for simple health issues. You give the kitten a basic remedy for their cough and your preparation for such a situation is praised.",
+                "exp": 10,
+                "weight": 20,
+                "stat_trait": [
+                    "thoughtful",
+                    "calm",
+                    "flexible",
+                    "wise",
+                    "righteous",
+                    "lonesome",
+                    "gloomy",
+                    "mellow"
+                ]
             }
         ],
         "fail_outcomes": [
@@ -127,6 +213,22 @@
                 "text": "While you try some traditional remedies, the kit's condition doesn't improve.",
                 "exp": 0,
                 "weight": 20
+            },
+            {
+                "text": "The kitten coughs in your face one too many times for comfort, and although you were able to locate the issue and direct them to a medicine cat, you find yourself feeling sick as well. Aww rats.",
+                "exp": 0,
+                "weight": 5,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["running nose"]
+                    }
+                ] 
+            },
+            {
+                "text": "You're not willing to become sick this time, nope! Nope, nope nope! You keep yourself a safe distance away and tell the kitten to find a medicine cat for their cough, even though you can feel the judgemental eyes of other queen's upon you.",
+                "exp": 0,
+                "weight": 15
             }
         ]
     },
@@ -153,13 +255,39 @@
         "success_outcomes": [
             {
                 "text": "You organize a barrier with the help of other queens and apprentices, keeping the kits safely away from the training ground. The warriors appreciate your efforts.",
+                "exp": 10,
+                "weight": 20
+            },
+            {
+                "text": "The kittens curiosity gives you an idea, and you consult with the deputy about training the warriors in something else - perception and initiative! A game of hide and seek where warriors need to find kittens while also avoiding other warriors. The deputy is impressed with your idea and introduce it straight away!",
+                "exp": 10,
+                "weight": 15
+            },
+            {
+                "text": "You decide to compromise with the kittens, and take them to the elders den to get stories of great battles instead of putting themselves in danger. Not only would the kittens and elders get some entertainment for the day, but you can also relax!",
                 "exp": 5,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "Though you caution the kits, one still ends up wandering into the training area, getting a minor scratch. The experience stresses the need for constant vigilance.",
+                "text": "Though you caution the kits, r_k still ends up wandering into the training area, getting a minor scratch. The experience stresses the need for constant vigilance.",
+                "exp": 0,
+                "weight": 5,
+                "injury": [
+                    {
+                        "cats": ["r_k"],
+                        "injuries": ["small cut"]
+                    }
+                ] 
+            },
+            {
+                "text": "Despite your best efforts, r_k still sneaks under your nose and gets {PRONOUN/r_k/self} too close to an intense spar. Thankfully the warriors stop straight away and give you the room to pull r_k out of the training arena. That was too close!",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You turned your back for one second and a kitten goes chasing into the training area. Thankfully, a passerby apprentice was able to stop the kitten before it gets any closer.",
                 "exp": 0,
                 "weight": 20
             }
@@ -413,11 +541,31 @@
                 "text": "You tell the kit that you're sorry about their leaf, and, managing to avoid being spotted by anycat, you search alongside them for a new one along the edges of camp. Their new leaf is much bigger and more colourful, and they thank you for helping them find it.",
                 "exp": 15,
                 "weight": 20
+            },
+            {
+                "text": "You ignore the stares making your fur stand up on end and help the kitten look for a new leaf along the border of camp. You point out what seemed like a million colorful and huge leafs before the kitten was satisfied with your find. The kitten runs off with a thank you, and you walk back to camp ready to take the fall.",
+                "exp": 15,
+                "weight": 20,
+                "stat_trait": [
+                    "thoughtful",
+                    "calm",
+                    "flexible",
+                    "wise",
+                    "righteous",
+                    "lonesome",
+                    "gloomy",
+                    "mellow"
+                ]
             }
         ],
         "fail_outcomes": [
             {
                 "text": "You stand up to go help the kit find a new leaf, but another queen catches your eye with an angry stare. Awkwardly, you tell the kit to go ask the other queen for help instead.",
+                "exp": 0,
+                "weight": 20
+            },
+            {
+                "text": "You quietly tell the kitten the other queens will not appreciate you talking to them. You suggest the kitten ask for help from another queen, even with the sight of teary eyes and a devastated face.",
                 "exp": 0,
                 "weight": 20
             }

@@ -1117,19 +1117,6 @@
             "I don't know how the leader thought it was smart to put us together. At least once I get my warrior name, we never have to speak to each other again."
         ]
     ],
-    "assertive_dislike": [
-        [
-            "Any",
-            "assertive",
-            "cool",
-            "silly",
-            "hate"
-        ],
-        [
-            "Hey y_c. Why don't you jump off a cliff? It's a new thing every cat in the Clan is trying.",
-            "[t_c is staring at you resentfully.]"
-        ]
-    ],
     "assertive_dislike1": [
         [
             "Any",
