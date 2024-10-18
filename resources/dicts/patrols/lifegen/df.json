@@ -525,8 +525,7 @@
             "df"
         ],
         "tags": [
-            "border",
-            "convince_rc"
+            "border"
         ],
         "patrol_art": "df_Clanmate",
         "min_cats": 1,
@@ -686,8 +685,7 @@
             "df"
         ],
         "tags": [
-            "border",
-            "convince_rc"
+            "border"
         ],
         "patrol_art": "df_friendly",
         "min_cats": 2,
@@ -833,7 +831,6 @@
         ],
         "tags": [
             "border",
-            "convince_rc",
             "fellowtrainee"
         ],
         "patrol_art": "df_friendly",
@@ -904,7 +901,6 @@
         ],
         "tags": [
             "border",
-            "convince_rc",
             "fellowtrainee"
         ],
         "patrol_art": "life_df_og11",

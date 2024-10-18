@@ -1351,7 +1351,9 @@ class ProfileScreen(Screens):
                 "",
                 object_id="#queen_activity_button", manager=MANAGER
             )
-            if self.the_cat.dead or self.the_cat.outside or self.the_cat.shunned > 0:
+            if self.the_cat.dead or self.the_cat.outside or self.the_cat.shunned > 0 or self.the_cat.not_working():
+                # check for not working because the queen screen doesnt have the "this cat is unable to work" thing
+                # like the mediator screen does
                 self.profile_elements["queen"].disable()
         if self.the_cat.status in ["medicine cat", "medicine cat apprentice"] and self.the_cat.ID == game.clan.your_cat.ID and self.the_cat.moons >= 6:
             self.profile_elements["halfmoon"] = UIImageButton(scale(pygame.Rect(

@@ -317,6 +317,14 @@ class PatrolOutcome:
             and kitty == patrol.patrol_apprentices[1]
         ):
             return True
+        
+        for item in patrol.patrol_cat_dict.items():
+            abbrev = item[0]
+            cat_object = item[1]
+
+            if abbrev in allowed_specific and kitty == cat_object:
+                return True
+
 
         return False
 
@@ -335,14 +343,30 @@ class PatrolOutcome:
             for x in self.can_have_stat
             if x in ("r_c", "p_l", "app1", "app2", "any", "not_pl_rc")
         ]
+        for i in patrol.patrol_cat_dict.items():
+            if i[0] in self.can_have_stat:
+                allowed_specific.append(i[0])
 
         # Special default behavior for patrols less than two cats.
         # Patrol leader is the only one allowed to be stat_cat in patrols equal to or less than than two cats
-        if not allowed_specific and len(patrol.patrol_cats) <= 2:
-            allowed_specific = ["p_l"]
+
+        # LIFEGEN EDIT: only in clangen patrols buster
+        if "patrol_category" in game.switches and game.switches["patrol_category"] == "clangen":
+            if not allowed_specific and len(patrol.patrol_cats) <= 2:
+                allowed_specific = ["p_l"]
+
+            patrolcats = patrol.patrol_cats
+        
+        else:
+            # this is lifegen stuff to add random abbrevs to the list for stat cat possibilities
+            # so its not just cats in the patrol
+            patrolcats = patrol.patrol_cats
+            for kitty in patrol.patrol_cat_dict.items():
+                patrolcats.append(kitty[1])
 
         possible_stat_cats = []
-        for kitty in patrol.patrol_cats:
+        # for kitty in patrol.patrol_cats: # clangen
+        for kitty in patrolcats:
             # First, the blanket requirements
             if "app" in self.can_have_stat and kitty.status not in [
                 "apprentice",

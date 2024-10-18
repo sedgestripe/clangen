@@ -6648,7 +6648,7 @@
         ],
         "pushherb": [
             "[You watch in the corner of your eye as t_c paws at the herbs, sorting through them with a careful touch. {PRONOUN/t_c/subject/CAP} seem to know what {PRONOUN/t_c/subject}{VERB/t_c/'re/'s} doing.]",
-            "[Have {PRONOUN/t_c/subject} been watching you for a while? Or is t_c just this observant?]",
+            "[{VERB/t_c/Have/Has} {PRONOUN/t_c/subject} been watching you for a while? Or is t_c just this observant?]",
             "y_c, can I have more?"
         ]
     },

@@ -6461,7 +6461,7 @@
         ],
         [
             "[You watch r_a_silly try again and again to make t_c laugh.]",
-            "[{PRONOUN/r_a_silly/subject/CAP} {VERB/r_a_silly/tell/tells} all sorts of jokes, {VERB/r_a_silly/make/makes} funny faces, {VERB/r_a_silly/fall/falls} over on {PRONOUN/r_a/poss} paws ...]",
+            "[{PRONOUN/r_a_silly/subject/CAP} {VERB/r_a_silly/tell/tells} all sorts of jokes, {VERB/r_a_silly/make/makes} funny faces, {VERB/r_a_silly/fall/falls} over on {PRONOUN/r_a_silly/poss} paws ...]",
             "[Nothing can break that stony glare.]",
             "[But one look at you and t_c breaks out into a huge smile!]",
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/trot/trots} over to greet you as the defeated apprentice slinks away.]"
@@ -18078,7 +18078,7 @@
             "{PRONOUN/t_kk/subject/CAP} could be a historic medicine cat, or an influential mediator, or - hey, who knows? Even leader of the Clan!",
             "[You ask t_c why {PRONOUN/t_c/subject} didn't mention the path of a regular warrior?]",
             "Yeah, like my kit's just gonna end up as some generic patrol member. No way I'm gonna let that happen!",
-            "Just you wait, t_c! t_kk's gonna go down in history!"
+            "Just you wait, y_c! t_kk's gonna go down in history!"
         ]
     ],
     "assertive_tka_AJ": [
@@ -21478,7 +21478,7 @@
             "they_blind"
         ],
         [
-            "dislike_r_c_assertive kept talking over me when I was chatting with plike_r_c earlier.",
+            "dislike_r_c1_assertive kept talking over me when I was chatting with plike_r_c2 earlier.",
             "Do you think it was on purpose, or just because I was talking too quietly?"
         ]
     ],
