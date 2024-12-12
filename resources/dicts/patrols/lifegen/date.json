@@ -1,2438 +1,2438 @@
 [
-    {
-        "patrol_id": "date_snow",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "leaf-bare"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+  {
+    "patrol_id": "date_snow",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "leaf-bare"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_snow",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You see the first snowflakes of leaf-bare falling down. You can't help but notice r_c looking up at the sky with wonder. Maybe you should play in the snow with {PRONOUN/r_c/object}?",
+    "decline_text": "You decide against it. You don't want to freeze to death, after all.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/agree/agrees} to it! You walk through the forest, tails entwined, when suddenly you feel a shower of ice hit your face! You look to r_c bewilderedly, realizing that {PRONOUN/r_c/subject} flicked snow at you! You have a snow battle that ends with the both of you dissolving into giggles.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You see the first snowflakes of leaf-bare falling down. You can't help but notice r_c looking up at the sky with wonder. Maybe you should play in the snow with {PRONOUN/r_c/object}?",
-        "decline_text": "You decide against it. You don't want to freeze to death, after all.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/agree/agrees} to it! You walk through the forest, tails entwined, when suddenly you feel a shower of ice hit your face! You look to r_c bewilderedly, realizing that {PRONOUN/r_c/subject} flicked snow at you! You have a snow battle that ends with the both of you dissolving into giggles.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You walk up to r_c and invite {PRONOUN/r_c/object} to play, but {PRONOUN/r_c/subject} {VERB/r_c/think/thinks} you're joking. You laugh along with {PRONOUN/r_c/object}, but you can't help but feel a sore disappointment.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "date_ask",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_confess",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You walk up to r_c and invite {PRONOUN/r_c/object} to play, but {PRONOUN/r_c/subject} {VERB/r_c/think/thinks} you're joking. You laugh along with {PRONOUN/r_c/object}, but you can't help but feel a sore disappointment.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "date_ask",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_confess",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You and r_c go on a patrol alone, and it has gone wonderfully thus far. However, you feel the need to ask if the other considers this a date.",
+    "decline_text": "Your nerves get to you, and you find yourself unable to speak.",
+    "chance_of_success": 50,
+    "relationship_constraint": [
+      "not_mates"
+    ],
+    "success_outcomes": [
+      {
+        "text": " r_c shies away from your gaze, but nods slowly and smiles.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You and r_c go on a patrol alone, and it has gone wonderfully thus far. However, you feel the need to ask if the other considers this a date.",
-        "decline_text": "Your nerves get to you, and you find yourself unable to speak.",
-        "chance_of_success": 50,
-        "relationship_constraint": [
-            "not_mates"
-        ],
-        "success_outcomes": [
-            {
-                "text": " r_c shies away from your gaze, but nods slowly and smiles.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "comfort"
-                        ],
-                        "amount": 13
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "r_c almost seems a little offended that you'd asked and declines hastily, making things awkward.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "y_c"
-                        ],
-                        "cats_from": [
-                            "r_c"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": -5
-                    }
-                ]
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "comfort"
+            ],
+            "amount": 13
+          }
         ]
-    },
-    {
-        "patrol_id": "date_star",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_star",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "r_c almost seems a little offended that you'd asked and declines hastily, making things awkward.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You hear around the den about a shooting star event happening that evening. You consider asking r_c about whether or not {PRONOUN/r_c/subject} {VERB/r_c/wish/wishes} to watch it with you.",
-        "decline_text": "No... what if {PRONOUN/r_c/subject} {VERB/r_c/think/thinks} you're weird for wanting to watch your dead ancestors fall out the sky?!",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You find {PRONOUN/r_c/object} while {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} getting some fresh kill and ask if {PRONOUN/r_c/subject}'d like to attend with you. {PRONOUN/r_c/subject/CAP} {VERB/r_c/seem/seems} to be happy that you asked! You have a wonderful evening watching the stars with {PRONOUN/r_c/object}.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "{PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} talking to another cat, when you find {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} gently {VERB/r_c/inform/informs} you that {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} watching it with someone else. You slink off, embarrassed. You feel so bad that you don't even go to see it.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "comfort"
-                        ],
-                        "amount": -5
-                    }
-                ]
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "y_c"
+            ],
+            "cats_from": [
+              "r_c"
+            ],
+            "mutual": false,
+            "values": [
+              "romantic"
+            ],
+            "amount": -5
+          }
         ]
-    },
-    {
-        "patrol_id": "date_storm",
-        "biome": [
-            "beach"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_storm",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "date_star",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_star",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You hear around the den about a shooting star event happening that evening. You consider asking r_c about whether or not {PRONOUN/r_c/subject} {VERB/r_c/wish/wishes} to watch it with you.",
+    "decline_text": "No... what if {PRONOUN/r_c/subject} {VERB/r_c/think/thinks} you're weird for wanting to watch your dead ancestors fall out the sky?!",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You find {PRONOUN/r_c/object} while {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} getting some fresh kill and ask if {PRONOUN/r_c/subject}'d like to attend with you. {PRONOUN/r_c/subject/CAP} {VERB/r_c/seem/seems} to be happy that you asked! You have a wonderful evening watching the stars with {PRONOUN/r_c/object}.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "A storm rolls into the side of the coast. It's an odd thought, but after you got stuck in a storm once, you were in awe of the streaks of lightning. Perhaps r_c would enjoy spending some time with you?",
-        "decline_text": "That's a horrible idea. You shake it out of your head, and move on.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You're almost surprised when r_c's eyes light up with interest. You both spend time in the shelter of a Twoleg path, watching lightning arc out of the sky beautifully. r_c gets a bit spooked, and inches closer to you for shelter. You try to hide behind your whiskers.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "y_c"
-                        ],
-                        "cats_from": [
-                            "r_c"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "comfort",
-                            "platonic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "r_c declines your offer, having some clear disgust of the idea. Hopefully it was the thunderstorm part, and not spending time with you.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "date_sunrise",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "{PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} talking to another cat, when you find {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} gently {VERB/r_c/inform/informs} you that {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} watching it with someone else. You slink off, embarrassed. You feel so bad that you don't even go to see it.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You and r_c are out on a walk alone at the rise of dawn. You take a moment to sit down on a small hill and look at the rising sun. You wonder if this moment can become something more intimate between you and r_c.",
-        "decline_text": "You're too nervous to inch closer, deciding it must be too soon. What if r_c thinks you're acting out of place?",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You gently lean into r_c, resting your head on {PRONOUN/r_c/poss} shoulder. You can hear a purr emanating from {PRONOUN/r_c/poss} throat, and {PRONOUN/r_c/subject} slowly {VERB/r_c/rest/rests} {PRONOUN/r_c/poss} chin on the top of your head as you watch the sunrise together.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "comfort"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You slowly inch closer to r_c and lean your head on {PRONOUN/r_c/poss} shoulder, but {PRONOUN/r_c/subject} {VERB/r_c/glare/glares} you down and {VERB/r_c/scoot/scoots} away uncomfortably. Ouch, that was awkward...",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "y_c"
-                        ],
-                        "cats_from": [
-                            "r_c"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "comfort"
-                        ],
-                        "amount": -5
-                    }
-                ]
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": false,
+            "values": [
+              "comfort"
+            ],
+            "amount": -5
+          }
         ]
-    },
-    {
-        "patrol_id": "date_sea",
-        "biome": [
-            "beach"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "Patrol_beachdate",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "date_storm",
+    "biome": [
+      "beach"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_storm",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "A storm rolls into the side of the coast. It's an odd thought, but after you got stuck in a storm once, you were in awe of the streaks of lightning. Perhaps r_c would enjoy spending some time with you?",
+    "decline_text": "That's a horrible idea. You shake it out of your head, and move on.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You're almost surprised when r_c's eyes light up with interest. You both spend time in the shelter of a Twoleg path, watching lightning arc out of the sky beautifully. r_c gets a bit spooked, and inches closer to you for shelter. You try to hide behind your whiskers.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "Harsh winds are roaming the air today, and the sea is looking wild. You remember when you as an apprentice jumped out to play in the waves - perhaps r_c would want to play with you today?",
-        "decline_text": "Maybe some other day. Right now, the sea looks a little too wild.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/agree/agrees}! Phew. The two of you have a wonderful day, jumping around in the waves and engaging in small water fights, and you feel like your connection has strengthened.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/agree/agrees}, and you walk out to the seabank together. When you've stepped out in the water, r_c looks at you questionably, not seeming to understand why you think this is fun. You attempt to show {PRONOUN/r_c/object} as you joyfully jump around, but a sharp wave hits r_c and {PRONOUN/r_c/subject} hiss loudly, walking back with a soaked pelt. Maybe this wasn't the best idea after all..",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "y_c"
+            ],
+            "cats_from": [
+              "r_c"
+            ],
+            "mutual": false,
+            "values": [
+              "comfort",
+              "platonic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "date_flower",
-        "biome": [
-            "mountainous"
-        ],
-        "season": [
-            "leaf-bare"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_flower",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "r_c declines your offer, having some clear disgust of the idea. Hopefully it was the thunderstorm part, and not spending time with you.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "date_sunrise",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You and r_c are out on a walk alone at the rise of dawn. You take a moment to sit down on a small hill and look at the rising sun. You wonder if this moment can become something more intimate between you and r_c.",
+    "decline_text": "You're too nervous to inch closer, deciding it must be too soon. What if r_c thinks you're acting out of place?",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You gently lean into r_c, resting your head on {PRONOUN/r_c/poss} shoulder. You can hear a purr emanating from {PRONOUN/r_c/poss} throat, and {PRONOUN/r_c/subject} slowly {VERB/r_c/rest/rests} {PRONOUN/r_c/poss} chin on the top of your head as you watch the sunrise together.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "As you wander out by the cliffs with r_c you notice a few pretty flowers sticking out of a pile of snow. Perhaps you should pick some for {PRONOUN/r_c/object}?",
-        "decline_text": "You don't want to risk getting your paws all cold and wet - and worse, what if r_c doesn't want them?",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You tell r_c to stop for a moment as you carefully lift the flowers. r_c looks confused, but lights up in a smile as you drop the flowers in front of {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} decide to wear the flowers on {PRONOUN/r_c/poss} pelt, and you feel all warm and fuzzy as you continue the patrol.",
-                "exp": 0,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "p_l"
-                        ],
-                        "accessory": [
-                            "FLOWER"
-                        ]
-                    }
-                ],
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You tell r_c to stop for a quick moment, but as you struggle to pick the flowers, r_c states that you don't have time for this. You decide to leave the pretty flowers, but you can't help but keep looking back at them with disappointment as you continue the patrol.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "comfort"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "date_evening_patrol",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You slowly inch closer to r_c and lean your head on {PRONOUN/r_c/poss} shoulder, but {PRONOUN/r_c/subject} {VERB/r_c/glare/glares} you down and {VERB/r_c/scoot/scoots} away uncomfortably. Ouch, that was awkward...",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You ponder whether you should ask r_c on an evening patrol with just the two of you. The warm breeze blowing may stir up some hidden feelings.",
-        "decline_text": "You decide not to. The thought of rejection is too overwhelming.",
-        "chance_of_success": 50,
-        "relationship_constraint": [
-            "not_mates"
-        ],
-        "success_outcomes": [
-            {
-                "text": "r_c happily agrees saying {PRONOUN/r_c/subject}'d love to go out with you. The two of you wander through c_n's territory and you find yourself staring at {PRONOUN/r_c/object} for extended periods of time. How have you never noticed {PRONOUN/r_c/poss} beauty?",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 13
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "r_c frowns, asking you why there won't be more cats on the patrol. You feel your ears burn and mumble an apology before hurrying off to your nest. The rest of the evening and the morning of the next day leaves an awkward tension between you and r_c.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "y_c"
+            ],
+            "cats_from": [
+              "r_c"
+            ],
+            "mutual": false,
+            "values": [
+              "comfort"
+            ],
+            "amount": -5
+          }
         ]
-    },
-    {
-        "patrol_id": "moon_high_patrol",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "leaf-fall"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "date_sea",
+    "biome": [
+      "beach"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "Patrol_beachdate",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "Harsh winds are roaming the air today, and the sea is looking wild. You remember when you as an apprentice jumped out to play in the waves - perhaps r_c would want to play with you today?",
+    "decline_text": "Maybe some other day. Right now, the sea looks a little too wild.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/agree/agrees}! Phew. The two of you have a wonderful day, jumping around in the waves and engaging in small water fights, and you feel like your connection has strengthened.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You leave camp on a moon high patrol with r_c. It's getting close to leafbare, and the air is starting to get frigid. You think about pressing up against r_c and wrapping your tail around {PRONOUN/r_c/object}. Just because it's cold!",
-        "decline_text": "Nope. You don't do that. That would be weird. You choose to respect r_c's boundaries.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You lean against {PRONOUN/r_c/object} and {PRONOUN/r_c/subject} {VERB/r_c/let/lets} out a surprised purr, and thank you. {PRONOUN/r_c/subject/CAP} joke that {PRONOUN/r_c/subject} {VERB/r_c/were/was} getting cold, but now {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} at the perfect temperature thanks to you.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "comfort"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/hiss/hisses} a warning at you, asking what you're doing and you retreat immediately. The rest of the patrol is painfully awkward.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "comfort"
-                        ],
-                        "amount": -8
-                    }
-                ]
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "pond_encounter",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "pond_encounter",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/agree/agrees}, and you walk out to the seabank together. When you've stepped out in the water, r_c looks at you questionably, not seeming to understand why you think this is fun. You attempt to show {PRONOUN/r_c/object} as you joyfully jump around, but a sharp wave hits r_c and {PRONOUN/r_c/subject} hiss loudly, walking back with a soaked pelt. Maybe this wasn't the best idea after all..",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "date_flower",
+    "biome": [
+      "mountainous"
+    ],
+    "season": [
+      "leaf-bare"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_flower",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "As you wander out by the cliffs with r_c you notice a few pretty flowers sticking out of a pile of snow. Perhaps you should pick some for {PRONOUN/r_c/object}?",
+    "decline_text": "You don't want to risk getting your paws all cold and wet - and worse, what if r_c doesn't want them?",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You tell r_c to stop for a moment as you carefully lift the flowers. r_c looks confused, but lights up in a smile as you drop the flowers in front of {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} decide to wear the flowers on {PRONOUN/r_c/poss} pelt, and you feel all warm and fuzzy as you continue the patrol.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "As you pad around the land, you spot r_c sitting at your favorite pond. {PRONOUN/r_c/subject/CAP} {VERB/r_c/are/is} looking longingly into the sky. You debate approaching {PRONOUN/r_c/object}.",
-        "decline_text": "Nevermind, you have an important patrol ahead. You decide to move onwards.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "With a large sigh, you follow the path leading over to {PRONOUN/r_c/object}. You both smile at each other and eventually you both entwine your tails together.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "comfort"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
+        "accessory": [
+          {
+            "cats": [
+              "p_l"
+            ],
+            "accessory": [
+              "FLOWER"
+            ]
+          }
         ],
-        "fail_outcomes": [
-            {
-                "text": "You trot up to r_c and sit down. {PRONOUN/r_c/subject/CAP} nervously shuffles away and politely {VERB/r_c/decline/declines}. You walk away to continue your patrol, embarrassed.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "hawk_nest",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You tell r_c to stop for a quick moment, but as you struggle to pick the flowers, r_c states that you don't have time for this. You decide to leave the pretty flowers, but you can't help but keep looking back at them with disappointment as you continue the patrol.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "date_evening_patrol",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You ponder whether you should ask r_c on an evening patrol with just the two of you. The warm breeze blowing may stir up some hidden feelings.",
+    "decline_text": "You decide not to. The thought of rejection is too overwhelming.",
+    "chance_of_success": 50,
+    "relationship_constraint": [
+      "not_mates"
+    ],
+    "success_outcomes": [
+      {
+        "text": "r_c happily agrees saying {PRONOUN/r_c/subject}'d love to go out with you. The two of you wander through c_n's territory and you find yourself staring at {PRONOUN/r_c/object} for extended periods of time. How have you never noticed {PRONOUN/r_c/poss} beauty?",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "It's a foggy morning, but a sound on the breeze catches your attention. Immediately, r_c pops into your brain. {PRONOUN/r_c/subject/CAP} would want to see this.",
-        "decline_text": "It's too early in the morning, r_c enjoys {PRONOUN/r_c/poss} rest.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "r_c seems surprised to see you when {PRONOUN/r_c/subject} {VERB/r_c/open/opens} {PRONOUN/r_c/poss} eyes, but eventually {VERB/r_c/get/gets} to {PRONOUN/r_c/poss} feet. As the morning sun turns orange with the dawn, the two of you watch in silence. The local hawk's nest has hatched, and every now and again, you catch a glimpse of a chick.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "comfort",
-                            "platonic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "r_c doesn't even stir from {PRONOUN/r_c/poss} nest, rather swats you away.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": false,
+            "values": [
+              "romantic"
+            ],
+            "amount": 13
+          }
         ]
-    },
-    {
-        "patrol_id": "fishing_encounter",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "r_c frowns, asking you why there won't be more cats on the patrol. You feel your ears burn and mumble an apology before hurrying off to your nest. The rest of the evening and the morning of the next day leaves an awkward tension between you and r_c.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "moon_high_patrol",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "leaf-fall"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You leave camp on a moon high patrol with r_c. It's getting close to leafbare, and the air is starting to get frigid. You think about pressing up against r_c and wrapping your tail around {PRONOUN/r_c/object}. Just because it's cold!",
+    "decline_text": "Nope. You don't do that. That would be weird. You choose to respect r_c's boundaries.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You lean against {PRONOUN/r_c/object} and {PRONOUN/r_c/subject} {VERB/r_c/let/lets} out a surprised purr, and thank you. {PRONOUN/r_c/subject/CAP} joke that {PRONOUN/r_c/subject} {VERB/r_c/were/was} getting cold, but now {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} at the perfect temperature thanks to you.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You're out fishing with r_c when you notice {PRONOUN/r_c/object} staring into the dark water with a sad expression on {PRONOUN/r_c/poss} face.",
-        "decline_text": "You decide it's not your place to be nosy. You respect r_c's boundaries, after all. If it was important, {PRONOUN/r_c/subject}'d tell you, right?",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You carefully ask r_c what's on {PRONOUN/r_c/poss} mind. {PRONOUN/r_c/subject/CAP} {VERB/r_c/tell/tells} you about how {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} been feeling worthless lately, and the dark, cloudy weather hasn't been helping. {PRONOUN/r_c/subject/CAP} {VERB/r_c/splash/splashes} the water in frustration. You give {PRONOUN/r_c/object} a soft smile and reassure {PRONOUN/r_c/object} of {PRONOUN/r_c/poss} worth, splashing some water back at {PRONOUN/r_c/object}. The moment of sadness turns into a fun water fight.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "comfort",
-                            "platonic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You ask r_c what's on {PRONOUN/r_c/poss} mind, but {PRONOUN/r_c/subject} {VERB/r_c/shrug/shrugs} you off and dismiss {PRONOUN/r_c/poss} worries, instead telling you to focus on the task at paw. You both go back to fishing in an awkward atmosphere. Does r_c not trust you enough? Are you annoying {PRONOUN/r_c/object}...?",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "comfort"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "medicine_herb_collection",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "date",
-            "you_med"
-        ],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/hiss/hisses} a warning at you, asking what you're doing and you retreat immediately. The rest of the patrol is painfully awkward.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You need herbs for the medicine den, and decide to bring r_c with you. You appreciate {PRONOUN/r_c/object} coming with you, as the extra paws are a massive help! You notice how {PRONOUN/r_c/poss} fur sparkles beautifully with dew, looking almost like Silverpelt had come alive on {PRONOUN/r_c/object}. You consider telling {PRONOUN/r_c/object} so.",
-        "decline_text": "Nope. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} here on business. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} just helping you get herbs. Don't get any weird ideas.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "r_c purrs in amusement, telling you that you look very pretty yourself. You go the rest of your day holding your tail high in pride.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "r_c sighs and tells you to focus on finding herbs so they can get back to camp. You're genuinely upset by this. {VERB/r_c/Do/Does} {PRONOUN/r_c/subject} not like spending time with you? It was only a joke, you keep telling both {PRONOUN/r_c/object} and yourself to save yourself the deadly claws to your pride.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "comfort"
+            ],
+            "amount": -8
+          }
         ]
-    },
-    {
-        "patrol_id": "sunrise_cliff",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "sunrise_cliff",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "pond_encounter",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "pond_encounter",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "As you pad around the land, you spot r_c sitting at your favorite pond. {PRONOUN/r_c/subject/CAP} {VERB/r_c/are/is} looking longingly into the sky. You debate approaching {PRONOUN/r_c/object}.",
+    "decline_text": "Nevermind, you have an important patrol ahead. You decide to move onwards.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "With a large sigh, you follow the path leading over to {PRONOUN/r_c/object}. You both smile at each other and eventually you both entwine your tails together.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You decide to take r_c to a lovely view in the early hours of dawn. The cliffs provide a stunning vision of the sun rising. After a while of staring, your tail brushes against r_c's and you wonder if now would be the time to ask {PRONOUN/r_c/poss} if {PRONOUN/r_c/subject} {VERB/r_c/feel/feels} anything for you...",
-        "decline_text": "No! No way in StarClan! You're too awkward for that! So you just sit in silence with {PRONOUN/r_c/object}.",
-        "chance_of_success": 50,
-        "relationship_constraint": [
-            "not_mates"
-        ],
-        "success_outcomes": [
-            {
-                "text": "You nervously ask r_c and {PRONOUN/r_c/subject} look away, blushing a bit. {PRONOUN/r_c/subject/CAP} purr and tell you to just focus on the sky, though you can't help but notice {PRONOUN/r_c/object} glancing at you affectionately every now and then.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 12
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "r_c stares at you with an awkward expression. You got the wrong idea. {PRONOUN/r_c/subject/CAP} just wanted to enjoy the sunrise. But now, {PRONOUN/r_c/subject} can't. r_c walks away in a huff, leaving you upset...",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "comfort"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "mountain_twoleg_kit",
-        "biome": [
-            "mountainous"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You trot up to r_c and sit down. {PRONOUN/r_c/subject/CAP} nervously shuffles away and politely {VERB/r_c/decline/declines}. You walk away to continue your patrol, embarrassed.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "hawk_nest",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "It's a foggy morning, but a sound on the breeze catches your attention. Immediately, r_c pops into your brain. {PRONOUN/r_c/subject/CAP} would want to see this.",
+    "decline_text": "It's too early in the morning, r_c enjoys {PRONOUN/r_c/poss} rest.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "r_c seems surprised to see you when {PRONOUN/r_c/subject} {VERB/r_c/open/opens} {PRONOUN/r_c/poss} eyes, but eventually {VERB/r_c/get/gets} to {PRONOUN/r_c/poss} feet. As the morning sun turns orange with the dawn, the two of you watch in silence. The local hawk's nest has hatched, and every now and again, you catch a glimpse of a chick.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You decide to take r_c on a walk around the borders on a warm night and spot a Twoleg kit playing in the dirt. r_c gives you a look and a curious purr.",
-        "decline_text": "You shake your head and r_c seems almost disappointed, but keeps up.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You can't help but see what {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} thinking and agree, watching as r_c creeps through some tall grass before leaping out and scaring the Twoleg kit. On the way back to camp, you and r_c laugh about what happened and have a great new inside joke.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "platonic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "r_c creeps through the grass and instead gets spotted by a second Twoleg kit. r_c gets scooped up and you quickly jump in and scare the Twoleg kits off. r_c sits beside you, panicked, as you try to comfort {PRONOUN/r_c/object}. Instead {PRONOUN/r_c/subject} just {VERB/r_c/get/gets} distant and asks to finish the patrol.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "comfort",
+              "platonic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "plains_flower_field_date",
-        "biome": [
-            "plains"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_flowerfield",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "r_c doesn't even stir from {PRONOUN/r_c/poss} nest, rather swats you away.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "fishing_encounter",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You're out fishing with r_c when you notice {PRONOUN/r_c/object} staring into the dark water with a sad expression on {PRONOUN/r_c/poss} face.",
+    "decline_text": "You decide it's not your place to be nosy. You respect r_c's boundaries, after all. If it was important, {PRONOUN/r_c/subject}'d tell you, right?",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You carefully ask r_c what's on {PRONOUN/r_c/poss} mind. {PRONOUN/r_c/subject/CAP} {VERB/r_c/tell/tells} you about how {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} been feeling worthless lately, and the dark, cloudy weather hasn't been helping. {PRONOUN/r_c/subject/CAP} {VERB/r_c/splash/splashes} the water in frustration. You give {PRONOUN/r_c/object} a soft smile and reassure {PRONOUN/r_c/object} of {PRONOUN/r_c/poss} worth, splashing some water back at {PRONOUN/r_c/object}. The moment of sadness turns into a fun water fight.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You and r_c encounter a huge, open field in the territory. Whilst there's many out in the plains, none had quite as many flowers as this one. Your gaze catches on r_c's before you begin to run, hoping {PRONOUN/r_c/subject}'ll follow.",
-        "decline_text": "You slow to a stop, feeling stupid for even trying to do that. You stutter out an excuse to r_c before heading back over to {PRONOUN/r_c/object}, your ears burning with embarrassment.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "r_c runs alongside you with a happy yowl, the two of you running through the flowers and sending petals and grasshoppers flying everywhere. Eventually, you stop near the edge of the field, laughing happily and admiring the excited twinkle in r_c's eyes.",
-                "exp": 0,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "p_l"
-                        ],
-                        "accessory": [
-                            "PETALS"
-                        ]
-                    }
-                ],
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "r_c just stands there as you begin to run and you slow to a stop, meowing confusedly at {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} glare at you, telling you to get back to work as {PRONOUN/r_c/subject} {VERB/r_c/turn/turns} to continue on the intended patrol path... you can't help but shrink from how awkward that was.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "comfort",
+              "platonic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "forest_fireflies",
-        "biome": [
-            "forest"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You ask r_c what's on {PRONOUN/r_c/poss} mind, but {PRONOUN/r_c/subject} {VERB/r_c/shrug/shrugs} you off and dismiss {PRONOUN/r_c/poss} worries, instead telling you to focus on the task at paw. You both go back to fishing in an awkward atmosphere. Does r_c not trust you enough? Are you annoying {PRONOUN/r_c/object}...?",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "medicine_herb_collection",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "date",
+      "you_med"
+    ],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You need herbs for the medicine den, and decide to bring r_c with you. You appreciate {PRONOUN/r_c/object} coming with you, as the extra paws are a massive help! You notice how {PRONOUN/r_c/poss} fur sparkles beautifully with dew, looking almost like Silverpelt had come alive on {PRONOUN/r_c/object}. You consider telling {PRONOUN/r_c/object} so.",
+    "decline_text": "Nope. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} here on business. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} just helping you get herbs. Don't get any weird ideas.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "r_c purrs in amusement, telling you that you look very pretty yourself. You go the rest of your day holding your tail high in pride.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You and r_c take a walk through the forest at night, the soft croaking of frogs seeming to ring out to the beat of your pawsteps. You spot a long field of grass, and remember something someone taught you when you were just a kit. You turn to r_c, wanting to ask {PRONOUN/r_c/object} something.",
-        "decline_text": "You can't muster up the courage to ask, and turn back to the patrol, your gaze flitting back to the field longingly.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You ask if {PRONOUN/r_c/subject}'d like to run through the field. Confused, {PRONOUN/r_c/subject} {VERB/r_c/agree/agrees}, and {VERB/r_c/gasp/gasps} once {PRONOUN/r_c/subject} {VERB/r_c/do/does}. Fireflies fly out of the long grass, swirling around the two of you like a spiral of lights. However, the only light that catches your eye is the joy in {PRONOUN/r_c/inposs}.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You ask if {PRONOUN/r_c/subject}'d like to run through the field. Confused, {PRONOUN/r_c/subject} refuse, and tell you to get back to patrolling.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "beach_coquina",
-        "biome": [
-            "beach"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "r_c sighs and tells you to focus on finding herbs so they can get back to camp. You're genuinely upset by this. {VERB/r_c/Do/Does} {PRONOUN/r_c/subject} not like spending time with you? It was only a joke, you keep telling both {PRONOUN/r_c/object} and yourself to save yourself the deadly claws to your pride.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "sunrise_cliff",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "sunrise_cliff",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You decide to take r_c to a lovely view in the early hours of dawn. The cliffs provide a stunning vision of the sun rising. After a while of staring, your tail brushes against r_c's and you wonder if now would be the time to ask {PRONOUN/r_c/poss} if {PRONOUN/r_c/subject} {VERB/r_c/feel/feels} anything for you...",
+    "decline_text": "No! No way in StarClan! You're too awkward for that! So you just sit in silence with {PRONOUN/r_c/object}.",
+    "chance_of_success": 50,
+    "relationship_constraint": [
+      "not_mates"
+    ],
+    "success_outcomes": [
+      {
+        "text": "You nervously ask r_c and {PRONOUN/r_c/subject} look away, blushing a bit. {PRONOUN/r_c/subject/CAP} purr and tell you to just focus on the sky, though you can't help but notice {PRONOUN/r_c/object} glancing at you affectionately every now and then.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You and r_c pad along the coast, the glittering waves of the cool water lapping at your paws. r_c has been looking especially tense lately, and you wish to see {PRONOUN/r_c/poss} warm smile appear on {PRONOUN/r_c/poss} face once again. Looking at the rising and falling waves, you notice coquina clams being pulled out of the sand and quickly burying themselves back under, and you get an idea.",
-        "decline_text": "But due to the anxiety in your heart that you would accidentally make r_c more tense then {PRONOUN/r_c/subject} already {VERB/r_c/are/is}, you say nothing and the two of you continue the patrol in silence.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "Quickly grabbing r_c's attention with a playful mew, you dash towards the small oncoming wave and gracefully leap into it. r_c yelps in shock and wades slowly into the water to find you and make sure you're okay, until your soaked head pops out of the water with a colorful coquina clam in your jaws. r_c is confused for a moment until you start imitating a silly voice, doing your best to open and close the clam in sync with your words. {PRONOUN/r_c/subject/CAP} {VERB/r_c/burst/bursts} out in laughter, {PRONOUN/r_c/poss} warm smile back on {PRONOUN/r_c/poss} beautifully lit face from the dusk.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You dash into the water and jump into an oncoming wave, but you underestimated how strong the wave was going to be, and you're immediately pushed back onto the shore on your back. You hope that your failed attempt at swimming might make r_c giggle even a little bit, but watching you suddenly leap into the water and be aggressively thrown by a wave only heightened r_c's stress levels, and {PRONOUN/r_c/subject} now {VERB/r_c/walk/walks} ahead of you after heavily reprimanding you on the dangers of the ocean. That clearly didn't make {PRONOUN/r_c/object} feel better...",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 12
+          }
         ]
-    },
-    {
-        "patrol_id": "edge_leafbrush",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "r_c stares at you with an awkward expression. You got the wrong idea. {PRONOUN/r_c/subject/CAP} just wanted to enjoy the sunrise. But now, {PRONOUN/r_c/subject} can't. r_c walks away in a huff, leaving you upset...",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "mountain_twoleg_kit",
+    "biome": [
+      "mountainous"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You decide to take r_c on a walk around the borders on a warm night and spot a Twoleg kit playing in the dirt. r_c gives you a look and a curious purr.",
+    "decline_text": "You shake your head and r_c seems almost disappointed, but keeps up.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You can't help but see what {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} thinking and agree, watching as r_c creeps through some tall grass before leaping out and scaring the Twoleg kit. On the way back to camp, you and r_c laugh about what happened and have a great new inside joke.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You and r_c take a walk along the edge of the territory, trees gently swaying and birds calling in the breeze overhead. You notice a scrap of leaf clinging to r_c's fur and consider brushing it off with your tail... But, no. Would that be too weird?",
-        "decline_text": "You decide to play it safe and simply tell r_c about the leaf scrap instead. The rest of the walk goes smoothly enough, but you can't stop wondering what could have been.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You gently brush your tail across r_c's shoulder blade, and {PRONOUN/r_c/subject} {VERB/r_c/thank/thanks} you with a purr that's a little too warm for the simplicity of the favor.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You move to brush off the leaf, but r_c flinches away and demands to know what you're doing. The rest of the walk is taken in awkward silence.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "platonic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "hunting_mapleleaves",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "leaf-fall"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "r_c creeps through the grass and instead gets spotted by a second Twoleg kit. r_c gets scooped up and you quickly jump in and scare the Twoleg kits off. r_c sits beside you, panicked, as you try to comfort {PRONOUN/r_c/object}. Instead {PRONOUN/r_c/subject} just {VERB/r_c/get/gets} distant and asks to finish the patrol.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "plains_flower_field_date",
+    "biome": [
+      "plains"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_flowerfield",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You and r_c encounter a huge, open field in the territory. Whilst there's many out in the plains, none had quite as many flowers as this one. Your gaze catches on r_c's before you begin to run, hoping {PRONOUN/r_c/subject}'ll follow.",
+    "decline_text": "You slow to a stop, feeling stupid for even trying to do that. You stutter out an excuse to r_c before heading back over to {PRONOUN/r_c/object}, your ears burning with embarrassment.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "r_c runs alongside you with a happy yowl, the two of you running through the flowers and sending petals and grasshoppers flying everywhere. Eventually, you stop near the edge of the field, laughing happily and admiring the excited twinkle in r_c's eyes.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You're on a hunting patrol with r_c, and after catching mouthfuls of prey, you and r_c decide to take a break. You've noticed how pretty the maple leaves look, and wanted to give some to {PRONOUN/r_c/object}. Is it a good choice, though?",
-        "decline_text": "You decide not to, and finish the break after a short while to resume hunting.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You stand up and collect the prettiest of maple leaves, and after gathering a good load of them, you step over and show r_c the leaves. {PRONOUN/r_c/subject/CAP} {VERB/r_c/look/looks} joyous and gracefully {VERB/r_c/recieve/recieves} the maple leaves from your paw, putting them on {PRONOUN/r_c/poss} ear.",
-                "exp": 0,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "r_c"
-                        ],
-                        "accessory": [
-                            "MAPLE LEAF"
-                        ]
-                    }
-                ],
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
+        "accessory": [
+          {
+            "cats": [
+              "p_l"
+            ],
+            "accessory": [
+              "PETALS"
+            ]
+          }
         ],
-        "fail_outcomes": [
-            {
-                "text": "{PRONOUN/r_c/subject/CAP} see you looking around for the leaves and ask what you're doing. You are unsure of what to reply, so you just say you were wandering around. {PRONOUN/r_c/subject/CAP} {VERB/r_c/doesn't/don't} ask you anything anymore, and you give up, soon resuming the patrol.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "blue_supermoon",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "r_c just stands there as you begin to run and you slow to a stop, meowing confusedly at {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} glare at you, telling you to get back to work as {PRONOUN/r_c/subject} {VERB/r_c/turn/turns} to continue on the intended patrol path... you can't help but shrink from how awkward that was.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "forest_fireflies",
+    "biome": [
+      "forest"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You and r_c take a walk through the forest at night, the soft croaking of frogs seeming to ring out to the beat of your pawsteps. You spot a long field of grass, and remember something someone taught you when you were just a kit. You turn to r_c, wanting to ask {PRONOUN/r_c/object} something.",
+    "decline_text": "You can't muster up the courage to ask, and turn back to the patrol, your gaze flitting back to the field longingly.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You ask if {PRONOUN/r_c/subject}'d like to run through the field. Confused, {PRONOUN/r_c/subject} {VERB/r_c/agree/agrees}, and {VERB/r_c/gasp/gasps} once {PRONOUN/r_c/subject} {VERB/r_c/do/does}. Fireflies fly out of the long grass, swirling around the two of you like a spiral of lights. However, the only light that catches your eye is the joy in {PRONOUN/r_c/inposs}.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You were told about the blue supermoon, and decided it would be a good opportunity to ask r_c out. You pad up to {PRONOUN/r_c/object}, but hesitate. What if it doesn't go as planned?",
-        "decline_text": "You can't gather enough courage for this, so you stop and turned away. Guess tonight you'll be enjoying it by yourself.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/turn/turns} back, looking at you- and you successfully ask {PRONOUN/r_c/object}-- without stuttering-- if {PRONOUN/r_c/subject} {VERB/r_c/want/wants} to go see the blue supermoon tonight with you. {PRONOUN/r_c/subject/CAP} happily {VERB/r_c/agree/agrees}, and when the time comes, you and {PRONOUN/r_c/subject} sit on top of a tall tree, gazing at the bright, massive, slightly blue-colored moon and the countless sparkly stars together. You feel extremely happy to hear r_c's soft purrs and see {PRONOUN/r_c/poss} face being lit up.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 6
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "{PRONOUN/r_c/subject/CAP} politely {VERB/r_c/decline/declines}, saying that {PRONOUN/r_c/subject} {VERB/r_c/have/has} to go on a night patrol, and you weren't selected with {PRONOUN/r_c/object}. Seems like tonight you two will be watching the moon from different parts of the territory... or it'll only be r_c watching.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "df_training",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "date",
-            "df"
-        ],
-        "patrol_art": "df_training",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You ask if {PRONOUN/r_c/subject}'d like to run through the field. Confused, {PRONOUN/r_c/subject} refuse, and tell you to get back to patrolling.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "beach_coquina",
+    "biome": [
+      "beach"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You and r_c pad along the coast, the glittering waves of the cool water lapping at your paws. r_c has been looking especially tense lately, and you wish to see {PRONOUN/r_c/poss} warm smile appear on {PRONOUN/r_c/poss} face once again. Looking at the rising and falling waves, you notice coquina clams being pulled out of the sand and quickly burying themselves back under, and you get an idea.",
+    "decline_text": "But due to the anxiety in your heart that you would accidentally make r_c more tense then {PRONOUN/r_c/subject} already {VERB/r_c/are/is}, you say nothing and the two of you continue the patrol in silence.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "Quickly grabbing r_c's attention with a playful mew, you dash towards the small oncoming wave and gracefully leap into it. r_c yelps in shock and wades slowly into the water to find you and make sure you're okay, until your soaked head pops out of the water with a colorful coquina clam in your jaws. r_c is confused for a moment until you start imitating a silly voice, doing your best to open and close the clam in sync with your words. {PRONOUN/r_c/subject/CAP} {VERB/r_c/burst/bursts} out in laughter, {PRONOUN/r_c/poss} warm smile back on {PRONOUN/r_c/poss} beautifully lit face from the dusk.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You and r_c go out in the Dark Forest, away from the spirits and trainees. r_c - who you've been practicing with and admiring - enthusiastically offers to teach you some of {PRONOUN/r_c/poss} forbidden moves. Should you practice with {PRONOUN/r_c/object}?",
-        "decline_text": "You feel as if this is a bit too risky. You nervously decline r_c's offer.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You and r_c practice these forbidden moves together. You feel more confident and strong. Later, you and r_c later take a break in the muck, heavily breathing, lightly scratched, but your love and cooperation with {PRONOUN/r_c/object} slowly growing.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You and r_c practice these forbidden moves together, but after a while, you think to yourself how dangerous this is, and ask r_c to take a break. As you lay in the muck, your eyes slowly close, and you wake up, bleeding from the wounds from training.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "protect_trainee",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "date",
-            "df"
-        ],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You dash into the water and jump into an oncoming wave, but you underestimated how strong the wave was going to be, and you're immediately pushed back onto the shore on your back. You hope that your failed attempt at swimming might make r_c giggle even a little bit, but watching you suddenly leap into the water and be aggressively thrown by a wave only heightened r_c's stress levels, and {PRONOUN/r_c/subject} now {VERB/r_c/walk/walks} ahead of you after heavily reprimanding you on the dangers of the ocean. That clearly didn't make {PRONOUN/r_c/object} feel better...",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "edge_leafbrush",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "edge_leafbrush",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You and r_c take a walk along the edge of the territory, trees gently swaying and birds calling in the breeze overhead. You notice a scrap of leaf clinging to r_c's fur and consider brushing it off with your tail... But, no. Would that be too weird?",
+    "decline_text": "You decide to play it safe and simply tell r_c about the leaf scrap instead. The rest of the walk goes smoothly enough, but you can't stop wondering what could have been.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You gently brush your tail across r_c's shoulder blade, and {PRONOUN/r_c/subject} {VERB/r_c/thank/thanks} you with a purr that's a little too warm for the simplicity of the favor.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "One of your trainees, r_c, who is also your Clanmate, is being taunted and mistreated by a Dark Forest spirit. You feel like stepping up, but you might be injured.",
-        "decline_text": "You don't feel like risking it, so you let r_c be.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You decide to step up, and you approach the spirit who had been berating r_c. They angrily hiss at you and leap on you, and you give them a good fight before making them flee. r_c thanks you, and {PRONOUN/r_c/subject} {VERB/r_c/help/helps} lick your minor wounds clean, but you soon notice yourself leaning on {PRONOUN/r_c/object}, tails twining.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "As you step up, the spirit angrily hisses at you, but you give them a good fight before they flee. You are minorly injured, but r_c doesn't seem to notice this, and {PRONOUN/r_c/subject} {VERB/r_c/stroll/strolls} off through the muck without a care about checking on you or thanking you!",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "help_fror_clanmate",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "date",
-            "df"
-        ],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You move to brush off the leaf, but r_c flinches away and demands to know what you're doing. The rest of the walk is taken in awkward silence.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "hunting_mapleleaves",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "leaf-fall"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You're on a hunting patrol with r_c, and after catching mouthfuls of prey, you and r_c decide to take a break. You've noticed how pretty the maple leaves look, and wanted to give some to {PRONOUN/r_c/object}. Is it a good choice, though?",
+    "decline_text": "You decide not to, and finish the break after a short while to resume hunting.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You stand up and collect the prettiest of maple leaves, and after gathering a good load of them, you step over and show r_c the leaves. {PRONOUN/r_c/subject/CAP} {VERB/r_c/look/looks} joyous and gracefully {VERB/r_c/recieve/recieves} the maple leaves from your paw, putting them on {PRONOUN/r_c/poss} ear.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "A Dark Forest cat whispers threats into your ear and taunts you. An unfamiliar Dark Forest Clanmate sees you and decides to help, chasing the spirit away. You feel your heart beating full of affection, wanting to say something.",
-        "decline_text": "You decide to walk away, hastily, dragging your tail through the muck. Maybe you weren't meant for {PRONOUN/r_c/object}.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You respond to the cat a simple thanks, and the cat introduces {PRONOUN/r_c/self} as r_c, who you instantly recognize from your Clan. You two talk for a bit, though you feel as if you are being watched behind your back by the residents of the Dark Forest.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 5
-                    }
-                ]
-            }
+        "accessory": [
+          {
+            "cats": [
+              "r_c"
+            ],
+            "accessory": [
+              "MAPLE LEAF"
+            ]
+          }
         ],
-        "fail_outcomes": [
-            {
-                "text": "You awkwardly stutter a thanks to the cat, who you soon recognize to be r_c, but after that, {PRONOUN/r_c/subject} quickly {VERB/r_c/walk/walks} through the muck, away from your sight. Your ears feel hot from embarrassment.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "new_leaf_crush",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "newleaf"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_confess",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "{PRONOUN/r_c/subject/CAP} see you looking around for the leaves and ask what you're doing. You are unsure of what to reply, so you just say you were wandering around. {PRONOUN/r_c/subject/CAP} {VERB/r_c/doesn't/don't} ask you anything anymore, and you give up, soon resuming the patrol.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "blue_supermoon",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You were told about the blue supermoon, and decided it would be a good opportunity to ask r_c out. You pad up to {PRONOUN/r_c/object}, but hesitate. What if it doesn't go as planned?",
+    "decline_text": "You can't gather enough courage for this, so you stop and turned away. Guess tonight you'll be enjoying it by yourself.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "{PRONOUN/r_c/subject/CAP} {VERB/r_c/turn/turns} back, looking at you- and you successfully ask {PRONOUN/r_c/object}-- without stuttering-- if {PRONOUN/r_c/subject} {VERB/r_c/want/wants} to go see the blue supermoon tonight with you. {PRONOUN/r_c/subject/CAP} happily {VERB/r_c/agree/agrees}, and when the time comes, you and {PRONOUN/r_c/subject} sit on top of a tall tree, gazing at the bright, massive, slightly blue-colored moon and the countless sparkly stars together. You feel extremely happy to hear r_c's soft purrs and see {PRONOUN/r_c/poss} face being lit up.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You and r_c end up on a patrol together. As you walk together through your Clan's territory, the smell of budding plants fills your nostrils and your attention is drawn to r_c. Did {PRONOUN/r_c/subject} always look so nice? You can't seem to look away, {PRONOUN/r_c/poss} luxurious fur, the way {PRONOUN/r_c/subject} {VERB/r_c/walk/walks}..",
-        "decline_text": "You shake off the feeling. There are more important things to do than to swoon at a stupid crush.",
-        "chance_of_success": 50,
-        "relationship_constraint": [
-            "not_mates"
-        ],
-        "success_outcomes": [
-            {
-                "text": "As you stare over at {PRONOUN/r_c/poss}, {PRONOUN/r_c/subject} slowly {VERB/r_c/swivel/swivels} {PRONOUN/r_c/poss} head to see you gawking, and {VERB/r_c/chuckle/chuckles} lightly before giving you a warm look. Your heart flutters!",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "As you stare over at them, their fur prickles and they turn around to see you gawking. They give you a confused and disgusted glare.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 6
+          }
         ]
-    },
-    {
-        "patrol_id": "ask_crush_help",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "{PRONOUN/r_c/subject/CAP} politely {VERB/r_c/decline/declines}, saying that {PRONOUN/r_c/subject} {VERB/r_c/have/has} to go on a night patrol, and you weren't selected with {PRONOUN/r_c/object}. Seems like tonight you two will be watching the moon from different parts of the territory... or it'll only be r_c watching.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "df_training",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "date",
+      "df"
+    ],
+    "patrol_art": "df_training",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You and r_c go out in the Dark Forest, away from the spirits and trainees. r_c - who you've been practicing with and admiring - enthusiastically offers to teach you some of {PRONOUN/r_c/poss} forbidden moves. Should you practice with {PRONOUN/r_c/object}?",
+    "decline_text": "You feel as if this is a bit too risky. You nervously decline r_c's offer.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You and r_c practice these forbidden moves together. You feel more confident and strong. Later, you and r_c later take a break in the muck, heavily breathing, lightly scratched, but your love and cooperation with {PRONOUN/r_c/object} slowly growing.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You are assigned one of the more tedious chores around camp. As you're preparing to start, an idea pops into your mind; You could ask r_c if {PRONOUN/r_c/subject} would want to help out! It would make the chore easier, and you'd get to spend time together!",
-        "decline_text": "You decide not to bother r_c, and instead dive into the chore on your own.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You are thrilled when r_c happily agrees to help. Though the chore is boring, the two of you joke around and have fun, and before you know it, you're all done. The two of you continue messing around afterwards, and you feel a happy flutter in your chest.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "r_c gives an apologetic look; wouldn't it be better for one cat to do it? Then {PRONOUN/r_c/subject} wouldn't be in the way... You mutter in agreement, and hurry away. How embarrassing!",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "morning_stroll",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You and r_c practice these forbidden moves together, but after a while, you think to yourself how dangerous this is, and ask r_c to take a break. As you lay in the muck, your eyes slowly close, and you wake up, bleeding from the wounds from training.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "protect_trainee",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "date",
+      "df"
+    ],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "One of your trainees, r_c, who is also your Clanmate, is being taunted and mistreated by a Dark Forest spirit. You feel like stepping up, but you might be injured.",
+    "decline_text": "You don't feel like risking it, so you let r_c be.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You decide to step up, and you approach the spirit who had been berating r_c. They angrily hiss at you and leap on you, and you give them a good fight before making them flee. r_c thanks you, and {PRONOUN/r_c/subject} {VERB/r_c/help/helps} lick your minor wounds clean, but you soon notice yourself leaning on {PRONOUN/r_c/object}, tails twining.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You've wanted to get closer to r_c for a while now, but you're not quite sure how to do it. An idea strikes you as you consider asking r_c if {PRONOUN/r_c/subject}'d want to accompany you on a morning stroll out of camp.",
-        "decline_text": "You try to muster up the courage to approach {PRONOUN/r_c/object}, but you can't quite seem to catch {PRONOUN/r_c/object} at the right time. Your struggle goes on for so long that it's no longer early morning, and you quietly resign yourself to a lonely stroll by yourself for the following days.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "r_c agrees to walk with you out of camp, and you have to keep yourself from jumping in joy. In the soft morning light of early sunrise, you quietly admire {PRONOUN/r_c/poss} side profile to yourself, awed by how {PRONOUN/r_c/poss} fur looks under the golden lighting.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic",
-                            "platonic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You gather your courage and ask, but you know you've failed as soon as r_c averts {PRONOUN/r_c/poss} eyes and shuffles {PRONOUN/r_c/poss} paws awkwardly. {PRONOUN/r_c/subject/CAP} {VERB/r_c/try/tries} to let you down gently, but the rejection stings sharply in your chest as you watch {PRONOUN/r_c/object} walk away.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "express_feelings_patrol",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "date_confess",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "As you step up, the spirit angrily hisses at you, but you give them a good fight before they flee. You are minorly injured, but r_c doesn't seem to notice this, and {PRONOUN/r_c/subject} {VERB/r_c/stroll/strolls} off through the muck without a care about checking on you or thanking you!",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "help_fror_clanmate",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "date",
+      "df"
+    ],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "A Dark Forest cat whispers threats into your ear and taunts you. An unfamiliar Dark Forest Clanmate sees you and decides to help, chasing the spirit away. You feel your heart beating full of affection, wanting to say something.",
+    "decline_text": "You decide to walk away, hastily, dragging your tail through the muck. Maybe you weren't meant for {PRONOUN/r_c/object}.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You respond to the cat a simple thanks, and the cat introduces {PRONOUN/r_c/self} as r_c, who you instantly recognize from your Clan. You two talk for a bit, though you feel as if you are being watched behind your back by the residents of the Dark Forest.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You and r_c are assigned in a patrol together, knowing that this is your chance to express your feelings towards {PRONOUN/r_c/object}.",
-        "decline_text": "You decide to focus on your task instead.",
-        "chance_of_success": 45,
-        "relationship_constraint": [
-            "not_mates"
-        ],
-        "success_outcomes": [
-            {
-                "text": "As r_c and you gather moss, you sheepishly express your love towards {PRONOUN/r_c/object}, and {PRONOUN/r_c/subject} quickly {VERB/r_c/turn/turns} {PRONOUN/r_c/poss} head towards you and {VERB/r_c/giggle/giggles} a little, telling you how {PRONOUN/r_c/subject} {VERB/r_c/have/has} always known how you felt about {PRONOUN/r_c/object}, but your shocked expression is full of joy and love. r_c and you manage to gather moss while talking and making jokes together, and when you return to camp, a new aura emerges from {PRONOUN/r_c/object}.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 15
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You stutter a lot while trying to express your love towards r_c, but {PRONOUN/r_c/subject} awkwardly {VERB/r_c/turn/turns} {PRONOUN/r_c/poss} head to look at you, cringing. With {PRONOUN/r_c/poss} mouth full of moss, r_c doesn't talk to you after that patrol, and quickly continues their duties without interacting with you afterwards.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 5
+          }
         ]
-    },
-    {
-        "patrol_id": "butterfly_date_J1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "newleaf",
-            "greenleaf",
-            "leaf-fall"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "cloudwatchingdate",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You awkwardly stutter a thanks to the cat, who you soon recognize to be r_c, but after that, {PRONOUN/r_c/subject} quickly {VERB/r_c/walk/walks} through the muck, away from your sight. Your ears feel hot from embarrassment.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "new_leaf_crush",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "newleaf"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_confess",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You and r_c end up on a patrol together. As you walk together through your Clan's territory, the smell of budding plants fills your nostrils and your attention is drawn to r_c. Did {PRONOUN/r_c/subject} always look so nice? You can't seem to look away, {PRONOUN/r_c/poss} luxurious fur, the way {PRONOUN/r_c/subject} {VERB/r_c/walk/walks}..",
+    "decline_text": "You shake off the feeling. There are more important things to do than to swoon at a stupid crush.",
+    "chance_of_success": 50,
+    "relationship_constraint": [
+      "not_mates"
+    ],
+    "success_outcomes": [
+      {
+        "text": "As you stare over at {PRONOUN/r_c/poss}, {PRONOUN/r_c/subject} slowly {VERB/r_c/swivel/swivels} {PRONOUN/r_c/poss} head to see you gawking, and {VERB/r_c/chuckle/chuckles} lightly before giving you a warm look. Your heart flutters!",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "After a long stroll through the territory, you and r_c have settled in the grass to watch the clouds. You point out clouds to each other that look like flowers, rabbits and squirrels. The sun is beginning to set, and you know you should be getting back to camp soon, but you don't want to leave r_c's side yet.",
-        "decline_text": "You stand up and decide to head back to camp. You don't want to be late.",
-        "chance_of_success": 60,
-        "relationship_constraint": [
-            "romantic_15"
-        ],
-        "success_outcomes": [
-            {
-                "text": "You decide that it shouldn't matter too much if you're a bit late back to camp, and r_c seems to agree. A pair of moths pay you a visit as the sun slips below the horizon, and you're beyond glad that you chose to stay out.",
-                "exp": 0,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "r_c",
-                            "y_c"
-                        ],
-                        "accessory": [
-                            "LUNAR MOTH"
-                        ]
-                    }
-                ],
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You decide to stay out, but a very indignant Clanmate quickly comes to find you two and lets you know that you should be back in camp. Reluctantly, you and r_c head back, the sun setting behind you.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": false,
+            "values": [
+              "romantic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "poly_date_J2",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "poly_date_default",
-        "min_cats": 3,
-        "max_cats": 3,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "As you stare over at them, their fur prickles and they turn around to see you gawking. They give you a confused and disgusted glare.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "ask_crush_help",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You are assigned one of the more tedious chores around camp. As you're preparing to start, an idea pops into your mind; You could ask r_c if {PRONOUN/r_c/subject} would want to help out! It would make the chore easier, and you'd get to spend time together!",
+    "decline_text": "You decide not to bother r_c, and instead dive into the chore on your own.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You are thrilled when r_c happily agrees to help. Though the chore is boring, the two of you joke around and have fun, and before you know it, you're all done. The two of you continue messing around afterwards, and you feel a happy flutter in your chest.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You, r_c and o_c1 are strolling along the riverbank. Suddenly, a stone catches your eye. The colour reminds you of o_c1's eyes, and you consider showing it to the two.",
-        "decline_text": "You leave the stone and keep walking.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "When you pick up the rock to show to o_c1, both cats are delighted, agreeing that it looks just like o_c1's eyes. r_c rushes to the water to find a rock to match yours, and soon, all three of you are searching for your perfect match. You each keep someone else's matching rock with you when you head back to camp, and you sleep a little better that night with it by your nest.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "patrol"
-                        ],
-                        "cats_from": [
-                            "patrol"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "romantic",
-                            "platonic",
-                            "comfort"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You call out for r_c and o_c1 to stop walking, but as you pick up the rock to show them, you lose your grasp on it and it falls into the river, quickly sinking out of sight. r_c and o_c1 giggle at your misfortune, and you laugh along, but you're still disappointed to lose such a cute gift.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "poly_date_J3",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "poly_date_default",
-        "min_cats": 3,
-        "max_cats": 3,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "r_c gives an apologetic look; wouldn't it be better for one cat to do it? Then {PRONOUN/r_c/subject} wouldn't be in the way... You mutter in agreement, and hurry away. How embarrassing!",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "morning_stroll",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You've wanted to get closer to r_c for a while now, but you're not quite sure how to do it. An idea strikes you as you consider asking r_c if {PRONOUN/r_c/subject}'d want to accompany you on a morning stroll out of camp.",
+    "decline_text": "You try to muster up the courage to approach {PRONOUN/r_c/object}, but you can't quite seem to catch {PRONOUN/r_c/object} at the right time. Your struggle goes on for so long that it's no longer early morning, and you quietly resign yourself to a lonely stroll by yourself for the following days.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "r_c agrees to walk with you out of camp, and you have to keep yourself from jumping in joy. In the soft morning light of early sunrise, you quietly admire {PRONOUN/r_c/poss} side profile to yourself, awed by how {PRONOUN/r_c/poss} fur looks under the golden lighting.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "o_c1 and r_c are settling down for an afternoon nap together. It looks cosy-- you wonder if they'd let you join them.",
-        "decline_text": "You decide instead to settle down on your own, knowing they probably wouldn't want to be seen cuddling with you.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "You shyly approach the two, and, through a yawn, r_c says the more the merrier, and o_c1 agrees. As you settle down, you feel a tail wrap around your back, and you fall asleep with a smile.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You approach them and ask if there's room for one more, but they share an awkward glance and tell you that three cats in one pile would get too warm, or something like that.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic",
+              "platonic"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "shunned_poly_date_J1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "newleaf",
-            "greenleaf"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "poly_date_default",
-        "min_cats": 3,
-        "max_cats": 3,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You gather your courage and ask, but you know you've failed as soon as r_c averts {PRONOUN/r_c/poss} eyes and shuffles {PRONOUN/r_c/poss} paws awkwardly. {PRONOUN/r_c/subject/CAP} {VERB/r_c/try/tries} to let you down gently, but the rejection stings sharply in your chest as you watch {PRONOUN/r_c/object} walk away.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "express_feelings_patrol",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "date_confess",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You and r_c are assigned in a patrol together, knowing that this is your chance to express your feelings towards {PRONOUN/r_c/object}.",
+    "decline_text": "You decide to focus on your task instead.",
+    "chance_of_success": 45,
+    "relationship_constraint": [
+      "not_mates"
+    ],
+    "success_outcomes": [
+      {
+        "text": "As r_c and you gather moss, you sheepishly express your love towards {PRONOUN/r_c/object}, and {PRONOUN/r_c/subject} quickly {VERB/r_c/turn/turns} {PRONOUN/r_c/poss} head towards you and {VERB/r_c/giggle/giggles} a little, telling you how {PRONOUN/r_c/subject} {VERB/r_c/have/has} always known how you felt about {PRONOUN/r_c/object}, but your shocked expression is full of joy and love. r_c and you manage to gather moss while talking and making jokes together, and when you return to camp, a new aura emerges from {PRONOUN/r_c/object}.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You're bored around camp, and you notice that r_c and o_c1 are both in camp as well, looking equally bored. The flowers have bloomed-- you consider asking them both if they'd like to spend some time with you.",
-        "decline_text": "You decide against it, the fear of rejection too strong to overpower.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "You ask both cats if they'd like to hang out with you, and to your delight, they agree! You, r_c and o_c1 settle in a bountiful flower field just outside of camp and decide to make each other some pretty accessories to wear out of the petals.",
-                "exp": 0,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "y_c",
-                            "o_c1",
-                            "r_c"
-                        ],
-                        "accessory": [
-                            "FLOWERCROWN"
-                        ]
-                    }
-                ],
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "patrol"
-                        ],
-                        "cats_from": [
-                            "patrol"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "romantic",
-                            "trust"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You approach r_c first, but {PRONOUN/r_c/subject} {VERB/r_c/tell/tells} you {PRONOUN/r_c/subject}'d rather stay alone today. o_c1 says the same, and you can't help but feel self conscious about the back-to-back rejection.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 15
+          }
         ]
-    },
-    {
-        "patrol_id": "shunned_poly_date_J2",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "poly_date_default",
-        "min_cats": 3,
-        "max_cats": 3,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You stutter a lot while trying to express your love towards r_c, but {PRONOUN/r_c/subject} awkwardly {VERB/r_c/turn/turns} {PRONOUN/r_c/poss} head to look at you, cringing. With {PRONOUN/r_c/poss} mouth full of moss, r_c doesn't talk to you after that patrol, and quickly continues their duties without interacting with you afterwards.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "butterfly_date_J1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "newleaf",
+      "greenleaf",
+      "leaf-fall"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "cloudwatchingdate",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "After a long stroll through the territory, you and r_c have settled in the grass to watch the clouds. You point out clouds to each other that look like flowers, rabbits and squirrels. The sun is beginning to set, and you know you should be getting back to camp soon, but you don't want to leave r_c's side yet.",
+    "decline_text": "You stand up and decide to head back to camp. You don't want to be late.",
+    "chance_of_success": 60,
+    "relationship_constraint": [
+      "romantic_15"
+    ],
+    "success_outcomes": [
+      {
+        "text": "You decide that it shouldn't matter too much if you're a bit late back to camp, and r_c seems to agree. A pair of moths pay you a visit as the sun slips below the horizon, and you're beyond glad that you chose to stay out.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "o_c1 and r_c are settling down for an afternoon nap together. It looks cosy-- you wonder if they'd let you join them.",
-        "decline_text": "You decide instead to settle down on your own, knowing they probably wouldn't want to be seen cuddling with you.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "You shyly approach the two, and, through a yawn, r_c says the more the merrier, and o_c1 agrees. As you settle down, you feel a tail wrap around your back, and you fall asleep with a smile.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
+        "accessory": [
+          {
+            "cats": [
+              "r_c",
+              "y_c"
+            ],
+            "accessory": [
+              "LUNAR MOTH"
+            ]
+          }
         ],
-        "fail_outcomes": [
-            {
-                "text": "You approach them and ask if there's room for one more, but they share an awkward glance and tell you that you probably shouldn't be sleeping anywhere but your nest at the edge of camp.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "shunned_date_J1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You decide to stay out, but a very indignant Clanmate quickly comes to find you two and lets you know that you should be back in camp. Reluctantly, you and r_c head back, the sun setting behind you.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "poly_date_J2",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "poly_date_default",
+    "min_cats": 3,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You, r_c and o_c1 are strolling along the riverbank. Suddenly, a stone catches your eye. The colour reminds you of o_c1's eyes, and you consider showing it to the two.",
+    "decline_text": "You leave the stone and keep walking.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "When you pick up the rock to show to o_c1, both cats are delighted, agreeing that it looks just like o_c1's eyes. r_c rushes to the water to find a rock to match yours, and soon, all three of you are searching for your perfect match. You each keep someone else's matching rock with you when you head back to camp, and you sleep a little better that night with it by your nest.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You want to spend some time with r_c, but you don't know how {PRONOUN/r_c/subject}'ll react to you asking {PRONOUN/r_c/object} out, given what you've done.",
-        "decline_text": "You decide against it, knowing that {PRONOUN/r_c/poss} rejection is likely inevitable.",
-        "chance_of_success": 30,
-        "success_outcomes": [
-            {
-                "text": "When you shyly ask r_c if {PRONOUN/r_c/subject}'d like to spend some time with you, to your surprise, {PRONOUN/r_c/subject} {VERB/r_c/say/says} yes! While you're not allowed to leave camp, you two lay in the sun together, tails entwined, ignoring the stares your Clanmates give you.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "romantic",
-                            "trust",
-                            "comfort"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You approach r_c to ask {PRONOUN/r_c/object} out, but before you can even finish speaking, {PRONOUN/r_c/subject} {VERB/r_c/react/reacts} with a 'no' so loud that a few Clanmates turn to look. You quickly retreat, returning to your nest and trying to get the humiliation out of your mind.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "patrol"
+            ],
+            "cats_from": [
+              "patrol"
+            ],
+            "mutual": false,
+            "values": [
+              "romantic",
+              "platonic",
+              "comfort"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "shunned_date_J2",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You call out for r_c and o_c1 to stop walking, but as you pick up the rock to show them, you lose your grasp on it and it falls into the river, quickly sinking out of sight. r_c and o_c1 giggle at your misfortune, and you laugh along, but you're still disappointed to lose such a cute gift.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "poly_date_J3",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "poly_date_J3",
+    "min_cats": 3,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "o_c1 and r_c are settling down for an afternoon nap together. It looks cosy-- you wonder if they'd let you join them.",
+    "decline_text": "You decide instead to settle down on your own, knowing they probably wouldn't want to be seen cuddling with you.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "You shyly approach the two, and, through a yawn, r_c says the more the merrier, and o_c1 agrees. As you settle down, you feel a tail wrap around your back, and you fall asleep with a smile.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "In a rare moment of joy during your punishment, you and r_c are in the camp clearing, rolling around in the sun and laughing together. You think {PRONOUN/r_c/poss} fur is so beautiful when the sun hits it just right, but you think it might be weird to tell them that.",
-        "decline_text": "You look away. Now isn't the time.",
-        "chance_of_success": 60,
-        "relationship_constraint": [
-            "not_mates"
-        ],
-        "success_outcomes": [
-            {
-                "text": "When you tell r_c how beautiful {PRONOUN/r_c/subject} {VERB/r_c/look/looks}, {PRONOUN/r_c/subject} {VERB/r_c/laugh/laughs} flustered, and {VERB/r_c/tell/tells} you that you look the same.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You tell r_c how beautiful {PRONOUN/r_c/subject} {VERB/r_c/look/looks}, but upon hearing it, {PRONOUN/r_c/subject} {VERB/r_c/stand/stands} up and {VERB/r_c/step/steps} into the shade. {PRONOUN/r_c/subject/CAP} {VERB/r_c/say/says} that you shouldn't be advancing on anycat like that, given your situation.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "When you tell {PRONOUN/r_c/object} how you feel, r_c rolls away, suddenly avoiding eye contact. You can see {PRONOUN/r_c/object} hiding a smile, but, noticing the stares of a few nearby Clanmates, {PRONOUN/r_c/subject} {VERB/r_c/stand/stands} and {VERB/r_c/run/runs} away without a word. {PRONOUN/r_c/subject/CAP} must be embarrassed to be recieving affection from a killer.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "shunned_date_J3",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You approach them and ask if there's room for one more, but they share an awkward glance and tell you that three cats in one pile would get too warm, or something like that.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "shunned_poly_date_J1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "newleaf",
+      "greenleaf"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "poly_date_default",
+    "min_cats": 3,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You're bored around camp, and you notice that r_c and o_c1 are both in camp as well, looking equally bored. The flowers have bloomed-- you consider asking them both if they'd like to spend some time with you.",
+    "decline_text": "You decide against it, the fear of rejection too strong to overpower.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "You ask both cats if they'd like to hang out with you, and to your delight, they agree! You, r_c and o_c1 settle in a bountiful flower field just outside of camp and decide to make each other some pretty accessories to wear out of the petals.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "Not a lot of cats will spend time with you these days, but r_c is still here. At the edge of camp, you've become a single bundle of fur as r_c licks the top of your head. No one has seen you here yet, but you're worried that, if they do, r_c will get in trouble for being so kind to you.",
-        "decline_text": "Though you appreciate the comfort, you seperate yourself from r_c from about a tail length so that {PRONOUN/r_c/subject} won't get in trouble if you're spotted. You're much colder now, and {PRONOUN/r_c/subject} {VERB/r_c/look/looks} a bit sad.",
-        "chance_of_success": 50,
-        "relationship_constraint": [
-            "mates"
+        "accessory": [
+          {
+            "cats": [
+              "y_c",
+              "o_c1",
+              "r_c"
+            ],
+            "accessory": [
+              "FLOWERCROWN"
+            ]
+          }
         ],
-        "success_outcomes": [
-            {
-                "text": "You can't bring yourself to tear yourself away from {PRONOUN/r_c/subject}. You fall asleep, cradled by r_c, and when you wake up again, it's been several hours and r_c is still here. None of your Clanmates must feel the need to seperate you.",
-                "exp": 0,
-                "weight": 20
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You begin falling asleep, cradled by r_c, but just as you're drifting off, you hear a Clanmate call out, wondering where r_c is. Though you understand, you're saddened when {PRONOUN/r_c/subject} {VERB/r_c/have/has} to get up and join the rest of {PRONOUN/r_c/poss} unshunned Clanmates.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "patrol"
+            ],
+            "cats_from": [
+              "patrol"
+            ],
+            "mutual": false,
+            "values": [
+              "romantic",
+              "trust"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "shunned_date_J4",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You approach r_c first, but {PRONOUN/r_c/subject} {VERB/r_c/tell/tells} you {PRONOUN/r_c/subject}'d rather stay alone today. o_c1 says the same, and you can't help but feel self conscious about the back-to-back rejection.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "shunned_poly_date_J2",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "poly_date_default",
+    "min_cats": 3,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "o_c1 and r_c are settling down for an afternoon nap together. It looks cosy-- you wonder if they'd let you join them.",
+    "decline_text": "You decide instead to settle down on your own, knowing they probably wouldn't want to be seen cuddling with you.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "You shyly approach the two, and, through a yawn, r_c says the more the merrier, and o_c1 agrees. As you settle down, you feel a tail wrap around your back, and you fall asleep with a smile.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "It's been ages since you've been able to leave the camp, but you want to see the sunset again. You express this want to r_c as you sit together by the edge of camp, and {PRONOUN/r_c/subject} {VERB/r_c/tell/tells} you that {PRONOUN/r_c/subject} can help you climb up into a tree for a better view, if you'd like.",
-        "decline_text": "You decline, worried that you jumping into a tree at the edge of camp might appear as though you're trying to escape. You want to stay on the Clan's good side right now.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You agree to the idea, and r_c leads you to a thick tree in the corner of camp. {PRONOUN/r_c/subject/CAP} {VERB/r_c/jump/jumps} onto a low branch, and you follow {PRONOUN/r_c/subject} up the trunk until you're at the top of the world. A Clanmate from the ground asks r_c what {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} doing, but {PRONOUN/r_c/subject} {VERB/r_c/dismiss/dismisses} them and {VERB/r_c/give/gives} your cheek a lick as you gawk at the colourful clouds. You tell r_c how beautiful you think it is, and {PRONOUN/r_c/subject} {VERB/r_c/reply/replies} that {PRONOUN/r_c/subject} {VERB/r_c/think/thinks} you're prettier.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You agree, but as r_c leads you to a tree in the corner of camp, a warrior calls out to you, requesting that you don't go anywhere they can't keep an eye on you. You sigh and follow r_c back into the centre of the camp, where you spend the sunset trying to catch a glimpse of it through the trees.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "shunned_poly_date_J1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "date_default",
-        "min_cats": 3,
-        "max_cats": 3,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You approach them and ask if there's room for one more, but they share an awkward glance and tell you that you probably shouldn't be sleeping anywhere but your nest at the edge of camp.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "shunned_date_J1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You want to spend some time with r_c, but you don't know how {PRONOUN/r_c/subject}'ll react to you asking {PRONOUN/r_c/object} out, given what you've done.",
+    "decline_text": "You decide against it, knowing that {PRONOUN/r_c/poss} rejection is likely inevitable.",
+    "chance_of_success": 30,
+    "success_outcomes": [
+      {
+        "text": "When you shyly ask r_c if {PRONOUN/r_c/subject}'d like to spend some time with you, to your surprise, {PRONOUN/r_c/subject} {VERB/r_c/say/says} yes! While you're not allowed to leave camp, you two lay in the sun together, tails entwined, ignoring the stares your Clanmates give you.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You see r_c and o_c1 lingering by the camp entrance, seemingly preparing to head out. You'd love to join them, but you don't know if they'd be as open to that as they once would be, given what you've done.",
-        "decline_text": "You decide against it, knowing that their rejection is likely inevitable.",
-        "chance_of_success": 30,
-        "success_outcomes": [
-            {
-                "text": "You approach the two, head low, expecting a rejection. However, when you ask if you can join them, they seem glad to have you! Since you're not allowed to leave camp, you, r_c and o_c1 spend some time in the clearing.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "patrol"
-                        ],
-                        "cats_from": [
-                            "patrol"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "romantic",
-                            "trust",
-                            "comfort"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "When they see you approaching, r_c and o_c1 quickly stand up and rush out through the camp entrance, knowing you won't be allowed to follow them.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": false,
+            "values": [
+              "romantic",
+              "trust",
+              "comfort"
+            ],
+            "amount": 8
+          }
         ]
-    },
-    {
-        "patrol_id": "Life_alreadymates_date_H1",
-        "biome": [
-            "forest",
-            "mountainous",
-            "plains"
-        ],
-        "season": [
-            "newleaf",
-            "greenleaf"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "patrol_art": "date_flowerfield",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You approach r_c to ask {PRONOUN/r_c/object} out, but before you can even finish speaking, {PRONOUN/r_c/subject} {VERB/r_c/react/reacts} with a 'no' so loud that a few Clanmates turn to look. You quickly retreat, returning to your nest and trying to get the humiliation out of your mind.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "shunned_date_J2",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "In a rare moment of joy during your punishment, you and r_c are in the camp clearing, rolling around in the sun and laughing together. You think {PRONOUN/r_c/poss} fur is so beautiful when the sun hits it just right, but you think it might be weird to tell them that.",
+    "decline_text": "You look away. Now isn't the time.",
+    "chance_of_success": 60,
+    "relationship_constraint": [
+      "not_mates"
+    ],
+    "success_outcomes": [
+      {
+        "text": "When you tell r_c how beautiful {PRONOUN/r_c/subject} {VERB/r_c/look/looks}, {PRONOUN/r_c/subject} {VERB/r_c/laugh/laughs} flustered, and {VERB/r_c/tell/tells} you that you look the same.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "While walking with r_c, you notice the small clearing in which you and r_c used to lay in to watch the stars. Blooming with wildflowers and the sun shining on the warm grass, you feel the urge to lay there and enjoy the sunset with r_c once more.",
-        "decline_text": "You realize you'd rather not lay in a pile of bees and itchy grass, and trot away to find a place that wouldn't make you or r_c itch for an eternity.",
-        "chance_of_success": 50,
-        "relationship_constraint": [
-            "mates"
-        ],
-        "success_outcomes": [
-            {
-                "text": "r_c accepts and before you know it, {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} playfully chasing you through the wildflower fields. Just as the sun sets against the horizon, r_c tackles you into the clearing and rolls, wildflower petals floating through the air in a beautiful arrangement of color. You and r_c share a moment of laughter, enjoying yourself before you have to travel back to c_n.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            },
-            {
-                "text": "r_c agrees and hops through the flower field with joyful glee, breaking the seeds from the flowers so they float to the sky. While {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} distracted, you pluck a few flowers from the stems and start to weave the stems together until it forms a circle. Proud of your work, you show it off to r_c as a gift. {PRONOUN/r_c/subject/CAP} {VERB/r_c/accept/accepts} it with a bunt of heads!",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 10
-                    }
-                ],
-                "accessory": [
-                    {
-                        "cats": [
-                            "r_c"
-                        ],
-                        "accessory": [
-                            "FLOWERCROWN"
-                        ]
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You perk up and imply the idea of going into the clearing to lay in the sun, hopeful that r_c would agree. r_c hesitates and shakes {PRONOUN/r_c/poss} head, stating {PRONOUN/r_c/subject} {VERB/r_c/have/has} more important things to do and cannot rest. You're left pouting, entering the clearing alone as r_c trots to the Clan.",
-                "exp": 0,
-                "weight": 15,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": false,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": -5
-                    }
-                ]
-            },
-            {
-                "text": "r_c agrees and follows you into the clearing, stepping over the wildflowers carefully. You hear a fearful yelp from behind and before you know it, r_c is racing off with a few dozen bees following {PRONOUN/r_c/poss} tail. You can't help but snicker into your paw at {PRONOUN/r_c/poss} misfortune, but quickly hide your amusement as r_c comes back with a few angry stings.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 5
-                    }
-                ],
-                "injury": [
-                    {
-                        "cats": [
-                            "r_c"
-                        ],
-                        "injuries": [
-                            "bee sting"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "r_c agrees and follows you into the clearing, stepping over the wildflowers carefully. You hear a fearful yelp from behind and before you know it, r_c is racing out of the field. You hear the familiar buzz of angry bees and run off yourself, the angry creatures redirecting their target onto you. Safe to say it <i>stung</i> to hear your mate's laughter.",
-                "exp": 0,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 5
-                    }
-                ],
-                "injury": [
-                    {
-                        "cats": [
-                            "y_c"
-                        ],
-                        "injuries": [
-                            "bee sting"
-                        ]
-                    }
-                ]
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "halloween_date_J1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "halloween"
-        ],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You tell r_c how beautiful {PRONOUN/r_c/subject} {VERB/r_c/look/looks}, but upon hearing it, {PRONOUN/r_c/subject} {VERB/r_c/stand/stands} up and {VERB/r_c/step/steps} into the shade. {PRONOUN/r_c/subject/CAP} {VERB/r_c/say/says} that you shouldn't be advancing on anycat like that, given your situation.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "When you tell {PRONOUN/r_c/object} how you feel, r_c rolls away, suddenly avoiding eye contact. You can see {PRONOUN/r_c/object} hiding a smile, but, noticing the stares of a few nearby Clanmates, {PRONOUN/r_c/subject} {VERB/r_c/stand/stands} and {VERB/r_c/run/runs} away without a word. {PRONOUN/r_c/subject/CAP} must be embarrassed to be recieving affection from a killer.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "shunned_date_J3",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "Not a lot of cats will spend time with you these days, but r_c is still here. At the edge of camp, you've become a single bundle of fur as r_c licks the top of your head. No one has seen you here yet, but you're worried that, if they do, r_c will get in trouble for being so kind to you.",
+    "decline_text": "Though you appreciate the comfort, you seperate yourself from r_c from about a tail length so that {PRONOUN/r_c/subject} won't get in trouble if you're spotted. You're much colder now, and {PRONOUN/r_c/subject} {VERB/r_c/look/looks} a bit sad.",
+    "chance_of_success": 50,
+    "relationship_constraint": [
+      "mates"
+    ],
+    "success_outcomes": [
+      {
+        "text": "You can't bring yourself to tear yourself away from {PRONOUN/r_c/subject}. You fall asleep, cradled by r_c, and when you wake up again, it's been several hours and r_c is still here. None of your Clanmates must feel the need to seperate you.",
+        "exp": 0,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You begin falling asleep, cradled by r_c, but just as you're drifting off, you hear a Clanmate call out, wondering where r_c is. Though you understand, you're saddened when {PRONOUN/r_c/subject} {VERB/r_c/have/has} to get up and join the rest of {PRONOUN/r_c/poss} unshunned Clanmates.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "shunned_date_J4",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "It's been ages since you've been able to leave the camp, but you want to see the sunset again. You express this want to r_c as you sit together by the edge of camp, and {PRONOUN/r_c/subject} {VERB/r_c/tell/tells} you that {PRONOUN/r_c/subject} can help you climb up into a tree for a better view, if you'd like.",
+    "decline_text": "You decline, worried that you jumping into a tree at the edge of camp might appear as though you're trying to escape. You want to stay on the Clan's good side right now.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You agree to the idea, and r_c leads you to a thick tree in the corner of camp. {PRONOUN/r_c/subject/CAP} {VERB/r_c/jump/jumps} onto a low branch, and you follow {PRONOUN/r_c/subject} up the trunk until you're at the top of the world. A Clanmate from the ground asks r_c what {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} doing, but {PRONOUN/r_c/subject} {VERB/r_c/dismiss/dismisses} them and {VERB/r_c/give/gives} your cheek a lick as you gawk at the colourful clouds. You tell r_c how beautiful you think it is, and {PRONOUN/r_c/subject} {VERB/r_c/reply/replies} that {PRONOUN/r_c/subject} {VERB/r_c/think/thinks} you're prettier.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You watch from across camp as r_c works hard to help set a haunted den up for the kits. You wonder if {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} distracted enough to allow for you sneak out of camp to find {PRONOUN/r_c/object} a gift.",
-        "decline_text": "You dismiss the idea. You shouldn't be distracting {PRONOUN/r_c/object} from {PRONOUN/r_c/poss} work, anyway.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "When r_k runs up to {PRONOUN/r_c/object}, you take the opportunity and slide out of the camp entrance while {PRONOUN/r_c/poss} head is turned. While you're out, you collect as many sweet things you can find-- some berries, catmint, and even some honeycombs-- and arrange them on a large rhubarb leaf. When you arrive back to camp, dragging the treats behind you, r_c is excited to receive the gift while {PRONOUN/r_c/poss} friends fawn about it behind {PRONOUN/r_c/object}.",
-                "exp": 10,
-                "weight": 10,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            },
-            {
-                "text": "You decide to call out to r_c that you'll be leaving to collect some cobwebs for the den's decorations. {PRONOUN/r_c/subject/CAP} {VERB/r_c/give/gives} you a quick nod before getting back to work, so you head out. You gather some spooky cobwebs while you're out of camp, but make sure to grab a treat for r_c while you're there. You return to camp with the cobwebs and a small bundle of berries, both of which {PRONOUN/r_c/subject} {VERB/r_c/accept/accepts} gratefully.",
-                "exp": 10,
-                "weight": 10,
-                "herbs": [
-                    "cobwebs"
-                ],
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 7
-                    }
-                ]
-            },
-            {
-                "text": "r_k runs up to r_c, distracting {PRONOUN/r_c/object}, so you take the opportunity and slip out of camp. You're not able to find much, but you manage to snatch a pretty trinket from a display in front of a Twoleg nest. You surprise r_c with it back at camp, who thanks you enthusiastically!",
-                "exp": 10,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "r_c"
-                        ],
-                        "accessory": [
-                            "DRIEDORANGE",
-                            "CREAMWOOL",
-                            "SNAILSHELL",
-                            "PUMPKIN",
-                            "BIRDSKULL"
-                        ],
-                        "no_results": true
-                    }
-                ],
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 10
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You stand up to leave, but at the same time, r_k sprints up to you, saying r_c needs your help with the den. You'll have to find the time to get a gift later.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You quickly slip out of camp, grab a bundle of raspberries, and return to camp before anycat can notice you've left. However, when you return to camp, you're told that r_c left to gather some cobwebs for the den decorations. You just give r_m the raspberries instead.",
-                "exp": 0,
-                "weight": 20,
-                "herbs": [
-                    "raspberry"
-                ]
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 10
+          }
         ]
-    },
-    {
-        "patrol_id": "halloween_date_J2",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "halloween"
-        ],
-        "patrol_art": "date_default",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You agree, but as r_c leads you to a tree in the corner of camp, a warrior calls out to you, requesting that you don't go anywhere they can't keep an eye on you. You sigh and follow r_c back into the centre of the camp, where you spend the sunset trying to catch a glimpse of it through the trees.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "shunned_poly_date_J1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "date_default",
+    "min_cats": 3,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You see r_c and o_c1 lingering by the camp entrance, seemingly preparing to head out. You'd love to join them, but you don't know if they'd be as open to that as they once would be, given what you've done.",
+    "decline_text": "You decide against it, knowing that their rejection is likely inevitable.",
+    "chance_of_success": 30,
+    "success_outcomes": [
+      {
+        "text": "You approach the two, head low, expecting a rejection. However, when you ask if you can join them, they seem glad to have you! Since you're not allowed to leave camp, you, r_c and o_c1 spend some time in the clearing.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You've asked r_c to meet you by the camp entrance. Little {VERB/r_c/do/does} {PRONOUN/r_c/subject} know, you're waiting just outside to give {PRONOUN/r_c/object} a scare!",
-        "decline_text": "On second thought, you shouldn't contribute to the scariness of the season. When r_c approaches, you give {PRONOUN/r_c/object} a polite nod and invite {PRONOUN/r_c/object} on a normal, jumpscare-less walk.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You listen for {PRONOUN/r_c/poss} footsteps, and when {PRONOUN/r_c/subject} {VERB/r_c/get/gets} close, you lunge towards {PRONOUN/r_c/object} with a yowl. r_c yelps and launches into the air, furr puffed up, but is laughing as soon as {PRONOUN/r_c/subject} {VERB/r_c/hit/hits} the ground. Good one!",
-                "exp": 10,
-                "weight": 20,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 5
-                    }
-                ]
-            },
-            {
-                "text": "As r_c passes through the camp entrance, you tackle {PRONOUN/r_c/object} with a shout. Caught off-guard, {PRONOUN/r_c/subject} {VERB/r_c/slap/slaps} at {PRONOUN/r_c/poss} assailant with frantic paws until {PRONOUN/r_c/subject} {VERB/r_c/realise/realises} it's you. {PRONOUN/r_c/subject/CAP} playfully {VERB/r_c/shove/shoves} you off and {VERB/r_c/tell/tells} you {PRONOUN/r_c/subject}'ll get you back soon before inviting you on a walk.",
-                "exp": 10,
-                "weight": 10,
-                "relationships": [
-                    {
-                        "cats_to": [
-                            "r_c"
-                        ],
-                        "cats_from": [
-                            "y_c"
-                        ],
-                        "mutual": true,
-                        "values": [
-                            "romantic"
-                        ],
-                        "amount": 8
-                    }
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "When r_c gets close to the camp entrance, you leap out at {PRONOUN/r_c/object} with your scariest face. {PRONOUN/r_c/subject/CAP} {VERB/r_c/jump/jumps}, fur puffed up and claws unsheathed, and {VERB/r_c/begin/begins} to scold you once they've landed. Apparently, {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} in the mood.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You jump out at r_c as {PRONOUN/r_c/subject} {VERB/r_c/near/nears} the entrance, but, apparently, {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} quite close enough. A few tail lengths away, {PRONOUN/r_c/subject} {VERB/r_c/stand/stands} still and {VERB/r_c/tell/tells} you it was a good attempt.",
-                "exp": 0,
-                "weight": 20
-            }
+        "relationships": [
+          {
+            "cats_to": [
+              "patrol"
+            ],
+            "cats_from": [
+              "patrol"
+            ],
+            "mutual": false,
+            "values": [
+              "romantic",
+              "trust",
+              "comfort"
+            ],
+            "amount": 8
+          }
         ]
-    }
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "When they see you approaching, r_c and o_c1 quickly stand up and rush out through the camp entrance, knowing you won't be allowed to follow them.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "Life_alreadymates_date_H1",
+    "biome": [
+      "forest",
+      "mountainous",
+      "plains"
+    ],
+    "season": [
+      "newleaf",
+      "greenleaf"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "patrol_art": "date_flowerfield",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "While walking with r_c, you notice the small clearing in which you and r_c used to lay in to watch the stars. Blooming with wildflowers and the sun shining on the warm grass, you feel the urge to lay there and enjoy the sunset with r_c once more.",
+    "decline_text": "You realize you'd rather not lay in a pile of bees and itchy grass, and trot away to find a place that wouldn't make you or r_c itch for an eternity.",
+    "chance_of_success": 50,
+    "relationship_constraint": [
+      "mates"
+    ],
+    "success_outcomes": [
+      {
+        "text": "r_c accepts and before you know it, {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} playfully chasing you through the wildflower fields. Just as the sun sets against the horizon, r_c tackles you into the clearing and rolls, wildflower petals floating through the air in a beautiful arrangement of color. You and r_c share a moment of laughter, enjoying yourself before you have to travel back to c_n.",
+        "exp": 0,
+        "weight": 20,
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 10
+          }
+        ]
+      },
+      {
+        "text": "r_c agrees and hops through the flower field with joyful glee, breaking the seeds from the flowers so they float to the sky. While {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} distracted, you pluck a few flowers from the stems and start to weave the stems together until it forms a circle. Proud of your work, you show it off to r_c as a gift. {PRONOUN/r_c/subject/CAP} {VERB/r_c/accept/accepts} it with a bunt of heads!",
+        "exp": 0,
+        "weight": 20,
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 10
+          }
+        ],
+        "accessory": [
+          {
+            "cats": [
+              "r_c"
+            ],
+            "accessory": [
+              "FLOWERCROWN"
+            ]
+          }
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You perk up and imply the idea of going into the clearing to lay in the sun, hopeful that r_c would agree. r_c hesitates and shakes {PRONOUN/r_c/poss} head, stating {PRONOUN/r_c/subject} {VERB/r_c/have/has} more important things to do and cannot rest. You're left pouting, entering the clearing alone as r_c trots to the Clan.",
+        "exp": 0,
+        "weight": 15,
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": false,
+            "values": [
+              "romantic"
+            ],
+            "amount": -5
+          }
+        ]
+      },
+      {
+        "text": "r_c agrees and follows you into the clearing, stepping over the wildflowers carefully. You hear a fearful yelp from behind and before you know it, r_c is racing off with a few dozen bees following {PRONOUN/r_c/poss} tail. You can't help but snicker into your paw at {PRONOUN/r_c/poss} misfortune, but quickly hide your amusement as r_c comes back with a few angry stings.",
+        "exp": 0,
+        "weight": 20,
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 5
+          }
+        ],
+        "injury": [
+          {
+            "cats": [
+              "r_c"
+            ],
+            "injuries": [
+              "bee sting"
+            ]
+          }
+        ]
+      },
+      {
+        "text": "r_c agrees and follows you into the clearing, stepping over the wildflowers carefully. You hear a fearful yelp from behind and before you know it, r_c is racing out of the field. You hear the familiar buzz of angry bees and run off yourself, the angry creatures redirecting their target onto you. Safe to say it <i>stung</i> to hear your mate's laughter.",
+        "exp": 0,
+        "weight": 20,
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 5
+          }
+        ],
+        "injury": [
+          {
+            "cats": [
+              "y_c"
+            ],
+            "injuries": [
+              "bee sting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "halloween_date_J1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "halloween"
+    ],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You watch from across camp as r_c works hard to help set a haunted den up for the kits. You wonder if {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} distracted enough to allow for you sneak out of camp to find {PRONOUN/r_c/object} a gift.",
+    "decline_text": "You dismiss the idea. You shouldn't be distracting {PRONOUN/r_c/object} from {PRONOUN/r_c/poss} work, anyway.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "When r_k runs up to {PRONOUN/r_c/object}, you take the opportunity and slide out of the camp entrance while {PRONOUN/r_c/poss} head is turned. While you're out, you collect as many sweet things you can find-- some berries, catmint, and even some honeycombs-- and arrange them on a large rhubarb leaf. When you arrive back to camp, dragging the treats behind you, r_c is excited to receive the gift while {PRONOUN/r_c/poss} friends fawn about it behind {PRONOUN/r_c/object}.",
+        "exp": 10,
+        "weight": 10,
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 10
+          }
+        ]
+      },
+      {
+        "text": "You decide to call out to r_c that you'll be leaving to collect some cobwebs for the den's decorations. {PRONOUN/r_c/subject/CAP} {VERB/r_c/give/gives} you a quick nod before getting back to work, so you head out. You gather some spooky cobwebs while you're out of camp, but make sure to grab a treat for r_c while you're there. You return to camp with the cobwebs and a small bundle of berries, both of which {PRONOUN/r_c/subject} {VERB/r_c/accept/accepts} gratefully.",
+        "exp": 10,
+        "weight": 10,
+        "herbs": [
+          "cobwebs"
+        ],
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 7
+          }
+        ]
+      },
+      {
+        "text": "r_k runs up to r_c, distracting {PRONOUN/r_c/object}, so you take the opportunity and slip out of camp. You're not able to find much, but you manage to snatch a pretty trinket from a display in front of a Twoleg nest. You surprise r_c with it back at camp, who thanks you enthusiastically!",
+        "exp": 10,
+        "weight": 20,
+        "accessory": [
+          {
+            "cats": [
+              "r_c"
+            ],
+            "accessory": [
+              "DRIEDORANGE",
+              "CREAMWOOL",
+              "SNAILSHELL",
+              "PUMPKIN",
+              "BIRDSKULL"
+            ],
+            "no_results": true
+          }
+        ],
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 10
+          }
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You stand up to leave, but at the same time, r_k sprints up to you, saying r_c needs your help with the den. You'll have to find the time to get a gift later.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You quickly slip out of camp, grab a bundle of raspberries, and return to camp before anycat can notice you've left. However, when you return to camp, you're told that r_c left to gather some cobwebs for the den decorations. You just give r_m the raspberries instead.",
+        "exp": 0,
+        "weight": 20,
+        "herbs": [
+          "raspberry"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "halloween_date_J2",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "halloween"
+    ],
+    "patrol_art": "date_default",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You've asked r_c to meet you by the camp entrance. Little {VERB/r_c/do/does} {PRONOUN/r_c/subject} know, you're waiting just outside to give {PRONOUN/r_c/object} a scare!",
+    "decline_text": "On second thought, you shouldn't contribute to the scariness of the season. When r_c approaches, you give {PRONOUN/r_c/object} a polite nod and invite {PRONOUN/r_c/object} on a normal, jumpscare-less walk.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You listen for {PRONOUN/r_c/poss} footsteps, and when {PRONOUN/r_c/subject} {VERB/r_c/get/gets} close, you lunge towards {PRONOUN/r_c/object} with a yowl. r_c yelps and launches into the air, furr puffed up, but is laughing as soon as {PRONOUN/r_c/subject} {VERB/r_c/hit/hits} the ground. Good one!",
+        "exp": 10,
+        "weight": 20,
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 5
+          }
+        ]
+      },
+      {
+        "text": "As r_c passes through the camp entrance, you tackle {PRONOUN/r_c/object} with a shout. Caught off-guard, {PRONOUN/r_c/subject} {VERB/r_c/slap/slaps} at {PRONOUN/r_c/poss} assailant with frantic paws until {PRONOUN/r_c/subject} {VERB/r_c/realise/realises} it's you. {PRONOUN/r_c/subject/CAP} playfully {VERB/r_c/shove/shoves} you off and {VERB/r_c/tell/tells} you {PRONOUN/r_c/subject}'ll get you back soon before inviting you on a walk.",
+        "exp": 10,
+        "weight": 10,
+        "relationships": [
+          {
+            "cats_to": [
+              "r_c"
+            ],
+            "cats_from": [
+              "y_c"
+            ],
+            "mutual": true,
+            "values": [
+              "romantic"
+            ],
+            "amount": 8
+          }
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "When r_c gets close to the camp entrance, you leap out at {PRONOUN/r_c/object} with your scariest face. {PRONOUN/r_c/subject/CAP} {VERB/r_c/jump/jumps}, fur puffed up and claws unsheathed, and {VERB/r_c/begin/begins} to scold you once they've landed. Apparently, {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} in the mood.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You jump out at r_c as {PRONOUN/r_c/subject} {VERB/r_c/near/nears} the entrance, but, apparently, {PRONOUN/r_c/subject} {VERB/r_c/weren't/wasn't} quite close enough. A few tail lengths away, {PRONOUN/r_c/subject} {VERB/r_c/stand/stands} still and {VERB/r_c/tell/tells} you it was a good attempt.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  }
 ]
