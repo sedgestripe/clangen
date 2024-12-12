@@ -1,770 +1,771 @@
-[
-    {
-        "patrol_id": "life_queen_og1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+    [
+  {
+    "patrol_id": "life_queen_og1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "During a fierce storm, water starts to seep into the nursery. You need to find a way to keep the kits dry and warm.",
+    "decline_text": "You call upon the warriors to help relocate the kits to a temporary shelter. Their combined effort ensures that the kits remain safe and comfortable.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "You quickly move the kits to a drier part of the nursery and gather extra moss to insulate them. Thanks to your quick thinking, the kits stay warm and safe.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You are at a loss on what to do, and coax the kits to a dryer area in the nursery, sacrificing your own nest for the cause. You watch as the water seeps through and gets caught on the nest, taking a breath of relief as it stops the issue for now. A nest can always be remade.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "During a fierce storm, water starts to seep into the nursery. You need to find a way to keep the kits dry and warm.",
-        "decline_text": "You call upon the warriors to help relocate the kits to a temporary shelter. Their combined effort ensures that the kits remain safe and comfortable.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "You quickly move the kits to a drier part of the nursery and gather extra moss to insulate them. Thanks to your quick thinking, the kits stay warm and safe.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You are at a loss on what to do, and coax the kits to a dryer area in the nursery, sacrificing your own nest for the cause. You watch as the water seeps through and gets caught on the nest, taking a breath of relief as it stops the issue for now. A nest can always be remade.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "It is not the first time water pooled into the nursery, and you reckon it will not be the last. The older kittens know the drill and wander away to find dry ground, while you pick up the younger kittens to follow. You feel a prideful swell in your heart as the older kittens play a game of 'don't touch the water!' to distract the younglings.",
-                "exp": 10,
-                "weight": 15
-            }
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Despite your best efforts, some kits still end up cold and wet.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Freaking out, you do the first thing that comes to mind-- using your body to block the incoming water. You bark at the kits to stay within one area of the den as your pelt gets soaked, quickly realizing this was the worst idea ever. Despite your efforts, you and the kits end up wet anyway.",
-                "exp": 0,
-                "weight": 5,
-                "injury": [
-                    {
-                        "cats": [
-                            "y_c"
-                        ],
-                        "injuries": [
-                            "running nose"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "With a disgusted gasp, you hurry away from the pooling water. Lost in the <i>horrible</i> mental image of your well-groomed pelt being ruined by the rain water, you completely neglect your duty to evacuate the kittens to a dry area. The kittens huff and whine as they get wet, and you're - rightfully - blamed for their misfortune.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "charismatic",
-                    "shameless",
-                    "flamboyant",
-                    "childish"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "A little water doesn't hurt anyone! You decide to take advantage of the opportunity and jump into the overflowing puddles, showing a spout of joyful fun. Some of the kittens decide to join you, and what was once a scary experience, turns into a water fight!",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_queen_og2",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "It is not the first time water pooled into the nursery, and you reckon it will not be the last. The older kittens know the drill and wander away to find dry ground, while you pick up the younger kittens to follow. You feel a prideful swell in your heart as the older kittens play a game of 'don't touch the water!' to distract the younglings.",
+        "exp": 10,
+        "weight": 15
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Despite your best efforts, some kits still end up cold and wet.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Freaking out, you do the first thing that comes to mind-- using your body to block the incoming water. You bark at the kits to stay within one area of the den as your pelt gets soaked, quickly realizing this was the worst idea ever. Despite your efforts, you and the kits end up wet anyway.",
+        "exp": 0,
+        "weight": 5,
+        "injury": [
+          {
+            "cats": [
+              "y_c"
+            ],
+            "injuries": [
+              "running nose"
+            ]
+          }
+        ]
+      },
+      {
+        "text": "With a disgusted gasp, you hurry away from the pooling water. Lost in the <i>horrible</i> mental image of your well-groomed pelt being ruined by the rain water, you completely neglect your duty to evacuate the kittens to a dry area. The kittens huff and whine as they get wet, and you're - rightfully - blamed for their misfortune.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "A kit has gone missing from the nursery. You need to organize a search.",
-        "decline_text": "You alert the Clan leader, trusting their experience in such matters. The leader's strategy ensures the kit is found safe and sound.",
-        "chance_of_success": 70,
-        "success_outcomes": [
-            {
-                "text": "You promptly organize a search party, and with combined efforts, the kit is found playing near the elders' den, unaware of the panic. Your decisiveness ensures the kit's safety.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "While everycat is frantically looking for the kitten, you smile knowingly as you hear muffled giggles from deep within the nursery. Though knowing exactly where they are, you call out for the kitten and sneak around their hiding place, pouncing the rascal with a playful roar. The kittens safety is top priority, but so is fun.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Instead of organizing a search party, you calmly wander around the camp until you see a ghosty cat floating in the distance. Approaching, you ask if the cat has seen the kitten anywhere and they point you in the direct of the elder's den. You thank the ghost and walk off with a smile - sometimes it's more beneficial to ask than to panic.",
-                "exp": 10,
-                "weight": 15,
-                "stat_skill": [
-                    "GHOST,1"
-                ],
-                "new_cat": [
-                    [
-                        "meeting",
-                        "residence:ur"
-                    ]
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "As the search party is undergoing investigation, you practically turn all the camps dens upside down. Soon enough, you hear laughter near the warriors den and find the kitten... playing by themself? You call out and they scramble to stop what they're doing with a nervous expression. You shake it off as only an imaginary friend.",
-                "exp": 10,
-                "weight": 5
-            }
+        "stat_trait": [
+          "charismatic",
+          "shameless",
+          "flamboyant",
+          "childish"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Despite the frantic search, it's an elder who eventually finds the kit.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "As the search comes to an end, the hope dwindles as no cat is able to find the missing kitten. You refuse to give up hope and search the nursery again... only to find the kitten sprawled out underneath one of the nests, sleeping deeply. You almost have the nerve to be angry, but instead take a breath of relief. This could have been much worse.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Night falls and the search is still transpiring, but the kitten is still deemed missing. Every den has been searched, the border and surrounding territory is clear, but still no sight of the kitten. Just as you're about to panic, the kitten tumbles out of the surrounding greenery with a grin and a red muzzle, stating they found a berry bush!",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Just as you're about to panic, a border patrol wanders into the camp with a sheepish kitten held by the scruff. You scold the kitten and tell them it's dangerous to wander around on their own! The kitten snidely claims that they weren't alone - they were with the patrol!",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_queen_og3",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "A little water doesn't hurt anyone! You decide to take advantage of the opportunity and jump into the overflowing puddles, showing a spout of joyful fun. Some of the kittens decide to join you, and what was once a scary experience, turns into a water fight!",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_queen_og2",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "A kit has gone missing from the nursery. You need to organize a search.",
+    "decline_text": "You alert the Clan leader, trusting their experience in such matters. The leader's strategy ensures the kit is found safe and sound.",
+    "chance_of_success": 70,
+    "success_outcomes": [
+      {
+        "text": "You promptly organize a search party, and with combined efforts, the kit is found playing near the elders' den, unaware of the panic. Your decisiveness ensures the kit's safety.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "While everycat is frantically looking for the kitten, you smile knowingly as you hear muffled giggles from deep within the nursery. Though knowing exactly where they are, you call out for the kitten and sneak around their hiding place, pouncing the rascal with a playful roar. The kittens safety is top priority, but so is fun.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "One of the kits has developed a cough. You need to decide on the best course of action.",
-        "decline_text": "Unsure of the best approach, you seek advice from the senior queens. They suggest bringing the kit to the medicine cat, ensuring its wellbeing.",
-        "chance_of_success": 75,
-        "success_outcomes": [
-            {
-                "text": "Recognizing the symptoms, you immediately consult the medicine cat. Under their care, the kit quickly recovers. Your prompt action is commended.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You immediately recognize the symptoms and decide the cough is not bad enough to consult the medicine cat. Instead, you search around the nursery for herbs and treat the kitten yourself with much success.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "HEALER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Despite being a queen, you trained for this! It's not uncommon for a kitten to fall sick because of spreading diseases, and in your humble opinion all queens should know basic remedies for simple health issues. You give the kitten a basic remedy for their cough and your preparation for such a situation is praised.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
         ],
-        "fail_outcomes": [
-            {
-                "text": "While you try some traditional remedies, the kit's condition doesn't improve.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "The kitten coughs in your face one too many times for comfort, and although you were able to locate the issue and direct them to a medicine cat, you find yourself feeling sick as well. Aww rats.",
-                "exp": 0,
-                "weight": 5,
-                "injury": [
-                    {
-                        "cats": [
-                            "y_c"
-                        ],
-                        "injuries": [
-                            "running nose"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "You're not willing to become sick this time, nope! Nope, nope nope! You keep yourself a safe distance away and tell the kitten to find a medicine cat for their cough, even though you can feel the judgemental eyes of other queen's upon you.",
-                "exp": 0,
-                "weight": 15
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_queen_og5",
-        "biome": [
-            "Any"
+      },
+      {
+        "text": "Instead of organizing a search party, you calmly wander around the camp until you see a ghosty cat floating in the distance. Approaching, you ask if the cat has seen the kitten anywhere and they point you in the direct of the elder's den. You thank the ghost and walk off with a smile - sometimes it's more beneficial to ask than to panic.",
+        "exp": 10,
+        "weight": 15,
+        "stat_skill": [
+          "GHOST,1"
         ],
-        "season": [
-            "Any"
+        "new_cat": [
+          [
+            "meeting",
+            "residence:ur"
+          ]
         ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "As the search party is undergoing investigation, you practically turn all the camps dens upside down. Soon enough, you hear laughter near the warriors den and find the kitten... playing by themself? You call out and they scramble to stop what they're doing with a nervous expression. You shake it off as only an imaginary friend.",
+        "exp": 10,
+        "weight": 5
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Despite the frantic search, it's an elder who eventually finds the kit.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "As the search comes to an end, the hope dwindles as no cat is able to find the missing kitten. You refuse to give up hope and search the nursery again... only to find the kitten sprawled out underneath one of the nests, sleeping deeply. You almost have the nerve to be angry, but instead take a breath of relief. This could have been much worse.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Night falls and the search is still transpiring, but the kitten is still deemed missing. Every den has been searched, the border and surrounding territory is clear, but still no sight of the kitten. Just as you're about to panic, the kitten tumbles out of the surrounding greenery with a grin and a red muzzle, stating they found a berry bush!",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Just as you're about to panic, a border patrol wanders into the camp with a sheepish kitten held by the scruff. You scold the kitten and tell them it's dangerous to wander around on their own! The kitten snidely claims that they weren't alone - they were with the patrol!",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_queen_og3",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "One of the kits has developed a cough. You need to decide on the best course of action.",
+    "decline_text": "Unsure of the best approach, you seek advice from the senior queens. They suggest bringing the kit to the medicine cat, ensuring its wellbeing.",
+    "chance_of_success": 75,
+    "success_outcomes": [
+      {
+        "text": "Recognizing the symptoms, you immediately consult the medicine cat. Under their care, the kit quickly recovers. Your prompt action is commended.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You immediately recognize the symptoms and decide the cough is not bad enough to consult the medicine cat. Instead, you search around the nursery for herbs and treat the kitten yourself with much success.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "Kits are getting curious and start wandering too close to the warrior's training area. You need to ensure their safety.",
-        "decline_text": "Feeling the situation might be too much for you alone, you enlist the help of the Clan's deputy.",
-        "chance_of_success": 70,
-        "success_outcomes": [
-            {
-                "text": "You organize a barrier with the help of other queens and apprentices, keeping the kits safely away from the training ground. The warriors appreciate your efforts.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "The kittens curiosity gives you an idea, and you consult with the deputy about training the warriors in something else - perception and initiative! A game of hide and seek where warriors need to find kittens while also avoiding other warriors. The deputy is impressed with your idea and introduce it straight away!",
-                "exp": 10,
-                "weight": 15
-            },
-            {
-                "text": "You decide to compromise with the kittens, and take them to the elders den to get stories of great battles instead of putting themselves in danger. Not only would the kittens and elders get some entertainment for the day, but you can also relax!",
-                "exp": 5,
-                "weight": 20
-            }
+        "stat_skill": [
+          "HEALER,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Though you caution the kits, r_k still ends up wandering into the training area, getting a minor scratch. The experience stresses the need for constant vigilance.",
-                "exp": 0,
-                "weight": 5,
-                "injury": [
-                    {
-                        "cats": [
-                            "r_k"
-                        ],
-                        "injuries": [
-                            "small cut"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "Despite your best efforts, r_k still sneaks under your nose and gets {PRONOUN/r_k/self} too close to an intense spar. Thankfully the warriors stop straight away and give you the room to pull r_k out of the training arena. That was too close!",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You turned your back for one second and a kitten goes chasing into the training area. Thankfully, a passerby apprentice was able to stop the kitten before it gets any closer.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_queen_R1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "Despite being a queen, you trained for this! It's not uncommon for a kitten to fall sick because of spreading diseases, and in your humble opinion all queens should know basic remedies for simple health issues. You give the kitten a basic remedy for their cough and your preparation for such a situation is praised.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "You see a pair of kits fighting in the clearing, and debate whether to intervene or not.",
-        "decline_text": "You decide they can work out their own squabble, leaving them to talk.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "When you come over and talk to them, you find that their disagreement is easily smoothed over with a little bit of compromise. The kits are happy again, and have learned a valuable lesson in how to settle an argument.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Before you can even approach, the two kittens stop their fighting to cry to you about their argument. Apparently, the two kittens can't share the same toys and today was the last straw! You quietly and efficiently find a compromise to their issue.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "MEDIATOR,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You huff and approach the kittens, questioning the cause of the fight but get no answer. Though, with an adult now present, the kittens reluctantly stop fighting and sulk off to separate sides of the clearing. That was a little too easy.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Your calm demeanor only seems to irritate the kits more, and they begin sulking, refusing to talk with your presence. You are forced to give up for now, but you at least ensure they don't start fighting again.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You watch them for a moment, then brush off the fight as just a little quarrel. Kittens have a lot to say and a lot of energy to burn - it can't be bad enough to interfere! Though, as the time flies and the kittens come back, you're embarrassed to see both of them torn up and feelings bruised.",
-                "exp": 0,
-                "weight": 10
-            },
-            {
-                "text": "You approach the kittens with the intention of stopping the fighting, but despite your best efforts, the kittens just won't get off each other! You need to call over a wandering warrior to separate the two, but they still hiss. What happened there?",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_queen_R2",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "While you try some traditional remedies, the kit's condition doesn't improve.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "The kitten coughs in your face one too many times for comfort, and although you were able to locate the issue and direct them to a medicine cat, you find yourself feeling sick as well. Aww rats.",
+        "exp": 0,
+        "weight": 5,
+        "injury": [
+          {
+            "cats": [
+              "y_c"
+            ],
+            "injuries": [
+              "running nose"
+            ]
+          }
+        ]
+      },
+      {
+        "text": "You're not willing to become sick this time, nope! Nope, nope nope! You keep yourself a safe distance away and tell the kitten to find a medicine cat for their cough, even though you can feel the judgemental eyes of other queen's upon you.",
+        "exp": 0,
+        "weight": 15
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_queen_og5",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "Kits are getting curious and start wandering too close to the warrior's training area. You need to ensure their safety.",
+    "decline_text": "Feeling the situation might be too much for you alone, you enlist the help of the Clan's deputy.",
+    "chance_of_success": 70,
+    "success_outcomes": [
+      {
+        "text": "You organize a barrier with the help of other queens and apprentices, keeping the kits safely away from the training ground. The warriors appreciate your efforts.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "The kittens curiosity gives you an idea, and you consult with the deputy about training the warriors in something else - perception and initiative! A game of hide and seek where warriors need to find kittens while also avoiding other warriors. The deputy is impressed with your idea and introduce it straight away!",
+        "exp": 10,
+        "weight": 15
+      },
+      {
+        "text": "You decide to compromise with the kittens, and take them to the elders den to get stories of great battles instead of putting themselves in danger. Not only would the kittens and elders get some entertainment for the day, but you can also relax!",
+        "exp": 5,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Though you caution the kits, r_k still ends up wandering into the training area, getting a minor scratch. The experience stresses the need for constant vigilance.",
+        "exp": 0,
+        "weight": 5,
+        "injury": [
+          {
+            "cats": [
+              "r_k"
+            ],
+            "injuries": [
+              "small cut"
+            ]
+          }
+        ]
+      },
+      {
+        "text": "Despite your best efforts, r_k still sneaks under your nose and gets {PRONOUN/r_k/self} too close to an intense spar. Thankfully the warriors stop straight away and give you the room to pull r_k out of the training arena. That was too close!",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You turned your back for one second and a kitten goes chasing into the training area. Thankfully, a passerby apprentice was able to stop the kitten before it gets any closer.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_queen_R1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You see a pair of kits fighting in the clearing, and debate whether to intervene or not.",
+    "decline_text": "You decide they can work out their own squabble, leaving them to talk.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "When you come over and talk to them, you find that their disagreement is easily smoothed over with a little bit of compromise. The kits are happy again, and have learned a valuable lesson in how to settle an argument.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Before you can even approach, the two kittens stop their fighting to cry to you about their argument. Apparently, the two kittens can't share the same toys and today was the last straw! You quietly and efficiently find a compromise to their issue.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "The nursery is quiet as nighttime falls, but as you do a headcount, you notice a kitten is missing. You see their faint figure outside the den, but they won't respond to your hushed calls.",
-        "decline_text": "You decide to leave them be for now. They seem to want to be alone.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "You quietly sit down next to the kit, and they're silent for a moment, before asking you what it's like being a grown-up. They admit they're scared of growing up. You comfort them, and tell them that the future isn't as scary as it seems. You promise you'll protect them. The kit goes to sleep next to you, reassured by your words.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "test": "Your eyes soften. You understand the need to have alone time every now and then, with how chaotic life can be at times, so you halt your calls for the kitten to come back. Instead, you keep a careful eye on the kitten and don't mention their disappearance when they sneak back into the den.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "MEDIATOR,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You quietly sit down next to the kit, and try to talk to them, but they turn away, bristling. You turn back to see some of the other kits awake and staring, and decide that it might be best to leave them be until tomorrow.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Instead of approaching the kitten yourself, you assign one of the other kittens to make them laugh before bed. The effort was futile, however, as there was no laughing to be heard. You make a mental note to check up on the kitten at a later date.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_queen_R3",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "You huff and approach the kittens, questioning the cause of the fight but get no answer. Though, with an adult now present, the kittens reluctantly stop fighting and sulk off to separate sides of the clearing. That was a little too easy.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Your calm demeanor only seems to irritate the kits more, and they begin sulking, refusing to talk with your presence. You are forced to give up for now, but you at least ensure they don't start fighting again.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You watch them for a moment, then brush off the fight as just a little quarrel. Kittens have a lot to say and a lot of energy to burn - it can't be bad enough to interfere! Though, as the time flies and the kittens come back, you're embarrassed to see both of them torn up and feelings bruised.",
+        "exp": 0,
+        "weight": 10
+      },
+      {
+        "text": "You approach the kittens with the intention of stopping the fighting, but despite your best efforts, the kittens just won't get off each other! You need to call over a wandering warrior to separate the two, but they still hiss. What happened there?",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_queen_R2",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "The nursery is quiet as nighttime falls, but as you do a headcount, you notice a kitten is missing. You see their faint figure outside the den, but they won't respond to your hushed calls.",
+    "decline_text": "You decide to leave them be for now. They seem to want to be alone.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "You quietly sit down next to the kit, and they're silent for a moment, before asking you what it's like being a grown-up. They admit they're scared of growing up. You comfort them, and tell them that the future isn't as scary as it seems. You promise you'll protect them. The kit goes to sleep next to you, reassured by your words.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "test": "Your eyes soften. You understand the need to have alone time every now and then, with how chaotic life can be at times, so you halt your calls for the kitten to come back. Instead, you keep a careful eye on the kitten and don't mention their disappearance when they sneak back into the den.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "The nursery is empty aside from you, but a queen approaches you anxiously, sitting down next to you. They ask for advice on what they should do when they eventually start giving birth.",
-        "decline_text": "You shake your head, advising them to ask the medicine cat instead. The queen seems further unnerved by this, but takes your word for it, quickly retreating to the medicine cat's den.",
-        "chance_of_success": 75,
-        "success_outcomes": [
-            {
-                "text": "You give them advice on how to make sure everything goes well, as well as telling them how they'll know when they start kitting. The queen is reassured by your advice, and thanks you for your help.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Noticing their anxious behavior, you give them advice relating to being calm while birthing. You comment on the importance of staying calm and focused, and to trust the queen's and medicine cats that'll be helping them give birth when the time comes.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Try as you might, you can't seem to reassure the new queen's fears, and your advice only seems to scare them more. Fortunately, another more experienced cat helps you answer the concerns the queen has and reassure them.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "A bit anxious about giving out misinformation, you repeat a list of things your mentor told you cats need to do while giving birth word for word. You're so lost in your lengthy, and quite gruesome explanation, you do not notice the queen sneaking away.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You admit to not knowing a lot about kitting and direct the queen to your mentor, who quietly coaxes the pregnant cat to a secluded spot in the nursery for conversation.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_queen_R4",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You quietly sit down next to the kit, and try to talk to them, but they turn away, bristling. You turn back to see some of the other kits awake and staring, and decide that it might be best to leave them be until tomorrow.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Instead of approaching the kitten yourself, you assign one of the other kittens to make them laugh before bed. The effort was futile, however, as there was no laughing to be heard. You make a mental note to check up on the kitten at a later date.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_queen_R3",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "The nursery is empty aside from you, but a queen approaches you anxiously, sitting down next to you. They ask for advice on what they should do when they eventually start giving birth.",
+    "decline_text": "You shake your head, advising them to ask the medicine cat instead. The queen seems further unnerved by this, but takes your word for it, quickly retreating to the medicine cat's den.",
+    "chance_of_success": 75,
+    "success_outcomes": [
+      {
+        "text": "You give them advice on how to make sure everything goes well, as well as telling them how they'll know when they start kitting. The queen is reassured by your advice, and thanks you for your help.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Noticing their anxious behavior, you give them advice relating to being calm while birthing. You comment on the importance of staying calm and focused, and to trust the queen's and medicine cats that'll be helping them give birth when the time comes.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Try as you might, you can't seem to reassure the new queen's fears, and your advice only seems to scare them more. Fortunately, another more experienced cat helps you answer the concerns the queen has and reassure them.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "A bit anxious about giving out misinformation, you repeat a list of things your mentor told you cats need to do while giving birth word for word. You're so lost in your lengthy, and quite gruesome explanation, you do not notice the queen sneaking away.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "The nursery empties out as the kits leave to go play in the clearing, but much to your surprise, you are approached by the leader, who asks you about your opinions on what roles they should assign to some of the kits.",
-        "decline_text": "You tell the leader that you trust their judgment better than your own, and tell them that you trust they'll make the correct decision.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "You tell the leader about the skills of each of the kits, and tell the leader about what each kit wants to do in their future, and the leader listens, nodding. They thank you for your insight, before leaving for the day. You feel reassured that the kits will be given roles that they will excel in.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You've been admittedly waiting for this day to come, and start going on a very long rant about each kittens pros and cons in every role available to them. The leader stops you half-way with a chuckle, saying they appreciate the enthusiasm but has very little time for all the details.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You begin to advise the leader on what roles to give the kits, but one of the kits overhears you, and loudly disagrees with you. The other kits clamor to see what's going on, and all you can do is shoot the leader an apologetic look as they stumble away from the cluster of scuttling children.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You freeze up in a cold sweat, a bit intimidated by the leader asking you directly for advice. You stutter out an unsure answer that doesn't make sense, even to you, and the leader leaves the nursery more undecided than before.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow",
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_queen_R5",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "You admit to not knowing a lot about kitting and direct the queen to your mentor, who quietly coaxes the pregnant cat to a secluded spot in the nursery for conversation.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_queen_R4",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "The nursery empties out as the kits leave to go play in the clearing, but much to your surprise, you are approached by the leader, who asks you about your opinions on what roles they should assign to some of the kits.",
+    "decline_text": "You tell the leader that you trust their judgment better than your own, and tell them that you trust they'll make the correct decision.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "You tell the leader about the skills of each of the kits, and tell the leader about what each kit wants to do in their future, and the leader listens, nodding. They thank you for your insight, before leaving for the day. You feel reassured that the kits will be given roles that they will excel in.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You've been admittedly waiting for this day to come, and start going on a very long rant about each kittens pros and cons in every role available to them. The leader stops you half-way with a chuckle, saying they appreciate the enthusiasm but has very little time for all the details.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "One of the kits won't stop crying, and you can't figure out why. You're currently the only one who they'll talk to, so it's up to you to figure out what's wrong.",
-        "decline_text": "Sometimes kits just need to cry sometimes, so you just sit by the kit's side until they stop.",
-        "chance_of_success": 70,
-        "success_outcomes": [
-            {
-                "text": "You figure out that the kit simply needed a nap, and you manage to coax them into falling asleep. The parents thank you graciously, and get their own well-deserved rest.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You decide to try to make a silly face, hoping it'll make them laugh. Luckily, it worked and they collapsed into a fit of giggles and stopped crying right away.",
-                "exp": 15,
-                "weight": 20,
-                "stat_trait": [
-                    "troublesome",
-                    "childish",
-                    "playful",
-                    "strange",
-                    "rebellious",
-                    "spontaneous",
-                    "energetic",
-                    "bouncy"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You wrack your brain for any knowledge about continuous crying, refusing to simply brush it off as the kitten being unconscionable. After a moment, you remember a medicine cat mentioning a spread of ear mites and direct the parents to ask about it just in case.",
-                "exp": 15,
-                "weight": 20,
-                "stat_skill": [
-                    "CLAIRVOYANT,1",
-                    "INSIGHTFUL,1"
-                ]
-            }
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
         ],
-        "fail_outcomes": [
-            {
-                "text": "No matter what you try or what you say, the kit just keeps on bawling. It's hopeless; all you can do is try to wait it out.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You decide to try to make a silly face, in the hopes it'll make them laugh and stop crying. Unfortunately, your 'silly' face ended up being more scary than silly. Apparently, you need to practice your silly face more often.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "troublesome",
-                    "childish",
-                    "playful",
-                    "strange",
-                    "rebellious",
-                    "spontaneous",
-                    "energetic",
-                    "bouncy"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_queen_R6",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You begin to advise the leader on what roles to give the kits, but one of the kits overhears you, and loudly disagrees with you. The other kits clamor to see what's going on, and all you can do is shoot the leader an apologetic look as they stumble away from the cluster of scuttling children.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You freeze up in a cold sweat, a bit intimidated by the leader asking you directly for advice. You stutter out an unsure answer that doesn't make sense, even to you, and the leader leaves the nursery more undecided than before.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "Sniffling awakens you. It takes a moment before you find the cause - one of the kits appears to have had a nightmare.",
-        "decline_text": "Their parent is already on it, soothing them with soft words. You curl back up in your nest to drift back to sleep.",
-        "chance_of_success": 70,
-        "success_outcomes": [
-            {
-                "text": "You move to their nest, murmuring soft comforts as you lick their head soothingly. You quietly talk to the kit about their nightmare. It calms them immensely, and they soon are curled back up at their parent's side. You return to your own nest with a smile.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You groggily pull the kitten into your own nest, curling around them in hopes the warmth gives them comfort. Thankfully, the kitten is quick to fall asleep within your embrace and finally the night is quiet again.",
-                "exp": 5,
-                "weight": 20
-            }
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow",
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly"
         ],
-        "fail_outcomes": [
-            {
-                "text": "No matter what you try or what you say, the kit just keeps on bawling. It's hopeless; all you can do is try to wait it out.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lg_queen_shunned_J1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 6,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_queen_R5",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "One of the kits won't stop crying, and you can't figure out why. You're currently the only one who they'll talk to, so it's up to you to figure out what's wrong.",
+    "decline_text": "Sometimes kits just need to cry sometimes, so you just sit by the kit's side until they stop.",
+    "chance_of_success": 70,
+    "success_outcomes": [
+      {
+        "text": "You figure out that the kit simply needed a nap, and you manage to coax them into falling asleep. The parents thank you graciously, and get their own well-deserved rest.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You decide to try to make a silly face, hoping it'll make them laugh. Luckily, it worked and they collapsed into a fit of giggles and stopped crying right away.",
+        "exp": 15,
         "weight": 20,
-        "intro_text": "A kit runs up to you in tears, asking you to fix their favourite leaf, which has now ripped. They don't seem to know that the kits aren't supposed to talk to you right now. You don't know if you should help them.",
-        "decline_text": "You uncomfortably turn the upset kit away, knowing the Clan won't want you influencing the kits during your punishment.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You tell the kit that you're sorry about their leaf, and, managing to avoid being spotted by anycat, you search alongside them for a new one along the edges of camp. Their new leaf is much bigger and more colourful, and they thank you for helping them find it.",
-                "exp": 15,
-                "weight": 20
-            },
-            {
-                "text": "You ignore the stares making your fur stand up on end and help the kitten look for a new leaf along the border of camp. You point out what seemed like a million colorful and huge leafs before the kitten was satisfied with your find. The kitten runs off with a thank you, and you walk back to camp ready to take the fall.",
-                "exp": 15,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "troublesome",
+          "childish",
+          "playful",
+          "strange",
+          "rebellious",
+          "spontaneous",
+          "energetic",
+          "bouncy"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You stand up to go help the kit find a new leaf, but another queen catches your eye with an angry stare. Awkwardly, you tell the kit to go ask the other queen for help instead.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You quietly tell the kitten the other queens will not appreciate you talking to them. You suggest the kitten ask for help from another queen, even with the sight of teary eyes and a devastated face.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    }
+      },
+      {
+        "text": "You wrack your brain for any knowledge about continuous crying, refusing to simply brush it off as the kitten being unconscionable. After a moment, you remember a medicine cat mentioning a spread of ear mites and direct the parents to ask about it just in case.",
+        "exp": 15,
+        "weight": 20,
+        "stat_skill": [
+          "CLAIRVOYANT,1",
+          "INSIGHTFUL,1"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "No matter what you try or what you say, the kit just keeps on bawling. It's hopeless; all you can do is try to wait it out.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You decide to try to make a silly face, in the hopes it'll make them laugh and stop crying. Unfortunately, your 'silly' face ended up being more scary than silly. Apparently, you need to practice your silly face more often.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "troublesome",
+          "childish",
+          "playful",
+          "strange",
+          "rebellious",
+          "spontaneous",
+          "energetic",
+          "bouncy"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_queen_R6",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "patrol_art": "life_queen_R6",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "Sniffling awakens you. It takes a moment before you find the cause - one of the kits appears to have had a nightmare.",
+    "decline_text": "Their parent is already on it, soothing them with soft words. You curl back up in your nest to drift back to sleep.",
+    "chance_of_success": 70,
+    "success_outcomes": [
+      {
+        "text": "You move to their nest, murmuring soft comforts as you lick their head soothingly. You quietly talk to the kit about their nightmare. It calms them immensely, and they soon are curled back up at their parent's side. You return to your own nest with a smile.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You groggily pull the kitten into your own nest, curling around them in hopes the warmth gives them comfort. Thankfully, the kitten is quick to fall asleep within your embrace and finally the night is quiet again.",
+        "exp": 5,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "No matter what you try or what you say, the kit just keeps on bawling. It's hopeless; all you can do is try to wait it out.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lg_queen_shunned_J1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 6,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "A kit runs up to you in tears, asking you to fix their favourite leaf, which has now ripped. They don't seem to know that the kits aren't supposed to talk to you right now. You don't know if you should help them.",
+    "decline_text": "You uncomfortably turn the upset kit away, knowing the Clan won't want you influencing the kits during your punishment.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You tell the kit that you're sorry about their leaf, and, managing to avoid being spotted by anycat, you search alongside them for a new one along the edges of camp. Their new leaf is much bigger and more colourful, and they thank you for helping them find it.",
+        "exp": 15,
+        "weight": 20
+      },
+      {
+        "text": "You ignore the stares making your fur stand up on end and help the kitten look for a new leaf along the border of camp. You point out what seemed like a million colorful and huge leafs before the kitten was satisfied with your find. The kitten runs off with a thank you, and you walk back to camp ready to take the fall.",
+        "exp": 15,
+        "weight": 20,
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You stand up to go help the kit find a new leaf, but another queen catches your eye with an angry stare. Awkwardly, you tell the kit to go ask the other queen for help instead.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You quietly tell the kitten the other queens will not appreciate you talking to them. You suggest the kitten ask for help from another queen, even with the sight of teary eyes and a devastated face.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  }
 ]
+    
