@@ -1,2037 +1,2038 @@
-[
-    {
-        "patrol_id": "lifegen_app1",
-        "biome": [
-            "Any"
+    [
+  {
+    "patrol_id": "lifegen_app1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app1",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "m_n suggests an additional training session focusing on tracking skills. It's an opportunity to sharpen your senses and improve your hunting prowess.",
+    "decline_text": "You opt to skip the training for the day and instead, decide to rest and rejuvenate your energy for the challenges ahead.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You graciously accept the extra training and track a mouse using its scent alone. m_n observes with a sense of pride and nods approvingly at your progress.",
+        "exp": 5,
+        "weight": 20
+      },
+      {
+        "text": "Accepting the challenge, you track m_n's trail throughout the territory with ease. You beam with pride as you manage to find {PRONOUN/m_n/object} again and again.",
+        "exp": 10,
+        "weight": 15,
+        "stat_skill": [
+          "EXPLORER,1",
+          "NAVIGATOR,1",
+          "TRACKER,1",
+          "SENSE,1"
         ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lifegen_app1",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
-        "weight": 20,
-        "intro_text": "m_n suggests an additional training session focusing on tracking skills. It's an opportunity to sharpen your senses and improve your hunting prowess.",
-        "decline_text": "You opt to skip the training for the day and instead, decide to rest and rejuvenate your energy for the challenges ahead.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You graciously accept the extra training and track a mouse using its scent alone. m_n observes with a sense of pride and nods approvingly at your progress.",
-                "exp": 5,
-                "weight": 20
-            },
-            {
-                "text": "Accepting the challenge, you track m_n's trail throughout the territory with ease. You beam with pride as you manage to find {PRONOUN/m_n/object} again and again.",
-                "exp": 10,
-                "weight": 15,
-                "stat_skill": [
-                    "EXPLORER,1",
-                    "NAVIGATOR,1",
-                    "TRACKER,1",
-                    "SENSE,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You're y_c - you never give less than your absolute best! m_n is found again and again and again... Until {PRONOUN/m_n/subject}{VERB/m_n/'re/'s} more worn out than you. Your held is held high on the way back to camp. You can't wait to tell your denmates all about your skills again!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "It's time to put your best detective nose on! You startle m_n a few times - including once with a mouse {PRONOUN/m_n/subject} never saw you catch. You even tucked a flower into {PRONOUN/m_n/poss} fur at one point without {PRONOUN/m_n/object} noticing! It's safe to say you passed this training with flying colors.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You give your best shot at tracking a squirrel but end up going in circles. Nevertheless, you learnt something from this experience.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Failure usually isn't in your future. At least, you never plan for it, since you always give your everything. Today was no different but your tracking skills really needed the brush up - you hardly found m_n at all today. It's alright though. You gave it your all - and that's all m_n ever asks from you. And all you ask from yourself.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You try to stay on task, you really do, but your nose leads you to an absolutely gorgeous patch of flowers! m_n and hunting is swiftly forgotten until {PRONOUN/m_n/subject} {VERB/m_n/show/shows} up with annoyance plain on {PRONOUN/m_n/poss} face...",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app2",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lifegen_app2",
-        "min_cats": 1,
-        "max_cats": 5,
-        "min_max_status": {},
+      },
+      {
+        "text": "You're y_c - you never give less than your absolute best! m_n is found again and again and again... Until {PRONOUN/m_n/subject}{VERB/m_n/'re/'s} more worn out than you. Your held is held high on the way back to camp. You can't wait to tell your denmates all about your skills again!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "d_n selects you to go on a dawn patrol. When the time comes, the patrol is gathering near the entrance of the camp. You're all quite sleepy though.",
-        "decline_text": "You try to decline the task. d_n raises an eyebrow, stating that you have to go unless you're sick or injured. Everycat must do their part in the Clan. Tail drooping, you head for the camp entrance.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "You head out with r_w1, r_w2, and m_n. The early morning doesn't stop you from successfully scouting the Clan borders. Your keen sense of alertness impresses the patrol all around. m_n has nothing but praise for you when d_n asks after you.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Your sleepiness swiftly disolves in favor of being out in the territory with your paws itching. r_w1 and m_n have to herd you back into formation once or twice as r_w2 sleepily lags behind. {PRONOUN/r_w2/subject/CAP}{VERB/r_w2/'re/'s} sooooo slow though!!! You're bouncing behind {PRONOUN/r_w2/object} the whole way.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Early bird gets the worm! You chatter at every bird you see, and trill a song. You energy is infectious this early, and even the sleepy r_w seems to perk up a bit by the end of the patrol. Once back, m_n says you did well, but reminds you to be a bit quieter next time.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "During the patrol, an unsuspecting twig snaps under your paw, alerting a potential prey. The experience serves as a reminder to tread more carefully in the future. d_n seems less than thrilled after hearing about it...",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "It's waaaaay too early, and you complain loudly to m_n the whole way. r_w1 starts to tiredly agree with you but r_w2 nudges {PRONOUN/r_w1/object} to stay quiet. Half the trip ends up with you being scolded by your mentor...",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You theatrically drag your feet in a passive rebellion. Your beauty sleep - interrupted! m_n rolls {PRONOUN/m_n/poss} eyes at you and scolds you lightly to just get on with patrol without the drama.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app3",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 4,
-        "min_max_status": {},
+      },
+      {
+        "text": "It's time to put your best detective nose on! You startle m_n a few times - including once with a mouse {PRONOUN/m_n/subject} never saw you catch. You even tucked a flower into {PRONOUN/m_n/poss} fur at one point without {PRONOUN/m_n/object} noticing! It's safe to say you passed this training with flying colors.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "The wise elders ask if you would be willing to share your fresh-kill with them as you go to move past to your denmates. Would you like to partake in this meal-sharing tradition with r_e?",
-        "decline_text": "You decide to graciously decline the offer, preferring to enjoy your meal in solitude.",
-        "chance_of_success": 70,
-        "success_outcomes": [
-            {
-                "text": "You agree to share your meal with the elders, who, in return, share fascinating tales from their youth. r_e has some particularly interesting stories!",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Your prey is a bit small to be shared with them. r_e notices and encourages you despite it. You and the elders split prey amongst yourselves as fantastical tales get underway from the older cats. You share a story of your own, having them breathless with laughter soon enough.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "flexible",
-                    "energetic",
-                    "playful",
-                    "mellow",
-                    "charismatic",
-                    "witty",
-                    "loyal",
-                    "spontaneous",
-                    "trusting",
-                    "loving",
-                    "sincere",
-                    "flamboyant",
-                    "compassionate"
-                ],
-                "stat_skill": [
-                    "CLEVER,1",
-                    "COOPERATIVE,1",
-                    "STORY,1",
-                    "SPEAKER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Eagerly you settle in with r_e and beg to hear the story of {PRONOUN/r_e/poss} part in the battle with o_c! It's a tale full of bravery, danger, and r_e even shows off a skill from that battle for you!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You extend the offer to share your meal but unfortunately, you drop it in the dirt. The elders laugh good-naturedly and assure you it's alright.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You have far better things to do than sit with the elders. You tell r_e that you'd rather talk battle tactics with the other apprentices and move on with your head held high.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "As much as you love hearing r_e's stories, they're just not told well enough for you. You make an excuse and hurry over to the apprentices to start up an even better storytelling session - in your opinion!",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app4",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_app4",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You give your best shot at tracking a squirrel but end up going in circles. Nevertheless, you learnt something from this experience.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Failure usually isn't in your future. At least, you never plan for it, since you always give your everything. Today was no different but your tracking skills really needed the brush up - you hardly found m_n at all today. It's alright though. You gave it your all - and that's all m_n ever asks from you. And all you ask from yourself.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You notice a branch hanging low with a tempting leaf just out of reach. It taunts you hanging there, swaying in the breeze, distracting you...",
-        "decline_text": "You decide to leave the leaf alone and go back to your training.",
-        "chance_of_success": 55,
-        "success_outcomes": [
-            {
-                "text": "With a quick jump and a swipe, you manage to snag the leaf. Your agility surprises even you. It's a moment you don't want to forget so you decide to take the leaf with you.",
-                "exp": 10,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "p_l"
-                        ],
-                        "accessory": [
-                            "LEAF"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "This leaf is begging to be taken down! Claws unsheathed, you take a powerful leap up to the leaf. Your claws catch on the branch and you take the whole limb down! That lead had nothing on you!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Instead of leaping for it, you let your creative side take over. You sing with a flourish to this leaf waving in the breeze. It's poetry in motion - and everycat should know that thanks to you!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "stat_skill": [
-                    "SONG,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You leap for the leaf but miss, landing in a heap on the ground. m_n teases you good-naturedly for a moment but encourages you to try again.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "This leaf is begging to be taken down! Claws unsheathed, you take a powerful leap up to the leaf. Your claws catch on the branch though - and you end up stuck hanging there until m_n comes to help. Ouch, your pride...",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Instead of leaping for it, you let your creative side take over. You sing with a flourish to this leaf waving in the breeze. m_n spots you however, and gives you a scolding for not focusing on your tasks. Oops...",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "stat_skill": [
-                    "SONG,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app5",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_app5",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "You try to stay on task, you really do, but your nose leads you to an absolutely gorgeous patch of flowers! m_n and hunting is swiftly forgotten until {PRONOUN/m_n/subject} {VERB/m_n/show/shows} up with annoyance plain on {PRONOUN/m_n/poss} face...",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You spot a lone crow sitting on a branch while out on a hunting patrol. It croaks at you irritatingly, mocking you, letting all the prey around know where you are. Should you chase it off to better focus on your hunt?",
-        "decline_text": "You decide not to bother with the crow and focus on your other tasks.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You successfully chase the crow away, demonstrating your courage and determination. That crow will think twice before bothering to mess with c_n!",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You bunch your haunches and prepare yourself - resulting in a massive leap that startles you and the crow. It screeches at you as you manage to get a paw full of feathers before it takes off. You've earned a prize to show m_n!",
-                "exp": 10,
-                "weight": 15,
-                "accessory": [
-                    {
-                        "cats": [
-                            "p_l"
-                        ],
-                        "accessory": [
-                            "BLUE FEATHERS"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "You stalk a bit closer and mock the croaks back at the crow. Irritated, it flaps it's wings at you, and you pounce. Crows aren't normally on the freshkill pile, but it is today!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "stat_skill": [
-                    "HUNTER,1",
-                    "CLEVER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You have an idea... You croak encouragingly to the crow, who instead of irritating you, now looks interested in you! The two of you talk back and forth for a while before you move on. Later, you spot the same crow again, and they drop something shiny before you!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "stat_skill": [
-                    "LANGUAGE,1",
-                    "SPEAKER,1",
-                    "SONG,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ],
-                "accessory": [
-                    {
-                        "cats": [
-                            "p_l"
-                        ],
-                        "accessory": [
-                            "POPTABS"
-                        ]
-                    }
-                ]
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You make a leap for the crow, but it flies away before you can get close. You land clumsily but unharmed.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You stalk a bit closer and mock the croaks back at the crow. Irritated, it flaps it's wings at you, and you pounce - only to hit the tree instead. It's raucous caws make you wonder if it's laughing at you...",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "stat_skill": [
-                    "HUNTER,1",
-                    "CLEVER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You have an idea... You croak encouragingly to the crow, but it shrieks back at you. It pecks at you before taking off in a hail of feathers.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "stat_skill": [
-                    "LANGUAGE,1",
-                    "SPEAKER,1",
-                    "SONG,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app6",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app2",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app2",
+    "min_cats": 1,
+    "max_cats": 5,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "d_n selects you to go on a dawn patrol. When the time comes, the patrol is gathering near the entrance of the camp. You're all quite sleepy though.",
+    "decline_text": "You try to decline the task. d_n raises an eyebrow, stating that you have to go unless you're sick or injured. Everycat must do their part in the Clan. Tail drooping, you head for the camp entrance.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "You head out with r_w1, r_w2, and m_n. The early morning doesn't stop you from successfully scouting the Clan borders. Your keen sense of alertness impresses the patrol all around. m_n has nothing but praise for you when d_n asks after you.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Your sleepiness swiftly disolves in favor of being out in the territory with your paws itching. r_w1 and m_n have to herd you back into formation once or twice as r_w2 sleepily lags behind. {PRONOUN/r_w2/subject/CAP}{VERB/r_w2/'re/'s} sooooo slow though!!! You're bouncing behind {PRONOUN/r_w2/object} the whole way.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "m_n suggests that it's time to hone your climbing skills. {PRONOUN/m_n/subject/CAP} {VERB/m_n/guide/guides} you to a tall tree nearby, its branches waving invitingly in the wind.",
-        "decline_text": "You choose not to climb the tree, deciding that it's a bit too daunting for now. You promise yourself to try again another day when you feel more prepared.",
-        "chance_of_success": 55,
-        "success_outcomes": [
-            {
-                "text": "Summoning your courage, you ascend the tree swiftly and smoothly. From the top, you enjoy a bird's-eye view of the forest. m_n gazes up in admiration, praising your agility and bravery.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "stat_skill": [
-                    "CLIMBER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "With m_n's encouragement, you start up the tree. Halfway up, however, you lose your nerves. m_n calls out to assure you before {PRONOUN/m_n/subject} {VERB/m_n/climb/climbs} up to coax you the rest of the way up. You're grateful to {PRONOUN/m_n/object} as you catch your breath at the top.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You muster your courage and make an attempt to climb, but a slippery branch leads to a minor mishap. You land softly on the ground, a bit bruised but largely unscathed. m_n reminds you that failure is the stepping stone to success.",
-                "exp": 0,
-                "weight": 20,
-                "injury": [
-                    {
-                        "cats": [
-                            "y_c"
-                        ],
-                        "injuries": [
-                            "bruises"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "You're in your element - of course you can conquer this tree! Halfway up, however, you choose the wrong branch, and nearly go tumbling down to the ground below. You manage to catch yourself on the trunk. Your nerves get the better of you after that though...",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "stat_skill": [
-                    "CLIMBER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app7",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 5,
-        "min_max_status": {},
+      },
+      {
+        "text": "Early bird gets the worm! You chatter at every bird you see, and trill a song. You energy is infectious this early, and even the sleepy r_w seems to perk up a bit by the end of the patrol. Once back, m_n says you did well, but reminds you to be a bit quieter next time.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "An emergency meeting has been called, suspecting an invasion by o_c_n. You're asked to participate in the border patrol with m_n, r_w1, and r_w2. l_n seems to have faith that you can do this.",
-        "decline_text": "You decide to decline the task, feeling a bit overwhelmed. You resolve to support your Clan in other ways.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "You accept the task and, with your keen senses, you successfully spot traces of the rival Clan. The Clan praises your vigilance, which has helped avert a potential crisis. l_n seems quite pleased with you!",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "EXPLORER,1",
-                    "NAVIGATOR,1",
-                    "TRACKER,1",
-                    "SENSE,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You're not the best tracker, but you give it your all. You lead r_w1, r_w2 and m_n to a suspicious spot and the three more experienced cats take over quickly. r_w2 finds traces thanks to you! Later, l_n takes you aside to tell you that you did well.",
-                "exp": 5,
-                "weight": 20
-            },
-            {
-                "text": "Of course l_n has faith in you, you're p_l! You're not about to let o_c_n get the better of you either. Before m_n can stop you, you've charged ahead and catch two apprentices in the act. r_w1 is at your side and you send the interlopers packing with a good scratch to remember you by!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You agree to the patrol - it's a great opportunity after all! Your tail is high as you walk alongside m_n. {PRONOUN/m_n/subject/CAP} {VERB/m_n/stop/stops} as the patrol encounters o_c, but you're so engrossed in your merry-making that you decide not to stop with them. Somehow, your carefree fun diffuses tensions!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Despite your best efforts, you fail to notice any signs of the rival Clan. You return to the c_n camp feeling a bit downcast, but your Clanmates appreciate your effort and reassure you for the future.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "No hesitation, go go go! You race ahead of the patrol with deaf ears to m_n's calls. Unfortunately, your attitude has consequences - you run head first into the o_c_n invasion. Alone. You're given a reminder of what your personality can mean for you if you don't think ahead before the rest of the patrol catches up to defend the territory... and you.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ],
-                "injury": [
-                    {
-                        "cats": [
-                            "y_c"
-                        ],
-                        "injuries": [
-                            "minor_injury"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "Why not! You're engrossed in making sure you're still the star of the show despite m_n's hushing. When you do stumble upon the o_n invasion, you take it a bit literally. You fumble right over your own paws while showing off a fancy move you said you were going to use on them. The rival patrol bursts into laughter. Well... at least you remained the star!",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ],
-                "injury": [
-                    {
-                        "cats": [
-                            "y_c"
-                        ],
-                        "injuries": [
-                            "minor_injury"
-                        ]
-                    }
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app8",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "During the patrol, an unsuspecting twig snaps under your paw, alerting a potential prey. The experience serves as a reminder to tread more carefully in the future. d_n seems less than thrilled after hearing about it...",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "It's waaaaay too early, and you complain loudly to m_n the whole way. r_w1 starts to tiredly agree with you but r_w2 nudges {PRONOUN/r_w1/object} to stay quiet. Half the trip ends up with you being scolded by your mentor...",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "l_n asks for a volunteer to deliver a message to the next Clan. The journey is long and fraught with potential danger, so {PRONOUN/l_n/subject} {VERB/l_n/don't/doesn't} want to force someone to undertake such a task. Are you the cat for the job?",
-        "decline_text": "You choose to not volunteer for the task, as the journey feels too perilous. You decide to support the Clan in more familiar ways.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "You bravely volunteer and embark on the journey. Navigating through unfamiliar territory, you successfully deliver the message and return unscathed, gaining l_n's admiration.",
-                "exp": 10,
-                "weight": 10
-            },
-            {
-                "text": "You admit to m_n that you'd like the experience, but are not yet confident in your ability alone. {PRONOUN/m_n/subject/CAP} had no intentions of going originally but offers to go with you. The two of you take on the task and succeed without issue.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You volunteer and set off on your journey, but you lose your way and return without delivering the message. The leader comforts you, reminding that every failure teaches a lesson.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app9",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_app9",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "You theatrically drag your feet in a passive rebellion. Your beauty sleep - interrupted! m_n rolls {PRONOUN/m_n/poss} eyes at you and scolds you lightly to just get on with patrol without the drama.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "Your mentor proposes a swimming lesson in the nearby creek. The water looks cold and fast, but you understand the importance of learning.",
-        "decline_text": "You decide to decline the swimming lesson for now. The water looks too intimidating, and you choose to practice on land instead.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You dive into the creek and, after some initial struggles, manage to swim. Your mentor cheers from the bank, happy with your progress.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Swimming! You're a master at that! Without hesitation you dive in and show off your skills. m_n/CAP} {VERB/m_n/joke/jokes} that {PRONOUN/m_n/subject} should learn from you instead of teaching you!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "ambitious",
-                    "confident",
-                    "competitive",
-                    "bold",
-                    "daring",
-                    "playful",
-                    "energetic",
-                    "adventurous",
-                    "spontaneous"
-                ],
-                "stat_skill": [
-                    "SWIMMER,1",
-                    "FISHER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Despite your best efforts, you struggle to stay afloat and return to the bank feeling a bit disappointed. Your mentor assures you that it's normal and encourages you to try again another day.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app10",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app3",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 4,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "The wise elders ask if you would be willing to share your fresh-kill with them as you go to move past to your denmates. Would you like to partake in this meal-sharing tradition with r_e?",
+    "decline_text": "You decide to graciously decline the offer, preferring to enjoy your meal in solitude.",
+    "chance_of_success": 70,
+    "success_outcomes": [
+      {
+        "text": "You agree to share your meal with the elders, who, in return, share fascinating tales from their youth. r_e has some particularly interesting stories!",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Your prey is a bit small to be shared with them. r_e notices and encourages you despite it. You and the elders split prey amongst yourselves as fantastical tales get underway from the older cats. You share a story of your own, having them breathless with laughter soon enough.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "A thick fog has set over the Clan territory, and there are reports of unusual scents near the border. You are called upon to investigate.",
-        "decline_text": "You decide to decline the task. The thick fog makes it a challenging mission and you choose to help the Clan with other tasks.",
-        "chance_of_success": 45,
-        "success_outcomes": [
-            {
-                "text": "Braving the fog, you proceed to investigate and successfully identify the unusual scent as a raccoon. Since you're alone, you are sure to not let it spot you and head home. Your Clan appreciates your bravery and keen senses.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "ambitious",
-                    "confident",
-                    "careful",
-                    "strict",
-                    "cunning",
-                    "responsible",
-                    "loyal"
-                ],
-                "stat_skill": [
-                    "EXPLORER,1",
-                    "NAVIGATOR,1",
-                    "TRACKER,1",
-                    "SENSE,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Setting out with a few warriors, the fog makes it incredibly difficult to track. m_n has difficulty as well, but r_w manages to pick up a scent - identifying it as a raccoon. Since it's harmless to a group of cats, m_n suggests you both take the time to understand the scent and learn from this.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "flexible",
+          "energetic",
+          "playful",
+          "mellow",
+          "charismatic",
+          "witty",
+          "loyal",
+          "spontaneous",
+          "trusting",
+          "loving",
+          "sincere",
+          "flamboyant",
+          "compassionate"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Despite your best efforts, the thick fog hampers your investigation and you're unable to identify the source of the scent. Your Clan still values your courage and encourages you to keep practicing.",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "CLEVER,1",
+          "COOPERATIVE,1",
+          "STORY,1",
+          "SPEAKER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app11",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "Eagerly you settle in with r_e and beg to hear the story of {PRONOUN/r_e/poss} part in the battle with o_c! It's a tale full of bravery, danger, and r_e even shows off a skill from that battle for you!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "r_w1 and r_w2 invite you to share a meal by the warrior's den. Neither seem to mind that you're still an apprentice. It's a chance to bond and learn more about your clanmates.",
-        "decline_text": "You politely decline the warrior's invitation, deciding to focus on your training instead.",
-        "chance_of_success": 70,
-        "success_outcomes": [
-            {
-                "text": "You accept the invitation and enjoy an afternoon filled with captivating tales of the Clan's adventures and skills. The older cats appreciate your company, and you gain a newfound respect for their abilities.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You join the warriors, but your conversation is cut short by an unexpected disturbance in the camp. All three of you are quick to abandon your meal in favor of focusing on the issue.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app12",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You extend the offer to share your meal but unfortunately, you drop it in the dirt. The elders laugh good-naturedly and assure you it's alright.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You have far better things to do than sit with the elders. You tell r_e that you'd rather talk battle tactics with the other apprentices and move on with your head held high.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "r_a challenges you to a friendly sparring match with a playful swipe of a soft paw. It's a great way to practice combat skills and bond with your denmate.",
-        "decline_text": "You decide to decline the challenge and choose to focus on your individual training instead. There will be other opportunities for friendly sparring.",
-        "chance_of_success": 55,
-        "success_outcomes": [
-            {
-                "text": "You accept the challenge and emerge victorious. Both of you enjoy the match, and your relationship with the other apprentice strengthens.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You accept the challenge but end up losing the match. Despite the defeat, your spirits remain high, and your bond with the other apprentice grows stronger.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app13",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_app13",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      },
+      {
+        "text": "As much as you love hearing r_e's stories, they're just not told well enough for you. You make an excuse and hurry over to the apprentices to start up an even better storytelling session - in your opinion!",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "r_q emerges from the nursery to ask you to watch over the kits while {PRONOUN/r_q/subject} {VERB/r_q/fetch/fetches} fresh moss for nests tonight. It's a chance to show your nurturing side.",
-        "decline_text": "You politely decline r_q's request, as you feel unprepared for the task.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "You agree and keep a careful eye on the playful kits. You manage to entertain them until you're fully tired out. They're cuddled up to your side when r_q returns and thanks you for your help, appreciating your kindness and responsibility.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You agree with a little apprehension. It seems to go in your favor though - and you've engaged them in a game! The kits are still running around playfully when r_q comes back, purring gratitude to you for the help.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You try your best to watch the kits, but they prove too mischievous to handle. One attempts to climb on your back, while another sinks their tiny fangs into your tail. You screech, and the tired r_q has to rush back to the nursery to help.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "How hard could it be? As it turns out, harder than you thought. r_q ducks back in with a mouthful of moss and finds you in a defeated heap - tired out long before the rambunctious kits... {PRONOUN/r_q/subject/CAP} {VERB/r_q/thank/thanks} you anyways and chuckles a bit as you head for your nest.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app14",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app4",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_app4",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You notice a branch hanging low with a tempting leaf just out of reach. It taunts you hanging there, swaying in the breeze, distracting you...",
+    "decline_text": "You decide to leave the leaf alone and go back to your training.",
+    "chance_of_success": 55,
+    "success_outcomes": [
+      {
+        "text": "With a quick jump and a swipe, you manage to snag the leaf. Your agility surprises even you. It's a moment you don't want to forget so you decide to take the leaf with you.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "r_w asks you to join {PRONOUN/r_w/object} on nighttime guard duty. It seems {PRONOUN/r_w/subject} could use some company for the long night ahead",
-        "decline_text": "You decide to decline the duty and choose to rest instead.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "You join r_w and spend the night listening to {PRONOUN/r_w/poss} wisdom and experiences while keeping the Clan safe. The shared time strengthens your bond and deepens your understanding of the Clan's values.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "There's still plenty of energy left in you so you happily agree to join {PRONOUN/r_w/object} for the duty. The two of you spend some time talking and bonding, but you hear something unusual. r_w catches on and picks up on it as well from your bristled fur before covering you with {PRONOUN/r_w/poss} body. An owl! It was swooping for you, but r_w's swipe scares it off. You thank r_w heartily for the save and return to your nest a bit shaken.",
-                "exp": 10,
-                "weight": 10,
-                "stat_trait": [
-                    "flexible",
-                    "responsible",
-                    "methodical",
-                    "calm",
-                    "thoughtful",
-                    "wise",
-                    "nervous",
-                    "careful",
-                    "emotional",
-                    "bouncy",
-                    "energetic",
-                    "trusting",
-                    "faithful"
-                ],
-                "stat_skill": [
-                    "CLAIRVOYANT,1",
-                    "GUARDIAN,1",
-                    "SENSE,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You attempt to join r_w but struggle to stay awake. After a while, {PRONOUN/r_w/subject} {VERB/r_w/nudge/nudges} you and urges you to go back to your den.",
-                "exp": 0,
-                "weight": 20
-            }
+        "accessory": [
+          {
+            "cats": [
+              "p_l"
+            ],
+            "accessory": [
+              "LEAF"
+            ]
+          }
         ]
-    },
-    {
-        "patrol_id": "lifegen_app15",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_app15",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "This leaf is begging to be taken down! Claws unsheathed, you take a powerful leap up to the leaf. Your claws catch on the branch and you take the whole limb down! That lead had nothing on you!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "You notice r_a looking nervous as {PRONOUN/r_a/subject} {VERB/r_a/approach/approaches} you. {PRONOUN/r_a/subject/CAP} awkwardly {VERB/r_a/ask/asks} if you would share a meal with {PRONOUN/r_a/object}.",
-        "decline_text": "Feeling too shy, you politely decline the offer.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "Despite feeling a little shy, you accept the invitation. r_a settles in beside you to eat with a smile. Both of you enjoy the meal and share a few laughs, leaving you with a warm feeling.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "aloof",
-                    "strange",
-                    "humble",
-                    "emotional",
-                    "compassionate",
-                    "loyal",
-                    "lonesome",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "gloomy",
-                    "flexible",
-                    "grumpy",
-                    "reserved"
-                ],
-                "stat_skill": [
-                    "COMFORTER,1",
-                    "COOPERATIVE,1",
-                    "INSIGHTFUL,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "r_a looks relieved when you agree. Conversation starts a bit stilted, but you both ease into it and end up bonding over the meal until it's time to retire to your nests.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You feel a rush of nervousness and end up stuttering a refusal. Later, you regret your reaction but hope to make it up to them.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You're in a hurry and don't have the time to chat over your meal. m_n is waiting for you. r_a nods in understanding, although seems a bit upset after..",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app16",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "Instead of leaping for it, you let your creative side take over. You sing with a flourish to this leaf waving in the breeze. It's poetry in motion - and everycat should know that thanks to you!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "During a shared training session, r_a accidentally stumbles right into you. Both of you tumble to the ground in a heap of limbs. {PRONOUN/r_a/subject/CAP} {VERB/r_a/blush/blushes} and {VERB/r_a/stammer/stammers} out an apology as {PRONOUN/r_a/subject} {VERB/r_a/try/tries} to untangle from you without trodding on anything.",
-        "decline_text": "You decide to continue with your training, shaking off the moment.",
-        "chance_of_success": 55,
-        "success_outcomes": [
-            {
-                "text": "You reassure r_a that it's alright and the two of you manage to share a good laugh about it. After your mentors are ready for you to continue, the training session turns out to be a fun one! Your bond with {PRONOUN/r_a/subject} grows even if you're both exhausted in the end.",
-                "exp": 5,
-                "weight": 20
-            },
-            {
-                "text": "You moan and groan dramatically about the accident, pretending to be soooo injured! r_a starts to fret a moment before {PRONOUN/r_a/subject} {VERB/r_a/realize/realizes} you're messing around. m_n is already sighing in amusement before telling you to stop being dramatic. At least r_a is giggling and is far less fussed about the mistake!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You accidentally bowl r_a over in your haste to get back to your paws. No time for distractions! You brush off {PRONOUN/r_a/poss} apologies in favor of getting back to training with m_n. Before r_a can even get back to {PRONOUN/r_a/poss} paws proper, you're swiping at your mentor again and again, trying to perfect this move.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You reassure r_a that it's alright. It's a good learning opportunity for you both, and you politely explain that much to {PRONOUN/r_a/object}. Before your mentors can even try to get back on track, you're walking r_a through the mistake. It's easy for you to teach {PRONOUN/r_a/object} where {PRONOUN/r_a/subject} went wrong. In no time at all {PRONOUN/r_a/subject} {VERB/r_a/are/is} fluidly preforming the move again - without any accidents.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "COOPERATIVE,1",
-                    "INSIGHTFUL,1",
-                    "MEDIATOR,1",
-                    "SPEAKER,1",
-                    "TEACHER"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Caught off guard, you react awkwardly, which makes them feel more embarrassed. You wish you had handled the situation better.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You gloat over r_a's mistake, loudly proclaiming that you would never do such a thing yourself! You're swift to untangle yourself and get back to your mentor. m_n scolds you for your behavior though. Sheesh, it's not your fault r_a was clumsy!",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You moan and groan dramatically about the accident, pretending to be soooo injured! r_a starts to fret and doesn't seem to realize you're being playful. Uh oh, your act was too convincing and has upset {PRONOUN/r_a/object}. If m_n didn't know you better, you might have been bundled off to r_m...",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "SONG,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app17",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You leap for the leaf but miss, landing in a heap on the ground. m_n teases you good-naturedly for a moment but encourages you to try again.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "This leaf is begging to be taken down! Claws unsheathed, you take a powerful leap up to the leaf. Your claws catch on the branch though - and you end up stuck hanging there until m_n comes to help. Ouch, your pride...",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You and r_a are tasked with collecting moss. As you work together, you can't help but notice how they look under the sunlight.",
-        "decline_text": "Feeling flustered, you decide to leave the task to them and assist elsewhere in the camp. You hope to handle your feelings better next time.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You manage to keep your feelings under control and focus on the task. By the end of it, you both have a good laugh and your bond grows stronger.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You become so lost in your thoughts that you misplace some moss. They help you correct the mistake, but you're left feeling embarrassed.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app18",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "Instead of leaping for it, you let your creative side take over. You sing with a flourish to this leaf waving in the breeze. m_n spots you however, and gives you a scolding for not focusing on your tasks. Oops...",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "r_a seems to have had a difficult time during {PRONOUN/r_a/poss} last training session. {PRONOUN/r_a/poss/CAP} head is held low and {PRONOUN/r_a/subject}{VERB/r_a/'re/'s} nursing a bruise. Seeing them upset, you consider offering them comfort.",
-        "decline_text": "Feeling unsure about what to say, you decide not to approach them. You hope they'll feel better soon.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "You approach {PRONOUN/r_a/object} and offer kind words of encouragement. After a few moments of listening, r_a thank you for your support, giving you a small smile of appreciation. Taking the moment to be kind was worth it.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Comfort isn't your strong suit. There's still some things you can do though! You approach and ask r_a if {PRONOUN/r_a/subject} had trouble with a battle move. {PRONOUN/r_a/subject/CAP} {VERB/r_a/perk/perks} seeing your interest, knowing that if any help is needed, you're the cat for the job! It takes a few tries but r_a is happier once {PRONOUN/r_a/subject} {VERB/r_a/get/gets} the move down.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Sauntering up to r_a, you begin to purposefully make a fool of yourself, tripping and tumbling dramatically into the clearing! Seeing it makes {PRONOUN/r_a/object} laugh quietly. It doesn't take but a few more silly antics and jokes before {PRONOUN/r_a/subject}{VERB/r_a/'re/'s} looking far more upbeat.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You try to comfort them, but your words come out clumsily, leading to an awkward silence. You feel bad but decide to learn from the experience.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Comfort isn't your strong suit - clearly. Your overconfidence only seems to make r_a feel worse. You don't like admitting defeat but... At least you tried?",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "When you try your best to lighten the mood, r_a only seems to sour further. Making a fool of yourself to cheer {PRONOUN/r_a/object} up has backfired when you're accused of making fun of {PRONOUN/r_a/object}. Oops!",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "SONG,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app19",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_app19",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app5",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_app5",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You spot a lone crow sitting on a branch while out on a hunting patrol. It croaks at you irritatingly, mocking you, letting all the prey around know where you are. Should you chase it off to better focus on your hunt?",
+    "decline_text": "You decide not to bother with the crow and focus on your other tasks.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You successfully chase the crow away, demonstrating your courage and determination. That crow will think twice before bothering to mess with c_n!",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You bunch your haunches and prepare yourself - resulting in a massive leap that startles you and the crow. It screeches at you as you manage to get a paw full of feathers before it takes off. You've earned a prize to show m_n!",
+        "exp": 10,
+        "weight": 15,
+        "accessory": [
+          {
+            "cats": [
+              "p_l"
+            ],
+            "accessory": [
+              "BLUE FEATHERS"
+            ]
+          }
+        ]
+      },
+      {
+        "text": "You stalk a bit closer and mock the croaks back at the crow. Irritated, it flaps it's wings at you, and you pounce. Crows aren't normally on the freshkill pile, but it is today!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "r_a isn't watching where {PRONOUN/r_a/subject}{VERB/r_a/'re/'s} going and accidentally trods over you as they leave the apprentice den. They're visibly embarrassed, stammering an apology swiftly.",
-        "decline_text": "Deciding to give them space, you quietly clean up and go about your duties elsewhere in the camp.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You brush it off easily as a small mistake and make light of the situation. They join in on your easy attitude, and you both continue your duties in higher spirits.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You playfully swipe at {PRONOUN/r_a/object} with a soft paw, claiming that this makes you even! That seems to take r_a's mind off the little mistake long enough for you to suggest getting in some extra training!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Forsaken, you cry out! Your glorious tail, mangled, ruined! As you roll around making a playful fuss about how wounded you are laughter graces your ears. It brings a purr to you to know that you've cheered them up.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You react with surprise, which makes them feel even more embarrassed. You try to laugh it off, but the atmosphere remains awkward.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "More than a little cross, you swipe with a soft paw as you tell {PRONOUN/r_a/object} to mind {PRONOUN/r_a/poss} paws in the future. r_a bristles and jumps back before hurrying off.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You just spent ages grooming, only to be stepped on! You try to downplay your frustration but r_a knows you better and swiftly slinks off as you begin your washing again to make sure the fur lays perfectly.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "HUNTER,1",
+          "CLEVER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app20",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lifegen_app1",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "You have an idea... You croak encouragingly to the crow, who instead of irritating you, now looks interested in you! The two of you talk back and forth for a while before you move on. Later, you spot the same crow again, and they drop something shiny before you!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "Since it's a nice day out, m_n tasks you with hunting for r_e. You're to go out alone and bring back extra if you can for the freshkill pile.",
-        "decline_text": "You decide not to hunt for the elders and instead focus on your training.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "As you hunt, you find a mouse nest, you burrow down into the nest and catch any you can get your claws on, the elders will be pleased tonight!",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Of course you'll hunt for r_e - if you bring {PRONOUN/r_e/poss} favorite you might get to hear another story of great deeds in Clan history! You spend ages hunting down the best prey to exchange for a tale - and anything else you find along the way has filled the freshkill pile. r_e is more than happy to share a battle story for you when you deliver the prey.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "competitive",
-                    "confident",
-                    "fierce",
-                    "bloodthirsty",
-                    "bold",
-                    "daring",
-                    "arrogant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "r_e has the best stories and even does fun voices! Of course you'll catch something for {PRONOUN/r_e/object}! Catching a nice bird and two mice is plenty for your task. You deliver the bird to r_e with a flourish, telling the tale of slavering all sun-high for this grandiose meal - making {PRONOUN/r_e/object} laugh.",
-                "exp": 5,
-                "weight": 20,
-                "stat_trait": [
-                    "flamboyant"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "The territory seems to be bare tonight, you can't catch a whiff of prey. With a heavy heart you report back to m_n.",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "LANGUAGE,1",
+          "SPEAKER,1",
+          "SONG,1"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ],
+        "accessory": [
+          {
+            "cats": [
+              "p_l"
+            ],
+            "accessory": [
+              "POPTABS"
+            ]
+          }
         ]
-    },
-    {
-        "patrol_id": "lifegen_app21",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lifegen_app21,23,24",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You make a leap for the crow, but it flies away before you can get close. You land clumsily but unharmed.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You stalk a bit closer and mock the croaks back at the crow. Irritated, it flaps it's wings at you, and you pounce - only to hit the tree instead. It's raucous caws make you wonder if it's laughing at you...",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You go out battle training with your mentor. m_n circles you as you prepare to test out a move r_w taught you without your mentor knowing. {PRONOUN/r_w/subject/CAP} {VERB/r_w/watch/watches} with amusement.",
-        "decline_text": "You decide not to go battle training so you ask to hunt instead.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You have a blast surprising m_n! Your mentor is caught off guard by the move, and r_w ends up laughing at how you beat m_n with {PRONOUN/r_w/poss} favorite trick.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You can't seem to put your paws where r_w showed you and finally m_n decide it's time to finish this session. r_w gets a mild scolding for teaching you a move that was too advanced...",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "HUNTER,1",
+          "CLEVER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app22",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lifegen_app1",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "You have an idea... You croak encouragingly to the crow, but it shrieks back at you. It pecks at you before taking off in a hail of feathers.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "m_n asks if you would like to check the borders with {PRONOUN/m_n/object}, standing at the camp entrance with a smile. It's a lovely day out and it would be a good time to explore!",
-        "decline_text": "You decline the offer.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You jump to your paws excitedly, running after your mentor to explore the territory. {PRONOUN/m_n/subject/CAP} {VERB/m_n/escort/escorts} you through the scenery showing you places in the territory you never knew existed!",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You jump to your paws and run after {PRONOUN/m_n/object}. As you trek through the territory, you become excited and run off - since m_n's walking too slow anyway. After a moment you realize you don't recognise this part of the forest. Eventually your mentor finds you and leads you back to camp with a scolding about running off.",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "LANGUAGE,1",
+          "SPEAKER,1",
+          "SONG,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app23",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lifegen_app21,23,24",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app6",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app6",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "m_n suggests that it's time to hone your climbing skills. {PRONOUN/m_n/subject/CAP} {VERB/m_n/guide/guides} you to a tall tree nearby, its branches waving invitingly in the wind.",
+    "decline_text": "You choose not to climb the tree, deciding that it's a bit too daunting for now. You promise yourself to try again another day when you feel more prepared.",
+    "chance_of_success": 55,
+    "success_outcomes": [
+      {
+        "text": "Summoning your courage, you ascend the tree swiftly and smoothly. From the top, you enjoy a bird's-eye view of the forest. m_n gazes up in admiration, praising your agility and bravery.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "The freshkill pile is low, so it's time go out hunting with your mentor. It's a great chance to practice some new techniques you were taught by m_n!",
-        "decline_text": "You decide not to go hunting so you practice your battle moves instead.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You have a blast! m_n shows you the best places for prey at this time and you both come back with a hefty haul to fill the freshkill pile.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You can't seem to find any prey. m_n comforts you, saying {PRONOUN/m_n/subject} wouldn't have had any hope of finding prey in this terrible weather either.",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "CLIMBER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app24",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lifegen_app21,23,24",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "With m_n's encouragement, you start up the tree. Halfway up, however, you lose your nerves. m_n calls out to assure you before {PRONOUN/m_n/subject} {VERB/m_n/climb/climbs} up to coax you the rest of the way up. You're grateful to {PRONOUN/m_n/object} as you catch your breath at the top.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You muster your courage and make an attempt to climb, but a slippery branch leads to a minor mishap. You land softly on the ground, a bit bruised but largely unscathed. m_n reminds you that failure is the stepping stone to success.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You go out hunting with r_w1 and r_w2. You suspect m_n is likely overseeing from the shadows.",
-        "decline_text": "You decide not to go hunting so you practice your battle moves instead.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "This is a stealth lesson, and you are the stealthiest cat today, you bring brack more prey than r_w1 and r_w2! When you see m_n, you're praised for your abilities. r_w2 says {PRONOUN/m_n/subject} taught you well, making {PRONOUN/m_n/object} lick {PRONOUN/m_n/poss} chest self-consciously before smiling.",
-                "exp": 10,
-                "weight": 20
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You can't seem to find any prey! The scents are all just muddled up today. You watch as r_w1 pads past, their jaws full with freshly caught prey, maybe it was just bad luck. Hopefully m_n isn't too disappointed in you.",
-                "exp": 0,
-                "weight": 20
-            }
+        "injury": [
+          {
+            "cats": [
+              "y_c"
+            ],
+            "injuries": [
+              "bruises"
+            ]
+          }
         ]
-    },
-    {
-        "patrol_id": "lifegen_app25",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "You're in your element - of course you can conquer this tree! Halfway up, however, you choose the wrong branch, and nearly go tumbling down to the ground below. You manage to catch yourself on the trunk. Your nerves get the better of you after that though...",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You think about hunting by yourself, hoping it might impress your mentor. m_n is out with d_n and r_w, so the day is yours!",
-        "decline_text": "You decide not to go hunting alone you'd rather not upset your mentor.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You go out alone, the peace and quiet gives you time to perfect your hunting crouch and you bring back an impressive amount of prey! When m_n watches as you enter the camp, {PRONOUN/m_n/poss} eyes are glowing with pride.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "As you head out, every creaking branch and swishing fern makes you jump, maybe hunting alone wasn't the best idea... When you return m_n finds out and scolds you for going alone but is thankful you didn't stay out.",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "CLIMBER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app26",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app7",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 5,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "An emergency meeting has been called, suspecting an invasion by o_c_n. You're asked to participate in the border patrol with m_n, r_w1, and r_w2. l_n seems to have faith that you can do this.",
+    "decline_text": "You decide to decline the task, feeling a bit overwhelmed. You resolve to support your Clan in other ways.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "You accept the task and, with your keen senses, you successfully spot traces of the rival Clan. The Clan praises your vigilance, which has helped avert a potential crisis. l_n seems quite pleased with you!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "You think about hunting by yourself. The time to think without m_n should be good for you, and if you bing back some prey? That's just a bonus.",
-        "decline_text": "You decide not to go hunting alone you'd rather not upset your mentor.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You go out to reflect, and the peace and quiet gives you confidence. You seem to be focusing better now that you've gotten a chance to be alone with your thoughts. You make several great catches with the increased mindfulness! m_n doesn't seem to mind when you return and report your personal task, praising you for being aware of yourself.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_skill": [
+          "EXPLORER,1",
+          "NAVIGATOR,1",
+          "TRACKER,1",
+          "SENSE,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "As you head out the territory seems to grow into a maze. Every tree and rock looks the same! As you begin to panic, a patrol of warriors stumble upon you looking surprised to see you alone. m_n happens to be in the patrol and {PRONOUN/m_n/subject} {VERB/m_n/scold/scolds} you for being so reckless, immediately taking you home.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app27",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "You're not the best tracker, but you give it your all. You lead r_w1, r_w2 and m_n to a suspicious spot and the three more experienced cats take over quickly. r_w2 finds traces thanks to you! Later, l_n takes you aside to tell you that you did well.",
+        "exp": 5,
+        "weight": 20
+      },
+      {
+        "text": "Of course l_n has faith in you, you're p_l! You're not about to let o_c_n get the better of you either. Before m_n can stop you, you've charged ahead and catch two apprentices in the act. r_w1 is at your side and you send the interlopers packing with a good scratch to remember you by!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "You decide to take some time to perfect your hunting technique. r_w agrees to help since m_n is out on patrol.",
-        "decline_text": "You decide that your battle skills need more work and practice on that instead.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "Finding a quiet place not too far from camp, you work hard at your hunting crouch with r_w watching, Practicing your stealth amongst some long grass and familiarizing yourself with wind changes does you good. When you return to camp with r_w's praise on your mind, you feel pleased with your progress.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You can't seem to find anywhere to practice your moves that doesn't already have a cat, you can't think about anything with all the warriors trudging around in your space. r_w gently suggests you wait for m_n to set some time aside to help you without so much distraction.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app28",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "app_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "You agree to the patrol - it's a great opportunity after all! Your tail is high as you walk alongside m_n. {PRONOUN/m_n/subject/CAP} {VERB/m_n/stop/stops} as the patrol encounters o_c, but you're so engrossed in your merry-making that you decide not to stop with them. Somehow, your carefree fun diffuses tensions!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "You decide to take some time to perfect your fighting techniques alone. The extra time to practice will hopefully give you some personal clarity on your skills.",
-        "decline_text": "You decide that your hunting techniques need more work and you practice that instead.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "After finding a quiet place not too far from camp you work hard at practicing ambushes, defensive and offensive attacks. You even coming up with a brand new move to show m_n! You return to camp feeling pleased with your progress.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "There's no space that you feel is good enough that isn't already occupied. r_w shooes you back to camp after spotting you alone. Your plans for the day are foiled, and you return with a heavy heart.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_app29",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lifegen_app29",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Despite your best efforts, you fail to notice any signs of the rival Clan. You return to the c_n camp feeling a bit downcast, but your Clanmates appreciate your effort and reassure you for the future.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "No hesitation, go go go! You race ahead of the patrol with deaf ears to m_n's calls. Unfortunately, your attitude has consequences - you run head first into the o_c_n invasion. Alone. You're given a reminder of what your personality can mean for you if you don't think ahead before the rest of the patrol catches up to defend the territory... and you.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "r_m asks you to collect some more moss for the herb storage. It's running low, and the nests need to be changed. It's also good for soaking up water for ill cats. r_m is too busy to do it at the moment.",
-        "decline_text": "Medicine cat duties! No way! You're training to be a warrior!",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You agree, and although moss collecting is one of the more boring duties, it is still an important task. You work hard to bring home a healthly collection of fresh moss, familiarizing yourself with the territory as you go. r_m is incredibly grateful for the assistance.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You agree, but as you pad through the territory a downpour of rain soils any moss that could have been collected, you return back empty pawed. r_m sighs heavily as you return but looks up at the sky and knows you couldn't control that.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
+        ],
+        "injury": [
+          {
+            "cats": [
+              "y_c"
+            ],
+            "injuries": [
+              "minor_injury"
+            ]
+          }
         ]
-    },
-    {
-        "patrol_id": "lifegen_app30",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lifegen_app1",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "Why not! You're engrossed in making sure you're still the star of the show despite m_n's hushing. When you do stumble upon the o_n invasion, you take it a bit literally. You fumble right over your own paws while showing off a fancy move you said you were going to use on them. The rival patrol bursts into laughter. Well... at least you remained the star!",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "Your mentor asks you to clean out the elders den for r_e. There is a budding outbreak of fleas, and this will help stop it quickly.",
-        "decline_text": "Cleaning out the elders den? You slip away quietly saying your off to gather moss, but you curl up and take nap in a patch of warm sun.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "Although it's one of the worst duties an apprentice can be assigned, the task you have been given must be done. As you clean out the flea-infested moss r_e tell you an enthralling tale of daring acts and courageous moments to keep up your good spirits. It turns out that the task wasn't as bad as you thought! You thankfully don't bring any back with you either.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "flamboyant"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Although grumbling and complaining you agree to do the task. Your bad mood makes the elders cranky and you begin a heated debate about were the softest moss should be placed. Eventually r_e send you out stating they can do it themselves. That evening you realize your pelt is full of fleas!",
-                "exp": 0,
-                "weight": 20,
-                "injury": [
-                    {
-                        "cats": [
-                            "y_c"
-                        ],
-                        "injuries": [
-                            "fleas"
-                        ]
-                    }
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
+        ],
+        "injury": [
+          {
+            "cats": [
+              "y_c"
+            ],
+            "injuries": [
+              "minor_injury"
+            ]
+          }
         ]
-    },
-    {
-        "patrol_id": "lifegen_app31",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lifegen_app1",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app8",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "l_n asks for a volunteer to deliver a message to the next Clan. The journey is long and fraught with potential danger, so {PRONOUN/l_n/subject} {VERB/l_n/don't/doesn't} want to force someone to undertake such a task. Are you the cat for the job?",
+    "decline_text": "You choose to not volunteer for the task, as the journey feels too perilous. You decide to support the Clan in more familiar ways.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "You bravely volunteer and embark on the journey. Navigating through unfamiliar territory, you successfully deliver the message and return unscathed, gaining l_n's admiration.",
+        "exp": 10,
+        "weight": 10
+      },
+      {
+        "text": "You admit to m_n that you'd like the experience, but are not yet confident in your ability alone. {PRONOUN/m_n/subject/CAP} had no intentions of going originally but offers to go with you. The two of you take on the task and succeed without issue.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You volunteer and set off on your journey, but you lose your way and return without delivering the message. The leader comforts you, reminding that every failure teaches a lesson.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app9",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_app9",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "Your mentor proposes a swimming lesson in the nearby creek. The water looks cold and fast, but you understand the importance of learning.",
+    "decline_text": "You decide to decline the swimming lesson for now. The water looks too intimidating, and you choose to practice on land instead.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You dive into the creek and, after some initial struggles, manage to swim. Your mentor cheers from the bank, happy with your progress.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Swimming! You're a master at that! Without hesitation you dive in and show off your skills. m_n/CAP} {VERB/m_n/joke/jokes} that {PRONOUN/m_n/subject} should learn from you instead of teaching you!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "m_n tells you to check the elders for ticks before training. You're directed to get mousebile from r_m for the task.",
-        "decline_text": "Checking the elders for ticks? Yuck!",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You agree, and trudge to r_m to get the dreaded mousebile. {PRONOUN/r_m/subject/CAP} {VERB/r_m/seem/seems} sympathetic and gives you a bit of honey to cheer you up before your task. In the end there are actually fewer ticks than expected and you head out with m_n for training right away!",
-                "exp": 20,
-                "weight": 20
-            }
+        "stat_trait": [
+          "ambitious",
+          "confident",
+          "competitive",
+          "bold",
+          "daring",
+          "playful",
+          "energetic",
+          "adventurous",
+          "spontaneous"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Although grumbling and complaining you agree to do the task, dreading it with every hair on your pelt. But as you walk to the den with the mousebile in your jaws, you stumble, and the foul stuff spills all over your chest and muzzle! It takes forever to get the smell out of your fur and mouth. Another apprentice has already done the task by the time you're done.",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "SWIMMER,1",
+          "FISHER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lifegen_32",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "bloodthirsty_only"
-        ],
-        "patrol_art": "patrolartapp_clawsout",
-        "min_cats": 2,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Despite your best efforts, you struggle to stay afloat and return to the bank feeling a bit disappointed. Your mentor assures you that it's normal and encourages you to try again another day.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app10",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app_10",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "A thick fog has set over the Clan territory, and there are reports of unusual scents near the border. You are called upon to investigate.",
+    "decline_text": "You decide to decline the task. The thick fog makes it a challenging mission and you choose to help the Clan with other tasks.",
+    "chance_of_success": 45,
+    "success_outcomes": [
+      {
+        "text": "Braving the fog, you proceed to investigate and successfully identify the unusual scent as a raccoon. Since you're alone, you are sure to not let it spot you and head home. Your Clan appreciates your bravery and keen senses.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "m_n brings you out of camp for a training session. You crouch down, ready for a spar, and they tell you to keep your claws unsheathed for the fight. d_n is watching today.",
-        "decline_text": "You hesitate, unsure if your leader would approve. They sense your unwillingness, and tell you to forget about it with a disappointed flick of their tail.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "The two of you trade blows fiercely, aiming to draw blood. By the end, you're exhausted, panting and bleeding, but still standing. m_n looks at you proudly, sporting some scratches of {PRONOUN/m_n/poss} own, and says you'll make a fearsome warrior one day. d_n agrees with a smile.",
-                "exp": 20,
-                "weight": 20,
-                "injury": [
-                    {
-                        "cats": [
-                            "y_c"
-                        ],
-                        "injuries": [
-                            "scrapes"
-                        ]
-                    }
-                ]
-            }
+        "stat_trait": [
+          "ambitious",
+          "confident",
+          "careful",
+          "strict",
+          "cunning",
+          "responsible",
+          "loyal"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You try your best to take {PRONOUN/m_n/poss} words to heart, but you can barely touch {PRONOUN/m_n/object} anyway. {PRONOUN/m_n/poss/CAP} claws score into your flank over and over again, until you're covered in scratches. d_n seems disappointed in you, and you limp back to the medicine cat's den, bruised and bleeding.",
-                "exp": 0,
-                "weight": 20,
-                "injury": [
-                    {
-                        "cats": [
-                            "y_c"
-                        ],
-                        "injuries": [
-                            "small_bite_injury"
-                        ]
-                    }
-                ]
-            }
+        "stat_skill": [
+          "EXPLORER,1",
+          "NAVIGATOR,1",
+          "TRACKER,1",
+          "SENSE,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lg_app_shunned_J1",
-        "biome": [
-            "Any"
+      },
+      {
+        "text": "Setting out with a few warriors, the fog makes it incredibly difficult to track. m_n has difficulty as well, but r_w manages to pick up a scent - identifying it as a raccoon. Since it's harmless to a group of cats, m_n suggests you both take the time to understand the scent and learn from this.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Despite your best efforts, the thick fog hampers your investigation and you're unable to identify the source of the scent. Your Clan still values your courage and encourages you to keep practicing.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app11",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app11",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "r_w1 and r_w2 invite you to share a meal by the warrior's den. Neither seem to mind that you're still an apprentice. It's a chance to bond and learn more about your clanmates.",
+    "decline_text": "You politely decline the warrior's invitation, deciding to focus on your training instead.",
+    "chance_of_success": 70,
+    "success_outcomes": [
+      {
+        "text": "You accept the invitation and enjoy an afternoon filled with captivating tales of the Clan's adventures and skills. The older cats appreciate your company, and you gain a newfound respect for their abilities.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You join the warriors, but your conversation is cut short by an unexpected disturbance in the camp. All three of you are quick to abandon your meal in favor of focusing on the issue.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app12",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "r_a challenges you to a friendly sparring match with a playful swipe of a soft paw. It's a great way to practice combat skills and bond with your denmate.",
+    "decline_text": "You decide to decline the challenge and choose to focus on your individual training instead. There will be other opportunities for friendly sparring.",
+    "chance_of_success": 55,
+    "success_outcomes": [
+      {
+        "text": "You accept the challenge and emerge victorious. Both of you enjoy the match, and your relationship with the other apprentice strengthens.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You accept the challenge but end up losing the match. Despite the defeat, your spirits remain high, and your bond with the other apprentice grows stronger.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app13",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_app13",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "r_q emerges from the nursery to ask you to watch over the kits while {PRONOUN/r_q/subject} {VERB/r_q/fetch/fetches} fresh moss for nests tonight. It's a chance to show your nurturing side.",
+    "decline_text": "You politely decline r_q's request, as you feel unprepared for the task.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "You agree and keep a careful eye on the playful kits. You manage to entertain them until you're fully tired out. They're cuddled up to your side when r_q returns and thanks you for your help, appreciating your kindness and responsibility.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You agree with a little apprehension. It seems to go in your favor though - and you've engaged them in a game! The kits are still running around playfully when r_q comes back, purring gratitude to you for the help.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You try your best to watch the kits, but they prove too mischievous to handle. One attempts to climb on your back, while another sinks their tiny fangs into your tail. You screech, and the tired r_q has to rush back to the nursery to help.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "How hard could it be? As it turns out, harder than you thought. r_q ducks back in with a mouthful of moss and finds you in a defeated heap - tired out long before the rambunctious kits... {PRONOUN/r_q/subject/CAP} {VERB/r_q/thank/thanks} you anyways and chuckles a bit as you head for your nest.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app14",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "r_w asks you to join {PRONOUN/r_w/object} on nighttime guard duty. It seems {PRONOUN/r_w/subject} could use some company for the long night ahead",
+    "decline_text": "You decide to decline the duty and choose to rest instead.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "You join r_w and spend the night listening to {PRONOUN/r_w/poss} wisdom and experiences while keeping the Clan safe. The shared time strengthens your bond and deepens your understanding of the Clan's values.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "There's still plenty of energy left in you so you happily agree to join {PRONOUN/r_w/object} for the duty. The two of you spend some time talking and bonding, but you hear something unusual. r_w catches on and picks up on it as well from your bristled fur before covering you with {PRONOUN/r_w/poss} body. An owl! It was swooping for you, but r_w's swipe scares it off. You thank r_w heartily for the save and return to your nest a bit shaken.",
+        "exp": 10,
+        "weight": 10,
+        "stat_trait": [
+          "flexible",
+          "responsible",
+          "methodical",
+          "calm",
+          "thoughtful",
+          "wise",
+          "nervous",
+          "careful",
+          "emotional",
+          "bouncy",
+          "energetic",
+          "trusting",
+          "faithful"
         ],
-        "season": [
-            "Any"
+        "stat_skill": [
+          "CLAIRVOYANT,1",
+          "GUARDIAN,1",
+          "SENSE,1"
         ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "lg_app4",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You attempt to join r_w but struggle to stay awake. After a while, {PRONOUN/r_w/subject} {VERB/r_w/nudge/nudges} you and urges you to go back to your den.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app15",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_app15",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You notice r_a looking nervous as {PRONOUN/r_a/subject} {VERB/r_a/approach/approaches} you. {PRONOUN/r_a/subject/CAP} awkwardly {VERB/r_a/ask/asks} if you would share a meal with {PRONOUN/r_a/object}.",
+    "decline_text": "Feeling too shy, you politely decline the offer.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "Despite feeling a little shy, you accept the invitation. r_a settles in beside you to eat with a smile. Both of you enjoy the meal and share a few laughs, leaving you with a warm feeling.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "You restlessly tap a paw against the ground as you watch the other apprentices leave camp for a hunting trip with their mentors. It's a long shot, you know, but you wonder if you'd be allowed to join them, just this once.",
-        "decline_text": "You decide against asking, not wanting anycat to be more upset with you.",
-        "chance_of_success": 30,
-        "success_outcomes": [
-            {
-                "text": "You call out to the group and ask as politely as possible if they have room for one more on their trip. A few group members look at you skeptically, but after a tentative nod of approval from your leader, they allow you out of camp for the first time since your punishment began.",
-                "exp": 15,
-                "weight": 20
-            }
+        "stat_trait": [
+          "aloof",
+          "strange",
+          "humble",
+          "emotional",
+          "compassionate",
+          "loyal",
+          "lonesome",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "gloomy",
+          "flexible",
+          "grumpy",
+          "reserved"
         ],
-        "fail_outcomes": [
-            {
-                "text": "When you call out to the group and ask to join them, they look at you with disgust. One Clanmate snarkily remarks that they couldn't trust you to remember to kill the prey and not the cats. You drop your head onto your paws as they leave. Maybe next time.",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "COMFORTER,1",
+          "COOPERATIVE,1",
+          "INSIGHTFUL,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    }
+      },
+      {
+        "text": "r_a looks relieved when you agree. Conversation starts a bit stilted, but you both ease into it and end up bonding over the meal until it's time to retire to your nests.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You feel a rush of nervousness and end up stuttering a refusal. Later, you regret your reaction but hope to make it up to them.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You're in a hurry and don't have the time to chat over your meal. m_n is waiting for you. r_a nods in understanding, although seems a bit upset after..",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app16",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "During a shared training session, r_a accidentally stumbles right into you. Both of you tumble to the ground in a heap of limbs. {PRONOUN/r_a/subject/CAP} {VERB/r_a/blush/blushes} and {VERB/r_a/stammer/stammers} out an apology as {PRONOUN/r_a/subject} {VERB/r_a/try/tries} to untangle from you without trodding on anything.",
+    "decline_text": "You decide to continue with your training, shaking off the moment.",
+    "chance_of_success": 55,
+    "success_outcomes": [
+      {
+        "text": "You reassure r_a that it's alright and the two of you manage to share a good laugh about it. After your mentors are ready for you to continue, the training session turns out to be a fun one! Your bond with {PRONOUN/r_a/subject} grows even if you're both exhausted in the end.",
+        "exp": 5,
+        "weight": 20
+      },
+      {
+        "text": "You moan and groan dramatically about the accident, pretending to be soooo injured! r_a starts to fret a moment before {PRONOUN/r_a/subject} {VERB/r_a/realize/realizes} you're messing around. m_n is already sighing in amusement before telling you to stop being dramatic. At least r_a is giggling and is far less fussed about the mistake!",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "flamboyant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You accidentally bowl r_a over in your haste to get back to your paws. No time for distractions! You brush off {PRONOUN/r_a/poss} apologies in favor of getting back to training with m_n. Before r_a can even get back to {PRONOUN/r_a/poss} paws proper, you're swiping at your mentor again and again, trying to perfect this move.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You reassure r_a that it's alright. It's a good learning opportunity for you both, and you politely explain that much to {PRONOUN/r_a/object}. Before your mentors can even try to get back on track, you're walking r_a through the mistake. It's easy for you to teach {PRONOUN/r_a/object} where {PRONOUN/r_a/subject} went wrong. In no time at all {PRONOUN/r_a/subject} {VERB/r_a/are/is} fluidly preforming the move again - without any accidents.",
+        "exp": 10,
+        "weight": 20,
+        "stat_skill": [
+          "COOPERATIVE,1",
+          "INSIGHTFUL,1",
+          "MEDIATOR,1",
+          "SPEAKER,1",
+          "TEACHER"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Caught off guard, you react awkwardly, which makes them feel more embarrassed. You wish you had handled the situation better.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You gloat over r_a's mistake, loudly proclaiming that you would never do such a thing yourself! You're swift to untangle yourself and get back to your mentor. m_n scolds you for your behavior though. Sheesh, it's not your fault r_a was clumsy!",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You moan and groan dramatically about the accident, pretending to be soooo injured! r_a starts to fret and doesn't seem to realize you're being playful. Uh oh, your act was too convincing and has upset {PRONOUN/r_a/object}. If m_n didn't know you better, you might have been bundled off to r_m...",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "flamboyant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app17",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You and r_a are tasked with collecting moss. As you work together, you can't help but notice how they look under the sunlight.",
+    "decline_text": "Feeling flustered, you decide to leave the task to them and assist elsewhere in the camp. You hope to handle your feelings better next time.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You manage to keep your feelings under control and focus on the task. By the end of it, you both have a good laugh and your bond grows stronger.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You become so lost in your thoughts that you misplace some moss. They help you correct the mistake, but you're left feeling embarrassed.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app18",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "r_a seems to have had a difficult time during {PRONOUN/r_a/poss} last training session. {PRONOUN/r_a/poss/CAP} head is held low and {PRONOUN/r_a/subject}{VERB/r_a/'re/'s} nursing a bruise. Seeing them upset, you consider offering them comfort.",
+    "decline_text": "Feeling unsure about what to say, you decide not to approach them. You hope they'll feel better soon.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "You approach {PRONOUN/r_a/object} and offer kind words of encouragement. After a few moments of listening, r_a thank you for your support, giving you a small smile of appreciation. Taking the moment to be kind was worth it.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Comfort isn't your strong suit. There's still some things you can do though! You approach and ask r_a if {PRONOUN/r_a/subject} had trouble with a battle move. {PRONOUN/r_a/subject/CAP} {VERB/r_a/perk/perks} seeing your interest, knowing that if any help is needed, you're the cat for the job! It takes a few tries but r_a is happier once {PRONOUN/r_a/subject} {VERB/r_a/get/gets} the move down.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "Sauntering up to r_a, you begin to purposefully make a fool of yourself, tripping and tumbling dramatically into the clearing! Seeing it makes {PRONOUN/r_a/object} laugh quietly. It doesn't take but a few more silly antics and jokes before {PRONOUN/r_a/subject}{VERB/r_a/'re/'s} looking far more upbeat.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "flamboyant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You try to comfort them, but your words come out clumsily, leading to an awkward silence. You feel bad but decide to learn from the experience.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Comfort isn't your strong suit - clearly. Your overconfidence only seems to make r_a feel worse. You don't like admitting defeat but... At least you tried?",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "When you try your best to lighten the mood, r_a only seems to sour further. Making a fool of yourself to cheer {PRONOUN/r_a/object} up has backfired when you're accused of making fun of {PRONOUN/r_a/object}. Oops!",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "flamboyant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app19",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_app19",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "r_a isn't watching where {PRONOUN/r_a/subject}{VERB/r_a/'re/'s} going and accidentally trods over you as they leave the apprentice den. They're visibly embarrassed, stammering an apology swiftly.",
+    "decline_text": "Deciding to give them space, you quietly clean up and go about your duties elsewhere in the camp.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You brush it off easily as a small mistake and make light of the situation. They join in on your easy attitude, and you both continue your duties in higher spirits.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You playfully swipe at {PRONOUN/r_a/object} with a soft paw, claiming that this makes you even! That seems to take r_a's mind off the little mistake long enough for you to suggest getting in some extra training!",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "Forsaken, you cry out! Your glorious tail, mangled, ruined! As you roll around making a playful fuss about how wounded you are laughter graces your ears. It brings a purr to you to know that you've cheered them up.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "flamboyant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You react with surprise, which makes them feel even more embarrassed. You try to laugh it off, but the atmosphere remains awkward.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "More than a little cross, you swipe with a soft paw as you tell {PRONOUN/r_a/object} to mind {PRONOUN/r_a/poss} paws in the future. r_a bristles and jumps back before hurrying off.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You just spent ages grooming, only to be stepped on! You try to downplay your frustration but r_a knows you better and swiftly slinks off as you begin your washing again to make sure the fur lays perfectly.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "flamboyant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app20",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app1",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "Since it's a nice day out, m_n tasks you with hunting for r_e. You're to go out alone and bring back extra if you can for the freshkill pile.",
+    "decline_text": "You decide not to hunt for the elders and instead focus on your training.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "As you hunt, you find a mouse nest, you burrow down into the nest and catch any you can get your claws on, the elders will be pleased tonight!",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Of course you'll hunt for r_e - if you bring {PRONOUN/r_e/poss} favorite you might get to hear another story of great deeds in Clan history! You spend ages hunting down the best prey to exchange for a tale - and anything else you find along the way has filled the freshkill pile. r_e is more than happy to share a battle story for you when you deliver the prey.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "competitive",
+          "confident",
+          "fierce",
+          "bloodthirsty",
+          "bold",
+          "daring",
+          "arrogant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "r_e has the best stories and even does fun voices! Of course you'll catch something for {PRONOUN/r_e/object}! Catching a nice bird and two mice is plenty for your task. You deliver the bird to r_e with a flourish, telling the tale of slavering all sun-high for this grandiose meal - making {PRONOUN/r_e/object} laugh.",
+        "exp": 5,
+        "weight": 20,
+        "stat_trait": [
+          "flamboyant"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "The territory seems to be bare tonight, you can't catch a whiff of prey. With a heavy heart you report back to m_n.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app21",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app21,23,24",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You go out battle training with your mentor. m_n circles you as you prepare to test out a move r_w taught you without your mentor knowing. {PRONOUN/r_w/subject/CAP} {VERB/r_w/watch/watches} with amusement.",
+    "decline_text": "You decide not to go battle training so you ask to hunt instead.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You have a blast surprising m_n! Your mentor is caught off guard by the move, and r_w ends up laughing at how you beat m_n with {PRONOUN/r_w/poss} favorite trick.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You can't seem to put your paws where r_w showed you and finally m_n decide it's time to finish this session. r_w gets a mild scolding for teaching you a move that was too advanced...",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app22",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app1",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "m_n asks if you would like to check the borders with {PRONOUN/m_n/object}, standing at the camp entrance with a smile. It's a lovely day out and it would be a good time to explore!",
+    "decline_text": "You decline the offer.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You jump to your paws excitedly, running after your mentor to explore the territory. {PRONOUN/m_n/subject/CAP} {VERB/m_n/escort/escorts} you through the scenery showing you places in the territory you never knew existed!",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You jump to your paws and run after {PRONOUN/m_n/object}. As you trek through the territory, you become excited and run off - since m_n's walking too slow anyway. After a moment you realize you don't recognise this part of the forest. Eventually your mentor finds you and leads you back to camp with a scolding about running off.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app23",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app21,23,24",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "The freshkill pile is low, so it's time go out hunting with your mentor. It's a great chance to practice some new techniques you were taught by m_n!",
+    "decline_text": "You decide not to go hunting so you practice your battle moves instead.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You have a blast! m_n shows you the best places for prey at this time and you both come back with a hefty haul to fill the freshkill pile.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You can't seem to find any prey. m_n comforts you, saying {PRONOUN/m_n/subject} wouldn't have had any hope of finding prey in this terrible weather either.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app24",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app21,23,24",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You go out hunting with r_w1 and r_w2. You suspect m_n is likely overseeing from the shadows.",
+    "decline_text": "You decide not to go hunting so you practice your battle moves instead.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "This is a stealth lesson, and you are the stealthiest cat today, you bring brack more prey than r_w1 and r_w2! When you see m_n, you're praised for your abilities. r_w2 says {PRONOUN/m_n/subject} taught you well, making {PRONOUN/m_n/object} lick {PRONOUN/m_n/poss} chest self-consciously before smiling.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You can't seem to find any prey! The scents are all just muddled up today. You watch as r_w1 pads past, their jaws full with freshly caught prey, maybe it was just bad luck. Hopefully m_n isn't too disappointed in you.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app25",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You think about hunting by yourself, hoping it might impress your mentor. m_n is out with d_n and r_w, so the day is yours!",
+    "decline_text": "You decide not to go hunting alone you'd rather not upset your mentor.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You go out alone, the peace and quiet gives you time to perfect your hunting crouch and you bring back an impressive amount of prey! When m_n watches as you enter the camp, {PRONOUN/m_n/poss} eyes are glowing with pride.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "As you head out, every creaking branch and swishing fern makes you jump, maybe hunting alone wasn't the best idea... When you return m_n finds out and scolds you for going alone but is thankful you didn't stay out.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app26",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You think about hunting by yourself. The time to think without m_n should be good for you, and if you bing back some prey? That's just a bonus.",
+    "decline_text": "You decide not to go hunting alone you'd rather not upset your mentor.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You go out to reflect, and the peace and quiet gives you confidence. You seem to be focusing better now that you've gotten a chance to be alone with your thoughts. You make several great catches with the increased mindfulness! m_n doesn't seem to mind when you return and report your personal task, praising you for being aware of yourself.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "As you head out the territory seems to grow into a maze. Every tree and rock looks the same! As you begin to panic, a patrol of warriors stumble upon you looking surprised to see you alone. m_n happens to be in the patrol and {PRONOUN/m_n/subject} {VERB/m_n/scold/scolds} you for being so reckless, immediately taking you home.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app27",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You decide to take some time to perfect your hunting technique. r_w agrees to help since m_n is out on patrol.",
+    "decline_text": "You decide that your battle skills need more work and practice on that instead.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "Finding a quiet place not too far from camp, you work hard at your hunting crouch with r_w watching, Practicing your stealth amongst some long grass and familiarizing yourself with wind changes does you good. When you return to camp with r_w's praise on your mind, you feel pleased with your progress.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You can't seem to find anywhere to practice your moves that doesn't already have a cat, you can't think about anything with all the warriors trudging around in your space. r_w gently suggests you wait for m_n to set some time aside to help you without so much distraction.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app28",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "app_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You decide to take some time to perfect your fighting techniques alone. The extra time to practice will hopefully give you some personal clarity on your skills.",
+    "decline_text": "You decide that your hunting techniques need more work and you practice that instead.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "After finding a quiet place not too far from camp you work hard at practicing ambushes, defensive and offensive attacks. You even coming up with a brand new move to show m_n! You return to camp feeling pleased with your progress.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "There's no space that you feel is good enough that isn't already occupied. r_w shooes you back to camp after spotting you alone. Your plans for the day are foiled, and you return with a heavy heart.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app29",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app29",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "r_m asks you to collect some more moss for the herb storage. It's running low, and the nests need to be changed. It's also good for soaking up water for ill cats. r_m is too busy to do it at the moment.",
+    "decline_text": "Medicine cat duties! No way! You're training to be a warrior!",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You agree, and although moss collecting is one of the more boring duties, it is still an important task. You work hard to bring home a healthly collection of fresh moss, familiarizing yourself with the territory as you go. r_m is incredibly grateful for the assistance.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You agree, but as you pad through the territory a downpour of rain soils any moss that could have been collected, you return back empty pawed. r_m sighs heavily as you return but looks up at the sky and knows you couldn't control that.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app30",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app1",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "Your mentor asks you to clean out the elders den for r_e. There is a budding outbreak of fleas, and this will help stop it quickly.",
+    "decline_text": "Cleaning out the elders den? You slip away quietly saying your off to gather moss, but you curl up and take nap in a patch of warm sun.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "Although it's one of the worst duties an apprentice can be assigned, the task you have been given must be done. As you clean out the flea-infested moss r_e tell you an enthralling tale of daring acts and courageous moments to keep up your good spirits. It turns out that the task wasn't as bad as you thought! You thankfully don't bring any back with you either.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Although grumbling and complaining you agree to do the task. Your bad mood makes the elders cranky and you begin a heated debate about were the softest moss should be placed. Eventually r_e send you out stating they can do it themselves. That evening you realize your pelt is full of fleas!",
+        "exp": 0,
+        "weight": 20,
+        "injury": [
+          {
+            "cats": [
+              "y_c"
+            ],
+            "injuries": [
+              "fleas"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_app31",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lifegen_app1",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "m_n tells you to check the elders for ticks before training. You're directed to get mousebile from r_m for the task.",
+    "decline_text": "Checking the elders for ticks? Yuck!",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You agree, and trudge to r_m to get the dreaded mousebile. {PRONOUN/r_m/subject/CAP} {VERB/r_m/seem/seems} sympathetic and gives you a bit of honey to cheer you up before your task. In the end there are actually fewer ticks than expected and you head out with m_n for training right away!",
+        "exp": 20,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Although grumbling and complaining you agree to do the task, dreading it with every hair on your pelt. But as you walk to the den with the mousebile in your jaws, you stumble, and the foul stuff spills all over your chest and muzzle! It takes forever to get the smell out of your fur and mouth. Another apprentice has already done the task by the time you're done.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lifegen_32",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "bloodthirsty_only"
+    ],
+    "patrol_art": "patrolartapp_clawsout",
+    "min_cats": 2,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "m_n brings you out of camp for a training session. You crouch down, ready for a spar, and they tell you to keep your claws unsheathed for the fight. d_n is watching today.",
+    "decline_text": "You hesitate, unsure if your leader would approve. They sense your unwillingness, and tell you to forget about it with a disappointed flick of their tail.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "The two of you trade blows fiercely, aiming to draw blood. By the end, you're exhausted, panting and bleeding, but still standing. m_n looks at you proudly, sporting some scratches of {PRONOUN/m_n/poss} own, and says you'll make a fearsome warrior one day. d_n agrees with a smile.",
+        "exp": 20,
+        "weight": 20,
+        "injury": [
+          {
+            "cats": [
+              "y_c"
+            ],
+            "injuries": [
+              "scrapes"
+            ]
+          }
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You try your best to take {PRONOUN/m_n/poss} words to heart, but you can barely touch {PRONOUN/m_n/object} anyway. {PRONOUN/m_n/poss/CAP} claws score into your flank over and over again, until you're covered in scratches. d_n seems disappointed in you, and you limp back to the medicine cat's den, bruised and bleeding.",
+        "exp": 0,
+        "weight": 20,
+        "injury": [
+          {
+            "cats": [
+              "y_c"
+            ],
+            "injuries": [
+              "small_bite_injury"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "lg_app_shunned_J1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "lg_app4",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You restlessly tap a paw against the ground as you watch the other apprentices leave camp for a hunting trip with their mentors. It's a long shot, you know, but you wonder if you'd be allowed to join them, just this once.",
+    "decline_text": "You decide against asking, not wanting anycat to be more upset with you.",
+    "chance_of_success": 30,
+    "success_outcomes": [
+      {
+        "text": "You call out to the group and ask as politely as possible if they have room for one more on their trip. A few group members look at you skeptically, but after a tentative nod of approval from your leader, they allow you out of camp for the first time since your punishment began.",
+        "exp": 15,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "When you call out to the group and ask to join them, they look at you with disgust. One Clanmate snarkily remarks that they couldn't trust you to remember to kill the prey and not the cats. You drop your head onto your paws as they leave. Maybe next time.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  }
 ]
+    
