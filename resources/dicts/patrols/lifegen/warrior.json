@@ -1,1645 +1,1646 @@
-[
-    {
-        "patrol_id": "life_warrior_og1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior1",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+    [
+  {
+    "patrol_id": "life_warrior_og1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior1",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You catch the scent of a mouse nearby.",
+    "decline_text": "You ignore the mouse.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You locate the mouse and begins to stalk. The mouse nibbles on a seed, unaware of the hunting cat. You waggle your haunches and leap, pinning the mouse beneath a paw as you make the killing bite.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You start to stalk towards the smell, but pause when you realize it seems to be coming from multiple directions. You stop and focus. After a moment, you realize that the breeze is confusing you by dispersing the scent, and quickly pinpoint where the mouse <i>actually</i> is. You creep forward, and... yes! You easily catch the mouse and purr to yourself as you trot back towards camp.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "You catch the scent of a mouse nearby.",
-        "decline_text": "You ignore the mouse.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You locate the mouse and begins to stalk. The mouse nibbles on a seed, unaware of the hunting cat. You waggle your haunches and leap, pinning the mouse beneath a paw as you make the killing bite.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You start to stalk towards the smell, but pause when you realize it seems to be coming from multiple directions. You stop and focus. After a moment, you realize that the breeze is confusing you by dispersing the scent, and quickly pinpoint where the mouse <i>actually</i> is. You creep forward, and... yes! You easily catch the mouse and purr to yourself as you trot back towards camp.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "CLEVER,1",
-                    "HUNTER,1",
-                    "SENSE,1",
-                    "TRACKER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You crouch and follow the scent, silently weaving around the undergrowth. You spot the mouse foraging on the ground and quickly spring, pinning it beneath your paw and killing it in one fluid motion. When you've finished, you realize another mouse is close by, and that you've been so impressively quiet that it's completely oblivious to your presence! You easily pounce on it, too, then trot back towards camp proud of your double-catch.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "GRACE,1",
-                    "HUNTER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You follow the scent and encounter r_w, who is tracking the same mouse, in the process. You both locate the mouse not long after, completely unaware of the nearby cats. You direct r_w to sneak around it so you can approach from two directions at once, making it less likely for the mouse to escape. When you're both in position, you leap, frightening the creature right into r_w's paws. Teamwork!",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "CLEVER,1",
-                    "COOPERATIVE,1",
-                    "HUNTER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You follow the scent to the mouse, but when you find it, it's staring straight at you. It tilts its head, seemingly more curious than scared. Seeing an opportunity, you attempt to mimic some rodent squeaks in an encouraging, friendly way, and the mouse actually chitters back! You 'talk' for a while until the mouse, seemingly comfortable with you, scurries up your leg and perches on your back. You... suppose you have a new friend!",
-                "exp": 10,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "p_l"
-                        ],
-                        "accessory": [
-                            "MOUSE"
-                        ]
-                    }
-                ],
-                "stat_skill": [
-                    "LANGUAGE,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You easily track the mouse and find it... and an unfamiliar cat holding the rodent in their jaws. The cat bristles, ready to run or fight, though they relax when you don't immediately attack them. You tell them that they're in c_n territory, and it quickly becomes clear that this cat isn't from nearby. They readily agree to give you the mouse in exchange for information about the area.",
-                "exp": 10,
-                "weight": 20,
-                "new_cat": [
-                    [
-                        "meeting",
-                        "loner"
-                    ]
-                ],
-                "stat_skill": [
-                    "COOPERATIVE,1",
-                    "MEDIATOR,1",
-                    "SPEAKER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You follow the scent, but it leads you into a dense thicket that you can't pass through without making a lot of sound and also tearing up your pelt. Luckily, you know this area well, and are familiar with where this thicket is small enough for you to leap over. Hoping that the mouse passed through the thicket instead of staying within it, you cross to the other side and... spot the mouse! You easily catch it, proud of your navigational skills.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "EXPLORER,1",
-                    "NAVIGATOR,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "CLEVER,1",
+          "HUNTER,1",
+          "SENSE,1",
+          "TRACKER,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You narrowly miss the mouse.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You begin to creep towards the scent, but your paw catches on a trailing stem, and you trip. You hit the ground hard, and when you scramble back up, the mouse's scent has vanished.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You begin to stalk forward, but something moves behind you. You freeze, scanning your surroundings. After you've determined there's nothing there, you try to find the mouse again, but the scent has dissipated.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og2",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior2",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "You crouch and follow the scent, silently weaving around the undergrowth. You spot the mouse foraging on the ground and quickly spring, pinning it beneath your paw and killing it in one fluid motion. When you've finished, you realize another mouse is close by, and that you've been so impressively quiet that it's completely oblivious to your presence! You easily pounce on it, too, then trot back towards camp proud of your double-catch.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "During a hunting patrol, you spot a large, plump squirrel. However, it's close to the o_c_n border, and crossing it could lead to a skirmish.",
-        "decline_text": "You decide to respect the border and leave the squirrel. Your Clanmates commend your respect for the Warrior Code.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You successfully catch the squirrel and manage to get back to your territory without being spotted by o_c_n. Your Clan is pleased with the extra prey.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Not wanting your patrol to witness you breaking the Warrior Code, you wait until you're alone. You scan your surroundings, making sure no o_c_n warriors are nearby, then keep close to the undergrowth as you stalk and catch the squirrel. You retreat back across the border, your heart racing, before anyone notices your transgression.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "It's probably unwise to cross the border, but that doesn't mean you have to give up! You spot some large nuts nearby and roll them towards the squirrel, making a trail back across the border. After a few moments, the squirrel notices and hops closer, stopping at and inspecting each nut. As soon as it's on your territory, you leap forward and quickly kill it. Success!",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "CLEVER,1",
-                    "INNOVATOR,1",
-                    "SCHOLAR,1",
-                    "THINKER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "As you sit by the border, debating whether to cross, a familiar cat pads up with a translucent, muck-matted pelt. rdf_c looks from you to the squirrel, purring in amusement when they understand the situation. They motion for you to cross the border, indicating that they'll watch for any o_cClan cats. You successfully catch the squirrel and return to your territory, unnoticed, and rdf_c chuckles as they slink away.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "DARK,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You scan your surroundings for signs of o_cClan cats and notice a recent scent marker. It seems like a patrol came by here not long ago, but that means it's unlikely another one will pass through soon. Confident in your logic, you spring for the squirrel, successfully catching it without anyone noticing.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "CLEVER,1",
-                    "SCHOLAR,1",
-                    "SENSE,1",
-                    "THINKER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "As you scan your surroundings, you have a sudden sense that everything will be okay if you just wait. You're uncertain why you feel this way, but your instincts haven't led you wrong before, so you hold your position. Sure enough, the squirrel hops back over the border, where you successfully catch it!",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "CLAIRVOYANT,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You back up and hide in a bush, then make a few squirrel-like chitters. The squirrel looks up, sniffing the air. You repeat the noise, hoping it's close enough to squirrel-speak that the creature won't run off, and sure enough, it hops a bit closer to you. With a curious chirp, it takes a final leap back into your territory and you burst out of the bush, catching it without issue.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "LANGUAGE,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "GRACE,1",
+          "HUNTER,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You attempt to catch the squirrel, but a o_c_n patrol spots you. A fight ensues, and you return to your Clan empty-pawed.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "The squirrel would be a great catch, but what if someone from o_c_n sees you? You linger on the border, your mind running through the possibilities: increased tensions, maybe a skirmish, or even all-out war... When you snap yourself out of your thoughts, the squirrel is gone.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Hmm... Maybe you could lure the squirrel back to your territory, and catch it without ever crossing the border yourself. You collect a few acorns scattered nearby and roll them towards the squirrel, hoping to lure it closer, but the squirrel gives them an unimpressed glance before bounding away. Fox-dung! You still keep the nuts in case they come in handy later.",
-                "exp": 0,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "p_l"
-                        ],
-                        "accessory": [
-                            "ACORN",
-                            "ACORN2"
-                        ]
-                    }
-                ],
-                "stat_skill": [
-                    "CLEVER,1",
-                    "INNOVATOR,1",
-                    "SCHOLAR,1",
-                    "THINKER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og3",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "You follow the scent and encounter r_w, who is tracking the same mouse, in the process. You both locate the mouse not long after, completely unaware of the nearby cats. You direct r_w to sneak around it so you can approach from two directions at once, making it less likely for the mouse to escape. When you're both in position, you leap, frightening the creature right into r_w's paws. Teamwork!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "You discover a new hunting ground full of prey. However, it's close to a Twolegplace, and there could be potential dangers.",
-        "decline_text": "You decide to stick to the usual hunting grounds. Prey is scarce, but at least you're safe from Twolegs.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You decide to hunt in the new area. You manage to catch a lot of prey and return safely, earning praise from your Clan.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You wait at the edge of the hunting ground for a while, observing it. Once you're sure that all of the Twolegs are inside the Twolegplace and won't be able to easily chase you, you venture closer. You successfully catch as much prey as you can carry before quickly leaving the area.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "lonesome"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You've barely entered the new hunting ground when a kittypet meows to you from inside the Twolegplace. They seem suspicious of Clan cats, but you take a few minutes to make light conversation, putting them at ease. When you part ways, they point out where their Twolegs leave seeds for the squirrels and birds, and you're able to catch quite a bit of prey there.",
-                "exp": 10,
-                "weight": 20,
-                "new_cat": [
-                    [
-                        "meeting",
-                        "kittypet"
-                    ]
-                ],
-                "stat_skill": [
-                    "COOPERATIVE,1",
-                    "COMFORTER,1",
-                    "MEDIATOR,1",
-                    "SPEAKER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Not long after you begin hunting in the new area, a small dog races out of the Twolegplace and runs straight for you, yapping wildly. When you bark back as best you can, the dog stops, seemingly stunned and a little unnerved to hear a cat speaking their language. Although the sounds feel strange in your mouth, you successfully explain to the dog that you mean no harm and just want to hunt here for a bit. The dog backs off and lets you catch quite a lot of prey.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "LANGUAGE,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "CLEVER,1",
+          "COOPERATIVE,1",
+          "HUNTER,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You hunt in the new area, but a Twoleg spots you. You manage to escape, but it's a close call.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You sneak through the hunting ground, ready to bolt at the first sign of Twolegs. You keep to the shadows, never straying into the open, and the afternoon passes without incident. Unfortunately, you focus more on avoiding Twolegs than you focus on catching prey, and you return to camp empty-pawed.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Despite your caution, you've barely set paw in the new hunting grounds when  a pair of Twoleg kits spots you. They give chase, and you flee. It's easy to outrun them, but for the next few nights you're kept awake worrying that you've led Twolegs to your camp.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "emotional",
-                    "cowardly"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You creep into the hunting ground, alert for any sign of Twolegs. When a pair of Twoleg kits run out of the Twolegplace, you're quick enough to jump into a nearby bush before you're spotted! Unfortunately, the kits stay outside until the sun starts to set, so you have to uncomfortably crouch in the bush for several hours. You finally escape and make it back to camp, disappointed with your lack of prey.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You begin hunting in the new area, but it isn't long before a group of Twolegs emerges from the Twolegplace, forcing you to hide in a shrub. The Twolegs toss a strange disk back and forth, and several times it lands near your hiding place! It's only a matter of time before you're discovered, but as you prepare to make a wild dash back to the safety of familiar territory, an unfamiliar cat passes by. You explain your predicament and they're more than willing to distract the Twolegs for you, letting you make a clean getaway.",
-                "exp": 5,
-                "weight": 20,
-                "new_cat": [
-                    [
-                        "meeting",
-                        "loner"
-                    ]
-                ],
-                "stat_skill": [
-                    "COOPERATIVE,1",
-                    "SPEAKER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Not long after you begin hunting in the new area, a small dog races out of the Twolegplace and runs straight for you, yapping wildly. You try your best to bark back, trying to convince the dog you're just passing through, but the other animal doesn't seem to be listening. You're forced to flee before the situation escalates further.",
-                "exp": 0,
-                "weight": 20,
-                "stat_skill": [
-                    "LANGUAGE,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og4",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 5,
-        "min_max_status": {},
+      },
+      {
+        "text": "You follow the scent to the mouse, but when you find it, it's staring straight at you. It tilts its head, seemingly more curious than scared. Seeing an opportunity, you attempt to mimic some rodent squeaks in an encouraging, friendly way, and the mouse actually chitters back! You 'talk' for a while until the mouse, seemingly comfortable with you, scurries up your leg and perches on your back. You... suppose you have a new friend!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "The deputy is forming a border patrol. Do you want to volunteer?",
-        "decline_text": "You decide to stay in camp and rest for now.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "You join the patrol and do an excellent job securing the Clan's borders. Your vigilance is noted.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You volunteer, hoping that a patrol will help you get your mind off of some things. The familiar route is comforting, as is marking the same spots you've marked dozens of times before. The patrol passes without incident, and you return to camp calmer and confident that you've helped your Clan.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "reserved",
-                    "emotional",
-                    "lonesome"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You decide to volunteer. You haven't encountered any of your ghostly cat acquaintances recently, and since they seem to spend more time outside of your Clan's territory  than within it, joining a border patrol would be a good opportunity to see if anyone is around. It's a beautiful day, and your patrol doesn't encounter any trouble. You notice a translucent kittypet perched on a post beside the Thunderpath, mist spilling off of their pelt. They nod politely and bound away before you can introduce yourself.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "GHOST,1"
-                ],
-                "new_cat": [
-                    [
-                        "meeting",
-                        "residence:ur"
-                    ]
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You volunteer and follow d_n,  r_w1, and r_w2 to the edge of the territory, but the patrol is derailed when you notice the scent of a dog crossing the border. Aware of your proficiency with tracking, d_n tells r_w1 and r_w2 to finish the patrol while you track the dog with {PRONOUN/d_n/object}. You successfully follow the scent trail through the territory until, to your relief, it crosses back over the border. Your Clanmates are grateful that you took the effort to make sure the territory was safe.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "TRACKER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You set off with r_w1 and r_w2, and the first part of the patrol passes without incident. When the three of you reach the o_cClan border, however, you encounter another patrol. Its leader doesn't seem pleased to see your group. You break the silence and make small talk with the other patrol, breaking the tension and putting everycat a bit more at ease.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "COOPERATIVE,1",
-                    "COMFORTER,1",
-                    "INSIGHTFUL,1",
-                    "MEDIATOR,1",
-                    "SPEAKER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "accessory": [
+          {
+            "cats": [
+              "p_l"
+            ],
+            "accessory": [
+              "MOUSE"
+            ]
+          }
         ],
-        "fail_outcomes": [
-            {
-                "text": "You volunteer for the patrol, but get distracted and miss making a scent marker. Your mistake is pointed out, but forgiven.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You join the patrol but are unfortunately joined by r_w, who was rude to you earlier in the day. You hope you just misunderstood {PRONOUN/r_w/object}, but you're too nervous to ask. Your awkwardness distracts the rest of the patrol and makes the situation uncomfortable for everycat.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "reserved",
-                    "emotional",
-                    "lonesome"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You join the patrol but feel especially jumpy today, and keep getting startled by the wind or your Clanmates' pawsteps. d_n, who's leading the patrol, repeatedly asks you to settle down. Unfortunately, you can't seem to calm your nerves, putting the rest of the group on edge.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "emotional"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "LANGUAGE,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og5",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "You easily track the mouse and find it... and an unfamiliar cat holding the rodent in their jaws. The cat bristles, ready to run or fight, though they relax when you don't immediately attack them. You tell them that they're in c_n territory, and it quickly becomes clear that this cat isn't from nearby. They readily agree to give you the mouse in exchange for information about the area.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "An apprentice is struggling with their battle moves.",
-        "decline_text": "You decide to let their mentor handle it and go about your day.",
-        "chance_of_success": 70,
-        "success_outcomes": [
-            {
-                "text": "You give the apprentice some tips and they quickly improve. They're grateful for your help.",
-                "exp": 10,
-                "weight": 20
-            }
+        "new_cat": [
+          [
+            "meeting",
+            "loner"
+          ]
         ],
-        "fail_outcomes": [
-            {
-                "text": "You try to help the apprentice, but they're too frustrated to listen. You promise to try again another time.",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "COOPERATIVE,1",
+          "MEDIATOR,1",
+          "SPEAKER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og6",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      },
+      {
+        "text": "You follow the scent, but it leads you into a dense thicket that you can't pass through without making a lot of sound and also tearing up your pelt. Luckily, you know this area well, and are familiar with where this thicket is small enough for you to leap over. Hoping that the mouse passed through the thicket instead of staying within it, you cross to the other side and... spot the mouse! You easily catch it, proud of your navigational skills.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "There's a stale piece of prey left in the fresh-kill pile. Do you want to remove it?",
-        "decline_text": "You decide to leave the prey and let someone else handle it.",
-        "chance_of_success": 80,
-        "success_outcomes": [
-            {
-                "text": "You remove the stale prey and prevent any potential sickness in the camp. The medicine cat thanks you.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Already imagining sickness sweeping through the camp, you quickly remove the offending piece, then diligently comb the rest of the fresh-kill pile and identify some more stale prey. l_n nods as {PRONOUN/l_n/subject} {VERB/l_n/pass/passes}, recognizing your effort.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "emotional"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "EXPLORER,1",
+          "NAVIGATOR,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You attempt to remove the stale prey, but accidentally knock over the fresh-kill pile in the process. How embarrassing!",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You start to remove the piece of prey, but stop when you realize it looks like you're digging through the pile. Will your Clanmates think you're trying to take the best prey for yourself? You pause, frozen in thought. After a moment, r_w walks by, looks at you in confusion, and removes the stale prey {PRONOUN/r_w/self}.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You begin reaching for the prey, but recoil at the thought of touching stale food. What if it's already old enough to cause illness? You want to help your Clan, but you also want to keep your paws clean. Unsure of what to do, you leave the issue for someone else to take care of.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og7",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You narrowly miss the mouse.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You begin to creep towards the scent, but your paw catches on a trailing stem, and you trip. You hit the ground hard, and when you scramble back up, the mouse's scent has vanished.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You begin to stalk forward, but something moves behind you. You freeze, scanning your surroundings. After you've determined there's nothing there, you try to find the mouse again, but the scent has dissipated.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You spot a large mouse nearby.",
-        "decline_text": "You decide to let the mouse go and focus on patrolling instead.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "You successfully stalk and catch the mouse. It will make a good addition to the fresh-kill pile.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You attempt to catch the mouse, but it escapes at the last moment. Better luck next time!",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og8",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 5,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og2",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior2",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "During a hunting patrol, you spot a large, plump squirrel. However, it's close to the o_c_n border, and crossing it could lead to a skirmish.",
+    "decline_text": "You decide to respect the border and leave the squirrel. Your Clanmates commend your respect for the Warrior Code.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You successfully catch the squirrel and manage to get back to your territory without being spotted by o_c_n. Your Clan is pleased with the extra prey.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Not wanting your patrol to witness you breaking the Warrior Code, you wait until you're alone. You scan your surroundings, making sure no o_c_n warriors are nearby, then keep close to the undergrowth as you stalk and catch the squirrel. You retreat back across the border, your heart racing, before anyone notices your transgression.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "The Clan leader assigns you to lead a hunting patrol. It's your chance to prove your leadership skills and help provide for the Clan.",
-        "decline_text": "Feeling uncertain, you suggest another warrior lead the patrol instead. The leader respects your decision, promising future opportunities.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "You successfully lead the patrol, coordinating your team to bring down various prey. Your leadership is praised and the Clan appreciates the fresh-kill.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Despite your best efforts, the patrol struggles to catch enough prey.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og9",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "life_warrior9",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      },
+      {
+        "text": "It's probably unwise to cross the border, but that doesn't mean you have to give up! You spot some large nuts nearby and roll them towards the squirrel, making a trail back across the border. After a few moments, the squirrel notices and hops closer, stopping at and inspecting each nut. As soon as it's on your territory, you leap forward and quickly kill it. Success!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "A queen asks you to watch over her kits while she hunts. It's a chance to share stories and keep the young ones entertained.",
-        "decline_text": "You politely decline, feeling more comfortable with warrior duties. The queen understands and finds another cat to help.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "You accept and keep the kits entertained with stories of your adventures. The queen returns to find them asleep, grateful for your help.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_skill": [
+          "CLEVER,1",
+          "INNOVATOR,1",
+          "SCHOLAR,1",
+          "THINKER,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You try to entertain the kits, but they prove more energetic than you expected. You end up losing them after you spend a moment with your back turned. The tired queen spends the rest of the afternoon looking for them, and finds them playing in the leader's den.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og10",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "As you sit by the border, debating whether to cross, a familiar cat pads up with a translucent, muck-matted pelt. rdf_c looks from you to the squirrel, purring in amusement when they understand the situation. They motion for you to cross the border, indicating that they'll watch for any o_cClan cats. You successfully catch the squirrel and return to your territory, unnoticed, and rdf_c chuckles as they slink away.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "You notice an unfamiliar scent on your Clan's borders. It's your responsibility to investigate and ensure the Clan's safety.",
-        "decline_text": "Feeling unsure, you decide to report the scent to your leader and let them handle the situation. You trust their judgement in these matters.",
-        "chance_of_success": 70,
-        "success_outcomes": [
-            {
-                "text": "You successfully track the scent to a lost loner. After guiding them away from your territory, you return to your duties, satisfied with your vigilance.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_skill": [
+          "DARK,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You attempt to track the scent, but it fades before you find its source.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og11",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      },
+      {
+        "text": "You scan your surroundings for signs of o_cClan cats and notice a recent scent marker. It seems like a patrol came by here not long ago, but that means it's unlikely another one will pass through soon. Confident in your logic, you spring for the squirrel, successfully catching it without anyone noticing.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "An elder asks you to share a story of your most daring adventure. It's an opportunity to share your experiences and inspire younger cats.",
-        "decline_text": "Feeling shy, you respectfully decline and promise to share a story another time. The elder understands, looking forward to hearing your tales in the future.",
-        "chance_of_success": 55,
-        "success_outcomes": [
-            {
-                "text": "You captivate the Clan with your tale, filling their eyes with wonder. They appreciate your storytelling and the kits beg for more stories in the future.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_skill": [
+          "CLEVER,1",
+          "SCHOLAR,1",
+          "SENSE,1",
+          "THINKER,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You attempt to recount a tale, but you struggle to remember key details. Everycat looks quite bored.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og12",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      },
+      {
+        "text": "As you scan your surroundings, you have a sudden sense that everything will be okay if you just wait. You're uncertain why you feel this way, but your instincts haven't led you wrong before, so you hold your position. Sure enough, the squirrel hops back over the border, where you successfully catch it!",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "The medicine cat runs out of marigold and asks for your help to find some. It's a chance to help the Clan and learn more about herbs.",
-        "decline_text": "You respectfully decline, not feeling confident in your knowledge of herbs. The medicine cat understands and decides to search themselves.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "You manage to find a patch of marigold and return it to the medicine cat. They thank you, and you feel proud of your contribution.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You diligently search the areas that r_m directed you to and find several plants which could be marigold. You don't feel confident in deciding which is correct, so you bring leaves from each of them back to camp. r_m praises your care, identifies the marigold, and keeps the other leaves to use for bandages.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "reserved"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You want to help, but aren't confident that you can successfully identify marigold. You confess this to r_m, expecting disappointment, but instead they take you on a short walk to show you nearby herb patches and teach you how to identify plants! r_m tells you they'll be sure to ask for your help in the future.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "reserved"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You might not be a medicine cat, but for some reason, herb identification has always been easy for you. You remember seeing some flowers while on patrol yesterday, and sure enough, when you return to that spot, you find a thick patch of marigold! r_m is thrilled. There's even enough flowers for you to take one for yourself!",
-                "exp": 10,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "p_l"
-                        ],
-                        "accessory": [
-                            "MARIGOLD"
-                        ]
-                    }
-                ],
-                "stat_skill": [
-                    "HEALER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "CLAIRVOYANT,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Despite your best efforts, you're unable to find any marigold. You've forgotten what it looks like -- all of these plants look the same!",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og13",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "You back up and hide in a bush, then make a few squirrel-like chitters. The squirrel looks up, sniffing the air. You repeat the noise, hoping it's close enough to squirrel-speak that the creature won't run off, and sure enough, it hops a bit closer to you. With a curious chirp, it takes a final leap back into your territory and you burst out of the bush, catching it without issue.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "A fellow warrior, who you have feelings for, seems to be spending a lot of time with another cat. You ponder whether you should confront them about your feelings.",
-        "decline_text": "You decide against confronting them, not wanting to potentially damage your current relationship. You hope that with time, your feelings will become clearer.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "Summoning your courage, you express your feelings. To your relief, they confess they feel the same way. The two of you decide to spend more time together.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_skill": [
+          "LANGUAGE,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You gather your courage to confess, but your words end up jumbled and unclear. They seem confused, and the conversation ends awkwardly.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You're determined to confess your feelings, but when the time comes, you aren't brave enough to say your prepared speech. You sit in front of the other warrior for a few awkward minutes, struggling to speak, before you turn and flee.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "reserved",
-                    "emotional",
-                    "lonesome"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You sit down beside the other warrior and try to express your feelings, but you realize you're trembling with nerves. When the other cat notices, they seem more concerned about your health than interested in listening to your confession. They end up escorting you to the medicine den, and your words go unsaid.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "emotional"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og14",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior14",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You attempt to catch the squirrel, but a o_c_n patrol spots you. A fight ensues, and you return to your Clan empty-pawed.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "The squirrel would be a great catch, but what if someone from o_c_n sees you? You linger on the border, your mind running through the possibilities: increased tensions, maybe a skirmish, or even all-out war... When you snap yourself out of your thoughts, the squirrel is gone.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "You find a particularly smooth stone near the river that reminds you of a cat you're fond of. You think they might like it as a gift.",
-        "decline_text": "You reconsider and decide to keep the stone for yourself, unsure if they would appreciate the gesture or not. You'll think of another way to show your fondness.",
-        "chance_of_success": 55,
-        "success_outcomes": [
-            {
-                "text": "You offer them the stone and they seem genuinely touched by your thoughtfulness. Their appreciation makes you feel warm and happy inside.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You present the stone, but they seem confused and unsure of what to do with it. You feel embarrassed, replaying this moment over and over again while you're in your nest that night.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og15",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "Hmm... Maybe you could lure the squirrel back to your territory, and catch it without ever crossing the border yourself. You collect a few acorns scattered nearby and roll them towards the squirrel, hoping to lure it closer, but the squirrel gives them an unimpressed glance before bounding away. Fox-dung! You still keep the nuts in case they come in handy later.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "After a long day of patrolling, a cat you're close to invites you to share tongues. You consider their offer, hoping to deepen your bond.",
-        "decline_text": "Feeling too tired, you politely decline and head to your nest for some well-deserved rest. You promise to take them up on their offer another time.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "You accept their offer and spend a comfortable evening grooming each other. The intimacy strengthens your bond and you both go to sleep content.",
-                "exp": 10,
-                "weight": 20
-            }
+        "accessory": [
+          {
+            "cats": [
+              "p_l"
+            ],
+            "accessory": [
+              "ACORN",
+              "ACORN2"
+            ]
+          }
         ],
-        "fail_outcomes": [
-            {
-                "text": "You agree, but they don't show up at the agreed upon spot later that day.",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "CLEVER,1",
+          "INNOVATOR,1",
+          "SCHOLAR,1",
+          "THINKER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og16",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og3",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You discover a new hunting ground full of prey. However, it's close to a Twolegplace, and there could be potential dangers.",
+    "decline_text": "You decide to stick to the usual hunting grounds. Prey is scarce, but at least you're safe from Twolegs.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You decide to hunt in the new area. You manage to catch a lot of prey and return safely, earning praise from your Clan.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You wait at the edge of the hunting ground for a while, observing it. Once you're sure that all of the Twolegs are inside the Twolegplace and won't be able to easily chase you, you venture closer. You successfully catch as much prey as you can carry before quickly leaving the area.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "A cat you have a crush on seems down lately. You want to do something to cheer them up.",
-        "decline_text": "You decide not to interfere, thinking they might prefer some space. You'll keep an eye on them and step in if they seem to need a friend.",
-        "chance_of_success": 60,
-        "success_outcomes": [
-            {
-                "text": "You decide to share a humorous story from your apprentice days. They listen attentively and by the end, their mood seems lifted. They thank you for making them smile.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You ask if your_crush wants to hear a story, and they accept. You relate a tale of a long-ago c_n medicine cat going on a journey to find a legendary herb to save their mate from a terrible illness while your_crush listens, enraptured. Your storytelling is skillful enough to distract them from their worries, and when you're finished, they seem much lighter.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "STORY,1",
-                    "LORE,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "lonesome"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You attempt to cheer them up by performing a funny trick, but you trip over your own paws. They don't laugh, excusing themselves instead.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You're nervous that you might make your_crush feel worse, so you decide to simply cheer them up with some encouragement. You spend several hours planning exactly what you want to say to them, but by time you feel confident enough to execute your plan, your_crush already seems to be feeling better.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "reserved",
-                    "emotional",
-                    "lonesome"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og17",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior14",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+      },
+      {
+        "text": "You've barely entered the new hunting ground when a kittypet meows to you from inside the Twolegplace. They seem suspicious of Clan cats, but you take a few minutes to make light conversation, putting them at ease. When you part ways, they point out where their Twolegs leave seeds for the squirrels and birds, and you're able to catch quite a bit of prey there.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "A moonlit walk by the river with a cat you're interested in seems like a perfect way to spend the evening. You invite them to join you.",
-        "decline_text": "You decide against it, not wanting to push them into something they might not enjoy. You'll find another way to spend time together.",
-        "chance_of_success": 70,
-        "success_outcomes": [
-            {
-                "text": "They agree, and you both enjoy a peaceful walk, chatting and sharing stories. By the end of the evening, you feel a stronger connection between you.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "They agree and meet you by the river that night. You spent the whole day preparing conversation topics in case the walk is awkward, but your_crush doesn't seem to mind your silences. You spend several hours strolling by the water, brushing against each other and pointing out the stars.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "reserved",
-                    "emotional",
-                    "lonesome"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Of course you're nervous to take a walk with your_crush, but your anxiety slips away when you hear the river's familiar burbling. You take a deep breath, remembering other calm evenings at this very spot. The walk is peaceful, and you learn a lot about each other.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "reserved",
-                    "lonesome"
-                ],
-                "stat_skill": [
-                    "FISHER,1",
-                    "SWIMMER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "new_cat": [
+          [
+            "meeting",
+            "kittypet"
+          ]
         ],
-        "fail_outcomes": [
-            {
-                "text": "They agree, but the walk is awkward and filled with silence.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Your nervousness only grows throughout the day, and by the time you meet  your_crush by the river, your stomach feels like you've eaten crowfood. When you become too anxious to form coherent sentences, you excuse yourself and head back to camp early.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "reserved",
-                    "emotional",
-                    "lonesome"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_skill": [
+          "COOPERATIVE,1",
+          "COMFORTER,1",
+          "MEDIATOR,1",
+          "SPEAKER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og18",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      },
+      {
+        "text": "Not long after you begin hunting in the new area, a small dog races out of the Twolegplace and runs straight for you, yapping wildly. When you bark back as best you can, the dog stops, seemingly stunned and a little unnerved to hear a cat speaking their language. Although the sounds feel strange in your mouth, you successfully explain to the dog that you mean no harm and just want to hunt here for a bit. The dog backs off and lets you catch quite a lot of prey.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "During a patrol you spot a strange wooden path that's slightly elevated, it has some birds on it.",
-        "decline_text": "You flick your tail and tell the cats that are on patrol with you that they should hunt somewhere else.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You leap onto the path, snagging a bird with your claws- your Clanmates are impressed with your catch.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_skill": [
+          "LANGUAGE,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You leap towards the path, but miss the landing slamming into one of the boards- scaring all the birds away. Your Clanmates are happy you're okay but are unimpressed by your fall.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og19",
-        "biome": [
-            "Beach"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You hunt in the new area, but a Twoleg spots you. You manage to escape, but it's a close call.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You sneak through the hunting ground, ready to bolt at the first sign of Twolegs. You keep to the shadows, never straying into the open, and the afternoon passes without incident. Unfortunately, you focus more on avoiding Twolegs than you focus on catching prey, and you return to camp empty-pawed.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "As the salty sea air hits your nose and stings your eyes, you notice something green and long on the shoreline.",
-        "decline_text": "Curiosity killed the cat, and you don't want to be an example of that. You quickly turn around and walk away.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "How fun! Seaweed has no actual use, but popping the bubbles on it is fun!",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Seaweed! You decide to gather some of the pieces to take it to the medicine cat den. Wash it out to remove the salt and it could be beneficial as makeshift cobwebs to dress wounds.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "HEALER,1",
-                    "INNOVATOR,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Oh, seaweed! That in itself isn't too exciting, but you know that some small creatures hide under pieces of seaweed to keep wet. You carefully flip the plant over, and sure enough, you uncover a tiny crab. The crustacean doesn't scurry away as you would expect, so after a moment, you pick it up. It seems perfectly happy to come with you!",
-                "exp": 10,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "p_l"
-                        ],
-                        "accessory": [
-                            "CRAB"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "It's just seaweed, but it's longer than most pieces that wash up on the beach. Struck by inspiration, you test whether it's long enough to wrap around your tail. It looks nice! It might get a bit scratchy when it dries up, but you'll deal with that when the time comes.",
-                "exp": 10,
-                "weight": 20,
-                "accessory": [
-                    {
-                        "cats": [
-                            "p_l"
-                        ],
-                        "accessory": [
-                            "SEAWEED"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "There are quite a few legends that begin with a cat investigating something mysterious on a beach, and you'd prefer to not become part of a tragic one. You circle the green object slowly, ready to leap back if it moves, before realizing that it's just a piece of seaweed. Phew! Nothing dangerous, but exciting nonetheless.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "careful",
-                    "nervous",
-                    "insecure",
-                    "meek",
-                    "cowardly",
-                    "emotional",
-                    "lonesome"
-                ],
-                "stat_skill": [
-                    "STORY,1",
-                    "LORE,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Seaweed. You are unimpressed by the long tendrils and turn away. Nothing useful there.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "It's seaweed! You get close enough to inspect it, wrinkling your nose at the strong scent. It's strangely warm to the touch, and one of the edges is rippled, reminiscent of a fluffy cat's tail. Could this be an omen of some kind? You get closer, trying to figure out any possible meaning, but suddenly a wave hits you from the side! You sputter and scramble out of the water, shaking salty spray from your fur. When you've regained your bearings, the seaweed has been washed away.",
-                "exp": 0,
-                "weight": 20,
-                "stat_skill": [
-                    "OMEN,1",
-                    "PROPHET,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You curiously approach the shape and poke it, only to find that it's some kind of Twoleg trash. You wipe your paws off in distaste before continuing down the beach.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og20",
-        "biome": [
-            "Beach"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      },
+      {
+        "text": "Despite your caution, you've barely set paw in the new hunting grounds when  a pair of Twoleg kits spots you. They give chase, and you flee. It's easy to outrun them, but for the next few nights you're kept awake worrying that you've led Twolegs to your camp.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "As you walk across the shore, you notice a few twolegs clustered around. They are all holding long, brown rods. Next to them is a blue-and-white box with a tantalizing scent wafting from it.",
-        "decline_text": "Twolegs are bad news. You quickly and quietly leave the area, making a mental note to warn the Clan of their presence.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You sneak towards the twolegs and their box. As you get closer, you realize the scent is of fish. You reach into the box while no one is looking and hook a fish with your claws, running away before anyone could spot you.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "emotional",
+          "cowardly"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Upon getting closer to the box, you realize it's filled with fish. Excited, you rush towards it before a twoleg picks you up. You hiss as the twoleg tries to subdue you. Raking your claws against its arm, it yowls and lets you go. You run away without a second thought.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og21",
-        "biome": [
-            "Beach"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      },
+      {
+        "text": "You creep into the hunting ground, alert for any sign of Twolegs. When a pair of Twoleg kits run out of the Twolegplace, you're quick enough to jump into a nearby bush before you're spotted! Unfortunately, the kits stay outside until the sun starts to set, so you have to uncomfortably crouch in the bush for several hours. You finally escape and make it back to camp, disappointed with your lack of prey.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "As you pad around the shore, you notice a dazzling seashell near the water. The sun's reflection makes it seem to sparkle.",
-        "decline_text": "You have better things to focus on than a seashell. You continue your way, ignoring it.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You dash towards it, hoping to grab it before the waves do. Luckily, you're able to swipe it just in time! You trot back to camp happily, glistening seashell in tow.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Unfortunately, the waves are faster than you are and the seashell is sucked back into the ocean. Maybe another day you'll find a similar one to take home- but not today.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_warrior_og22",
-        "biome": [
-            "Beach"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      },
+      {
+        "text": "You begin hunting in the new area, but it isn't long before a group of Twolegs emerges from the Twolegplace, forcing you to hide in a shrub. The Twolegs toss a strange disk back and forth, and several times it lands near your hiding place! It's only a matter of time before you're discovered, but as you prepare to make a wild dash back to the safety of familiar territory, an unfamiliar cat passes by. You explain your predicament and they're more than willing to distract the Twolegs for you, letting you make a clean getaway.",
+        "exp": 5,
         "weight": 20,
-        "intro_text": "What an unusual sight- a clear blob on the seashore. You're tempted to get closer, but you're a tad bit offput by the new sight.",
-        "decline_text": "No way you'll go near that. Would be best to report it back to the others before anyone else comes across it.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "As you get closer, you begin to realize what it is- a jellyfish! It seemed to have drifted onto shore. While you don't touch it due to fear of stings, you can appreciate how cool it looks. Not often do you seen a transparent creature.",
-                "exp": 10,
-                "weight": 20
-            }
+        "new_cat": [
+          [
+            "meeting",
+            "loner"
+          ]
         ],
-        "fail_outcomes": [
-            {
-                "text": "You pad closer, curious as to what it is. You realize its a jellyfish, and you begin poking it. Suddenly, a sharp, stinging pain immediately hit you, causing you to draw back your paw in pain. You quickly rush back to camp, where you're told that it isn't poisonous- but scolded for touching a potentially deadly jellyfish.",
-                "exp": 0,
-                "weight": 20
-            }
+        "stat_skill": [
+          "COOPERATIVE,1",
+          "SPEAKER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lg_shunned_warrior_J1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "lg_warrior_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+      },
+      {
+        "text": "Not long after you begin hunting in the new area, a small dog races out of the Twolegplace and runs straight for you, yapping wildly. You try your best to bark back, trying to convince the dog you're just passing through, but the other animal doesn't seem to be listening. You're forced to flee before the situation escalates further.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "Though you're not allowed out of camp, your paws are itching to hunt. It's late, and most cats are asleep, save for the night guard. You consider trying to sneak past them to finally catch some fresh prey for yourself.",
-        "decline_text": "No, it's far too risky. Not wanting to risk extending your punishment, you go to sleep with an empty stomach.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "Thankfully, your nest is already at the edge of camp. It's no challenge to slip out, and when you do, you have to stop yourself from yelping with joy at the sight of live prey. The sleeping squirrel doesn't awaken until far too late, and it's the most delicious meal you've had since your punishment began.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_skill": [
+          "LANGUAGE,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You stand from your nest to attempt to slip out of camp, but the night guard senses the movement and snaps their head towards you. They shoot you a warning glance and you settle back into your nest, not wanting to extend your punishment further.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "LG_halloween_H1",
-        "biome": [
-            "Any"
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og4",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior_default",
+    "min_cats": 1,
+    "max_cats": 5,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "The deputy is forming a border patrol. Do you want to volunteer?",
+    "decline_text": "You decide to stay in camp and rest for now.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "You join the patrol and do an excellent job securing the Clan's borders. Your vigilance is noted.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You volunteer, hoping that a patrol will help you get your mind off of some things. The familiar route is comforting, as is marking the same spots you've marked dozens of times before. The patrol passes without incident, and you return to camp calmer and confident that you've helped your Clan.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "reserved",
+          "emotional",
+          "lonesome"
         ],
-        "season": [
-            "Any"
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You decide to volunteer. You haven't encountered any of your ghostly cat acquaintances recently, and since they seem to spend more time outside of your Clan's territory  than within it, joining a border patrol would be a good opportunity to see if anyone is around. It's a beautiful day, and your patrol doesn't encounter any trouble. You notice a translucent kittypet perched on a post beside the Thunderpath, mist spilling off of their pelt. They nod politely and bound away before you can introduce yourself.",
+        "exp": 10,
+        "weight": 20,
+        "stat_skill": [
+          "GHOST,1"
         ],
-        "types": [
-            "lifegen"
+        "new_cat": [
+          [
+            "meeting",
+            "residence:ur"
+          ]
         ],
-        "tags": [
-            "halloween",
-            "new_cat"
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You volunteer and follow d_n,  r_w1, and r_w2 to the edge of the territory, but the patrol is derailed when you notice the scent of a dog crossing the border. Aware of your proficiency with tracking, d_n tells r_w1 and r_w2 to finish the patrol while you track the dog with {PRONOUN/d_n/object}. You successfully follow the scent trail through the territory until, to your relief, it crosses back over the border. Your Clanmates are grateful that you took the effort to make sure the territory was safe.",
+        "exp": 10,
+        "weight": 20,
+        "stat_skill": [
+          "TRACKER,1"
         ],
-        "patrol_art": "LG_halloween_H1",
-        "min_cats": 1,
-        "max_cats": 6,
-        "min_max_status": {},
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You set off with r_w1 and r_w2, and the first part of the patrol passes without incident. When the three of you reach the o_cClan border, however, you encounter another patrol. Its leader doesn't seem pleased to see your group. You break the silence and make small talk with the other patrol, breaking the tension and putting everycat a bit more at ease.",
+        "exp": 10,
+        "weight": 20,
+        "stat_skill": [
+          "COOPERATIVE,1",
+          "COMFORTER,1",
+          "INSIGHTFUL,1",
+          "MEDIATOR,1",
+          "SPEAKER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You volunteer for the patrol, but get distracted and miss making a scent marker. Your mistake is pointed out, but forgiven.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You join the patrol but are unfortunately joined by r_w, who was rude to you earlier in the day. You hope you just misunderstood {PRONOUN/r_w/object}, but you're too nervous to ask. Your awkwardness distracts the rest of the patrol and makes the situation uncomfortable for everycat.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "reserved",
+          "emotional",
+          "lonesome"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You join the patrol but feel especially jumpy today, and keep getting startled by the wind or your Clanmates' pawsteps. d_n, who's leading the patrol, repeatedly asks you to settle down. Unfortunately, you can't seem to calm your nerves, putting the rest of the group on edge.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "emotional"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og5",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior_og5",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "An apprentice is struggling with their battle moves.",
+    "decline_text": "You decide to let their mentor handle it and go about your day.",
+    "chance_of_success": 70,
+    "success_outcomes": [
+      {
+        "text": "You give the apprentice some tips and they quickly improve. They're grateful for your help.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You try to help the apprentice, but they're too frustrated to listen. You promise to try again another time.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og6",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior_default",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "There's a stale piece of prey left in the fresh-kill pile. Do you want to remove it?",
+    "decline_text": "You decide to leave the prey and let someone else handle it.",
+    "chance_of_success": 80,
+    "success_outcomes": [
+      {
+        "text": "You remove the stale prey and prevent any potential sickness in the camp. The medicine cat thanks you.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Already imagining sickness sweeping through the camp, you quickly remove the offending piece, then diligently comb the rest of the fresh-kill pile and identify some more stale prey. l_n nods as {PRONOUN/l_n/subject} {VERB/l_n/pass/passes}, recognizing your effort.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "emotional"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You attempt to remove the stale prey, but accidentally knock over the fresh-kill pile in the process. How embarrassing!",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You start to remove the piece of prey, but stop when you realize it looks like you're digging through the pile. Will your Clanmates think you're trying to take the best prey for yourself? You pause, frozen in thought. After a moment, r_w walks by, looks at you in confusion, and removes the stale prey {PRONOUN/r_w/self}.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You begin reaching for the prey, but recoil at the thought of touching stale food. What if it's already old enough to cause illness? You want to help your Clan, but you also want to keep your paws clean. Unsure of what to do, you leave the issue for someone else to take care of.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og7",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior_og7",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You spot a large mouse nearby.",
+    "decline_text": "You decide to let the mouse go and focus on patrolling instead.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "You successfully stalk and catch the mouse. It will make a good addition to the fresh-kill pile.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You attempt to catch the mouse, but it escapes at the last moment. Better luck next time!",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og8",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior_default",
+    "min_cats": 1,
+    "max_cats": 5,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "The Clan leader assigns you to lead a hunting patrol. It's your chance to prove your leadership skills and help provide for the Clan.",
+    "decline_text": "Feeling uncertain, you suggest another warrior lead the patrol instead. The leader respects your decision, promising future opportunities.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "You successfully lead the patrol, coordinating your team to bring down various prey. Your leadership is praised and the Clan appreciates the fresh-kill.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Despite your best efforts, the patrol struggles to catch enough prey.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og9",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior9",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "A queen asks you to watch over her kits while she hunts. It's a chance to share stories and keep the young ones entertained.",
+    "decline_text": "You politely decline, feeling more comfortable with warrior duties. The queen understands and finds another cat to help.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "You accept and keep the kits entertained with stories of your adventures. The queen returns to find them asleep, grateful for your help.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You try to entertain the kits, but they prove more energetic than you expected. You end up losing them after you spend a moment with your back turned. The tired queen spends the rest of the afternoon looking for them, and finds them playing in the leader's den.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og10",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior_og10",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You notice an unfamiliar scent on your Clan's borders. It's your responsibility to investigate and ensure the Clan's safety.",
+    "decline_text": "Feeling unsure, you decide to report the scent to your leader and let them handle the situation. You trust their judgement in these matters.",
+    "chance_of_success": 70,
+    "success_outcomes": [
+      {
+        "text": "You successfully track the scent to a lost loner. After guiding them away from your territory, you return to your duties, satisfied with your vigilance.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You attempt to track the scent, but it fades before you find its source.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og11",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior_og11",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "An elder asks you to share a story of your most daring adventure. It's an opportunity to share your experiences and inspire younger cats.",
+    "decline_text": "Feeling shy, you respectfully decline and promise to share a story another time. The elder understands, looking forward to hearing your tales in the future.",
+    "chance_of_success": 55,
+    "success_outcomes": [
+      {
+        "text": "You captivate the Clan with your tale, filling their eyes with wonder. They appreciate your storytelling and the kits beg for more stories in the future.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You attempt to recount a tale, but you struggle to remember key details. Everycat looks quite bored.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og12",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior_og12",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "The medicine cat runs out of marigold and asks for your help to find some. It's a chance to help the Clan and learn more about herbs.",
+    "decline_text": "You respectfully decline, not feeling confident in your knowledge of herbs. The medicine cat understands and decides to search themselves.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "You manage to find a patch of marigold and return it to the medicine cat. They thank you, and you feel proud of your contribution.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You diligently search the areas that r_m directed you to and find several plants which could be marigold. You don't feel confident in deciding which is correct, so you bring leaves from each of them back to camp. r_m praises your care, identifies the marigold, and keeps the other leaves to use for bandages.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "reserved"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You want to help, but aren't confident that you can successfully identify marigold. You confess this to r_m, expecting disappointment, but instead they take you on a short walk to show you nearby herb patches and teach you how to identify plants! r_m tells you they'll be sure to ask for your help in the future.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "reserved"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You might not be a medicine cat, but for some reason, herb identification has always been easy for you. You remember seeing some flowers while on patrol yesterday, and sure enough, when you return to that spot, you find a thick patch of marigold! r_m is thrilled. There's even enough flowers for you to take one for yourself!",
+        "exp": 10,
+        "weight": 20,
+        "accessory": [
+          {
+            "cats": [
+              "p_l"
+            ],
+            "accessory": [
+              "MARIGOLD"
+            ]
+          }
+        ],
+        "stat_skill": [
+          "HEALER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Despite your best efforts, you're unable to find any marigold. You've forgotten what it looks like -- all of these plants look the same!",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og13",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "A fellow warrior, who you have feelings for, seems to be spending a lot of time with another cat. You ponder whether you should confront them about your feelings.",
+    "decline_text": "You decide against confronting them, not wanting to potentially damage your current relationship. You hope that with time, your feelings will become clearer.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "Summoning your courage, you express your feelings. To your relief, they confess they feel the same way. The two of you decide to spend more time together.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You gather your courage to confess, but your words end up jumbled and unclear. They seem confused, and the conversation ends awkwardly.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You're determined to confess your feelings, but when the time comes, you aren't brave enough to say your prepared speech. You sit in front of the other warrior for a few awkward minutes, struggling to speak, before you turn and flee.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "reserved",
+          "emotional",
+          "lonesome"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You sit down beside the other warrior and try to express your feelings, but you realize you're trembling with nerves. When the other cat notices, they seem more concerned about your health than interested in listening to your confession. They end up escorting you to the medicine den, and your words go unsaid.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "emotional"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og14",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior14",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You find a particularly smooth stone near the river that reminds you of a cat you're fond of. You think they might like it as a gift.",
+    "decline_text": "You reconsider and decide to keep the stone for yourself, unsure if they would appreciate the gesture or not. You'll think of another way to show your fondness.",
+    "chance_of_success": 55,
+    "success_outcomes": [
+      {
+        "text": "You offer them the stone and they seem genuinely touched by your thoughtfulness. Their appreciation makes you feel warm and happy inside.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You present the stone, but they seem confused and unsure of what to do with it. You feel embarrassed, replaying this moment over and over again while you're in your nest that night.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og15",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "After a long day of patrolling, a cat you're close to invites you to share tongues. You consider their offer, hoping to deepen your bond.",
+    "decline_text": "Feeling too tired, you politely decline and head to your nest for some well-deserved rest. You promise to take them up on their offer another time.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "You accept their offer and spend a comfortable evening grooming each other. The intimacy strengthens your bond and you both go to sleep content.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You agree, but they don't show up at the agreed upon spot later that day.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og16",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior_default",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "A cat you have a crush on seems down lately. You want to do something to cheer them up.",
+    "decline_text": "You decide not to interfere, thinking they might prefer some space. You'll keep an eye on them and step in if they seem to need a friend.",
+    "chance_of_success": 60,
+    "success_outcomes": [
+      {
+        "text": "You decide to share a humorous story from your apprentice days. They listen attentively and by the end, their mood seems lifted. They thank you for making them smile.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You ask if your_crush wants to hear a story, and they accept. You relate a tale of a long-ago c_n medicine cat going on a journey to find a legendary herb to save their mate from a terrible illness while your_crush listens, enraptured. Your storytelling is skillful enough to distract them from their worries, and when you're finished, they seem much lighter.",
+        "exp": 10,
+        "weight": 20,
+        "stat_skill": [
+          "STORY,1",
+          "LORE,1"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You attempt to cheer them up by performing a funny trick, but you trip over your own paws. They don't laugh, excusing themselves instead.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You're nervous that you might make your_crush feel worse, so you decide to simply cheer them up with some encouragement. You spend several hours planning exactly what you want to say to them, but by time you feel confident enough to execute your plan, your_crush already seems to be feeling better.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "reserved",
+          "emotional",
+          "lonesome"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og17",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior14",
+    "min_cats": 1,
+    "max_cats": 2,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "A moonlit walk by the river with a cat you're interested in seems like a perfect way to spend the evening. You invite them to join you.",
+    "decline_text": "You decide against it, not wanting to push them into something they might not enjoy. You'll find another way to spend time together.",
+    "chance_of_success": 70,
+    "success_outcomes": [
+      {
+        "text": "They agree, and you both enjoy a peaceful walk, chatting and sharing stories. By the end of the evening, you feel a stronger connection between you.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "They agree and meet you by the river that night. You spent the whole day preparing conversation topics in case the walk is awkward, but your_crush doesn't seem to mind your silences. You spend several hours strolling by the water, brushing against each other and pointing out the stars.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "reserved",
+          "emotional",
+          "lonesome"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "Of course you're nervous to take a walk with your_crush, but your anxiety slips away when you hear the river's familiar burbling. You take a deep breath, remembering other calm evenings at this very spot. The walk is peaceful, and you learn a lot about each other.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "reserved",
+          "lonesome"
+        ],
+        "stat_skill": [
+          "FISHER,1",
+          "SWIMMER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "They agree, but the walk is awkward and filled with silence.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Your nervousness only grows throughout the day, and by the time you meet  your_crush by the river, your stomach feels like you've eaten crowfood. When you become too anxious to form coherent sentences, you excuse yourself and head back to camp early.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "reserved",
+          "emotional",
+          "lonesome"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og18",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior_og18",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "During a patrol you spot a strange wooden path that's slightly elevated, it has some birds on it.",
+    "decline_text": "You flick your tail and tell the cats that are on patrol with you that they should hunt somewhere else.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You leap onto the path, snagging a bird with your claws- your Clanmates are impressed with your catch.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You leap towards the path, but miss the landing slamming into one of the boards- scaring all the birds away. Your Clanmates are happy you're okay but are unimpressed by your fall.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og19",
+    "biome": [
+      "Beach"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior_og19",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "As the salty sea air hits your nose and stings your eyes, you notice something green and long on the shoreline.",
+    "decline_text": "Curiosity killed the cat, and you don't want to be an example of that. You quickly turn around and walk away.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "How fun! Seaweed has no actual use, but popping the bubbles on it is fun!",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Seaweed! You decide to gather some of the pieces to take it to the medicine cat den. Wash it out to remove the salt and it could be beneficial as makeshift cobwebs to dress wounds.",
+        "exp": 10,
+        "weight": 20,
+        "stat_skill": [
+          "HEALER,1",
+          "INNOVATOR,1"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "Oh, seaweed! That in itself isn't too exciting, but you know that some small creatures hide under pieces of seaweed to keep wet. You carefully flip the plant over, and sure enough, you uncover a tiny crab. The crustacean doesn't scurry away as you would expect, so after a moment, you pick it up. It seems perfectly happy to come with you!",
+        "exp": 10,
+        "weight": 20,
+        "accessory": [
+          {
+            "cats": [
+              "p_l"
+            ],
+            "accessory": [
+              "CRAB"
+            ]
+          }
+        ]
+      },
+      {
+        "text": "It's just seaweed, but it's longer than most pieces that wash up on the beach. Struck by inspiration, you test whether it's long enough to wrap around your tail. It looks nice! It might get a bit scratchy when it dries up, but you'll deal with that when the time comes.",
+        "exp": 10,
+        "weight": 20,
+        "accessory": [
+          {
+            "cats": [
+              "p_l"
+            ],
+            "accessory": [
+              "SEAWEED"
+            ]
+          }
+        ]
+      },
+      {
+        "text": "There are quite a few legends that begin with a cat investigating something mysterious on a beach, and you'd prefer to not become part of a tragic one. You circle the green object slowly, ready to leap back if it moves, before realizing that it's just a piece of seaweed. Phew! Nothing dangerous, but exciting nonetheless.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "careful",
+          "nervous",
+          "insecure",
+          "meek",
+          "cowardly",
+          "emotional",
+          "lonesome"
+        ],
+        "stat_skill": [
+          "STORY,1",
+          "LORE,1"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Seaweed. You are unimpressed by the long tendrils and turn away. Nothing useful there.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "It's seaweed! You get close enough to inspect it, wrinkling your nose at the strong scent. It's strangely warm to the touch, and one of the edges is rippled, reminiscent of a fluffy cat's tail. Could this be an omen of some kind? You get closer, trying to figure out any possible meaning, but suddenly a wave hits you from the side! You sputter and scramble out of the water, shaking salty spray from your fur. When you've regained your bearings, the seaweed has been washed away.",
+        "exp": 0,
+        "weight": 20,
+        "stat_skill": [
+          "OMEN,1",
+          "PROPHET,1"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You curiously approach the shape and poke it, only to find that it's some kind of Twoleg trash. You wipe your paws off in distaste before continuing down the beach.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og20",
+    "biome": [
+      "Beach"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_warrior_default",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "As you walk across the shore, you notice a few twolegs clustered around. They are all holding long, brown rods. Next to them is a blue-and-white box with a tantalizing scent wafting from it.",
+    "decline_text": "Twolegs are bad news. You quickly and quietly leave the area, making a mental note to warn the Clan of their presence.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You sneak towards the twolegs and their box. As you get closer, you realize the scent is of fish. You reach into the box while no one is looking and hook a fish with your claws, running away before anyone could spot you.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Upon getting closer to the box, you realize it's filled with fish. Excited, you rush towards it before a twoleg picks you up. You hiss as the twoleg tries to subdue you. Raking your claws against its arm, it yowls and lets you go. You run away without a second thought.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og21",
+    "biome": [
+      "Beach"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior_og21",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "As you pad around the shore, you notice a dazzling seashell near the water. The sun's reflection makes it seem to sparkle.",
+    "decline_text": "You have better things to focus on than a seashell. You continue your way, ignoring it.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You dash towards it, hoping to grab it before the waves do. Luckily, you're able to swipe it just in time! You trot back to camp happily, glistening seashell in tow.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Unfortunately, the waves are faster than you are and the seashell is sucked back into the ocean. Maybe another day you'll find a similar one to take home- but not today.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_warrior_og22",
+    "biome": [
+      "Beach"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_warrior_og22",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "What an unusual sight- a clear blob on the seashore. You're tempted to get closer, but you're a tad bit offput by the new sight.",
+    "decline_text": "No way you'll go near that. Would be best to report it back to the others before anyone else comes across it.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "As you get closer, you begin to realize what it is- a jellyfish! It seemed to have drifted onto shore. While you don't touch it due to fear of stings, you can appreciate how cool it looks. Not often do you seen a transparent creature.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You pad closer, curious as to what it is. You realize its a jellyfish, and you begin poking it. Suddenly, a sharp, stinging pain immediately hit you, causing you to draw back your paw in pain. You quickly rush back to camp, where you're told that it isn't poisonous- but scolded for touching a potentially deadly jellyfish.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lg_shunned_warrior_J1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "lg_warrior_default",
+    "min_cats": 1,
+    "max_cats": 1,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "Though you're not allowed out of camp, your paws are itching to hunt. It's late, and most cats are asleep, save for the night guard. You consider trying to sneak past them to finally catch some fresh prey for yourself.",
+    "decline_text": "No, it's far too risky. Not wanting to risk extending your punishment, you go to sleep with an empty stomach.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "Thankfully, your nest is already at the edge of camp. It's no challenge to slip out, and when you do, you have to stop yourself from yelping with joy at the sight of live prey. The sleeping squirrel doesn't awaken until far too late, and it's the most delicious meal you've had since your punishment began.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You stand from your nest to attempt to slip out of camp, but the night guard senses the movement and snaps their head towards you. They shoot you a warning glance and you settle back into your nest, not wanting to extend your punishment further.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "LG_halloween_H1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "halloween",
+      "new_cat"
+    ],
+    "patrol_art": "LG_halloween_H1",
+    "min_cats": 1,
+    "max_cats": 6,
+    "min_max_status": {},
+    "weight": 15,
+    "intro_text": "You're out on patrol with a few other warriors, trying to take a break from the blooming chaos in c_n. As you're walking near the Twoleg's graves, you realize they're decorated with bright colors, plentiful food, and glowing sticks.",
+    "decline_text": "As tempted as you are, your curiosity does not outweigh your need for a break. You walk past, ignoring the colorful display.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You take the time to watch the Twolegs move around, curious about their strange ritual. It is so bright, welcoming, and joyful that you forget the Twolegs are surrounded by graves. You wonder what they're doing, but you make a mental note to do the same with your own dead. Maybe they'll like that.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "Curiosity takes over and you branch away from the other warriors, cautiously checking out the Twolegs work. The sound of laughter and singing rings through your ears, and none of the Twolegs seem to notice you as you wander around. Done with checking out the colorful display, you take a flower as a physical memory of the place and hurry away.",
+        "exp": 10,
         "weight": 15,
-        "intro_text": "You're out on patrol with a few other warriors, trying to take a break from the blooming chaos in c_n. As you're walking near the Twoleg's graves, you realize they're decorated with bright colors, plentiful food, and glowing sticks.",
-        "decline_text": "As tempted as you are, your curiosity does not outweigh your need for a break. You walk past, ignoring the colorful display.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You take the time to watch the Twolegs move around, curious about their strange ritual. It is so bright, welcoming, and joyful that you forget the Twolegs are surrounded by graves. You wonder what they're doing, but you make a mental note to do the same with your own dead. Maybe they'll like that.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "Curiosity takes over and you branch away from the other warriors, cautiously checking out the Twolegs work. The sound of laughter and singing rings through your ears, and none of the Twolegs seem to notice you as you wander around. Done with checking out the colorful display, you take a flower as a physical memory of the place and hurry away.",
-                "exp": 10,
-                "weight": 15,
-                "accessory": [
-                    {
-                        "cats": [
-                            "y_c"
-                        ],
-                        "accessory": [
-                            "MARIGOLD"
-                        ]
-                    }
-                ]
-            },
-            {
-                "text": "Along with Twolegs, you squint and see numerous types of ghosts alongside them. Twolegs, cats, dogs - they all sit around with the living and eat the given offerings. Sharing laughter, memories, and most importantly love - you feel proud to have the ability to see the moment from both the living and deads side.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "DARK,1",
-                    "STAR,1",
-                    "GHOST,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You point out the Twolegs activity and express wanting to move closer, but the other warriors do not share your curiosity. You decide to wander by yourself, finding a kittypet in the surrounding area. Your curiosity must have shined through your expression and they take it upon themselves to explain the tradition before you leave.",
-                "exp": 0,
-                "weight": 5,
-                "new_cat": [
-                    [
-                        "meeting",
-                        "kittypet"
-                    ]
-                ]
-            }
-        ],
-        "fail_outcomes": [
-            {
-                "text": "You point out the strange display, and r_d explains that every year during leaffall, Twolegs come together around the graves to decorate. r_d admits to not knowing why, but you find the display strangely captivating. The patrol doesn't proceed closer.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "The food is tempting and you point out the unguarded display to the other warriors. Thinking it would be stupid to let go of the opportunity, you and the warriors sneak into the Twolegs place with the intention of stealing food. Though, all of you seem to have horrible luck and fail to get anything useful.",
-                "exp": 0,
-                "weight": 15
-            },
-            {
-                "text": "Despite being a fair distance away from the Twolegs place, a lone kittypet spots your patrol anyway and beelines to your location. They hiss and spit, protecting their 'territory' with claws unsheathed. Your patrol hisses and retreats, not in the mood to fight a kittypet today.",
-                "exp": 0,
-                "weight": 5,
-                "new_cat": [
-                    [
-                        "meeting",
-                        "kittypet"
-                    ]
-                ]
-            }
+        "accessory": [
+          {
+            "cats": [
+              "y_c"
+            ],
+            "accessory": [
+              "MARIGOLD"
+            ]
+          }
         ]
-    }
+      },
+      {
+        "text": "Along with Twolegs, you squint and see numerous types of ghosts alongside them. Twolegs, cats, dogs - they all sit around with the living and eat the given offerings. Sharing laughter, memories, and most importantly love - you feel proud to have the ability to see the moment from both the living and deads side.",
+        "exp": 10,
+        "weight": 20,
+        "stat_skill": [
+          "DARK,1",
+          "STAR,1",
+          "GHOST,1"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You point out the Twolegs activity and express wanting to move closer, but the other warriors do not share your curiosity. You decide to wander by yourself, finding a kittypet in the surrounding area. Your curiosity must have shined through your expression and they take it upon themselves to explain the tradition before you leave.",
+        "exp": 0,
+        "weight": 5,
+        "new_cat": [
+          [
+            "meeting",
+            "kittypet"
+          ]
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You point out the strange display, and r_d explains that every year during leaffall, Twolegs come together around the graves to decorate. r_d admits to not knowing why, but you find the display strangely captivating. The patrol doesn't proceed closer.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "The food is tempting and you point out the unguarded display to the other warriors. Thinking it would be stupid to let go of the opportunity, you and the warriors sneak into the Twolegs place with the intention of stealing food. Though, all of you seem to have horrible luck and fail to get anything useful.",
+        "exp": 0,
+        "weight": 15
+      },
+      {
+        "text": "Despite being a fair distance away from the Twolegs place, a lone kittypet spots your patrol anyway and beelines to your location. They hiss and spit, protecting their 'territory' with claws unsheathed. Your patrol hisses and retreats, not in the mood to fight a kittypet today.",
+        "exp": 0,
+        "weight": 5,
+        "new_cat": [
+          [
+            "meeting",
+            "kittypet"
+          ]
+        ]
+      }
+    ]
+  }
 ]
+    

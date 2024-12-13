@@ -1,532 +1,533 @@
-[
-    {
-        "patrol_id": "life_qapp_og1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queenapp_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+    [
+  {
+    "patrol_id": "life_qapp_og1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queenapp_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "Kits are having nightmares after hearing scary stories from some warriors. You want to comfort them with a gentle lullaby.",
+    "decline_text": "You decide that your singing voice will do no good for the Clan.",
+    "chance_of_success": 65,
+    "success_outcomes": [
+      {
+        "text": "Your soothing lullaby calms the distressed kits, allowing them to sleep peacefully. The Clan praises your caring nature.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "Kits are having nightmares after hearing scary stories from some warriors. You want to comfort them with a gentle lullaby.",
-        "decline_text": "You decide that your singing voice will do no good for the Clan.",
-        "chance_of_success": 65,
-        "success_outcomes": [
-            {
-                "text": "Your soothing lullaby calms the distressed kits, allowing them to sleep peacefully. The Clan praises your caring nature.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "SINGER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You start to hum a lullaby, only to realize singing will not calm down the anxious kits this time. With quick thinking, you decide to tell the kits a story instead to distract them from their nightmares. Soon enough, you find yourself telling story after story until all the kittens are fast asleep.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Filled with nerves, you lay down with the kits and start to hum a lullaby you once heard a fellow queen sing. Your singing isn't the greatest but the kits don't seem to care, falling asleep one by one until the lullaby comes to an end. You see m_n in the corner of your eye giving you a nod of prideful approval.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "lonesome",
-                    "nervous",
-                    "insecure",
-                    "careful",
-                    "meek",
-                    "cowardly",
-                    "emotional"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You lay down with the kittens and try your best to sing them to sleep, but instead find yourself simply lying with them as the kittens found comfort in your presence instead. Despite the situation not ending how you thought, at least the problem was solved for the night.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_skill": [
+          "SINGER,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "While your intentions are good, the lullaby doesn't seem to work for all the kits.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Although wishing to help, you freeze up in nerves and your voice gets stuck in your throat. r_q decides to give you mercy and bunts heads with you, whispering {PRONOUN/r_q/subject}'ll take over. You watch from the sidelines as r_q calms the kits down, feeling a bit guilty for allowing your nerves to get the best of you.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "lonesome",
-                    "nervous",
-                    "insecure",
-                    "careful",
-                    "meek",
-                    "cowardly",
-                    "emotional"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You try to sing a lullaby, but unfortunately, your voice is not as soothing as you hoped. r_k is quick to point out how detrimental your singing is to {PRONOUN/r_k/poss} ears. You spend the rest of the night sulking in the corner of the nursery.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You sing the lullaby, yet after a few moments of quiet, you find yourself nodding off with the rest of the kits. m_n finds you later snoring away and scolds you for falling asleep when you're supposed to be watching the kittens. Whoops.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "SLEEPER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_qapp_og2",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "life_queenapp_og2",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "You start to hum a lullaby, only to realize singing will not calm down the anxious kits this time. With quick thinking, you decide to tell the kits a story instead to distract them from their nightmares. Soon enough, you find yourself telling story after story until all the kittens are fast asleep.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "An anxious parent is worried about their kit's mobility development and asks if you have any advice on how to further their kits development or prevent any stunting.",
-        "decline_text": "You hesitate, and decide to refer them to a medicine cat or an experienced queen, sheepishly stating you have yet to learn about mobility development. The parent thanks you anyway and you go your separate ways.",
-        "chance_of_success": 55,
-        "success_outcomes": [
-            {
-                "text": "You suggest a few exercises for the parent to follow and point out m_n within the nursery if the parent needs any more extensive help. The parent thanks you for your time, and moons later you hear the kit is doing much better with your guidance.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "After a moment of thought, you grab the nearest kit, despite their protests, and start to show the parent a few exercises from m_n's teachings. A bicycling limbs technique for joint strength, a few stretches for discomfort, and lastly how to encourage the kit to do these things on their own. The parent thanks you for your time but the kitten you used an example doesn't seem too happy...",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
         ],
-        "fail_outcomes": [
-            {
-                "text": "Despite trying to explain the necessary exercises and stretches for mobility development, the parent walks away looking more confused than when they came to you. Whoops.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You explain mobility development and the recommended exercises diligently, the teachings from m_n still fresh in your mind. Although, after a minute of ranting, you realized you're overwhelming the parent with too much information and sheepishly recommend them to seek out a medicine cat instead.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "Being sought after for guidance surprises you, and you find yourself blurting out nonsense you don't even fully understand out of nerves. You shift where you stand as the parent gives you a careful eye and states they'll ask for help from r_q next time they need knowledge.",
-                "exp": 0,
-                "weight": 10,
-                "stat_trait": [
-                    "lonesome",
-                    "nervous",
-                    "insecure",
-                    "careful",
-                    "meek",
-                    "cowardly",
-                    "emotional"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_qapp_og3",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queenapp_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "Filled with nerves, you lay down with the kits and start to hum a lullaby you once heard a fellow queen sing. Your singing isn't the greatest but the kits don't seem to care, falling asleep one by one until the lullaby comes to an end. You see m_n in the corner of your eye giving you a nod of prideful approval.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "With more kits in the nursery, the queens realize the nursery is getting cramped. They hold a meeting to discuss a new arrangement, hoping to combat the issue. You wish to propose some of your ideas within the meeting.",
-        "decline_text": "You hesitate and decide not to propose your ideas, believing the more experienced queens are able to fixed the issue themselves. You are just an apprentice, after all.",
-        "chance_of_success": 50,
-        "success_outcomes": [
-            {
-                "text": "You propose a new layout to the nursery, and even suggest making a rotating system so cats don't feel cramped with everycat in there at once. The queens bring up some worries for your ideas but decide to keep them as a possible solution.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You perk up and propose the idea to expand the nursery instead of brainstorming a new layout. With an expansion, it would give the kits more space to play and would lessen the possibility of spreading diseases. The queens ponder the decision for a moment, and r_q states they'll speak to l_n about the potential expansion. Success!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "lonesome",
+          "nervous",
+          "insecure",
+          "careful",
+          "meek",
+          "cowardly",
+          "emotional"
         ],
-        "fail_outcomes": [
-            {
-                "text": "The queens get into an argument about the arrangements, and no plans were made that moon to figure out the cramped situation. Better luck next time!",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Although it takes you a while to get an opening, you hesitantly suggest your idea for a new layout. Kits big to small and rambunctious to quiet would be sectioned off better to avoid unnecessarily cramped spaces for the smaller kits. r_q gently shuts down your idea, stating it would cause more chaos than {PRONOUN/r_q/subject} could handle if troublesome kits were situated with each other.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Although the meeting was calm and everycat pitched in ideas, the meeting ends with confusion and a promise to continue another moon. m_n mentions this is normal for arrangement meetings to last a few moons, so you shouldn't worry. Yet, wouldn't waiting for a solution cause the solution to fester?",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_qapp_og4",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queenapp_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "You lay down with the kittens and try your best to sing them to sleep, but instead find yourself simply lying with them as the kittens found comfort in your presence instead. Despite the situation not ending how you thought, at least the problem was solved for the night.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "While your intentions are good, the lullaby doesn't seem to work for all the kits.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Although wishing to help, you freeze up in nerves and your voice gets stuck in your throat. r_q decides to give you mercy and bunts heads with you, whispering {PRONOUN/r_q/subject}'ll take over. You watch from the sidelines as r_q calms the kits down, feeling a bit guilty for allowing your nerves to get the best of you.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "r_k has become fussy and refuses to eat. {PRONOUN/r_k/subject/CAP}{VERB/r_k/'ve/'s} turned {PRONOUN/r_k/poss} back on m_n, so you're called in to assist. It's up to you to try to get through to r_k - and get {PRONOUN/r_k/object} to enjoy some prey.",
-        "decline_text": "You assure the kit's parents r_k will eat eventually and you do not need to intervene.",
-        "chance_of_success": 55,
-        "success_outcomes": [
-            {
-                "text": "You have an idea and tear up some freshkill into easy to swallow strips. The kit happily eats the prey.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "You hum and state the issue could be more serious than a fussy kit. Although it takes you a few tries and a lot of screaming from r_k, you examine the kit's mouth and determine something is wrong with r_k's teeth. You refer the parent's to r_m for further evaluation. m_n jokes you should have became a medicine cat apprentice instead with a fond look.",
-                "exp": 10,
-                "weight": 20,
-                "stat_skill": [
-                    "HEALER,1"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You loudly and dramatically sigh, stating you guess r_k doesn't want to have a competition anymore! r_k gets curious and you challenge {PRONOUN/r_k/object} to a competition. Whoever eats a fresh-kill faster gets a badger ride! r_k brightens up and immediately starts eating. You allow r_k to win, as a reward, of course.",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "troublesome",
-                    "childish",
-                    "playful",
-                    "strange",
-                    "rebellious",
-                    "spontaneous",
-                    "energetic",
-                    "bouncy"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            },
-            {
-                "text": "You lay down with r_k and happily offer to chew r_k's food for {PRONOUN/r_k/object}! r_k gives you a grossed out look and denies the offer, warily pulling the fresh-kill toward {PRONOUN/r_k/self} and eats it before you can chew {PRONOUN/r_k/poss} food like suggested. m_n snorts at your antics, but hey, it worked!",
-                "exp": 10,
-                "weight": 20,
-                "stat_trait": [
-                    "strange"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "lonesome",
+          "nervous",
+          "insecure",
+          "careful",
+          "meek",
+          "cowardly",
+          "emotional"
         ],
-        "fail_outcomes": [
-            {
-                "text": "r_k remains uninterested, turning {PRONOUN/r_k/poss} nose up at the prey.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You're at a loss on what to do and ask if the parents mentioned r_k's lack of appetite to a medicine cat. You stress that something else could be going on outside of r_k simply being fussy, and you can't help without knowing more about the situation. The parents look worried as they take r_k out the nursery. m_n scolds you for causing unnecessary fear, even if you were right.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You attempt to shred a fresh-kill and offer it to r_k, but even with smaller pieces to chew, r_k still refuses to eat what is given to {PRONOUN/r_k/object}. You sigh and shake your head, already doubtful in your ability if m_n isn't even able to do it.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You're doubtful you will be able to make r_k eat something and shake your head when m_n asks you to try. m_n sighs and asks the parent's to seek out r_m in case something else is causing the lack of appetite.",
-                "exp": 0,
-                "weight": 20,
-                "stat_trait": [
-                    "lonesome",
-                    "nervous",
-                    "insecure",
-                    "careful",
-                    "meek",
-                    "cowardly",
-                    "emotional"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_qapp_R1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queenapp_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      },
+      {
+        "text": "You try to sing a lullaby, but unfortunately, your voice is not as soothing as you hoped. r_k is quick to point out how detrimental your singing is to {PRONOUN/r_k/poss} ears. You spend the rest of the night sulking in the corner of the nursery.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You sing the lullaby, yet after a few moments of quiet, you find yourself nodding off with the rest of the kits. m_n finds you later snoring away and scolds you for falling asleep when you're supposed to be watching the kittens. Whoops.",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "It's time for a good old fashioned nursery clean out! There's plenty of moss already, so the first step is to clear out the den entirely! It's a little daunting, since it all falls to you.",
-        "decline_text": "You decide this can wait for another day.",
-        "chance_of_success": 55,
-        "success_outcomes": [
-            {
-                "text": "After removing all of the old bedding you make sure to dust out with a large leaf and your tail. New nests are made and lined with the softest moss, feathers, and fur. In the end the remade nursery looks great in no time at all! There's extra time to wash your pelt of any remaining mess.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "It takes you a lot of time to remove all of the dust, dirt, old moss, and toys but you manage it! Now it's time to put fresh nests and toys in. By the time you finally finish it's dark out and you don't feel like cleaning the dust from your pelt... Thankfully, you left your old nest, and you can change it tomorrow.",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_skill": [
+          "SLEEPER,1"
         ],
-        "fail_outcomes": [
-            {
-                "text": "As you get started, it quickly becomes too much for one cat. All the dust and debris is dizzying in amount! You'll need to wait for help from somecat or another. Maybe this should be done more often...",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "Just after you've finished clearing everything out, you realize all of the moss has gone! It seems someone else had the idea for a den cleanout day and now there's no moss to replace nests. You're forced to hurry out to gather more.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "life_qapp_R2",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [],
-        "patrol_art": "lg_queenapp_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_qapp_og2",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_queenapp_og2",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "An anxious parent is worried about their kit's mobility development and asks if you have any advice on how to further their kits development or prevent any stunting.",
+    "decline_text": "You hesitate, and decide to refer them to a medicine cat or an experienced queen, sheepishly stating you have yet to learn about mobility development. The parent thanks you anyway and you go your separate ways.",
+    "chance_of_success": 55,
+    "success_outcomes": [
+      {
+        "text": "You suggest a few exercises for the parent to follow and point out m_n within the nursery if the parent needs any more extensive help. The parent thanks you for your time, and moons later you hear the kit is doing much better with your guidance.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "After a moment of thought, you grab the nearest kit, despite their protests, and start to show the parent a few exercises from m_n's teachings. A bicycling limbs technique for joint strength, a few stretches for discomfort, and lastly how to encourage the kit to do these things on their own. The parent thanks you for your time but the kitten you used an example doesn't seem too happy...",
+        "exp": 10,
         "weight": 20,
-        "intro_text": "You've got some free time today away from noisy kits, but that doesn't mean you don't have duties. The many toys could use a refresh. Or you can get creative and make new ones from scratch! First, though, you'll need to head out and gather materials.",
-        "decline_text": "You decide this can wait for another day.",
-        "chance_of_success": 55,
-        "success_outcomes": [
-            {
-                "text": "Out in the territory, you find shiny pebbles on the riverbank! With some clever leaf usage, you gather plenty up to take back.. There's a soft patch of moss on the way back as well. You stop to rake some up and tuck the bundle under your chin before heading to camp with your prizes in tow.",
-                "exp": 10,
-                "weight": 20
-            },
-            {
-                "text": "There's a bird on the freshkill pile! It's a great start to pluck out the feathers. The down can line nests while the larger feathers can be made into toys. You end up getting the idea to stick some feathers into a mossball, leading to new ideas for games!",
-                "exp": 10,
-                "weight": 20
-            }
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You don't have much luck tracking down anything but some sticks that you could find anywhere. Those aren't great toys on their own... And you can't think of anything to make with them, or games to play. Maybe another day will be more fruitful.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You gather up some moss to make new mossballs before noticing shiny stones in the river! As you reach in to grab them with a paw, though, you manage to drop your moss in your concentration. Mousedung! Catch it, catch it - You trip in the shallows with a splash. That's... That's enough for today. Definitely.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    },
-    {
-        "patrol_id": "lg_queenapp_shunned_J1",
-        "biome": [
-            "Any"
-        ],
-        "season": [
-            "Any"
-        ],
-        "types": [
-            "lifegen"
-        ],
-        "tags": [
-            "shunned"
-        ],
-        "patrol_art": "lg_queen_default",
-        "min_cats": 1,
-        "max_cats": 6,
-        "min_max_status": {},
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "Despite trying to explain the necessary exercises and stretches for mobility development, the parent walks away looking more confused than when they came to you. Whoops.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You explain mobility development and the recommended exercises diligently, the teachings from m_n still fresh in your mind. Although, after a minute of ranting, you realized you're overwhelming the parent with too much information and sheepishly recommend them to seek out a medicine cat instead.",
+        "exp": 0,
         "weight": 20,
-        "intro_text": "A kit runs up to you in tears, asking you to fix their favourite leaf, which has now ripped. They don't seem to know that the kits aren't supposed to talk to you right now. You don't know if you should help them.",
-        "decline_text": "You uncomfortably turn the upset kit away, knowing the Clan won't want you influencing the kits during your punishment.",
-        "chance_of_success": 40,
-        "success_outcomes": [
-            {
-                "text": "You tell the kit that you're sorry about their leaf, and, managing to avoid being spotted by anycat, you search alongside them for a new one along the edges of camp. Their new leaf is much bigger and more colourful, and they thank you for helping them find it.",
-                "exp": 15,
-                "weight": 20
-            },
-            {
-                "text": "You ignore the stares making your fur stand up on end and help the kitten look for a new leaf along the border of camp. You point out what seemed like a million colorful and huge leafs before the kitten was satisfied with your find. The kitten runs off with a thank you, and you walk back to camp ready to take the fall.",
-                "exp": 15,
-                "weight": 20,
-                "stat_trait": [
-                    "thoughtful",
-                    "calm",
-                    "flexible",
-                    "wise",
-                    "righteous",
-                    "lonesome",
-                    "gloomy",
-                    "mellow"
-                ],
-                "can_have_stat": [
-                    "p_l"
-                ]
-            }
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
         ],
-        "fail_outcomes": [
-            {
-                "text": "You stand up to go help the kit find a new leaf, but another queen catches your eye with an angry stare. Awkwardly, you tell the kit to go ask the other queen for help instead.",
-                "exp": 0,
-                "weight": 20
-            },
-            {
-                "text": "You quietly tell the kitten the other queens will not appreciate you talking to them. You suggest the kitten ask for help from another queen, even with the sight of teary eyes and a devastated face.",
-                "exp": 0,
-                "weight": 20
-            }
+        "can_have_stat": [
+          "p_l"
         ]
-    }
+      },
+      {
+        "text": "Being sought after for guidance surprises you, and you find yourself blurting out nonsense you don't even fully understand out of nerves. You shift where you stand as the parent gives you a careful eye and states they'll ask for help from r_q next time they need knowledge.",
+        "exp": 0,
+        "weight": 10,
+        "stat_trait": [
+          "lonesome",
+          "nervous",
+          "insecure",
+          "careful",
+          "meek",
+          "cowardly",
+          "emotional"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_qapp_og3",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queenapp_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "With more kits in the nursery, the queens realize the nursery is getting cramped. They hold a meeting to discuss a new arrangement, hoping to combat the issue. You wish to propose some of your ideas within the meeting.",
+    "decline_text": "You hesitate and decide not to propose your ideas, believing the more experienced queens are able to fixed the issue themselves. You are just an apprentice, after all.",
+    "chance_of_success": 50,
+    "success_outcomes": [
+      {
+        "text": "You propose a new layout to the nursery, and even suggest making a rotating system so cats don't feel cramped with everycat in there at once. The queens bring up some worries for your ideas but decide to keep them as a possible solution.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You perk up and propose the idea to expand the nursery instead of brainstorming a new layout. With an expansion, it would give the kits more space to play and would lessen the possibility of spreading diseases. The queens ponder the decision for a moment, and r_q states they'll speak to l_n about the potential expansion. Success!",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "The queens get into an argument about the arrangements, and no plans were made that moon to figure out the cramped situation. Better luck next time!",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Although it takes you a while to get an opening, you hesitantly suggest your idea for a new layout. Kits big to small and rambunctious to quiet would be sectioned off better to avoid unnecessarily cramped spaces for the smaller kits. r_q gently shuts down your idea, stating it would cause more chaos than {PRONOUN/r_q/subject} could handle if troublesome kits were situated with each other.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Although the meeting was calm and everycat pitched in ideas, the meeting ends with confusion and a promise to continue another moon. m_n mentions this is normal for arrangement meetings to last a few moons, so you shouldn't worry. Yet, wouldn't waiting for a solution cause the solution to fester?",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_qapp_og4",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "life_qapp_og4",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "r_k has become fussy and refuses to eat. {PRONOUN/r_k/subject/CAP}{VERB/r_k/'ve/'s} turned {PRONOUN/r_k/poss} back on m_n, so you're called in to assist. It's up to you to try to get through to r_k - and get {PRONOUN/r_k/object} to enjoy some prey.",
+    "decline_text": "You assure the kit's parents r_k will eat eventually and you do not need to intervene.",
+    "chance_of_success": 55,
+    "success_outcomes": [
+      {
+        "text": "You have an idea and tear up some freshkill into easy to swallow strips. The kit happily eats the prey.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "You hum and state the issue could be more serious than a fussy kit. Although it takes you a few tries and a lot of screaming from r_k, you examine the kit's mouth and determine something is wrong with r_k's teeth. You refer the parent's to r_m for further evaluation. m_n jokes you should have became a medicine cat apprentice instead with a fond look.",
+        "exp": 10,
+        "weight": 20,
+        "stat_skill": [
+          "HEALER,1"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You loudly and dramatically sigh, stating you guess r_k doesn't want to have a competition anymore! r_k gets curious and you challenge {PRONOUN/r_k/object} to a competition. Whoever eats a fresh-kill faster gets a badger ride! r_k brightens up and immediately starts eating. You allow r_k to win, as a reward, of course.",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "troublesome",
+          "childish",
+          "playful",
+          "strange",
+          "rebellious",
+          "spontaneous",
+          "energetic",
+          "bouncy"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      },
+      {
+        "text": "You lay down with r_k and happily offer to chew r_k's food for {PRONOUN/r_k/object}! r_k gives you a grossed out look and denies the offer, warily pulling the fresh-kill toward {PRONOUN/r_k/self} and eats it before you can chew {PRONOUN/r_k/poss} food like suggested. m_n snorts at your antics, but hey, it worked!",
+        "exp": 10,
+        "weight": 20,
+        "stat_trait": [
+          "strange"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "r_k remains uninterested, turning {PRONOUN/r_k/poss} nose up at the prey.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You're at a loss on what to do and ask if the parents mentioned r_k's lack of appetite to a medicine cat. You stress that something else could be going on outside of r_k simply being fussy, and you can't help without knowing more about the situation. The parents look worried as they take r_k out the nursery. m_n scolds you for causing unnecessary fear, even if you were right.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You attempt to shred a fresh-kill and offer it to r_k, but even with smaller pieces to chew, r_k still refuses to eat what is given to {PRONOUN/r_k/object}. You sigh and shake your head, already doubtful in your ability if m_n isn't even able to do it.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You're doubtful you will be able to make r_k eat something and shake your head when m_n asks you to try. m_n sighs and asks the parent's to seek out r_m in case something else is causing the lack of appetite.",
+        "exp": 0,
+        "weight": 20,
+        "stat_trait": [
+          "lonesome",
+          "nervous",
+          "insecure",
+          "careful",
+          "meek",
+          "cowardly",
+          "emotional"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_qapp_R1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queenapp_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "It's time for a good old fashioned nursery clean out! There's plenty of moss already, so the first step is to clear out the den entirely! It's a little daunting, since it all falls to you.",
+    "decline_text": "You decide this can wait for another day.",
+    "chance_of_success": 55,
+    "success_outcomes": [
+      {
+        "text": "After removing all of the old bedding you make sure to dust out with a large leaf and your tail. New nests are made and lined with the softest moss, feathers, and fur. In the end the remade nursery looks great in no time at all! There's extra time to wash your pelt of any remaining mess.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "It takes you a lot of time to remove all of the dust, dirt, old moss, and toys but you manage it! Now it's time to put fresh nests and toys in. By the time you finally finish it's dark out and you don't feel like cleaning the dust from your pelt... Thankfully, you left your old nest, and you can change it tomorrow.",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "As you get started, it quickly becomes too much for one cat. All the dust and debris is dizzying in amount! You'll need to wait for help from somecat or another. Maybe this should be done more often...",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "Just after you've finished clearing everything out, you realize all of the moss has gone! It seems someone else had the idea for a den cleanout day and now there's no moss to replace nests. You're forced to hurry out to gather more.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "life_qapp_R2",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [],
+    "patrol_art": "lg_queenapp_default",
+    "min_cats": 1,
+    "max_cats": 3,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "You've got some free time today away from noisy kits, but that doesn't mean you don't have duties. The many toys could use a refresh. Or you can get creative and make new ones from scratch! First, though, you'll need to head out and gather materials.",
+    "decline_text": "You decide this can wait for another day.",
+    "chance_of_success": 55,
+    "success_outcomes": [
+      {
+        "text": "Out in the territory, you find shiny pebbles on the riverbank! With some clever leaf usage, you gather plenty up to take back.. There's a soft patch of moss on the way back as well. You stop to rake some up and tuck the bundle under your chin before heading to camp with your prizes in tow.",
+        "exp": 10,
+        "weight": 20
+      },
+      {
+        "text": "There's a bird on the freshkill pile! It's a great start to pluck out the feathers. The down can line nests while the larger feathers can be made into toys. You end up getting the idea to stick some feathers into a mossball, leading to new ideas for games!",
+        "exp": 10,
+        "weight": 20
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You don't have much luck tracking down anything but some sticks that you could find anywhere. Those aren't great toys on their own... And you can't think of anything to make with them, or games to play. Maybe another day will be more fruitful.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You gather up some moss to make new mossballs before noticing shiny stones in the river! As you reach in to grab them with a paw, though, you manage to drop your moss in your concentration. Mousedung! Catch it, catch it - You trip in the shallows with a splash. That's... That's enough for today. Definitely.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  },
+  {
+    "patrol_id": "lg_queenapp_shunned_J1",
+    "biome": [
+      "Any"
+    ],
+    "season": [
+      "Any"
+    ],
+    "types": [
+      "lifegen"
+    ],
+    "tags": [
+      "shunned"
+    ],
+    "patrol_art": "lg_queen_default",
+    "min_cats": 1,
+    "max_cats": 6,
+    "min_max_status": {},
+    "weight": 20,
+    "intro_text": "A kit runs up to you in tears, asking you to fix their favourite leaf, which has now ripped. They don't seem to know that the kits aren't supposed to talk to you right now. You don't know if you should help them.",
+    "decline_text": "You uncomfortably turn the upset kit away, knowing the Clan won't want you influencing the kits during your punishment.",
+    "chance_of_success": 40,
+    "success_outcomes": [
+      {
+        "text": "You tell the kit that you're sorry about their leaf, and, managing to avoid being spotted by anycat, you search alongside them for a new one along the edges of camp. Their new leaf is much bigger and more colourful, and they thank you for helping them find it.",
+        "exp": 15,
+        "weight": 20
+      },
+      {
+        "text": "You ignore the stares making your fur stand up on end and help the kitten look for a new leaf along the border of camp. You point out what seemed like a million colorful and huge leafs before the kitten was satisfied with your find. The kitten runs off with a thank you, and you walk back to camp ready to take the fall.",
+        "exp": 15,
+        "weight": 20,
+        "stat_trait": [
+          "thoughtful",
+          "calm",
+          "flexible",
+          "wise",
+          "righteous",
+          "lonesome",
+          "gloomy",
+          "mellow"
+        ],
+        "can_have_stat": [
+          "p_l"
+        ]
+      }
+    ],
+    "fail_outcomes": [
+      {
+        "text": "You stand up to go help the kit find a new leaf, but another queen catches your eye with an angry stare. Awkwardly, you tell the kit to go ask the other queen for help instead.",
+        "exp": 0,
+        "weight": 20
+      },
+      {
+        "text": "You quietly tell the kitten the other queens will not appreciate you talking to them. You suggest the kitten ask for help from another queen, even with the sight of teary eyes and a devastated face.",
+        "exp": 0,
+        "weight": 20
+      }
+    ]
+  }
 ]
+    
