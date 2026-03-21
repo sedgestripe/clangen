@@ -969,7 +969,7 @@ class Clan:
             self.load_clan_txt()
         else:
             switch_set_value(
-                Switch.error_message, "There was an error loading the clan.json"
+                Switch.error_message, "There was an error loading the clan.json. clan.json or clan.txt not found."
             )
 
         load_clan_settings()
@@ -992,6 +992,8 @@ class Clan:
             for _ in range(number_other_clans):
                 self.all_other_clans.append(OtherClan())
             return
+        #Just using this error, as I don't even know how to begin adding errors to this. 
+        #Plus Why would someone be loading a clan.txt with Lifegen? Lifegen was created after the json swap.
         switch_set_value(
             Switch.error_message, "There was an error loading the clan.txt"
         )
@@ -1196,12 +1198,18 @@ class Clan:
             clan_data = ujson.loads(read_file.read())
 
         # LG
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to line 'your_cat'."
+        )
         if "your_cat" in clan_data:
             your_cat = Cat.all_cats[clan_data["your_cat"]]
         else:
             print("You don't have a cat! Choosing one for you.")
             your_cat = choice([x for x in Cat.all_cats_list if x.status.alive_in_your_cat_group]).ID
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to line 'leader' or 'leader_lives'."
+        )
         if clan_data["leader"]:
             leader = Cat.all_cats[clan_data["leader"]]
             leader_lives = clan_data["leader_lives"]
@@ -1209,21 +1217,33 @@ class Clan:
             leader = None
             leader_lives = 0
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to line 'deputy'."
+        )
         if clan_data["deputy"]:
             deputy = Cat.all_cats[clan_data["deputy"]]
         else:
             deputy = None
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to line 'med_cat'."
+        )
         if clan_data["med_cat"]:
             med_cat = Cat.all_cats[clan_data["med_cat"]]
         else:
             med_cat = None
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'displayname'."
+        )
         if "displayname" in clan_data:
             displayname = clan_data["displayname"]
         else:
             displayname = clan_data["clanname"]
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Error loading game.clan function. Could be an issue with clan name, role ids, backgrounds or gamemode?"
+        )
         game.clan = Clan(
             name=clan_data["clanname"],
             displayname=displayname,
@@ -1243,12 +1263,18 @@ class Clan:
         game.clan.post_initialization_functions()
 
         # LG
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'following_starclan'."
+        )
         if "following_starclan" in clan_data:
             game.clan.followingsc = clan_data['following_starclan']
         else:
             game.clan.followingsc = True
         # ---
         
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'used_group_IDs'."
+        )
         if clan_data.get("used_group_IDs"):
             game.used_group_IDs = clan_data["used_group_IDs"]
 
@@ -1266,6 +1292,9 @@ class Clan:
             for ID in game.used_group_IDs:
                 game.used_group_IDs[ID] = CatGroup(game.used_group_IDs[ID])
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'reputation', 'age', or 'starting_season'."
+        )
         game.clan.reputation = max(0, min(100, int(clan_data["reputation"])))
         game.clan.age = clan_data["clanage"]
         game.clan.starting_season = (
@@ -1275,13 +1304,25 @@ class Clan:
         )
         get_current_season()
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'leader_lives'."
+        )
         game.clan.leader_lives = leader_lives
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'leader_predecessors', 'deputy_predecessors', or 'med_cat_predecessors'."
+        )
         game.clan.leader_predecessors = clan_data["leader_predecessors"]
 
         game.clan.deputy_predecessors = clan_data["deputy_predecessors"]
         game.clan.med_cat_predecessors = clan_data["med_cat_predecessors"]
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'med_cat_number'."
+        )
         game.clan.med_cat_number = clan_data["med_cat_number"]
         # Allows for the custom pronouns to show up in the add pronoun list after the game has closed and reopened.
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'custom_pronouns'."
+        )
         if "custom_pronouns" in clan_data.keys():
             if clan_data["custom_pronouns"]:
                 if isinstance(clan_data["custom_pronouns"], list):
@@ -1291,6 +1332,9 @@ class Clan:
                     game.clan.custom_pronouns = clan_data["custom_pronouns"]
 
         # Instructor Info
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'instructor' (Starclan guide)."
+        )
         if clan_data["instructor"] in Cat.all_cats:
             game.clan.instructor = Cat.all_cats[clan_data["instructor"]]
             game.clan.add_cat(game.clan.instructor)
@@ -1306,6 +1350,9 @@ class Clan:
             game.clan.add_cat(game.clan.instructor)
             
         # demon Info
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'demon' (Dark Forest Guide)."
+        )
         if "demon" in clan_data and clan_data["demon"] in Cat.all_cats:
             game.clan.demon = Cat.all_cats[clan_data["demon"]]
             game.clan.add_cat(game.clan.demon)
@@ -1326,11 +1373,17 @@ class Clan:
         # game.clan.med_cat_number = clan_data["med_cat_number"]
 
         # check for symbol
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'clan_symbol'."
+        )
         if "clan_symbol" in clan_data:
             game.clan.chosen_symbol = clan_data["clan_symbol"]
         else:
             game.clan.chosen_symbol = clan_symbol_sprite(game.clan, return_string=True)
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'other_clans'."
+        )
         if "other_clans" in clan_data:
             for other_clan in clan_data["other_clans"]:
                 if not other_clan.get("group_ID"):
@@ -1367,21 +1420,36 @@ class Clan:
                         OtherClan(name, int(relation), temper, symbol)
                     )
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'clan_cats'."
+        )
         for cat in clan_data["clan_cats"].split(","):
             if cat in Cat.all_cats:
                 game.clan.add_cat(Cat.all_cats[cat])
             else:
                 print("WARNING: Cat not found:", cat)
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'war'."
+        )
         if "war" in clan_data:
             game.clan.war = clan_data["war"]
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'faded_cats'."
+        )
         load_faded_cat_ids(clan_data["clanname"])
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'last_focus_change' or 'clans_in_focus'."
+        )
         game.clan.last_focus_change = clan_data.get("last_focus_change")
         game.clan.clans_in_focus = clan_data.get("clans_in_focus", [])
 
         # Patrolled cats
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'patrolled_cats' or 'dated_cats'."
+        )
         if "patrolled_cats" in clan_data:
             game.patrolled = clan_data["patrolled_cats"]
         
@@ -1389,6 +1457,9 @@ class Clan:
             game.dated_cats = clan_data["dated_cats"]
 
         # Mediated flag
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'mediated' or 'told_story'."
+        )
         if "mediated" in clan_data:
             if not isinstance(clan_data["mediated"], list):
                 game.mediated = []
@@ -1403,23 +1474,44 @@ class Clan:
 
         game.clan.clan_age = clan_data["clan_age"] if "clan_age" in clan_data else "established"
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check pregnancy.json."
+        )
         self.load_pregnancy(game.clan)
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check herb_supply.json."
+        )
         self.load_herb_supply(game.clan)
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check future_events.json."
+        )
         self.load_future_events(game.clan)
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check disaster folder / primary or secondary jsons."
+        )
         self.load_disaster(game.clan)
         self.load_accessories()
         if game.clan.game_mode != "classic":
             self.load_freshkill_pile(game.clan)
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'murdered'."
+        )
         if "murdered" in clan_data:
             if isinstance(clan_data["murdered"], bool):
                 game.clan.murdered = {}
             else:
                 game.clan.murdered = clan_data["murdered"]
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'affair'."
+        )
         if "affair" in clan_data:
             game.clan.affair = clan_data["affair"]
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'exile_return' or 'achievements."
+        )
         if "exile_return" in clan_data:
             game.clan.exile_return = clan_data["exile_return"]
 
@@ -1437,12 +1529,18 @@ class Clan:
         if "talks" in clan_data:
             game.clan.talks = clan_data["talks"]
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to 'disaster' or 'disaster_moon."
+        )
         if "disaster" in clan_data:
             game.clan.disaster = clan_data["disaster"]
         
         if "disaster_moon" in clan_data:
             game.clan.disaster_moon = clan_data["disaster_moon"]
 
+        switch_set_value(
+            Switch.error_message, "There was an error loading the clan.json. Check info related to focus."
+        )
         if "focus" in clan_data:
             game.clan.focus = clan_data["focus"]
 
