@@ -80,4 +80,4 @@ Finally, open the `main.py` file and click the play button in the top right corn
 
 
 ## Bug Reporting
-Please report any bugs on the LifeGen discord server.
+Please report any bugs on the LifeGen discord server: https://discord.gg/WqzdEcavcH
