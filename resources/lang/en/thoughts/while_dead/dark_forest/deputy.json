@@ -1,7 +1,7 @@
 [
     {
         "id": "deputy_dark_forest_thoughts",
-        "thoughts": [
+        "strings": [
             "Wants to control c_n",
             "Is angry that {PRONOUN/m_c/subject} never got to become leader",
             "Is planning out {PRONOUN/m_c/poss} next battle",

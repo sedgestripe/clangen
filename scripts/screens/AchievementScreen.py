@@ -32,6 +32,7 @@ logger = logging.getLogger(__name__)
 has_checked_for_update = False
 update_available = False
 
+
 class AchievementScreen(Screens):
     """
     TODO: DOCS
@@ -42,7 +43,7 @@ class AchievementScreen(Screens):
         TODO: DOCS
         """
         super().screen_switches()
-        
+
         self.show_menu_buttons()
         self.show_mute_buttons()
         # self.set_disabled_menu_buttons(["achievements"])
@@ -60,24 +61,25 @@ class AchievementScreen(Screens):
             ui_scale(pygame.Rect((0, 140), (600, 500))),
             manager=MANAGER,
             object_id=get_text_box_theme("#text_box_40_horizcenter"),
-            anchors={"centerx": "centerx"})
+            anchors={"centerx": "centerx"},
+        )
 
-        catname_colour = "#B5A17B" if game_setting_get('dark mode') else "#605546"
+        catname_colour = "#B5A17B" if game_setting_get("dark mode") else "#605546"
         stats_text = ""
         for i in game.clan.achievements:
             stats_text += (
                 f"\n <b>{a_txt[i[0]][0]}</b> - "
                 + f"{a_txt[i[0]][1]} "
                 # + f"<font color='{catname_colour}'>({Cat.fetch_cat(i[1]).name})</font>"
-                )
+            )
 
         self.stats_box = pygame_gui.elements.UITextBox(
             stats_text,
             ui_scale(pygame.Rect((0, 170), (600, 500))),
             manager=MANAGER,
             object_id=get_text_box_theme("#text_box_30_horizcenter"),
-            anchors={"centerx": "centerx"})
-
+            anchors={"centerx": "centerx"},
+        )
 
     def exit_screen(self):
         """

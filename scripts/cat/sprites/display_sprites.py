@@ -9,7 +9,6 @@ from scripts.clan_package.settings import get_clan_setting
 from scripts.game_structure import constants, image_cache
 from scripts.game_structure.game import game_setting_get
 from scripts.ui.scale import ui_scale_dimensions
-from scripts.cat.pelts import Pelt
 
 logger = logging.getLogger(__name__)
 
@@ -21,10 +20,9 @@ def generate_sprite(
     acc_hidden=False,
     always_living=False,
     disable_sick_sprite=False,
-
     # LG
     only_accessory=False,
-    accessory_to_render=None
+    accessory_to_render=None,
 ) -> pygame.Surface:
     """
     Generates the sprite for a cat, with optional arguments that will override certain things.
@@ -50,7 +48,7 @@ def generate_sprite(
         dead = cat.dead
 
     # setting the cat_sprite (bc this makes things much easier)
-
+    cat_sprite = ""
     # sick sprites
     if (
         not disable_sick_sprite
@@ -59,7 +57,22 @@ def generate_sprite(
         and constants.CONFIG["cat_sprites"]["sick_sprites"]
     ):
         if age in (CatAge.KITTEN, CatAge.ADOLESCENT):
-            cat_sprite = sprite_poses["sick_young0"]
+            # check if we should default to the old young sprite (this is to be kind to modders)
+            old_young_sprite = "sick_young0" in sprite_poses
+            if old_young_sprite:
+                cat_sprite = "sick_young0"
+            # otherwise we use the age specific ones
+            elif age == CatAge.KITTEN:
+                cat_sprite = sprite_poses["sick_kitten0"]
+            elif age == CatAge.ADOLESCENT:
+                cat_sprite = sprite_poses["sick_adolescent0"]
+        elif age == CatAge.SENIOR:
+            # again, being kind to modders and defaulting to the sick adult if there's no senior
+            cat_sprite = (
+                sprite_poses["sick_adult0"]
+                if "sick_senior0" not in sprite_poses
+                else sprite_poses["sick_senior0"]
+            )
         else:
             cat_sprite = sprite_poses["sick_adult0"]
 
@@ -292,7 +305,9 @@ def generate_sprite(
             new_sprite.blit(sprites.sprites["lineart" + cat_sprite], (0, 0))
         elif cat.status.group == CatGroup.UNKNOWN_RESIDENCE:
             if game_setting_get("lifegen_sprite_changes"):
-                new_sprite.blit(sprites.sprites["lifegen_lineart_ur" + cat_sprite], (0, 0))
+                new_sprite.blit(
+                    sprites.sprites["lifegen_lineart_ur" + cat_sprite], (0, 0)
+                )
             else:
                 new_sprite.blit(sprites.sprites["lineart_ur" + cat_sprite], (0, 0))
         elif cat.status.group == CatGroup.DARK_FOREST:
@@ -323,14 +338,11 @@ def generate_sprite(
 
         # draw accessories
         from scripts.cat.pelts import Pelt
+
         if only_accessory:
-            proceed = (
-                not acc_hidden
-            )
+            proceed = not acc_hidden
         else:
-            proceed = (
-                not acc_hidden and cat.pelt.inventory
-            )
+            proceed = not acc_hidden and cat.pelt.inventory
 
         if proceed:
             if only_accessory:
@@ -347,7 +359,7 @@ def generate_sprite(
                 "body_accessories",
                 "head_accessories",
                 # LG
-                "paw_accessories"
+                "paw_accessories",
             ]
             for category in categories:
                 for accessory in cat_accessories:
@@ -387,9 +399,7 @@ def generate_sprite(
                                 # LIFEGEN
                                 for acc_list in Pelt.acc_list_of_lists:
                                     if accessory in acc_list:
-                                        sprite_name = (
-                                            f"{Pelt.acc_data_list[Pelt.acc_list_of_lists.index(acc_list)]['spritesheet']}{accessory}{cat_sprite}"
-                                            )
+                                        sprite_name = f"{Pelt.acc_data_list[Pelt.acc_list_of_lists.index(acc_list)]['spritesheet']}{accessory}{cat_sprite}"
                                         new_sprite.blit(
                                             _recolor_lineart(
                                                 sprites.sprites[sprite_name],

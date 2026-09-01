@@ -39,6 +39,9 @@ def _test():
         "r_c": _r,
         "r_c1": _r,
         "r_c2": _r,
+        "r_c3": _r,
+        "r_c4": _r,
+        "r_c5": _r,
         "n_c": _r,
         "app1": _r,
         "app2": _r,
@@ -63,7 +66,6 @@ def _test():
         "parent1": _r,
         "parent2": _r,
         "sibling": _r,
-       
         "crush1": _r,
         "theircrush": _r,
         "yourcrush": _r,
@@ -90,12 +92,7 @@ def _test():
 
     for root, _, files in os.walk("resources"):
         for file in files:
-            if (
-                (
-                    "lifegen_events" in root and
-                    "lifegen_events\\NEW" not in root
-                )
-                ):
+            if "lifegen_events" in root and "lifegen_events\\NEW" not in root:
                 # TEMP: ignore old event files
                 continue
             if file.endswith(".json") and file not in (
@@ -137,6 +134,8 @@ def _test_replacement_failure(path: str, repl_dict: dict) -> bool:
 
     for _str in get_all_strings(contents):
         try:
+            # maybe this is gross but it works
+            _str = _str.replace("multi_cat", "Name, Name, and Name")
             processed = process_text(
                 text=_str, cat_dict=repl_dict, raise_exception=True
             )
@@ -149,13 +148,22 @@ def _test_replacement_failure(path: str, repl_dict: dict) -> bool:
         else:
             # LG
             exceptions = [
-                "plike", "plove", "neutral", "rlike", "rlove", "neutral", "dislike", "hate",
-                "jealous", "trust", "comfort", "respect"
-                ]
-            match = (
-                re.search(r"(?<!\.\.)(?<!\.\s\.\s)\.\s+([a-z_]+)", processed)
-                or re.search(r"[?!]\s+([a-z]+)", processed)
-            )
+                "plike",
+                "plove",
+                "neutral",
+                "rlike",
+                "rlove",
+                "neutral",
+                "dislike",
+                "hate",
+                "jealous",
+                "trust",
+                "comfort",
+                "respect",
+            ]
+            match = re.search(
+                r"(?<!\.\.)(?<!\.\s\.\s)\.\s+([a-z_]+)", processed
+            ) or re.search(r"[?!]\s+([a-z]+)", processed)
             # ---
 
             # This tests for any pronoun or verb tag fragments that might have

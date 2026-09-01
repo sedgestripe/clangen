@@ -76,7 +76,7 @@ class ClanScreen(Screens):
             else:
                 self.menu_button_pressed(event)
 
-        elif event.type == pygame.KEYDOWN and game_setting_get("keybinds"):
+        elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RIGHT:
                 self.change_screen(GameScreen.LIST)
             elif event.key == pygame.K_LEFT:
@@ -99,7 +99,6 @@ class ClanScreen(Screens):
         else:
             current_bg = game.clan.camp_bg
 
-
         if game.clan.biome + current_bg in constants.LAYOUTS:
             self.layout = constants.LAYOUTS[game.clan.biome + current_bg]
         else:
@@ -111,7 +110,6 @@ class ClanScreen(Screens):
         self.choose_cat_positions()
 
         self.set_disabled_menu_buttons(["camp_screen"])
-
         # LG EDIT
         self.update_heading_text(game.clan.your_cat.status.get_group_heading_text())
         # ---
@@ -424,10 +422,9 @@ class ClanScreen(Screens):
                 or Cat.all_cats[x].moons < 0
             ):
                 if (
-                    (constants.CONFIG["fun"]["all_cats_are_newborn"]
-                    or constants.CONFIG["fun"]["newborns_can_roam"])
-                    and Cat.all_cats[x].moons >= 0
-                ):
+                    constants.CONFIG["fun"]["all_cats_are_newborn"]
+                    or constants.CONFIG["fun"]["newborns_can_roam"]
+                ) and Cat.all_cats[x].moons >= 0:
                     # Free them
                     [
                         Cat.all_cats[x].placement,
@@ -441,7 +438,7 @@ class ClanScreen(Screens):
             if Cat.all_cats[x].status.rank in (
                 CatRank.APPRENTICE,
                 CatRank.MEDIATOR_APPRENTICE,
-                CatRank.QUEENS_APPRENTICE
+                CatRank.QUEENS_APPRENTICE,
             ):
                 [
                     Cat.all_cats[x].placement,
@@ -478,7 +475,11 @@ class ClanScreen(Screens):
                 ] = self.choose_nonoverlapping_positions(
                     first_choices, all_dens, [20, 20, 20, 400, 1, 1, 1]
                 )
-            elif Cat.all_cats[x].status.rank in (CatRank.WARRIOR, CatRank.MEDIATOR, CatRank.QUEEN):
+            elif Cat.all_cats[x].status.rank in (
+                CatRank.WARRIOR,
+                CatRank.MEDIATOR,
+                CatRank.QUEEN,
+            ):
                 [
                     Cat.all_cats[x].placement,
                     base_pos,

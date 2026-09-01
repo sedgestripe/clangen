@@ -38,7 +38,7 @@ class AllegiancesScreen(Screens):
         self.heading = pygame_gui.elements.UITextBox(
             "screens.allegiances.heading",
             ui_scale(pygame.Rect((0, 115), (400, 40))),
-            text_kwargs={"clan_name": game.clan.displayname},
+            text_kwargs={"clan_name": game.clan.name},
             object_id=get_text_box_theme("#text_box_34_horizcenter_vertcenter"),
             manager=MANAGER,
             anchors={"centerx": "centerx"},
@@ -100,9 +100,10 @@ class AllegiancesScreen(Screens):
             )
             self.names_boxes[-1].disable()
             allegiances_height += 1
-        
-        self.scroll_container.set_scrollable_area_dimensions((715, 470 + allegiances_height*20))
 
+        self.scroll_container.set_scrollable_area_dimensions(
+            (715, 470 + allegiances_height * 20)
+        )
 
     def exit_screen(self):
         for x in self.ranks_boxes:
@@ -139,7 +140,9 @@ class AllegiancesScreen(Screens):
         """Determine Text. Ouputs list of tuples."""
 
         living_cats = [
-            i for i in Cat.all_cats.values() if i.status.alive_in_player_clan and i.moons >= 0
+            i
+            for i in Cat.all_cats.values()
+            if i.status.alive_in_player_clan and i.moons >= 0
         ]
         living_meds = []
         living_mediators = []
@@ -236,7 +239,7 @@ class AllegiancesScreen(Screens):
                 [self.generate_one_entry(i) for i in living_apprentices]
             )
             outputs.append(_box)
-        
+
         # Queens and Kits Box:
         if queen_dict or living_kits or living_queens:
             _box = ["", ""]
@@ -275,7 +278,7 @@ class AllegiancesScreen(Screens):
             for k in living_queens:
                 if k.ID not in queen_dict.keys():
                     all_entries.append(self.generate_one_entry(k))
-            #Now kittens without carers
+            # Now kittens without carers
             for k in living_kits:
                 all_entries.append(
                     event_text_adjust(

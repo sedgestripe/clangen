@@ -1,7 +1,7 @@
 [
     {
         "id": "gen_queen",
-        "thoughts": [
+        "strings": [
             "Is soaking up knowledge about nurturing kits",
             "Is discovering the balance between discipline and care in the nursery",
             "Is picking up lullabies and tales to soothe restless kits",
@@ -30,7 +30,7 @@
     },
     {
         "id": "flamboyant_queen",
-        "thoughts": [
+        "strings": [
             "Leads the kits in an exciting new adventure game",
             "Boasts that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s'} the kits favorite game creator",
             "Takes the attention off a shy kit with {PRONOUN/m_c/poss} rowdy antics",
@@ -44,8 +44,14 @@
             "Watches the kits put on a show for {PRONOUN/m_c/object} and hollers praise",
             "Makes everything into a game with {PRONOUN/m_c/object} at the center"
         ],
-        "main_trait_constraint": [
-            "flamboyant"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "flamboyant"
+                    ]
+                }
+            }
+        }
     }
 ]

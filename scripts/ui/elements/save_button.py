@@ -116,11 +116,11 @@ class UISaveButton:
         try:
             self.unsaved_state.disable()
             self.saving_state.show()
-            save_cats(switch_get_value(Switch.clan_name), Cat, game)
+            save_cats(switch_get_value(Switch.clan_save_id), Cat, game)
             game.clan.save_clan()
             game.clan.save_pregnancy(game.clan)
             game.save_events()
-            game_settings_save(current_screen),
+            game_settings_save(current_screen)
             switch_set_value(Switch.saved_clan, True)
             self.update_state()
         except RuntimeError:

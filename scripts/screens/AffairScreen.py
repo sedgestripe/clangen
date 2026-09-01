@@ -88,18 +88,23 @@ class AffairScreen(Screens):
             ui_scale(pygame.Rect((75, 360), (650, 226))), list_frame, starting_height=1
         )
 
-        self.heading = pygame_gui.elements.UITextBox("",
-                                                    ui_scale(pygame.Rect(
-                                                        (150, 25), (500, 40))),
-                                                    object_id=get_text_box_theme(
-                                                        "#text_box_34_horizcenter"),
-                                                    manager=MANAGER)
+        self.heading = pygame_gui.elements.UITextBox(
+            "",
+            ui_scale(pygame.Rect((150, 25), (500, 40))),
+            object_id=get_text_box_theme("#text_box_34_horizcenter"),
+            manager=MANAGER,
+        )
 
-        self.mentor_frame = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((100, 108), (298, 220))),
-                                                        pygame.transform.scale(
-                                                            image_cache.load_image(
-                                                                "resources/images/affair_select.png").convert_alpha(),
-                                                            (298, 220)), manager=MANAGER)
+        self.mentor_frame = pygame_gui.elements.UIImage(
+            ui_scale(pygame.Rect((100, 108), (298, 220))),
+            pygame.transform.scale(
+                image_cache.load_image(
+                    "resources/images/affair_select.png"
+                ).convert_alpha(),
+                (298, 220),
+            ),
+            manager=MANAGER,
+        )
 
         self.back_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((25, 60), (105, 30))),
@@ -111,8 +116,8 @@ class AffairScreen(Screens):
         self.confirm_mentor = UIImageButton(
             ui_scale(pygame.Rect((150, 302), (104, 26))),
             "select",
-            object_id="#patrol_select_button"
-            )
+            object_id="#patrol_select_button",
+        )
 
         self.previous_page_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((315, 579), (34, 34))),
@@ -128,8 +133,16 @@ class AffairScreen(Screens):
             object_id="@buttonstyles_icon",
             starting_height=0,
         )
-        self.affair_screen = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((425, 65), (222, 273))),
-                                                        pygame.transform.scale(image_cache.load_image("resources/images/affair_screen.png").convert_alpha(), (496, 420)), manager=MANAGER)
+        self.affair_screen = pygame_gui.elements.UIImage(
+            ui_scale(pygame.Rect((425, 65), (222, 273))),
+            pygame.transform.scale(
+                image_cache.load_image(
+                    "resources/images/affair_screen.png"
+                ).convert_alpha(),
+                (496, 420),
+            ),
+            manager=MANAGER,
+        )
 
         self.update_selected_cat()
         self.update_cat_list()
@@ -171,7 +184,7 @@ class AffairScreen(Screens):
 
         if self.affair_screen:
             self.affair_screen.kill()
-        
+
         if self.list_frame:
             self.list_frame.kill()
             del self.list_frame
@@ -180,30 +193,46 @@ class AffairScreen(Screens):
         game.clan.affair = True
         self.mu_txt = load_lang_resource("events/lifegen_events/affair.json")
         success = self.is_success(affair_cat)
-        affair_relationship_chance_lb = constants.CONFIG["lifegen"]["gen"]["affair_relationship_change_lb"]
-        affair_relationship_chance_ub = constants.CONFIG["lifegen"]["gen"]["affair_relationship_change_ub"]
+        affair_relationship_chance_lb = constants.CONFIG["lifegen"]["gen"][
+            "affair_relationship_change_lb"
+        ]
+        affair_relationship_chance_ub = constants.CONFIG["lifegen"]["gen"][
+            "affair_relationship_change_ub"
+        ]
         if success:
-            affair_cat.relationships.get(
-                game.clan.your_cat.ID).like += randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
-            affair_cat.relationships.get(
-                game.clan.your_cat.ID).comfort += randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
-            affair_cat.relationships.get(
-                game.clan.your_cat.ID).romance += randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
-            game.clan.your_cat.relationships.get(
-                affair_cat.ID).romance += randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
-            ceremony_txt = self.adjust_txt(
-                choice(self.mu_txt['success']), affair_cat)
+            affair_cat.relationships.get(game.clan.your_cat.ID).like += randint(
+                affair_relationship_chance_lb, affair_relationship_chance_ub
+            )
+            affair_cat.relationships.get(game.clan.your_cat.ID).comfort += randint(
+                affair_relationship_chance_lb, affair_relationship_chance_ub
+            )
+            affair_cat.relationships.get(game.clan.your_cat.ID).romance += randint(
+                affair_relationship_chance_lb, affair_relationship_chance_ub
+            )
+            game.clan.your_cat.relationships.get(affair_cat.ID).romance += randint(
+                affair_relationship_chance_lb, affair_relationship_chance_ub
+            )
+            ceremony_txt = self.adjust_txt(choice(self.mu_txt["success"]), affair_cat)
             game.cur_events_list.insert(0, Single_Event(ceremony_txt))
-            if randint(1, constants.CONFIG["lifegen"]["gen"]["affair_success_pregnancy_chance"]) == 1:
+            if (
+                randint(
+                    1,
+                    constants.CONFIG["lifegen"]["gen"][
+                        "affair_success_pregnancy_chance"
+                    ],
+                )
+                == 1
+            ):
                 Pregnancy_Events.handle_zero_moon_pregnant(
-                    game.clan.your_cat, affair_cat, game.clan)
+                    game.clan.your_cat, affair_cat, game.clan
+                )
         else:
-            ceremony_txt = self.adjust_txt(
-                choice(self.mu_txt['fail']), affair_cat)
+            ceremony_txt = self.adjust_txt(choice(self.mu_txt["fail"]), affair_cat)
             game.cur_events_list.insert(0, Single_Event(ceremony_txt))
             if self.get_fail_consequence() == 0:
                 ceremony_txt = self.adjust_txt(
-                    choice(self.mu_txt['fail breakup']), affair_cat)
+                    choice(self.mu_txt["fail breakup"]), affair_cat
+                )
                 for i in list(game.clan.your_cat.mate):
                     mate = Cat.fetch_cat(i)
                     if mate is None:
@@ -213,14 +242,23 @@ class AffairScreen(Screens):
                     rel = mate.relationships.get(game.clan.your_cat.ID)
                     if rel is None:
                         continue
-                    rel.like -= randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
-                    rel.comfort -= randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
-                    rel.trust -= randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
-                    rel.romance -= randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
+                    rel.like -= randint(
+                        affair_relationship_chance_lb, affair_relationship_chance_ub
+                    )
+                    rel.comfort -= randint(
+                        affair_relationship_chance_lb, affair_relationship_chance_ub
+                    )
+                    rel.trust -= randint(
+                        affair_relationship_chance_lb, affair_relationship_chance_ub
+                    )
+                    rel.romance -= randint(
+                        affair_relationship_chance_lb, affair_relationship_chance_ub
+                    )
                 game.cur_events_list.insert(1, Single_Event(ceremony_txt))
             else:
                 ceremony_txt = self.adjust_txt(
-                    choice(self.mu_txt['fail none']), affair_cat)
+                    choice(self.mu_txt["fail none"]), affair_cat
+                )
                 game.cur_events_list.insert(1, Single_Event(ceremony_txt))
                 for i in game.clan.your_cat.mate:
                     mate = Cat.fetch_cat(i)
@@ -229,10 +267,18 @@ class AffairScreen(Screens):
                     rel = mate.relationships.get(game.clan.your_cat.ID)
                     if rel is None:
                         continue
-                    rel.like -= randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
-                    rel.comfort -= randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
-                    rel.trust -= randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
-                    rel.romance -= randint(affair_relationship_chance_lb, affair_relationship_chance_ub)
+                    rel.like -= randint(
+                        affair_relationship_chance_lb, affair_relationship_chance_ub
+                    )
+                    rel.comfort -= randint(
+                        affair_relationship_chance_lb, affair_relationship_chance_ub
+                    )
+                    rel.trust -= randint(
+                        affair_relationship_chance_lb, affair_relationship_chance_ub
+                    )
+                    rel.romance -= randint(
+                        affair_relationship_chance_lb, affair_relationship_chance_ub
+                    )
 
         self.change_screen(GameScreen.EVENTS)
 
@@ -276,7 +322,7 @@ class AffairScreen(Screens):
                 chance += 10
         if chance < 1:
             chance = 1
-        if randint(1,100) < randint(0, max(0, chance + randint(-10,10))):
+        if randint(1, 100) < randint(0, max(0, chance + randint(-10, 10))):
             return True
         return False
 
@@ -284,36 +330,50 @@ class AffairScreen(Screens):
         return randint(0, 1)
 
     def adjust_txt(self, txt, affair_cat):
-
         mate_options = [
-            mate for mate in game.clan.your_cat.mate
+            mate
+            for mate in game.clan.your_cat.mate
             if Cat.fetch_cat(mate) and Cat.fetch_cat(mate).status.alive_in_player_clan
         ]
         if not mate_options:
             # fall back to any mate that can still be fetched
-            mate_options = [mate for mate in game.clan.your_cat.mate if Cat.fetch_cat(mate)]
-        random_mate = Cat.fetch_cat(choice(mate_options)) if mate_options else affair_cat
+            mate_options = [
+                mate for mate in game.clan.your_cat.mate if Cat.fetch_cat(mate)
+            ]
+        random_mate = (
+            Cat.fetch_cat(choice(mate_options)) if mate_options else affair_cat
+        )
 
         warriors = find_alive_cats_with_rank(Cat, [CatRank.WARRIOR])
         if warriors:
             random_warrior = Cat.fetch_cat(choice(warriors))
 
             counter = 0
-            while not random_warrior.status.alive_in_player_clan or random_warrior.ID == affair_cat.ID or random_warrior.ID in game.clan.your_cat.mate or random_warrior.ID == game.clan.your_cat.ID:
+            while (
+                not random_warrior.status.alive_in_player_clan
+                or random_warrior.ID == affair_cat.ID
+                or random_warrior.ID in game.clan.your_cat.mate
+                or random_warrior.ID == game.clan.your_cat.ID
+            ):
                 random_warrior = Cat.fetch_cat(choice(game.clan.clan_cats))
                 counter += 1
                 if counter > 30:
                     break
 
         process_text_dict = {}
-        
-        process_text_dict["y_c"] = (game.clan.your_cat, choice(game.clan.your_cat.pronouns))
+
+        process_text_dict["y_c"] = (
+            game.clan.your_cat,
+            choice(game.clan.your_cat.pronouns),
+        )
         process_text_dict["a_n"] = (affair_cat, choice(affair_cat.pronouns))
         process_text_dict["m_n"] = (random_mate, choice(random_mate.pronouns))
         if random_warrior:
             process_text_dict["r_w"] = (random_warrior, choice(random_warrior.pronouns))
 
-        txt = re.sub(r"\{(.*?)\}", lambda x: pronoun_repl(x, process_text_dict, False), txt)
+        txt = re.sub(
+            r"\{(.*?)\}", lambda x: pronoun_repl(x, process_text_dict, False), txt
+        )
 
         txt = txt.replace("a_n", str(affair_cat.name))
         txt = txt.replace("m_n", str(random_mate.name))
@@ -327,34 +387,42 @@ class AffairScreen(Screens):
             self.selected_details[ele].kill()
         self.selected_details = {}
         if self.selected_cat:
-
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
                 ui_scale(pygame.Rect((140, 150), (135, 135))),
-                pygame.transform.scale(
-                    self.selected_cat.sprite,
-                    (135, 135)), manager=MANAGER)
+                pygame.transform.scale(self.selected_cat.sprite, (135, 135)),
+                manager=MANAGER,
+            )
 
-            info = self.selected_cat.status.rank + "\n" + \
-                self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n" + \
-                self.selected_cat.skills.skill_string(short=True)
+            info = (
+                self.selected_cat.status.rank
+                + "\n"
+                + self.selected_cat.genderalign
+                + "\n"
+                + self.selected_cat.personality.trait
+                + "\n"
+                + self.selected_cat.skills.skill_string(short=True)
+            )
 
             self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(
                 info,
                 ui_scale(pygame.Rect((285, 162), (105, 125))),
                 object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
-                manager=MANAGER)
+                manager=MANAGER,
+            )
 
             name = str(self.selected_cat.name)  # get name
             if 11 <= len(name):  # check name length
                 short_name = str(name)[0:9]
-                name = short_name + '...'
+                name = short_name + "..."
             self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
                 ui_scale(pygame.Rect((145, 115), (110, 30))),
                 name,
-                object_id="#text_box_34_horizcenter", manager=MANAGER)
+                object_id="#text_box_34_horizcenter",
+                manager=MANAGER,
+            )
 
     def update_cat_list(self):
-        """Updates the cat sprite buttons. """
+        """Updates the cat sprite buttons."""
         valid_mentors = self.chunks(self.get_valid_cats(), 30)
 
         # If the number of pages becomes smaller than the number of our current page, set
@@ -397,13 +465,18 @@ class AffairScreen(Screens):
                     ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
                     pygame.transform.scale(
                         pygame.image.load(
-                            f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
-                        (50, 50))
+                            f"resources/images/fav_marker_{cat.favourite}.png"
+                        ).convert_alpha(),
+                        (50, 50),
+                    ),
                 )
                 self.fav[str(i)].disable()
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
                 ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
-                cat.sprite, cat_object=cat, manager=MANAGER)
+                cat.sprite,
+                cat_object=cat,
+                manager=MANAGER,
+            )
             pos_x += 60
             if pos_x >= 550:
                 pos_x = 0
@@ -431,4 +504,4 @@ class AffairScreen(Screens):
         super().on_use()
 
     def chunks(self, L, n):
-        return [L[x: x + n] for x in range(0, len(L), n)]
+        return [L[x : x + n] for x in range(0, len(L), n)]

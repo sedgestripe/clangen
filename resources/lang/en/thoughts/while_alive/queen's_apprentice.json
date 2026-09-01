@@ -1,7 +1,7 @@
 [
     {
         "id": "gen_queen's_apprentice",
-        "thoughts": [
+        "strings": [
             "Soaks up knowledge about nurturing kits",
             "Is learning the subtle art of comforting upset kits",
             "Discovers the balance between discipline and care in the nursery",
@@ -24,7 +24,7 @@
     },
     {
         "id": "flamboyant_queen's_apprentice",
-        "thoughts": [
+        "strings": [
             "Engages the kits in an epic story game",
             "Enacts a theatric tale for all to watch",
             "Teaches the kits how to be stylish",
@@ -34,8 +34,14 @@
             "Reminds a new parent that they are the best parent for their kits",
             "Encourages the kits in a rowdy game"
         ],
-        "main_trait_constraint": [
-            "flamboyant"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "flamboyant"
+                    ]
+                }
+            }
+        }
     }
 ]

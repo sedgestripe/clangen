@@ -1,7 +1,7 @@
 [
     {
         "id": "gen_dead_war_app",
-        "thoughts": [
+        "strings": [
             "Is sad {PRONOUN/m_c/subject} never got {PRONOUN/m_c/poss} warrior name",
             "Patrols StarClan's territory",
             "Imagines what {PRONOUN/m_c/poss} warrior ceremony would have been like",
@@ -13,26 +13,26 @@
             "Hopes {PRONOUN/m_c/poss} valiant death rouses future apprentices",
             "Is patrolling StarClan's borders, not wanting {PRONOUN/m_c/poss} skills to rust",
             "Was found slumbering, happy to be able to catnap all day"
-        ],
-        "random_living_status": [
-            "living",
-            "starclan"
         ]
     },
     {
         "id": "dead_app_to_dead_other",
-        "thoughts": [
+        "strings": [
             "Laughs with r_c",
             "Stalks through StarClan's forests with r_c",
             "Encourages r_c to dip {PRONOUN/r_c/poss} paws into the cool water"
         ],
-        "random_living_status": [
-            "starclan"
-        ]
+        "involved_cats": {
+            "r_c": {
+                "group": [
+                    "starclan"
+                ]
+            }
+        }
     },
     {
         "id": "dead_app_to_dead_other_app",
-        "thoughts": [
+        "strings": [
             "Wants to show r_c a new technique {PRONOUN/m_c/subject} {VERB/m_c/have/has} learned",
             "Was dared by r_c to venture near the Dark Forest but was too timid to even step a paw in the grass",
             "Was dared by r_c to venture near the Dark Forest, managed to nip a slice of bladed grass, and was awed by the others",
@@ -42,17 +42,23 @@
             "Is trading stories with r_c about meeting their legendary heroes in StarClan",
             "Offers r_c to join {PRONOUN/m_c/object} on an epic StarClan patrol"
         ],
-        "main_status_constraint": [
-            "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice"
-        ],
-        "random_status_constraint": [
-            "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "status": [
+                    "apprentice",
+                    "medicine cat apprentice",
+                    "mediator apprentice",
+                    "queen's apprentice"
+                ]
+            },
+            "r_c": {
+                "status": [
+                    "apprentice",
+                    "medicine cat apprentice",
+                    "mediator apprentice",
+                    "queen's apprentice"
+                ]
+            }
+        }
     }
 ]

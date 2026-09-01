@@ -91,7 +91,6 @@ class NewCat(RootModel):
             Annotated[str, StringConstraints(pattern=r"^parent:([,0-9]+)$")],
             Annotated[str, StringConstraints(pattern=r"^adoptive:([_,0-9a-zA-Z]+)$")],
             Annotated[str, StringConstraints(pattern=r"^mate:([_,0-9a-zA-Z]+)$")],
-
             # LG
             Annotated[str, StringConstraints(pattern=r"^residence:(.+)$")],
         ]

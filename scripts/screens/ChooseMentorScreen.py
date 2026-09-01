@@ -544,7 +544,7 @@ class ChooseMentorScreen(Screens):
 
     def update_cat_list(self):
         """Updates the cat sprite buttons."""
-        valid_mentors = self.chunks(self.get_valid_mentors(), 24)
+        valid_mentors = self.get_list_chunks(self.get_valid_mentors(), 24)
 
         # clamp current page to a valid page number
         self.current_page = max(1, min(self.current_page, len(valid_mentors)))
@@ -584,8 +584,10 @@ class ChooseMentorScreen(Screens):
                     ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
                     pygame.transform.scale(
                         pygame.image.load(
-                            f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
-                        (50, 50))
+                            f"resources/images/fav_marker_{cat.favourite}.png"
+                        ).convert_alpha(),
+                        (50, 50),
+                    ),
                 )
                 self.fav[str(i)].disable()
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
@@ -668,12 +670,18 @@ class ChooseMentorScreen(Screens):
         potential_mediator_mentors = [
             cat
             for cat in Cat.all_cats_list
-            if cat.status.alive_in_player_clan and cat.status.rank == CatRank.MEDIATOR
+            if cat.status.alive_in_player_clan
+            and cat.status.rank == CatRank.MEDIATOR
             and cat.moons > 0
         ]
         valid_mediator_mentors = []
         invalid_mediator_mentors = []
-        potential_queen_mentors = [cat for cat in Cat.all_cats_list if not (cat.dead or cat.status.is_outsider) and cat.status.rank == CatRank.QUEEN]
+        potential_queen_mentors = [
+            cat
+            for cat in Cat.all_cats_list
+            if not (cat.dead or cat.status.is_outsider)
+            and cat.status.rank == CatRank.QUEEN
+        ]
         valid_queen_mentors = []
         invalid_queen_mentors = []
 
@@ -735,7 +743,7 @@ class ChooseMentorScreen(Screens):
                     valid_mediator_mentors.append(cat)
 
             return valid_mediator_mentors
-        
+
         elif self.the_cat.status.rank == CatRank.QUEENS_APPRENTICE:
             for cat in potential_queen_mentors:
                 # Assume cat is valid initially
@@ -754,7 +762,7 @@ class ChooseMentorScreen(Screens):
                     valid_queen_mentors.append(cat)
 
             return valid_queen_mentors
-        
+
         return []
 
     def on_use(self):

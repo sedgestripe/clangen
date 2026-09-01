@@ -1,28 +1,28 @@
 [
-  {
-    "id": "queen_app_dark_forest_thoughts",
-    "thoughts": [
-      "Is teaching the younger cats how to overpower larger, older ones",
-      "Is teaching the younger cats how to navigate the shadows",
-      "Wishes {PRONOUN/m_c/subject} had taught c_n's kits battle moves",
-      "Is wondering if {PRONOUN/m_c/subject} could convince c_n's queens to begin teaching kits attack methods",
-      "Is calmly staring up at the black sky",
-      "Is trying to weave a den out of thorns and bramble thickets",
-      "Wants to influence the younger generations",
-      "Works with another Dark Forest cat on their attack posture",
-      "Watches over c_n's young from the shadows",
-      "Wishes there was enough dry moss to make a warm nest",
-      "Doesn't understand why the Clans refuse to make their young stronger",
-      "Tries to make a living kit sneak out of camp",
-      "Tries to convince a living kit to go hunting",
-      "Is stronger than most cats think",
-      "Wonders if {PRONOUN/m_c/subject} can still protect c_n's kits",
-      "Wraps their tail around a shivering, lost soul",
-      "Knows that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not alone in {PRONOUN/m_c/poss} hunger",
-      "Is sad {PRONOUN/m_c/subject} never got to finish {PRONOUN/m_c/poss} training",
-      "Thinks about ways to make c_n's kits into true warriors",
-      "Is hoping kits follow in {PRONOUN/m_c/poss} pawsteps",
-      "Wants to learn more ways to teach kits about the Dark Forest"
-    ]
-  }
+    {
+        "id": "queen_app_dark_forest_thoughts",
+        "strings": [
+            "Is teaching the younger cats how to overpower larger, older ones",
+            "Is teaching the younger cats how to navigate the shadows",
+            "Wishes {PRONOUN/m_c/subject} had taught c_n's kits battle moves",
+            "Is wondering if {PRONOUN/m_c/subject} could convince c_n's queens to begin teaching kits attack methods",
+            "Is calmly staring up at the black sky",
+            "Is trying to weave a den out of thorns and bramble thickets",
+            "Wants to influence the younger generations",
+            "Works with another Dark Forest cat on their attack posture",
+            "Watches over c_n's young from the shadows",
+            "Wishes there was enough dry moss to make a warm nest",
+            "Doesn't understand why the Clans refuse to make their young stronger",
+            "Tries to make a living kit sneak out of camp",
+            "Tries to convince a living kit to go hunting",
+            "Is stronger than most cats think",
+            "Wonders if {PRONOUN/m_c/subject} can still protect c_n's kits",
+            "Wraps their tail around a shivering, lost soul",
+            "Knows that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not alone in {PRONOUN/m_c/poss} hunger",
+            "Is sad {PRONOUN/m_c/subject} never got to finish {PRONOUN/m_c/poss} training",
+            "Thinks about ways to make c_n's kits into true warriors",
+            "Is hoping kits follow in {PRONOUN/m_c/poss} pawsteps",
+            "Wants to learn more ways to teach kits about the Dark Forest"
+        ]
+    }
 ]

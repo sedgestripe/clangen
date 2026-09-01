@@ -20,6 +20,7 @@ from ..cat.enums import CatGroup
 
 import pygame_gui
 from scripts.game_structure import game
+
 # pylint: disable=consider-using-dict-items
 # pylint: disable=consider-using-enumerate
 
@@ -27,7 +28,7 @@ from scripts.lifegen_utility import assign_new_bg, get_current_camp
 from scripts.events_module.text_adjust import (
     event_text_adjust,
     process_text,
-    shorten_text_to_fit
+    shorten_text_to_fit,
 )
 from scripts.ui.scale import ui_scale, ui_scale_dimensions
 from scripts.cat.sprites.display_sprites import generate_sprite
@@ -55,7 +56,9 @@ class TalkScreen(Screens):
 
         self.text_index = 0
         self.frame_index = 0
-        self.text_frames = [[text[:i+1] for i in range(len(text))] for text in self.texts]
+        self.text_frames = [
+            [text[: i + 1] for i in range(len(text))] for text in self.texts
+        ]
 
         self._last_adjusted = None
         self.action_line = False
@@ -103,30 +106,35 @@ class TalkScreen(Screens):
         self.created_choice_buttons = False
         self.meow = False
 
-
         self.clan_name_bg = pygame_gui.elements.UIImage(
             ui_scale(pygame.Rect((115, 438), (190, 35))),
             pygame.transform.scale(
-                image_cache.load_image("resources/images/clan_name_bg.png").convert_alpha(),
-                (500, 870)),
-            manager=MANAGER
-            )
+                image_cache.load_image(
+                    "resources/images/clan_name_bg.png"
+                ).convert_alpha(),
+                (500, 870),
+            ),
+            manager=MANAGER,
+        )
 
         short_name = shorten_text_to_fit(str(self.speaking_cat.name), 320, 40)
         self.speaking_cat_elements["cat_name"] = pygame_gui.elements.UITextBox(
             short_name,
             ui_scale(pygame.Rect((115, 437), (190, 40))),
             object_id="#text_box_34_horizcenter_light",
-            manager=MANAGER
-            )
+            manager=MANAGER,
+        )
 
         self.text_type = ""
 
         text_options = self.dialogue_class.load_texts()
 
-        self.chosen_text_key, self.chosen_text_value = (
-            self.dialogue_class.choose_dialogue(text_options, flirt=switch_get_value(Switch.talk_category) == "flirt")
-            )
+        (
+            self.chosen_text_key,
+            self.chosen_text_value,
+        ) = self.dialogue_class.choose_dialogue(
+            text_options, flirt=switch_get_value(Switch.talk_category) == "flirt"
+        )
 
         self.chosen_text_object = {self.chosen_text_key: self.chosen_text_value}
         self.texts = self.chosen_text_value["intro"]
@@ -134,15 +142,18 @@ class TalkScreen(Screens):
         self.current_line = self.texts[0]
         self._last_adjusted = None
 
-        self.text_frames = [[text[:i+1] for i in range(len(text))] for text in self.texts]
+        self.text_frames = [
+            [text[: i + 1] for i in range(len(text))] for text in self.texts
+        ]
 
         self.cat_dict = self.dialogue_class.get_cat_dict()
 
-        talk_box_img = image_cache.load_image("resources/images/talk_box.png").convert_alpha()
+        talk_box_img = image_cache.load_image(
+            "resources/images/talk_box.png"
+        ).convert_alpha()
         self.talk_box = pygame_gui.elements.UIImage(
-                ui_scale(pygame.Rect((90, 470), (624, 151))),
-                talk_box_img
-            )
+            ui_scale(pygame.Rect((90, 470), (624, 151))), talk_box_img
+        )
 
         self.back_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((25, 25), (105, 30))),
@@ -153,36 +164,36 @@ class TalkScreen(Screens):
         )
         self.scroll_container = pygame_gui.elements.UIScrollingContainer(
             ui_scale(pygame.Rect((250, 475), (450, 150)))
-            )
+        )
         self.dialogue_box = pygame_gui.elements.UITextBox(
             "",
             ui_scale(pygame.Rect((0, 10), (450, -100))),
             object_id="#text_box_30_horizleft",
             container=self.scroll_container,
-            manager=MANAGER
-            )
+            manager=MANAGER,
+        )
 
         self.textbox_graphic = pygame_gui.elements.UIImage(
-                ui_scale(pygame.Rect((90, 471), (163, 150))),
-                image_cache.load_image("resources/images/textbox_graphic.png").convert_alpha()
-            )
+            ui_scale(pygame.Rect((90, 471), (163, 150))),
+            image_cache.load_image(
+                "resources/images/textbox_graphic.png"
+            ).convert_alpha(),
+        )
 
         self.speaking_cat_elements["cat_image"] = pygame_gui.elements.UIImage(
             ui_scale(pygame.Rect((35, 450), (200, 200))),
-            pygame.transform.scale(
-            generate_sprite(self.speaking_cat),
-            (200, 200)),
-            manager=MANAGER
-            )
+            pygame.transform.scale(generate_sprite(self.speaking_cat), (200, 200)),
+            manager=MANAGER,
+        )
 
         self.paw = pygame_gui.elements.UIImage(
-                ui_scale(pygame.Rect((685, 590), (15, 15))),
-                image_cache.load_image("resources/images/cursor.png").convert_alpha()
-            )
+            ui_scale(pygame.Rect((685, 590), (15, 15))),
+            image_cache.load_image("resources/images/cursor.png").convert_alpha(),
+        )
         self.paw.visible = False
 
     def adjust_text(self, text):
-        """ replaces names and pronouns """
+        """replaces names and pronouns"""
         process_text_dict = {}
 
         # Cat Dict looks like:
@@ -197,19 +208,25 @@ class TalkScreen(Screens):
 
         for abbrev in self.cat_dict:
             abbrev_cat = self.cat_dict[abbrev]
-            process_text_dict[abbrev] = (str(abbrev_cat.name), choice(abbrev_cat.pronouns))
+            process_text_dict[abbrev] = (
+                str(abbrev_cat.name),
+                choice(abbrev_cat.pronouns),
+            )
 
-        process_text_dict["y_c"] = (str(game.clan.your_cat.name), choice(game.clan.your_cat.pronouns))
-        process_text_dict["t_c"] = (str(self.the_cat.name), choice(self.the_cat.pronouns))
+        process_text_dict["y_c"] = (
+            str(game.clan.your_cat.name),
+            choice(game.clan.your_cat.pronouns),
+        )
+        process_text_dict["t_c"] = (
+            str(self.the_cat.name),
+            choice(self.the_cat.pronouns),
+        )
 
         processed_text = process_text(text, process_text_dict)
 
         # event text adjust for clan name
         final_text = event_text_adjust(
-            Cat,
-            text=processed_text,
-            clan=game.clan,
-            other_clan=self.other_clan
+            Cat, text=processed_text, clan=game.clan, other_clan=self.other_clan
         )
 
         return final_text
@@ -262,39 +279,23 @@ class TalkScreen(Screens):
                 f"{camp_bg_base_dir}/{biome}/{leaf}_{camp_nr}_{light_dark}.png"
             )
             all_backgrounds.append(platform_dir)
-        
-        #LG
+
+        # LG
         starclan_camp = "resources/images/dead_camps/scbackground_sunsetclouds.png"
         df_camp = "resources/images/dead_camps/dfbackground_eclipse.png"
         ur_camp = "resources/images/urbg.png"
 
-        if (
-            self.the_cat.status.group == CatGroup.STARCLAN
-            ):
+        if self.the_cat.status.group == CatGroup.STARCLAN:
             all_backgrounds = [
                 starclan_camp,
                 starclan_camp,
                 starclan_camp,
-                starclan_camp
+                starclan_camp,
             ]
-        elif (
-            self.the_cat.status.group == CatGroup.UNKNOWN_RESIDENCE
-        ):
-            all_backgrounds = [
-                ur_camp,
-                ur_camp,
-                ur_camp,
-                ur_camp
-            ]
-        elif (
-            self.the_cat.status.group == CatGroup.DARK_FOREST
-        ):
-            all_backgrounds = [
-                df_camp,
-                df_camp,
-                df_camp,
-                df_camp
-            ]
+        elif self.the_cat.status.group == CatGroup.UNKNOWN_RESIDENCE:
+            all_backgrounds = [ur_camp, ur_camp, ur_camp, ur_camp]
+        elif self.the_cat.status.group == CatGroup.DARK_FOREST:
+            all_backgrounds = [df_camp, df_camp, df_camp, df_camp]
 
         self.add_bgs(
             {
@@ -334,32 +335,35 @@ class TalkScreen(Screens):
         if f"{self.current_scene}_choices" not in self.chosen_text_value:
             self.created_choice_buttons = True
             self.dialogue_class.handle_scene_effects(
-                self.current_scene,
-                self.chosen_text_value,
-                self.cat_dict
-                )
+                self.current_scene, self.chosen_text_value, self.cat_dict
+            )
             return
 
         for c in self.chosen_text_value[f"{self.current_scene}_choices"]:
-            
-            text = self.chosen_text_value[f"{self.current_scene}_choices"][c]['text']
-            scene = self.chosen_text_value[f"{self.current_scene}_choices"][c]['next_scene']
+            text = self.chosen_text_value[f"{self.current_scene}_choices"][c]["text"]
+            scene = self.chosen_text_value[f"{self.current_scene}_choices"][c][
+                "next_scene"
+            ]
 
             # The clickable button
             self.choice_buttons[scene] = UIImageButton(
                 ui_scale(pygame.Rect((390, 427 + y_pos), (34, 34))),
-                text = "",
+                text="",
                 object_id="#dialogue_choice_button",
-                manager=MANAGER
-                )
+                manager=MANAGER,
+            )
 
             # the background image for the text
             self.choice_display["bg" + scene] = pygame_gui.elements.UIImage(
                 ui_scale(pygame.Rect((430, 427 + y_pos), (270, 35))),
-                pygame.transform.scale(image_cache.load_image("resources/images/option_bg.png").convert_alpha(),
-                (270, 35)),
-                manager=MANAGER
-                )
+                pygame.transform.scale(
+                    image_cache.load_image(
+                        "resources/images/option_bg.png"
+                    ).convert_alpha(),
+                    (270, 35),
+                ),
+                manager=MANAGER,
+            )
 
             # the text
             # use adjust_text to get r_c names and pronouns
@@ -368,8 +372,8 @@ class TalkScreen(Screens):
                 choice_display_text,
                 ui_scale(pygame.Rect((435, 428 + y_pos), (270, 35))),
                 object_id="#text_box_30_horizleft",
-                manager=MANAGER
-                )
+                manager=MANAGER,
+            )
 
             y_pos -= 40
 
@@ -406,7 +410,7 @@ class TalkScreen(Screens):
             fragments = text_string.split("|")
             if fragments[1] in self.cat_dict:
                 cat = self.cat_dict[fragments[1]]
-    
+
         return text_string, cat
 
     def handle_event(self, event):
@@ -444,7 +448,9 @@ class TalkScreen(Screens):
             self._last_adjusted = marker
             self.action_line = False
 
-            self.texts[self.text_index], speaking_cat = self.get_speaking_cat(self.current_line)
+            self.texts[self.text_index], speaking_cat = self.get_speaking_cat(
+                self.current_line
+            )
 
             # text isnt adjusted for names and pronouns until the very end
             # that being. now
@@ -460,25 +466,27 @@ class TalkScreen(Screens):
                 short_name,
                 ui_scale(pygame.Rect((115, 437), (190, 40))),
                 object_id="#text_box_34_horizcenter_light",
-                manager=MANAGER
-                )
+                manager=MANAGER,
+            )
 
             # Redo cat_name and cat_image to account for different cats speaking.
             self.speaking_cat_elements["cat_image"].kill()
             self.speaking_cat_elements["cat_image"] = pygame_gui.elements.UIImage(
                 ui_scale(pygame.Rect((35, 450), (200, 200))),
-                pygame.transform.scale(
-                generate_sprite(self.speaking_cat),
-                (200, 200)),
-                manager=MANAGER
-                )
+                pygame.transform.scale(generate_sprite(self.speaking_cat), (200, 200)),
+                manager=MANAGER,
+            )
 
             # get rid of the |abbrev| if its there
             if "|" in self.texts[self.text_index]:
                 self.texts[self.text_index] = self.texts[self.text_index].split("|")[-1]
 
             # action lines
-            if self.texts[self.text_index] and self.texts[self.text_index][0] == "[" and self.texts[self.text_index][-1] == "]":
+            if (
+                self.texts[self.text_index]
+                and self.texts[self.text_index][0] == "["
+                and self.texts[self.text_index][-1] == "]"
+            ):
                 self.action_line = True
                 self.speaking_cat_elements["cat_name"].hide()
                 self.speaking_cat_elements["cat_image"].hide()
@@ -487,23 +495,24 @@ class TalkScreen(Screens):
                 self.speaking_cat_elements["cat_image"].show()
 
             # rebuild the typing frames from the now-final text for this line
-            self.text_frames = [[text[:i+1] for i in range(len(text))] for text in self.texts]
+            self.text_frames = [
+                [text[: i + 1] for i in range(len(text))] for text in self.texts
+            ]
 
         action_line = self.action_line
 
         if self.text_index < len(self.text_frames):
-            if now >= self.next_frame_time and self.frame_index < len(self.text_frames[self.text_index]) - 1:
+            if (
+                now >= self.next_frame_time
+                and self.frame_index < len(self.text_frames[self.text_index]) - 1
+            ):
                 self.frame_index += 1
                 self.next_frame_time = now + self.typing_delay
                 if (
-                    (
-                        self.frame_index == 1 or
-                        self.frame_index % 4 == 0
-                    ) and
-                    not action_line and
-                    game_setting_get("dialogue_typing_sound")
-                    ):
-
+                    (self.frame_index == 1 or self.frame_index % 4 == 0)
+                    and not action_line
+                    and game_setting_get("dialogue_typing_sound")
+                ):
                     game.audio.sound.play("dialogue_type_classic_high")
         # the end of the line
         if self.text_index == len(self.text_frames) - 1:

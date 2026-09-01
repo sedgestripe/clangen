@@ -9,7 +9,7 @@ from scripts.ui.windows.window_base_class import GameWindow
 from scripts.game_structure.game.switches import (
     Switch,
     switch_get_value,
-    switch_set_value
+    switch_set_value,
 )
 from scripts.ui.scale import ui_scale
 
@@ -22,7 +22,7 @@ class MateWindow(GameWindow):
         self.set_blocking(True)
         switch_set_value(Switch.window_open, True)
 
-        self.clan_name = str(game.clan.name + 'Clan')
+        self.clan_name = str(game.clan.name + "Clan")
         self.last_screen = last_screen
         self.mate = switch_get_value(Switch.new_mate)
         self.pick_path_message = UITextBoxTweaked(
@@ -30,7 +30,7 @@ class MateWindow(GameWindow):
             ui_scale(pygame.Rect((20, 20), (260, -1))),
             line_spacing=1,
             object_id="#text_box_30_horizcenter",
-            container=self
+            container=self,
         )
         self.begin_anew_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((55, 95), (80, 30))),
@@ -50,8 +50,6 @@ class MateWindow(GameWindow):
         self.begin_anew_button.enable()
         self.mediator_button.enable()
 
-
-
     def process_event(self, event):
         super().process_event(event)
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
@@ -60,7 +58,7 @@ class MateWindow(GameWindow):
                     game.last_screen_forupdate = None
                     switch_set_value(Switch.window_open, False)
 
-                    # game.switch_screens = True                    
+                    # game.switch_screens = True
                     self.begin_anew_button.kill()
                     self.pick_path_message.kill()
                     self.mediator_button.kill()

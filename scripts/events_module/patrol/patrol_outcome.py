@@ -11,8 +11,10 @@ import i18n
 import pygame
 
 from scripts.cat.personality import Personality
+from scripts.config import get_config
 from scripts.events_module.future.prep_and_trigger import prep_future_event
 from scripts.clan_package.settings import get_clan_setting
+from scripts.events_module.relationship import relation_events
 from scripts.game_structure import constants
 from scripts.game_structure.game.settings import game_setting_get
 
@@ -24,6 +26,7 @@ from scripts.events_module.consequences import (
     create_new_cat_block,
     gather_cat_objects,
     unpack_rel_block,
+    check_stolen_vitality,
 )
 from scripts.events_module.event_filters import filter_relationship_type, event_for_cat
 from scripts.clan_package.cotc import change_clan_reputation, change_clan_relations
@@ -35,12 +38,13 @@ from scripts.cat.pelts import Pelt
 from scripts.cat_relations.relationship import Relationship
 from scripts.clan_resources.freshkill import (
     ADDITIONAL_PREY,
-    PREY_REQUIREMENT,
     HUNTER_EXP_BONUS,
     HUNTER_BONUS,
     FRESHKILL_ACTIVE,
 )
-
+from scripts.clan_package.get_clan_cats import (
+    find_alive_cats_with_rank,
+)
 from scripts.game_structure.game.switches import (
     switch_get_value,
     Switch,
@@ -173,6 +177,13 @@ class PatrolOutcome:
         # Determine which outcomes are possible
         allowed_outcomes = []
         for outcome in possible_outcomes:
+            # LG EDIT
+            if "med_name" in outcome.text:
+                if not find_alive_cats_with_rank(
+                    Cat, [CatRank.MEDICINE_APPRENTICE, CatRank.MEDICINE_APPRENTICE]
+                ):
+                    continue
+            # --->
             if outcome.stat_skill or outcome.stat_trait:
                 outcome._get_stat_cat(patrol)
                 if not isinstance(outcome.stat_cat, Cat):
@@ -247,8 +258,8 @@ class PatrolOutcome:
                     history_scar=_d.get("history_text", {}).get("scar"),
                     # LG
                     murder=_d.get("murder"),
-                    convert =_d.get("convert"),
-                    faith_effects = _d.get("faith_effects"),
+                    convert=_d.get("convert"),
+                    faith_effects=_d.get("faith_effects"),
                     accessory=_d.get("accessory"),
                     # ---
                     new_cat=_d.get("new_cat"),
@@ -272,7 +283,9 @@ class PatrolOutcome:
         """Create a hyperlink to a cat profile from patrol results."""
         return f'<a href="cat://{cat.ID}"><b>{escape(str(cat.name))}</b></a>'
 
-    def execute_outcome(self, patrol: "Patrol", chosen_lifegen_cats=[]) -> Tuple[str, str, list, Optional[str]]:
+    def execute_outcome(
+        self, patrol: "Patrol", chosen_lifegen_cats=[]
+    ) -> Tuple[str, str, list, Optional[str]]:
         """
         Executes the outcome. Returns a tuple with the final outcome text, the results text, and any outcome art
         :returns: Outcome text, results text, list of created rel logs (might be empty), outcome art (might be None)
@@ -283,17 +296,19 @@ class PatrolOutcome:
         results = [self._handle_new_cats(patrol)]
 
         # the text has to be processed before - otherwise leader might be referenced with their warrior name
-        processed_text = event_text_adjust(Cat,
-                                        self.text,
-                                        patrol_leader=patrol.patrol_leader,
-                                        random_cat=patrol.random_cat,
-                                        stat_cat=self.stat_cat,
-                                        patrol_cats=patrol.patrol_cats,
-                                        patrol_apprentices=patrol.patrol_apprentices,
-                                        new_cats=patrol.new_cats,
-                                        chosen_lifegen_cats=chosen_lifegen_cats,
-                                        clan=game.clan,
-                                        other_clan=patrol.other_clan)
+        processed_text = event_text_adjust(
+            Cat,
+            self.text,
+            patrol_leader=patrol.patrol_leader,
+            random_cat=patrol.random_cat,
+            stat_cat=self.stat_cat,
+            patrol_cats=patrol.patrol_cats,
+            patrol_apprentices=patrol.patrol_apprentices,
+            new_cats=patrol.new_cats,
+            chosen_lifegen_cats=chosen_lifegen_cats,
+            clan=game.clan,
+            other_clan=patrol.other_clan,
+        )
 
         # This order is important.
         results.append(self._handle_murder(patrol))
@@ -301,7 +316,7 @@ class PatrolOutcome:
         results.append(self._handle_death(patrol))
         results.append(self._handle_lost(patrol))
         # LG
-        if not get_clan_setting('all accessories'):
+        if not get_clan_setting("all accessories"):
             results.append(self._handle_accessories(patrol))
         results.append(self._handle_df_convert(patrol))
         results.append(self._handle_faith_changes(patrol))
@@ -441,7 +456,6 @@ class PatrolOutcome:
             if x in ("r_c", "p_l", "app1", "app2", "any", "not_pl_rc", "not_pl", "y_c")
             or "r_c:" in x
         ]
-        
 
         # Special default behavior for patrols less than two cats.
         # Patrol leader is the only one allowed to be stat_cat in patrols equal to or less than than two cats
@@ -452,7 +466,7 @@ class PatrolOutcome:
                 allowed_specific = ["p_l"]
 
             patrolcats = patrol.patrol_cats
-        
+
         else:
             # this is lifegen stuff to add random abbrevs to the list for stat cat possibilities
             # so its not just cats in the patrol
@@ -576,13 +590,11 @@ class PatrolOutcome:
             gm_modifier = 1
         elif game.clan.game_mode == "expanded":
             gm_modifier = 3
-        elif game.clan.game_mode == "cruel season":
-            gm_modifier = 6
         else:
             gm_modifier = 1
 
         base_exp = 0
-        if "master" in (x.experience_level for x in patrol.patrol_cats):
+        if "masterful" in (x.experience_level for x in patrol.patrol_cats):
             max_boost = 10
         else:
             max_boost = 0
@@ -601,9 +613,9 @@ class PatrolOutcome:
         if gained_exp or app_exp:
             for cat in patrol.patrol_cats:
                 if cat.status.rank.is_any_apprentice_rank():
-                    cat.experience = cat.experience + app_exp
+                    cat.add_experience(app_exp)
                 else:
-                    cat.experience = cat.experience + gained_exp
+                    cat.add_experience(gained_exp)
 
         return ""
 
@@ -644,7 +656,9 @@ class PatrolOutcome:
             if _cat.dead:
                 continue
             if _cat.status.is_leader:
+                lives_lost = 0
                 if "all_lives" in used_extra_tags:
+                    lives_lost = game.clan.leader_lives
                     game.clan.leader_lives = 0
                     results.append(
                         event_text_adjust(
@@ -664,6 +678,7 @@ class PatrolOutcome:
                         )
                     )
                 else:
+                    lives_lost = 1
                     game.clan.leader_lives -= 1
                     results.append(
                         event_text_adjust(
@@ -672,6 +687,9 @@ class PatrolOutcome:
                             main_cat=_cat,
                         )
                     )
+                if extra_result := check_stolen_vitality(_cat, lives_lost):
+                    results.append(extra_result)
+
             else:
                 catnames.append(self._profile_link(_cat))
             # Kill Cat
@@ -711,48 +729,45 @@ class PatrolOutcome:
             count=len(cats_to_lose),
             cats=adjust_list_text([self._profile_link(cat) for cat in cats_to_lose]),
         )
-    
-    def _handle_df_convert(self, patrol:'Patrol') -> str:
-        """ Handle converting cats to the DF in DF patrols """
-        
+
+    def _handle_df_convert(self, patrol: "Patrol") -> str:
+        """Handle converting cats to the DF in DF patrols"""
+
         if not self.convert:
             return ""
-        
-        cats_to_convert = gather_cat_objects(
-            Cat, self.convert, patrol, self.stat_cat
-            )
+
+        cats_to_convert = gather_cat_objects(Cat, self.convert, patrol, self.stat_cat)
         if not cats_to_convert:
-            print(f"Something was indicated in convert, but no cats were indicated: {self.convert}")
+            print(
+                f"Something was indicated in convert, but no cats were indicated: {self.convert}"
+            )
             return ""
-        
-        
+
         results = []
         for _cat in cats_to_convert:
             results.append(f"{_cat.name} has joined the Dark Forest.")
             _cat.join_df()
-            
+
         return " ".join(results)
-    
-    def _handle_faith_changes(self, patrol:'Patrol') -> str:
-        """ Handle changing a cats faith in patrols """
-        
+
+    def _handle_faith_changes(self, patrol: "Patrol") -> str:
+        """Handle changing a cats faith in patrols"""
+
         if not self.faith_effects:
             return ""
-        
+
         results = []
         for block in self.faith_effects:
             faith_cat = block.get("faith_cat", ())
             amount = block.get("amount")
-            
+
             # Gather acual cat objects:
             faith_cat_ob = gather_cat_objects(Cat, faith_cat, patrol, self.stat_cat)
-            
+
             if None in faith_cat_ob:
                 faith_cat_ob.remove(None)
 
-
             for _cat in faith_cat_ob:
-
                 # results.append(f"{_cat.name}'s faith has changed.")
                 _cat.faith = _cat.faith + amount
 
@@ -761,13 +776,12 @@ class PatrolOutcome:
                     _cat.faith = -9
                 elif _cat.faith > 9:
                     _cat.faith = 9
-        
+
         # return " ".join(results)
         return " "
-        
-    
-    def _handle_murder(self, patrol:'Patrol') -> str:
-        """ cat killin each other on patrol. just dark forest right now"""
+
+    def _handle_murder(self, patrol: "Patrol") -> str:
+        """cat killin each other on patrol. just dark forest right now"""
 
         if not self.murder:
             return ""
@@ -776,11 +790,11 @@ class PatrolOutcome:
         for block in self.murder:
             murderer = block.get("murderer", ())
             victim = block.get("victim", ())
-            
+
             # Gather acual cat objects:
             murderer_ob = gather_cat_objects(Cat, murderer, patrol, self.stat_cat)
             victim_ob = gather_cat_objects(Cat, victim, patrol, self.stat_cat)
-            
+
             murderer_ob = [c for c in murderer_ob if c is not None]
             victim_ob = [c for c in victim_ob if c is not None]
 
@@ -790,14 +804,16 @@ class PatrolOutcome:
 
             results.append(f"{murderer_ob[-1].name} has murdered {victim_ob[-1].name}.")
 
-            self.__handle_death_history(cat=victim_ob[-1], patrol=patrol, murderer=murderer_ob[-1])
+            self.__handle_death_history(
+                cat=victim_ob[-1], patrol=patrol, murderer=murderer_ob[-1]
+            )
             victim_ob[-1].die()
 
         return " ".join(results)
-          
-    def _handle_condition_and_scars(self, patrol:'Patrol') -> str:
-        """ Handle injuring cats, or giving scars """
-        
+
+    def _handle_condition_and_scars(self, patrol: "Patrol") -> str:
+        """Handle injuring cats, or giving scars"""
+
         if not self.injury:
             return ""
 
@@ -890,19 +906,19 @@ class PatrolOutcome:
                     )
 
         return " ".join(results)
-    
-    def _handle_accessories(self, patrol:'Patrol') -> str:
-        """ cats getting accessories """
-        
+
+    def _handle_accessories(self, patrol: "Patrol") -> str:
+        """cats getting accessories"""
+
         if not self.accessory:
             return ""
-        
+
         results = []
-       
+
         for block in self.accessory:
             cats = gather_cat_objects(Cat, block.get("cats", ()), patrol, self.stat_cat)
             accessory = block.get("accessory", ())
-            
+
             if not (cats and accessory):
                 print(f"something is wrong with accessory - {block}")
                 continue
@@ -913,9 +929,9 @@ class PatrolOutcome:
                         results.append(f"{_cat.name} got an accessory!")
 
         return " ".join(results)
-            
+
     def _handle_rep_changes(self) -> str:
-        """ Handles any changes in outsider rep"""
+        """Handles any changes in outsider rep"""
 
         if not isinstance(self.outsider_rep, int):
             return ""
@@ -936,11 +952,17 @@ class PatrolOutcome:
 
         change_clan_relations(patrol.other_clan, self.other_clan_rep)
         if self.other_clan_rep > 0:
-            return i18n.t("screens.patrol.clan_rep_improved", clan=patrol.other_clan)
+            return i18n.t(
+                "screens.patrol.clan_rep_improved", clan=patrol.other_clan.name
+            )
         elif self.other_clan_rep == 0:
-            return i18n.t("screens.patrol.clan_rep_neutral", clan=patrol.other_clan)
+            return i18n.t(
+                "screens.patrol.clan_rep_neutral", clan=patrol.other_clan.name
+            )
         else:
-            return i18n.t("screens.patrol.clan_rep_worsened", clan=patrol.other_clan)
+            return i18n.t(
+                "screens.patrol.clan_rep_worsened", clan=patrol.other_clan.name
+            )
 
     def _handle_herbs(self, patrol: "Patrol") -> str:
         """Handle giving herbs"""
@@ -958,11 +980,21 @@ class PatrolOutcome:
         patrol_size_modifier = round(len(patrol.patrol_cats) * 0.80)
 
         if "random_herbs" in self.herbs:
+            # we want better control over how many herbs they'll gather in total here
+            quantity_allowed = 0
+            for cat in patrol.patrol_cats:
+                quantity_allowed += constants.CONFIG["clan_resources"]["herbs"][
+                    "general_patrol_quantity_per_cat"
+                ]
+                cat_skills = cat.skills.get_all()
+                quantity_allowed += cat_skills.get(SkillPath.SENSE, 0)
+
             # get random herbs, add to storage, and get patrol outcome msg
             list_of_herb_strs, found_herbs = game.clan.herb_supply.get_found_herbs(
                 med_cat=patrol.patrol_leader,
                 general_amount_bonus=large_bonus,
                 specific_quantity_bonus=patrol_size_modifier,
+                specific_quantity_allowed=quantity_allowed,
             )
 
         # now we grab any other herbs that were tagged
@@ -1015,7 +1047,9 @@ class PatrolOutcome:
         if not self.prey or game.clan.game_mode == "classic":
             return ""
 
-        basic_amount = PREY_REQUIREMENT[CatRank.WARRIOR] + ADDITIONAL_PREY
+        basic_amount = (
+            get_config("prey.prey_requirement")[CatRank.WARRIOR] + ADDITIONAL_PREY
+        )
 
         prey_types = {
             "very_small": basic_amount / 2,
@@ -1088,7 +1122,7 @@ class PatrolOutcome:
             return ""
 
         results = []
-        in_event_cats  = {
+        in_event_cats = {
             "p_l": patrol.patrol_leader,
             "r_c": patrol.random_cat,
         }
@@ -1120,11 +1154,11 @@ class PatrolOutcome:
                 if cat.dead:
                     # LIFEGEN --------------------------------------------------------------------------
                     if (
-                        cat.history and
-                        cat.history.beginning and
-                        "encountered" in cat.history.beginning and
-                        cat.history.beginning["encountered"] is True
-                        ):
+                        cat.history
+                        and cat.history.beginning
+                        and "encountered" in cat.history.beginning
+                        and cat.history.beginning["encountered"] is True
+                    ):
                         if cat.ID in game.clan.your_cat.mate:
                             cat.thought = f"Is missing {game.clan.your_cat.name}"
                             first_encountered.append(str(cat.name))
@@ -1140,6 +1174,8 @@ class PatrolOutcome:
                     outside.append(self._profile_link(cat))
                 else:
                     new.append(self._profile_link(cat))
+                    relation_events.trigger_joining_relationship_events([cat])
+
             for type_list, string in [
                 (dead, "screens.patrol.dead_outsider"),
                 (outside, "screens.patrol.met_outsider"),
@@ -1158,7 +1194,7 @@ class PatrolOutcome:
             del type_list, string
 
             cat.pelt.inventory = []
-            
+
         # Check to see if any young litters joined with alive parents.
         # If so, see if recovering from birth condition is needed
         # and give the condition
@@ -1179,7 +1215,6 @@ class PatrolOutcome:
                         break  # Break - only one parent ever gives birth
 
         return " ".join(results)
-            
 
     def _handle_mentor_app(self, patrol: "Patrol") -> str:
         """Handles mentor influence on apprentices"""
@@ -1240,9 +1275,7 @@ class PatrolOutcome:
             history_text = (
                 history_text
                 if "o_c_n" not in history_text
-                else history_text.replace(
-                    "o_c_n", i18n.t("general.clan", name=patrol.other_clan.name)
-                )
+                else history_text.replace("o_c_n", patrol.other_clan.name)
             )
 
             cat.history.add_scar(history_text)
@@ -1272,18 +1305,14 @@ class PatrolOutcome:
             final_death_history = (
                 final_death_history
                 if "o_c_n" not in final_death_history
-                else final_death_history.replace(
-                    "o_c_n", i18n.t("general.clan", name=patrol.other_clan.name)
-                )
+                else final_death_history.replace("o_c_n", patrol.other_clan.name)
             )
 
         if history_scar and isinstance(history_scar, str):
             history_scar = (
                 history_scar
                 if "o_c_n" not in history_scar
-                else history_scar.replace(
-                    "o_c_n", i18n.t("general.clan", name=patrol.other_clan.name)
-                )
+                else history_scar.replace("o_c_n", patrol.other_clan.name)
             )
 
         cat.history.add_possible_history(
@@ -1303,7 +1332,7 @@ class PatrolOutcome:
 
         if final_death_history and isinstance(final_death_history, str):
             final_death_history = final_death_history.replace(
-                "o_c_n", i18n.t("general.clan", name=patrol.other_clan.name)
+                "o_c_n", patrol.other_clan.name
             )
 
         # LG
@@ -1311,8 +1340,10 @@ class PatrolOutcome:
         cat.history.add_death(death_text=final_death_history, other_cat=murderer)
         if murderer:
             murderer.history.add_murder(murderer_id=murderer.ID, victim=cat)
-            murderer.history.reveal_murder(victim=cat, murderer_id=murderer.ID, clan_reveal=False)
-    
+            murderer.history.reveal_murder(
+                victim=cat, murderer_id=murderer.ID, clan_reveal=False
+            )
+
     def __handle_accs(self, cat: Cat, acc_list: str) -> str:
         if game_setting_get("lifegen_sprite_changes"):
             acc_categories = Pelt.lifegen_acc_categories

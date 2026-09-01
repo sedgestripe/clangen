@@ -77,7 +77,7 @@ class SwitchClanScreen(Screens):
                         # rebuild to update menu scheme differences between game modes
                         rebuild_core()
 
-        elif event.type == pygame.KEYDOWN and game_setting_get("keybinds"):
+        elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ESCAPE:
                 self.change_screen(GameScreen.START)
 
@@ -150,8 +150,8 @@ class SwitchClanScreen(Screens):
             manager=MANAGER,
             anchors={"centerx": "centerx"},
             text_kwargs={
-                "clan": game.clan.displayname if game.clan else "",
-                "clan_id": game.clan.name if game.clan else "",
+                "clan": game.clan.name if game.clan else "",
+                "clan_id": game.clan.save_id if game.clan else "",
                 "count": 1 if game.clan else 0,
             },
         )
@@ -205,16 +205,18 @@ class SwitchClanScreen(Screens):
                     for item in clan_cats_json:
                         if item["ID"] == you:
                             # if theres a better way to do this Keep it to yourself
-                            if isinstance(item['status'], dict):
+                            if isinstance(item["status"], dict):
                                 rank = item["status"]["group_history"][-1]["rank"]
                             else:
-                                rank = item['status']
+                                rank = item["status"]
                             if rank in [CatRank.KITTEN, CatRank.NEWBORN]:
                                 suffix = "kit"
                             elif rank in [
-                                CatRank.APPRENTICE, CatRank.QUEENS_APPRENTICE,
-                                CatRank.MEDIATOR_APPRENTICE, CatRank.MEDICINE_APPRENTICE
-                                ]:
+                                CatRank.APPRENTICE,
+                                CatRank.QUEENS_APPRENTICE,
+                                CatRank.MEDIATOR_APPRENTICE,
+                                CatRank.MEDICINE_APPRENTICE,
+                            ]:
                                 suffix = "paw"
                             elif rank == CatRank.LEADER:
                                 suffix = "star"
@@ -271,7 +273,7 @@ class SwitchClanScreen(Screens):
             else:
                 print("Can't find info for", clan + "Clan")
                 tooltext = None
-            
+
             self.your_cat_buttons[-1].append(
                 UIImageButton(
                     pygame.Rect(
@@ -314,7 +316,6 @@ class SwitchClanScreen(Screens):
                 self.clan_name.append([])
                 self.delete_buttons.append([])
                 self.your_cat_buttons.append([])
-
 
         self.next_page_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((456, 540), (34, 34))),

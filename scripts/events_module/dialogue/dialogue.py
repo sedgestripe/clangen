@@ -14,12 +14,9 @@ from scripts.events_module.filter_random_cats import choose_random_cats
 
 # pylint: disable=consider-using-dict-items
 
-class Dialogue():
-    def __init__(
-        self,
-        cat: Cat,
-        you: Cat
-    ):
+
+class Dialogue:
+    def __init__(self, cat: Cat, you: Cat):
         self.cat = cat
         self.you = you
         self.debug = constants.CONFIG["lifegen"]["debug"]["debug_ensure_dialogue"]
@@ -46,51 +43,58 @@ class Dialogue():
             possible_texts.update(
                 load_lang_resource(
                     f"{resource_dir}/{self.cat.status.rank.replace(' ', '_')}.json"
-                    )
                 )
+            )
             if self.cat.status.is_outsider:
-                possible_texts.update(load_lang_resource(f"{resource_dir}/general_outsider.json"))
+                possible_texts.update(
+                    load_lang_resource(f"{resource_dir}/general_outsider.json")
+                )
             else:
                 if self.cat.status.rank != CatRank.NEWBORN:
                     # newborns will no longer participate in nuanced discussion
 
-                    if not self.cat.status.rank.is_baby() and not self.you.status.rank.is_baby():
+                    if (
+                        not self.cat.status.rank.is_baby()
+                        and not self.you.status.rank.is_baby()
+                    ):
                         possible_texts.update(
-                            load_lang_resource(
-                                f"{resource_dir}/general_no_kit.json"
-                                )
-                            )
-                    if self.cat.age != CatAge.NEWBORN and self.you.age != CatAge.NEWBORN:
+                            load_lang_resource(f"{resource_dir}/general_no_kit.json")
+                        )
+                    if (
+                        self.cat.age != CatAge.NEWBORN
+                        and self.you.age != CatAge.NEWBORN
+                    ):
                         possible_texts.update(
                             load_lang_resource(
                                 f"{resource_dir}/general_no_newborn.json"
-                                )
                             )
-                    if not self.cat.status.rank.is_baby() and self.you.status.rank.is_baby():
+                        )
+                    if (
+                        not self.cat.status.rank.is_baby()
+                        and self.you.status.rank.is_baby()
+                    ):
                         possible_texts.update(
-                            load_lang_resource(
-                                f"{resource_dir}/general_you_kit.json"
-                                )
-                            )
+                            load_lang_resource(f"{resource_dir}/general_you_kit.json")
+                        )
                     if game.clan.focus:
                         possible_texts.update(
                             load_lang_resource(
                                 f"{resource_dir}/focuses/{game.clan.focus}.json"
-                                )
                             )
+                        )
                     if special_date:
                         possible_texts.update(
                             load_lang_resource(
                                 f"{resource_dir}/focuses/{special_date.patrol_tag}.json"
-                                )
                             )
-                    if constants.CONFIG['fun']['april_fools']:
+                        )
+                    if constants.CONFIG["fun"]["april_fools"]:
                         possible_texts.update(
                             load_lang_resource(
                                 f"{resource_dir}/focuses/aprilfools.json"
-                                )
                             )
-        
+                        )
+
         # uncomment below to limit dialogue range
         # this can cut down on dialogue delay, but also cause some meow errors
 
@@ -121,16 +125,16 @@ class Dialogue():
         for key, block in possible_texts.items():
             if "season" in block:
                 if (
-                    game.clan.current_season not in block["season"] and
-                    game.clan.current_season.lower() not in block["season"]
-                    ):
+                    game.clan.current_season not in block["season"]
+                    and game.clan.current_season.lower() not in block["season"]
+                ):
                     continue
             if "biome" in block:
                 if (
-                    block["biome"] and
-                    game.clan.biome not in block["biome"] and
-                    game.clan.biome.lower() not in block["biome"]
-                    ):
+                    block["biome"]
+                    and game.clan.biome not in block["biome"]
+                    and game.clan.biome.lower() not in block["biome"]
+                ):
                     continue
             if "camp" in block:
                 if block["camp"] and game.clan.camp_bg not in block["camp"]:
@@ -146,7 +150,7 @@ class Dialogue():
             else:
                 print("Warning: Dialogue", key, "has no frequency.")
                 possible_dialogue.update({key: block})
-            
+
             if flirt:
                 if "tags" in block:
                     if "reject" in block["tags"] and flirt_success:
@@ -197,10 +201,12 @@ class Dialogue():
         chosen_key = None
         chosen_cat_dict = {}
         if self.debug:
-            if constants.CONFIG["lifegen"]["debug"]["debug_dialogue_override_filtering"]:
+            if constants.CONFIG["lifegen"]["debug"][
+                "debug_dialogue_override_filtering"
+            ]:
                 print(f"Debug: Dialogue set to {self.debug} with overridden filtering.")
                 chosen_key = self.debug
-                
+
                 # assembling a new "cats" block with empty constraints for purely random cats
                 debugged_cats_block = {}
                 for cat in possible_dialogue[chosen_key]["cats"]:
@@ -212,7 +218,7 @@ class Dialogue():
                     rel_block=[],
                     your_cat=self.you,
                     the_cat=self.cat,
-                    cat_dict=self.cat_dict
+                    cat_dict=self.cat_dict,
                 )
                 debug_valid = True
             elif self.debug in possible_dialogue_keys:
@@ -220,15 +226,15 @@ class Dialogue():
                 chosen_key = self.debug
 
                 chosen_cat_dict = choose_random_cats(
-                    cats_block=possible_dialogue[chosen_key]['cats'],
+                    cats_block=possible_dialogue[chosen_key]["cats"],
                     rel_block=(
-                        possible_dialogue[chosen_key]['relationships']
+                        possible_dialogue[chosen_key]["relationships"]
                         if "relationships" in possible_dialogue[chosen_key]
                         else []
-                        ),
+                    ),
                     your_cat=self.you,
                     the_cat=self.cat,
-                    cat_dict=self.cat_dict
+                    cat_dict=self.cat_dict,
                 )
                 if chosen_cat_dict:
                     debug_valid = True
@@ -241,19 +247,23 @@ class Dialogue():
             # so, normal dialogue
             if self.debug:
                 print(
-                    f"Debugged Dialogue ID ({self.debug}) is not in possible dialogue options." +
-                    " Set debug_dialogue_override_filtering to true to override filtering."
-                    )
+                    f"Debugged Dialogue ID ({self.debug}) is not in possible dialogue options."
+                    + " Set debug_dialogue_override_filtering to true to override filtering."
+                )
             # shuffle dialogue
-            possible_dialogue = dict(random.sample(list(possible_dialogue.items()), len(possible_dialogue)))
+            possible_dialogue = dict(
+                random.sample(list(possible_dialogue.items()), len(possible_dialogue))
+            )
             # check possible dialogue for valid cat constraints
             for key, dialogue_block in possible_dialogue.items():
                 chosen_cat_dict = choose_random_cats(
-                    cats_block=dialogue_block['cats'],
-                    rel_block=dialogue_block['relationships'] if "relationships" in dialogue_block else [],
+                    cats_block=dialogue_block["cats"],
+                    rel_block=dialogue_block["relationships"]
+                    if "relationships" in dialogue_block
+                    else [],
                     your_cat=self.you,
                     the_cat=self.cat,
-                    cat_dict=self.cat_dict
+                    cat_dict=self.cat_dict,
                 )
                 if not chosen_cat_dict:
                     continue
@@ -272,13 +282,9 @@ class Dialogue():
             self.cat_dict = self.dialogue_cat_dict[chosen_key]
             game.clan.talks.append(chosen_key)
         else:
-            self.cat_dict = {
-                "t_c": self.cat,
-                "y_c": self.you
-            }
+            self.cat_dict = {"t_c": self.cat, "y_c": self.you}
 
         return chosen_key, possible_dialogue[chosen_key]
-
 
     # ---------------------------------------------------------------------- #
     #                                HELPERS                                 #
@@ -286,7 +292,7 @@ class Dialogue():
 
     def _populate_cat_dict(self, key, possible_cats_dict):
         self.dialogue_cat_dict[key] = possible_cats_dict
-    
+
     def get_flirt_success(self):
         if self.you.ID not in self.cat.relationships:
             return False
@@ -306,9 +312,15 @@ class Dialogue():
             return
         scene_effects = dialogue_object[f"{current_scene}_scene_effects"]
 
-        inventory_block = scene_effects["inventory"] if "inventory" in scene_effects else {}
-        relationship_block = scene_effects["relationships"] if "relationships" in scene_effects else {}
-        dark_forest_block = scene_effects["dark_forest"] if "dark_forest" in scene_effects else {}
+        inventory_block = (
+            scene_effects["inventory"] if "inventory" in scene_effects else {}
+        )
+        relationship_block = (
+            scene_effects["relationships"] if "relationships" in scene_effects else {}
+        )
+        dark_forest_block = (
+            scene_effects["dark_forest"] if "dark_forest" in scene_effects else {}
+        )
 
         # inventory
         # try:
@@ -320,19 +332,25 @@ class Dialogue():
                 if inventory_block["addition"] == "choice":
                     chosen_accessory = random.choice(inventory_block["accessory"])
                     if chosen_accessory in Pelt.lifegen_acc_categories:
-                        cat_to_object.pelt.inventory.append(random.choice(Pelt.lifegen_acc_categories[chosen_accessory]))
+                        cat_to_object.pelt.inventory.append(
+                            random.choice(Pelt.lifegen_acc_categories[chosen_accessory])
+                        )
                     else:
-                        cat_to_object.pelt.inventory.append(random.choice(chosen_accessory))
+                        cat_to_object.pelt.inventory.append(
+                            random.choice(chosen_accessory)
+                        )
                 elif inventory_block["addition"] == "all":
                     for acc in inventory_block["accessory"]:
                         if acc in Pelt.lifegen_acc_categories:
-                            cat_to_object.pelt.inventory.append(random.choice(Pelt.lifegen_acc_categories[acc]))
+                            cat_to_object.pelt.inventory.append(
+                                random.choice(Pelt.lifegen_acc_categories[acc])
+                            )
                         else:
                             cat_to_object.pelt.inventory.append(acc)
 
         if relationship_block:
             unpack_rel_block(Cat, relationship_block, self, dialogue_dict=cat_dict)
-        
+
         if dark_forest_block:
             if "join" in dark_forest_block:
                 for abbrev in dark_forest_block["join"]:
@@ -340,7 +358,7 @@ class Dialogue():
             if "leave" in dark_forest_block:
                 for abbrev in dark_forest_block["leave"]:
                     cat_dict[abbrev].leave_df()
-                    
+
         # except Exception as e:
         #     print("ERROR with dialogue scene effects:", e)
         #     return

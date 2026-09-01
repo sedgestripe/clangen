@@ -1,46 +1,53 @@
 [
-	{
-		"id": "apprentice_dark_forest_thoughts",
-		"thoughts": [
-			"Wishes {PRONOUN/m_c/subject} finished {PRONOUN/m_c/poss} battle training",
-			"Tries to imitate the battle moves of other Dark Forest cats",
-			"Wonders if it is {PRONOUN/m_c/poss} fault or {PRONOUN/m_c/poss} mentor's fault that they ended up here",
-			"Wishes {PRONOUN/m_c/subject} could put their hunting training to use",
-			"Misses the elders' stories",
-			"Regrets ever disrespecting {PRONOUN/m_c/poss} mentor",
-			"Tries to convince another Dark Forest cat to train {PRONOUN/m_c/object}",
-			"Misses eating fresh-kill and sharing tongues with {PRONOUN/m_c/poss} Clanmates",
-			"Stands by the StarClan border, hoping a cat will take pity on {PRONOUN/m_c/object}",
-			"Furiously grabs onto a branch so hard one of {PRONOUN/m_c/poss} claws snaps off",
-			"Wonders what {PRONOUN/m_c/subject} did wrong",
-			"Tries to groom {PRONOUN/m_c/poss} matted fur only to realize it's too caked with mud to clean",
-			"Gives {PRONOUN/m_c/self} a warrior name, but there's no cat around to hear {PRONOUN/m_c/object}",
-			"Fails a battle move and falls face-first into muck",
-			"Wonders if there's truly no prey in the Place of No Stars or if {PRONOUN/m_c/subject} just never got enough hunting practice",
-			"Misses taking care of the elders and hearing their stories",
-			"Is trying to find moss to make a nest for {PRONOUN/m_c/self}, but only finds thorns",
-			"Is sleeping in a puddle of muck"
-		]
-	},
-	{
-		"id": "flamboyant_df_warrior_apprentice",
-		"thoughts": [
-			"Makes a stylish crown of thorns to show off",
-			"Is satisfied knowing {PRONOUN/m_c/subject} stuck to {PRONOUN/m_c/poss} true self no matter what",
-			"Creates complicated new moves that are beautiful and deadly",
-			"Tries to groom the muck out of {PRONOUN/m_c/poss} fur",
-			"Heckles StarClan cats from the border",
-			"Loudly claims that StarClan cats are boring and lame",
-			"Wants to tell r_c {PRONOUN/r_c/subject} {VERB/r_c/look/looks} stupid",
-			"Mocks a StarClan cat's message theatrically",
-			"Reenacts {PRONOUN/m_c/poss} death dramatically",
-			"Doesn't think {PRONOUN/m_c/subject} could have learned more",
-			"Decides to create a warrior name for {PRONOUN/m_c/self}",
-			"Knows {PRONOUN/m_c/subject} shouldn't call attention to {PRONOUN/m_c/self} but craves it",
-			"Is enjoying showing off battle moves for others"
-		],
-		"main_trait_constraint": [
-			"flamboyant"
-		]
-	}
+    {
+        "id": "apprentice_dark_forest_thoughts",
+        "strings": [
+            "Wishes {PRONOUN/m_c/subject} finished {PRONOUN/m_c/poss} battle training",
+            "Tries to imitate the battle moves of other Dark Forest cats",
+            "Wonders if it is {PRONOUN/m_c/poss} fault or {PRONOUN/m_c/poss} mentor's fault that they ended up here",
+            "Wishes {PRONOUN/m_c/subject} could put their hunting training to use",
+            "Misses the elders' stories",
+            "Regrets ever disrespecting {PRONOUN/m_c/poss} mentor",
+            "Tries to convince another Dark Forest cat to train {PRONOUN/m_c/object}",
+            "Misses eating fresh-kill and sharing tongues with {PRONOUN/m_c/poss} Clanmates",
+            "Stands by the StarClan border, hoping a cat will take pity on {PRONOUN/m_c/object}",
+            "Furiously grabs onto a branch so hard one of {PRONOUN/m_c/poss} claws snaps off",
+            "Wonders what {PRONOUN/m_c/subject} did wrong",
+            "Tries to groom {PRONOUN/m_c/poss} matted fur only to realize it's too caked with mud to clean",
+            "Gives {PRONOUN/m_c/self} a warrior name, but there's no cat around to hear {PRONOUN/m_c/object}",
+            "Fails a battle move and falls face-first into muck",
+            "Wonders if there's truly no prey in the Place of No Stars or if {PRONOUN/m_c/subject} just never got enough hunting practice",
+            "Misses taking care of the elders and hearing their stories",
+            "Is trying to find moss to make a nest for {PRONOUN/m_c/self}, but only finds thorns",
+            "Is sleeping in a puddle of muck",
+            "Tries to complete {PRONOUN/m_c/poss} training alone but gives up"
+        ]
+    },
+    {
+        "id": "flamboyant_df_warrior_apprentice",
+        "strings": [
+            "Makes a stylish crown of thorns to show off",
+            "Is satisfied knowing {PRONOUN/m_c/subject} stuck to {PRONOUN/m_c/poss} true self no matter what",
+            "Creates complicated new moves that are beautiful and deadly",
+            "Tries to groom the muck out of {PRONOUN/m_c/poss} fur",
+            "Heckles StarClan cats from the border",
+            "Loudly claims that StarClan cats are boring and lame",
+            "Wants to tell r_c {PRONOUN/r_c/subject} {VERB/r_c/look/looks} stupid",
+            "Mocks a StarClan cat's message theatrically",
+            "Reenacts {PRONOUN/m_c/poss} death dramatically",
+            "Doesn't think {PRONOUN/m_c/subject} could have learned more",
+            "Decides to create a warrior name for {PRONOUN/m_c/self}",
+            "Knows {PRONOUN/m_c/subject} shouldn't call attention to {PRONOUN/m_c/self} but craves it",
+            "Is enjoying showing off battle moves for others"
+        ],
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "flamboyant"
+                    ]
+                }
+            }
+        }
+    }
 ]

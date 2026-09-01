@@ -216,8 +216,7 @@ class Scar_Events:
                 cat.pelt.accessory = tuple(
                     acc
                     for acc in cat.pelt.accessory
-                    if acc
-                    not in cat.pelt.tail_accessories
+                    if acc not in cat.pelt.tail_accessories
                 )
 
             # combining left/right variations into the both version

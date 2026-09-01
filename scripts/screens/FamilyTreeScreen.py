@@ -21,6 +21,7 @@ from ..ui.generate_button import get_button_dict, ButtonStyles
 from ..ui.icon import Icon
 from scripts.clan_package.settings import get_clan_setting
 
+
 class FamilyTreeScreen(Screens):
     # Page numbers for siblings and offspring
 
@@ -339,8 +340,7 @@ class FamilyTreeScreen(Screens):
         x_dim = 80
         y_dim = 90
 
-        if not self.the_cat.inheritance:
-            self.the_cat.create_inheritance_new_cat()
+        self.the_cat.create_inheritance_new_cat()
 
         self.parents = self.the_cat.inheritance.get_parents()
         self.mates = self.the_cat.inheritance.get_mates()
@@ -549,7 +549,7 @@ class FamilyTreeScreen(Screens):
                 object_id=get_text_box_theme("#text_box_30_horizcenter"),
                 manager=MANAGER,
             )
-        _current_group = self.chunks(self.current_group, 24)
+        _current_group = self.get_list_chunks(self.current_group, 24)
 
         if self.group_page_number > len(_current_group):
             self.group_page_number = max(len(_current_group), 1)
@@ -589,14 +589,18 @@ class FamilyTreeScreen(Screens):
                     info_text += "\n"
                     info_text += adjust_list_text(list(add_info))
 
-            if get_clan_setting("show fav")  and (not _kitty.faded and _kitty.favourite != 0):
+            if get_clan_setting("show fav") and (
+                not _kitty.faded and _kitty.favourite != 0
+            ):
                 try:
                     self.fav[str(i)] = pygame_gui.elements.UIImage(
                         ui_scale(pygame.Rect((324 + pos_x, 485 + pos_y), (50, 50))),
                         pygame.transform.scale(
                             pygame.image.load(
-                                f"resources/images/fav_marker_{_kitty.favourite}.png").convert_alpha(),
-                            (50, 50))
+                                f"resources/images/fav_marker_{_kitty.favourite}.png"
+                            ).convert_alpha(),
+                            (50, 50),
+                        ),
                     )
                     self.fav[str(i)].disable()
                 except:

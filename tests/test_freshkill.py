@@ -1,7 +1,9 @@
 import os
 import shutil
 from pathlib import Path
+from random import Random
 
+from scripts.cat.factories.test_cat_factory import TestCatFactory
 from scripts.game_structure.game.save_load import read_clans
 from scripts.housekeeping.datadir import get_save_dir
 
@@ -13,7 +15,6 @@ except ImportError:
 import unittest
 from uuid import uuid4
 
-import ujson
 
 from scripts.cat import save_load
 from scripts.cat.enums import CatRank
@@ -24,11 +25,14 @@ from scripts.game_structure import game
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 os.environ["SDL_AUDIODRIVER"] = "dummy"
 
-from scripts.cat.cats import Cat, create_cat
+from scripts.cat.cats import Cat
 from scripts.cat.skills import Skill, SkillPath
 from scripts.clan import Clan, Afterlife
 from scripts.clan_resources.freshkill import FreshkillPile
 from scripts.clan_package.get_clan_cats import get_alive_clan_queens
+
+
+cat_factory = TestCatFactory()
 
 
 class FreshkillPileTest(unittest.TestCase):
@@ -38,12 +42,11 @@ class FreshkillPileTest(unittest.TestCase):
         cls.previously_loaded_clan = cls.clanlist[0] if cls.clanlist else None
 
     def setUp(self) -> None:
-        self.prey_config = None
-        with open("resources/prey_config.toml", "r") as read_file:
-            self.prey_config = tomllib.loads(read_file.read())
-        self.amount = self.prey_config["start_amount"]
-        self.prey_requirement = self.prey_config["prey_requirement"]
-        self.condition_increase = self.prey_config["condition_increase"]
+        with open("resources/game_config.toml", "r") as read_file:
+            self.game_config = tomllib.loads(read_file.read())
+        self.amount = self.game_config["prey"]["start_amount"]
+        self.prey_requirement = self.game_config["prey"]["prey_requirement"]
+        self.condition_increase = self.game_config["prey"]["condition_increase"]
 
         # load in the spritesheets
         # we have to do this to prevent a crash, even though we won't be displaying anything
@@ -53,20 +56,17 @@ class FreshkillPileTest(unittest.TestCase):
         game.dark_forest = Afterlife()
 
         # set up clan members and some helpful lists for us to use later
-        self.leader = create_cat(CatRank.LEADER, moons=100)
-        self.deputy = create_cat(CatRank.DEPUTY, moons=139)
-        self.medicine_cat = create_cat(CatRank.MEDICINE_CAT, moons=78)
         self.warriors = [
-            create_cat(CatRank.WARRIOR, moons=90),
-            create_cat(CatRank.WARRIOR, moons=24),
-            create_cat(CatRank.WARRIOR, moons=60),
+            cat_factory.create_cat(rank=CatRank.WARRIOR, moons=90),
+            cat_factory.create_cat(rank=CatRank.WARRIOR, moons=24),
+            cat_factory.create_cat(rank=CatRank.WARRIOR, moons=60),
         ]
         self.apprentices = [
-            create_cat(CatRank.APPRENTICE, moons=7),
-            create_cat(CatRank.APPRENTICE, moons=11),
+            cat_factory.create_cat(rank=CatRank.APPRENTICE, moons=7),
+            cat_factory.create_cat(rank=CatRank.APPRENTICE, moons=11),
         ]
-        self.elder = create_cat(CatRank.ELDER, moons=126)
-        self.kitten = create_cat(CatRank.KITTEN, moons=3)
+        self.elder = cat_factory.create_cat(rank=CatRank.ELDER, moons=126)
+        self.kitten = cat_factory.create_cat(rank=CatRank.KITTEN, moons=3)
 
         members = [self.elder, self.kitten]
         members.extend(self.warriors)
@@ -75,11 +75,11 @@ class FreshkillPileTest(unittest.TestCase):
         self.test_clan_name = f"Test_{uuid4()}"
 
         game.clan = Clan(
-            name=self.test_clan_name,
-            displayname="Test",
-            leader=self.leader,
-            deputy=self.deputy,
-            medicine_cat=self.medicine_cat,
+            save_id=self.test_clan_name,
+            display_name="Test",
+            leader=cat_factory.create_cat(rank=CatRank.LEADER, moons=20),
+            deputy=cat_factory.create_cat(rank=CatRank.DEPUTY, moons=20),
+            medicine_cat=cat_factory.create_cat(rank=CatRank.MEDICINE_CAT, moons=20),
             biome="Forest",
             camp_bg="camp1",
             symbol="symbolADDER0",
@@ -88,7 +88,8 @@ class FreshkillPileTest(unittest.TestCase):
             starting_season="Newleaf",
         )
         save_load.cat_to_fade.clear()
-        game.clan.create_clan()
+        your_cat = cat_factory.create_cat(rank=CatRank.ELDER, moons=126)
+        game.clan.create_clan(your_cat=your_cat)
 
         for _c in Cat.all_cats_list:
             if _c == game.clan.leader:
@@ -110,8 +111,11 @@ class FreshkillPileTest(unittest.TestCase):
     def tearDown(self):
         rempath = get_save_dir() + "/" + self.test_clan_name
         shutil.rmtree(rempath)
-        if os.path.exists(rempath + "clan.json"):
-            os.remove(rempath + "clan.json")
+        if os.path.exists(rempath + "/clan.json"):
+            os.remove(rempath + "/clan.json")
+
+        Cat.all_cats.clear()
+        Cat.all_cats_list.clear()
 
     @classmethod
     def tearDownClass(cls):
@@ -125,15 +129,13 @@ class FreshkillPileTest(unittest.TestCase):
         """
         # given
         freshkill_pile = FreshkillPile()
-        self.assertEqual(freshkill_pile.active_pile["expires_in_4"], self.amount)
-        self.assertEqual(freshkill_pile.active_pile["expires_in_3"], 0)
+        self.assertEqual(freshkill_pile.active_pile["expires_in_3"], self.amount)
         self.assertEqual(freshkill_pile.active_pile["expires_in_2"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_1"], 0)
 
         # then
         freshkill_pile.add_freshkill(1)
-        self.assertEqual(freshkill_pile.active_pile["expires_in_4"], self.amount + 1)
-        self.assertEqual(freshkill_pile.active_pile["expires_in_3"], 0)
+        self.assertEqual(freshkill_pile.active_pile["expires_in_3"], self.amount + 1)
         self.assertEqual(freshkill_pile.active_pile["expires_in_2"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_1"], 0)
 
@@ -151,7 +153,7 @@ class FreshkillPileTest(unittest.TestCase):
         freshkill_pile2.remove_freshkill(5, True)
 
         # then
-        self.assertEqual(freshkill_pile1.active_pile["expires_in_4"], self.amount)
+        self.assertEqual(freshkill_pile1.active_pile["expires_in_3"], self.amount)
         self.assertEqual(freshkill_pile1.active_pile["expires_in_1"], 5)
         self.assertEqual(freshkill_pile2.total_amount, self.amount - 5)
 
@@ -161,29 +163,20 @@ class FreshkillPileTest(unittest.TestCase):
         """
         # given
         freshkill_pile = FreshkillPile()
-        self.assertEqual(freshkill_pile.active_pile["expires_in_4"], self.amount)
-        self.assertEqual(freshkill_pile.active_pile["expires_in_3"], 0)
+        self.assertEqual(freshkill_pile.active_pile["expires_in_3"], self.amount)
         self.assertEqual(freshkill_pile.active_pile["expires_in_2"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_1"], 0)
 
         # then
         freshkill_pile.time_skip([], [])
-        self.assertEqual(freshkill_pile.active_pile["expires_in_4"], 0)
-        self.assertEqual(freshkill_pile.active_pile["expires_in_3"], self.amount)
-        self.assertEqual(freshkill_pile.active_pile["expires_in_2"], 0)
-        self.assertEqual(freshkill_pile.active_pile["expires_in_1"], 0)
-        freshkill_pile.time_skip([], [])
-        self.assertEqual(freshkill_pile.active_pile["expires_in_4"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_3"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_2"], self.amount)
         self.assertEqual(freshkill_pile.active_pile["expires_in_1"], 0)
         freshkill_pile.time_skip([], [])
-        self.assertEqual(freshkill_pile.active_pile["expires_in_4"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_3"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_2"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_1"], self.amount)
         freshkill_pile.time_skip([], [])
-        self.assertEqual(freshkill_pile.active_pile["expires_in_4"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_3"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_2"], 0)
         self.assertEqual(freshkill_pile.active_pile["expires_in_1"], 0)
@@ -194,11 +187,11 @@ class FreshkillPileTest(unittest.TestCase):
         """
         # we'll set the freshkill pile up with enough to feed the kitten and that's all
         current_amount = self.prey_requirement["kitten"]
-        self.freshkill_pile.active_pile["expires_in_4"] = current_amount
+        self.freshkill_pile.active_pile["expires_in_3"] = current_amount
         self.freshkill_pile.total_amount = current_amount
 
         # feed them
-        self.freshkill_pile.feed_cats(self.cat_list)
+        self.freshkill_pile.feed_cats(self.cat_list, testcat=self.kitten)
 
         # check that kitten is full
         self.assertEqual(
@@ -222,7 +215,7 @@ class FreshkillPileTest(unittest.TestCase):
 
         # then set up the pile with enough to feed the leader and that's all
         current_amount = self.prey_requirement["leader"]
-        self.freshkill_pile.active_pile["expires_in_4"] = current_amount
+        self.freshkill_pile.active_pile["expires_in_3"] = current_amount
         self.freshkill_pile.total_amount = current_amount
 
         # set the tactic to high rank
@@ -261,7 +254,7 @@ class FreshkillPileTest(unittest.TestCase):
 
         # then set up the pile with enough to feed the kitten and that's all
         current_amount = self.prey_requirement["kitten"]
-        self.freshkill_pile.active_pile["expires_in_4"] = current_amount
+        self.freshkill_pile.active_pile["expires_in_3"] = current_amount
         self.freshkill_pile.total_amount = current_amount
 
         # set the tactic to youngest
@@ -294,7 +287,7 @@ class FreshkillPileTest(unittest.TestCase):
         # then set up the pile with enough to feed the oldest and that's all
         oldest = sorted(self.cat_list, key=lambda x: x.moons, reverse=True)[0]
         current_amount = self.prey_requirement[oldest.status.rank]
-        self.freshkill_pile.active_pile["expires_in_4"] = current_amount
+        self.freshkill_pile.active_pile["expires_in_3"] = current_amount
         self.freshkill_pile.total_amount = current_amount
 
         # set the tactic to youngest
@@ -327,7 +320,7 @@ class FreshkillPileTest(unittest.TestCase):
         most_exp = list_of_cats[0]
         # then set up the pile with enough to feed the most experienced and that's all
         current_amount = self.prey_requirement[most_exp.status.rank]
-        self.freshkill_pile.active_pile["expires_in_4"] = current_amount
+        self.freshkill_pile.active_pile["expires_in_3"] = current_amount
         self.freshkill_pile.total_amount = current_amount
 
         # set the tactic to experienced
@@ -362,7 +355,7 @@ class FreshkillPileTest(unittest.TestCase):
 
         # then set up the pile with enough to feed the deputy and that's all
         current_amount = self.prey_requirement["deputy"]
-        self.freshkill_pile.active_pile["expires_in_4"] = current_amount
+        self.freshkill_pile.active_pile["expires_in_3"] = current_amount
         self.freshkill_pile.total_amount = current_amount
 
         # set the tactic to hungry
@@ -396,7 +389,7 @@ class FreshkillPileTest(unittest.TestCase):
 
         # then set up the pile with enough to feed the hunter and that's all
         current_amount = self.prey_requirement["leader"]
-        self.freshkill_pile.active_pile["expires_in_4"] = current_amount
+        self.freshkill_pile.active_pile["expires_in_3"] = current_amount
         self.freshkill_pile.total_amount = current_amount
 
         # set priority to hunter
@@ -428,7 +421,7 @@ class FreshkillPileTest(unittest.TestCase):
 
         # then set up the pile with enough to feed the injured and that's all
         current_amount = self.prey_requirement["deputy"]
-        self.freshkill_pile.active_pile["expires_in_4"] = current_amount
+        self.freshkill_pile.active_pile["expires_in_3"] = current_amount
         self.freshkill_pile.total_amount = current_amount
 
         # set priority to injured
@@ -451,21 +444,31 @@ class FreshkillPileTest(unittest.TestCase):
     def test_queen_handling(self) -> None:
         # given
         # young enough kid
-        mother = Cat(
-            status_dict={"rank": CatRank.WARRIOR}, moons=1, disable_random=True
+        mother = cat_factory.create_cat(
+            status_dict={"rank": CatRank.WARRIOR},
+            moons=1,
+            disable_random=True,
         )
         mother.gender = "female"
-        father = Cat(
-            status_dict={"rank": CatRank.WARRIOR}, moons=1, disable_random=True
+        father = cat_factory.create_cat(
+            status_dict={"rank": CatRank.WARRIOR},
+            moons=1,
+            disable_random=True,
         )
         father.gender = "male"
-        kid = Cat(status_dict={"rank": CatRank.KITTEN}, moons=1, disable_random=True)
+        kid = cat_factory.create_cat(
+            status_dict={"rank": CatRank.KITTEN},
+            moons=1,
+            disable_random=True,
+        )
         kid.moons = 2
         kid.parent1 = father
         kid.parent2 = mother
 
-        no_parent = Cat(
-            status_dict={"rank": CatRank.WARRIOR}, moons=1, disable_random=True
+        no_parent = cat_factory.create_cat(
+            status_dict={"rank": CatRank.WARRIOR},
+            moons=1,
+            disable_random=True,
         )
 
         freshkill_pile = FreshkillPile()
@@ -473,7 +476,7 @@ class FreshkillPileTest(unittest.TestCase):
         current_amount = self.prey_requirement["queen/pregnant"] + (
             self.prey_requirement["warrior"] / 2
         )
-        freshkill_pile.active_pile["expires_in_4"] = current_amount
+        freshkill_pile.active_pile["expires_in_3"] = current_amount
         freshkill_pile.total_amount = current_amount
 
         freshkill_pile.add_cat_to_nutrition(mother)
@@ -502,17 +505,27 @@ class FreshkillPileTest(unittest.TestCase):
     def test_pregnant_handling(self) -> None:
         # given
         # young enough kid
-        pregnant_cat = Cat(
-            status_dict={"rank": CatRank.WARRIOR}, moons=1, disable_random=True
+        pregnant_cat = cat_factory.create_cat(
+            status_dict={"rank": CatRank.WARRIOR},
+            moons=1,
+            disable_random=True,
         )
         pregnant_cat.injuries["pregnant"] = {"severity": "minor"}
-        cat2 = Cat(status_dict={"rank": CatRank.WARRIOR}, moons=1, disable_random=True)
-        cat3 = Cat(status_dict={"rank": CatRank.WARRIOR}, moons=1, disable_random=True)
+        cat2 = cat_factory.create_cat(
+            status_dict={"rank": CatRank.WARRIOR},
+            moons=1,
+            disable_random=True,
+        )
+        cat3 = cat_factory.create_cat(
+            status_dict={"rank": CatRank.WARRIOR},
+            moons=1,
+            disable_random=True,
+        )
 
         freshkill_pile = FreshkillPile()
         # be able to feed one queen and some of the warrior
         current_amount = self.prey_requirement["queen/pregnant"]
-        freshkill_pile.active_pile["expires_in_4"] = current_amount
+        freshkill_pile.active_pile["expires_in_3"] = current_amount
         freshkill_pile.total_amount = current_amount
 
         freshkill_pile.add_cat_to_nutrition(pregnant_cat)

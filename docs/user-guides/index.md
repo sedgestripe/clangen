@@ -8,3 +8,15 @@ This is a separate section of the wiki dedicated for guides created by players f
 - A guide dedicated to a specific ClanGen feature. Save that for ClanGen's documentation page.
 
 Information on utilizing our documentation system can be found in the [Contributing Section](../contributing/index.md).
+
+<div class="grid cards" markdown>
+
+- _[Palette Maps](removing-palette-maps.md)_
+
+    Instructions on how to remove Palette Maps (collars rework).
+
+- _[Save File Editing](save-file-editing/sfe.md)_
+
+    Instructions on how to utilize and edit files within the Saves.
+
+</div> 

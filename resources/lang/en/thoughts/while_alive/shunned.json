@@ -1,7 +1,7 @@
 [
     {
         "id": "shunned_general",
-        "thoughts": [
+        "strings": [
             "Is watching the rest of the Clan eat",
             "Is sitting alone",
             "Doesn't like sleeping at the edge of camp",
@@ -44,32 +44,44 @@
     },
     {
         "id": "shunned_vengeful_bloodthirsty",
-        "thoughts": [
+        "strings": [
             "Is planning, plotting, observing...",
             "Digs {PRONOUN/m_c/poss} claws into the dirt as r_c walks by",
             "Thinks {PRONOUN/m_c/subject} had a good reason for what {PRONOUN/m_c/subject} did"
         ],
-        "main_trait_constraint": [
-            "vengeful",
-            "bloodthirsty"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "vengeful",
+                        "bloodthirsty"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "shunned_not_vengeful_bloodthirsty",
-        "thoughts": [
+        "strings": [
             "Feels a pit of guilt in {PRONOUN/m_c/poss} stomach",
             "Is pleading for forgiveness to any cat who will listen",
             "Had a nightmare about what {PRONOUN/m_c/subject} did",
             "Insists, deep down, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not a bad cat"
         ],
-        "main_trait_constraint": [
-            "-vengeful",
-            "-bloodthirsty"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "-vengeful",
+                        "-bloodthirsty"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "shunned_kitten",
-        "thoughts": [
+        "strings": [
             "Misses being able to play freely",
             "Wonders if {PRONOUN/m_c/subject}'ll ever be an apprentice",
             "Pouts in the corner",
@@ -82,13 +94,17 @@
             "Feels sickeningly guilty",
             "Is upset that {PRONOUN/m_c/subject} made {PRONOUN/m_c/poss} friends cry"
         ],
-        "main_age_constraint": [
-            "kitten"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "age": [
+                    "kitten"
+                ]
+            }
+        }
     },
     {
         "id": "shunned_app_general",
-        "thoughts": [
+        "strings": [
             "Feels as if {PRONOUN/m_c/poss} life is ruined",
             "Questions if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} strong enough to become a rogue",
             "Wonders if {PRONOUN/m_c/poss} mentor is disappointed in {PRONOUN/m_c/object}",
@@ -110,38 +126,44 @@
             "Found {PRONOUN/m_c/poss} nest destroyed. Again.",
             "Is upset at {PRONOUN/m_c/poss} friends for leaving {PRONOUN/m_c/object}"
         ],
-        "main_status_constraint": [
-            "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "status": [
+                    "apprentice",
+                    "medicine cat apprentice",
+                    "mediator apprentice"
+                ]
+            }
+        }
     },
     {
         "id": "shunned_meddie_sc",
-        "thoughts": [
+        "strings": [
             "Wonders if StarClan will ever speak to {PRONOUN/m_c/object} again",
             "Tells {PRONOUN/m_c/self} that {PRONOUN/m_c/subject} {VERB/m_c/were/was} just trying to help the Clan",
             "Questions if {PRONOUN/m_c/poss} nightmares are actually visions",
             "Hadn't realized how much {PRONOUN/m_c/subject} relied on StarClan until they went silent",
-            "Feels as if {PRONOUN/m_c/subject} {VERB/m_c/have/has} nowhere to go",  
-            "Shivers in the uneasy silence of being alone", 
+            "Feels as if {PRONOUN/m_c/subject} {VERB/m_c/have/has} nowhere to go",
+            "Shivers in the uneasy silence of being alone",
             "Can't help but wonder if {PRONOUN/m_c/subject}'ll still be allowed to be a medicine cat",
             "Thinks that, maybe, another Clan would take {PRONOUN/m_c/object} in",
             "Wishes {PRONOUN/m_c/subject} could apologize to {PRONOUN/m_c/poss} ancestors"
         ],
-        "main_faith_constraint": [
-            "low_sc",
-            "mid_sc",
-            "high_sc"
-        ],
-        "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "status": [
+                    "medicine cat",
+                    "medicine cat apprentice"
+                ],
+                "min_max_faith": [
+                    1, 9
+                ]
+            }
+        }
     },
     {
         "id": "shunned_meddie_df",
-        "thoughts": [
+        "strings": [
             "Is spending more time than usual asleep ... for no particular reason.",
             "Knows this is just part of getting to the glory the Dark Forest promises",
             "Is used to the silence of being alone",
@@ -154,19 +176,21 @@
             "Misses being able to take care of c_n",
             "Thinks about what {PRONOUN/m_c/poss} actions have caused"
         ],
-        "main_faith_constraint": [
-            "low_df",
-            "mid_df",
-            "high_df"
-        ],
-        "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "status": [
+                    "medicine cat",
+                    "medicine cat apprentice"
+                ],
+                "min_max_faith": [
+                    -9, -1
+                ]
+            }
+        }
     },
     {
         "id": "shunned_meddie_general",
-        "thoughts": [
+        "strings": [
             "Misses the medicine den",
             "Wonders what it'll take to make the Clan trust {PRONOUN/m_c/object} again",
             "Frowns when {PRONOUN/m_c/subject} {VERB/m_c/realize/realizes} the scent of herbs has faded from {PRONOUN/m_c/poss} coat",
@@ -176,14 +200,18 @@
             "Is hoping to receive an omen to explain why {PRONOUN/m_c/subject} did it to {PRONOUN/m_c/poss} Clanmates",
             "Stares at the stars above with a solemn expression"
         ],
-        "main_status_constraint": [
-            "medicine cat",
-            "medicine cat apprentice"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "status": [
+                    "medicine cat",
+                    "medicine cat apprentice"
+                ]
+            }
+        }
     },
     {
         "id": "shunned_queen",
-        "thoughts": [
+        "strings": [
             "Frowns when the kits {PRONOUN/m_c/subject} used to play with warily run off",
             "Knows {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} indefinitely destroyed the peace of the nursery",
             "Wonders if {PRONOUN/m_c/subject}'ll ever be trusted with kits again",
@@ -191,13 +219,17 @@
             "Feels out-of-place outside the nursery",
             "Pretends this is all just a game, like hide-and-go-seek"
         ],
-        "main_status_constraint": [
-            "queen"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "status": [
+                    "queen"
+                ]
+            }
+        }
     },
     {
         "id": "shunned_elder",
-        "thoughts": [
+        "strings": [
             "Feels like {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} made a mistake",
             "Curses {PRONOUN/m_c/poss} years of knowledge for failing {PRONOUN/m_c/object}",
             "Wonders what {PRONOUN/m_c/poss} family thinks",
@@ -205,28 +237,38 @@
             "Dislikes having to do things on {PRONOUN/m_c/poss} own now",
             "Wonders the effects of {PRONOUN/m_c/poss} actions on the younger generations of the Clan"
         ],
-        "main_status_constraint": [
-            "elder"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "status": [
+                    "elder"
+                ]
+            }
+        }
     },
     {
         "id": "sneaky_shunned",
-        "thoughts": [
+        "strings": [
             "Manages to steal a piece of fresh prey from an incoming patrol",
             "Knows {PRONOUN/m_c/subject} could leave without anycat noticing until the next morning",
-            "Is acting suspicious", 
-            "Wasn't caught sneaking out of camp!", 
-            "Is watching {PRONOUN/m_c/poss} Clan from the shadows", 
+            "Is acting suspicious",
+            "Wasn't caught sneaking out of camp!",
+            "Is watching {PRONOUN/m_c/poss} Clan from the shadows",
             "Accidentally scared r_c by just walking past",
             "Feels invisible to {PRONOUN/m_c/poss} Clanmates"
         ],
-        "main_trait_constraint": [
-            "sneaky"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "STEALTH,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "adventurous_shunned",
-        "thoughts": [
+        "strings": [
             "Can't wait to be free again",
             "Guesses {PRONOUN/m_c/subject} could consider this a new experience",
             "Rolls around, bored out of {PRONOUN/m_c/poss} mind",
@@ -238,8 +280,14 @@
             "Walks around in circles",
             "Thinks about what sort of life {PRONOUN/m_c/subject} could live outside of the Clan"
         ],
-        "main_trait_constraint": [
-            "adventurous"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "adventurous"
+                    ]
+                }
+            }
+        }
     }
 ]

@@ -1,7 +1,7 @@
 [
     {
         "id": "general_kittypet_dead_thoughts",
-        "thoughts": [
+        "strings": [
             "Wonders how {PRONOUN/m_c/subject} ended up here",
             "Traipses through the muck with a disgusted look on {PRONOUN/m_c/poss} face",
             "Growls at the shadows",
@@ -24,8 +24,12 @@
             "Is trying to figure out how {PRONOUN/m_c/poss} housefolk would have gotten the mud out of {PRONOUN/m_c/poss} fur",
             "Hates being constantly damp with muck"
         ],
-        "main_status_constraint": [
-            "kittypet"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "status": [
+                    "kittypet"
+                ]
+            }
+        }
     }
 ]

@@ -233,7 +233,7 @@ class ListScreen(Screens):
                 self.menu_button_pressed(event)
                 self.mute_button_pressed(event)
 
-        elif event.type == pygame.KEYDOWN and game_setting_get("keybinds"):
+        elif event.type == pygame.KEYDOWN:
             if self.cat_list_bar_elements["search_bar_entry"].is_focused:
                 return
             if event.key == pygame.K_LEFT:
@@ -244,14 +244,21 @@ class ListScreen(Screens):
     def screen_switches(self):
         super().screen_switches()
         self.show_mute_buttons()
-        self.clan_name = i18n.t("general.clan", name=game.clan.displayname)
+        self.clan_name = game.clan.name
 
         self.set_disabled_menu_buttons(["cats"])
         self.show_menu_buttons()
 
         # LG
-        if not game.clan.your_cat.status.alive_in_player_clan and not game.clan.your_cat.dead:
-            self.living_group_names = ("general.your_clan", "general.your_group", "general.cotc")
+        if (
+            not game.clan.your_cat.status.alive_in_player_clan
+            and not game.clan.your_cat.dead
+        ):
+            self.living_group_names = (
+                "general.your_clan",
+                "general.your_group",
+                "general.cotc",
+            )
             if not game.last_list_forProfile:
                 self.current_group = "your_group"
         else:
@@ -363,10 +370,9 @@ class ListScreen(Screens):
             container=self.cat_list_bar,
             starting_selection=[starting_select],
             anchors={"left_target": self.cat_list_bar_elements["view_button"]},
-
             # LG
             your_cat=game.clan.your_cat,
-            clan_name=game.clan.displayname
+            clan_name=game.clan.name,
         )
 
         # SORT BY
@@ -755,8 +761,8 @@ class ListScreen(Screens):
             else:
                 group = i18n.t(
                     f"general.{self.current_group}",
-                    your_group=f"The {(game.clan.your_cat.status.group).replace('_', ' ')}"
-                    )
+                    your_group=f"The {(game.clan.your_cat.status.group).replace('_', ' ')}",
+                )
             if self.current_group == "starclan":
                 first_temper, second_temper = game.starclan.temperament
             else:
@@ -800,7 +806,9 @@ class ListScreen(Screens):
         self.current_group = "your_clan"
         self.death_status = "living"
         self.full_cat_list = [
-            cat for cat in Cat.all_cats_list if cat.status.alive_in_player_clan and cat.moons >= 0
+            cat
+            for cat in Cat.all_cats_list
+            if cat.status.alive_in_player_clan and cat.moons >= 0
         ]
 
     def get_cotc_cats(self):

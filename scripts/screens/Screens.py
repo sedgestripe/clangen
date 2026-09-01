@@ -12,9 +12,11 @@ from typing import Dict, Optional, Union
 
 import pygame_gui
 import ujson
+from pygame_gui.core import UIElement
 
 import scripts.game_structure.screen_settings
 import scripts.screens.screens_core.screens_core
+from scripts.game_input import INPUT_ACTION_PRESSED, Action
 from scripts.game_structure import constants
 from scripts.cat.enums import CatGroup
 from scripts.game_structure.game.settings import (
@@ -26,13 +28,15 @@ from scripts.game_structure.game.switches import (
     switch_set_value,
     switch_get_value,
     Switch,
-    switch_remove_list_value
+    switch_remove_list_value,
 )
 from scripts.game_structure.propagating_thread import PropagatingThread
 from scripts.game_structure.screen_settings import (
     screen,
 )
 from scripts.screens.screens_core.screens_core import rebuild_moon_n_season_indicator
+from scripts.ui import focus_matrix
+from scripts.ui.focus_matrix import _set_focus
 from scripts.ui.windows.freshkill import FreshkillManagementWindow
 from scripts.ui.windows.herbs import HerbManagementWindow
 from scripts.ui.windows.save_check import SaveCheckWindow
@@ -88,7 +92,6 @@ class Screens:
             GameScreen.MEDIATION,
             GameScreen.CHANGE_GENDER,
             GameScreen.FAMILY_TREE,
-
             GameScreen.ELDER_STORY,
         ]:
             game.last_list_forProfile = None
@@ -132,6 +135,11 @@ class Screens:
 
         self.game_bgs = {}
         self.fullscreen_bgs = {}
+
+        self.current_focus: Optional[UIElement] = None
+        """The element currently being selected. Used for keybinds."""
+        self.matrix_map: list[list[Optional[UIElement]]] = []
+        """Used to map the placement of interactable elements on a screen. This allows keyboard inputs to move 'focus' from one element to another element in a logical and predetermined order."""
 
     def loading_screen_start_work(
         self, target: callable, thread_name: str = "work_thread", args: tuple = tuple()
@@ -198,20 +206,27 @@ class Screens:
             final_actions()
             switch_set_value(Switch.window_open, False)
 
-        
         if len(switch_get_value(Switch.windows_dict)) > 0:
-            if 'name kits' in switch_get_value(Switch.windows_dict) and not switch_get_value(Switch.window_open):
-                NameKitsWindow('events screen')
-                switch_remove_list_value(Switch.windows_dict, 'name kits')
-            elif 'retire' in switch_get_value(Switch.windows_dict) and not switch_get_value(Switch.window_open):
-                RetireWindow('events screen')
-                switch_remove_list_value(Switch.windows_dict, 'retire')
-            elif 'deputy' in switch_get_value(Switch.windows_dict) and not switch_get_value(Switch.window_open):
-                ChooseDeputyWindow('events screen')
-                switch_remove_list_value(Switch.windows_dict, 'deputy')
-            elif 'mate' in switch_get_value(Switch.windows_dict) and not switch_get_value(Switch.window_open):
-                MateWindow('events screen')
-                switch_remove_list_value(Switch.windows_dict, 'mate')
+            if "name kits" in switch_get_value(
+                Switch.windows_dict
+            ) and not switch_get_value(Switch.window_open):
+                NameKitsWindow("events screen")
+                switch_remove_list_value(Switch.windows_dict, "name kits")
+            elif "retire" in switch_get_value(
+                Switch.windows_dict
+            ) and not switch_get_value(Switch.window_open):
+                RetireWindow("events screen")
+                switch_remove_list_value(Switch.windows_dict, "retire")
+            elif "deputy" in switch_get_value(
+                Switch.windows_dict
+            ) and not switch_get_value(Switch.window_open):
+                ChooseDeputyWindow("events screen")
+                switch_remove_list_value(Switch.windows_dict, "deputy")
+            elif "mate" in switch_get_value(
+                Switch.windows_dict
+            ) and not switch_get_value(Switch.window_open):
+                MateWindow("events screen")
+                switch_remove_list_value(Switch.windows_dict, "mate")
         return
 
     def on_use(self):
@@ -235,9 +250,7 @@ class Screens:
         Screens.menu_buttons = scripts.screens.screens_core.screens_core.menu_buttons
         Screens.game_frame = scripts.screens.screens_core.screens_core.game_frame
         try:
-            Screens.update_heading_text(
-                "general.clan", text_kwargs={"name": game.clan.displayname}
-            )
+            Screens.update_heading_text(game.clan.name)
         except AttributeError:
             Screens.update_heading_text("DebugClan")
         if self.active_bg is None or "default" in self.active_bg:
@@ -247,19 +260,85 @@ class Screens:
     def handle_event(self, event):
         """This is where events that occur on this page are handled.
         For the pygame_gui rewrite, button presses are also handled here."""
+        # mute handling
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             out = self.mute_button_pressed(event)
             if out:
                 return
 
+        # keybinds become live when a bound input is pressed
+        # and are turned off when the mouse is clicked
+        if event.type in (pygame.MOUSEBUTTONDOWN, pygame_gui.UI_BUTTON_ON_HOVERED):
+            switch_set_value(Switch.keybinds_live, False)
+            if self.current_focus:
+                self.current_focus.unfocus()
+
+        elif event.type == INPUT_ACTION_PRESSED:
+            switch_set_value(Switch.keybinds_live, True)
+
+        # keybind handling
+        if switch_get_value(Switch.keybinds_live):
+            # if we weren't focused at all, then we just start with whatever the old current was
+            if self.current_focus and not self.current_focus.is_focused:
+                self.set_focus(self.current_focus)
+
+            # handling changing the focus via keyboard and controller
+            elif event.type == INPUT_ACTION_PRESSED:
+                if event.action == Action.DOWN:
+                    self.current_focus = focus_matrix.find_next_focus(
+                        self.matrix_map,
+                        Action.DOWN,
+                        prev_focus_element=self.current_focus,
+                    )
+                elif event.action == Action.UP:
+                    self.current_focus = focus_matrix.find_next_focus(
+                        self.matrix_map,
+                        Action.UP,
+                        prev_focus_element=self.current_focus,
+                    )
+                elif event.action == Action.LEFT:
+                    self.current_focus = focus_matrix.find_next_focus(
+                        self.matrix_map,
+                        Action.LEFT,
+                        prev_focus_element=self.current_focus,
+                    )
+                elif event.action == Action.RIGHT:
+                    self.current_focus = focus_matrix.find_next_focus(
+                        self.matrix_map,
+                        Action.RIGHT,
+                        prev_focus_element=self.current_focus,
+                    )
+
     def exit_screen(self):
         """Runs when screen exits"""
+        # reset matrix map so that it can be recreated cleanly later
+        self.matrix_map.clear()
         pass
+
+    def add_to_map(self, element_list: list[UIElement]):
+        """
+        Updates the matrix map with the given list of elements.
+        :param element_list: The list of elements to update.
+        """
+        if not self.matrix_map:
+            self.matrix_map = focus_matrix.add_to_map(self.matrix_map, element_list)
+        else:
+            self.matrix_map = focus_matrix.add_to_map(self.matrix_map, element_list)
+
+    def remove_from_map(self, element_list: list[UIElement]):
+        """
+        Removes the given elements from the matrix map.
+        :param element_list: The list of elements to remove.
+        """
+        self.matrix_map = focus_matrix.remove_from_map(self.matrix_map, element_list)
+
+    def set_focus(self, element: UIElement):
+        _set_focus(new_focus=element, old_focus=self.current_focus)
+        self.current_focus = element
 
     # Functions to deal with the menu and mute button.
     #   The menu is used very often, so I don't want to keep
     #   recreating and killing it. Lots of chances for bugs there.
-
     @classmethod
     def hide_menu_buttons(cls):
         """This hides the menu buttons, so they are no longer visible
@@ -267,12 +346,11 @@ class Screens:
         for name, button in cls.menu_buttons.items():
             button.hide()
 
-    @classmethod
-    def show_menu_buttons(cls):
+    def show_menu_buttons(self):
         """This shows all menu buttons, and makes them interact-able."""
         rebuild_moon_n_season_indicator()
 
-        for name, button in cls.menu_buttons.items():
+        for name, button in self.menu_buttons.items():
             if name in [
                 "mute_button",
                 "unmute_button",
@@ -289,33 +367,40 @@ class Screens:
         Screens.menu_buttons["mute_button"].hide()
         Screens.menu_buttons["unmute_button"].hide()
 
-    @classmethod
-    def show_mute_buttons(cls):
+    def show_mute_buttons(self):
         """This shows all mute buttons, and makes them interact-able."""
 
         if game.audio.muted or game.audio.disabled or game_setting_get("audio_mute"):
-            cls.menu_buttons["unmute_button"].show()
-            cls.menu_buttons["mute_button"].hide()
+            self.menu_buttons["unmute_button"].show()
+            self.menu_buttons["mute_button"].hide()
+            self.add_to_map([self.menu_buttons["unmute_button"]])
+
         else:
-            cls.menu_buttons["unmute_button"].hide()
-            cls.menu_buttons["mute_button"].show()
+            self.menu_buttons["unmute_button"].hide()
+            self.menu_buttons["mute_button"].show()
+            self.add_to_map([self.menu_buttons["mute_button"]])
 
     def mute_button_pressed(self, event):
         """This is a short-up to deal with mute button presses.
         This will fail if event.type != pygame_gui.UI_BUTTON_START_PRESS"""
         if game.audio.disabled:
             return False
-        if event.ui_element == Screens.menu_buttons["mute_button"]:
+
+        element = event.ui_element
+
+        if element == Screens.menu_buttons["mute_button"]:
             game.audio.mute()
             game_setting_set("audio_mute", True)
             game_settings_save(self)
-            Screens.show_mute_buttons()
+            self.show_mute_buttons()
+            self.set_focus(self.menu_buttons["unmute_button"])
             return True
-        elif event.ui_element == Screens.menu_buttons["unmute_button"]:
+        elif element == Screens.menu_buttons["unmute_button"]:
             game.audio.unmute()
             game_setting_set("audio_mute", False)
             game_settings_save(self)
-            Screens.show_mute_buttons()
+            self.show_mute_buttons()
+            self.set_focus(self.menu_buttons["mute_button"])
             return True
         else:
             return False
@@ -671,5 +756,8 @@ class Screens:
     # pragma pylint: enable=no-member
 
     @staticmethod
-    def chunks(L, n):
-        return [L[x : x + n] for x in range(0, len(L), n)]
+    def get_list_chunks(list_to_chunk: list, items_allowed_in_chunk: int) -> list[list]:
+        return [
+            list_to_chunk[x : x + items_allowed_in_chunk]
+            for x in range(0, len(list_to_chunk), items_allowed_in_chunk)
+        ]

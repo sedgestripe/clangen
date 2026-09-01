@@ -1,5 +1,5 @@
 from random import choice, randrange, choices, sample
-from typing import List, Optional
+from typing import List, Optional, Dict
 
 import i18n
 
@@ -8,9 +8,10 @@ from scripts.cat.cats import Cat
 from scripts.cat.pelts import Pelt
 from scripts.cat_relations.relationship import Relationship
 from scripts.clan_package.settings import get_clan_setting
+from scripts.config import get_config
 from scripts.event_class import Single_Event
 from scripts.events_module.future.prep_and_trigger import prep_future_event
-from scripts.events_module.relationship.relation_events import Relation_Events
+from scripts.events_module.relationship import relation_events
 from scripts.game_structure import localization, game
 from scripts.game_structure.game.settings import game_setting_get
 
@@ -24,6 +25,7 @@ from scripts.events_module.consequences import (
     create_new_cat_block,
     unpack_rel_block,
     change_relationship_values,
+    check_stolen_vitality,
 )
 from scripts.clan_package.cotc import change_clan_reputation, change_clan_relations
 from scripts.clan_package.get_clan_cats import find_alive_cats_with_rank
@@ -50,30 +52,30 @@ class ShortEvent:
     NUM_OF_RANKS = CatRank.get_num_of_clan_ranks()
 
     def __init__(
-            self,
-            event_id: str = "",
-            location: List[str] = None,
-            # LG
-            faith_effect: int = 0,
-            # ---
-            season: List[str] = None,
-            sub_type: List[str] = None,
-            tags: List[str] = None,
-            text: str = "",
-            new_accessory: List[str] = None,
-            m_c=None,
-            r_c=None,
-            new_cat: List[list] = None,
-            injury: list = None,
-            exclude_involved: list = None,
-            history: list = None,
-            relationships: list = None,
-            outsider: dict = None,
-            other_clan: dict = None,
-            supplies: list = None,
-            new_gender: List[str] = None,
-            future_event: dict = None,
-
+        self,
+        event_id: str = "",
+        location: List[str] = None,
+        # LG
+        faith_effect: int = 0,
+        # ---
+        season: List[str] = None,
+        sub_type: List[str] = None,
+        tags: List[str] = None,
+        poi: Optional[Dict[str, List]] = None,
+        text: str = "",
+        new_accessory: List[str] = None,
+        m_c=None,
+        r_c=None,
+        new_cat: List[list] = None,
+        injury: list = None,
+        exclude_involved: list = None,
+        history: list = None,
+        relationships: list = None,
+        outsider: dict = None,
+        other_clan: dict = None,
+        supplies: list = None,
+        new_gender: List[str] = None,
+        future_event: dict = None,
     ):
         if not event_id:
             print("WARNING: moon event has no event_id")
@@ -92,6 +94,7 @@ class ShortEvent:
             )  # this increases the weight inversely to the number of season constraints
         self.sub_type = sub_type if sub_type else []
         self.tags = tags if tags else []
+        self.poi = poi if poi else {}
         self.text = text
         self.text_template = text
         self.new_accessory = new_accessory if new_accessory else []
@@ -232,7 +235,7 @@ class ShortEvent:
         self.dead_cat_objects.clear()
 
         if other_clan:
-            self.other_clan_name = i18n.t("general.clan", name=other_clan.name)
+            self.other_clan_name = other_clan.name
 
         self.all_involved_cat_ids.append(self.main_cat.ID)
 
@@ -379,6 +382,13 @@ class ShortEvent:
                 else:  # if freshkill isn't being adjusted, then it must be an herb supply
                     self.handle_herb_supply(block)
 
+        # affect affinity
+        if "murder" in self.sub_type:
+            self.random_cat.change_affinity(
+                starclan_change=get_config("affinity.murder.starclan_change"),
+                dark_forest_change=get_config("affinity.murder.dark_forest_change"),
+            )
+
         # adjust text again to account for info that wasn't available when we do rel changes
         self.text = event_text_adjust(
             Cat,
@@ -485,7 +495,7 @@ class ShortEvent:
                         main_cat=first_cat,
                     )
             else:
-                Relation_Events.welcome_new_cats([first_cat])
+                relation_events.trigger_joining_relationship_events([first_cat])
             self.all_involved_cat_ids.extend([cat.ID for cat in cat_list])
 
             if extra_text:
@@ -529,14 +539,14 @@ class ShortEvent:
         #     acc_list.extend(Pelt.plant_accessories)
         # if "COLLAR" in possible_accs:
         #     acc_list.extend(Pelt.collar_accessories)
-        
+
         # LIFEGEN
-        
+
         if game_setting_get("lifegen_sprite_changes"):
             categories = Pelt.lifegen_acc_categories
         else:
             categories = Pelt.clangen_acc_categories
-        
+
         for category in categories:
             if category in possible_accs:
                 acc_list.extend(categories[category])
@@ -628,17 +638,21 @@ class ShortEvent:
                 self.types.append("birth_death")
 
             if cat.status.is_leader:
+                lives_lost = 0
                 if "all_lives" in self.tags:
-                    game.clan.leader_lives -= 10
-                elif "some_lives" in self.tags and self.leads_current_life_count > 3:
-                    game.clan.leader_lives -= randrange(
-                        2, self.leads_current_life_count - 1
-                    )
+                    lives_lost = game.clan.leader_lives
+                    game.clan.leader_lives -= lives_lost
+                elif "some_lives" in self.tags:
+                    lives_lost = randrange(2, self.leads_current_life_count - 1)
+                    game.clan.leader_lives -= lives_lost
                 else:
+                    lives_lost = 1
                     game.clan.leader_lives -= 1
 
                 cat.die(body)
-                self.additional_event_text = get_leader_life_notice()
+                self.additional_event_text = get_leader_life_notice(cat.name)
+                if extra_text := check_stolen_vitality(cat, lives_lost):
+                    self.additional_event_text += " " + extra_text
 
             else:
                 cat.die(body)
@@ -792,15 +806,16 @@ class ShortEvent:
             # new_cat history
             for abbr in block["cats"]:
                 if "n_c" in abbr:
-                    for i, new_cat_objects in enumerate(self.new_cats):
-                        if new_cat_objects[i].dead:
+                    index = int(abbr.replace("n_c:", ""))
+                    for new_cat in self.new_cats[index]:
+                        if new_cat.dead:
                             death_history = history_text_adjust(
                                 block.get("death"),
                                 self.other_clan_name,
                                 game.clan,
                                 self.random_cat,
                             )
-                            new_cat_objects[i].history.add_death(
+                            new_cat.history.add_death(
                                 death_history, other_cat=self.random_cat
                             )
 
@@ -845,12 +860,11 @@ class ShortEvent:
 
                 # NEW CATS
                 elif "n_c" in abbr:
-                    for i, new_cat_objects in enumerate(self.new_cats):
+                    index = int(abbr.replace("n_c:", ""))
+                    for new_cat in self.new_cats[index]:
                         injury = choice(possible_injuries)
-                        new_cat_objects[i].get_injured(
-                            injury, potential_scars=potential_scars
-                        )
-                        self.handle_injury_history(new_cat_objects[i], abbr, injury)
+                        new_cat.get_injured(injury, potential_scars=potential_scars)
+                        self.handle_injury_history(new_cat, abbr, injury)
 
     def handle_injury_history(self, cat, cat_abbr, injury=None):
         """

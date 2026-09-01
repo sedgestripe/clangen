@@ -205,7 +205,11 @@ class PronounCreationWindow(GameWindow):
             )
             self.boxes[item].set_allowed_characters("alpha_numeric")
 
-        last_box = self.boxes[text_inputs[-1]] if text_inputs else self.dropdowns["gender_label"]
+        last_box = (
+            self.boxes[text_inputs[-1]]
+            if text_inputs
+            else self.dropdowns["gender_label"]
+        )
 
         self.buttons = {}
         self.buttons["save_pronouns"] = UISurfaceImageButton(
@@ -249,23 +253,33 @@ class PronounCreationWindow(GameWindow):
             elif event.ui_element in self.dropdowns["conju"].child_buttons:
                 dropdown = self.dropdowns["conju"]
                 key = next(
-                    (k for k, btn in dropdown.child_button_dicts.items()
-                     if btn == event.ui_element),
+                    (
+                        k
+                        for k, btn in dropdown.child_button_dicts.items()
+                        if btn == event.ui_element
+                    ),
                     None,
                 )
                 if key is not None:
-                    self.pronoun_template["conju"] = int(key.replace("windows.conju", ""))
+                    self.pronoun_template["conju"] = int(
+                        key.replace("windows.conju", "")
+                    )
                     dropdown.parent_button.set_text(event.ui_element.text)
                     self.update_display()
             elif event.ui_element in self.dropdowns["gender"].child_buttons:
                 dropdown = self.dropdowns["gender"]
                 key = next(
-                    (k for k, btn in dropdown.child_button_dicts.items()
-                     if btn == event.ui_element),
+                    (
+                        k
+                        for k, btn in dropdown.child_button_dicts.items()
+                        if btn == event.ui_element
+                    ),
                     None,
                 )
                 if key is not None:
-                    self.pronoun_template["gender"] = int(key.replace("windows.gender", ""))
+                    self.pronoun_template["gender"] = int(
+                        key.replace("windows.gender", "")
+                    )
                     dropdown.parent_button.set_text(event.ui_element.text)
                     self.update_display()
             elif event.ui_element == self.buttons["save_pronouns"]:

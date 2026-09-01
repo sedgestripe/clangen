@@ -13,9 +13,14 @@ from scripts.cat.enums import (
     CatStanding,
     CatThought,
 )
+from scripts.cat.factories.new_cat_factory import NewCatFactory
+from scripts.cat.factories.enums import CatType
 from scripts.cat.names import names
 from scripts.cat_relations.enums import RelType
+from scripts.cat_relations.inheritance2 import inheritance_db
+from scripts.clan_package.get_clan_cats import get_random_player_clan_cat
 from scripts.clan_package.settings import get_clan_setting
+from scripts.config import get_config
 from scripts.game_structure import game, constants
 from scripts.cat.constants import BACKSTORIES, PERMANENT
 from scripts.events_module.text_adjust import process_text, adjust_list_text
@@ -429,7 +434,7 @@ def create_new_cat_block(
                     continue
 
                 y = randrange(0, 20)
-                start_relation = Relationship(n_c, inter_cat, False, True)
+                start_relation = Relationship(n_c, inter_cat, True)
                 start_relation.like += 40 + y
                 start_relation.comfort = 40 + y
                 start_relation.respect = 10 + y
@@ -442,7 +447,7 @@ def create_new_cat_block(
                     continue
 
                 y = randrange(0, 20)
-                start_relation = Relationship(par, n_c, False, True)
+                start_relation = Relationship(par, n_c, True)
                 start_relation.like += 60 + y
                 start_relation.comfort = 40 + y
                 start_relation.respect = 30 + y
@@ -450,7 +455,7 @@ def create_new_cat_block(
                 par.relationships[n_c.ID] = start_relation
 
                 y = randrange(0, 20)
-                start_relation = Relationship(n_c, par, False, True)
+                start_relation = Relationship(n_c, par, True)
                 start_relation.like += 40 + y
                 start_relation.comfort = 70 + y
                 start_relation.respect = 30 + y
@@ -465,7 +470,7 @@ def create_new_cat_block(
                 par = Cat.fetch_cat(par)
 
                 y = randrange(0, 20)
-                start_relation = Relationship(par, n_c, False, True)
+                start_relation = Relationship(par, n_c, True)
                 start_relation.like += 60 + y
                 start_relation.comfort = 40 + y
                 start_relation.respect = 30 + y
@@ -473,7 +478,7 @@ def create_new_cat_block(
                 par.relationships[n_c.ID] = start_relation
 
                 y = randrange(0, 20)
-                start_relation = Relationship(n_c, par, False, True)
+                start_relation = Relationship(n_c, par, True)
                 start_relation.like += 40 + y
                 start_relation.comfort = 70 + y
                 start_relation.respect = 30 + y
@@ -481,7 +486,7 @@ def create_new_cat_block(
                 n_c.relationships[par.ID] = start_relation
 
             # UPDATE INHERITANCE
-            n_c.create_inheritance_new_cat()
+        inheritance_db.load_inheritances(Cat)
 
     return new_cats
 
@@ -606,7 +611,7 @@ def create_new_cat(
             _gender = gender
 
         # first we generate the cat as though they are not part of the clan yet
-        new_cat = Cat(
+        new_cat = NewCatFactory.create_cat(
             moons=moons,
             status_dict={
                 "social": original_social,
@@ -782,8 +787,7 @@ def create_new_cat(
 
 
 def gather_cat_objects(
-    Cat, abbr_list: List[str], event, stat_cat=None, extra_cat=None,
-    dialogue_dict={}
+    Cat, abbr_list: List[str], event, stat_cat=None, extra_cat=None, dialogue_dict={}
 ) -> list:
     """
     gathers cat objects from list of abbreviations used within an event format block
@@ -879,7 +883,7 @@ def gather_cat_objects(
                 found_cat_list.discard(getattr(event, "random_cat", None))
                 if getattr(event, "patrol_cats", None):
                     found_cat_list.difference_update(set(event.patrol_cats))
-        
+
         # LG
         elif re.match(r"r_c:[0-9]+", abbr):  # lifegen chosen cats
             index = re.match(r"r_c:([0-9]+)", abbr).group(1)
@@ -933,7 +937,12 @@ def gather_cat_objects(
 
 
 def unpack_rel_block(
-    Cat, relationship_effects: List[dict], event=None, stat_cat=None, extra_cat=None, dialogue_dict={}
+    Cat,
+    relationship_effects: List[dict],
+    event=None,
+    stat_cat=None,
+    extra_cat=None,
+    dialogue_dict={},
 ) -> dict:
     """
     Unpacks the info from the relationship effect block used in patrol and moon events, then adjusts rel values
@@ -965,10 +974,14 @@ def unpack_rel_block(
         ):
             is_clan_reaction = True
 
-        cats_from_ob = gather_cat_objects(Cat, cats_from, event, stat_cat, extra_cat, dialogue_dict)
-        cats_to_ob = gather_cat_objects(Cat, cats_to, event, stat_cat, extra_cat, dialogue_dict)
+        cats_from_ob = gather_cat_objects(
+            Cat, cats_from, event, stat_cat, extra_cat, dialogue_dict
+        )
+        cats_to_ob = gather_cat_objects(
+            Cat, cats_to, event, stat_cat, extra_cat, dialogue_dict
+        )
 
-        # get rid of any Nones that might have snuck in 
+        # get rid of any Nones that might have snuck in
         cats_from_ob = [c for c in cats_from_ob if c is not None]
         cats_to_ob = [c for c in cats_to_ob if c is not None]
 
@@ -1159,3 +1172,55 @@ def change_relationship_values(
                     rel.log.append(log_text)
 
     return created_rel_logs
+
+
+def check_stolen_vitality(cat, lives_lost: int) -> Optional[str]:
+    if game.clan.leader_lives == 0:
+        # remove one, cus stolen vitality won't kill a cat for the life that kills the leader
+        lives_lost -= 1
+
+    if not get_config("cruel_season.event.stolen_vitality") or not lives_lost:
+        return None
+
+    cats_to_kill = []
+    failed = False
+    for i in range(lives_lost):
+        c = get_random_player_clan_cat(cat, not_allowed=[cat] + cats_to_kill)
+        if c:
+            cats_to_kill.append(c)
+        else:
+            failed = True
+            break
+
+    if len(cats_to_kill) > 0:
+        cat_names = adjust_list_text([str(c.name) for c in cats_to_kill])
+    else:
+        cat_names = None
+
+    for c in cats_to_kill:
+        c.die()
+        c.history.add_death(
+            i18n.t("cruel_season.special_text.stolen_vitality_sacrifice_history"),
+            other_cat=cat,
+        )
+    text = ""
+    if cats_to_kill:
+        text += i18n.t(
+            "cruel_season.special_text.stolen_vitality_base",
+            lead_name=str(cat.name),
+            dead_name=str(cat_names),
+            count=len(cats_to_kill),
+        )
+    if failed:
+        text += " "
+        text += i18n.t(
+            "cruel_season.special_text.stolen_vitality_failed",
+            lead_name=str(cat.name),
+        )
+        for i in range(game.clan.leader_lives):
+            cat.history.add_death(
+                i18n.t("cruel_season.special_text.stolen_vitality_lead_history")
+            )
+        game.clan.leader_lives = 0
+
+    return text

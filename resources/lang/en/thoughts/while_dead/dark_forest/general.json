@@ -1,7 +1,7 @@
 [
     {
         "id": "general_dark_forest_thoughts",
-        "thoughts": [
+        "strings": [
             "Is practicing battle moves",
             "Is sharpening {PRONOUN/m_c/poss} claws",
             "Is slinking through the shadows",
@@ -56,7 +56,7 @@
     },
     {
         "id": "dark_forest_to_living_other",
-        "thoughts": [
+        "strings": [
             "Is thinking about walking in the dreams of r_c",
             "Watches r_c with malice in {PRONOUN/m_c/poss} eyes",
             "Is whispering in the ear of r_c",
@@ -66,13 +66,17 @@
             "Pulls r_c into the Dark Forest in {PRONOUN/r_c/poss} dreams",
             "Wonders what r_c would think if {PRONOUN/r_c/subject} saw {PRONOUN/m_c/object} now"
         ],
-        "random_living_status": [
-            "living"
-        ]
+        "involved_cats": {
+            "r_c": {
+                "group": [
+                    "-afterlife"
+                ]
+            }
+        }
     },
     {
         "id": "dark_forest_founder_dead_to_dead_other",
-        "thoughts": [
+        "strings": [
             "Is speaking with r_c how c_n came to be",
             "Is telling the other Dark Forest cats stories of c_n's beginning",
             "Is telling {PRONOUN/m_c/self} that {PRONOUN/m_c/poss} era was the most powerful and pure",
@@ -81,33 +85,43 @@
             "Glares down at the battling trainees, taunting r_c to improve",
             "Lifts a claw at a quivering, pitiful soul, then orders r_c to dispose of it"
         ],
-        "main_age_constraint": [
-            "adolescent",
-            "young adult",
-            "adult",
-            "senior adult",
-            "senior"
-        ],
-        "main_backstory_constraint": [
-            "clan_founder"
-        ],
-        "random_living_status": [
-            "darkforest"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "age": [
+                    "adolescent",
+                    "young adult",
+                    "adult",
+                    "senior adult",
+                    "senior"
+                ],
+                "backstory": [
+                    "clan_founder"
+                ]
+            },
+            "r_c": {
+                "group": [
+                    "dark_forest"
+                ]
+            }
+        }
     },
     {
         "id": "darkforest_tostarclan_LG",
-        "thoughts": [
+        "strings": [
             "Is begging r_c to vouch for {PRONOUN/m_c/object} to join StarClan",
             "Is explaining to r_c about {PRONOUN/m_c/poss} backstory and why {PRONOUN/m_c/subject} {VERB/m_c/are/is} here"
         ],
-        "random_living_status": [
-            "starclan"
-        ]
+        "involved_cats": {
+            "r_c": {
+                "group": [
+                    "starclan"
+                ]
+            }
+        }
     },
     {
         "id": "dark_forest_kind",
-        "thoughts": [
+        "strings": [
             "Wishes {PRONOUN/m_c/subject} could go to StarClan",
             "Feels regret for {PRONOUN/m_c/poss} actions",
             "Is curled up in a ball, crying",
@@ -124,22 +138,28 @@
             "Wonders if there's anyone here {PRONOUN/m_c/subject} can actually trust",
             "Tried crossing the border into StarClan to no avail"
         ],
-        "main_trait_constraint": [
-            "careful",
-            "compassionate",
-            "loving",
-            "gloomy",
-            "nervous",
-            "playful",
-            "responsible",
-            "sincere",
-            "strange",
-            "thoughtful"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "careful",
+                        "compassionate",
+                        "loving",
+                        "gloomy",
+                        "nervous",
+                        "playful",
+                        "responsible",
+                        "sincere",
+                        "strange",
+                        "thoughtful"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "dark_forest_evil",
-        "thoughts": [
+        "strings": [
             "Is fighting with another member of the Dark Forest",
             "Wishes {PRONOUN/m_c/subject} could hurt those who have wronged {PRONOUN/m_c/object}",
             "Wants to unleash mayhem on the cats who hurt {PRONOUN/m_c/object} in life",
@@ -164,53 +184,72 @@
             "Has allied {PRONOUN/m_c/self} with the strongest cats {PRONOUN/m_c/subject} could find",
             "Befriended a weaker cat only to happily betray them when they needed {PRONOUN/m_c/object} most"
         ],
-        "main_trait_constraint": [
-            "arrogant",
-            "ambitious",
-            "bloodthirsty",
-            "bold",
-            "cold",
-            "cunning",
-            "faithful",
-            "fierce",
-            "grumpy",
-            "insecure",
-            "rebellious",
-            "strict",
-            "strange",
-            "vengeful"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "arrogant",
+                        "ambitious",
+                        "bloodthirsty",
+                        "bold",
+                        "cold",
+                        "cunning",
+                        "faithful",
+                        "fierce",
+                        "grumpy",
+                        "insecure",
+                        "rebellious",
+                        "strict",
+                        "strange",
+                        "vengeful"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "dark_forest_sneaky",
-        "thoughts": [
+        "strings": [
             "Isn't surprised in the slightest as to why {PRONOUN/m_c/subject} ended up here",
             "Easily avoided encountering another shadowy cat",
             "Talked {PRONOUN/m_c/poss} way out of a training session",
             "Tricked a shadowy cat into doing {PRONOUN/m_c/poss} bidding"
         ],
-        "main_trait_constraint": [
-            "sneaky",
-            "arrogant",
-            "shameless",
-            "wise",
-            "cunning",
-            "charismatic",
-            "strange"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "arrogant",
+                        "shameless",
+                        "wise",
+                        "cunning",
+                        "charismatic",
+                        "strange"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_h1",
-        "thoughts": [
+        "strings": [
             "Misses having a real den"
         ],
-        "main_skill_constraint": [
-            "ARTISTAN,1", "CAMP,1", "CLEAN,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "ARTISTAN,1",
+                        "CAMP,1",
+                        "CLEAN,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_h2",
-        "thoughts": [
+        "strings": [
             "Imagines what the camp would look like if {PRONOUN/m_c/subject} had something to decorate it with",
             "Searches around for items that could be used as decorations",
             "Wants to see something shiny again",
@@ -219,24 +258,36 @@
             "Is bored without something to do",
             "Judges c_n's decorating choices"
         ],
-        "main_skill_constraint": [
-            "ARTISTAN,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "ARTISTAN,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_h3",
-        "thoughts": [
+        "strings": [
             "Is frustrated as the black, goopy ground makes it impossible to build a solid structure",
             "Gives up as {PRONOUN/m_c/poss} attempt at fixing around the camp proves futile",
             "Wonders if the dens will stay permanently damaged"
         ],
-        "main_skill_constraint": [
-            "CAMP,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "CAMP,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_h4",
-        "thoughts": [
+        "strings": [
             "Finds it difficult to stay clean",
             "Feels gross as the black goop seems to permanently stay on {PRONOUN/m_c/poss} fur",
             "Feels like {PRONOUN/m_c/subject} will lick off {PRONOUN/m_c/poss} fur if {PRONOUN/m_c/subject} {VERB/m_c/try/tries} to clean {PRONOUN/m_c/self} any longer",
@@ -245,24 +296,36 @@
             "Wishes {PRONOUN/m_c/subject} {VERB/m_c/were/was} alive again just to get the goop off {PRONOUN/m_c/poss} pelt",
             "Doesn't let other cats touch {PRONOUN/m_c/object}"
         ],
-        "main_skill_constraint": [
-            "CLEAN,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "CLEAN,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_h5",
-        "thoughts": [
+        "strings": [
             "Tries to climb up the dark trees",
             "Misses sinking {PRONOUN/m_c/poss} claws in real wood",
             "Doesn't feel enriched within {PRONOUN/m_c/poss} enclosure"
         ],
-        "main_skill_constraint": [
-            "CLIMBER,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "CLIMBER,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_h6",
-        "thoughts": [
+        "strings": [
             "Is curious on if the Dark Forest is anything more than a forest",
             "Peeks around the dark trees with wonder",
             "Tries to explore through the goop",
@@ -271,36 +334,54 @@
             "Thinks everything looks the same",
             "Wonders if {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} been going in circles while exploring and never realized it"
         ],
-        "main_skill_constraint": [
-            "EXPLORER,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "EXPLORER,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_h7",
-        "thoughts": [
+        "strings": [
             "Is devastated to find there are no fish in the Dark Forest",
             "Fimshin' is life and {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not livin'",
             "Imagines what it would be like to catch a fish one last time"
         ],
-        "main_skill_constraint": [
-            "FISHER,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "FISHER,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_h8",
-        "thoughts": [
+        "strings": [
             "Finds it impossible to dig in the goop",
             "Regrets trying to dig a hole as {PRONOUN/m_c/poss} paws blacken with goop",
             "Dreams of digging a tunnel to StarClan",
             "Wonders if c_n would find any of {PRONOUN/m_c/poss} hidden passages underneath the camp"
         ],
-        "main_skill_constraint": [
-            "TUNNELER,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "TUNNELER,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_h9",
-        "thoughts": [
+        "strings": [
             "Is saddened by the lack of trinkets or shiny things in the Dark Forest",
             "Misses {PRONOUN/m_c/poss} object collection dearly",
             "Wonders if any cat will find {PRONOUN/m_c/poss} hidden stash of curious objects",
@@ -309,13 +390,19 @@
             "Tells woeful stories about {PRONOUN/m_c/poss} object collection to any cat who will listen",
             "Feels devastated as {PRONOUN/m_c/subject} {VERB/m_c/start/starts} to forget what {PRONOUN/m_c/poss} trinkets look like"
         ],
-        "main_skill_constraint": [
-            "TREASURE,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "TREASURE,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_h10",
-        "thoughts": [
+        "strings": [
             "Feels lost as {PRONOUN/m_c/subject} {VERB/m_c/have/has} no sense of time in the Dark Forest",
             "Is desperate to see the sun fall and rise again",
             "Wonders if any other cat feels like time is perpetually still",
@@ -323,49 +410,74 @@
             "Has lost count of how many moons {PRONOUN/m_c/subject}{VERB/m_c/'ve/s} been in the Dark Forest",
             "Has forgotten how it felt like to feel the sun rest"
         ],
-        "main_skill_constraint": [
-            "TIME,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "TIME,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_starghost",
-        "thoughts": [
+        "strings": [
             "Feels like {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} belong here",
             "Wonders if {PRONOUN/m_c/subject} {VERB/m_c/are/is} being punished",
             "Wanders around to find {PRONOUN/m_c/poss} friends from the other side, yet is met with nothing"
         ],
-        "main_skill_constraint": [
-            "STAR,1", "GHOST,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "STAR,1",
+                        "GHOST,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_star",
-        "thoughts": [
+        "strings": [
             "Tries to ask StarClan for guidance",
             "Wonders if being sent to the Dark Forest is a test",
             "Feels misplaced and misguided",
             "Bitterly knows {PRONOUN/m_c/subject} should be surrounded by stars instead of black goop"
         ],
-        "main_skill_constraint": [
-            "STAR,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "STAR,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_dark",
-        "thoughts": [
+        "strings": [
             "Dreadfully knows {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} exactly where {PRONOUN/m_c/subject} {VERB/m_c/are/is} meant to be",
             "Thought the Dark Forest was going to be much cooler",
             "Feels like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} in {PRONOUN/m_c/poss} element",
             "Feels the Dark Forest is nothing knew to {PRONOUN/m_c/object}",
             "Wonders what it would be like to not have {PRONOUN/m_c/poss} gift"
         ],
-        "main_skill_constraint": [
-            "DARK,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "DARK,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_fighter",
-        "thoughts": [
+        "strings": [
             "Excited to be surrounded by other fighters like {PRONOUN/m_c/object}",
             "Doesn't think the Dark Forest is so bad",
             "Fights {PRONOUN/m_c/poss} frustrations with, well, more fighting!",
@@ -378,13 +490,19 @@
             "Gives the apprentices tips",
             "Glad {PRONOUN/m_c/poss} claws never seem to get worn down"
         ],
-        "main_skill_constraint": [
-            "FIGHTER,1"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "FIGHTER,1"
+                    ]
+                }
+            }
+        }
     },
     {
         "id": "skill_thoughts_healer",
-        "thoughts": [
+        "strings": [
             "Is unnerved with the lack of herbs in the Dark Forest",
             "Groans as r_c approaches {PRONOUN/m_c/object} with wounds",
             "Feels defeated as herbs die off before {PRONOUN/m_c/poss} eyes",
@@ -394,16 +512,24 @@
             "Wonders why cats are able to be hurt while dead",
             "Feels like {PRONOUN/m_c/subject} never {VERB/m_c/get/gets} a break"
         ],
-        "main_skill_constraint": [
-            "HEALER,1"
-        ],
-        "random_living_status": [
-            "darkforest"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "HEALER,1"
+                    ]
+                }
+            },
+            "r_c": {
+                "group": [
+                    "dark_forest"
+                ]
+            }
+        }
     },
     {
         "id": "skill_thoughts_hunter",
-        "thoughts": [
+        "strings": [
             "Feels bored as there is nothing to hunt",
             "Is unnerved by the lack of animal life in the Dark Forest",
             "Decides to stalk r_c to pass the time",
@@ -411,16 +537,24 @@
             "Stalks around the edge of the Dark Forest border to see if {PRONOUN/m_c/subject} can pounce on a StarClan cat",
             "Wonders if {PRONOUN/m_c/poss} skills are useless in the land of no prey"
         ],
-        "main_skill_constraint": [
-            "HUNTER,1"
-        ],
-        "random_living_status": [
-            "darkforest"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "HUNTER,1"
+                    ]
+                }
+            },
+            "r_c": {
+                "group": [
+                    "dark_forest"
+                ]
+            }
+        }
     },
     {
         "id": "to_living_thoughts",
-        "thoughts": [
+        "strings": [
             "Wonders how r_c is fairing",
             "Whispers lies into r_c's ear to cause chaos",
             "Misguides r_c from success",
@@ -429,13 +563,17 @@
             "Makes silly faces at r_c",
             "Watches r_c live {PRONOUN/r_c/poss} life to starve off {PRONOUN/m_c/poss} boredom"
         ],
-        "random_living_status": [
-            "living"
-        ]
+        "involved_cats": {
+            "r_c": {
+                "group": [
+                    "-afterlife"
+                ]
+            }
+        }
     },
     {
         "id": "leader_df",
-        "thoughts": [
+        "strings": [
             "Is glad to not have to rule c_n anymore",
             "Frowns upon c_n",
             "Thinks c_n is making all the wrong decisions",
@@ -448,62 +586,106 @@
             "Feels pleased with c_n's choices so far",
             "Feels like {PRONOUN/m_c/subject} can finally retire without having to worry about c_n or duties"
         ],
-        "main_status_constraint": [
-            "leader",
-            "deputy"
+        "involved_cats": {
+            "m_c": {
+                "status": [
+                    "leader",
+                    "deputy"
+                ]
+            }
+        }
+    },
+    {
+        "id": "introspective_df_warapp_h",
+        "strings": [
+            "Thinks every cat is being a little too dramatic for {PRONOUN/m_c/poss} tastes",
+            "Prefers to daydream than practice {PRONOUN/m_c/poss} fighting moves",
+            "Wonders if StarClan would allow {PRONOUN/m_c/object} to switch afterlives on good behavior",
+            "Is already sick of other cats aggressive behavior",
+            "Thinks much more would get done if everycat just... calmed down",
+            "Peeks through the barrier between the Dark Forest and StarClan",
+            "Stays away from the unruly fighting",
+            "Takes a nap without a care",
+            "Helps look for prey despite knowing there isn't a lot",
+            "Wonders why the Dark Forest cats are able to starve and feel pain",
+            "Finds the Dark Forest boring without anything to observe",
+            "Thinks the Dark Forest is just like the living",
+            "Isolates in the far corner of the Dark forest as far as {PRONOUN/m_c/subject} can go",
+            "Doesn't think the Dark Forest is all that bad",
+            "Imagines what it would be like to be in StarClan",
+            "Wonders who the ghostly cats without stars are",
+            "Wonders if the Dark Forest would be better without r_c's large mouth",
+            "Judges the other apprentices"
+        ],
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "righteous",
+                        "lonesome",
+                        "gloomy",
+                        "calm",
+                        "wise",
+                        "flexible",
+                        "mellow",
+                        "thoughtful"
+                    ]
+                }
+            },
+            "r_c": {
+                "group": [
+                    "dark_forest"
+                ]
+            }
+        }
+    },
+    {
+        "id": "df_familyalive1_h",
+        "strings": [
+            "Wonders about r_c all the time",
+            "Can't help but worry that r_c is forgetting {PRONOUN/m_c/poss}",
+            "Worries r_c wouldn't approve of {PRONOUN/m_c/object} being in the Dark Forest",
+            "Has everything {PRONOUN/m_c/subject} {VERB/m_c/want/wants} to say to r_c when {PRONOUN/r_c/subject} {VERB/r_c/die/dies} planned out",
+            "Hopes r_c is living and thriving",
+            "Sends r_c signs"
+        ],
+        "involved_cats": {
+            "r_c": {
+                "group": [
+                    "-afterlife"
+                ]
+            }
+        },
+        "relationship_constraint": [
+            {
+                "cats_from": [
+                    "m_c"
+                ],
+                "cats_to": [
+                    "r_c"
+                ],
+                "mutual": false,
+                "constraints": [
+                    "siblings"
+                ]
+            }
         ]
     },
-	{
-		"id": "introspective_df_warapp_h",
-		"thoughts": [
-			"Thinks every cat is being a little too dramatic for {PRONOUN/m_c/poss} tastes",
-			"Prefers to daydream than practice {PRONOUN/m_c/poss} fighting moves",
-			"Wonders if StarClan would allow {PRONOUN/m_c/object} to switch afterlives on good behavior",
-			"Is already sick of other cats aggressive behavior",
-			"Thinks much more would get done if everycat just... calmed down",
-			"Peeks through the barrier between the Dark Forest and StarClan",
-			"Stays away from the unruly fighting",
-			"Takes a nap without a care",
-			"Helps look for prey despite knowing there isn't a lot",
-			"Wonders why the Dark Forest cats are able to starve and feel pain",
-			"Finds the Dark Forest boring without anything to observe",
-			"Thinks the Dark Forest is just like the living",
-			"Isolates in the far corner of the Dark forest as far as {PRONOUN/m_c/subject} can go",
-			"Doesn't think the Dark Forest is all that bad",
-			"Imagines what it would be like to be in StarClan",
-			"Wonders who the ghostly cats without stars are",
-			"Wonders if the Dark Forest would be better without r_c's large mouth",
-			"Judges the other apprentices"
-		],
-		"main_trait_constraint": [
-			"righteous",
-			"lonesome",
-			"gloomy",
-			"calm",
-			"wise",
-			"flexible",
-			"mellow",
-			"thoughtful"
-		],
-		"random_living_status": [
-			"darkforest"
-		]
-	},
-	{
-		"id": "df_familyalive1_h",
-		"thoughts": [
-			"Wonders about r_c all the time",
-			"Can't help but worry that r_c is forgetting {PRONOUN/m_c/poss}",
-			"Worries r_c wouldn't approve of {PRONOUN/m_c/object} being in the Dark Forest",
-			"Has everything {PRONOUN/m_c/subject} {VERB/m_c/want/wants} to say to r_c when {PRONOUN/r_c/subject} {VERB/r_c/die/dies} planned out",
-			"Hopes r_c is living and thriving",
-			"Sends r_c signs"
-		],
-        "relationship_constraint": [
-            "siblings"
+    {
+        "id": "dark_forest_stealth",
+        "strings": [
+            "Easily avoided encountering another shadowy cat",
+            "Talked {PRONOUN/m_c/poss} way out of a training session",
+            "Tricked a shadowy cat into doing {PRONOUN/m_c/poss} bidding"
         ],
-		"random_living_status": [
-			"living"
-		]
-	}
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "skill": [
+                        "STEALTH,1"
+                    ]
+                }
+            }
+        }
+    }
 ]

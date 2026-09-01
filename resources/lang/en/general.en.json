@@ -5,12 +5,8 @@
             "many": "%{count} moons"
         },
         "moons_age_in_death": {
-            "one": "1 moon (in death)",
-            "many": "%{count} moons (in death)"
-        },
-        "moons_age_in_life": {
-            "one": "1 moon (in life)",
-            "many": "%{count} moons (in life)"
+            "one": "dead for 1 moon",
+            "many": "dead for %{count} moons"
         },
         "moon_date": "moon %{moon}",
         "guide": "guiding ghost",
@@ -18,6 +14,10 @@
         "past_no_group": "past %{rank}",
         "past_group": "past %{group} %{rank}",
         "daylight_warrior": "%{group} daylight %{rank}",
+        "lives": {
+            "one": "1 life",
+            "many": "%{count} lives"
+        },
         "leader": {
             "one": "leader",
             "many": "leaders"
@@ -117,6 +117,8 @@
             "one": "mate",
             "many": "mates"
         },
+        "are_mates": "mates",
+        "ex_mate": "ex-mate",
         "she-cat": "she-cat",
         "tom": "tom",
         "cat": "cat",
@@ -206,9 +208,10 @@
             "one": "apprentice: %{apprentices}",
             "many": "apprentices: %{apprentices}"
         },
+        "former_apprentice_history": "%{name} previously mentored %{apprentices}.",
         "former_apprentice_label": {
-            "one": "former apprentice: %{apprentices}",
-            "many": "former apprentices: %{apprentices}"
+            "one": "1 former apprentice",
+            "many": "%{count} former apprentices"
         },
         "apprentice_extra": {
             "zero": "",

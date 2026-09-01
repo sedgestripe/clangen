@@ -5,6 +5,8 @@ from enum import auto
 from strenum import StrEnum
 from enum import Enum, auto
 
+from scripts.game_structure import constants
+
 
 class CatAge(StrEnum):
     NEWBORN = "newborn"
@@ -20,6 +22,29 @@ class CatAge(StrEnum):
 
     def can_have_mate(self):
         return self not in (CatAge.KITTEN, CatAge.NEWBORN, CatAge.ADOLESCENT)
+
+    @staticmethod
+    def get_from_moons(moons):
+        lookup = {
+            CatAge.NEWBORN: constants.CONFIG["cat_ages"]["newborn"],
+            CatAge.KITTEN: constants.CONFIG["cat_ages"]["kitten"],
+            CatAge.ADOLESCENT: constants.CONFIG["cat_ages"]["adolescent"],
+            CatAge.YOUNG_ADULT: constants.CONFIG["cat_ages"]["young adult"],
+            CatAge.ADULT: constants.CONFIG["cat_ages"]["adult"],
+            CatAge.SENIOR_ADULT: constants.CONFIG["cat_ages"]["senior adult"],
+            CatAge.SENIOR: constants.CONFIG["cat_ages"]["senior"],
+        }
+        if moons > lookup[CatAge.SENIOR][1]:
+            return CatAge.SENIOR
+
+        return next(
+            (
+                key
+                for key, (min_age, max_age) in lookup.items()
+                if min_age <= moons <= max_age
+            ),
+            None,
+        )
 
 
 class CatSocial(StrEnum):
@@ -58,7 +83,7 @@ class CatRank(StrEnum):
 
     def is_any_mediator_rank(self) -> bool:
         return self in (self.MEDIATOR, self.MEDIATOR_APPRENTICE)
-    
+
     def is_any_queen_rank(self) -> bool:
         return self in (self.QUEEN, self.QUEENS_APPRENTICE)
 
@@ -67,7 +92,7 @@ class CatRank(StrEnum):
             self.APPRENTICE,
             self.MEDIATOR_APPRENTICE,
             self.MEDICINE_APPRENTICE,
-            self.QUEENS_APPRENTICE
+            self.QUEENS_APPRENTICE,
         )
 
     def is_any_adult_warrior_like_rank(self) -> bool:
@@ -84,7 +109,7 @@ class CatRank(StrEnum):
                     self.MEDIATOR,
                     self.MEDIATOR_APPRENTICE,
                     self.QUEEN,
-                    self.QUEENS_APPRENTICE
+                    self.QUEENS_APPRENTICE,
                 ):
                     return True
             else:
@@ -155,20 +180,20 @@ class CatGroup(StrEnum):
             self.PLAYER_CLAN,
             self.OTHER_CLAN,
         )
-    
+
     # LG
     def get_all_outside_groups_IDs(self):
-        """ 
-        Returns a list of groups that the specified cat is NOT a part of. 
+        """
+        Returns a list of groups that the specified cat is NOT a part of.
         Called from a cat's group object
         """
-        return_groups= []
+        return_groups = []
         all_groups = {
             CatGroup.PLAYER_CLAN: CatGroup.PLAYER_CLAN_ID,
             CatGroup.ROGUE_GROUP: CatGroup.ROGUE_GROUP_ID,
             CatGroup.LONER_GROUP: CatGroup.LONER_GROUP_ID,
             CatGroup.HOUSEHOLD: CatGroup.HOUSEHOLD_ID,
-            CatGroup.NONE: None
+            CatGroup.NONE: None,
         }
         for i in all_groups:
             if i == self:
@@ -176,6 +201,7 @@ class CatGroup(StrEnum):
             else:
                 return_groups.append(all_groups[i])
         return return_groups
+
 
 class CatCompatibility(Enum):
     NEGATIVE = auto()

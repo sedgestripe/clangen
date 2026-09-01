@@ -28,7 +28,6 @@ class Trait(Enum):
     loyal = "loyal"
     responsible = "responsible"
     shameless = "shameless"
-    sneaky = "sneaky"
     strange = "strange"
     vengeful = "vengeful"
     wise = "wise"
@@ -67,7 +66,6 @@ class Trait(Enum):
     not_loyal = "-loyal"
     not_responsible = "-responsible"
     not_shameless = "-shameless"
-    not_sneaky = "-sneaky"
     not_strange = "-strange"
     not_vengeful = "-vengeful"
     not_wise = "-wise"
@@ -80,7 +78,6 @@ class Trait(Enum):
     not_sincere = "-sincere"
     not_flamboyant = "-flamboyant"
     not_rebellious = "-rebellious"
-
 
     mellow = "mellow"
     flexible = "flexible"

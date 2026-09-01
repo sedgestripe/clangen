@@ -1,27 +1,27 @@
 [
-	{
-		"id": "leader_dark_forest_thoughts",
-		"thoughts": [
-			"Wonders how c_n is doing without {PRONOUN/m_c/poss} leadership",
-			"Wishes {PRONOUN/m_c/subject} could give new leaders lives",
-			"Misses having control over c_n",
-			"Wonders if {PRONOUN/m_c/subject} could have chosen a better deputy to take over after {PRONOUN/m_c/poss} death",
-			"Realizes how little {PRONOUN/m_c/poss} status means in the Dark Forest",
-			"Tries to call a Clan meeting",
-			"Has a circle of Dark Forest warriors around {PRONOUN/m_c/object}, plotting something",
-			"Misses being visited by StarClan cats",
-			"Is feeling very bitter",
-			"Distantly watches over c_n",
-			"Knows {PRONOUN/m_c/subject} could have been a better leader",
-			"Wonders if {PRONOUN/m_c/subject}'ll ever be forgotten",
-			"Is gloating about having {PRONOUN/m_c/poss} name forever engraved in c_n's history",
-			"Is forgetting the Warrior Code",
-			"Peeks over the StarClan border, only to be swiftly clawed away by a starry-pelted cat",
-			"Wants revenge on those who wronged {PRONOUN/m_c/object}",
-			"Is playing the victim",
-			"Cleans blood off their muddy paws",
-			"Has a winning streak in battles",
-			"Enjoys when the other Dark Forest cats look to them for guidance"
-		]
-	}
+    {
+        "id": "leader_dark_forest_thoughts",
+        "strings": [
+            "Wonders how c_n is doing without {PRONOUN/m_c/poss} leadership",
+            "Wishes {PRONOUN/m_c/subject} could give new leaders lives",
+            "Misses having control over c_n",
+            "Wonders if {PRONOUN/m_c/subject} could have chosen a better deputy to take over after {PRONOUN/m_c/poss} death",
+            "Realizes how little {PRONOUN/m_c/poss} status means in the Dark Forest",
+            "Tries to call a Clan meeting",
+            "Has a circle of Dark Forest warriors around {PRONOUN/m_c/object}, plotting something",
+            "Misses being visited by StarClan cats",
+            "Is feeling very bitter",
+            "Distantly watches over c_n",
+            "Knows {PRONOUN/m_c/subject} could have been a better leader",
+            "Wonders if {PRONOUN/m_c/subject}'ll ever be forgotten",
+            "Is gloating about having {PRONOUN/m_c/poss} name forever engraved in c_n's history",
+            "Is forgetting the Warrior Code",
+            "Peeks over the StarClan border, only to be swiftly clawed away by a starry-pelted cat",
+            "Wants revenge on those who wronged {PRONOUN/m_c/object}",
+            "Is playing the victim",
+            "Cleans blood off their muddy paws",
+            "Has a winning streak in battles",
+            "Enjoys when the other Dark Forest cats look to them for guidance"
+        ]
+    }
 ]

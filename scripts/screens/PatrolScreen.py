@@ -31,18 +31,30 @@ from ..ui.windows.rel_change_details import RelChangeDetailWindow
 
 
 class PatrolScreen(Screens):
-    able_box = pygame.transform.scale(pygame.image.load("resources/images/patrol_able_cats.png").convert_alpha(),
-                                    (540, 402))
-    app_frame = pygame.transform.scale(pygame.image.load("resources/images/patrol_app_frame.png").convert_alpha(),
-                                    (332, 340))
-    mate_frame = pygame.transform.scale(pygame.image.load("resources/images/patrol_mate_frame.png").convert_alpha(),
-                                    (332, 340))
-    cat_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/cat_icon.png").convert_alpha(),
-                                    (100, 100))
-    df_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/df_toggle2.png").convert_alpha(),
-                                    (100, 100))
-    date_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/date.png").convert_alpha(),
-                                    (100, 100))
+    able_box = pygame.transform.scale(
+        pygame.image.load("resources/images/patrol_able_cats.png").convert_alpha(),
+        (540, 402),
+    )
+    app_frame = pygame.transform.scale(
+        pygame.image.load("resources/images/patrol_app_frame.png").convert_alpha(),
+        (332, 340),
+    )
+    mate_frame = pygame.transform.scale(
+        pygame.image.load("resources/images/patrol_mate_frame.png").convert_alpha(),
+        (332, 340),
+    )
+    cat_icon = pygame.transform.scale(
+        pygame.image.load("resources/images/buttons/cat_icon.png").convert_alpha(),
+        (100, 100),
+    )
+    df_icon = pygame.transform.scale(
+        pygame.image.load("resources/images/buttons/df_toggle2.png").convert_alpha(),
+        (100, 100),
+    )
+    date_icon = pygame.transform.scale(
+        pygame.image.load("resources/images/buttons/date.png").convert_alpha(),
+        (100, 100),
+    )
 
     current_patrol = []
     patrol_stage = "choose_cats"  # Can be 'choose_cats', 'patrol_events' or 'patrol_complete'. Controls the stage of patrol.
@@ -84,7 +96,7 @@ class PatrolScreen(Screens):
         self.start_patrol_thread: Optional[PropagatingThread] = None
         self.proceed_patrol_thread: Optional[PropagatingThread] = None
         self.outcome_art = None
-        switch_set_value(Switch.patrol_category, 'clangen')
+        switch_set_value(Switch.patrol_category, "clangen")
 
         self.max_cats = 6
         self.min_cats = 0
@@ -114,78 +126,115 @@ class PatrolScreen(Screens):
             self.menu_button_pressed(event)
             self.mute_button_pressed(event)
 
-        elif event.type == pygame.KEYDOWN and game_setting_get("keybinds"):
+        elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 self.change_screen(GameScreen.LIST)
             # elif event.key == pygame.K_RIGHT:
             # self.change_screen(GameScreen.LIST)
 
     def handle_choose_cats_events(self, event):
-
-        if 'cat_icon' in self.elements and event.ui_element == self.elements['cat_icon']:
+        if (
+            "cat_icon" in self.elements
+            and event.ui_element == self.elements["cat_icon"]
+        ):
             switch_set_value(Switch.patrol_category, "clangen")
             self.selected_cat = None
             self.current_patrol.clear()
-            self.elements['cat_icon'].disable()
-            if game.clan.your_cat.status.alive_in_your_cat_group and game.clan.your_cat.joined_df and not game.clan.your_cat.not_working():
-                self.elements['df_icon'].enable()
+            self.elements["cat_icon"].disable()
+            if (
+                game.clan.your_cat.status.alive_in_your_cat_group
+                and game.clan.your_cat.joined_df
+                and not game.clan.your_cat.not_working()
+            ):
+                self.elements["df_icon"].enable()
             else:
-                self.elements['df_icon'].disable()
-            if game.clan.your_cat.status.alive_in_your_cat_group and game.clan.your_cat.moons >= 14 and not game.clan.your_cat.not_working():
-                self.elements['date_icon'].enable()
+                self.elements["df_icon"].disable()
+            if (
+                game.clan.your_cat.status.alive_in_your_cat_group
+                and game.clan.your_cat.moons >= 14
+                and not game.clan.your_cat.not_working()
+            ):
+                self.elements["date_icon"].enable()
             else:
-                self.elements['date_icon'].disable()
-            self.elements['your_cat'].enable()
+                self.elements["date_icon"].disable()
+            self.elements["your_cat"].enable()
             self.update_selected_cat()
             self.update_cat_images_buttons()
             self.update_button()
 
-        elif 'df_icon' in self.elements and event.ui_element == self.elements['df_icon']:
-            switch_set_value(Switch.patrol_category, 'df')
+        elif (
+            "df_icon" in self.elements and event.ui_element == self.elements["df_icon"]
+        ):
+            switch_set_value(Switch.patrol_category, "df")
             self.selected_cat = None
             self.current_patrol.clear()
-            self.elements['cat_icon'].enable()
-            self.elements['df_icon'].disable()
-            if game.clan.your_cat.status.alive_in_your_cat_group and game.clan.your_cat.moons >= 14 and not game.clan.your_cat.not_working():
-                self.elements['date_icon'].enable()
+            self.elements["cat_icon"].enable()
+            self.elements["df_icon"].disable()
+            if (
+                game.clan.your_cat.status.alive_in_your_cat_group
+                and game.clan.your_cat.moons >= 14
+                and not game.clan.your_cat.not_working()
+            ):
+                self.elements["date_icon"].enable()
             else:
-                self.elements['date_icon'].disable()
-            self.elements['your_cat'].enable()
+                self.elements["date_icon"].disable()
+            self.elements["your_cat"].enable()
             self.update_selected_cat()
             self.update_cat_images_buttons()
             self.update_button()
 
-        elif "date_icon" in self.elements and event.ui_element == self.elements['date_icon']:
-            switch_set_value(Switch.patrol_category, 'date')
+        elif (
+            "date_icon" in self.elements
+            and event.ui_element == self.elements["date_icon"]
+        ):
+            switch_set_value(Switch.patrol_category, "date")
 
             self.selected_cat = None
             self.current_patrol.clear()
-            self.elements['cat_icon'].enable()
-            if not game.clan.your_cat.dead and not game.clan.your_cat.status.is_outsider and game.clan.your_cat.joined_df and not game.clan.your_cat.not_working():
-                self.elements['df_icon'].enable()
+            self.elements["cat_icon"].enable()
+            if (
+                not game.clan.your_cat.dead
+                and not game.clan.your_cat.status.is_outsider
+                and game.clan.your_cat.joined_df
+                and not game.clan.your_cat.not_working()
+            ):
+                self.elements["df_icon"].enable()
             else:
-                self.elements['df_icon'].disable()
-            self.elements['date_icon'].disable()
-            self.elements['your_cat'].enable()
+                self.elements["df_icon"].disable()
+            self.elements["date_icon"].disable()
+            self.elements["your_cat"].enable()
             self.update_selected_cat()
             self.update_cat_images_buttons()
             self.update_button()
 
-        elif "your_cat" in self.elements and event.ui_element == self.elements['your_cat']:
-            switch_set_value(Switch.patrol_category, 'lifegen')
+        elif (
+            "your_cat" in self.elements
+            and event.ui_element == self.elements["your_cat"]
+        ):
+            switch_set_value(Switch.patrol_category, "lifegen")
 
             self.selected_cat = None
             self.current_patrol.clear()
-            self.elements['cat_icon'].enable()
-            if not game.clan.your_cat.dead and not game.clan.your_cat.status.is_outsider and game.clan.your_cat.joined_df and not game.clan.your_cat.not_working():
-                self.elements['df_icon'].enable()
+            self.elements["cat_icon"].enable()
+            if (
+                not game.clan.your_cat.dead
+                and not game.clan.your_cat.status.is_outsider
+                and game.clan.your_cat.joined_df
+                and not game.clan.your_cat.not_working()
+            ):
+                self.elements["df_icon"].enable()
             else:
-                self.elements['df_icon'].disable()
-            if not game.clan.your_cat.dead and not game.clan.your_cat.status.is_outsider and game.clan.your_cat.moons >= 14 and not game.clan.your_cat.not_working():
-                self.elements['date_icon'].enable()
+                self.elements["df_icon"].disable()
+            if (
+                not game.clan.your_cat.dead
+                and not game.clan.your_cat.status.is_outsider
+                and game.clan.your_cat.moons >= 14
+                and not game.clan.your_cat.not_working()
+            ):
+                self.elements["date_icon"].enable()
             else:
-                self.elements['date_icon'].disable()
-            self.elements['your_cat'].disable()
+                self.elements["date_icon"].disable()
+            self.elements["your_cat"].disable()
             self.update_selected_cat()
             self.update_cat_images_buttons()
             self.update_button()
@@ -393,25 +442,23 @@ class PatrolScreen(Screens):
 
     def screen_switches(self):
         super().screen_switches()
+
+        if (
+            self.in_progress_data is not None
+            and self.in_progress_data["current_moon"] == game.clan.age
+            and self.in_progress_data["clan_name"] == game.clan.name
+        ):
+            self.display_change_load(self.in_progress_data)
+        else:
+            self.in_progress_data = None
+            self.open_choose_cats_screen()
+
         self.set_disabled_menu_buttons(["patrols"])
         # LG EDIT
         self.update_heading_text(game.clan.your_cat.status.get_group_heading_text())
         # ---
         self.show_mute_buttons()
         self.show_menu_buttons()
-        # self.open_choose_cats_screen()
-        # self.update_button()
-
-        if (
-            self.in_progress_data is not None
-            and self.in_progress_data["current_moon"] == game.clan.age
-            and self.in_progress_data["clan_name"]
-            == i18n.t("general.clan", clan=game.clan.displayname)
-        ):
-            self.display_change_load(self.in_progress_data)
-        else:
-            self.in_progress_data = None
-            self.open_choose_cats_screen()
 
     def display_change_save(self) -> Dict:
         if self.start_patrol_thread is not None and self.start_patrol_thread.is_alive():
@@ -469,8 +516,8 @@ class PatrolScreen(Screens):
             print("how'd that happen? Unidentified patrol stage.")
 
     def update_button(self):
-        """" Updates button availabilities. """
-        
+        """ " Updates button availabilities."""
+
         # LIFEGEN: Updating max cats based on patrol type ----
         # default is six
         if switch_get_value(Switch.patrol_category) == "df":
@@ -487,7 +534,7 @@ class PatrolScreen(Screens):
             self.min_cats = 1
         # ----------------------------------------------------
 
-        if self.patrol_stage == 'choose_cats':
+        if self.patrol_stage == "choose_cats":
             # Killing it now, because we have to switch it out for a "remove cat" button if the cat is
             # already in the patrol
             self.elements["add_remove_cat"].kill()
@@ -554,22 +601,22 @@ class PatrolScreen(Screens):
                 if self.patrol_type == "med":
                     self.patrol_type = "general"
 
-            if switch_get_value(Switch.patrol_category) == 'clangen':
-                self.elements['paw'].enable()
-                self.elements['mouse'].enable()
-                self.elements['claws'].enable()
-                self.elements['herb'].enable()
+            if switch_get_value(Switch.patrol_category) == "clangen":
+                self.elements["paw"].enable()
+                self.elements["mouse"].enable()
+                self.elements["claws"].enable()
+                self.elements["herb"].enable()
             else:
-                self.elements['paw'].disable()
-                self.elements['mouse'].disable()
-                self.elements['claws'].disable()
-                self.elements['herb'].disable()
+                self.elements["paw"].disable()
+                self.elements["mouse"].disable()
+                self.elements["claws"].disable()
+                self.elements["herb"].disable()
 
             if self.patrol_type != "med" and self.current_patrol:
                 self.elements["herb"].disable()
                 if self.patrol_type == "med":
                     self.patrol_type = "general"
-            
+
             self.elements["info"].kill()
             text = ""
             if switch_get_value(Switch.patrol_category) == "clangen":
@@ -616,12 +663,20 @@ class PatrolScreen(Screens):
                 able_no_med = self.able_cats
 
             if len(self.current_patrol) >= self.max_cats or len(able_no_med) < 1:
-                self.elements['add_one'].disable()
+                self.elements["add_one"].disable()
                 self.elements["random"].disable()
-            if len(self.current_patrol) > 3 or len(able_no_med) < 3 or (self.max_cats - len(self.current_patrol) < 3):
-                self.elements['add_three'].disable()
-            if len(self.current_patrol) > 0 or len(able_no_med) < 6  or (self.max_cats - len(self.current_patrol) < 6):
-                self.elements['add_six'].disable()
+            if (
+                len(self.current_patrol) > 3
+                or len(able_no_med) < 3
+                or (self.max_cats - len(self.current_patrol) < 3)
+            ):
+                self.elements["add_three"].disable()
+            if (
+                len(self.current_patrol) > 0
+                or len(able_no_med) < 6
+                or (self.max_cats - len(self.current_patrol) < 6)
+            ):
+                self.elements["add_six"].disable()
                 # Update the availability of the tab buttons
             if self.patrol_screen == "patrol_cats":
                 self.elements["patrol_tab"].disable()
@@ -895,7 +950,7 @@ class PatrolScreen(Screens):
             anchors={"centerx": "centerx"},
         )
         self.elements["patrol_start"].disable()
-        
+
         self.elements["cat_icon"] = UISurfaceImageButton(
             ui_scale(pygame.Rect((323, 560), (34, 34))),
             Icon.CAT_HEAD,
@@ -904,10 +959,10 @@ class PatrolScreen(Screens):
             manager=MANAGER,
         )
 
-        if switch_get_value(Switch.patrol_category) != 'clangen':
-            self.elements['cat_icon'].enable()
+        if switch_get_value(Switch.patrol_category) != "clangen":
+            self.elements["cat_icon"].enable()
         else:
-            self.elements['cat_icon'].disable()
+            self.elements["cat_icon"].disable()
 
         self.elements["df_icon"] = UISurfaceImageButton(
             ui_scale(pygame.Rect((363, 560), (34, 34))),
@@ -917,15 +972,15 @@ class PatrolScreen(Screens):
             manager=MANAGER,
         )
         if (
-            not game.clan.your_cat.dead and
-            not game.clan.your_cat.status.is_outsider and
-            game.clan.your_cat.joined_df and
-            switch_get_value(Switch.patrol_category) != "df" and 
-            not game.clan.your_cat.not_working()
-            ):
-            self.elements['df_icon'].enable()
+            not game.clan.your_cat.dead
+            and not game.clan.your_cat.status.is_outsider
+            and game.clan.your_cat.joined_df
+            and switch_get_value(Switch.patrol_category) != "df"
+            and not game.clan.your_cat.not_working()
+        ):
+            self.elements["df_icon"].enable()
         else:
-            self.elements['df_icon'].disable()
+            self.elements["df_icon"].disable()
 
         # self.elements["date_icon"] = UISurfaceImageButton(
         #     ui_scale(pygame.Rect((403, 560), (34, 34))),
@@ -940,19 +995,19 @@ class PatrolScreen(Screens):
             ui_scale(pygame.Rect((403, 560), (34, 34))),
             "",
             object_id="#date_button",
-            manager=MANAGER
+            manager=MANAGER,
         )
 
         if (
-            not game.clan.your_cat.dead and
-            not game.clan.your_cat.status.is_outsider and
-            game.clan.your_cat.moons >= 14 and
-            switch_get_value(Switch.patrol_category) != 'date' and
-            not game.clan.your_cat.not_working()
-            ):
-            self.elements['date_icon'].enable()
+            not game.clan.your_cat.dead
+            and not game.clan.your_cat.status.is_outsider
+            and game.clan.your_cat.moons >= 14
+            and switch_get_value(Switch.patrol_category) != "date"
+            and not game.clan.your_cat.not_working()
+        ):
+            self.elements["date_icon"].enable()
         else:
-            self.elements['date_icon'].disable()
+            self.elements["date_icon"].disable()
 
         self.elements["your_cat"] = UISurfaceImageButton(
             ui_scale(pygame.Rect((443, 560), (34, 34))),
@@ -961,12 +1016,10 @@ class PatrolScreen(Screens):
             object_id="@buttonstyles_icon",
             manager=MANAGER,
         )
-        if (
-            switch_get_value(Switch.patrol_category) != 'lifegen'
-            ):
-            self.elements['your_cat'].enable()
+        if switch_get_value(Switch.patrol_category) != "lifegen":
+            self.elements["your_cat"].enable()
         else:
-            self.elements['your_cat'].disable()
+            self.elements["your_cat"].disable()
 
         # add prey information
         if game.clan.game_mode != "classic":
@@ -1113,16 +1166,18 @@ class PatrolScreen(Screens):
         self.elements["proceed"] = UISurfaceImageButton(
             ui_scale(pygame.Rect((550, 433), (172, 30))),
             "screens.patrol.proceed",
-            get_button_dict(ButtonStyles.DROPDOWN, (172, 30)),
-            object_id="@buttonstyles_dropdown",
+            get_button_dict(ButtonStyles.PROFILE_MIDDLE, (172, 30)),
+            object_id="@buttonstyles_profile_middle",
             starting_height=2,
             manager=MANAGER,
         )
-        self.elements["not_proceed"] = UIImageButton(
-            ui_scale(pygame.Rect((550, 461), (172, 30))),
+        self.elements["not_proceed"] = UISurfaceImageButton(
+            ui_scale(pygame.Rect((550, 0), (172, 30))),
             "screens.patrol.dont_proceed",
-            object_id="#not_proceed_button",
+            get_button_dict(ButtonStyles.HEADER_MIRRORED, (172, 30)),
+            object_id="@buttonstyles_header_mirrored",
             starting_height=2,
+            anchors={"top": "top", "top_target": self.elements["proceed"]},
             manager=MANAGER,
         )
 
@@ -1222,7 +1277,8 @@ class PatrolScreen(Screens):
 
         if not game.clan.your_cat:
             print(
-                "Are you playing a normal ClanGen save? Switch to a LifeGen save or create a new cat!")
+                "Are you playing a normal ClanGen save? Switch to a LifeGen save or create a new cat!"
+            )
             print("Choosing random cat to play...")
             game.clan.your_cat = choice(Cat.all_cats_list)
             print("Chose " + str(game.clan.your_cat.name))
@@ -1231,8 +1287,7 @@ class PatrolScreen(Screens):
         if switch_get_value(Switch.patrol_category) == "clangen":
             for the_cat in Cat.all_cats_list:
                 if (
-                    the_cat.in_camp
-                    and the_cat.ID not in game.patrolled
+                    the_cat.ID not in game.patrolled
                     and the_cat.status.rank.is_allowed_to_patrol(the_cat)
                     and the_cat.status.alive_in_your_cat_group
                     and the_cat not in self.current_patrol
@@ -1250,12 +1305,14 @@ class PatrolScreen(Screens):
         elif switch_get_value(Switch.patrol_category) == "lifegen":
             the_cat = game.clan.your_cat
             if (
-                (the_cat.status.alive_in_your_cat_group or
-                (the_cat.status.is_outsider and the_cat.dead)) and
-                the_cat.moons >= 1 and
-                the_cat not in self.current_patrol
+                (
+                    the_cat.status.alive_in_your_cat_group
+                    or (the_cat.status.is_outsider and the_cat.dead)
+                )
+                and the_cat.moons >= 1
+                and the_cat not in self.current_patrol
                 and "2" not in switch_get_value(Switch.patrolled)
-                ):
+            ):
                 if the_cat not in self.current_patrol and not the_cat.not_working():
                     self.current_patrol.insert(0, the_cat)
                 # self.able_cats.append(the_cat)
@@ -1263,48 +1320,43 @@ class PatrolScreen(Screens):
         elif switch_get_value(Switch.patrol_category) == "date":
             you = game.clan.your_cat
             if (
-                you.status.alive_in_your_cat_group and
-                "4" not in switch_get_value(Switch.patrolled) and
-                not you.not_working() and
-                you.moons >= 14
-                ):
+                you.status.alive_in_your_cat_group
+                and "4" not in switch_get_value(Switch.patrolled)
+                and not you.not_working()
+                and you.moons >= 14
+            ):
                 if you not in self.current_patrol and not you.not_working():
                     self.current_patrol.insert(0, you)
                 for the_cat in Cat.all_cats_list:
                     if (
-                        the_cat.in_camp and
-                        the_cat.status.alive_in_your_cat_group and
-                        the_cat.ID not in game.dated_cats and
-                        the_cat not in self.current_patrol and
-                        not the_cat.not_working() and
-                        the_cat.is_dateable(game.clan.your_cat)
-                        ):
+                        the_cat.status.alive_in_your_cat_group
+                        and the_cat.ID not in game.dated_cats
+                        and the_cat not in self.current_patrol
+                        and not the_cat.not_working()
+                        and the_cat.is_dateable(game.clan.your_cat)
+                    ):
                         self.able_cats.append(the_cat)
-        else: # DF patrol
+        else:  # DF patrol
             the_cat = game.clan.your_cat
-            if (
-                the_cat.status.alive_in_your_cat_group and
-                not the_cat.not_working()
-                ):
+            if the_cat.status.alive_in_your_cat_group and not the_cat.not_working():
                 if "3" not in switch_get_value(Switch.patrolled):
                     if the_cat not in self.current_patrol and not the_cat.not_working():
                         self.current_patrol.insert(0, the_cat)
                     for c in Cat.all_cats_list:
                         if (
-                            c.moons >= 6 and
-                            c.status.alive_in_your_cat_group and
-                            c.in_camp and
-                            c.ID != the_cat.ID and
-                            c.ID not in game.patrolled and
-                            c.ID not in self.current_patrol and
-                            not c.not_working()
-                            ):
+                            c.moons >= 6
+                            and c.status.alive_in_your_cat_group
+                            and c.ID != the_cat.ID
+                            and c.ID not in game.patrolled
+                            and c.ID not in self.current_patrol
+                            and not c.not_working()
+                        ):
                             self.able_cats.append(c)
 
         if not self.able_cats:
             all_pages = []
         else:
-            all_pages = self.chunks(self.able_cats, 15)
+            all_pages = self.get_list_chunks(self.able_cats, 15)
 
         self.current_page = max(1, min(self.current_page, len(all_pages)))
 
@@ -1439,52 +1491,52 @@ class PatrolScreen(Screens):
             del self.elements["selected_bio"]
 
         # Kill mate frame, apprentice/mentor frame, and respective images, if they exist:
-        if 'mate_frame' in self.elements:
-            self.elements['mate_frame'].kill()
-            del self.elements['mate_frame']  # No need to keep this in memory
-        if 'mate_image' in self.elements:
-            self.elements['mate_image'].kill()
-            del self.elements['mate_image']  # No need to keep this in memory
-        if 'mate_name' in self.elements:
-            self.elements['mate_name'].kill()
-            del self.elements['mate_name']  # No need to keep this in memory
-        if 'mate_info' in self.elements:
-            self.elements['mate_info'].kill()
-            del self.elements['mate_info']
-        if 'mate_button' in self.elements:
-            self.elements['mate_button'].kill()
-            del self.elements['mate_button']  # No need to keep this in memory
-        if 'app_mentor_frame' in self.elements:
-            self.elements['app_mentor_frame'].kill()
+        if "mate_frame" in self.elements:
+            self.elements["mate_frame"].kill()
+            del self.elements["mate_frame"]  # No need to keep this in memory
+        if "mate_image" in self.elements:
+            self.elements["mate_image"].kill()
+            del self.elements["mate_image"]  # No need to keep this in memory
+        if "mate_name" in self.elements:
+            self.elements["mate_name"].kill()
+            del self.elements["mate_name"]  # No need to keep this in memory
+        if "mate_info" in self.elements:
+            self.elements["mate_info"].kill()
+            del self.elements["mate_info"]
+        if "mate_button" in self.elements:
+            self.elements["mate_button"].kill()
+            del self.elements["mate_button"]  # No need to keep this in memory
+        if "app_mentor_frame" in self.elements:
+            self.elements["app_mentor_frame"].kill()
             # No need to keep this in memory
-            del self.elements['app_mentor_frame']
-        if 'app_mentor_image' in self.elements:
-            self.elements['app_mentor_image'].kill()
+            del self.elements["app_mentor_frame"]
+        if "app_mentor_image" in self.elements:
+            self.elements["app_mentor_image"].kill()
             # No need to keep this in memory
-            del self.elements['app_mentor_image']
-        if 'app_mentor_name' in self.elements:
-            self.elements['app_mentor_name'].kill()
+            del self.elements["app_mentor_image"]
+        if "app_mentor_name" in self.elements:
+            self.elements["app_mentor_name"].kill()
             # No need to keep this in memory
-            del self.elements['app_mentor_name']
-        if 'app_mentor_button' in self.elements:
-            self.elements['app_mentor_button'].kill()
+            del self.elements["app_mentor_name"]
+        if "app_mentor_button" in self.elements:
+            self.elements["app_mentor_button"].kill()
             # No need to keep this in memory
-            del self.elements['app_mentor_button']
-        if 'app_mentor_info' in self.elements:
-            self.elements['app_mentor_info'].kill()
-            del self.elements['app_mentor_info']
-        if 'cycle_app_mentor_left_button' in self.elements:
-            self.elements['cycle_app_mentor_left_button'].kill()
-            del self.elements['cycle_app_mentor_left_button']
-        if 'cycle_app_mentor_right_button' in self.elements:
-            self.elements['cycle_app_mentor_right_button'].kill()
-            del self.elements['cycle_app_mentor_right_button']
-        if 'cycle_mate_left_button' in self.elements:
-            self.elements['cycle_mate_left_button'].kill()
-            del self.elements['cycle_mate_left_button']
-        if 'cycle_mate_right_button' in self.elements:
-            self.elements['cycle_mate_right_button'].kill()
-            del self.elements['cycle_mate_right_button']
+            del self.elements["app_mentor_button"]
+        if "app_mentor_info" in self.elements:
+            self.elements["app_mentor_info"].kill()
+            del self.elements["app_mentor_info"]
+        if "cycle_app_mentor_left_button" in self.elements:
+            self.elements["cycle_app_mentor_left_button"].kill()
+            del self.elements["cycle_app_mentor_left_button"]
+        if "cycle_app_mentor_right_button" in self.elements:
+            self.elements["cycle_app_mentor_right_button"].kill()
+            del self.elements["cycle_app_mentor_right_button"]
+        if "cycle_mate_left_button" in self.elements:
+            self.elements["cycle_mate_left_button"].kill()
+            del self.elements["cycle_mate_left_button"]
+        if "cycle_mate_right_button" in self.elements:
+            self.elements["cycle_mate_right_button"].kill()
+            del self.elements["cycle_mate_right_button"]
         if "mate_frame" in self.elements:
             self.elements["mate_frame"].kill()
             del self.elements["mate_frame"]  # No need to keep this in memory
@@ -1600,14 +1652,15 @@ class PatrolScreen(Screens):
                     object_id=get_text_box_theme("#text_box_22_horizcenter"),
                     text_kwargs={"count": 1},
                 )
-                self.elements["mate_button"] = UIImageButton(
-                    ui_scale(pygame.Rect((148, -4), (104, 26))),
+                self.elements["mate_button"] = UISurfaceImageButton(
+                    ui_scale(pygame.Rect((148, -4), (102, 26))),
                     (
                         "screens.patrol.select"
                         if self.mate in self.able_cats
                         else "screens.patrol.unavailable"
                     ),
-                    object_id="#patrol_select_button",
+                    get_button_dict(ButtonStyles.HEADER_MIRRORED, (102, 26)),
+                    object_id="@buttonstyles_header_mirrored",
                     manager=MANAGER,
                     anchors={"top_target": self.elements["mate_frame"]},
                 )
@@ -1697,14 +1750,15 @@ class PatrolScreen(Screens):
                     )
 
                     # Button to switch to that cat
-                    self.elements["app_mentor_button"] = UIImageButton(
+                    self.elements["app_mentor_button"] = UISurfaceImageButton(
                         ui_scale(pygame.Rect((548, -4), (104, 26))),
                         (
                             "screens.patrol.select"
                             if self.app_mentor in self.able_cats
                             else "screens.patrol.unavailable"
                         ),
-                        object_id="#patrol_select_button",
+                        get_button_dict(ButtonStyles.HEADER_MIRRORED, (104, 26)),
+                        object_id="@buttonstyles_header_mirrored",
                         manager=MANAGER,
                         anchors={"top_target": self.elements["app_mentor_frame"]},
                     )

@@ -181,14 +181,14 @@ def rebuild_top_menu_buttons():
     # menu_buttons["events"].change_layer(menu_buttons["dens"].get_starting_height() + 5)
 
     menu_buttons["patrols"] = UISurfaceImageButton(
-        ui_scale(pygame.Rect((-46, 60), (86, 30))),
+        ui_scale(pygame.Rect((0, 60), (86, 30))),
         "screens.core.patrol",
         get_button_dict(ButtonStyles.MENU_RIGHT, (86, 30)),
         visible=False,
         manager=MANAGER,
         object_id="#patrol_button",
         starting_height=6,
-        anchors={"left": "left", "left_target": menu_buttons["dens"]},
+        anchors={"left": "left", "left_target": menu_buttons["dens"].parent_button},
     )
     menu_buttons["main_menu"] = UISurfaceImageButton(
         ui_scale(pygame.Rect((25, 25), (153, 30))),
@@ -424,6 +424,7 @@ def rebuild_mute(location: str):
         anchors=anchors,
     )
 
+
 def get_red_bg(dark_mode=False):
     if dark_mode:
         b = 50
@@ -439,12 +440,15 @@ def get_red_bg(dark_mode=False):
                 if game.clan.your_cat.history.murder:
                     if "is_murderer" in game.clan.your_cat.history.murder:
                         if len(game.clan.your_cat.history.murder["is_murderer"]) > 0:
-                            for m in range(len(game.clan.your_cat.history.murder["is_murderer"])):
+                            for m in range(
+                                len(game.clan.your_cat.history.murder["is_murderer"])
+                            ):
                                 b -= b_alter
     if dark_mode:
-        return [57, max(36,b), 36]
+        return [57, max(36, b), 36]
     else:
         return [206, max(b, 167), 168]
+
 
 def rebuild_bgs():
     global default_fullscreen_bgs
@@ -591,7 +595,7 @@ def get_camp_bgs():
         camp_bg_base_dir, camp_nr = get_current_camp()
         biome = game.clan.biome.lower()
     except AttributeError:
-        camp_bg_base_dir = "resources/images/camp_bg/clancat/"
+        camp_bg_base_dir = "resources/images/camp_bg/"
         camp_nr = "camp1"
         biome = available_biome[0]
 

@@ -119,7 +119,6 @@ class ChooseRebornScreen(Screens):
             elif event.ui_element == self.previous_page_button:
                 self.current_page -= 1
                 self.update_cat_list()
-            
 
     def screen_switches(self):
         super().screen_switches()
@@ -131,24 +130,31 @@ class ChooseRebornScreen(Screens):
             ui_scale(pygame.Rect((75, 360), (650, 226))), list_frame, starting_height=1
         )
 
-        self.heading = pygame_gui.elements.UITextBox("",
-                                                     ui_scale(pygame.Rect((150, 25), (500, 40))),
-                                                     object_id=get_text_box_theme("#text_box_34_horizcenter"),
-                                                     manager=MANAGER)
+        self.heading = pygame_gui.elements.UITextBox(
+            "",
+            ui_scale(pygame.Rect((150, 25), (500, 40))),
+            object_id=get_text_box_theme("#text_box_34_horizcenter"),
+            manager=MANAGER,
+        )
         self.selected_cat = None
 
-        self.selected_cat_frame = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((315, 113), (281, 197))),
-                                                        pygame.transform.scale(
-                                                            image_cache.load_image(
-                                                                "resources/images/choosing_cat1_frame_ment.png").convert_alpha(),
-                                                            (281, 197)), manager=MANAGER)
+        self.selected_cat_frame = pygame_gui.elements.UIImage(
+            ui_scale(pygame.Rect((315, 113), (281, 197))),
+            pygame.transform.scale(
+                image_cache.load_image(
+                    "resources/images/choosing_cat1_frame_ment.png"
+                ).convert_alpha(),
+                (281, 197),
+            ),
+            manager=MANAGER,
+        )
 
         self.cant_switch_warning = pygame_gui.elements.UITextBox(
             "You can't switch to an outside cat yet!",
             ui_scale(pygame.Rect((100, 210), (200, 100))),
             object_id=get_text_box_theme("#text_box_26_horizcenter"),
-            manager=MANAGER
-            )
+            manager=MANAGER,
+        )
         self.cant_switch_warning.hide()
 
         self.back_button = UISurfaceImageButton(
@@ -165,7 +171,7 @@ class ChooseRebornScreen(Screens):
             object_id="@buttonstyles_squoval",
         )
         self.confirm_cat.disable()
-       
+
         self.previous_page_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((315, 579), (34, 34))),
             Icon.ARROW_LEFT,
@@ -205,7 +211,7 @@ class ChooseRebornScreen(Screens):
             anchors={
                 "bottom": "bottom",
                 "bottom_target": self.list_frame,
-                "left_target": self.alive_tab
+                "left_target": self.alive_tab,
             },
         )
 
@@ -220,7 +226,7 @@ class ChooseRebornScreen(Screens):
             anchors={
                 "bottom": "bottom",
                 "bottom_target": self.list_frame,
-                "left_target": self.alive_tab
+                "left_target": self.alive_tab,
             },
         )
         button_rect.bottomleft = ui_scale_offset((15, 8))
@@ -233,7 +239,7 @@ class ChooseRebornScreen(Screens):
             anchors={
                 "bottom": "bottom",
                 "bottom_target": self.list_frame,
-                "left_target": self.starclan_tab
+                "left_target": self.starclan_tab,
             },
         )
         self.darkforest_tab = UISurfaceImageButton(
@@ -245,7 +251,7 @@ class ChooseRebornScreen(Screens):
             anchors={
                 "bottom": "bottom",
                 "bottom_target": self.list_frame,
-                "left_target": self.unknown_tab
+                "left_target": self.unknown_tab,
             },
         )
 
@@ -255,7 +261,6 @@ class ChooseRebornScreen(Screens):
         # self.update_buttons()
 
     def exit_screen(self):
-
         # self.selected_details["selected_image"].kill()
         # self.selected_details["selected_info"].kill()
         for ele in self.cat_list_buttons:
@@ -325,17 +330,22 @@ class ChooseRebornScreen(Screens):
             self.selected_details[ele].kill()
         self.selected_details = {}
         if self.selected_cat:
-
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
-                    ui_scale(pygame.Rect((325, 150), (150, 150))),
-                    pygame.transform.scale(
-                        self.selected_cat.sprite, ui_scale_dimensions((150, 150))
-                    ),
-                    manager=MANAGER,
-                )
+                ui_scale(pygame.Rect((325, 150), (150, 150))),
+                pygame.transform.scale(
+                    self.selected_cat.sprite, ui_scale_dimensions((150, 150))
+                ),
+                manager=MANAGER,
+            )
 
-            info = self.selected_cat.status.rank + "\n" + \
-                   self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n"
+            info = (
+                self.selected_cat.status.rank
+                + "\n"
+                + self.selected_cat.genderalign
+                + "\n"
+                + self.selected_cat.personality.trait
+                + "\n"
+            )
             if self.selected_cat.moons < 1:
                 info += "???"
             else:
@@ -345,16 +355,19 @@ class ChooseRebornScreen(Screens):
                 info,
                 ui_scale(pygame.Rect((482, 162), (105, 125))),
                 object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
-                manager=MANAGER)
+                manager=MANAGER,
+            )
 
             name = str(self.selected_cat.name)  # get name
             if 11 <= len(name):  # check name length
                 short_name = str(name)[0:9]
-                name = short_name + '...'
+                name = short_name + "..."
             self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
                 ui_scale(pygame.Rect((345, 115), (110, 30))),
                 name,
-                object_id="#text_box_34_horizcenter", manager=MANAGER)
+                object_id="#text_box_34_horizcenter",
+                manager=MANAGER,
+            )
 
     def update_cat_list(self):
         """Updates the cat sprite buttons."""
@@ -400,8 +413,10 @@ class ChooseRebornScreen(Screens):
                     ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
                     pygame.transform.scale(
                         pygame.image.load(
-                            f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
-                        (50, 50))
+                            f"resources/images/fav_marker_{cat.favourite}.png"
+                        ).convert_alpha(),
+                        (50, 50),
+                    ),
                 )
                 self.fav[str(i)].disable()
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
@@ -416,7 +431,6 @@ class ChooseRebornScreen(Screens):
                 pos_y += 60
             i += 1
 
-
     def update_tabs(self):
         if self.selected_cat and self.selected_cat.status.is_outsider:
             self.confirm_cat.disable()
@@ -427,7 +441,7 @@ class ChooseRebornScreen(Screens):
         else:
             self.confirm_cat.enable()
             self.cant_switch_warning.hide()
-        
+
         if self.current_list == "alive":
             self.starclan_tab.hide()
             self.darkforest_tab.hide()
@@ -442,38 +456,40 @@ class ChooseRebornScreen(Screens):
 
         for cat in Cat.all_cats_list:
             if self.current_list == "alive":
-                if cat.status.alive_in_your_cat_group and not cat.ID == game.clan.your_cat.ID:
+                if (
+                    cat.status.alive_in_your_cat_group
+                    and not cat.ID == game.clan.your_cat.ID
+                ):
                     valid_mentors.append(cat)
             else:
                 if self.current_sublist == "darkforest":
                     if (
-                        cat.status.group == CatGroup.DARK_FOREST and
-                        not cat.ID == game.clan.your_cat.ID and
-                        not cat.ID == game.clan.demon.ID and
-                        not cat.faded
-                        ):
+                        cat.status.group == CatGroup.DARK_FOREST
+                        and not cat.ID == game.clan.your_cat.ID
+                        and not cat.ID == game.clan.demon.ID
+                        and not cat.faded
+                    ):
                         valid_mentors.append(cat)
                 elif self.current_sublist == "starclan":
                     if (
-                        cat.status.group == CatGroup.STARCLAN and
-                        not cat.ID == game.clan.your_cat.ID and
-                        not cat.ID == game.clan.instructor.ID and
-                        not cat.faded
-                        ):
+                        cat.status.group == CatGroup.STARCLAN
+                        and not cat.ID == game.clan.your_cat.ID
+                        and not cat.ID == game.clan.instructor.ID
+                        and not cat.faded
+                    ):
                         valid_mentors.append(cat)
                 elif self.current_sublist == "unknown":
                     if (
-                        cat.status.group == CatGroup.UNKNOWN_RESIDENCE and
-                        not cat.ID == game.clan.your_cat.ID and
-                        not cat.faded
-                        ):
+                        cat.status.group == CatGroup.UNKNOWN_RESIDENCE
+                        and not cat.ID == game.clan.your_cat.ID
+                        and not cat.faded
+                    ):
                         valid_mentors.append(cat)
 
-        
         return valid_mentors
 
     def on_use(self):
         super().on_use()
 
     def chunks(self, L, n):
-        return [L[x: x + n] for x in range(0, len(L), n)]
+        return [L[x : x + n] for x in range(0, len(L), n)]

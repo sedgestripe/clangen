@@ -1,10 +1,11 @@
 import random
 
 from scripts.game_structure import game
-from scripts.cat.enums import CatGroup, CatRank, CatAge
+from scripts.cat.enums import CatGroup, CatAge
 from scripts.cat.cats import Cat, BACKSTORIES
 from scripts.lifegen_utility import get_cluster
 from scripts.clan_package.settings import get_clan_setting
+from scripts.cat_relations.inheritance import Inheritance
 
 # pylint: disable=consider-using-dict-items
 
@@ -13,14 +14,15 @@ from scripts.clan_package.settings import get_clan_setting
 
 possible_cats_dict = {}
 
+
 def choose_random_cats(
-        cats_block: dict={},
-        rel_block: list=[],
-        your_cat: Cat=None,
-        the_cat: Cat=None,
-        cat_dict={},
-        key=""
-        ):
+    cats_block: dict = {},
+    rel_block: list = [],
+    your_cat: Cat = None,
+    the_cat: Cat = None,
+    cat_dict={},
+    key="",
+):
     """
     Selects random cats for LG stuff!
     :param block: A dictionary containing content to be filtered. This is the "cats" block, not its parent.
@@ -45,12 +47,8 @@ def choose_random_cats(
             abbrevs.append(abbrev)
             # checks if there are any valid cats available
             possible_cats_dict[abbrev] = _validate_cat(
-                abbrev,
-                cats_block,
-                possible_cats,
-                your_cat,
-                the_cat
-                )
+                abbrev, cats_block, possible_cats, your_cat, the_cat
+            )
             if not possible_cats_dict[abbrev]:
                 return {}
 
@@ -61,17 +59,13 @@ def choose_random_cats(
     # filter rel uses all abbrevs to make choices based on relationships
     # chosen cat dict is the selected cats! one cat object per abbrev!
     chosen_cat_dict = __filter_relationships(
-        abbrevs,
-        rel_block,
-        possible_cats_dict,
-        your_cat,
-        the_cat,
-        cat_dict
-        )
+        abbrevs, rel_block, possible_cats_dict, your_cat, the_cat, cat_dict
+    )
     # except Exception as e:
     #     print("WARNING: Error with filtering for", key)
     #     print(e)
     return chosen_cat_dict
+
 
 def _validate_cat(abbrev, cat_block, possible_cats, your_cat, the_cat):
     """
@@ -87,7 +81,9 @@ def _validate_cat(abbrev, cat_block, possible_cats, your_cat, the_cat):
     for cat in possible_cats:
         if not __filter_dead(cat_block[abbrev], cat):
             continue
-        if not __filter_age(cat_block[abbrev], cat, the_cat if abbrev == "y_c" else your_cat):
+        if not __filter_age(
+            cat_block[abbrev], cat, the_cat if abbrev == "y_c" else your_cat
+        ):
             continue
         if not __filter_rank(cat_block[abbrev], cat):
             continue
@@ -131,11 +127,12 @@ def _validate_cat(abbrev, cat_block, possible_cats, your_cat, the_cat):
     #                          CAT FILTERING FUNCTIONS                       #
     # ---------------------------------------------------------------------- #
 
+
 def __filter_dead(abbrev_block, cat):
     if "min_max_dead_moons" in abbrev_block:
         if (
-            abbrev_block["min_max_dead_moons"][0] > cat.dead_for or
-            abbrev_block["min_max_dead_moons"][1] < cat.dead_for
+            abbrev_block["min_max_dead_moons"][0] > cat.dead_for
+            or abbrev_block["min_max_dead_moons"][1] < cat.dead_for
         ):
             return False
     if "residence" in abbrev_block:
@@ -144,49 +141,40 @@ def __filter_dead(abbrev_block, cat):
         else:
             if "any" not in abbrev_block["residence"]:
                 if (
-                    "df" not in abbrev_block["residence"] and
-                    cat.status.group_ID == CatGroup.DARK_FOREST_ID
-                    ):
+                    "df" not in abbrev_block["residence"]
+                    and cat.status.group_ID == CatGroup.DARK_FOREST_ID
+                ):
                     return False
                 elif (
-                    "sc" not in abbrev_block["residence"] and
-                    cat.status.group_ID == CatGroup.STARCLAN_ID
-                    ):
+                    "sc" not in abbrev_block["residence"]
+                    and cat.status.group_ID == CatGroup.STARCLAN_ID
+                ):
                     return False
                 elif (
-                    "ur" not in abbrev_block["residence"] and
-                    cat.status.group_ID == CatGroup.UNKNOWN_RESIDENCE_ID
-                    ):
+                    "ur" not in abbrev_block["residence"]
+                    and cat.status.group_ID == CatGroup.UNKNOWN_RESIDENCE_ID
+                ):
                     return False
     else:
         if cat.dead:
             return False
     return True
 
+
 def __filter_group(abbrev_block, cat, your_cat):
     if "group" in abbrev_block:
         if (
-            (
-                cat.status.group and
-                cat.status.group not in abbrev_block["group"]
-            ) or
-            (
-                not cat.status.group and
-                "none" not in abbrev_block["group"]
-            ) or
-            (
-                cat.status.is_other_clancat and
-                "other_clan" not in abbrev_block["group"]
-            ) or
-            (
-                f"not_{cat.status.group}" in abbrev_block["group"]
-            ) or 
-            (
-                f"-{cat.status.group}" in abbrev_block["group"]
-            ) or 
-            (
-                "your_group" in abbrev_block["group"] and
-                not cat.status.group == your_cat.status.group
+            (cat.status.group and cat.status.group not in abbrev_block["group"])
+            or (not cat.status.group and "none" not in abbrev_block["group"])
+            or (
+                cat.status.is_other_clancat
+                and "other_clan" not in abbrev_block["group"]
+            )
+            or (f"not_{cat.status.group}" in abbrev_block["group"])
+            or (f"-{cat.status.group}" in abbrev_block["group"])
+            or (
+                "your_group" in abbrev_block["group"]
+                and not cat.status.group == your_cat.status.group
             )
         ):
             return False
@@ -196,9 +184,10 @@ def __filter_group(abbrev_block, cat, your_cat):
             return False
     return True
 
+
 def __filter_standing(abbrev_block, cat, your_cat):
     if "standing" not in abbrev_block:
-        if cat.status.is_shunned() and random.randint(1,4) != 1:
+        if cat.status.is_shunned() and random.randint(1, 4) != 1:
             # hack
             return False
         return True
@@ -215,7 +204,7 @@ def __filter_standing(abbrev_block, cat, your_cat):
         "daylight": cat.status.is_daylight_warrior(ref_group_id),
         "forgiven": cat.status.is_forgiven(),
         "near": cat.status.is_near(ref_group_id),
-        "outsider": cat.status.is_outsider
+        "outsider": cat.status.is_outsider,
     }
     for tag in abbrev_block["standing"]:
         if tag in standing_dict and standing_dict[tag]:
@@ -225,6 +214,7 @@ def __filter_standing(abbrev_block, cat, your_cat):
         return False
 
     return True
+
 
 def __filter_age(abbrev_block, cat, anchor=None):
     if "age" not in abbrev_block:
@@ -240,8 +230,11 @@ def __filter_age(abbrev_block, cat, anchor=None):
         return False
 
     positive_tags = [
-        tag for tag in age_block
-        if not (isinstance(tag, str) and (tag.startswith("not_") or tag.startswith("-")))
+        tag
+        for tag in age_block
+        if not (
+            isinstance(tag, str) and (tag.startswith("not_") or tag.startswith("-"))
+        )
     ]
     if not positive_tags:
         return True
@@ -271,39 +264,35 @@ def __filter_age(abbrev_block, cat, anchor=None):
 
     return False
 
+
 def __filter_rank(abbrev_block, cat):
     if "rank" not in abbrev_block:
         return True
     if (
-        f"not_{cat.status.rank}" in abbrev_block["rank"] or
-        f"not_{cat.status.rank.replace(' ', '_')}" in abbrev_block["rank"] or
-        f"-{cat.status.rank}" in abbrev_block["rank"] or
-        f"-{cat.status.rank.replace(' ', '_')}" in abbrev_block["rank"]
-        ):
+        f"not_{cat.status.rank}" in abbrev_block["rank"]
+        or f"not_{cat.status.rank.replace(' ', '_')}" in abbrev_block["rank"]
+        or f"-{cat.status.rank}" in abbrev_block["rank"]
+        or f"-{cat.status.rank.replace(' ', '_')}" in abbrev_block["rank"]
+    ):
         return False
-    elif (
-        "df_trainee" in abbrev_block["rank"]
-        ):
+    elif "df_trainee" in abbrev_block["rank"]:
         if not cat.joined_df:
             return False
-    elif (
-        "not_df_trainee" in abbrev_block["rank"]
-        ):
+    elif "not_df_trainee" in abbrev_block["rank"]:
         if cat.joined_df:
             return False
-    elif (
-        "guide" in abbrev_block["rank"]
-        ):
+    elif "guide" in abbrev_block["rank"]:
         if cat not in (game.clan.instructor, game.clan.demon):
             return False
-    elif abbrev_block['rank'] and "any" not in abbrev_block["rank"]:
+    elif abbrev_block["rank"] and "any" not in abbrev_block["rank"]:
         # "any" means no rank restriction (still subject to the not_/- exclusions above)
         if (
-            cat.status.rank not in abbrev_block["rank"] and
-            cat.status.rank.replace(' ', '_') not in abbrev_block["rank"]
-            ):
+            cat.status.rank not in abbrev_block["rank"]
+            and cat.status.rank.replace(" ", "_") not in abbrev_block["rank"]
+        ):
             return False
     return True
+
 
 def __filter_skill(abbrev_block, cat):
     if "skill" not in abbrev_block:
@@ -355,21 +344,22 @@ def __filter_skill(abbrev_block, cat):
         return False
     return True
 
+
 def __filter_cluster(abbrev_block, cat):
     if "cluster" not in abbrev_block:
         return True
     cluster1, cluster2 = get_cluster(cat.personality.trait)
     if (
-        cluster1 not in abbrev_block["cluster"] and
-        cluster2 not in abbrev_block["cluster"] and
-        cat.personality.trait not in abbrev_block["cluster"]
+        cluster1 not in abbrev_block["cluster"]
+        and cluster2 not in abbrev_block["cluster"]
+        and cat.personality.trait not in abbrev_block["cluster"]
     ):
         return False
 
     return True
 
-def __filter_backstory(abbrev_block, cat):
 
+def __filter_backstory(abbrev_block, cat):
     if "backstory" not in abbrev_block:
         return True
 
@@ -390,7 +380,7 @@ def __filter_backstory(abbrev_block, cat):
         "starclan": "starclan_backstories",
         "df": "df_backstories",
         "fromstarclan": "oldstarclan_backstories",
-        "ancientspirit": "oldstarclan_backstories"
+        "ancientspirit": "oldstarclan_backstories",
     }
 
     backstory_found = False
@@ -398,12 +388,12 @@ def __filter_backstory(abbrev_block, cat):
         if tag in backstory_tag_dict:
             if cat.backstory in (
                 BACKSTORIES["backstory_categories"][backstory_tag_dict[tag]]
-                ):
+            ):
                 backstory_found = True
                 break
             if f"-{cat.backstory}" in (
                 BACKSTORIES["backstory_categories"][backstory_tag_dict[tag]]
-                ):
+            ):
                 break
         elif tag == cat.backstory:
             backstory_found = True
@@ -413,15 +403,17 @@ def __filter_backstory(abbrev_block, cat):
 
     return True
 
+
 def __filter_faith(abbrev_block, cat):
     if "min_max_faith" not in abbrev_block:
         return True
     if (
-        abbrev_block["min_max_faith"][0] > cat.faith or
-        abbrev_block["min_max_faith"][1] < cat.faith
+        abbrev_block["min_max_faith"][0] > cat.faith
+        or abbrev_block["min_max_faith"][1] < cat.faith
     ):
         return False
     return True
+
 
 def __filter_conditions(abbrev_block, cat):
     blind_tagged = False
@@ -437,9 +429,9 @@ def __filter_conditions(abbrev_block, cat):
         if isinstance(tag, list):
             for condition in tag:
                 if (
-                    condition not in cat.illnesses and
-                    condition not in cat.injuries and
-                    condition not in cat.permanent_condition
+                    condition not in cat.illnesses
+                    and condition not in cat.injuries
+                    and condition not in cat.permanent_condition
                 ):
                     return False
         elif isinstance(tag, str):
@@ -460,9 +452,9 @@ def __filter_conditions(abbrev_block, cat):
 
                 # exclusionary
                 if condition == "not" and (
-                    born_with in cat.illnesses or
-                    born_with in cat.injuries or
-                    born_with in cat.permanent_condition
+                    born_with in cat.illnesses
+                    or born_with in cat.injuries
+                    or born_with in cat.permanent_condition
                 ):
                     return False
 
@@ -486,14 +478,14 @@ def __filter_conditions(abbrev_block, cat):
 
                 if born_with == "true":
                     if not (
-                        condition in cat.permanent_condition and
-                        cat.permanent_condition[condition]["born_with"] is True
+                        condition in cat.permanent_condition
+                        and cat.permanent_condition[condition]["born_with"] is True
                     ):
                         return False
                 elif born_with == "false":
                     if not (
-                        condition in cat.permanent_condition and
-                        cat.permanent_condition[condition]["born_with"] is False
+                        condition in cat.permanent_condition
+                        and cat.permanent_condition[condition]["born_with"] is False
                     ):
                         return False
             else:
@@ -503,17 +495,17 @@ def __filter_conditions(abbrev_block, cat):
                         return False
                 elif tag in exclusive_conditions:
                     if not (
-                        tag in cat.permanent_condition or
-                        tag in cat.injuries or
-                        tag in cat.illnesses
+                        tag in cat.permanent_condition
+                        or tag in cat.injuries
+                        or tag in cat.illnesses
                     ):
                         return False
                 else:
                     reg_tagged = True
                     if (
-                        tag in cat.permanent_condition or
-                        tag in cat.injuries or
-                        tag in cat.illnesses
+                        tag in cat.permanent_condition
+                        or tag in cat.injuries
+                        or tag in cat.illnesses
                     ):
                         condition_true = True
                         break
@@ -521,12 +513,9 @@ def __filter_conditions(abbrev_block, cat):
     if "blind" in cat.permanent_condition and not blind_tagged:
         return False
     if (
-            (
-                "deaf" in cat.permanent_condition and
-                cat.permanent_condition["deaf"]["born_with"] is True
-            )
-            and not deaf_tagged
-        ):
+        "deaf" in cat.permanent_condition
+        and cat.permanent_condition["deaf"]["born_with"] is True
+    ) and not deaf_tagged:
         return False
 
     if reg_tagged and not condition_true:
@@ -534,18 +523,20 @@ def __filter_conditions(abbrev_block, cat):
 
     return True
 
-def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat, the_cat, cat_dict):
+
+def __filter_relationships(
+    all_abbrevs, rel_block, dict_possible_cats, your_cat, the_cat, cat_dict
+):
     """
     Chooses final cats based on relationship constraints.
     Not a 'filter' in the same way the other filter functions are. More of a selection tool.
     """
-    new_dict = {
-        "y_c": your_cat,
-        "t_c": the_cat
-    }
+    if the_cat:
+        new_dict = {"y_c": your_cat, "t_c": the_cat}
+    else:
+        new_dict = {"y_c": your_cat}
     for relationship in rel_block:
         for rel_tag in relationship["relationship"]:
-
             # substitute for a "rel_found" bool, as, with multiple relationships,
             # you cant depend on a true or false.
             # check how many relationships are valid vs. how many we need to be.
@@ -570,8 +561,16 @@ def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat,
                         continue
 
                     # Grab our possible cats depending on the abbrev
-                    to_cat_list = dict_possible_cats[TO].copy() if TO in dict_possible_cats else Cat.all_cats_list.copy()
-                    from_cat_list = dict_possible_cats[FROM].copy() if FROM in dict_possible_cats else Cat.all_cats_list.copy()
+                    to_cat_list = (
+                        dict_possible_cats[TO].copy()
+                        if TO in dict_possible_cats
+                        else Cat.all_cats_list.copy()
+                    )
+                    from_cat_list = (
+                        dict_possible_cats[FROM].copy()
+                        if FROM in dict_possible_cats
+                        else Cat.all_cats_list.copy()
+                    )
 
                     # shuffle so the same cat isnt always on top
                     random.shuffle(to_cat_list)
@@ -597,20 +596,26 @@ def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat,
                                 continue
                             if match_found:
                                 continue
-                            if not to_cat:
-                                print("to_cat in list is None! Report to Jay!")
-                                print(to_cat_list)
-                                print(rel_block)
-                                continue
                             rel_valid = False
                             # this will check is the abbrev and cat are valid.
                             # ensures r_c's are never your_cat or the_cat and similar checks.
                             valid = __check_valid(
-                                TO, to_cat, FROM, from_cat, new_dict, your_cat, the_cat, cat_dict
+                                TO,
+                                to_cat,
+                                FROM,
+                                from_cat,
+                                new_dict,
+                                your_cat,
+                                the_cat,
+                                cat_dict,
                             )
 
                             # special logic for the different types of relationship
-                            if valid:
+                            if not valid:
+                                continue
+                            if to_cat:
+                                if not to_cat.inheritance:
+                                    to_cat.inheritance = Inheritance(to_cat)
                                 if rel_tag == "mates":
                                     rel_valid = to_cat.ID in from_cat.mate
                                 elif rel_tag == "non-mates":
@@ -620,14 +625,14 @@ def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat,
 
                                 elif rel_tag == "parent/child":
                                     rel_valid = (
-                                        from_cat.is_parent(to_cat) or
-                                        from_cat.ID in to_cat.adoptive_parents
-                                        )
+                                        from_cat.is_parent(to_cat)
+                                        or from_cat.ID in to_cat.adoptive_parents
+                                    )
                                 elif rel_tag == "child/parent":
                                     rel_valid = (
-                                        to_cat.is_parent(from_cat) or
-                                        to_cat.ID in from_cat.adoptive_parents
-                                        )
+                                        to_cat.is_parent(from_cat)
+                                        or to_cat.ID in from_cat.adoptive_parents
+                                    )
                                 elif rel_tag == "birth parent/birth child":
                                     rel_valid = from_cat.is_parent(to_cat)
                                 elif rel_tag == "birth child/birth parent":
@@ -637,13 +642,22 @@ def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat,
                                 elif rel_tag == "adoptive child/adoptive parent":
                                     rel_valid = to_cat.ID in from_cat.adoptive_parents
                                 elif rel_tag == "sibling's mate/mate's sibling":
-                                    rel_valid = to_cat.ID in from_cat.inheritance.get_siblings_mates()
+                                    rel_valid = (
+                                        to_cat.ID
+                                        in from_cat.inheritance.get_siblings_mates()
+                                    )
                                 elif rel_tag == "mate's sibling/sibling's mate":
-                                    rel_valid = from_cat.ID in to_cat.inheritance.get_siblings_mates()
+                                    rel_valid = (
+                                        from_cat.ID
+                                        in to_cat.inheritance.get_siblings_mates()
+                                    )
                                 elif rel_tag == "cousins":
                                     rel_valid = from_cat.is_cousin(to_cat)
                                 elif rel_tag == "adoptive siblings":
-                                    rel_valid = from_cat.ID in to_cat.inheritance.get_no_blood_siblings()
+                                    rel_valid = (
+                                        from_cat.ID
+                                        in to_cat.inheritance.get_no_blood_siblings()
+                                    )
                                 elif rel_tag == "parent's sibling/sibling's kit":
                                     rel_valid = from_cat.is_uncle_aunt(to_cat)
                                 elif rel_tag == "strangers":
@@ -661,25 +675,43 @@ def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat,
                                 elif rel_tag == "dead/grieving":
                                     if "grief stricken" not in to_cat.illnesses:
                                         rel_valid = False
-                                    elif "grief cat" not in to_cat.illnesses["grief stricken"]:
+                                    elif (
+                                        "grief cat"
+                                        not in to_cat.illnesses["grief stricken"]
+                                    ):
                                         rel_valid = False
-                                    elif to_cat.illnesses["grief stricken"]["grief cat"] != from_cat.ID:
+                                    elif (
+                                        to_cat.illnesses["grief stricken"]["grief cat"]
+                                        != from_cat.ID
+                                    ):
                                         rel_valid = False
                                     else:
                                         rel_valid = True
                                 elif rel_tag == "grieving/dead":
                                     if "grief stricken" not in from_cat.illnesses:
                                         rel_valid = False
-                                    elif "grief cat" not in from_cat.illnesses["grief stricken"]:
+                                    elif (
+                                        "grief cat"
+                                        not in from_cat.illnesses["grief stricken"]
+                                    ):
                                         rel_valid = False
-                                    elif from_cat.illnesses["grief stricken"]["grief cat"] != to_cat.ID:
+                                    elif (
+                                        from_cat.illnesses["grief stricken"][
+                                            "grief cat"
+                                        ]
+                                        != to_cat.ID
+                                    ):
                                         rel_valid = False
                                     else:
                                         rel_valid = True
                                 elif rel_tag == "related":
-                                    rel_valid = from_cat.is_related(to_cat, get_clan_setting("first cousin mates"))
+                                    rel_valid = from_cat.is_related(
+                                        to_cat, get_clan_setting("first cousin mates")
+                                    )
                                 elif rel_tag == "non-related":
-                                    rel_valid = not from_cat.is_related(to_cat, get_clan_setting("first cousin mates"))
+                                    rel_valid = not from_cat.is_related(
+                                        to_cat, get_clan_setting("first cousin mates")
+                                    )
 
                                 elif rel_tag == "victim/murderer":
                                     if not to_cat.history.murder:
@@ -688,7 +720,9 @@ def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat,
                                         rel_valid = False
                                     else:
                                         rel_valid = False
-                                        for murder in to_cat.history.murder["is_murderer"]:
+                                        for murder in to_cat.history.murder[
+                                            "is_murderer"
+                                        ]:
                                             if murder["victim"] == from_cat.ID:
                                                 rel_valid = True
                                                 break
@@ -700,7 +734,9 @@ def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat,
                                         rel_valid = False
                                     else:
                                         rel_valid = False
-                                        for murder in from_cat.history.murder["is_murderer"]:
+                                        for murder in from_cat.history.murder[
+                                            "is_murderer"
+                                        ]:
                                             if murder["victim"] == to_cat.ID:
                                                 rel_valid = True
                                                 break
@@ -719,7 +755,9 @@ def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat,
                                     if "min" not in rel_tag and "max" not in rel_tag:
                                         # not a recognised relationship or rel-value tag:
                                         # warn instead of silently passing
-                                        print(f"WARNING: Invalid relationship tag ({rel_tag})")
+                                        print(
+                                            f"WARNING: Invalid relationship tag ({rel_tag})"
+                                        )
                                         rel_valid = False
                                     elif to_cat.ID not in from_cat.relationships:
                                         rel_valid = False
@@ -727,87 +765,82 @@ def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat,
                                         rel_valid = True
                                         if "min" in rel_tag:
                                             if attributes[1] == "like":
-                                                if (
-                                                    from_cat.relationships[to_cat.ID].like <
-                                                    int(attributes[2])
-                                                    ):
+                                                if from_cat.relationships[
+                                                    to_cat.ID
+                                                ].like < int(attributes[2]):
                                                     rel_valid = False
                                             elif attributes[1] == "romance":
-                                                if (
-                                                    from_cat.relationships[to_cat.ID].romance <
-                                                    int(attributes[2])
-                                                    ):
+                                                if from_cat.relationships[
+                                                    to_cat.ID
+                                                ].romance < int(attributes[2]):
                                                     rel_valid = False
                                             elif attributes[1] == "respect":
-                                                if (
-                                                    from_cat.relationships[to_cat.ID].respect <
-                                                    int(attributes[2])
-                                                    ):
+                                                if from_cat.relationships[
+                                                    to_cat.ID
+                                                ].respect < int(attributes[2]):
                                                     rel_valid = False
                                             elif attributes[1] == "trust":
-                                                if (
-                                                    from_cat.relationships[to_cat.ID].trust <
-                                                    int(attributes[2])
-                                                    ):
+                                                if from_cat.relationships[
+                                                    to_cat.ID
+                                                ].trust < int(attributes[2]):
                                                     rel_valid = False
                                             elif attributes[1] == "comfort":
-                                                if (
-                                                    from_cat.relationships[to_cat.ID].comfort <
-                                                    int(attributes[2])
-                                                    ):
+                                                if from_cat.relationships[
+                                                    to_cat.ID
+                                                ].comfort < int(attributes[2]):
                                                     rel_valid = False
                                             else:
-                                                print(f"WARNING: Invalid relationship tag ({rel_tag})")
+                                                print(
+                                                    f"WARNING: Invalid relationship tag ({rel_tag})"
+                                                )
                                                 rel_valid = False
                                         elif "max" in rel_tag:
                                             if attributes[1] == "like":
-                                                if (
-                                                    from_cat.relationships[to_cat.ID].like >
-                                                    int(attributes[2])
-                                                    ):
+                                                if from_cat.relationships[
+                                                    to_cat.ID
+                                                ].like > int(attributes[2]):
                                                     rel_valid = False
                                             elif attributes[1] == "romance":
-                                                if (
-                                                    from_cat.relationships[to_cat.ID].romance >
-                                                    int(attributes[2])
-                                                    ):
+                                                if from_cat.relationships[
+                                                    to_cat.ID
+                                                ].romance > int(attributes[2]):
                                                     rel_valid = False
                                             elif attributes[1] == "respect":
-                                                if (
-                                                    from_cat.relationships[to_cat.ID].respect >
-                                                    int(attributes[2])
-                                                    ):
+                                                if from_cat.relationships[
+                                                    to_cat.ID
+                                                ].respect > int(attributes[2]):
                                                     rel_valid = False
                                             elif attributes[1] == "trust":
-                                                if (
-                                                    from_cat.relationships[to_cat.ID].trust >
-                                                    int(attributes[2])
-                                                    ):
+                                                if from_cat.relationships[
+                                                    to_cat.ID
+                                                ].trust > int(attributes[2]):
                                                     rel_valid = False
                                             elif attributes[1] == "comfort":
-                                                if (
-                                                    from_cat.relationships[to_cat.ID].comfort >
-                                                    int(attributes[2])
-                                                    ):
+                                                if from_cat.relationships[
+                                                    to_cat.ID
+                                                ].comfort > int(attributes[2]):
                                                     rel_valid = False
                                             else:
-                                                print(f"WARNING: Invalid relationship tag ({rel_tag})")
+                                                print(
+                                                    f"WARNING: Invalid relationship tag ({rel_tag})"
+                                                )
                                                 rel_valid = False
+                            else:
+                                rel_valid = True
 
-                                if rel_valid:
-                                    valid_rels += 1
-                                    if FROM not in new_dict:
-                                        new_dict[FROM] = from_cat
-                                        match_found = True
-                                    if TO not in new_dict:
-                                        new_dict[TO] = to_cat
-                                        match_found = True
+                            if rel_valid:
+                                valid_rels += 1
+                                if FROM not in new_dict:
+                                    new_dict[FROM] = from_cat
+                                    match_found = True
+                                if TO not in new_dict:
+                                    new_dict[TO] = to_cat
+                                    match_found = True
 
             if valid_rels != rels_to_check:
                 return {}
 
     for abbrev in all_abbrevs:
-
         if abbrev not in new_dict and abbrev not in ("t_c", "y_c"):
             options = dict_possible_cats[abbrev]
             for existing_cat in new_dict:
@@ -824,7 +857,10 @@ def __filter_relationships(all_abbrevs, rel_block, dict_possible_cats, your_cat,
     #                                HELPERS                                 #
     # ---------------------------------------------------------------------- #
 
-def __check_valid(to_abbrev, to_cat, from_abbrev, from_cat, new_dict, your_cat, the_cat, cat_dict):
+
+def __check_valid(
+    to_abbrev, to_cat, from_abbrev, from_cat, new_dict, your_cat, the_cat, cat_dict
+):
     """
     Checks abbrevs and cats during filtering.
     If y_c and t_c abbrevs are constrained in relationships, they're special cases.

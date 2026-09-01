@@ -79,7 +79,9 @@ def is_today(date: SpecialDate) -> bool:
     """
     if not game_setting_get("special_dates"):
         return False
-    if date == SpecialDate.APRIL_FOOLS and constants.CONFIG["fun"].get("april_fools", False):
+    if date == SpecialDate.APRIL_FOOLS and constants.CONFIG["fun"].get(
+        "april_fools", False
+    ):
         return True
 
     d = _date_map.get(date, None)

@@ -52,13 +52,15 @@ class LeaveClanWindow(GameWindow):
         prev_element = self.heading
         # LG edits: changes these items to lists to add group IDs
         social_list = [
-            (CatSocial.CLANCAT, CatGroup.PLAYER_CLAN_ID, (game.clan.displayname + "Clan")),
+            (CatSocial.CLANCAT, CatGroup.PLAYER_CLAN_ID, (game.clan.name + "Clan")),
             (CatSocial.LONER, CatGroup.LONER_GROUP_ID, "Loner group"),
             (CatSocial.ROGUE, CatGroup.ROGUE_GROUP_ID, "Rogue group"),
-            (CatSocial.KITTYPET, CatGroup.HOUSEHOLD_ID, "Twolegplace")
+            (CatSocial.KITTYPET, CatGroup.HOUSEHOLD_ID, "Twolegplace"),
         ]
         for other_clan in game.clan.all_other_clans:
-            social_list.append((CatSocial.CLANCAT, other_clan.group_ID, (other_clan.name + "Clan")))
+            social_list.append(
+                (CatSocial.CLANCAT, other_clan.group_ID, (other_clan.name + "Clan"))
+            )
 
         for social in social_list:
             self.checkboxes[social] = UICheckbox(
@@ -103,9 +105,7 @@ class LeaveClanWindow(GameWindow):
             object_id="#text_box_30_horizcenter",
             manager=MANAGER,
             container=self,
-            anchors={
-                "centerx": "centerx"
-            },
+            anchors={"centerx": "centerx"},
         )
         if cat == game.clan.your_cat:
             self.done_button.disable()
@@ -121,10 +121,12 @@ class LeaveClanWindow(GameWindow):
                 if self.new_group_ID in (
                     CatGroup.ROGUE_GROUP_ID,
                     CatGroup.LONER_GROUP,
-                    CatGroup.HOUSEHOLD_ID
-                    ):
+                    CatGroup.HOUSEHOLD_ID,
+                ):
                     # this cat is becoming a member of an outsider group
-                    self.the_cat.leave_clan(self.chosen_social, self.new_group_ID, cat_age=self.the_cat.age)
+                    self.the_cat.leave_clan(
+                        self.chosen_social, self.new_group_ID, cat_age=self.the_cat.age
+                    )
                 elif self.new_group_ID != CatGroup.PLAYER_CLAN_ID:
                     # this cat is joining a non-player clan
                     # TODO: populate clan?

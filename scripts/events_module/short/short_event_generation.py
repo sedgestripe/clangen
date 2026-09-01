@@ -23,6 +23,8 @@ from scripts.events_module.event_filters import (
     cat_for_event,
     get_frequency,
     find_new_frequency,
+    event_for_poi,
+    _get_cats_from_group,
 )
 from scripts.events_module.short.short_event import ShortEvent
 from scripts.game_structure import constants, game
@@ -88,22 +90,14 @@ def create_short_event(
     camp_cats = [
         c
         for c in Cat.all_cats_list
-        if c.status.alive_in_player_clan
-        and (
-            (c.skills.primary and c.skills.primary.path == SkillPath.CAMP)
-            or (c.skills.secondary and c.skills.secondary.path == SkillPath.CAMP)
-        )
+        if c.status.alive_in_player_clan and SkillPath.CAMP in c.skills.get_all()
     ]
 
     avoidance_chance = 1
     # each camp cat will increase the chance that significant reduction events do not occur
     for c in camp_cats:
         # tiers are added in order to make the chance num, this means the higher tiers have greater influence
-        if c.skills.primary.path == SkillPath.CAMP:
-            # +1 bc primary paths should have a little bit larger influence
-            avoidance_chance += c.skills.primary.tier + 1
-        elif c.skills.secondary and c.skills.secondary.path == SkillPath.CAMP:
-            avoidance_chance += c.skills.secondary.tier
+        avoidance_chance += c.skills.get_all()[SkillPath.CAMP]
 
     # NOW find the possible events and filter
     if event_type == "birth_death":
@@ -206,7 +200,7 @@ def find_needed_events(frequency, event_type=None, main_cat=None) -> list:
         # biome specific events
         event_list.extend(generate_event_objects(event_type, biome, frequency))
 
-        # general (non-biome) events 
+        # general (non-biome) events
         event_list.extend(generate_event_objects(event_type, "general", frequency))
 
     return event_list
@@ -306,6 +300,7 @@ def generate_event_objects(event_triggered, biome, frequency) -> list:
                     season=event["season"] if "season" in event else ["any"],
                     sub_type=event["sub_type"] if "sub_type" in event else [],
                     tags=event["tags"] if "tags" in event else [],
+                    poi=event["poi"] if "poi" in event else {},
                     text=event_text,
                     new_accessory=(
                         event["new_accessory"] if "new_accessory" in event else []
@@ -395,6 +390,9 @@ def filter_events(
 
         # check tags
         if not event_for_tags(event.tags, main_cat, random_cat):
+            continue
+
+        if not event_for_poi(event.poi):
             continue
 
         if not game.clan.leader and "lead_name" in event.text:
@@ -504,12 +502,7 @@ def filter_events(
                 c
                 for c in Cat.all_cats_list
                 if c.status.alive_in_player_clan
-                and (
-                    (c.skills.primary and c.skills.primary.path == SkillPath.CAMP)
-                    or (
-                        c.skills.secondary and c.skills.secondary.path == SkillPath.CAMP
-                    )
-                )
+                and SkillPath.CAMP in c.skills.get_all()
             ]
 
             discard = False
@@ -554,11 +547,6 @@ def filter_events(
     if not final_events:
         return None, random_cat
 
-    cat_list = [
-        c
-        for c in Cat.all_cats.values()
-        if c.status.alive_in_player_clan and c != main_cat
-    ]
     chosen_cat = None
     chosen_event = None
 
@@ -598,6 +586,24 @@ def filter_events(
         # if this doesn't need a random cat, we stop here and run with it
         if not chosen_event.r_c:
             break
+
+        if chosen_event.r_c.get("group"):
+            cat_list = _get_cats_from_group(
+                [c for c in Cat.all_cats.values() if c != main_cat],
+                chosen_event.r_c["group"],
+                {},
+            )
+        else:
+            cat_list = [
+                c
+                for c in Cat.all_cats.values()
+                if c.status.alive_in_player_clan and c != main_cat
+            ]
+        if not cat_list:
+            final_events.remove(chosen_event)
+            failed_ids.append(chosen_event.event_id)
+            chosen_event = None
+            continue
 
         # if we're overriding requirements, don't bother looking for an appropriate cat
         if constants.CONFIG["event_generation"]["debug_override_requirements"]:

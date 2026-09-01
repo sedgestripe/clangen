@@ -35,7 +35,6 @@ misc_wetlands = []
 misc_desert = []
 
 
-
 def reformat(path):
     if "Copy" not in path:
         return
@@ -325,8 +324,7 @@ def reformat(path):
                         new_format["r_c"]["status"].append("apprentice")
                     if "other_cat_med_app" in event["tags"]:
                         event["tags"].remove("other_cat_med_app")
-                        new_format["r_c"]["status"].append(
-                            "medicine cat apprentice")
+                        new_format["r_c"]["status"].append("medicine cat apprentice")
                     if "other_cat_warrior" in event["tags"]:
                         event["tags"].remove("other_cat_warrior")
                         new_format["r_c"]["status"].append("warrior")

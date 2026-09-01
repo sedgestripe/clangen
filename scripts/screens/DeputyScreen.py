@@ -20,7 +20,6 @@ from ..ui.icon import Icon
 from scripts.clan_package.settings import get_clan_setting
 
 
-
 class DeputyScreen(Screens):
     selected_cat = None
     current_page = 1
@@ -72,19 +71,28 @@ class DeputyScreen(Screens):
         self.the_cat = game.clan.your_cat
         self.mentor = Cat.fetch_cat(self.the_cat.mentor)
 
-        self.heading = pygame_gui.elements.UITextBox("",
-                                                     ui_scale(pygame.Rect((150, 25), (500, 40))),
-                                                     object_id=get_text_box_theme("#text_box_34_horizcenter"),
-                                                     manager=MANAGER)
+        self.heading = pygame_gui.elements.UITextBox(
+            "",
+            ui_scale(pygame.Rect((150, 25), (500, 40))),
+            object_id=get_text_box_theme("#text_box_34_horizcenter"),
+            manager=MANAGER,
+        )
 
         # Layout Images:
-        self.mentor_frame = pygame_gui.elements.UIImage(ui_scale(pygame.Rect((315, 113), (281, 197))),
-                                                        pygame.transform.scale(
-                                                            image_cache.load_image(
-                                                                "resources/images/choosing_cat1_frame_ment.png").convert_alpha(),
-                                                            (281, 197)), manager=MANAGER)
+        self.mentor_frame = pygame_gui.elements.UIImage(
+            ui_scale(pygame.Rect((315, 113), (281, 197))),
+            pygame.transform.scale(
+                image_cache.load_image(
+                    "resources/images/choosing_cat1_frame_ment.png"
+                ).convert_alpha(),
+                (281, 197),
+            ),
+            manager=MANAGER,
+        )
         self.list_frame = pygame_gui.elements.UIImage(
-            ui_scale(pygame.Rect((75, 360), (650, 226))), get_box(BoxStyles.ROUNDED_BOX, (650, 226)), starting_height=1
+            ui_scale(pygame.Rect((75, 360), (650, 226))),
+            get_box(BoxStyles.ROUNDED_BOX, (650, 226)),
+            starting_height=1,
         )
 
         self.back_button = UISurfaceImageButton(
@@ -120,8 +128,6 @@ class DeputyScreen(Screens):
         self.update_cat_list()
 
     def exit_screen(self):
-
-
         for ele in self.cat_list_buttons:
             self.cat_list_buttons[ele].kill()
         self.cat_list_buttons = {}
@@ -164,43 +170,50 @@ class DeputyScreen(Screens):
         game.clan.new_deputy(self.selected_cat)
         self.change_screen(GameScreen.EVENTS)
 
-
     def update_selected_cat(self):
         """Updates the image and information on the currently selected mentor"""
         for ele in self.selected_details:
             self.selected_details[ele].kill()
         self.selected_details = {}
         if self.selected_cat:
-
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
-                    ui_scale(pygame.Rect((325, 150), (150, 150))),
-                    pygame.transform.scale(
-                        self.selected_cat.sprite, ui_scale_dimensions((150, 150))
-                    ),
-                    manager=MANAGER,
-                )
+                ui_scale(pygame.Rect((325, 150), (150, 150))),
+                pygame.transform.scale(
+                    self.selected_cat.sprite, ui_scale_dimensions((150, 150))
+                ),
+                manager=MANAGER,
+            )
 
-            info = self.selected_cat.status.rank + "\n" + \
-                   self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n" + \
-                   self.selected_cat.skills.skill_string(short=True)
+            info = (
+                self.selected_cat.status.rank
+                + "\n"
+                + self.selected_cat.genderalign
+                + "\n"
+                + self.selected_cat.personality.trait
+                + "\n"
+                + self.selected_cat.skills.skill_string(short=True)
+            )
 
-            self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
-                                                                                   ui_scale(pygame.Rect((490, 162),
-                                                                                                     (105, 125))),
-                                                                                   object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
-                                                                                   manager=MANAGER)
+            self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(
+                info,
+                ui_scale(pygame.Rect((490, 162), (105, 125))),
+                object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
+                manager=MANAGER,
+            )
 
             name = str(self.selected_cat.name)  # get name
             if 11 <= len(name):  # check name length
                 short_name = str(name)[0:9]
-                name = short_name + '...'
+                name = short_name + "..."
             self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
                 ui_scale(pygame.Rect((345, 115), (110, 30))),
                 name,
-                object_id="#text_box_34_horizcenter", manager=MANAGER)
+                object_id="#text_box_34_horizcenter",
+                manager=MANAGER,
+            )
 
     def update_cat_list(self):
-        """Updates the cat sprite buttons. """
+        """Updates the cat sprite buttons."""
         valid_mentors = self.chunks(self.get_valid_cats(), 30)
 
         # If the number of pages becomes smaller than the number of our current page, set
@@ -239,13 +252,18 @@ class DeputyScreen(Screens):
                     ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
                     pygame.transform.scale(
                         pygame.image.load(
-                            f"resources/images/fav_marker_{cat.favourite}.png").convert_alpha(),
-                        (50, 50))
+                            f"resources/images/fav_marker_{cat.favourite}.png"
+                        ).convert_alpha(),
+                        (50, 50),
+                    ),
                 )
                 self.fav[str(i)].disable()
             self.cat_list_buttons["cat" + str(i)] = UISpriteButton(
                 ui_scale(pygame.Rect((100 + pos_x, 365 + pos_y), (50, 50))),
-                cat.sprite, cat_object=cat, manager=MANAGER)
+                cat.sprite,
+                cat_object=cat,
+                manager=MANAGER,
+            )
             pos_x += 60
             if pos_x >= 550:
                 pos_x = 0
@@ -258,11 +276,11 @@ class DeputyScreen(Screens):
         for cat in Cat.all_cats_list:
             if cat.status.alive_in_player_clan and cat.status.rank == CatRank.WARRIOR:
                 valid_mentors.append(cat)
-        
+
         return valid_mentors
 
     def on_use(self):
         super().on_use()
 
     def chunks(self, L, n):
-        return [L[x: x + n] for x in range(0, len(L), n)]
+        return [L[x : x + n] for x in range(0, len(L), n)]

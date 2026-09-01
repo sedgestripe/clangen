@@ -1,7 +1,7 @@
 [
     {
         "id": "general_loner_dead_thoughts",
-        "thoughts": [
+        "strings": [
             "Feels a sharp pang of hunger",
             "Wonders how {PRONOUN/m_c/subject} ended up here",
             "Winces as the mud sucks at {PRONOUN/m_c/poss} paws",
@@ -26,8 +26,12 @@
             "Wonders how {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} still alive, being so hungry all the time",
             "Feels as if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} wilting"
         ],
-        "main_status_constraint": [
-            "loner"
-        ]
+        "involved_cats": {
+            "m_c": {
+                "status": [
+                    "loner"
+                ]
+            }
+        }
     }
 ]

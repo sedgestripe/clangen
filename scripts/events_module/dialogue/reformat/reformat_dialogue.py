@@ -9,25 +9,33 @@ import copy
 
 DEBUG_KEY = "about_parent4"
 
+
 def load_json(path):
-    with open(path, 'r') as read_file:
+    with open(path, "r") as read_file:
         return json.loads(read_file.read())
 
+
 def get_matches(abbrev, text):
-    match = re.search(rf'(?:([A-Za-z]+)-)?{re.escape(abbrev)}(?:-([A-Za-z]+))?', text)
+    match = re.search(rf"(?:([A-Za-z]+)-)?{re.escape(abbrev)}(?:-([A-Za-z]+))?", text)
     full_abbrev = match.group(0)
     rel_addon = match.group(1)
     cluster_addon = match.group(2)
 
     return full_abbrev, rel_addon, cluster_addon
 
+
 def debug_print(key, text):
     if DEBUG_KEY == key:
         print(text)
 
+
 # LOAD RESOURCES
-abbrev_convert = load_json("scripts/events_module/dialogue/reformat_resources/abbrev_convert.json")
-resources = load_json("scripts/events_module/dialogue/reformat_resources/all_resources.json")
+abbrev_convert = load_json(
+    "scripts/events_module/dialogue/reformat_resources/abbrev_convert.json"
+)
+resources = load_json(
+    "scripts/events_module/dialogue/reformat_resources/all_resources.json"
+)
 
 # assign variables from resources
 cluster_addons = resources["cluster_addons"]
@@ -45,7 +53,7 @@ taken_keys = {}
 # iterate through every file
 
 # open the old file
-dialogue_json = load_json('scripts/events_module/dialogue/reformat/old_dialogue.json')
+dialogue_json = load_json("scripts/events_module/dialogue/reformat/old_dialogue.json")
 
 # create the new dialogue dict. edited dialogue items will be added here
 new_dialogue_dict = {}
@@ -94,7 +102,7 @@ for dkey, dialogue_block in dialogue_json.items():
                 "new-leaf": "newleaf",
                 "leaffall": "leaf-fall",
                 "leafbare": "leaf-bare",
-                "green-leaf": "greenleaf"
+                "green-leaf": "greenleaf",
             }
             for season in dialogue_block[key]:
                 check = season.lower()
@@ -117,7 +125,7 @@ for dkey, dialogue_block in dialogue_json.items():
                     "new-leaf": "newleaf",
                     "green-leaf": "greenleaf",
                     "leaffall": "leaf-fall",
-                    "leafbare": "leaf-bare"
+                    "leafbare": "leaf-bare",
                 }
                 if season in convert_dict:
                     new_season.append(convert_dict[season])
@@ -128,15 +136,9 @@ for dkey, dialogue_block in dialogue_json.items():
         elif key == "tags":
             murder_tags = []
             new_murder_dict = {
-                "victim": {
-                    "cat": "",
-                    "success": None
-                },
-                "accomplice": {
-                    "cat": "",
-                    "success": None
-                },
-                "discovered": None
+                "victim": {"cat": "", "success": None},
+                "accomplice": {"cat": "", "success": None},
+                "discovered": None,
             }
             for tag in dialogue_block[key]:
                 if tag in murder_tag_convert:
@@ -194,10 +196,7 @@ for dkey, dialogue_block in dialogue_json.items():
                     print("Unknown rel tag:", tag)
                     new_tag = tag
                 for rel in RELATIONSHIPS:
-                    if (
-                        "y_c" in rel["cats_to"] and
-                        "t_c" in rel["cats_from"]
-                    ):
+                    if "y_c" in rel["cats_to"] and "t_c" in rel["cats_from"]:
                         located = True
                         rel["relationship"].append(new_tag)
                 if not located:
@@ -205,10 +204,9 @@ for dkey, dialogue_block in dialogue_json.items():
                         {
                             "cats_from": ["t_c"],
                             "cats_to": ["y_c"],
-                            "relationship": [new_tag]
+                            "relationship": [new_tag],
                         }
                     )
-
 
         # RANDOM ABBREVS
         # if its a scene
@@ -222,8 +220,10 @@ for dkey, dialogue_block in dialogue_json.items():
                     if lone_abbrev in line:
                         abbrevs_done.append(lone_abbrev)
                         # if the abbrev is found, check if it has any addons
-                        full_abbrev, rel_addon, cluster_addon = get_matches(lone_abbrev, line)
-                        
+                        full_abbrev, rel_addon, cluster_addon = get_matches(
+                            lone_abbrev, line
+                        )
+
                         if lone_abbrev == "r_c" and "r_c1" in abbrevs_done:
                             continue
                         if lone_abbrev == "r_w" and "r_w1" in abbrevs_done:
@@ -235,7 +235,6 @@ for dkey, dialogue_block in dialogue_json.items():
                         random_cat_index = RANDOM_CATS.index(full_abbrev)
                         random_cat_abbrev = f"r_c:{random_cat_index}"
                         RANDOM_CATS_DICT[full_abbrev] = random_cat_abbrev
-
 
                         # grab the conversion from the json
                         new_cat_info = copy.deepcopy(abbrev_convert[lone_abbrev])
@@ -249,11 +248,19 @@ for dkey, dialogue_block in dialogue_json.items():
                         # now change the abbrevs in convert relationship to be the r_c ones
                         if "relationship" in new_cat_info:
                             if lone_abbrev in new_cat_info["relationship"]["cats_from"]:
-                                new_cat_info["relationship"]["cats_from"].remove(lone_abbrev)
-                                new_cat_info["relationship"]["cats_from"].append(random_cat_abbrev)
+                                new_cat_info["relationship"]["cats_from"].remove(
+                                    lone_abbrev
+                                )
+                                new_cat_info["relationship"]["cats_from"].append(
+                                    random_cat_abbrev
+                                )
                             if lone_abbrev in new_cat_info["relationship"]["cats_to"]:
-                                new_cat_info["relationship"]["cats_to"].remove(lone_abbrev)
-                                new_cat_info["relationship"]["cats_to"].append(random_cat_abbrev)
+                                new_cat_info["relationship"]["cats_to"].remove(
+                                    lone_abbrev
+                                )
+                                new_cat_info["relationship"]["cats_to"].append(
+                                    random_cat_abbrev
+                                )
 
                         if "murder" in new_cat_info:
                             MURDER["victim"] = random_cat_abbrev
@@ -266,21 +273,22 @@ for dkey, dialogue_block in dialogue_json.items():
                                 if "relationship" in new_cat_info["relationship"]:
                                     if (
                                         rel_addon_convert[rel_addon]
-                                        not in
-                                        new_cat_info["relationship"]["relationship"]
-                                        ):
-                                        new_cat_info["relationship"]["relationship"].append(
-                                            rel_addon_convert[rel_addon]
-                                            )
+                                        not in new_cat_info["relationship"][
+                                            "relationship"
+                                        ]
+                                    ):
+                                        new_cat_info["relationship"][
+                                            "relationship"
+                                        ].append(rel_addon_convert[rel_addon])
                                 else:
                                     new_cat_info["relationship"]["relationship"] = [
                                         rel_addon_convert[rel_addon]
-                                        ]
+                                    ]
                             else:
                                 new_cat_info["relationship"] = {
                                     "cats_from": ["t_c"],
                                     "cats_to": [random_cat_abbrev],
-                                    "relationship": [rel_addon_convert[rel_addon]]
+                                    "relationship": [rel_addon_convert[rel_addon]],
                                 }
 
                         # CLUSTER
@@ -294,9 +302,13 @@ for dkey, dialogue_block in dialogue_json.items():
                             elif cluster_addon in skill_addons:
                                 if "skill" in new_cat_info:
                                     if cluster_addon not in new_cat_info["skill"]:
-                                        new_cat_info["skill"].append(f"{cluster_addon.upper()},1")
+                                        new_cat_info["skill"].append(
+                                            f"{cluster_addon.upper()},1"
+                                        )
                                 else:
-                                    new_cat_info["skill"] = [f"{cluster_addon.upper()},1"]
+                                    new_cat_info["skill"] = [
+                                        f"{cluster_addon.upper()},1"
+                                    ]
 
                         CAT_DICT[random_cat_abbrev] = new_cat_info
 
@@ -318,8 +330,9 @@ for dkey, dialogue_block in dialogue_json.items():
                 line = choice_block["text"]
                 for lone_abbrev in abbrev_list:
                     if lone_abbrev in line:
-
-                        full_abbrev, rel_addon, cluster_addon = get_matches(lone_abbrev, line)
+                        full_abbrev, rel_addon, cluster_addon = get_matches(
+                            lone_abbrev, line
+                        )
 
                         if full_abbrev not in RANDOM_CATS:
                             RANDOM_CATS.append(full_abbrev)
@@ -349,7 +362,6 @@ for dkey, dialogue_block in dialogue_json.items():
         if "cats" not in new_block:
             new_block["cats"] = {}
         if item:
-
             for constraint in item.copy():
                 if constraint == "shunned":
                     # not sure if i want this or if i should keep the shunned bool
@@ -401,7 +413,7 @@ for dkey, dialogue_block in dialogue_json.items():
         new_block["cats"][key] = item
     if RELATIONSHIPS:
         new_block["relationships"] = RELATIONSHIPS
-    
+
     if MURDER:
         new_block["recent_murder"] = MURDER
 
@@ -412,8 +424,7 @@ for dkey, dialogue_block in dialogue_json.items():
 
     new_dialogue_dict.update({dialogue_key: new_block})
 
-    file_path = 'scripts/events_module/dialogue/reformat/new_dialogue.json'
-
+    file_path = "scripts/events_module/dialogue/reformat/new_dialogue.json"
 
     text = json.dumps(new_dialogue_dict, indent=4)
 

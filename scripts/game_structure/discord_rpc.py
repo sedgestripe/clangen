@@ -20,7 +20,6 @@ from scripts.screens.enums import GameScreen
 
 status_dict = {
     GameScreen.START: "At the start screen",
-    GameScreen.MAKE_CLAN: "Making a Clan",
     GameScreen.MEDIATION: "Mediating a dispute",
     GameScreen.PATROL: "On a patrol",
     GameScreen.PROFILE: "Viewing a cat's profile",
@@ -122,7 +121,7 @@ class _DiscordRPC(threading.Thread):
             # Example: beach_greenleaf_camp1_dark
 
             if game.clan:
-                clan_name = i18n.t("general.clan", name=game.clan.displayname)
+                clan_name = game.clan.name
                 cats_amount = len(game.clan.clan_cats)
                 clan_age = game.clan.age
             else:
@@ -138,7 +137,12 @@ class _DiscordRPC(threading.Thread):
                     small_image="discord",
                     small_text=f"{cats_amount} cats",
                     start=self._start_time,
-                    buttons=[{"label": "Join The Server", "url": "https://discord.gg/lifegen"}],
+                    buttons=[
+                        {
+                            "label": "Join The Server",
+                            "url": "https://discord.gg/lifegen",
+                        }
+                    ],
                 )
             except BaseException:  # pylint: disable=broad-except
                 print("Discord rpc had issue updating, disabling...")

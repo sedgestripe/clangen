@@ -1,31 +1,31 @@
 [
-	{
-		"id": "warrior_dark_forest_thoughts",
-		"thoughts": [
-			"Misses patrolling with {PRONOUN/m_c/poss} Clanmates",
-			"Feels the days start to blur",
-			"Cleans a wound after an argument turned into bloodshed",
-			"Ends up trying to eat bark after days of scenting no prey",
-			"Is sparring with {PRONOUN/m_c/poss} claws unsheathed",
-			"Fell into the mud and is feeling extra goopy",
-			"Is hissing at other Dark Forest cats",
-			"Refuses to take orders from anycat",
-			"Believes {PRONOUN/m_c/subject} can get even stronger",
-			"Curses c_n and StarClan itself for sending {PRONOUN/m_c/object} to the Dark Forest",
-			"Wants to find a living cat to take as {PRONOUN/m_c/poss} trainee",
-			"Fights several other cats at once",
-			"Delivers a killing blow",
-			"Rolls in the mud to get the scent of blood off {PRONOUN/m_c/poss} pelt",
-			"Wants power in whatever way {PRONOUN/m_c/subject} can get it",
-			"Stares blankly at the black sky",
-			"Flexes {PRONOUN/m_c/poss} claws in and out, in and out",
-			"Launches a surprise attack on another Dark Forest cat",
-			"Is spitting at any cat that dares look at {PRONOUN/m_c/object}",
-			"Wants to dig {PRONOUN/m_c/poss} claws into another cat's pelt",
-			"Is daydreaming of bloodshed",
-			"Is tormenting weaker souls",
-			"Doesn't want to train today",
-			"Trains all day"
-		]
-	}
+    {
+        "id": "warrior_dark_forest_thoughts",
+        "strings": [
+            "Misses patrolling with {PRONOUN/m_c/poss} Clanmates",
+            "Feels the days start to blur",
+            "Cleans a wound after an argument turned into bloodshed",
+            "Ends up trying to eat bark after days of scenting no prey",
+            "Is sparring with {PRONOUN/m_c/poss} claws unsheathed",
+            "Fell into the mud and is feeling extra goopy",
+            "Is hissing at other Dark Forest cats",
+            "Refuses to take orders from anycat",
+            "Believes {PRONOUN/m_c/subject} can get even stronger",
+            "Curses c_n and StarClan itself for sending {PRONOUN/m_c/object} to the Dark Forest",
+            "Wants to find a living cat to take as {PRONOUN/m_c/poss} trainee",
+            "Fights several other cats at once",
+            "Delivers a killing blow",
+            "Rolls in the mud to get the scent of blood off {PRONOUN/m_c/poss} pelt",
+            "Wants power in whatever way {PRONOUN/m_c/subject} can get it",
+            "Stares blankly at the black sky",
+            "Flexes {PRONOUN/m_c/poss} claws in and out, in and out",
+            "Launches a surprise attack on another Dark Forest cat",
+            "Is spitting at any cat that dares look at {PRONOUN/m_c/object}",
+            "Wants to dig {PRONOUN/m_c/poss} claws into another cat's pelt",
+            "Is daydreaming of bloodshed",
+            "Is tormenting weaker souls",
+            "Doesn't want to train today",
+            "Trains all day"
+        ]
+    }
 ]

@@ -9,10 +9,11 @@ from scripts.ui.windows.window_base_class import GameWindow
 from scripts.game_structure.game.switches import (
     Switch,
     switch_get_value,
-    switch_set_value
+    switch_set_value,
 )
 from scripts.ui.scale import ui_scale
 from scripts.screens.enums import GameScreen
+
 
 class NameKitsWindow(GameWindow):
     def __init__(self, last_screen):
@@ -22,14 +23,14 @@ class NameKitsWindow(GameWindow):
         self.set_blocking(True)
         switch_set_value(Switch.window_open, True)
 
-        self.clan_name = str(game.clan.name + 'Clan')
+        self.clan_name = str(game.clan.name + "Clan")
         self.last_screen = last_screen
         self.pick_path_message = UITextBoxTweaked(
             "<b>You have kits!</b>\nWhat will you name them?",
             ui_scale(pygame.Rect((20, 20), (250, -1))),
             line_spacing=1,
             object_id="#text_box_30_horizcenter",
-            container=self
+            container=self,
         )
         self.begin_anew_button = UISurfaceImageButton(
             ui_scale(pygame.Rect((55, 95), (80, 30))),
@@ -46,10 +47,8 @@ class NameKitsWindow(GameWindow):
             container=self,
         )
 
-        
         self.begin_anew_button.enable()
         self.mediator_button.enable()
-
 
     def process_event(self, event):
         super().process_event(event)

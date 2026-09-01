@@ -12,6 +12,7 @@ from scripts.screens.enums import GameScreen
 
 from scripts.cat.cats import Cat
 from scripts.game_structure.game.settings import game_setting_get
+from ..config import get_config
 from ..ui.elements.checkbox import UICheckbox
 from ..ui.elements.modified_scrolling_container import UIModifiedScrollingContainer
 from ..ui.elements.image_button import UIImageButton
@@ -22,12 +23,17 @@ from ..ui.scale import ui_scale, ui_scale_dimensions, ui_scale_offset
 from .Screens import Screens
 from .enums import GameScreen
 from ..cat import save_load
-from ..clan_package.settings import get_clan_setting, switch_clan_setting
+from ..clan_package.settings import (
+    get_clan_setting,
+    switch_clan_setting,
+    set_clan_setting,
+)
 from ..cat.enums import CatRank, CatGroup
 from ..game_structure.screen_settings import MANAGER, toggle_fullscreen
 from ..game_structure.constants import DISPLAY_SETTINGS
 from ..housekeeping.version import get_version_info
 from ..ui.generate_button import get_button_dict, ButtonStyles
+from ..ui.windows.cruel_locked_action import CruelLockedAction
 
 logger = logging.getLogger(__name__)
 
@@ -107,6 +113,20 @@ class ClanSettingsScreen(Screens):
         TODO: DOCS
         """
         if event.ui_element in self.checkboxes.values():
+            if event.ui_element == self.checkboxes.get("deputy") and get_config(
+                "settings.force_enable.deputy"
+            ):
+                set_clan_setting("deputy", True)
+                self.checkboxes["deputy"].check()
+                CruelLockedAction()
+                return
+            elif event.ui_element == self.checkboxes.get("affair") and not get_config(
+                "mates.allow_mating"
+            ):
+                set_clan_setting("affair", False)
+                self.checkboxes["affair"].uncheck()
+                CruelLockedAction()
+                return
             for key, value in self.checkboxes.items():
                 if value == event.ui_element:
                     switch_clan_setting(key)
@@ -325,7 +345,6 @@ class ClanSettingsScreen(Screens):
                     ur += 1
                 continue
 
-
             living_cats += 1
 
             if cat.status.is_outsider:
@@ -379,7 +398,7 @@ class ClanSettingsScreen(Screens):
                 "faded": str(faded_cats),
             },
         )
-        
+
         self.checkboxes_text["achievements"] = UISurfaceImageButton(
             ui_scale(pygame.Rect((335, 615), (120, 30))),
             "achievements",

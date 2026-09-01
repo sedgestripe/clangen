@@ -88,8 +88,7 @@ def patrol_success_regex_helper(m):
     capture_group = m.group(1)
     inner_strings = re.findall(r'".*?"|null', capture_group)
     new_success_dict = {}
-    new_labels = ["unscathed_common",
-                  "unscathed_rare", "stat_skill", "stat_trait"]
+    new_labels = ["unscathed_common", "unscathed_rare", "stat_skill", "stat_trait"]
 
     for i, text in enumerate(inner_strings):
         text = text.replace('"', "")

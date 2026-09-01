@@ -1,57 +1,65 @@
 [
-  {
-    "id": "dark_forest_medcat_to_living_other_medcat",
-    "thoughts": [
-      "Is indicating the closest bush of deathberries to r_c",
-      "Is deliberately whispering contradicting herbs to r_c so {PRONOUN/r_c/subject} will make a mistake",
-      "Wants to switch the places herbs are stored in so r_c will accidentally poison a Clanmate"
-    ],
-    "random_status_constraint": [
-      "medicine cat",
-      "medicine cat apprentice"
-    ],
-    "random_living_status": [
-      "living"
-    ]
-  },
-  {
-    "id": "dark_forest_medcat_to_living_medcat_apprentice",
-    "thoughts": [
-      "Hopes r_c will follow the path {PRONOUN/m_c/subject} took",
-      "Is trying to teach r_c poisonous herbs in {PRONOUN/r_c/poss} dreams"
-    ],
-    "random_status_constraint": [
-      "medicine cat apprentice"
-    ],
-    "random_living_status": [
-      "living"
-    ]
-  },
-  {
-    "id": "medicine_dark_forest_thoughts",
-    "thoughts": [
-      "Knows StarClan has abandoned {PRONOUN/m_c/object}",
-      "Claims that StarClan never guided {PRONOUN/m_c/poss} paws",
-      "Laughs when ordered to treat a trainee's wounds",
-      "Wonders if there are deathberries in the Dark Forest",
-      "Has another sleepless night, kept up by visions of {PRONOUN/m_c/poss} crimes",
-      "Hisses at any cat who comes near",
-      "Wishes {PRONOUN/m_c/subject} knew more battle moves",
-      "Knows how to be lethal without a fight",
-      "Stays far away from the StarClan border",
-      "Wonders if {PRONOUN/m_c/subject}'ll ever be stronger than a warrior",
-      "Is slowly becoming a better fighter than most warriors",
-      "Doesn't enjoy when cats question {PRONOUN/m_c/poss} relationship with StarClan",
-      "Hasn't found a reliable way to treat wounds in the Dark Forest",
-      "Is disturbed by the lack of herbs in the Place of No Stars",
-      "Is weaving a crown of thorns",
-      "Is used to getting {PRONOUN/m_c/poss} paws dirty",
-      "Overpowers a warrior in battle",
-      "Misses the smell of herbs",
-      "Misses the bitter taste of herbs",
-      "Fails to climb a barren tree and falls into the muck",
-      "Thought {PRONOUN/m_c/poss} saw a StarClan cat yesterday",
-      "Has lost track of time"
-    ]
-  }
+    {
+        "id": "dark_forest_medcat_to_living_other_medcat",
+        "strings": [
+            "Is indicating the closest bush of deathberries to r_c",
+            "Is deliberately whispering contradicting herbs to r_c so {PRONOUN/r_c/subject} will make a mistake",
+            "Wants to switch the places herbs are stored in so r_c will accidentally poison a Clanmate"
+        ],
+        "involved_cats": {
+            "r_c": {
+                "status": [
+                    "medicine cat",
+                    "medicine cat apprentice"
+                ],
+                "group": [
+                    "-afterlife"
+                ]
+            }
+        }
+    },
+    {
+        "id": "dark_forest_medcat_to_living_medcat_apprentice",
+        "strings": [
+            "Hopes r_c will follow the path {PRONOUN/m_c/subject} took",
+            "Is trying to teach r_c poisonous herbs in {PRONOUN/r_c/poss} dreams"
+        ],
+        "involved_cats": {
+            "r_c": {
+                "status": [
+                    "medicine cat apprentice"
+                ],
+                "group": [
+                    "-afterlife"
+                ]
+            }
+        }
+    },
+    {
+        "id": "medicine_dark_forest_thoughts",
+        "strings": [
+            "Knows StarClan has abandoned {PRONOUN/m_c/object}",
+            "Claims that StarClan never guided {PRONOUN/m_c/poss} paws",
+            "Laughs when ordered to treat a trainee's wounds",
+            "Wonders if there are deathberries in the Dark Forest",
+            "Has another sleepless night, kept up by visions of {PRONOUN/m_c/poss} crimes",
+            "Hisses at any cat who comes near",
+            "Wishes {PRONOUN/m_c/subject} knew more battle moves",
+            "Knows how to be lethal without a fight",
+            "Stays far away from the StarClan border",
+            "Wonders if {PRONOUN/m_c/subject}'ll ever be stronger than a warrior",
+            "Is slowly becoming a better fighter than most warriors",
+            "Doesn't enjoy when cats question {PRONOUN/m_c/poss} relationship with StarClan",
+            "Hasn't found a reliable way to treat wounds in the Dark Forest",
+            "Is disturbed by the lack of herbs in the Place of No Stars",
+            "Is weaving a crown of thorns",
+            "Is used to getting {PRONOUN/m_c/poss} paws dirty",
+            "Overpowers a warrior in battle",
+            "Misses the smell of herbs",
+            "Misses the bitter taste of herbs",
+            "Fails to climb a barren tree and falls into the muck",
+            "Thought {PRONOUN/m_c/poss} saw a StarClan cat yesterday",
+            "Has lost track of time"
+        ]
+    }
 ]

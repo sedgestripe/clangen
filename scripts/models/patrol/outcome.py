@@ -61,16 +61,13 @@ class Outcome(BaseModel):
     # --
     # LG
     stat_residence: Union[List[str], MISSING] = Field(
-        MISSING,
-        description="Dead residence the stat cat must be a part of."
+        MISSING, description="Dead residence the stat cat must be a part of."
     )
     stat_cluster: Union[List[str], MISSING] = Field(
-        MISSING,
-        description="Cluster the stat cat must be a part of."
+        MISSING, description="Cluster the stat cat must be a part of."
     )
     stat_faith: Union[List[int], MISSING] = Field(
-        MISSING,
-        description="Faith range the stat cat must be a part of."
+        MISSING, description="Faith range the stat cat must be a part of."
     )
     # ---
     prey: Union[List[Prey], MISSING] = Field(
@@ -91,8 +88,8 @@ class Outcome(BaseModel):
 
     # LG
     murder: Union[List[dict], MISSING] = Field(
-            MISSING, description="Indicates which cats will be murdered and by who."
-        )
+        MISSING, description="Indicates which cats will be murdered and by who."
+    )
     accessory: Union[List[dict], MISSING] = Field(
         MISSING, description="Indicates accessories gained from the outcome."
     )
