@@ -1323,8 +1323,24 @@ class ProfileScreen(Screens):
         # LG: edited
         if the_cat.pelt.accessory:
             acc_list = []
-            for acc in the_cat.pelt.accessory:
-                acc_list.append(self.get_acc_name(acc).lower())
+            if sprites.COLLAR_DATA["palette_map"]:
+                for acc in the_cat.pelt.accessory:
+                    potential_collar = "".join(
+                        [x for x in acc if not x.islower() and not x.isdigit()]
+                    ).strip("_")
+                    for style in Pelt.collar_styles:
+                        if style == potential_collar:
+                            acc_list.append(
+                                i18n.t(f"cat.accessories.{potential_collar}", count=0)
+                            )
+                            cats_accs.remove(acc)
+                            break
+                    if acc_list:
+                        break
+
+            acc_list.extend(
+                [i18n.t(f"cat.accessories.{acc}", count=0) for acc in cats_accs]
+            )
             output += "\n"
             output += i18n.t(
                 "screens.profile.accessory_label",
@@ -1951,32 +1967,6 @@ class ProfileScreen(Screens):
 
         elif self.open_sub_tab == "user notes":
             self.toggle_user_notes_tab()
-
-    # LG
-    def get_acc_name(self, acc):
-        """grabs accessory names for display in the customiser"""
-        acc_name = str(i18n.t(f"cat.accessories.{acc}", count=0)).capitalize()
-        collar_found = False
-        if acc in Pelt.collar_accessories:
-            for style_type in sprites.COLLAR_DATA["style_data"]:
-                for style, color_list in style_type.items():
-                    for colour in color_list:
-                        if f"{style}_{colour}" == acc:
-                            collar_found = True
-                            acc_name = str(
-                                i18n.t(f"cat.accessories.{style}", count=1)
-                            ).capitalize()
-                            break
-                        if collar_found:
-                            break
-                    if collar_found:
-                        break
-                if collar_found:
-                    break
-
-                # wtaf
-
-        return acc_name
 
     def get_all_history_text(self):
         """Generates a string with all important history information."""

@@ -52,12 +52,12 @@
     "terrain_sunningrocks": {
         "category": "terrain",
         "biome": ["any"],
-        "tags": ["rocks"]
+        "tags": ["rocks", "high_ground"]
     },
     "terrain_well": {
         "category": "terrain",
         "biome": ["any"],
-        "tags": ["Twolegs:abandoned", "water:still", "fall_risk"]
+        "tags": ["Twolegs:abandoned", "water:still", "fall_risk", "high_ground"]
     },
     "terrain_twolegplace": {
         "category": "terrain",
@@ -67,7 +67,7 @@
     "terrain_horseplace": {
         "category": "terrain",
         "biome": ["plains"],
-        "tags": ["Twolegs:present", "prey:ground", "prey:flying"]
+        "tags": ["Twolegs:present", "prey:ground", "prey:flying", "covered"]
     },
     "terrain_deepforest": {
         "category": "terrain",
@@ -77,12 +77,12 @@
     "terrain_windswepttree": {
         "category": "terrain",
         "biome": ["plains"],
-        "tags": ["trees", "prey:ground", "prey:flying"]
+        "tags": ["trees", "prey:ground", "prey:flying", "high_ground"]
     },
     "terrain_hugeboulder": {
         "category": "terrain",
         "biome": ["forest"],
-        "tags": ["rocks", "prey:ground", "covered"]
+        "tags": ["rocks", "prey:ground", "high_ground"]
     },
     "terrain_waterfall": {
         "category": "terrain",
@@ -113,6 +113,10 @@
         "category": "terrain",
         "biome": ["beach"],
         "tags": ["Twolegs:present", "tainted", "prey:water", "water:ocean"]
+    },
+    "terrain_abandonednest": {
+        "category": "terrain",
+        "biome": ["any"],
+        "tags": ["Twolegs:abandoned", "prey:ground", "covered", "unstable", "high_ground"]
     }
-
 }
