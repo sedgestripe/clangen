@@ -907,7 +907,7 @@
             "r_c1 is missing! Just as you leave the den to look for {PRONOUN/r_c1/object}, {PRONOUN/r_c1/subject} {VERB/r_c1/barrel/barrels} into you, crying so hard {PRONOUN/r_c1/subject} can't get a word out."
         ],
         "decline_strings": [
-            "You let the kit cry into your fur without a word until {PRONOUN/p_l:1/subject} {VERB/p_l:1/tucker/tuckers} {PRONOUN/p_l:1/self} out."
+            "You let the kit cry into your fur without a word until {PRONOUN/r_c1/subject} {VERB/r_c1/tucker/tuckers} {PRONOUN/r_c1/self} out."
         ],
         "success_outcomes": [
             {

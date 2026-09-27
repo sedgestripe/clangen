@@ -471,7 +471,7 @@
             "r_c1 is discussing recent border patrols with r_c0 - apparently some outsiders keep trespassing on c_n territory. r_c0, noticing your presence nearby, asks you if you have any ideas for handling the conflict."
         ],
         "decline_strings": [
-            "You tell r_c0 that you don't have any ideas; you trust that {PRONOUN/r_c0/object} and p_l:1 can handle the conflict efficiently."
+            "You tell r_c0 that you don't have any ideas; you trust that {PRONOUN/r_c0/object} and r_c1 can handle the conflict efficiently."
         ],
         "success_outcomes": [
             {

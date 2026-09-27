@@ -1113,7 +1113,7 @@
             "While just idly causing minor chaos, you stumble across r_c0 searching for a cat named r_c1. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/appear/appears} alone, and suddenly, you feel a large grin creep onto your face. This would be a great opportunity to have some fun!"
         ],
         "decline_strings": [
-            "Despite your initial excitement, even you can realize that getting in the way of r_c0's search is not appropriate. You'd look for p_l:1 too, if you cared. Oh well!"
+            "Despite your initial excitement, even you can realize that getting in the way of r_c0's search is not appropriate. You'd look for r_c1 too, if you cared. Oh well!"
         ],
         "success_outcomes": [
             {
