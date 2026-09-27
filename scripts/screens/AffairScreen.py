@@ -18,7 +18,7 @@ from ..ui.elements.surface_image_button import UISurfaceImageButton
 from ..ui.elements.sprite_button import UISpriteButton
 from scripts.clan_package.settings import get_clan_setting
 from scripts.screens.enums import GameScreen
-
+from scripts.cat.microservices.conditions import get_ill
 from ..cat.enums import CatRank
 
 from scripts.game_structure import constants
@@ -239,7 +239,7 @@ class AffairScreen(Screens):
                     mate = Cat.fetch_cat(i)
                     if mate is None:
                         continue
-                    mate.get_ill("heartbroken")
+                    get_ill(mate, "heartbroken")
                     mate.unset_mate(game.clan.your_cat)
                     rel = mate.relationships.get(game.clan.your_cat.ID)
                     if rel is None:
