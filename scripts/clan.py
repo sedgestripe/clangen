@@ -11,25 +11,21 @@ TODO: Docs
 import logging
 import os
 import statistics
-from random import choice, choices, randint, getrandbits
+from random import choice, randint
 from typing import Literal, Optional
 
 import i18n
 import ujson
 
-from scripts.cat.cats import Cat, cat_class, BACKSTORIES
-from scripts.cat.enums import CatRank, CatGroup, CatSocial, CatAge
-from scripts.cat_relations.inheritance import Inheritance
 from scripts.cat.cats import Cat, BACKSTORIES
-from scripts.cat.enums import CatRank, CatGroup, CatSocial, CatCompatibility, CatThought
+from scripts.cat_relations.inheritance import Inheritance
+from scripts.cat.enums import CatCompatibility, CatThought, CatRank, CatGroup, CatSocial
 from scripts.cat.factories.new_cat_factory import NewCatFactory
 from scripts.cat.factories.typed_dicts import StatusDict
 from scripts.cat.names import Name
 from scripts.cat.save_load import (
     save_cats,
     get_faded_ids,
-    load_faded_cat_ids,
-    prune_dead_relationships,
 )
 from scripts.cat_relations.cat_handle_funcs import init_all_relationships
 from scripts.clan_package.clan_names import get_possible_clan_names
@@ -418,7 +414,7 @@ class Clan:
         # LIFEGEN: this is moved down to after we generate outsiders and dead cats
         for cat_id in Cat.all_cats:
             the_cat = Cat.all_cats.get(cat_id)
-            the_cat.init_all_relationships()
+            init_all_relationships(the_cat)
             if self.clan_age == "new" and the_cat not in (self.instructor, self.demon):
                 if the_cat.backstory == "clanborn" and the_cat.status.rank not in (
                     CatRank.KITTEN,

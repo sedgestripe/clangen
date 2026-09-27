@@ -10,6 +10,8 @@ from scripts.game_structure import constants
 from scripts.screens.enums import GameScreen
 from scripts.cat.enums import CatRank
 from scripts.game_structure.localization import load_lang_resource
+from scripts.cat.microservices.conditions import get_ill, get_injured
+
 
 from .Screens import Screens
 
@@ -1767,7 +1769,7 @@ class MurderScreen(Screens):
             if accomplice and accompliced:
                 # accomplice means you have one, accompliced means they agreed
                 if randint(1, 4) == 1:
-                    accomplice.get_injured(owie2)
+                    get_injured(accomplice, owie2)
 
         # CHOOSING TEXT
         biome = game.clan.biome.lower()
@@ -1984,9 +1986,9 @@ class MurderScreen(Screens):
                     for t in chosen_event[1]["tags"]:
                         if any(t in chosen_event[1] for t in INJURIES):
                             if t in INJURIES:
-                                you.get_injured(t)
+                                get_injured(you, t)
                         else:
-                            you.get_injured(owie)
+                            get_injured(you, owie)
 
         ceremony_txt = choice(ceremony_txt)
 
@@ -2117,11 +2119,11 @@ class MurderScreen(Screens):
 
                 accguiltchance = randint(1, 2)
                 if accguiltchance == 1:
-                    accomplice.get_injured("guilt")
+                    get_injured(accomplice, "guilt")
 
                 youguiltchance = randint(1, 4)
                 if youguiltchance == 1:
-                    accomplice.get_injured("guilt")
+                    get_injured(accomplice, "guilt")
 
             else:
                 if game.clan.your_cat.dead:
@@ -2191,15 +2193,15 @@ class MurderScreen(Screens):
                         )
 
                     if game.clan.your_cat.dead:
-                        accomplice.get_injured("guilt")
+                        get_injured(accomplice, "guilt")
                     else:
                         accguiltchance = randint(1, 4)
                         if accguiltchance == 1:
-                            accomplice.get_injured("guilt")
+                            get_injured(accomplice, "guilt")
 
                         youguiltchance = randint(1, 6)
                         if youguiltchance == 1:
-                            accomplice.get_injured("guilt")
+                            get_injured(accomplice, "guilt")
 
                 else:
                     cat_to_murder.history.add_death(f"{you.name} murdered this cat.")
@@ -2767,7 +2769,7 @@ class MurderScreen(Screens):
                     ]
                 )
 
-            cat_to_murder.get_injured(owie)
+            get_injured(cat_to_murder, owie)
 
             if self.method == "poison":
                 text = text + f" Your attempt on their life has left {c_m} ill."

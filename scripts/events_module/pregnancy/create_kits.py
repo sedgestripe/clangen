@@ -38,6 +38,7 @@ def get_kits(
     cat: Optional[Cat] = None,
     other_cat: Optional[Cat] = None,
     adoptive_parents: Optional[list] = None,
+    creating_your_siblings = False
 ):
     """
     Create some amount of kits
@@ -46,6 +47,8 @@ def get_kits(
     the clan.
     """
     all_kitten = []
+    if creating_your_siblings:
+        all_kitten = [game.clan.your_cat]
     if not adoptive_parents:
         adoptive_parents = []
 

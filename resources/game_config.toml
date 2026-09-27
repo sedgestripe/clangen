@@ -299,6 +299,14 @@ dev_tools = false
       comfort = 70
       trust = 60
 
+    # default relationship buff for an absent parent towards their kits
+    [new_cat.parent_buff.absent_parent_to_kit]
+      romance = 0
+      like = 0
+      respect = 0
+      comfort = -10
+      trust = 0
+
   [new_cat.sib_buff]
     # default relationships buff for siblings' relationships in one direction
     [new_cat.sib_buff.cat1_to_cat2]
@@ -315,6 +323,12 @@ dev_tools = false
       respect = 10
       comfort = 40
       trust = 30
+
+    # default relationships buff for a newborn's relationship towards one of their littermates
+    [new_cat.sib_buff.littermates_to_eachother]
+      like = 20
+      comfort = 10
+      trust = 10
 
   [new_cat.rel_buff]
     # default relationships buff for new cats relationships to other cats in the clan
@@ -917,6 +931,9 @@ dev_tools = false
   [clan_resources.herbs]
     # set to True if the Clan should begin with no herbs
     empty_starting_storage = false
+
+    # set to True if the Clan should begin with less herbs
+    half_starting_storage = false
 
     # Clan size * required_herbs_per_cat / adequate number will determine adequate supply qualifier.
     # Clan size * required_herbs_per_cat * excess number will determine excess supply qualifier

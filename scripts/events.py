@@ -13,6 +13,7 @@ from scripts.cat.microservices.add_to_clan import add_dependents_to_clan, add_to
 from scripts.cat_relations.cat_handle_funcs import create_relationships_new_cat
 from scripts.config import get_config
 from scripts.events_module.pregnancy.create_kits import get_kits
+from scripts.cat_relations.cat_handle_funcs import init_all_relationships
 
 
 # pylint: enable=line-too-long
@@ -1092,7 +1093,7 @@ def generate_birth_event():
             cat=parent1,
             other_cat=parent2,
             adoptive_parents=adoptive_parents,
-            clan=game.clan,
+            creating_your_siblings=True
         )
         for kit in kits:
             kit.status = deepcopy(game.clan.your_cat.status)
@@ -1100,6 +1101,10 @@ def generate_birth_event():
             if not game.clan.your_cat.status.group.is_any_clan_group():
                 kit.specsuffix_hidden = True
                 kit.change_name(new_prefix=kit.name.prefix, new_suffix="")
+            kit.assign_thought()
+
+        if game.clan.your_cat in kits:
+            kits.remove(game.clan.your_cat)
         return kits
 
     def generate_outsider_parent(group=None, mate=None, dead=False):
@@ -1330,8 +1335,8 @@ def generate_birth_event():
                 group=game.clan.your_cat.status.group_ID, mate=parent1, dead=False
             )
             parent1.set_mate(parent2)
-            parent1.init_all_relationships()
-            parent2.init_all_relationships()
+            init_all_relationships(parent1)
+            init_all_relationships(parent2)
 
         elif birth_type in (
             BirthType.TWO_KITTYPET_PARENTS,
@@ -1359,8 +1364,8 @@ def generate_birth_event():
             parent1 = generate_outsider_parent(group=group1, dead=False)
             parent2 = generate_outsider_parent(group=group2, mate=parent1, dead=False)
             parent1.set_mate(parent2)
-            parent1.init_all_relationships()
-            parent2.init_all_relationships()
+            init_all_relationships(parent1)
+            init_all_relationships(parent2)
 
         return birth_type, parent1, parent2, adoptive_parents
 
@@ -1464,7 +1469,7 @@ def generate_birth_event():
             if adoptive_parents:
                 c.adoptive_parents = adoptive_parents
             c.create_inheritance_new_cat()
-            c.init_all_relationships()
+            init_all_relationships(c)
 
     def handle_birth_event(birth_type, parent1, parent2, adoptive_parents, siblings):
         global b_txt
@@ -1572,9 +1577,9 @@ def generate_birth_event():
     handle_birth_event(birth_type, parent1, parent2, adoptive_parents, siblings)
 
     if parent1 and not parent1.dead and parent1.gender == "female":
-        parent1.get_injured("recovering from birth")
+        get_injured(parent1, "recovering from birth")
     elif parent2 and not parent2.dead and parent2.gender == "female":
-        parent2.get_injured("recovering from birth")
+        get_injured(parent2, "recovering from birth")
     adoptive_parents_cats = []
 
     for c in adoptive_parents:
@@ -3471,8 +3476,8 @@ def handle_disaster_impacts(current_disaster):
                     )
             if random.randint(1, 10) != 1:
                 if "injuries" in current_disaster["collateral_damage"]:
-                    cat.get_injured(
-                        random.choice(current_disaster["collateral_damage"]["injuries"])
+                    get_injured(
+                        cat, random.choice(current_disaster["collateral_damage"]["injuries"])
                     )
             else:
                 if "deaths" in current_disaster["collateral_damage"]:
