@@ -121,7 +121,7 @@ class BulkTimeskip(unittest.TestCase):
                     for cat in Cat.all_cats_list:
                         if (
                             cat.ID not in game.patrolled
-                            and cat.status.rank.is_allowed_to_patrol()
+                            and cat.status.rank.is_allowed_to_patrol(cat)
                             and cat.status.alive_in_player_clan
                             and not cat.not_working()
                         ):
