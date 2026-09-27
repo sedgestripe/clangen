@@ -1,5 +1,5 @@
 from typing import Dict
-
+from random import randint
 import i18n
 import pygame.transform
 import pygame_gui.elements
@@ -400,6 +400,8 @@ class ChooseMateScreen(Screens):
 
         else:
             self.the_cat.unset_mate(self.selected_cat, user_initiated_breakup=True)
+            if randint(1, 5) == 1:
+                get_ill(self.selected_cat, "heartbroken")
 
     def update_both(self):
         """Updates both the current cat and selected cat info."""

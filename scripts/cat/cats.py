@@ -10,7 +10,6 @@ import os.path
 import sys
 from random import choice, randint, sample, random
 from typing import Dict, List, Any, Union, Callable, Optional, TYPE_CHECKING, Literal
-from scripts.cat.microservices.conditions import get_ill
 
 import i18n
 import ujson  # type: ignore
@@ -2192,10 +2191,6 @@ class Cat:
                 if fight:
                     self_relationship.romance -= randint(10, 30)
                     self_relationship.like -= randint(15, 45)
-                if randint(1, 5) == 1:
-                    get_ill(self, "heartbroken")
-                if randint(1, 5) == 1 and not other_cat.dead:
-                    get_ill(other_cat, "heartbroken")
             if not other_cat.dead:
                 if self.ID not in other_cat.relationships:
                     create_one_relationship(other_cat, self)
