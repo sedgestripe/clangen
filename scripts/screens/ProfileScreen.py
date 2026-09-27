@@ -3324,10 +3324,7 @@ class ProfileScreen(Screens):
             self.have_kits_button.disable()
             if (
                 check_if_can_have_kits(
-                    cat=self.the_cat,
-                    allow_single_parent=get_clan_setting("single parentage"),
-                    allow_unmated=True,
-                    allow_affair=get_clan_setting("affair"),
+                    cat=self.the_cat
                 )
                 and self.the_cat.status.alive_in_player_clan
                 and not switch_get_value(Switch.have_kits)

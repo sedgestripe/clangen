@@ -2032,13 +2032,11 @@ def generate_outsider_age_ceremony():
     if stage is None or social not in ("kittypet", "loner", "rogue"):
         return
 
-    load_ceremonies()
-
     key = f"{social}_{stage}"
-    if key not in CEREMONY_TXT:
+    if key not in lifegen_ceremonies:
         return
 
-    ceremony_txt = event_text_adjust(Cat, CEREMONY_TXT[key][1], main_cat=your_cat)
+    ceremony_txt = event_text_adjust(Cat, lifegen_ceremonies[key][1], main_cat=your_cat)
     game.cur_events_list.insert(
         0, EventInformation(ceremony_txt, ["alert", "ceremony"], your_cat.ID)
     )
