@@ -1,0 +1,1086 @@
+[
+    {
+        "patrol_id": "life_lead_og1",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "leaf-bare"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "life_lead_og1",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "frequency": 4,
+        "intro_text": "You need to make a decision about the allocation of prey during the scarce leaf-bare. Prey is already becoming scarce by the sight of the dwindling freshkill pile... The Clan's survival depends on your decision.",
+        "decline_text": "Rather than making the decision alone, you decide to hold a Clan meeting to discuss the issue. The Clan appreciates your democratic leadership style.",
+        "chance_of_success": 75,
+        "success_outcomes": [
+            {
+                "text": "Your fair and thoughtful decision ensures that all cats get enough to eat, despite the scarcity. The Clan appreciates your wise leadership.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Despite your best efforts, there's unrest in the Clan due to the scarcity of food. The harsh realities of leadership weigh heavy on you.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_og2",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "life_leader_og2",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "warrior"
+                ]
+            },
+            "r_c:1": {
+                "rank": [
+                    "warrior"
+                ]
+            },
+            "r_c:2": {
+                "rank": [
+                    "warrior"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "As you ponder over a tough decision to make for the Clan, you wonder if it would be wise to confide in some of your Clan members and ask for their opinions and advice. A few of your warriors may have good insight.",
+        "decline_text": "You decide not to confide in your Clanmates, confident in your ability to make decisions on your own.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You cave in and decide to ask the warriors what they think about your decision. You, r_c:0, r_c:1, and r_c:2 are able to have a serious conversation, going over the advantages and disadvantages of your plan and how it could affect the Clan's future. You are able to walk away confident in both your decision and the opinions of your Clanmates.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You cave in and decide to ask the senior warriors what they think about your decision. Unfortunately, each of your Clanmates seem to have a different opinion from one another. r_c:0, r_c:1, and r_c:2 are unable to see each other eye to eye despite your presence. You break up the conversation and stalk back to your den, your time wasted and your mind split with indecision.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_og3",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "life_lead_og3",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "frequency": 4,
+        "intro_text": "o_c_n has been encroaching on your territory with subtle shifted scent marks and pawprints. Then again, it could be a simple mistake. As the leader, you have to decide how to respond.",
+        "decline_text": "Rather than making a hasty decision, you decide to gather more information about the situation. Your Clan respects your thoroughness.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "Your decision to send a stern warning to o_c_n proves effective. They apologize and promise to respect the borders. Your Clan admires your stern defense of the territory.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Despite your stern warning, the o_c_n continues to violate the borders. This challenge tests your resolve as a leader. You'll need a new plan.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_og4",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "life_lead_og4",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "warrior"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "During a moment of downtime, r_c:0 approaches you. {PRONOUN/r_c:0/subject/CAP} {VERB/r_c:0/inform/informs} you that {PRONOUN/r_c:0/subject} {VERB/r_c:0/have/has} a few concerns regarding a decision that you recently made for the Clan, and {PRONOUN/r_c:0/subject} would like to give {PRONOUN/r_c:0/poss} input.",
+        "decline_text": "You tell your Clanmate that they can voice their concerns in a private conversation later.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You make sure to listen fully to r_c:0's concerns, allowing {PRONOUN/r_c:0/object} to voice out {PRONOUN/r_c:0/poss} full opinion and give {PRONOUN/r_c:0/poss} own insight on how this decision may affect the Clan in the future. You thank {PRONOUN/r_c:0/object} for {PRONOUN/r_c:0/poss} decision to confide in you and promise to have a word with the Clan's senior warriors and elders to see what they think.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You lash out at r_c:0 with your fur bristled, harshly reminding {PRONOUN/r_c:0/object} that {PRONOUN/r_c:0/subject} {VERB/r_c:0/do/does} not have the right to question your orders. What {VERB/r_c:0/do/does} {PRONOUN/r_c:0/subject} know about leadership!? {PRONOUN/r_c:0/subject/CAP} {VERB/r_c:0/slink/slinks} off with ears flattened in anger at your denial.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_og5",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "lg_leader_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "warrior",
+                    "apprentice"
+                ]
+            },
+            "r_c:1": {
+                "rank": [
+                    "warrior",
+                    "apprentice"
+                ]
+            },
+            "r_c:2": {
+                "rank": [
+                    "deputy"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "An argument between r_c:0 and r_c:1 threatens to divide the Clan. They stand in the clearing, fur bristled as they spit at each other. The rest of your Clanmates appear to be taking sides. You need to intervene and restore peace before this gets out of hand.",
+        "decline_text": "Instead of directly intervening, you decide to involve the Clan's mediator. This thoughtful action shows your belief in the strengths of your Clan members.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "Stepping between the two warriors, your wise words defuse the tension and resolve the argument. The mark of a good compromise is neither being fully satisfied. The Clan is grateful for your balanced judgment. r_c:2 looks thoughtful about how you handled r_c:0 and r_c:1 with such ease.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Despite your intervention, the warriors continue to argue. Frustration overtakes you, but r_c:2 steps in to assist. With {PRONOUN/r_c:2/poss} help the situation dissolves finally but not thanks to you. Your Clanmates whisper behind your back. r_c:2 d_n simply knows r_c:0 and r_c:1 better?",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_og6",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "lg_leader_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "warrior",
+                    "apprentice"
+                ]
+            },
+            "r_c:1": {
+                "rank": [
+                    "warrior",
+                    "apprentice"
+                ]
+            },
+            "r_c:2": {
+                "rank": [
+                    "deputy"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "A fierce storm has damaged the camp, and as the leader, you must organize the repair efforts. Several of your Clanmates are ready to help. All they need now is direction on where to start.",
+        "decline_text": "Rather than dictating the repair process, you decide to listen to the ideas of your Clan members. This approach shows your trust in your Clan's abilities.",
+        "chance_of_success": 75,
+        "success_outcomes": [
+            {
+                "text": "With your guidance, the Clan works together efficiently to repair the camp. Tonight everycat will have nice, warm nests after the soaking storm. The gratitude radiates from r_c:0 and r_c:1 as they both head to their nests so that they can be up in time for dawn patrol with r_c:2.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Despite your efforts, the repair process is slow and arduous. This difficult situation tests the patience of all. By moonhigh there is still more to be done but it will have to wait until tomorrow...",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_og7",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "lg_leader_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "medicine cat",
+                    "medicine cat apprentice"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "An epidemic has spread through the Clan and you must decide how to handle the crisis. r_c:0 has {PRONOUN/r_c:0/poss} paws full enough with multiple patients and not enough herbs.",
+        "decline_text": "Recognizing your limitations in medical matters, you choose to defer to the medicine cat's judgment. The Clan appreciates your humility and trust in others.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "You calmly organize a quarantine and direct the warrior's efforts to herb gathering. r_c:0 is incredibly grateful, and admires your composure and swift decision-making in the face of adversity. Your choices meant {PRONOUN/r_c:0/subject} could focus on patients.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Despite your efforts, the epidemic continues to spread and the medicine cats have to work overtime regardless. This crisis tests r_c:0's trust in you. Failure hurts, but you can learn from this.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "lg_leader_shunned_J1",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "shunned"
+        ],
+        "patrol_art": "lg_leader_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "frequency": 4,
+        "intro_text": "The Clan leader-- your replacement-- is giving an announcement to the Clan about a recent gathering. They share a decision that you don't really agree with, but wonder if anycat would listen to your opinion anymore.",
+        "decline_text": "Best not to anger anyone with unsolicited advice.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "Ready to get shot down, you raise your voice above the crowd and express your disagreement with the leader's plan. The entire Clan looks to them to see whether or not they'll shoot you down. To your surprise, though, they do not, and instead acknowledge your opinion with a curt nod, and a mutter about how they'll consider it. It's not much, but it's better than nothing.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You can barely finish your sentence before the leader silences you with a hiss. They let you know very clearly that your opinion is of the least concern to the Clan right now, and you can't help but feel offended that your Clanmate would treat you this way.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_CZ1",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "lg_leader_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "kitten"
+                ]
+            },
+            "r_c:1": {
+                "rank": [
+                    "queen"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "The constant management of leading the Clan has left you exhausted, but you've promised the kits that you would visit them in the nursery and share a meal days ago, and you feel somewhat guilty for having waited so long. r_c:0 was keen on seeing you.",
+        "decline_text": "You decide that resting in your den is more important. You won't be of any use to your Clan if you're too tired to think; you spend the evening relaxing in solitude, promising to yourself that you would visit the kits tomorrow.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "It wouldn't hurt to do one last errand. You slip into the nursery with a mouse held in your jaws, only to find that all of the kits are asleep. So, you instead share the mouse with r_c:1 and have a lovely and insightful conversation with {PRONOUN/r_c:1/object}.",
+                "exp": 10,
+                "frequency": 4
+            },
+            {
+                "text": "r_c:0 is energetic, but not overwhelming. As you share a thrush with the nursery, you answer all of the questions and delight in the kit's bright-eyed curiosity. You leave feeling happy and reinvigorated for your work to continue tomorrow.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "As soon as you enter the nursery, you're swarmed by hyperactive kits and a constant stream of questions. You do your best to hold conversation with them, but r_c:1 recognize your fatigue and usher the kits aside, allowing you to escape to the peace and quiet of your den.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "You do your best to concentrate on your conversation with the Clan's young ones, but even r_c:0 can tell that you're beginning to nod off halfway through the conversation. None of your Clanmates blame you for excusing yourself early, but you feel guilt begin to writhe in your chest as you make your way out.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_R1",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "lg_leader_default",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "warrior"
+                ],
+                "cluster": [
+                    "assertive"
+                ]
+            },
+            "r_c:1": {
+                "rank": [
+                    "deputy"
+                ]
+            },
+            "r_c:2": {
+                "rank": [
+                    "mediator",
+                    "mediator apprentice"
+                ]
+            },
+            "r_c:3": {
+                "rank": [
+                    "warrior"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "r_c:1 has come to you with an issue. More warriors are reporting to {PRONOUN/r_c:1/object} that r_c:0 has been starting more arguments as of late on patrols. Before {PRONOUN/r_c:1/subject} {VERB/r_c:1/speak/speaks} to {PRONOUN/r_c:0/object}, {PRONOUN/r_c:1/subject} wanted your opinion.",
+        "decline_text": "r_c:1 should trust {PRONOUN/r_c:1/self} more. {PRONOUN/r_c:1/subject/CAP} {VERB/r_c:1/know/knows} what is best.",
+        "chance_of_success": 65,
+        "success_outcomes": [
+            {
+                "text": "r_c:0 isn't a problem starter - {PRONOUN/r_c:0/subject}{VERB/r_c:0/'re/'s} a problem finisher. r_c:1 realizes the issue seems to lie with r_c:3 as well. After a moment {PRONOUN/r_c:1/subject} {VERB/r_c:1/decide/decides} to separate the two for a bit and resolve it with r_c:2.",
+                "exp": 10,
+                "frequency": 4
+            },
+            {
+                "text": "r_c:1 hasn't seemed to catch on that r_c:0 isn't a problem starter - {PRONOUN/r_c:0/subject}{VERB/r_c:0/'re/'s} a problem finisher. You gently remind {PRONOUN/r_c:1/object} that each of {PRONOUN/r_c:1/poss} Clanmates are unique. By the time you finish explaining r_c:1 is more confident with new knowledge before heading off to complete the task.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "r_c:1 doesn't know {PRONOUN/r_c:1/poss} own Clanmates if {PRONOUN/r_c:1/subject} can't see what's happening. Despite it being obvious to you, you can't seem to explain it in a way that makes sense to your deputy. In the end, r_c:1 stalks out of your den in frustration.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "r_c:0, causing problems? What else is new? And why would r_c:1 need your advice for handling it? You shake your head at {PRONOUN/r_c:1/object} and tell {PRONOUN/r_c:1/object} to speak to r_c:0 on {PRONOUN/r_c:1/poss} own if it's so important. You have other matters to attend to.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_R2",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "life_lead_R2",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "kitten"
+                ]
+            },
+            "r_c:1": {
+                "rank": [
+                    "warrior",
+                    "deputy"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "r_c:0 approaches you one afternoon as you sunbathe. {PRONOUN/r_c:0/subject/CAP} {VERB/r_c:0/appear/appears} nervous as {PRONOUN/r_c:0/subject} {VERB/r_c:0/gather/gathers} {PRONOUN/r_c:0/poss} thoughts. What could make r_c:0 so nervous to bring up?",
+        "decline_text": "The kit scampers away instead. Did {PRONOUN/r_c:0/subject} lose {PRONOUN/r_c:0/poss} nerve?",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "Conspiratorially, r_c:0 leans in close to whisper to you. Ah... A mentor request! It seems r_c:1 has a fan. Hiding your chuckles you gently agree to consider apprenticing {PRONOUN/r_c:0/object} to r_c:1 - but only because {PRONOUN/r_c:0/subject} asked so politely.",
+                "exp": 10,
+                "frequency": 4
+            },
+            {
+                "text": "Shuffling {PRONOUN/r_c:0/poss} paws, r_c:0 gathers the courage to boldly announce that you're {PRONOUN/r_c:0/poss} favorite leader. Considering {PRONOUN/r_c:0/subject} {VERB/r_c:0/haven't/hasn't} met another, it's not the boldest of confessions, but it has you thanking {PRONOUN/r_c:0/object} for saying so. The kit scampers off happily.",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Pestering kits aren't what you want right now. You gently discourage {PRONOUN/r_c:0/object} from bothering you, and r_c:0 slinks off upset. Guilt plagues you for the rest of your evening.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "r_c:0 stumbles and stutters out something that you don't understand. When you politely ask {PRONOUN/r_c:0/object} to speak up, the kit bursts into tears and runs back to the nursery. What just happened..?",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_lead_R3",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "life_lead_R3",
+        "min_cats": 1,
+        "max_cats": 6,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "warrior"
+                ],
+                "cluster": [
+                    "upstanding"
+                ]
+            },
+            "r_c:1": {
+                "rank": [
+                    "deputy"
+                ]
+            },
+            "r_c:2": {
+                "rank": [
+                    "warrior",
+                    "apprentice"
+                ]
+            },
+            "r_c:3": {
+                "rank": [
+                    "mediator",
+                    "mediator apprentice"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "While in your den, r_c:0 bursts in, frustrated. {PRONOUN/r_c:0/subject/CAP} exclaims that r_c:2 chased and caught prey over the o_c_n border but r_c:1 doesn't see the issue! Something needs to be done about this.",
+        "decline_text": "You're too busy for this. r_c:0 is dismissed so you can focus.",
+        "chance_of_success": 70,
+        "success_outcomes": [
+            {
+                "text": "Gently, you assure r_c:0 that one mistake isn't going to cause problems. To make {PRONOUN/r_c:0/object} feel more at ease, you agree to mention this to r_c:3. {PRONOUN/r_c:0/subject/CAP} {VERB/r_c:0/aren't/isn't} totally satisfied by this but is more assured as {PRONOUN/r_c:0/subject} {VERB/r_c:0/walk/walks} away.",
+                "exp": 10,
+                "frequency": 4
+            },
+            {
+                "text": "You summon r_c:2 and r_c:1 to your den after assuring r_c:0 you'll take care of it. The two receive an earful from you for the trespassing and dismissal of r_c:0. ",
+                "exp": 10,
+                "frequency": 4
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "r_c:0 is so frustrated and flustered that it's hard to understand exactly what's happening. You send {PRONOUN/r_c:0/object} to r_c:3, who is better equipped for whatever is happening.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "It's rude to enter the leader's den without permission. You scold r_c:0 for bursting in and making a fuss about something minor. If r_c:1 said it was fine, then it was fine. r_c:0 leaves with {PRONOUN/r_c:0/poss} tail lashing and ears pinned back in anger.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "leaderinteract_DEAD_H1",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "sc_lifegen"
+        ],
+        "patrol_art": "lg_default_sc",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "kitten"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "While doing a check-up on c_n, you notice r_c:0 is sitting a ways away from the others. While floating closer, your eyes meet, and a moment of silence falls over the two of you as the shock of being seen by the living settles in your heart.",
+        "decline_text": "You're not ready to be seen by any alive cat, and decide to cut your check-up short and leave r_c:0 to {PRONOUN/r_c:0/poss} own devices.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "r_c:0 seems to be unsure of your presence. Neither one of you move an inch as you stare at each other, and you can't help but feel amused. It's like a serious standoff, but between a ghost and a kitten.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "r_c:0 is the first to move, visibly startled by your sudden appearance. However, {PRONOUN/r_c:0/subject} {VERB/r_c:0/don't/doesn't} seem terribly unnerved as {PRONOUN/r_c:0/subject} {VERB/r_c:0/open/opens} {PRONOUN/r_c:0/poss} paws to show you a flower crown. It must be a gift. You smile at r_c:0 in goodbye and leave {PRONOUN/r_c:0/object} to {PRONOUN/r_c:0/poss} gift making.",
+                "exp": 0,
+                "frequency": 4,
+                "stat_cluster": [
+                    "neurotic",
+                    "sweet"
+                ],
+                "can_have_stat": [
+                    "r_c:0"
+                ]
+            },
+            {
+                "text": "r_c:0's eyes brighten, and {PRONOUN/r_c:0/subject} {VERB/r_c:0/exclaim/exclaims} your name, succeeding in getting the other cat's attention. It surprised you, but you suppose as a former leader, you should be well-known. Despite r_c:0 tumultuously announcing your ghostly appearance, at least now r_c:0 is interacting with the others.",
+                "exp": 0,
+                "frequency": 4,
+                "stat_cluster": [
+                    "assertive",
+                    "silly",
+                    "unabashed"
+                ],
+                "can_have_stat": [
+                    "r_c:0"
+                ]
+            },
+            {
+                "text": "r_c:0 noticed you, but {PRONOUN/r_c:0/subject} {VERB/r_c:0/seem/seems} to ignore your presence and glances at the ground. You follow {PRONOUN/r_c:0/poss} gaze and see a flurry of bugs in the dirt. r_c:0 is enraptured by the sight, and you suddenly realize why {PRONOUN/r_c:0/subject} decided to be alone. With an amused huff, you leave {PRONOUN/r_c:0/object} be.",
+                "exp": 0,
+                "frequency": 4,
+                "stat_cluster": [
+                    "introspective",
+                    "stable"
+                ],
+                "can_have_stat": [
+                    "r_c:0"
+                ]
+            },
+            {
+                "text": "r_c:0 looks to have the nastiest, meanest look on {PRONOUN/r_c:0/poss} face. Someone isn't happy, and {PRONOUN/r_c:0/subject} definitely {VERB/t_c/voice/voices} that as you hover in eyesight. Despite wanting to scold {PRONOUN/r_c:0/object} for {PRONOUN/r_c:0/poss} harsh use of words, you decide to just walk - or well, float - away.",
+                "exp": 0,
+                "frequency": 4,
+                "stat_cluster": [
+                    "brooding",
+                    "unlawful"
+                ],
+                "can_have_stat": [
+                    "r_c:0"
+                ]
+            },
+            {
+                "text": "r_c:0 seems to recognize you almost immediately, and puffs up {PRONOUN/r_c:0/poss} chest, looking as fierce and regal as a kitten pretending to be a warrior cat can be. You can't help but stifle a laugh at {PRONOUN/r_c:0/poss} attempt to appear warrior-like. It's cute, and doesn't fail to brighten your usually dull day.",
+                "exp": 0,
+                "frequency": 4,
+                "stat_cluster": [
+                    "cool",
+                    "upstanding"
+                ],
+                "can_have_stat": [
+                    "r_c:0"
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Clearly, the sight of the dead is scary to r_c:0. {PRONOUN/r_c:0/subject/CAP} {VERB/r_c:0/run/runs} up to a nearby cat to tattle about your sudden appearance, but the cat doesn't seem to see you either. They brush r_c:0 off with an unnerved smile. You leave before you cause more damage.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "You thought you and r_c:0 caught eyes, but {PRONOUN/r_c:0/subject} {VERB/r_c:0/seem/seems} to see directly through you, unaware of your presence. A part of you is disappointed at the missed opportunity, but another shivers at the thought of being noticed by the living. You leave before anyone sees you.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "r_c:0 doesn't seem to recognize you or your previous role as the leader of c_n. You try to explain who you are, but r_c:0 does not have any of it. {PRONOUN/r_c:0/subject/CAP} promptly {VERB/t_c/exclaim/exclaims} stranger danger and {VERB/r_c:0/scatter/scatters} from your line of sight.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "r_c:0 sees you, but is distressed by a bee flying directly onto {PRONOUN/r_c:0/poss} face. {PRONOUN/r_c:0/subject/CAP} {VERB/r_c:0/scream/screams} and {VERB/r_c:0/run/runs} away, the bee following, and you have a moment to be grateful that you're a translucent being unable to be touched by the living realm. You would have ran for the hills, too.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_leader_rad1",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [
+            "df_lifegen"
+        ],
+        "patrol_art": "lg_default_df",
+        "min_cats": 1,
+        "max_cats": 1,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "elder"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "All your life, your Clanmates would share scary stories about leaders who wound up in the Dark Forest. Now that you're one of those leaders in Dark Forest, you can't help but be curious... What stories are living cats telling about <i>you</i>?",
+        "decline_text": "Though you could easily find out, you decide not to. You already imagine them telling wild and outlandish stories about you, and you don't want to be disappointed if the real ones are boring.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "Not wanting to risk being spotted by a living cat, you wait until the Dark Forest trainees have arrived for tonight's practice session and casually ask one if their Clanmates ever tell stories about you. Their eyes widen as they begin sharing one of the most common stories about you, one that's often used to frighten the kits and apprentices into behaving, and one they've heard many times themselves. Normally you'd interrupt a trainee's long-winded tale, since you're supposed to be focusing on battle moves, but you'll make an exception - just this once.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "Determined to find out for yourself, you manage to enter the c_n elders' den, secretly joining an audience of cats who are waiting to listen to a story from r_c:0. It's a nice surprise when {PRONOUN/r_c:0/subject} {VERB/r_c:0/start/stars} regaling a tale of your misdeeds, and an even bigger surprise that {PRONOUN/r_c:0/subject}{VERB/r_c:0/'re/'s} describing you quite warmly and correctly explaining every justification you had for your actions. You smile as you listen along with the living cats, knowing your legacy is being passed down by good paws.",
+                "exp": 0,
+                "frequency": 4,
+                "stat_faith": [
+                    -9,
+                    -6
+                ],
+                "can_have_stat": [
+                    "r_c:0"
+                ]
+            },
+            {
+                "text": "Some of your former Clanmates are always keen to give the younger cats a good scare, so you slip out of the confines of the Dark Forest and slink into the c_n camp. Once the cats start sharing spooky stories, you're dismayed to realize that not one of them is about you. Perhaps, during your life, you didn't accomplish anything worthy of becoming a warning tale to your Clanmates... But then again, you realize, your presence in the Dark Forest means you can accomplish that during death.",
+                "exp": 0,
+                "frequency": 3
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Knowing that some of your former Clanmates are always keen to give the younger cats a good scare, you slip out of the confines of the Dark Forest and slink into the c_n camp. When the cats start sharing spooky stories, though, you're dismayed to realize that not one of them is about you. Did you really accomplish nothing worthy of becoming frightening lore among your Clanmates?",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "Not wanting to risk being spotted by a living cat, you save the question for that night: as you prepare to square off against a Dark Forest trainee, you casually ask if their Clanmates ever tell stories about you. The fury raises in your chest as they shake their head no, but you try to put that aside; after all, they're here to train. The fact that they return to the waking world with more injuries than usual has nothing to do with this piece of information, truly.",
+                "exp": 0,
+                "frequency": 4
+            }
+        ]
+    },
+    {
+        "patrol_id": "leaderwithkits_H1",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "leaderwithkits_H1",
+        "min_cats": 1,
+        "max_cats": 2,
+        "min_max_status": {},
+        "random_cats": {
+            "r_c:0": {
+                "rank": [
+                    "queen",
+                    "queen's apprentice"
+                ]
+            },
+            "r_c:1": {
+                "skill": [
+                    "KIT,1"
+                ],
+                "age": [
+                    "not_kitten"
+                ]
+            },
+            "r_c:2": {
+                "rank": [
+                    "kitten"
+                ]
+            }
+        },
+        "frequency": 4,
+        "intro_text": "While idly wandering around the Clan, r_c:0 stops you and sheepishly asks if you would be interested in watching the nursery while {PRONOUN/r_c:0/subject} {VERB/r_c:0/take/takes} a kitten to the medicine den.",
+        "decline_text": "You politely decline with the excuse of being busy with duties, and quickly scurry off.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "It wouldn't hurt to watch the younger generation for a bit. You accept the request and head to the nursery, expecting chaos, only to be met with the delightful sight of kittens taking a nap. You breathe a sigh of relief and settle near the entrance of the nursery, lazily taking watch.",
+                "exp": 5,
+                "frequency": 4
+            },
+            {
+                "text": "It would be unfair to both r_c:0 and the kittens if you accepted a request you didn't wish to do. With a smooth voice and a calming smile, you decline the offer and instead recommend r_c:1 for the job. It's like r_c:0's worries magically wash away as {PRONOUN/r_c:0/subject} {VERB/r_c:0/thank/thanks} you for your insight.",
+                "exp": 5,
+                "frequency": 4,
+                "stat_skill": [
+                    "COMFORTER,1",
+                    "SPEAKER,1",
+                    "GRACE,1",
+                    "MEDIATOR,1",
+                    "INSIGHTFUL,1"
+                ],
+                "relationships": [
+                    {
+                        "cats_to": [
+                            "p_l"
+                        ],
+                        "cats_from": [
+                            "r_c:0"
+                        ],
+                        "mutual": false,
+                        "values": [
+                            "trust"
+                        ],
+                        "amount": 10,
+                        "log": {}
+                    }
+                ],
+                "can_have_stat": [
+                    "p_l"
+                ]
+            },
+            {
+                "text": "You have nothing better to do and accept the request. As soon as you wander into the nursery, the kittens excitedly jump around you, asking for a story about the Clan's founding! You yield almost immediately and begin telling the nursery a tale about the many wars between StarClan and the Dark Forest, and how c_n was founded because of it. However, you realize you made the story sound too cool as r_c:0 keeps asking questions about the Dark Forest.",
+                "exp": 5,
+                "frequency": 2,
+                "faith_effects": [
+                    {
+                        "faith_cat": [
+                            "r_c:0"
+                        ],
+                        "amount": -1
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Your reluctant emotions must have seeped into your expression, and r_c:0 quickly makes an excuse to ask some other cat to watch the nursery. {PRONOUN/r_c:0/subject/CAP} bids you a good walk as {PRONOUN/r_c:0/subject} {VERB/r_c:0/scurry/scurries} off.",
+                "exp": 0,
+                "frequency": 2,
+                "relationships": [
+                    {
+                        "cats_to": [
+                            "p_l"
+                        ],
+                        "cats_from": [
+                            "r_c:0"
+                        ],
+                        "mutual": false,
+                        "values": [
+                            "comfort"
+                        ],
+                        "amount": -5,
+                        "log": {}
+                    }
+                ]
+            },
+            {
+                "text": "Despite being reluctant, you accept r_c:0's request and head to the nursery. When you arrive, all the kittens look strangely suspicious. One head count later, you're realizing a kitten is missing. Or are you counting wrong? Do you not know how many kittens are currently in the Clan? Aren't you the leader? Uh oh.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "You deny the request, knowing you best get to your duties before the elders begin their judgement. r_c:0 nods in understanding, but perks up and asks you to stay here as {PRONOUN/r_c:0/subject} {VERB/r_c:0/run/runs} off. r_c:0 comes back a moment later with a clover and, with a big smile, wishes you luck.",
+                "exp": 5,
+                "frequency": 2,
+                "accessory": [
+                    {
+                        "cats": [
+                            "y_c"
+                        ],
+                        "accessory": [
+                            "CLOVERFLOWER",
+                            "CLOVER"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "patrol_id": "simplestroll_leader_H1",
+        "biome": [
+            "any"
+        ],
+        "season": [
+            "any"
+        ],
+        "types": [
+            "lifegen"
+        ],
+        "tags": [],
+        "patrol_art": "fst_hunt_mice",
+        "min_cats": 1,
+        "max_cats": 2,
+        "min_max_status": {},
+        "frequency": 1,
+        "intro_text": "While staying in c_n's camp is nice, you need to stretch your legs and get some fresh air. You idly wander around the territory, lazily on the lookout for anything particularly strange.",
+        "decline_text": "Your walk was pleasantly uneventful, but after a while you start to get jittery from the uncharacteristic calm. You decide to hurry back to camp, hoping it's not up in chaos.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "It doesn't take you long to bump into another patrol from c_n. The cats greet you and begin reporting anything they've come across during their patrol so far. Thankfully, nothing particularly worrying has come up, and you go your separate ways.",
+                "exp": 5,
+                "frequency": 4
+            },
+            {
+                "text": "You hear your name being called out, and coincidentally, the leader from o_c_n is also taking a walk! They're quick to ask about the status of c_n and if they need anything, such as herbs, but out of politeness you decline o_c_n's offer. The leader huffs, not taking your decline as an answer, and they give you the small batch of herbs anyway.",
+                "exp": 10,
+                "frequency": 2,
+                "other_clan_rep": 1,
+                "herbs": [
+                    "random_herbs"
+                ]
+            },
+            {
+                "text": "During your walk, you spot a lone cat wandering around the edge of o_c_n's territory. While you may have not been bothered otherwise, the cat appears injured and your newfound pity forces your paws to move. When you draw closer, the cat notices your presence and runs away. Peculiar.",
+                "exp": 10,
+                "frequency": 1,
+                "new_cat": [
+                    [
+                        "meeting",
+                        "exists",
+                        "loner"
+                    ]
+                ]
+            },
+            {
+                "text": "Of course, specifically looking for something strange always ends in never finding anything strange. You recall a few words of wisdom from an elder - waiting for something to happen makes it draw out longer - and you find yourself sighing as you realize that elder was correct. At least you caught a bird during your stroll.",
+                "exp": 5,
+                "frequency": 2,
+                "prey": [
+                    "small"
+                ]
+            },
+            {
+                "text": "Strangeness always seems to find you, even if you're not searching for it. You witness an argument between a o_c_n patrol, scolding an apprentice for deliberately crossing c_n's border for a measly mouse. You can't be mad as you sit at the sidelines, soaking in the drama that doesn't involve you, for once.",
+                "exp": 5,
+                "frequency": 4
+            },
+            {
+                "text": "Being away from the camp for so long by yourself is slowly building your nerves, and you decide you can definitely leave patrolling the territory to your perfectly capable warriors. You grab a beautiful flower on your way. Maybe d_n would like this one...",
+                "exp": 5,
+                "frequency": 4,
+                "accessory": [
+                    {
+                        "cats": [
+                            "y_c"
+                        ],
+                        "accessory": [
+                            "FORGET ME NOTS",
+                            "DAISY",
+                            "POPPY",
+                            "LAVENDER",
+                            "BELLFLOWERS",
+                            "FORSYTHIA"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "You were aware of Twoleg from the previous patrol reports, but you didn't expect to accidentally stumble across their whereabouts. The Twolegplace is a disgusting stain on your territory, but you are smart enough to not barrel through there and cause trouble. You memorize the location, and decide to steal something before stalking off.",
+                "exp": 10,
+                "frequency": 2,
+                "accessory": [
+                    {
+                        "cats": [
+                            "y_c"
+                        ],
+                        "accessory": [
+                            "RAINCOAT",
+                            "POPTABS",
+                            "CORKHAT",
+                            "ZOOKEEPER",
+                            "FAZBEAR",
+                            "WHITEBEAR",
+                            "PANDA",
+                            "BEAR",
+                            "BROWNBEAR"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "Turns out, you're a bit rusty with the territory. It only takes one trip over a raised root to send you stumbling into a tree, successfully hurting yourself. That's embarrassing.",
+                "exp": 0,
+                "frequency": 1,
+                "injury": [
+                    {
+                        "cats": [
+                            "p_l"
+                        ],
+                        "injuries": [
+                            "bruises"
+                        ]
+                    }
+                ]
+            },
+            {
+                "text": "While on your walk, you spot a o_c_n patrol near the border of your territory. Disapproving the patrols' proximity, you decide to confront the patrol. The cat who appears to be the patrol leader boldly claims they're not <i>in</i> c_n's territory, so they can be wherever they want! You can't argue with that logic, but your mood sours anyway.",
+                "exp": 0,
+                "frequency": 2,
+                "other_clan_rep": -1
+            },
+            {
+                "text": "Unfortunately, the walk is uneventful and you don't spot anything that needs your attention. You don't see any reason to wander the territory any longer, and tentatively hurry back to the camp. You can't help but feel like you missed something...",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "While the air was refreshing and the gentle sound of the wildlife calming, you're starting to feel shifty without the chaos and volume of camp. With a few more moments of contemplation, you swiftly turn around and head back.",
+                "exp": 0,
+                "frequency": 4
+            },
+            {
+                "text": "While checking out some animal prints, you hear a whisper behind you. As you swiftly turn your head, you hear another whisper - this time behind you again! You feel surrounded, yet you're unable to use your senses to find the source of the whispering. With your heart racing and your shackles raised, you decide to sprint away to escape whatever it is!",
+                "exp": 0,
+                "frequency": 2,
+                "faith_effects": [
+                    {
+                        "faith_cat": [
+                            "y_c"
+                        ],
+                        "amount": -1
+                    }
+                ]
+            }
+        ]
+    }
+]

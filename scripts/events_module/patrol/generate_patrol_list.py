@@ -61,10 +61,10 @@ def get_patrol_list(
         if get_clan_setting("disasters"):
             possible_patrols.extend(_load_file(f"{path}disaster.json"))
     elif switch_get_value(Switch.patrol_category) == "lifegen":
-        possible_patrols.extend(_load_file(f"{path}lifegen_reformatted/{game.clan.your_cat.status.rank}.json"))
-        possible_patrols.extend(_load_file(f"{path}lifegen_reformatted/general.json"))
+        possible_patrols.extend(_load_file(f"{path}lifegen/{game.clan.your_cat.status.rank}.json"))
+        possible_patrols.extend(_load_file(f"{path}lifegen/general.json"))
     else:
-        possible_patrols.extend(_load_file(f"{path}lifegen_reformatted/{switch_get_value(Switch.patrol_category)}.json"))
+        possible_patrols.extend(_load_file(f"{path}lifegen/{switch_get_value(Switch.patrol_category)}.json"))
 
     return possible_patrols
 

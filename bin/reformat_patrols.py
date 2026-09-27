@@ -29,8 +29,8 @@ fix a lot of patrols by hand. I recommend you preserve the already-fixed vanilla
 """
 
 
-root_dir = "./resources/lang/en/patrols/lifegen"
-write_dir = "./resources/lang/en/patrols/lifegen_reformatted"
+root_dir = "./resources/lang/en/patrols/lifegen_old"
+write_dir = "./resources/lang/en/patrols/lifegen"
 file_set = set()
 
 

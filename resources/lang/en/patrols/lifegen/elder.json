@@ -1,497 +1,541 @@
 [
     {
-        "patrol_id": "lg_elder_og1",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "lg_elder_og1",
         "types": [
             "lifegen"
         ],
-        "tags": [],
-        "patrol_art": "lg_elder_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
         "frequency": 4,
-        "intro_text": "A young apprentice approaches you, curious to hear about your past adventures. You reminisce, wondering whether you should indulge them with a story.",
-        "decline_text": "You politely decline, feeling tired. The apprentice is understanding and promises to return another time for your tales.",
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                2
+            ]
+        },
         "chance_of_success": 60,
+        "patrol_art": "lg_elder_default",
+        "intro_strings": [
+            "A young apprentice approaches you, curious to hear about your past adventures. You reminisce, wondering whether you should indulge them with a story."
+        ],
+        "decline_strings": [
+            "You politely decline, feeling tired. The apprentice is understanding and promises to return another time for your tales."
+        ],
         "success_outcomes": [
             {
-                "text": "You decide to share a story, captivating the apprentice with tales of your past. They hang on your every word, awestruck and inspired by your experiences.",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You decide to share a story, captivating the apprentice with tales of your past. They hang on your every word, awestruck and inspired by your experiences."
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You attempt to recount a tale, but the details seem fuzzy. What did you do again?",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You attempt to recount a tale, but the details seem fuzzy. What did you do again?"
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "lg_elder_og2",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "lg_elder_og2",
         "types": [
             "lifegen"
         ],
-        "tags": [],
-        "patrol_art": "lg_elder_default",
-        "min_cats": 1,
-        "max_cats": 3,
-        "min_max_status": {},
+        "frequency": 4,
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                3
+            ]
+        },
         "random_cats": {
-            "r_c:0": {
+            "r_c0": {
                 "rank": [
                     "leader"
                 ]
             }
         },
-        "frequency": 4,
-        "intro_text": "The leader asks for your opinion on a dispute between two warriors. You feel respected, knowing that your wisdom is still valued.",
-        "decline_text": "You politely decline, feeling unsure about your ability to resolve the issue. The leader respects your decision and turns to other Clan members for advice.",
         "chance_of_success": 50,
+        "patrol_art": "lg_elder_default",
+        "intro_strings": [
+            "The leader asks for your opinion on a dispute between two warriors. You feel respected, knowing that your wisdom is still valued."
+        ],
+        "decline_strings": [
+            "You politely decline, feeling unsure about your ability to resolve the issue. The leader respects your decision and turns to other Clan members for advice."
+        ],
         "success_outcomes": [
             {
-                "text": "You weigh the situation and provide a fair resolution. The leader appreciates your wisdom, and the warriors agree to your solution.",
-                "exp": 10,
-                "frequency": 4
-            },
-            {
-                "text": "As you listen to the details of the conflict, you recall a similar dispute that took place many moons ago, one that neither of the warriors are old enough to remember. You describe the prior conflict and its eventual solution to r_c:0 and the warriors. While it doesn't immediately settle the dispute, you can tell by their quiet discussion afterwards that your memories and experiences have provided valuable insight that will hopefully lead to a quick resolution.",
-                "exp": 10,
-                "frequency": 4
-            },
-            {
-                "text": "You've always had a knack for smoothing out your Clanmates' conflicts. You listen closely to both warriors' perspectives, asking questions where necessary to gain better understanding, and eventually manage to guide the two towards a resolution that both are happy with. r_c:0 later praises you for how well you handled the dispute - apparently even the Clan mediators were having trouble getting the warriors to see eye-to-eye.",
-                "exp": 10,
                 "frequency": 4,
-                "stat_skill": [
-                    "MEDIATOR,1"
+                "strings": [
+                    "You weigh the situation and provide a fair resolution. The leader appreciates your wisdom, and the warriors agree to your solution."
                 ],
-                "can_have_stat": [
-                    "p_l"
-                ]
+                "exp_gained": 10
+            },
+            {
+                "frequency": 4,
+                "strings": [
+                    "As you listen to the details of the conflict, you recall a similar dispute that took place many moons ago, one that neither of the warriors are old enough to remember. You describe the prior conflict and its eventual solution to r_c0 and the warriors. While it doesn't immediately settle the dispute, you can tell by their quiet discussion afterwards that your memories and experiences have provided valuable insight that will hopefully lead to a quick resolution."
+                ],
+                "exp_gained": 10
+            },
+            {
+                "frequency": 4,
+                "strings": [
+                    "You've always had a knack for smoothing out your Clanmates' conflicts. You listen closely to both warriors' perspectives, asking questions where necessary to gain better understanding, and eventually manage to guide the two towards a resolution that both are happy with. r_c0 later praises you for how well you handled the dispute - apparently even the Clan mediators were having trouble getting the warriors to see eye-to-eye."
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You attempt to mediate, but the warriors seem unconvinced. The leader decides to handle the matter personally.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You attempt to mediate, but the warriors seem unconvinced. The leader decides to handle the matter personally."
+                ],
+                "exp_gained": 0
             },
             {
-                "text": "Was mediating always this difficult? Despite paying close attention, you keep making mistakes: mixing up which cat said what, misunderstanding the conflict, and asking questions that the warriors have already answered. r_c:0 eventually suggests you return to the elder's den for a nap, much to your embarrassment.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "Was mediating always this difficult? Despite paying close attention, you keep making mistakes: mixing up which cat said what, misunderstanding the conflict, and asking questions that the warriors have already answered. r_c0 eventually suggests you return to the elder's den for a nap, much to your embarrassment."
+                ],
+                "exp_gained": 0
             },
             {
-                "text": "It turns out that in your old age, you've become more short-tempered than anycat realized. When the two warriors begin bickering over the recollection of events, you snap at them to just tell you the facts rather than getting into another ridiculous spat over it. It shocks the two into silence, but that's clearly not the solution r_c:0 was looking for, as {PRONOUN/r_c:0/subject}{VERB/r_c:0/'re/'s} very quick to dismiss you to the elder's den after that.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "It turns out that in your old age, you've become more short-tempered than anycat realized. When the two warriors begin bickering over the recollection of events, you snap at them to just tell you the facts rather than getting into another ridiculous spat over it. It shocks the two into silence, but that's clearly not the solution r_c0 was looking for, as {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} very quick to dismiss you to the elder's den after that."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "lg_elder_og3",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "lg_elder_og3",
         "types": [
             "lifegen"
         ],
-        "tags": [],
-        "patrol_art": "lg_elder_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
+        "frequency": 4,
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                2
+            ]
+        },
         "random_cats": {
-            "r_c:0": {
+            "r_c0": {
                 "rank": [
                     "kitten"
                 ]
             }
         },
-        "frequency": 4,
-        "intro_text": "A kit comes running up to you, asking for a play fight. Despite your old bones, you consider their request, remembering your own playful youth.",
-        "decline_text": "You decline, explaining that you're too old for play fighting. The kit seems disappointed but understands. They scamper off to find another playmate.",
         "chance_of_success": 45,
+        "patrol_art": "lg_elder_default",
+        "intro_strings": [
+            "A kit comes running up to you, asking for a play fight. Despite your old bones, you consider their request, remembering your own playful youth."
+        ],
+        "decline_strings": [
+            "You decline, explaining that you're too old for play fighting. The kit seems disappointed but understands. They scamper off to find another playmate."
+        ],
         "success_outcomes": [
             {
-                "text": "You agree and have a gentle play fight with the kit. They squeal in delight and declare you the best playmate ever.",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You agree and have a gentle play fight with the kit. They squeal in delight and declare you the best playmate ever."
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You agree to the play fight but soon find your joints complaining.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You agree to the play fight but soon find your joints complaining."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "lg_elder_og4",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "lg_elder_og4",
         "types": [
             "lifegen"
         ],
-        "tags": [],
+        "frequency": 4,
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                2
+            ]
+        },
+        "chance_of_success": 50,
         "patrol_art": "lg_elder_og4",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
-        "frequency": 4,
-        "intro_text": "A young warrior offers to fetch you fresh-kill. You contemplate whether you should accept or insist on doing it yourself for old times' sake.",
-        "decline_text": "You politely decline, deciding to fetch your own meal. The young warrior nods respectfully and offers their help should you need it later.",
-        "chance_of_success": 50,
+        "intro_strings": [
+            "A young warrior offers to fetch you fresh-kill. You contemplate whether you should accept or insist on doing it yourself for old times' sake."
+        ],
+        "decline_strings": [
+            "You politely decline, deciding to fetch your own meal. The young warrior nods respectfully and offers their help should you need it later."
+        ],
         "success_outcomes": [
             {
-                "text": "You graciously accept their offer and enjoy a well-chosen piece of fresh-kill. The young warrior seems pleased to be of help.",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You graciously accept their offer and enjoy a well-chosen piece of fresh-kill. The young warrior seems pleased to be of help."
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You decide to do it yourself but find that you're not as fast as you used to be. The warrior steps in, understanding your desire to be independent.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You decide to do it yourself but find that you're not as fast as you used to be. The warrior steps in, understanding your desire to be independent."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "lg_elder_og5",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "lg_elder_og5",
         "types": [
             "lifegen"
         ],
-        "tags": [],
+        "frequency": 4,
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                2
+            ]
+        },
+        "chance_of_success": 50,
         "patrol_art": "lg_elder_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
-        "frequency": 4,
-        "intro_text": "The camp is relatively empty as many cats have gone out to do their daily patrols or hunting, and you decide to help tidy up... and maybe add a decoration or two? You start to have a couple doubts as you gather the materials... is this a good idea?",
-        "decline_text": "No, it's not. You put your things away and go back to the elder's den, deciding to just take a nap instead.",
-        "chance_of_success": 50,
+        "intro_strings": [
+            "The camp is relatively empty as many cats have gone out to do their daily patrols or hunting, and you decide to help tidy up... and maybe add a decoration or two? You start to have a couple doubts as you gather the materials... is this a good idea?"
+        ],
+        "decline_strings": [
+            "No, it's not. You put your things away and go back to the elder's den, deciding to just take a nap instead."
+        ],
         "success_outcomes": [
             {
-                "text": "You begin to work on sprucing up the camp, doubts shaken away as if they were a flea. Some of the other cats still here decide to lend a helping paw, gathering things you were missing and reaching places you couldn't get to. When the warriors return to the camp, they're pleasantly surprised by the minute changes, and you get to see every single one's pleased reaction.",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You begin to work on sprucing up the camp, doubts shaken away as if they were a flea. Some of the other cats still here decide to lend a helping paw, gathering things you were missing and reaching places you couldn't get to. When the warriors return to the camp, they're pleasantly surprised by the minute changes, and you get to see every single one's pleased reaction."
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You begin to work on sprucing up the camp, doubts shaken away as if they were a flea. The other cats seem annoyed by what you're doing, but you continue anyway until you're done. Once the Clan gets home, they seem perturbed by the changes, and one of them even comes up and scolds you! Perhaps going back to bed would've been a better idea...",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You begin to work on sprucing up the camp, doubts shaken away as if they were a flea. The other cats seem annoyed by what you're doing, but you continue anyway until you're done. Once the Clan gets home, they seem perturbed by the changes, and one of them even comes up and scolds you! Perhaps going back to bed would've been a better idea..."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "lg_elder_og6",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "lg_elder_og6",
         "types": [
             "lifegen"
         ],
-        "tags": [],
+        "frequency": 4,
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                2
+            ]
+        },
+        "chance_of_success": 50,
         "patrol_art": "lg_elder_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
-        "frequency": 4,
-        "intro_text": "You've been thinking about going out on a walk, though there have been reports of fox scent in the area. Whilst that's not necessarily a big deal for a cat in a patrol, as it seems to be a moreso younger and more inexperienced fox, it may be a danger to you.",
-        "decline_text": "Yeah, it's probably best if you stay in camp, safe from any sort of danger. You'll just go out when it's safer.",
-        "chance_of_success": 50,
+        "intro_strings": [
+            "You've been thinking about going out on a walk, though there have been reports of fox scent in the area. Whilst that's not necessarily a big deal for a cat in a patrol, as it seems to be a moreso younger and more inexperienced fox, it may be a danger to you."
+        ],
+        "decline_strings": [
+            "Yeah, it's probably best if you stay in camp, safe from any sort of danger. You'll just go out when it's safer."
+        ],
         "success_outcomes": [
             {
-                "text": "You go out on your walk, and everything is peaceful. The sun is shining, and leaves seem to gracefully trail after you as you walk. It was worth it to see such sights, and now you're ready to go home and get some rest.",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You go out on your walk, and everything is peaceful. The sun is shining, and leaves seem to gracefully trail after you as you walk. It was worth it to see such sights, and now you're ready to go home and get some rest."
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You go out on your walk, but whilst things are peaceful at first... They aren't for the whole time. The fox, it seems, thought you would be something good enough to hunt, and it chases you around before a patrol finds you and comes to help. Whilst you were luckily unscathed, your pride remains pretty bruised.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You go out on your walk, but whilst things are peaceful at first... They aren't for the whole time. The fox, it seems, thought you would be something good enough to hunt, and it chases you around before a patrol finds you and comes to help. Whilst you were luckily unscathed, your pride remains pretty bruised."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "lg_elder_og7",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "lg_elder_og7",
         "types": [
             "lifegen"
         ],
-        "tags": [],
+        "frequency": 4,
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                2
+            ]
+        },
+        "chance_of_success": 50,
         "patrol_art": "lg_elder_og7",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
-        "frequency": 4,
-        "intro_text": "You were just trying to rest, the warriors out on patrol and the medicine cat out gathering herbs, however the squeals of other cats managed to wake you up from your nap. You rush outside, and it seems a snake has slithered its way into the middle of the camp. The cats look to you for help, you are the one in the best condition in the camp at the moment, so they're hoping you'll have a plan.",
-        "decline_text": "Nope. Nope nope. Nope. You hurry back into the den, not willing to deal with the snake.",
-        "chance_of_success": 50,
+        "intro_strings": [
+            "You were just trying to rest, the warriors out on patrol and the medicine cat out gathering herbs, however the squeals of other cats managed to wake you up from your nap. You rush outside, and it seems a snake has slithered its way into the middle of the camp. The cats look to you for help, you are the one in the best condition in the camp at the moment, so they're hoping you'll have a plan."
+        ],
+        "decline_strings": [
+            "Nope. Nope nope. Nope. You hurry back into the den, not willing to deal with the snake."
+        ],
         "success_outcomes": [
             {
-                "text": "You move into action, quickly grabbing the snake by its tail. You drag it out of the camp where you let it free, watching it slither into the grasses as your Clanmates let out a loud sigh of relief..",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You move into action, quickly grabbing the snake by its tail. You drag it out of the camp where you let it free, watching it slither into the grasses as your Clanmates let out a loud sigh of relief.."
+                ],
+                "exp_gained": 10
             },
             {
-                "text": "Your interspecies communication skills are rusty, but you can still tell the snake in no uncertain terms that it's unwelcome in the camp. Problem solved: it glares at you and flicks its tail in annoyance, but makes its way out of the camp. New problem: now your awestruck Clanmates won't stop asking how you learned to speak snake.",
-                "exp": 10,
                 "frequency": 4,
-                "stat_skill": [
-                    "LANGUAGE,1"
+                "strings": [
+                    "Your interspecies communication skills are rusty, but you can still tell the snake in no uncertain terms that it's unwelcome in the camp. Problem solved: it glares at you and flicks its tail in annoyance, but makes its way out of the camp. New problem: now your awestruck Clanmates won't stop asking how you learned to speak snake."
                 ],
-                "can_have_stat": [
-                    "p_l"
-                ]
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You try your best to help with the issue, but as you dodge the snake's lunges, it seems you only make it madder. It's finally removed from the camp once a warrior gets back from patrol, and you can't help but feel embarrassed about what'd happened.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You try your best to help with the issue, but as you dodge the snake's lunges, it seems you only make it madder. It's finally removed from the camp once a warrior gets back from patrol, and you can't help but feel embarrassed about what'd happened."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "lg_elder_og8",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "lg_elder_og8",
         "types": [
             "lifegen"
         ],
-        "tags": [],
-        "patrol_art": "lg_elder_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
         "frequency": 4,
-        "intro_text": "You wake up from a nightmare, your heart racing and your eyes wide. You have no idea what spurred on said nightmare, but you're unable to go back to sleep with it still whirling in your mind. You quickly leave the den, deciding to take a walk outside for a little while, though you soon start to hear rustling in the bushes.",
-        "decline_text": "Yeah, no, that's too much for you. You return to camp, even more freaked out then you were before, and unable to go back to sleep.",
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                2
+            ]
+        },
         "chance_of_success": 50,
+        "patrol_art": "lg_elder_default",
+        "intro_strings": [
+            "You wake up from a nightmare, your heart racing and your eyes wide. You have no idea what spurred on said nightmare, but you're unable to go back to sleep with it still whirling in your mind. You quickly leave the den, deciding to take a walk outside for a little while, though you soon start to hear rustling in the bushes."
+        ],
+        "decline_strings": [
+            "Yeah, no, that's too much for you. You return to camp, even more freaked out then you were before, and unable to go back to sleep."
+        ],
         "success_outcomes": [
             {
-                "text": "You gently move the bushes, only to see a familiar face. It's one of your Clanmates, who seemed to have come out on a walk as well. You two chat a little bit, and they seem to understand you a little better. You're glad to have come out here and, whilst it takes a little bit longer than usual, you are able to go back to sleep.",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You gently move the bushes, only to see a familiar face. It's one of your Clanmates, who seemed to have come out on a walk as well. You two chat a little bit, and they seem to understand you a little better. You're glad to have come out here and, whilst it takes a little bit longer than usual, you are able to go back to sleep."
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You yowl in surprise as a cat from one of the neighboring Clans lunges out at you. They hiss at you, and you realize you accidentally had crossed the border. Luckily, they agree not to tell their or your Clan about this, but you're left wishing you'd never left at all.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You yowl in surprise as a cat from one of the neighboring Clans lunges out at you. They hiss at you, and you realize you accidentally had crossed the border. Luckily, they agree not to tell their or your Clan about this, but you're left wishing you'd never left at all."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "lg_elder_og9",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "lg_elder_og9",
         "types": [
             "lifegen"
         ],
-        "tags": [],
-        "patrol_art": "lg_elder_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
         "frequency": 4,
-        "intro_text": "You've noticed how bored the apprentices have become with their exhausting routines, and you have a plan to entertain them - or at least keep them occupied.",
-        "decline_text": "You decide that the apprentices should entertain themselves for once. It's not your problem.",
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                2
+            ]
+        },
         "chance_of_success": 50,
+        "patrol_art": "lg_elder_default",
+        "intro_strings": [
+            "You've noticed how bored the apprentices have become with their exhausting routines, and you have a plan to entertain them - or at least keep them occupied."
+        ],
+        "decline_strings": [
+            "You decide that the apprentices should entertain themselves for once. It's not your problem."
+        ],
         "success_outcomes": [
             {
-                "text": "You and the medicine cat devise a traveling-herb class for the apprentices, laying different clusters of herbs out in a clearing and showing all the apprentices to teach them about the plants. At the end of the meeting, you split the apprentices into teams and quiz them all on uses for the herbs. Not only do they have an unforgettable time playing and learning what traveling herbs serve what purposes, but Team Squirrel also gets bragging rights at the next Gathering!",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You and the medicine cat devise a traveling-herb class for the apprentices, laying different clusters of herbs out in a clearing and showing all the apprentices to teach them about the plants. At the end of the meeting, you split the apprentices into teams and quiz them all on uses for the herbs. Not only do they have an unforgettable time playing and learning what traveling herbs serve what purposes, but Team Squirrel also gets bragging rights at the next Gathering!"
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You meticulously scheme all day and all night with your endless pool of free time, so much so that the idea turns more into a daydream than something actually achievable. When you pitch your idea to the deputy, they shake their head and tell you it's too ambitious. Indeed, none of the apprentices seem interested in the elaborate game you spent all that time preparing.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You meticulously scheme all day and all night with your endless pool of free time, so much so that the idea turns more into a daydream than something actually achievable. When you pitch your idea to the deputy, they shake their head and tell you it's too ambitious. Indeed, none of the apprentices seem interested in the elaborate game you spent all that time preparing."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "lg_elder_shunned_J1",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "lg_elder_shunned_J1",
         "types": [
             "lifegen"
         ],
+        "frequency": 4,
         "tags": [
             "shunned"
         ],
-        "patrol_art": "lg_elder_default",
-        "min_cats": 1,
-        "max_cats": 2,
-        "min_max_status": {},
-        "frequency": 4,
-        "intro_text": "A kit runs up to you and asks you to tell them a story. You'd love to-- it's been a while-- but will the queens be upset?",
-        "decline_text": "You turn the kit away, knowing that the rest of the Clan won't want to see you influencing the youth.",
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                2
+            ]
+        },
         "chance_of_success": 50,
+        "patrol_art": "lg_elder_default",
+        "intro_strings": [
+            "A kit runs up to you and asks you to tell them a story. You'd love to-- it's been a while-- but will the queens be upset?"
+        ],
+        "decline_strings": [
+            "You turn the kit away, knowing that the rest of the Clan won't want to see you influencing the youth."
+        ],
         "success_outcomes": [
             {
-                "text": "You accept and tell the kit a story, keeping your voice low. When you're done, they request another, and by the time you've finished the second story, the kit has fallen asleep. You manage to pick them up and leave them in the nursery without anyone spotting you.",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You accept and tell the kit a story, keeping your voice low. When you're done, they request another, and by the time you've finished the second story, the kit has fallen asleep. You manage to pick them up and leave them in the nursery without anyone spotting you."
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You accept and begin telling a story to the kit, but partway through, a queen notices you and grabs them, hissing what a horrible influence you are.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You accept and begin telling a story to the kit, but partway through, a queen notices you and grabs them, hissing what a horrible influence you are."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "life_elder_R1",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "life_elder_R1",
         "types": [
             "lifegen"
         ],
-        "tags": [],
+        "frequency": 4,
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                1
+            ]
+        },
+        "chance_of_success": 50,
         "patrol_art": "life_elder_R1",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
-        "frequency": 4,
-        "intro_text": "You see an old friend in the distance. They are hazy, their pelt interlaced with stars, smiling warmly in the prime of their life...",
-        "decline_text": "You squint and they are gone. Oh well, you must have been seeing things.",
-        "chance_of_success": 50,
+        "intro_strings": [
+            "You see an old friend in the distance. They are hazy, their pelt interlaced with stars, smiling warmly in the prime of their life..."
+        ],
+        "decline_strings": [
+            "You squint and they are gone. Oh well, you must have been seeing things."
+        ],
         "success_outcomes": [
             {
-                "text": "You can hear their greeting like it was yesterday, and they look better than you remember. Their presence warms your aching bones. Before long though, they are gone, but you bask in the knowledge that you will see them soon in the stars.",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You can hear their greeting like it was yesterday, and they look better than you remember. Their presence warms your aching bones. Before long though, they are gone, but you bask in the knowledge that you will see them soon in the stars."
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "Instead it is one of the warriors, looking a bit concerned. You know your mind is failing you so you reassure them that you mistook them for someone. Perhaps it's time for a nap?",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "Instead it is one of the warriors, looking a bit concerned. You know your mind is failing you so you reassure them that you mistook them for someone. Perhaps it's time for a nap?"
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "life_elder_R2",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "life_elder_R2",
         "types": [
             "lifegen"
         ],
-        "tags": [],
+        "frequency": 4,
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                1
+            ]
+        },
+        "chance_of_success": 50,
         "patrol_art": "lg_elder_default",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
-        "frequency": 4,
-        "intro_text": "Just as you're ready to take an afternoon nap, you're startled awake by an eager kit nudging your side, begging to hear tales of cats from days past.",
-        "decline_text": "You pause, getting choked with emotion as memories of lost Clanmates flood your thoughts. Shaking your head, you decline. Even after many moons, your heart remains too burdened with grief.",
-        "chance_of_success": 50,
+        "intro_strings": [
+            "Just as you're ready to take an afternoon nap, you're startled awake by an eager kit nudging your side, begging to hear tales of cats from days past."
+        ],
+        "decline_strings": [
+            "You pause, getting choked with emotion as memories of lost Clanmates flood your thoughts. Shaking your head, you decline. Even after many moons, your heart remains too burdened with grief."
+        ],
         "success_outcomes": [
             {
-                "text": "With a chuckle, you invite the kit in, enfolding them in your tail. You start to weave tales of your adventures with old friends, each more thrilling than the last. The kit is entranced, gripping your fur in wonder. You can't help but feel a surge of pride at getting the chance to honor your fallen Clanmates.",
-                "exp": 10,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "With a chuckle, you invite the kit in, enfolding them in your tail. You start to weave tales of your adventures with old friends, each more thrilling than the last. The kit is entranced, gripping your fur in wonder. You can't help but feel a surge of pride at getting the chance to honor your fallen Clanmates."
+                ],
+                "exp_gained": 10
             }
         ],
         "fail_outcomes": [
             {
-                "text": "Your enthusiasm to share stories of old friends overtakes you, leading to tangents and ramblings that overwhelm the kit trying to keep up. Eventually, they lose interest and interrupt by announcing their boredom.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "Your enthusiasm to share stories of old friends overtakes you, leading to tangents and ramblings that overwhelm the kit trying to keep up. Eventually, they lose interest and interrupt by announcing their boredom."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "life_sc_sam4",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "life_sc_sam4",
         "types": [
             "lifegen"
         ],
+        "frequency": 4,
         "tags": [
             "sc_lifegen"
         ],
-        "patrol_art": "lg_default_sc",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                1
+            ]
+        },
         "random_cats": {
-            "r_c:0": {
+            "r_c0": {
                 "residence": [
                     "sc"
                 ],
@@ -500,65 +544,78 @@
                 ]
             }
         },
-        "frequency": 4,
-        "intro_text": "You're lounging about StarClan, as you do, and feel a rumble in your stomach. You politely ask r_c:0 to catch you a mouse, but r_c:0 tells you to catch it yourself.",
-        "decline_text": "You reluctantly get up to catch yourself a mouse.",
         "chance_of_success": 50,
+        "patrol_art": "lg_default_sc",
+        "intro_strings": [
+            "You're lounging about StarClan, as you do, and feel a rumble in your stomach. You politely ask r_c0 to catch you a mouse, but r_c0 tells you to catch it yourself."
+        ],
+        "decline_strings": [
+            "You reluctantly get up to catch yourself a mouse."
+        ],
         "success_outcomes": [
             {
-                "text": "You shouldn't have to catch your own prey in StarClan if you didn't catch your own prey when you were alive! r_c:0 eventually realizes your point and apologizes, going to catch you the mouse you asked for.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You shouldn't have to catch your own prey in StarClan if you didn't catch your own prey when you were alive! r_c0 eventually realizes your point and apologizes, going to catch you the mouse you asked for."
+                ],
+                "exp_gained": 0
             },
             {
-                "text": "You shouldn't have to catch your own prey in StarClan if you didn't catch your own prey when you were alive! r_c:0 rolls {PRONOUN/r_c:0/poss} eyes, but reluctantly heads to catch you a mouse.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You shouldn't have to catch your own prey in StarClan if you didn't catch your own prey when you were alive! r_c0 rolls {PRONOUN/r_c0/poss} eyes, but reluctantly heads to catch you a mouse."
+                ],
+                "exp_gained": 0
             },
             {
-                "text": "In response to r_c:0's refusal, you simply pretend that you did not hear {PRONOUN/r_c:0/object}. You defiantly turn your head away and wait for r_c:0 to do what you asked. After a moment of petty silence, {PRONOUN/r_c:0/subject} {VERB/r_c:0/huff/huffs} and {VERB/r_c:0/walk/walks} off to catch you a mouse.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "In response to r_c0's refusal, you simply pretend that you did not hear {PRONOUN/r_c0/object}. You defiantly turn your head away and wait for r_c0 to do what you asked. After a moment of petty silence, {PRONOUN/r_c0/subject} {VERB/r_c0/huff/huffs} and {VERB/r_c0/walk/walks} off to catch you a mouse."
+                ],
+                "exp_gained": 0
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You shouldn't have to catch your own prey in StarClan if you didn't catch your own prey when you were alive! r_c:0 tells you that you're not in c_n anymore, and you catch your own prey in StarClan unless you're a kit. You eventually catch yourself a mouse, but it leaves a bitter taste in your mouth.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "You shouldn't have to catch your own prey in StarClan if you didn't catch your own prey when you were alive! r_c0 tells you that you're not in c_n anymore, and you catch your own prey in StarClan unless you're a kit. You eventually catch yourself a mouse, but it leaves a bitter taste in your mouth."
+                ],
+                "exp_gained": 0
             },
             {
-                "text": "With a grumble that you make sure is loud enough for r_c:0 to hear, you stand up and wander off to catch yourself a mouse. However, you appear to be a bit rusty, as even in the endless prey-laden forests of StarClan, you can't seem to find anything! When you return to camp, dejected, r_c:0 is waiting for you with a mouse, looking amused at your failure. Hmph.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "With a grumble that you make sure is loud enough for r_c0 to hear, you stand up and wander off to catch yourself a mouse. However, you appear to be a bit rusty, as even in the endless prey-laden forests of StarClan, you can't seem to find anything! When you return to camp, dejected, r_c0 is waiting for you with a mouse, looking amused at your failure. Hmph."
+                ],
+                "exp_gained": 0
             },
             {
-                "text": "Well, if r_c:0 won't catch you a mouse, you'll just starve! You defiantly huff and stay lounging on the fluffed clouds, expecting r_c:0 to care at the very least. However, {PRONOUN/r_c:0/subject} {VERB/r_c:0/stand/stands} {PRONOUN/r_c:0/poss} ground and politely tells you again that if you wish for a mouse, you must get it yourself.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "Well, if r_c0 won't catch you a mouse, you'll just starve! You defiantly huff and stay lounging on the fluffed clouds, expecting r_c0 to care at the very least. However, {PRONOUN/r_c0/subject} {VERB/r_c0/stand/stands} {PRONOUN/r_c0/poss} ground and politely tells you again that if you wish for a mouse, you must get it yourself."
+                ],
+                "exp_gained": 0
             }
         ]
     },
     {
-        "patrol_id": "life_df_elder_rad1",
-        "biome": [
-            "any"
-        ],
-        "season": [
-            "any"
-        ],
+        "event_id": "life_df_elder_rad1",
         "types": [
             "lifegen"
         ],
+        "frequency": 4,
         "tags": [
             "df_lifegen"
         ],
-        "patrol_art": "lg_default_df",
-        "min_cats": 1,
-        "max_cats": 1,
-        "min_max_status": {},
+        "required_cat_types": {
+            "patrol_cats": [
+                1,
+                1
+            ]
+        },
         "random_cats": {
-            "r_c:0": {
+            "r_c0": {
                 "residence": [
                     "df"
                 ],
@@ -567,49 +624,51 @@
                 ]
             }
         },
-        "frequency": 4,
-        "intro_text": "The Dark Forest isn't the most hospitable place for retired cats, and you're trying to find a dry place to rest. Suddenly, a cat barrels into you, claws and teeth out. Your search must have made you seem distracted - in other words, an easy target.",
-        "decline_text": "Annoyed, you wriggle out from the other cat's grasp and hiss at them to respect their elders. Before they have a chance to react, you slip into the darkness.",
         "chance_of_success": 50,
+        "patrol_art": "lg_default_df",
+        "intro_strings": [
+            "The Dark Forest isn't the most hospitable place for retired cats, and you're trying to find a dry place to rest. Suddenly, a cat barrels into you, claws and teeth out. Your search must have made you seem distracted - in other words, an easy target."
+        ],
+        "decline_strings": [
+            "Annoyed, you wriggle out from the other cat's grasp and hiss at them to respect their elders. Before they have a chance to react, you slip into the darkness."
+        ],
         "success_outcomes": [
             {
-                "text": "Irritated, you hiss at your attacker that they must be particularly weak to target an elder. To your surprise, r_c:0 agrees as {PRONOUN/r_c:0/subject} {VERB/r_c:0/emerge/emerges} from the gloom. Apparently r_c:0 had directed their trainee - the cat who ambushed you - to track down and attack another cat in the Dark Forest as an assessment of sorts. If {PRONOUN/r_c:0/poss} trainee is resorting to attacking elders, though... r_c:0 sighs and apologizes, leading {PRONOUN/r_c:0/poss} trainee away as {PRONOUN/r_c:0/subject} coldly {VERB/r_c:0/suggest/suggests} that maybe they go back to basics.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "Irritated, you hiss at your attacker that they must be particularly weak to target an elder. To your surprise, r_c0 agrees as {PRONOUN/r_c0/subject} {VERB/r_c0/emerge/emerges} from the gloom. Apparently r_c0 had directed their trainee - the cat who ambushed you - to track down and attack another cat in the Dark Forest as an assessment of sorts. If {PRONOUN/r_c0/poss} trainee is resorting to attacking elders, though... r_c0 sighs and apologizes, leading {PRONOUN/r_c0/poss} trainee away as {PRONOUN/r_c0/subject} coldly {VERB/r_c0/suggest/suggests} that maybe they go back to basics."
+                ],
+                "exp_gained": 0
             },
             {
-                "text": "Thinking quickly, you take a deep breath, roll into a patch of muck, and allow yourself to sink. With a gasp, your attacker leaps away to avoid going down with you, and presumably darts off. Relieved to have avoided a battle, you swim to the surface and haul yourself out of the muck - though you can't help but find some irony in the fact that your search for a dry resting place has left your pelt sodden with dark water and muck.",
-                "exp": 0,
                 "frequency": 4,
-                "stat_skill": [
-                    "SWIMMER,1"
+                "strings": [
+                    "Thinking quickly, you take a deep breath, roll into a patch of muck, and allow yourself to sink. With a gasp, your attacker leaps away to avoid going down with you, and presumably darts off. Relieved to have avoided a battle, you swim to the surface and haul yourself out of the muck - though you can't help but find some irony in the fact that your search for a dry resting place has left your pelt sodden with dark water and muck."
                 ],
-                "can_have_stat": [
-                    "p_l"
-                ]
+                "exp_gained": 0
             },
             {
-                "text": "Maybe some <i>other</i> elder would consider this a problem, but whoever ambushed you must be mouse-brained! Your fighting skills are just as sharp as they were in your younger years, and you manage to win the fight despite having been caught by surprise. You lift your head smugly as your opponent flees into the murky mist. Hopefully they've learned not to assume all elders are easy targets... and if they haven't, you're <i>more</i> than happy to review that lesson with them again.",
-                "exp": 0,
                 "frequency": 4,
-                "stat_skill": [
-                    "FIGHTER,1"
+                "strings": [
+                    "Maybe some <i>other</i> elder would consider this a problem, but whoever ambushed you must be mouse-brained! Your fighting skills are just as sharp as they were in your younger years, and you manage to win the fight despite having been caught by surprise. You lift your head smugly as your opponent flees into the murky mist. Hopefully they've learned not to assume all elders are easy targets... and if they haven't, you're <i>more</i> than happy to review that lesson with them again."
                 ],
-                "can_have_stat": [
-                    "p_l"
-                ]
+                "exp_gained": 0
             }
         ],
         "fail_outcomes": [
             {
-                "text": "Age hasn't dulled your fighting skill, but you can't say the same for your reflexes or agility. Despite successfully fending off your opponent, the mix of physical injuries and overexertion leaves your entire body aching. Who decided that Dark Forest cats still get to feel pain during death?",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "Age hasn't dulled your fighting skill, but you can't say the same for your reflexes or agility. Despite successfully fending off your opponent, the mix of physical injuries and overexertion leaves your entire body aching. Who decided that Dark Forest cats still get to feel pain during death?"
+                ],
+                "exp_gained": 0
             },
             {
-                "text": "Your first idea - playing dead to get out of the fight - might have worked better if you weren't already dead. It doesn't trick your attacker in the slightest, and they take the opportunity to land several sharp blows on you before you turn to fight back. By the time the fight is over, you've taken quite a few claw-wounds to the pelt.",
-                "exp": 0,
-                "frequency": 4
+                "frequency": 4,
+                "strings": [
+                    "Your first idea - playing dead to get out of the fight - might have worked better if you weren't already dead. It doesn't trick your attacker in the slightest, and they take the opportunity to land several sharp blows on you before you turn to fight back. By the time the fight is over, you've taken quite a few claw-wounds to the pelt."
+                ],
+                "exp_gained": 0
             }
         ]
     }
