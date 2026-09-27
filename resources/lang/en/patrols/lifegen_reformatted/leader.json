@@ -153,8 +153,7 @@
                 "rank": [
                     "warrior"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "life_lead_og4",
@@ -212,9 +211,7 @@
                 "rank": [
                     "deputy"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {}
+            }
         },
         "chance_of_success": 70,
         "patrol_art": "lg_leader_default",
@@ -319,8 +316,7 @@
                     "medicine cat",
                     "medicine cat apprentice"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 70,
         "patrol_art": "lg_leader_default",
@@ -413,8 +409,7 @@
                 "rank": [
                     "queen"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 70,
         "patrol_art": "lg_leader_default",
@@ -493,9 +488,7 @@
                 "rank": [
                     "warrior"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {}
+            }
         },
         "chance_of_success": 65,
         "patrol_art": "lg_leader_default",
@@ -561,8 +554,7 @@
                     "warrior",
                     "deputy"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 70,
         "patrol_art": "life_lead_R2",
@@ -642,10 +634,7 @@
                     "mediator",
                     "mediator apprentice"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {},
-            "r_c2": {}
+            }
         },
         "chance_of_success": 70,
         "patrol_art": "life_lead_R3",
@@ -708,8 +697,7 @@
                 "rank": [
                     "kitten"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "lg_default_sc",
@@ -717,7 +705,7 @@
             "While doing a check-up on c_n, you notice r_c0 is sitting a ways away from the others. While floating closer, your eyes meet, and a moment of silence falls over the two of you as the shock of being seen by the living settles in your heart."
         ],
         "decline_strings": [
-            "You're not ready to be seen by any alive cat, and decide to cut your check-up short and leave p_l:0 to {PRONOUN/p_l:0/poss} own devices."
+            "You're not ready to be seen by any alive cat, and decide to cut your check-up short and leave r_c0 to {PRONOUN/r_c0/poss} own devices."
         ],
         "success_outcomes": [
             {
@@ -895,8 +883,7 @@
                 "rank": [
                     "kitten"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "leaderwithkits_H1",

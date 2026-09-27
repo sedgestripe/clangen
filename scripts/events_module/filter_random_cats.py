@@ -278,7 +278,7 @@ def __filter_rank(abbrev_block, cat):
     elif "df_trainee" in abbrev_block["rank"]:
         if not cat.joined_df:
             return False
-    elif "not_df_trainee" in abbrev_block["rank"]:
+    elif "-df_trainee" in abbrev_block["rank"]:
         if cat.joined_df:
             return False
     elif "guide" in abbrev_block["rank"]:

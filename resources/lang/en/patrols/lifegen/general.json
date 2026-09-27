@@ -1543,8 +1543,8 @@
         "season": [
             "any"
         ],
-        "types": [
-            "lifegen"
+        "tags": [
+            "ur_lifegen"
         ],
         "tags": [],
         "patrol_art": "lg_default_ur",
@@ -1552,9 +1552,9 @@
         "max_cats": 1,
         "min_max_status": {},
         "random_cats": {
-            "y_c": {
-                "group": [
-                    "unknown_residence"
+            "p_l": {
+                "residence": [
+                    "ur"
                 ]
             }
         },

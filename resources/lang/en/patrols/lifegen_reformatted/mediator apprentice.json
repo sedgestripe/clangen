@@ -476,8 +476,6 @@
                     "leader"
                 ]
             },
-            "r_c1": {},
-            "r_c0": {},
             "r_c1": {}
         },
         "relationships": [
@@ -486,7 +484,7 @@
                     "r_c1"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -599,6 +597,9 @@
     },
     {
         "event_id": "life_sc_sam2",
+        "types": [
+            "lifegen"
+        ],
         "frequency": 4,
         "tags": [
             "sc_lifegen"

@@ -31,7 +31,7 @@
         }
     },
     {
-        "id": "dead_app_to_dead_other_app",
+        "event_id": "dead_app_to_dead_other_app",
         "strings": [
             "Wants to show r_c a new technique {PRONOUN/m_c/subject} {VERB/m_c/have/has} learned",
             "Was dared by r_c to venture near the Dark Forest but was too timid to even step a paw in the grass",

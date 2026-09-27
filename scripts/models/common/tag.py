@@ -22,6 +22,13 @@ class TagEnum(Enum):
     new_years = "new_years"
     disaster = "disaster"
 
+    # lg patrol stuff
+    shunned = "shunned"
+    df_lifegen = "df_lifegen"
+    ur_lifegen = "ur_lifegen"
+    sc_lifegen = "sc_lifegen"
+    mc_death = "mc_death"
+
 
 class Tag(RootModel):
     root: Union[

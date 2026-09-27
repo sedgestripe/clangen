@@ -12,8 +12,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
-            "r_c0": {},
+            "p_l": {},
             "r_c0": {}
         },
         "relationships": [
@@ -22,7 +21,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -55,7 +54,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You're y_c - you never give less than your absolute best! r_c0 is found again and again and again... Until {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} more worn out than you. Your head is held high on the way back to camp. You can't wait to tell your denmates all about your skills again!"
+                    "You're p_l - you never give less than your absolute best! r_c0 is found again and again and again... Until {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} more worn out than you. Your head is held high on the way back to camp. You can't wait to tell your denmates all about your skills again!"
                 ],
                 "exp_gained": 10
             },
@@ -104,7 +103,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "deputy"
@@ -120,8 +119,7 @@
                     "warrior"
                 ]
             },
-            "r_c3": {},
-            "r_c0": {}
+            "r_c3": {}
         },
         "relationships": [
             {
@@ -129,7 +127,7 @@
                     "r_c3"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -204,13 +202,12 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "elder"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 70,
         "patrol_art": "app_default",
@@ -280,7 +277,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {}
         },
         "relationships": [
@@ -289,7 +286,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -364,7 +361,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {}
         },
         "relationships": [
@@ -373,7 +370,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -455,8 +452,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
-            "r_c0": {},
+            "p_l": {},
             "r_c0": {}
         },
         "relationships": [
@@ -465,7 +461,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -506,7 +502,7 @@
                 "condition": [
                     {
                         "cats": [
-                            "y_c"
+                            "p_l"
                         ],
                         "condition": [
                             "bruises"
@@ -536,7 +532,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
@@ -552,11 +548,7 @@
                 "rank": [
                     "leader"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {},
-            "r_c2": {},
-            "r_c3": {}
+            }
         },
         "relationships": [
             {
@@ -564,7 +556,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -597,7 +589,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "Of course r_c3 has faith in you, you're y_c! You're not about to let o_c_n get the better of you either. Before r_c0 can stop you, you've charged ahead and catch two apprentices in the act. r_c1 is at your side and you send the interlopers packing with a good scratch to remember you by!"
+                    "Of course r_c3 has faith in you, you're p_l! You're not about to let o_c_n get the better of you either. Before r_c0 can stop you, you've charged ahead and catch two apprentices in the act. r_c1 is at your side and you send the interlopers packing with a good scratch to remember you by!"
                 ],
                 "exp_gained": 10
             },
@@ -626,7 +618,7 @@
                 "condition": [
                     {
                         "cats": [
-                            "y_c"
+                            "p_l"
                         ],
                         "condition": [
                             "minor_injury"
@@ -643,7 +635,7 @@
                 "condition": [
                     {
                         "cats": [
-                            "y_c"
+                            "p_l"
                         ],
                         "condition": [
                             "minor_injury"
@@ -666,14 +658,13 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
                     "leader"
                 ]
-            },
-            "r_c1": {}
+            }
         },
         "relationships": [
             {
@@ -681,7 +672,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -735,7 +726,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {}
         },
         "relationships": [
@@ -744,7 +735,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -798,7 +789,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
@@ -812,7 +803,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -866,7 +857,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "warrior"
@@ -876,9 +867,7 @@
                 "rank": [
                     "warrior"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {}
+            }
         },
         "chance_of_success": 70,
         "patrol_art": "lifegen_app11",
@@ -920,13 +909,12 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "apprentice"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 55,
         "patrol_art": "app_default",
@@ -968,13 +956,12 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "queen"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 65,
         "patrol_art": "lg_app13",
@@ -982,7 +969,7 @@
             "r_c0 emerges from the nursery to ask you to watch over the kits while {PRONOUN/r_c0/subject} {VERB/r_c0/fetch/fetches} fresh moss for nests tonight. It's a chance to show your nurturing side."
         ],
         "decline_strings": [
-            "You politely decline p_l:0's request, as you feel unprepared for the task."
+            "You politely decline r_c0's request, as you feel unprepared for the task."
         ],
         "success_outcomes": [
             {
@@ -1030,13 +1017,12 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "warrior"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 65,
         "patrol_art": "app_default",
@@ -1085,13 +1071,12 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "apprentice"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 60,
         "patrol_art": "lg_app15",
@@ -1147,7 +1132,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "apprentice"
@@ -1159,8 +1144,7 @@
                     "medicine cat",
                     "medicine cat apprentice"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "relationships": [
             {
@@ -1168,7 +1152,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "non-related"
@@ -1179,7 +1163,7 @@
                     "r_c1"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -1261,13 +1245,12 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "apprentice"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "relationships": [
             {
@@ -1275,7 +1258,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "non-related"
@@ -1322,13 +1305,12 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "apprentice"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 60,
         "patrol_art": "app_default",
@@ -1398,13 +1380,12 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "apprentice"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "lg_app19",
@@ -1474,15 +1455,13 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
                     "elder"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {}
+            }
         },
         "relationships": [
             {
@@ -1490,7 +1469,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -1551,15 +1530,13 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
                     "warrior"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {}
+            }
         },
         "relationships": [
             {
@@ -1567,7 +1544,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -1614,8 +1591,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
-            "r_c0": {},
+            "p_l": {},
             "r_c0": {}
         },
         "relationships": [
@@ -1624,7 +1600,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -1671,8 +1647,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
-            "r_c0": {},
+            "p_l": {},
             "r_c0": {}
         },
         "relationships": [
@@ -1681,7 +1656,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -1728,7 +1703,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
@@ -1741,10 +1716,7 @@
                     "warrior",
                     "apprentice"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {},
-            "r_c2": {}
+            }
         },
         "relationships": [
             {
@@ -1752,7 +1724,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -1799,7 +1771,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
@@ -1812,10 +1784,7 @@
                     "warrior",
                     "apprentice"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {},
-            "r_c2": {}
+            }
         },
         "relationships": [
             {
@@ -1823,7 +1792,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -1870,8 +1839,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
-            "r_c0": {},
+            "p_l": {},
             "r_c0": {}
         },
         "relationships": [
@@ -1880,7 +1848,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -1927,7 +1895,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
@@ -1935,9 +1903,7 @@
                     "warrior",
                     "deputy"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {}
+            }
         },
         "relationships": [
             {
@@ -1945,7 +1911,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -1992,7 +1958,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
@@ -2008,7 +1974,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -2055,14 +2021,13 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "medicine cat",
                     "medicine cat apprentice"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 40,
         "patrol_art": "lifegen_app29",
@@ -2104,14 +2069,13 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
                     "elder"
                 ]
-            },
-            "r_c1": {}
+            }
         },
         "relationships": [
             {
@@ -2119,7 +2083,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -2153,7 +2117,7 @@
                 "condition": [
                     {
                         "cats": [
-                            "y_c"
+                            "p_l"
                         ],
                         "condition": [
                             "fleas"
@@ -2176,16 +2140,14 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {},
             "r_c1": {
                 "rank": [
                     "medicine cat",
                     "medicine cat apprentice"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {}
+            }
         },
         "relationships": [
             {
@@ -2193,7 +2155,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -2240,7 +2202,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {
+            "p_l": {
                 "trait": [
                     "bloodthirsty"
                 ]
@@ -2250,9 +2212,7 @@
                 "rank": [
                     "deputy"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {}
+            }
         },
         "relationships": [
             {
@@ -2260,7 +2220,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -2285,7 +2245,7 @@
                 "condition": [
                     {
                         "cats": [
-                            "y_c"
+                            "p_l"
                         ],
                         "condition": [
                             "scrapes"
@@ -2304,7 +2264,7 @@
                 "condition": [
                     {
                         "cats": [
-                            "y_c"
+                            "p_l"
                         ],
                         "condition": [
                             "small_bite_injury"
@@ -2505,8 +2465,7 @@
                 "rank": [
                     "leader"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "relationships": [
             {
@@ -2514,7 +2473,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -2604,8 +2563,7 @@
                 "rank": [
                     "deputy"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 30,
         "patrol_art": "shunned_gen",

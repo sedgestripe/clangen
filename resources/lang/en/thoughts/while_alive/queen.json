@@ -1,6 +1,6 @@
 [
     {
-        "id": "gen_queen",
+        "event_id": "gen_queen",
         "strings": [
             "Is soaking up knowledge about nurturing kits",
             "Is discovering the balance between discipline and care in the nursery",
@@ -29,7 +29,7 @@
         ]
     },
     {
-        "id": "flamboyant_queen",
+        "event_id": "flamboyant_queen",
         "strings": [
             "Leads the kits in an exciting new adventure game",
             "Boasts that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s'} the kits favorite game creator",

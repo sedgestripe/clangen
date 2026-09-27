@@ -639,19 +639,24 @@
             "df"
         ],
         "frequency": 4,
-        "tags": [
-            "fellowtrainee"
-        ],
+        "tags": [],
         "required_cat_types": {
             "patrol_cats": [
                 2,
                 2
             ]
         },
+        "random_cats": {
+            "r_c0": {
+                "rank": [
+                    "df_trainee"
+                ]
+            }
+        },
         "chance_of_success": 60,
         "patrol_art": "df_friendly",
         "intro_strings": [
-            "Soon after you fall asleep, you wake up in the Dark Forest. r_c bounds out of the gloom, asking if you would like to train with {PRONOUN/r_c/object}."
+            "Soon after you fall asleep, you wake up in the Dark Forest. r_c0 bounds out of the gloom, asking if you would like to train with {PRONOUN/r_c0/object}."
         ],
         "decline_strings": [
             "You politely decline and wander off to train on your own."
@@ -660,7 +665,7 @@
             {
                 "frequency": 2,
                 "strings": [
-                    "You and r_c make good progress on some advanced battle moves."
+                    "You and r_c0 make good progress on some advanced battle moves."
                 ],
                 "exp_gained": 15,
                 "relationship_changes": [
@@ -684,7 +689,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You and r_c make good progress on some advanced battle moves. You take the time to teach them a few new ones as well, and r_c is thrilled to learn from you."
+                    "You and r_c0 make good progress on some advanced battle moves. You take the time to teach them a few new ones as well, and r_c0 is thrilled to learn from you."
                 ],
                 "exp_gained": 30,
                 "relationship_changes": [
@@ -708,7 +713,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You and r_c make good progress on some advanced battle moves. Surprisingly, your mentors congratulate you both for your efforts. Rare praise has confidence surging within you and your Clanmate."
+                    "You and r_c0 make good progress on some advanced battle moves. Surprisingly, your mentors congratulate you both for your efforts. Rare praise has confidence surging within you and your Clanmate."
                 ],
                 "exp_gained": 30,
                 "relationship_changes": [
@@ -734,7 +739,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "The training session doesn't go as planned, as a Dark Forest warrior interrupts and demands that you spar with your claws unsheathed. You and r_c hesitantly agree and both of you wake up with several scratches."
+                    "The training session doesn't go as planned, as a Dark Forest warrior interrupts and demands that you spar with your claws unsheathed. You and r_c0 hesitantly agree and both of you wake up with several scratches."
                 ],
                 "exp_gained": 0,
                 "condition": [
@@ -755,7 +760,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You make good progress on some advanced battle moves, but r_c is looking worse for wear. The next morning, r_c refuses to train with you, leaving your Clanmates concerned."
+                    "You make good progress on some advanced battle moves, but r_c0 is looking worse for wear. The next morning, r_c0 refuses to train with you, leaving your Clanmates concerned."
                 ],
                 "exp_gained": 10,
                 "relationship_changes": [
@@ -778,7 +783,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You make good progress on some advanced battle moves, but r_c is looking worse for wear. {PRONOUN/r_c/poss/CAP} mentor snarls at {PRONOUN/r_c/object} that {PRONOUN/r_c/subject} should work as hard as you. Jealousy glints in r_c's eyes as {PRONOUN/r_c/subject} {VERB/r_c/face/faces} you in daylight the next morning."
+                    "You make good progress on some advanced battle moves, but r_c0 is looking worse for wear. {PRONOUN/r_c0/poss/CAP} mentor snarls at {PRONOUN/r_c0/object} that {PRONOUN/r_c0/subject} should work as hard as you. Jealousy glints in r_c0's eyes as {PRONOUN/r_c0/subject} {VERB/r_c0/face/faces} you in daylight the next morning."
                 ],
                 "exp_gained": 10,
                 "relationship_changes": [
@@ -816,16 +821,16 @@
         "chance_of_success": 90,
         "patrol_art": "df_friendly",
         "intro_strings": [
-            "As you go for a stroll around the Dark Forest, just enjoying the gloomy forest before training begins, you stumble upon a confused r_c. {PRONOUN/r_c/subject/CAP} {VERB/r_c/look/looks} up at you, panicked, as {PRONOUN/r_c/subject} {VERB/r_c/ask/asks} where {PRONOUN/r_c/subject} {VERB/r_c/are/is}."
+            "As you go for a stroll around the Dark Forest, just enjoying the gloomy forest before training begins, you stumble upon a confused r_c0. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/look/looks} up at you, panicked, as {PRONOUN/r_c0/subject} {VERB/r_c0/ask/asks} where {PRONOUN/r_c0/subject} {VERB/r_c0/are/is}."
         ],
         "decline_strings": [
-            "Meh. Not your business. You walk away, leaving {PRONOUN/r_c/object} startled, confused and sputtering out your name."
+            "Meh. Not your business. You walk away, leaving {PRONOUN/r_c0/object} startled, confused and sputtering out your name."
         ],
         "success_outcomes": [
             {
                 "frequency": 3,
                 "strings": [
-                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c/object} to the training area, if {PRONOUN/r_c/subject}'d like to join you. r_c agrees hesitantly, following your lead."
+                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c0/object} to the training area, if {PRONOUN/r_c0/subject}'d like to join you. r_c0 agrees hesitantly, following your lead."
                 ],
                 "exp_gained": 10,
                 "relationship_changes": [
@@ -849,7 +854,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c/object} to the training area if {PRONOUN/r_c/subject}'d like to join you. r_c trusts you, so {PRONOUN/r_c/subject} eagerly {VERB/r_c/follow/follows} your lead."
+                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c0/object} to the training area if {PRONOUN/r_c0/subject}'d like to join you. r_c0 trusts you, so {PRONOUN/r_c0/subject} eagerly {VERB/r_c0/follow/follows} your lead."
                 ],
                 "exp_gained": 25,
                 "relationship_changes": [
@@ -873,7 +878,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c/object} to the training area, if {PRONOUN/r_c/subject}'d like to join you. r_c hesitates before shaking {PRONOUN/r_c/poss} head in refusal. {PRONOUN/r_c/poss/CAP} loss, you suppose. You let {PRONOUN/r_c/object} find {PRONOUN/r_c/poss} own way out as you proceed to the training grounds."
+                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c0/object} to the training area, if {PRONOUN/r_c0/subject}'d like to join you. r_c0 hesitates before shaking {PRONOUN/r_c0/poss} head in refusal. {PRONOUN/r_c0/poss/CAP} loss, you suppose. You let {PRONOUN/r_c0/object} find {PRONOUN/r_c0/poss} own way out as you proceed to the training grounds."
                 ],
                 "exp_gained": 10,
                 "relationship_changes": [
@@ -898,7 +903,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c/object} to the training area, if {PRONOUN/r_c/subject} {VERB/r_c/wish/wishes} to join you. {PRONOUN/r_c/poss/CAP} eyes are wide with horror as {PRONOUN/r_c/subject} {VERB/r_c/scream/screams} out a loud 'no'. r_c calls you a traitor, swinging {PRONOUN/r_c/poss} claws at you, though missing, as you gracefully dodge {PRONOUN/r_c/poss} attack. Sobbing, {PRONOUN/r_c/subject} {VERB/r_c/run/runs} away, deeper into the forest as you can only watch with pity. Your Dark Forest mentor will have a field day with {PRONOUN/r_c/object}, that's for sure."
+                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c0/object} to the training area, if {PRONOUN/r_c0/subject} {VERB/r_c0/wish/wishes} to join you. {PRONOUN/r_c0/poss/CAP} eyes are wide with horror as {PRONOUN/r_c0/subject} {VERB/r_c0/scream/screams} out a loud 'no'. r_c0 calls you a traitor, swinging {PRONOUN/r_c0/poss} claws at you, though missing, as you gracefully dodge {PRONOUN/r_c0/poss} attack. Sobbing, {PRONOUN/r_c0/subject} {VERB/r_c0/run/runs} away, deeper into the forest as you can only watch with pity. Your Dark Forest mentor will have a field day with {PRONOUN/r_c0/object}, that's for sure."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -921,7 +926,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c/object} to the training area, if {PRONOUN/r_c/subject} {VERB/r_c/wish/wishes} to join you. r_c is startled before anger bubbles up in {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} {VERB/r_c/call/calls} you a traitor, swinging {PRONOUN/r_c/poss} claws at you to rip your pelt. Snarling, {PRONOUN/r_c/subject} {VERB/r_c/run/runs} away, deeper into the forest as you can only watch with pity. Your Dark Forest mentor will have a field day with {PRONOUN/r_c/object}, that's for sure."
+                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c0/object} to the training area, if {PRONOUN/r_c0/subject} {VERB/r_c0/wish/wishes} to join you. r_c0 is startled before anger bubbles up in {PRONOUN/r_c0/object}. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/call/calls} you a traitor, swinging {PRONOUN/r_c0/poss} claws at you to rip your pelt. Snarling, {PRONOUN/r_c0/subject} {VERB/r_c0/run/runs} away, deeper into the forest as you can only watch with pity. Your Dark Forest mentor will have a field day with {PRONOUN/r_c0/object}, that's for sure."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -957,15 +962,15 @@
             {
                 "frequency": 2,
                 "strings": [
-                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c/object} to the training area, if {PRONOUN/r_c/subject} {VERB/r_c/wish/wishes} to join you. r_c calls you a traitor as {PRONOUN/r_c/subject} {VERB/r_c/refuse/refuses}, swinging {PRONOUN/r_c/poss} claws at you, though missing, as you gracefully dodge {PRONOUN/r_c/poss} attack. You can't let r_c expose your training like this. Your claws open r_c's throat, and you leave {PRONOUN/r_c/object} to fade into the muck. The Clan discovers the horrifying scene in the morning."
+                    "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring {PRONOUN/r_c0/object} to the training area, if {PRONOUN/r_c0/subject} {VERB/r_c0/wish/wishes} to join you. r_c0 calls you a traitor as {PRONOUN/r_c0/subject} {VERB/r_c0/refuse/refuses}, swinging {PRONOUN/r_c0/poss} claws at you, though missing, as you gracefully dodge {PRONOUN/r_c0/poss} attack. You can't let r_c0 expose your training like this. Your claws open r_c0's throat, and you leave {PRONOUN/r_c0/object} to fade into the muck. The Clan discovers the horrifying scene in the morning."
                 ],
                 "exp_gained": 20,
                 "death": [
                     {
                         "cats": [
-                            "r_c"
+                            "r_c0"
                         ],
-                        "history": "m_c was murdered by r_c in the Dark Forest."
+                        "history": "m_c was murdered by r_c0 in the Dark Forest."
                     }
                 ]
             }
@@ -977,19 +982,24 @@
             "df"
         ],
         "frequency": 4,
-        "tags": [
-            "fellowtrainee"
-        ],
+        "tags": [],
         "required_cat_types": {
             "patrol_cats": [
                 2,
                 2
             ]
         },
+        "random_cats": {
+            "r_c0": {
+                "rank": [
+                    "df_trainee"
+                ]
+            }
+        },
         "chance_of_success": 50,
         "patrol_art": "df_friendly",
         "intro_strings": [
-            "You're wandering beneath the shadowy treetops when... Is that r_c?"
+            "You're wandering beneath the shadowy treetops when... Is that r_c0?"
         ],
         "decline_strings": [
             "You dart out of sight, not wanting to confront the possibility of seeing your Clanmate."
@@ -998,7 +1008,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "It is r_c! {PRONOUN/r_c/subject/CAP} {VERB/r_c/bound/bounds} towards you, purring that {PRONOUN/r_c/subject} didn't know anyone else in c_n who trained in the Dark Forest! The two of you walk side by side, discussing training plans, hopes and dreams, and planning your future together as training partners."
+                    "It is r_c0! {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/bound/bounds} towards you, purring that {PRONOUN/r_c0/subject} didn't know anyone else in c_n who trained in the Dark Forest! The two of you walk side by side, discussing training plans, hopes and dreams, and planning your future together as training partners."
                 ],
                 "exp_gained": 15,
                 "relationship_changes": [
@@ -1023,7 +1033,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "r_c greets you with a respectful nod, and the two of you go your separate ways."
+                    "r_c0 greets you with a respectful nod, and the two of you go your separate ways."
                 ],
                 "exp_gained": 15,
                 "relationship_changes": [
@@ -1048,7 +1058,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You call out to r_c, but as soon as {PRONOUN/r_c/subject} {VERB/r_c/see/sees} you {PRONOUN/r_c/subject} {VERB/r_c/dart/darts} into the brush. When you wake up the next morning, {PRONOUN/r_c/subject} carefully {VERB/r_c/avoid/avoids} eye contact."
+                    "You call out to r_c0, but as soon as {PRONOUN/r_c0/subject} {VERB/r_c0/see/sees} you {PRONOUN/r_c0/subject} {VERB/r_c0/dart/darts} into the brush. When you wake up the next morning, {PRONOUN/r_c0/subject} carefully {VERB/r_c0/avoid/avoids} eye contact."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -1076,14 +1086,19 @@
             "df"
         ],
         "frequency": 4,
-        "tags": [
-            "fellowtrainee"
-        ],
+        "tags": [],
         "required_cat_types": {
             "patrol_cats": [
                 2,
                 2
             ]
+        },
+        "random_cats": {
+            "r_c0": {
+                "rank": [
+                    "df_trainee"
+                ]
+            }
         },
         "chance_of_success": 10,
         "patrol_art": "life_df_og11",
@@ -1097,7 +1112,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You quickly turn around, only to come eyes to eyes with r_c! {PRONOUN/r_c/subject/CAP} {VERB/r_c/don't/doesn't} seem bothered by your presence, bounding over to you with a welcoming sparkle in {PRONOUN/r_c/poss} eyes. {PRONOUN/r_c/subject/CAP} {VERB/r_c/seem/seems}... Happy? {PRONOUN/r_c/subject/CAP} {VERB/r_c/explain/explains} to you that {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} been needing a place to gossip, and when {PRONOUN/r_c/subject} stumbled over the shadows of the Dark Forest, {PRONOUN/r_c/subject} couldn't help {PRONOUN/r_c/self}! Apparently the Clan hasn't been very accepting of {PRONOUN/r_c/poss} rumors... But here you are! When you return home from the ever-lasting darkness, you have more secrets than you can carry."
+                    "You quickly turn around, only to come eyes to eyes with r_c0! {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/don't/doesn't} seem bothered by your presence, bounding over to you with a welcoming sparkle in {PRONOUN/r_c0/poss} eyes. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/seem/seems}... Happy? {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/explain/explains} to you that {PRONOUN/r_c0/subject}{VERB/r_c0/'ve/'s} been needing a place to gossip, and when {PRONOUN/r_c0/subject} stumbled over the shadows of the Dark Forest, {PRONOUN/r_c0/subject} couldn't help {PRONOUN/r_c0/self}! Apparently the Clan hasn't been very accepting of {PRONOUN/r_c0/poss} rumors... But here you are! When you return home from the ever-lasting darkness, you have more secrets than you can carry."
                 ],
                 "exp_gained": 15,
                 "relationship_changes": [
@@ -1120,7 +1135,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You quickly turn around, only to come eyes to eyes with r_c! {PRONOUN/r_c/subject/CAP} {VERB/r_c/don't/doesn't} seem bothered by your presence, bounding over to you with a welcoming sparkle in {PRONOUN/r_c/poss} eyes. {PRONOUN/r_c/subject/CAP} {VERB/r_c/seem/seems}.. Happy? {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} thrilled to know that you train here as well and {VERB/r_c/ask/asks} to spar. You agree, and when you see {PRONOUN/r_c/object} next in camp, it's clear your friendship has grown."
+                    "You quickly turn around, only to come eyes to eyes with r_c0! {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/don't/doesn't} seem bothered by your presence, bounding over to you with a welcoming sparkle in {PRONOUN/r_c0/poss} eyes. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/seem/seems}.. Happy? {PRONOUN/r_c0/subject/CAP}{VERB/r_c0/'re/'s} thrilled to know that you train here as well and {VERB/r_c0/ask/asks} to spar. You agree, and when you see {PRONOUN/r_c0/object} next in camp, it's clear your friendship has grown."
                 ],
                 "exp_gained": 20,
                 "relationship_changes": [
@@ -1146,7 +1161,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. {PRONOUN/r_c/subject/CAP} {VERB/r_c/grab/grabs} your scruff, dragging you out of the mud. You turn to thank {PRONOUN/r_c/object}, and {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} relieved to know you're okay. r_c suggests that's enough for you today and you can't help but to agree as you cough up vile mud."
+                    "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c0. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/grab/grabs} your scruff, dragging you out of the mud. You turn to thank {PRONOUN/r_c0/object}, and {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} relieved to know you're okay. r_c0 suggests that's enough for you today and you can't help but to agree as you cough up vile mud."
                 ],
                 "exp_gained": 30,
                 "relationship_changes": [
@@ -1183,7 +1198,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. {PRONOUN/r_c/subject/CAP} {VERB/r_c/grab/grabs} your scruff, dragging you out of the mud. When you turn to thank {PRONOUN/r_c/object}, {PRONOUN/r_c/poss} eyes are wide with horror as {PRONOUN/r_c/subject} {VERB/r_c/escape/escapes} your gaze, running away with {PRONOUN/r_c/poss} tail between {PRONOUN/r_c/poss} legs and the darkness slowly swallowing {PRONOUN/r_c/object}."
+                    "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c0. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/grab/grabs} your scruff, dragging you out of the mud. When you turn to thank {PRONOUN/r_c0/object}, {PRONOUN/r_c0/poss} eyes are wide with horror as {PRONOUN/r_c0/subject} {VERB/r_c0/escape/escapes} your gaze, running away with {PRONOUN/r_c0/poss} tail between {PRONOUN/r_c0/poss} legs and the darkness slowly swallowing {PRONOUN/r_c0/object}."
                 ],
                 "exp_gained": 0,
                 "condition": [
@@ -1200,7 +1215,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} merely standing there watching as the mud starts to swallow you. Keeping calm, you slowly wade your way out despite swallowing a few mouthfuls of mud, only to see r_c disappearing into the darkness."
+                    "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c0. {PRONOUN/r_c0/subject/CAP}{VERB/r_c0/'re/'s} merely standing there watching as the mud starts to swallow you. Keeping calm, you slowly wade your way out despite swallowing a few mouthfuls of mud, only to see r_c0 disappearing into the darkness."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -1233,7 +1248,7 @@
             {
                 "frequency": 2,
                 "strings": [
-                    "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} merely standing there watching as the mud starts to swallow you. There's nothing you can do as you sink down and see r_c disappearing into the darkness. Mud cakes your pelt when the Clan makes the horrifying discovery in the morning."
+                    "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c0. {PRONOUN/r_c0/subject/CAP}{VERB/r_c0/'re/'s} merely standing there watching as the mud starts to swallow you. There's nothing you can do as you sink down and see r_c0 disappearing into the darkness. Mud cakes your pelt when the Clan makes the horrifying discovery in the morning."
                 ],
                 "exp_gained": 0,
                 "death": [
@@ -1494,19 +1509,24 @@
             "df"
         ],
         "frequency": 4,
-        "tags": [
-            "fellowtrainee"
-        ],
+        "tags": [],
         "required_cat_types": {
             "patrol_cats": [
                 2,
                 3
             ]
         },
+        "random_cats": {
+            "r_c0": {
+                "rank": [
+                    "df_trainee"
+                ]
+            }
+        },
         "chance_of_success": 30,
         "patrol_art": "df_see_clanmate",
         "intro_strings": [
-            "While in a group training session with some Clanmates in the Dark Forest, you notice r_c talking to a ghostly cat across the battleground that you haven't met. You can't help but worry for {PRONOUN/r_c/poss} safety, talking to this unfamiliar cat."
+            "While in a group training session with some Clanmates in the Dark Forest, you notice r_c0 talking to a ghostly cat across the battleground that you haven't met. You can't help but worry for {PRONOUN/r_c0/poss} safety, talking to this unfamiliar cat."
         ],
         "decline_strings": [
             "You shake the feeling of uncertainty and return to training. What your Clanmate gets up to in the Place of No Stars is their business, not yours."
@@ -1515,7 +1535,7 @@
             {
                 "frequency": 2,
                 "strings": [
-                    "Weaving through the group of trainees around you, you approach r_c. {PRONOUN/r_c/subject/CAP} greet you with a smile, and {PRONOUN/r_c/poss} new Dark Forest friend dips {PRONOUN/n_c:0/poss} head and introduces {PRONOUN/n_c:0/self}. Thankfully, it seems that {PRONOUN/n_c:0/subject}{VERB/n_c:0/'re/'s} friendly!"
+                    "Weaving through the group of trainees around you, you approach r_c0. {PRONOUN/r_c0/subject/CAP} greet you with a smile, and {PRONOUN/r_c0/poss} new Dark Forest friend dips {PRONOUN/n_c:0/poss} head and introduces {PRONOUN/n_c:0/self}. Thankfully, it seems that {PRONOUN/n_c:0/subject}{VERB/n_c:0/'re/'s} friendly!"
                 ],
                 "involved_cats": {
                     "n_c0": {
@@ -1535,14 +1555,14 @@
             {
                 "frequency": 1,
                 "strings": [
-                    "You manage to dodge your way around the groups of sparring cats around you, but when r_c comes back into view, {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} touching noses with the Dark Forest cat, their tails entwined. Concerned, but not wanting to be rude, you turn around to leave them be."
+                    "You manage to dodge your way around the groups of sparring cats around you, but when r_c0 comes back into view, {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} touching noses with the Dark Forest cat, their tails entwined. Concerned, but not wanting to be rude, you turn around to leave them be."
                 ],
                 "exp_gained": 20
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "You're able to slip away from your training partner, and when you make your way over to your Clanmate, all you see of {PRONOUN/r_c/poss} friend is their haunches disappearing into the shadows. r_c explains that they don't like new cats."
+                    "You're able to slip away from your training partner, and when you make your way over to your Clanmate, all you see of {PRONOUN/r_c0/poss} friend is their haunches disappearing into the shadows. r_c0 explains that they don't like new cats."
                 ],
                 "exp_gained": 20
             }
@@ -1551,7 +1571,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You step forward to introduce yourself to r_c's new friend, but as you do, a pair of enthusiastically sparring Dark Forest cats launches into you. As you scramble to your paws, the pair hisses at you not to be so stupid, and you're left with a wound from the scuffle."
+                    "You step forward to introduce yourself to r_c0's new friend, but as you do, a pair of enthusiastically sparring Dark Forest cats launches into you. As you scramble to your paws, the pair hisses at you not to be so stupid, and you're left with a wound from the scuffle."
                 ],
                 "exp_gained": 0,
                 "condition": [
@@ -1571,14 +1591,14 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You dodge through the pairs of sparring spirits to get to your Clanmate, but by the time you get to {PRONOUN/r_c/object}, {PRONOUN/r_c/poss} Dark Forest friend has vanished. You must have scared them off with your approach."
+                    "You dodge through the pairs of sparring spirits to get to your Clanmate, but by the time you get to {PRONOUN/r_c0/object}, {PRONOUN/r_c0/poss} Dark Forest friend has vanished. You must have scared them off with your approach."
                 ],
                 "exp_gained": 0
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "You take a step forward to approach your Clanmate, but you feel a swipe at your haunches. Your sparring partner hisses at you to get back to your training. It looks like you won't have any time to go visit r_c. When your sparring session is complete, you can't find {PRONOUN/r_c/object} or {PRONOUN/r_c/poss} new friend anywhere."
+                    "You take a step forward to approach your Clanmate, but you feel a swipe at your haunches. Your sparring partner hisses at you to get back to your training. It looks like you won't have any time to go visit r_c0. When your sparring session is complete, you can't find {PRONOUN/r_c0/object} or {PRONOUN/r_c0/poss} new friend anywhere."
                 ],
                 "exp_gained": 0,
                 "condition": [
@@ -1595,13 +1615,13 @@
             {
                 "frequency": 1,
                 "strings": [
-                    "You slip away from your training partner, and just as you're able to catch another glimpse of r_c, {PRONOUN/r_c/poss} Dark Forest friend tackles {PRONOUN/r_c/object} to the ground. You figure that they're busy in a training session of their own and leave them be. It isn't until tomorrow morning, when you're awoken by a wail of horror, that you realise what you'd witnessed."
+                    "You slip away from your training partner, and just as you're able to catch another glimpse of r_c0, {PRONOUN/r_c0/poss} Dark Forest friend tackles {PRONOUN/r_c0/object} to the ground. You figure that they're busy in a training session of their own and leave them be. It isn't until tomorrow morning, when you're awoken by a wail of horror, that you realise what you'd witnessed."
                 ],
                 "exp_gained": 20,
                 "death": [
                     {
                         "cats": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "history": ""
                     }
@@ -1615,35 +1635,40 @@
             "df"
         ],
         "frequency": 2,
-        "tags": [
-            "fellowtrainee"
-        ],
+        "tags": [],
         "required_cat_types": {
             "patrol_cats": [
                 2,
                 2
             ]
         },
+        "random_cats": {
+            "r_c0": {
+                "rank": [
+                    "df_trainee"
+                ]
+            }
+        },
         "chance_of_success": 30,
         "patrol_art": "lifedfj4",
         "intro_strings": [
-            "After managing to sneak away from a brutal group training session, you've managed to find one of the only drinkable water sources in the entire Dark Forest. Just as you start to lift your head from the puddle, a cat tackles you from the side, knocking the air from your lungs. r_c pins you to the ground, looking startled to see you but not backing down."
+            "After managing to sneak away from a brutal group training session, you've managed to find one of the only drinkable water sources in the entire Dark Forest. Just as you start to lift your head from the puddle, a cat tackles you from the side, knocking the air from your lungs. r_c0 pins you to the ground, looking startled to see you but not backing down."
         ],
         "decline_strings": [
-            "You freeze in fear and r_c takes pity. {PRONOUN/r_c/subject/CAP} {VERB/r_c/toss/tosses} you aside and you instantly sprint away. The water can be all {PRONOUN/r_c/inposs}."
+            "You freeze in fear and r_c0 takes pity. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/toss/tosses} you aside and you instantly sprint away. The water can be all {PRONOUN/r_c0/inposs}."
         ],
         "success_outcomes": [
             {
                 "frequency": 4,
                 "strings": [
-                    "Taking advantage of r_c's surprise, you launch {PRONOUN/r_c/object} into the water and run. You hear {PRONOUN/r_c/object} calling out after you, but you don't dare return."
+                    "Taking advantage of r_c0's surprise, you launch {PRONOUN/r_c0/object} into the water and run. You hear {PRONOUN/r_c0/object} calling out after you, but you don't dare return."
                 ],
                 "exp_gained": 20
             },
             {
                 "frequency": 2,
                 "strings": [
-                    "When they see who you are, r_c jumps off of you, apologizing profusely and stating that {PRONOUN/r_c/subject} just wanted to defend {PRONOUN/r_c/poss} watering hole. {PRONOUN/r_c/subject/CAP} {VERB/r_c/decide/decides} that you can share it, so long as you don't tell anyone else."
+                    "When they see who you are, r_c0 jumps off of you, apologizing profusely and stating that {PRONOUN/r_c0/subject} just wanted to defend {PRONOUN/r_c0/poss} watering hole. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/decide/decides} that you can share it, so long as you don't tell anyone else."
                 ],
                 "exp_gained": 20,
                 "relationship_changes": [
@@ -1652,7 +1677,7 @@
                             "p_l"
                         ],
                         "cats_from": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "mutual": false,
                         "values": [
@@ -1669,7 +1694,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "r_c gives you a good scratch before you can wriggle away, and your fresh wound is sore in the morning."
+                    "r_c0 gives you a good scratch before you can wriggle away, and your fresh wound is sore in the morning."
                 ],
                 "exp_gained": 0,
                 "condition": [
@@ -1689,7 +1714,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "The shock is enough to startle you awake, and when you see r_c the next morning, {PRONOUN/r_c/subject} {VERB/r_c/avoid/avoids} your gaze completely."
+                    "The shock is enough to startle you awake, and when you see r_c0 the next morning, {PRONOUN/r_c0/subject} {VERB/r_c0/avoid/avoids} your gaze completely."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -1714,13 +1739,13 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "While r_c is shocked by the sight of you, you shoot a paw towards {PRONOUN/r_c/poss} throat. Claws sunk into {PRONOUN/r_c/poss} neck, you yank {PRONOUN/r_c/object} to the ground next to you and take off before {PRONOUN/r_c/subject} {VERB/r_c/have/has} a chance to react."
+                    "While r_c0 is shocked by the sight of you, you shoot a paw towards {PRONOUN/r_c0/poss} throat. Claws sunk into {PRONOUN/r_c0/poss} neck, you yank {PRONOUN/r_c0/object} to the ground next to you and take off before {PRONOUN/r_c0/subject} {VERB/r_c0/have/has} a chance to react."
                 ],
                 "exp_gained": 30,
                 "condition": [
                     {
                         "cats": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "condition": [
                             "claw-wound"
@@ -1734,13 +1759,13 @@
             {
                 "frequency": 2,
                 "strings": [
-                    "Angry that r_c was able to catch you off-guard, and knowing that you can't risk {PRONOUN/r_c/object} knowing that you train here, you know there's only one way to take care of the situation. You're stronger than your Clanmate-- you know it. Taking advantage of {PRONOUN/r_c/poss} surprise upon seeing you, you quickly overpower {PRONOUN/r_c/object} and sink your teeth into {PRONOUN/r_c/poss} throat. When the Clan wakes up tomorrow, no one can explain the gorey scene left in r_c's nest."
+                    "Angry that r_c0 was able to catch you off-guard, and knowing that you can't risk {PRONOUN/r_c0/object} knowing that you train here, you know there's only one way to take care of the situation. You're stronger than your Clanmate-- you know it. Taking advantage of {PRONOUN/r_c0/poss} surprise upon seeing you, you quickly overpower {PRONOUN/r_c0/object} and sink your teeth into {PRONOUN/r_c0/poss} throat. When the Clan wakes up tomorrow, no one can explain the gorey scene left in r_c0's nest."
                 ],
                 "exp_gained": 40,
                 "death": [
                     {
                         "cats": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "history": "m_c was killed in a fight with a Clanmate in the Dark Forest."
                     }
@@ -1751,7 +1776,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You think that fighting back will be easy, but r_c is a fair match. {PRONOUN/r_c/subject/CAP} {VERB/r_c/know/knows} this terrain better than you, and {PRONOUN/r_c/subject} {VERB/r_c/take/takes} advantage of your lack of knowledge to leave you with a nasty injury."
+                    "You think that fighting back will be easy, but r_c0 is a fair match. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/know/knows} this terrain better than you, and {PRONOUN/r_c0/subject} {VERB/r_c0/take/takes} advantage of your lack of knowledge to leave you with a nasty injury."
                 ],
                 "exp_gained": 0,
                 "condition": [
@@ -1768,7 +1793,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You know you should fight back, but you're equally surprised to see them as r_c is to see you. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'re/'s} able to get over {PRONOUN/r_c/poss} shock quicker, though, and {PRONOUN/r_c/subject} quickly {VERB/r_c/shove/shoves} you into the water. A paw lands on the back of your head, driving your muzzle into the wet sand. You fight and scream, but you can't reach {PRONOUN/r_c/object}. It must be by some grace of StarClan that you manage to startle awake just as your vision starts to flicker."
+                    "You know you should fight back, but you're equally surprised to see them as r_c0 is to see you. {PRONOUN/r_c0/subject/CAP}{VERB/r_c0/'re/'s} able to get over {PRONOUN/r_c0/poss} shock quicker, though, and {PRONOUN/r_c0/subject} quickly {VERB/r_c0/shove/shoves} you into the water. A paw lands on the back of your head, driving your muzzle into the wet sand. You fight and scream, but you can't reach {PRONOUN/r_c0/object}. It must be by some grace of StarClan that you manage to startle awake just as your vision starts to flicker."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -1816,30 +1841,30 @@
         "chance_of_success": 30,
         "patrol_art": "df_default",
         "intro_strings": [
-            "You're taking a break from your training one night when you hear a loud splash behind you. Out of a nearby lake crawls r_c, gasping for air and looking horrified. Face covered in muck, {PRONOUN/r_c/subject} {VERB/r_c/haven't/hasn't} yet noticed you."
+            "You're taking a break from your training one night when you hear a loud splash behind you. Out of a nearby lake crawls r_c0, gasping for air and looking horrified. Face covered in muck, {PRONOUN/r_c0/subject} {VERB/r_c0/haven't/hasn't} yet noticed you."
         ],
         "decline_strings": [
-            "You're not equipped to deal with this. Startled, you stand and run before {PRONOUN/r_c/subject} {VERB/r_c/have/has} a chance to open {PRONOUN/r_c/poss} eyes."
+            "You're not equipped to deal with this. Startled, you stand and run before {PRONOUN/r_c0/subject} {VERB/r_c0/have/has} a chance to open {PRONOUN/r_c0/poss} eyes."
         ],
         "success_outcomes": [
             {
                 "frequency": 4,
                 "strings": [
-                    "You instantly leap forward to grab r_c's shoulders and pull {PRONOUN/r_c/object} from the lake. You use a gentle paw to wipe the mud from {PRONOUN/r_c/poss} eyes, and when {PRONOUN/r_c/subject} finally {VERB/r_c/open/opens} them, {PRONOUN/r_c/subject} {VERB/r_c/express/expresses} how relieved {PRONOUN/r_c/subject} {VERB/r_c/are/is} to see you. Apparently, {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} gotten lost in {PRONOUN/r_c/poss} sleep somehow, and {PRONOUN/r_c/subject} desperately {VERB/r_c/want/wants} to find a way out. You point {PRONOUN/r_c/object} to a safe, secluded area where {PRONOUN/r_c/subject} can drift off in peace and wake up back in camp."
+                    "You instantly leap forward to grab r_c0's shoulders and pull {PRONOUN/r_c0/object} from the lake. You use a gentle paw to wipe the mud from {PRONOUN/r_c0/poss} eyes, and when {PRONOUN/r_c0/subject} finally {VERB/r_c0/open/opens} them, {PRONOUN/r_c0/subject} {VERB/r_c0/express/expresses} how relieved {PRONOUN/r_c0/subject} {VERB/r_c0/are/is} to see you. Apparently, {PRONOUN/r_c0/subject}{VERB/r_c0/'ve/'s} gotten lost in {PRONOUN/r_c0/poss} sleep somehow, and {PRONOUN/r_c0/subject} desperately {VERB/r_c0/want/wants} to find a way out. You point {PRONOUN/r_c0/object} to a safe, secluded area where {PRONOUN/r_c0/subject} can drift off in peace and wake up back in camp."
                 ],
                 "exp_gained": 20
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "You reach out a paw, and the sightless r_c instantly grabs hold to pull {PRONOUN/r_c/self} out of the lake. While {PRONOUN/r_c/subject} {VERB/r_c/sit/sits} on safe land, hacking, sputtering, and wiping the muck from {PRONOUN/r_c/poss} eyes, you make the decision to run before {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} able to see you."
+                    "You reach out a paw, and the sightless r_c0 instantly grabs hold to pull {PRONOUN/r_c0/self} out of the lake. While {PRONOUN/r_c0/subject} {VERB/r_c0/sit/sits} on safe land, hacking, sputtering, and wiping the muck from {PRONOUN/r_c0/poss} eyes, you make the decision to run before {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} able to see you."
                 ],
                 "exp_gained": 20
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "As r_c manages to pull {PRONOUN/r_c/self} up onto shore, you keep careful watch to make sure no hostile warriors pop out of the shadows to attack {PRONOUN/r_c/object} while {PRONOUN/r_c/subject} can't see. Once {PRONOUN/r_c/subject} {VERB/r_c/catch/catches} {PRONOUN/r_c/poss} breath and {VERB/r_c/wipe/wipes} the muck from {PRONOUN/r_c/poss} eyes, {PRONOUN/r_c/subject} {VERB/r_c/look/looks} happy to see you, and {VERB/r_c/thank/thanks} you for saving {PRONOUN/r_c/object}. When {PRONOUN/r_c/subject} {VERB/r_c/ask/asks} where {PRONOUN/r_c/subject} {VERB/r_c/are/is}, you avoid answering the question, simply telling {PRONOUN/r_c/object} not to worry, and that {PRONOUN/r_c/subject}'ll wake up soon."
+                    "As r_c0 manages to pull {PRONOUN/r_c0/self} up onto shore, you keep careful watch to make sure no hostile warriors pop out of the shadows to attack {PRONOUN/r_c0/object} while {PRONOUN/r_c0/subject} can't see. Once {PRONOUN/r_c0/subject} {VERB/r_c0/catch/catches} {PRONOUN/r_c0/poss} breath and {VERB/r_c0/wipe/wipes} the muck from {PRONOUN/r_c0/poss} eyes, {PRONOUN/r_c0/subject} {VERB/r_c0/look/looks} happy to see you, and {VERB/r_c0/thank/thanks} you for saving {PRONOUN/r_c0/object}. When {PRONOUN/r_c0/subject} {VERB/r_c0/ask/asks} where {PRONOUN/r_c0/subject} {VERB/r_c0/are/is}, you avoid answering the question, simply telling {PRONOUN/r_c0/object} not to worry, and that {PRONOUN/r_c0/subject}'ll wake up soon."
                 ],
                 "exp_gained": 20
             }
@@ -1848,27 +1873,27 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You reach forward to help pull your Clanmate out of the water. When {PRONOUN/r_c/subject} {VERB/r_c/see/sees} who it is that saved {PRONOUN/r_c/object}, however, {PRONOUN/r_c/subject} {VERB/r_c/hiss/hisses}, appalled that you'd betray your Clan by training in such a place. r_c runs off before you can ask what <i>{PRONOUN/r_c/subject}{VERB/r_c/'re/'s}</i> doing here."
+                    "You reach forward to help pull your Clanmate out of the water. When {PRONOUN/r_c0/subject} {VERB/r_c0/see/sees} who it is that saved {PRONOUN/r_c0/object}, however, {PRONOUN/r_c0/subject} {VERB/r_c0/hiss/hisses}, appalled that you'd betray your Clan by training in such a place. r_c0 runs off before you can ask what <i>{PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s}</i> doing here."
                 ],
                 "exp_gained": 0
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "You reach forward to help pull your Clanmate out of the water, but at your touch, {PRONOUN/r_c/subject} {VERB/r_c/jump/jumps}, push your paws away, and slip back underneath. Panicked, you try to reach down into the opaque water to find {PRONOUN/r_c/object} again, but r_c's head doesn't resurface. You instantly wake and rush to {PRONOUN/r_c/poss} nest to shake them awake. {PRONOUN/r_c/subject/CAP} just {VERB/r_c/swat/swats} at you, annoyed that you interrupted {PRONOUN/r_c/poss} dream."
+                    "You reach forward to help pull your Clanmate out of the water, but at your touch, {PRONOUN/r_c0/subject} {VERB/r_c0/jump/jumps}, push your paws away, and slip back underneath. Panicked, you try to reach down into the opaque water to find {PRONOUN/r_c0/object} again, but r_c0's head doesn't resurface. You instantly wake and rush to {PRONOUN/r_c0/poss} nest to shake them awake. {PRONOUN/r_c0/subject/CAP} just {VERB/r_c0/swat/swats} at you, annoyed that you interrupted {PRONOUN/r_c0/poss} dream."
                 ],
                 "exp_gained": 0
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "When you reach forward to try to pull {PRONOUN/r_c/object} out, r_c swats your paws away, mistaking you for a threat. As {PRONOUN/r_c/subject} {VERB/r_c/try/tries} to climb up onto the bank {PRONOUN/r_c/self}, eyes blinded by the filthy lakewater, the ground crumbles away, sending {PRONOUN/r_c/object} back into the lake. It takes you longer than you'd like to will yourself awake, and when it finally works, you can already hear r_c hacking and coughing from {PRONOUN/r_c/poss} nest."
+                    "When you reach forward to try to pull {PRONOUN/r_c0/object} out, r_c0 swats your paws away, mistaking you for a threat. As {PRONOUN/r_c0/subject} {VERB/r_c0/try/tries} to climb up onto the bank {PRONOUN/r_c0/self}, eyes blinded by the filthy lakewater, the ground crumbles away, sending {PRONOUN/r_c0/object} back into the lake. It takes you longer than you'd like to will yourself awake, and when it finally works, you can already hear r_c0 hacking and coughing from {PRONOUN/r_c0/poss} nest."
                 ],
                 "exp_gained": 0,
                 "condition": [
                     {
                         "cats": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "condition": [
                             "water in their lungs"
@@ -1879,13 +1904,13 @@
             {
                 "frequency": 1,
                 "strings": [
-                    "You rush forward to help your Clanmate out of the water, but {PRONOUN/r_c/subject} {VERB/r_c/grab/grabs} onto your forelegs as {PRONOUN/r_c/subject} {VERB/r_c/struggle/struggles}, threatening to pull you down with {PRONOUN/r_c/object}. All you can do is loosen {PRONOUN/r_c/poss} grip on your legs to save your own life, and with nothing to hold on to, r_c quickly slips back underneath the surface. You don't attempt to reach for {PRONOUN/r_c/object} again, knowing that the thick muck of the lake is inescapable. You're proven right when you're awoken the next morning by a grief-stricken wail."
+                    "You rush forward to help your Clanmate out of the water, but {PRONOUN/r_c0/subject} {VERB/r_c0/grab/grabs} onto your forelegs as {PRONOUN/r_c0/subject} {VERB/r_c0/struggle/struggles}, threatening to pull you down with {PRONOUN/r_c0/object}. All you can do is loosen {PRONOUN/r_c0/poss} grip on your legs to save your own life, and with nothing to hold on to, r_c0 quickly slips back underneath the surface. You don't attempt to reach for {PRONOUN/r_c0/object} again, knowing that the thick muck of the lake is inescapable. You're proven right when you're awoken the next morning by a grief-stricken wail."
                 ],
                 "exp_gained": 0,
                 "death": [
                     {
                         "cats": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "history": "m_c drowned in the Dark Forest"
                     }
@@ -1908,7 +1933,7 @@
         "chance_of_success": 30,
         "patrol_art": "df_default",
         "intro_strings": [
-            "After falling asleep close to r_c one night, you awaken in the Dark Forest, as usual. What's not usual is that r_c is right next to you, ears pinned and glancing around in horror. {PRONOUN/r_c/subject/CAP} {VERB/r_c/turn/turns} to you and {VERB/r_c/ask/asks} what's going on."
+            "After falling asleep close to r_c0 one night, you awaken in the Dark Forest, as usual. What's not usual is that r_c0 is right next to you, ears pinned and glancing around in horror. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/turn/turns} to you and {VERB/r_c0/ask/asks} what's going on."
         ],
         "decline_strings": [
             "You can't think of what to say, and your anxiety startles you awake. You quickly stand up to sleep somewhere much farther away."
@@ -1917,20 +1942,20 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You decide to feign fear. You begin to twitch your tail and observe the Dark Forest with mock anxiety, telling {PRONOUN/r_c/object} that you don't know. You're able to methodically guide {PRONOUN/r_c/object} to a safe place, where you can both fall asleep and wake up back in camp unharmed."
+                    "You decide to feign fear. You begin to twitch your tail and observe the Dark Forest with mock anxiety, telling {PRONOUN/r_c0/object} that you don't know. You're able to methodically guide {PRONOUN/r_c0/object} to a safe place, where you can both fall asleep and wake up back in camp unharmed."
                 ],
                 "exp_gained": 20
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "You decide to be truthful. You tell r_c that you're in the Dark Forest, but it's okay, because you can get {PRONOUN/r_c/object} out. r_c follows your lead as you guide {PRONOUN/r_c/object} to a safe place, and you keep watch while {PRONOUN/r_c/subject} {VERB/r_c/fall/falls} asleep. You watch {PRONOUN/r_c/poss} pelt fade as {PRONOUN/r_c/subject} {VERB/r_c/wake/wakes} up in the real world, glad {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} safe."
+                    "You decide to be truthful. You tell r_c0 that you're in the Dark Forest, but it's okay, because you can get {PRONOUN/r_c0/object} out. r_c0 follows your lead as you guide {PRONOUN/r_c0/object} to a safe place, and you keep watch while {PRONOUN/r_c0/subject} {VERB/r_c0/fall/falls} asleep. You watch {PRONOUN/r_c0/poss} pelt fade as {PRONOUN/r_c0/subject} {VERB/r_c0/wake/wakes} up in the real world, glad {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} safe."
                 ],
                 "exp_gained": 20,
                 "relationship_changes": [
                     {
                         "cats_to": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "cats_from": [
                             "p_l"
@@ -1948,7 +1973,7 @@
             {
                 "frequency": 2,
                 "strings": [
-                    "You tell r_c that you're in the Dark Forest, where Clan cats can train to grow stronger. Though anxious at first, {PRONOUN/r_c/subject} {VERB/r_c/begin/begins} to grow more comfortable as you show {PRONOUN/r_c/object} around. After meeting with your mentor and several other Dark Forest warriors, {PRONOUN/r_c/subject} {VERB/r_c/decide/decides} to stay!"
+                    "You tell r_c0 that you're in the Dark Forest, where Clan cats can train to grow stronger. Though anxious at first, {PRONOUN/r_c0/subject} {VERB/r_c0/begin/begins} to grow more comfortable as you show {PRONOUN/r_c0/object} around. After meeting with your mentor and several other Dark Forest warriors, {PRONOUN/r_c0/subject} {VERB/r_c0/decide/decides} to stay!"
                 ],
                 "exp_gained": 20
             }
@@ -1957,7 +1982,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "When you tell r_c that you're in the Dark Forest, {PRONOUN/r_c/subject} {VERB/r_c/hiss/hisses} and {VERB/r_c/call/calls} you a traitor. Before you can try to remedy the situation, {PRONOUN/r_c/subject} {VERB/r_c/run/runs} off, passing a group of Dark Forest warriors, who instantly give chase."
+                    "When you tell r_c0 that you're in the Dark Forest, {PRONOUN/r_c0/subject} {VERB/r_c0/hiss/hisses} and {VERB/r_c0/call/calls} you a traitor. Before you can try to remedy the situation, {PRONOUN/r_c0/subject} {VERB/r_c0/run/runs} off, passing a group of Dark Forest warriors, who instantly give chase."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -1966,7 +1991,7 @@
                             "p_l"
                         ],
                         "cats_from": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "mutual": false,
                         "values": [
@@ -1980,7 +2005,7 @@
                 "condition": [
                     {
                         "cats": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "condition": [
                             "claw-wound"
@@ -1994,7 +2019,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "When you tell {PRONOUN/r_c/object} you're in the Dark Forest, r_c calls you a traitor and a coward. You tell {PRONOUN/r_c/object} that {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} no better for also ending up here, and your petty argument lasts until the rising sun wakes you up. r_c shoves you away when you wake up, and you vow to never sleep near {PRONOUN/r_c/object} again."
+                    "When you tell {PRONOUN/r_c0/object} you're in the Dark Forest, r_c0 calls you a traitor and a coward. You tell {PRONOUN/r_c0/object} that {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} no better for also ending up here, and your petty argument lasts until the rising sun wakes you up. r_c0 shoves you away when you wake up, and you vow to never sleep near {PRONOUN/r_c0/object} again."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -2019,20 +2044,20 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You growl at r_c not to ask such stupid questions and {PRONOUN/r_c/subject} {VERB/r_c/shrink/shrinks}, muttering a quick apology. You leave {PRONOUN/r_c/object} there to go do your training."
+                    "You growl at r_c0 not to ask such stupid questions and {PRONOUN/r_c0/subject} {VERB/r_c0/shrink/shrinks}, muttering a quick apology. You leave {PRONOUN/r_c0/object} there to go do your training."
                 ],
                 "exp_gained": 30
             },
             {
                 "frequency": 2,
                 "strings": [
-                    "You instantly throw your unsheathed claws at r_c's face, and {PRONOUN/r_c/subject} {VERB/r_c/recoil/recoils} at the hit. You tell {PRONOUN/r_c/object} not to tell a soul that {PRONOUN/r_c/subject} saw you here, and you leave {PRONOUN/r_c/object} to do your training, blood dripping from {PRONOUN/r_c/poss} newly injured eye."
+                    "You instantly throw your unsheathed claws at r_c0's face, and {PRONOUN/r_c0/subject} {VERB/r_c0/recoil/recoils} at the hit. You tell {PRONOUN/r_c0/object} not to tell a soul that {PRONOUN/r_c0/subject} saw you here, and you leave {PRONOUN/r_c0/object} to do your training, blood dripping from {PRONOUN/r_c0/poss} newly injured eye."
                 ],
                 "exp_gained": 40,
                 "condition": [
                     {
                         "cats": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "condition": [
                             "claw-wound"
@@ -2048,7 +2073,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You can't have r_c knowing you train here. Instantly, you leap to attack {PRONOUN/r_c/object}, but {PRONOUN/r_c/subject} {VERB/r_c/sidestep/sidesteps} your attack and {VERB/r_c/bolt/bolts} into the shadows, effectively disappearing from your view."
+                    "You can't have r_c0 knowing you train here. Instantly, you leap to attack {PRONOUN/r_c0/object}, but {PRONOUN/r_c0/subject} {VERB/r_c0/sidestep/sidesteps} your attack and {VERB/r_c0/bolt/bolts} into the shadows, effectively disappearing from your view."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -2057,7 +2082,7 @@
                             "p_l"
                         ],
                         "cats_from": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "mutual": false,
                         "values": [
@@ -2072,7 +2097,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You growl at r_c not to ask such stupid questions, but {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} seem intimidated. Hardly taking notice of your threat, {PRONOUN/r_c/subject} {VERB/r_c/stumble/stumbles} off into the shadows in a panicked daze."
+                    "You growl at r_c0 not to ask such stupid questions, but {PRONOUN/r_c0/subject} {VERB/r_c0/don't/doesn't} seem intimidated. Hardly taking notice of your threat, {PRONOUN/r_c0/subject} {VERB/r_c0/stumble/stumbles} off into the shadows in a panicked daze."
                 ],
                 "exp_gained": 0
             }
@@ -2325,19 +2350,24 @@
             "df"
         ],
         "frequency": 4,
-        "tags": [
-            "fellowtrainee"
-        ],
+        "tags": [],
         "required_cat_types": {
             "patrol_cats": [
                 2,
                 2
             ]
         },
+        "random_cats": {
+            "r_c0": {
+                "rank": [
+                    "df_trainee"
+                ]
+            }
+        },
         "chance_of_success": 50,
         "patrol_art": "df_Clanmate",
         "intro_strings": [
-            "The darkness of the forest looms eerily around the clearing as cats train in pairs. You're with r_c today - and {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} more experienced than you anticipated. You've only recently seen {PRONOUN/r_c/object} around, so how {VERB/r_c/are/is} {PRONOUN/r_c/subject} this good? Are you missing something?"
+            "The darkness of the forest looms eerily around the clearing as cats train in pairs. You're with r_c0 today - and {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} more experienced than you anticipated. You've only recently seen {PRONOUN/r_c0/object} around, so how {VERB/r_c0/are/is} {PRONOUN/r_c0/subject} this good? Are you missing something?"
         ],
         "decline_strings": [
             "Better not to think about it. You focus on the sparring instead of silly questions."
@@ -2346,7 +2376,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "As the two of you catch your breath, you decide to ask how {PRONOUN/r_c/subject} became so skilled so swiftly. r_c snickers and reminds you that the forest doesn't always let cats interact. {PRONOUN/r_c/subject/CAP}{VERB/r_c/'ve/'d} been here long before you it turns out. It makes sense now as to how r_c is so skilled - and so favored by the ancient spirits living here."
+                    "As the two of you catch your breath, you decide to ask how {PRONOUN/r_c0/subject} became so skilled so swiftly. r_c0 snickers and reminds you that the forest doesn't always let cats interact. {PRONOUN/r_c0/subject/CAP}{VERB/r_c0/'ve/'d} been here long before you it turns out. It makes sense now as to how r_c0 is so skilled - and so favored by the ancient spirits living here."
                 ],
                 "exp_gained": 10,
                 "relationship_changes": [
@@ -2369,7 +2399,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You attempt to ask while you both take a break but r_c cuts you off with a grin. Some secrets are worth keeping. You get the feeling that {PRONOUN/r_c/subject} {VERB/r_c/are/is} hiding more than you thought in the waking world. r_c tells you that if you keep up at this pace {PRONOUN/r_c/subject} might be willing to share later... It's a promise."
+                    "You attempt to ask while you both take a break but r_c0 cuts you off with a grin. Some secrets are worth keeping. You get the feeling that {PRONOUN/r_c0/subject} {VERB/r_c0/are/is} hiding more than you thought in the waking world. r_c0 tells you that if you keep up at this pace {PRONOUN/r_c0/subject} might be willing to share later... It's a promise."
                 ],
                 "exp_gained": 10,
                 "relationship_changes": [
@@ -2392,7 +2422,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "When you work up the courage to ask as you catch your breath, r_c looks quite smug. You duck a playful swipe before {PRONOUN/r_c/subject} {VERB/r_c/ask/asks} how you think you got here in the first place. Did r_c have something to do with that..."
+                    "When you work up the courage to ask as you catch your breath, r_c0 looks quite smug. You duck a playful swipe before {PRONOUN/r_c0/subject} {VERB/r_c0/ask/asks} how you think you got here in the first place. Did r_c0 have something to do with that..."
                 ],
                 "exp_gained": 10,
                 "relationship_changes": [
@@ -2401,7 +2431,7 @@
                             "p_l"
                         ],
                         "cats_from": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "mutual": false,
                         "values": [
@@ -2417,7 +2447,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "When you get the chance to ask, r_c lands a swipe across your face, {PRONOUN/r_c/poss} face neutral. You stumble back to recover as your fur bristles up in surprise. That's going to leave a mark... r_c barks at you to focus and the sparring continues."
+                    "When you get the chance to ask, r_c0 lands a swipe across your face, {PRONOUN/r_c0/poss} face neutral. You stumble back to recover as your fur bristles up in surprise. That's going to leave a mark... r_c0 barks at you to focus and the sparring continues."
                 ],
                 "exp_gained": 0,
                 "condition": [
@@ -2434,13 +2464,13 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "Before you can get a chance to mention it, one of the slimy ancient warriors cuts in to hiss at you to focus. They berate you for your inattention as r_c smirks and watches..."
+                    "Before you can get a chance to mention it, one of the slimy ancient warriors cuts in to hiss at you to focus. They berate you for your inattention as r_c0 smirks and watches..."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
                     {
                         "cats_to": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "cats_from": [
                             "p_l"
@@ -2457,7 +2487,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You don't get the chance to ponder any longer as r_c takes you by surprise due to your inattention. {PRONOUN/r_c/subject/CAP} {VERB/r_c/land/lands} a harsh blow as the two of you roll across the clearing. Before you know it, you're awake in your nest, a Clanmate frantically calling for the medicine cat."
+                    "You don't get the chance to ponder any longer as r_c0 takes you by surprise due to your inattention. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/land/lands} a harsh blow as the two of you roll across the clearing. Before you know it, you're awake in your nest, a Clanmate frantically calling for the medicine cat."
                 ],
                 "exp_gained": 0,
                 "condition": [
@@ -2480,14 +2510,19 @@
             "df"
         ],
         "frequency": 4,
-        "tags": [
-            "fellowtrainee"
-        ],
+        "tags": [],
         "required_cat_types": {
             "patrol_cats": [
                 2,
                 2
             ]
+        },
+        "random_cats": {
+            "r_c0": {
+                "rank": [
+                    "df_trainee"
+                ]
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "life_df_og11",
@@ -2501,7 +2536,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You jump out of your fur as r_c lands beside you and narrowly avoid attacking {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} {VERB/r_c/apologize/apologizes} profusely and {VERB/r_c/say/says} {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} been following you from the trees so that {PRONOUN/r_c/subject} could speak to you without watching eyes. r_c does get a laugh out of the accidental scare however, before the two of you spend time talking in the quiet of the forest."
+                    "You jump out of your fur as r_c0 lands beside you and narrowly avoid attacking {PRONOUN/r_c0/object}. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/apologize/apologizes} profusely and {VERB/r_c0/say/says} {PRONOUN/r_c0/subject}{VERB/r_c0/'ve/'s} been following you from the trees so that {PRONOUN/r_c0/subject} could speak to you without watching eyes. r_c0 does get a laugh out of the accidental scare however, before the two of you spend time talking in the quiet of the forest."
                 ],
                 "exp_gained": 10,
                 "relationship_changes": [
@@ -2525,7 +2560,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "A voice calls out right as a half-faded ancient warrior appears before you to attack. Before the foul claws can strike, a blur tackles them away. It's r_c! Between the two of you it's an easy task to end the old spirit. Your heart pounds as you gratefully thank r_c for the save. {PRONOUN/r_c/subject/CAP} {VERB/r_c/bunt/bunts} {PRONOUN/r_c/poss} head against you comfortingly and {VERB/r_c/remind/reminds} you that you're Clanmates. You would do it for {PRONOUN/r_c/object}, wouldn't you?"
+                    "A voice calls out right as a half-faded ancient warrior appears before you to attack. Before the foul claws can strike, a blur tackles them away. It's r_c0! Between the two of you it's an easy task to end the old spirit. Your heart pounds as you gratefully thank r_c0 for the save. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/bunt/bunts} {PRONOUN/r_c0/poss} head against you comfortingly and {VERB/r_c0/remind/reminds} you that you're Clanmates. You would do it for {PRONOUN/r_c0/object}, wouldn't you?"
                 ],
                 "exp_gained": 15,
                 "relationship_changes": [
@@ -2553,7 +2588,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "Your nerves get the better of you. You creep backwards while staying low to the ground. You pause in your retreat as a laugh rings out. It's r_c! From {PRONOUN/r_c/poss} place in the dead tree {PRONOUN/r_c/subject} {VERB/r_c/call/calls} you a coward who doesn't belong here. Your pelt burns with shame before you turn tail and race away from {PRONOUN/r_c/poss} jeering..."
+                    "Your nerves get the better of you. You creep backwards while staying low to the ground. You pause in your retreat as a laugh rings out. It's r_c0! From {PRONOUN/r_c0/poss} place in the dead tree {PRONOUN/r_c0/subject} {VERB/r_c0/call/calls} you a coward who doesn't belong here. Your pelt burns with shame before you turn tail and race away from {PRONOUN/r_c0/poss} jeering..."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -2576,7 +2611,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "Your fur bristles up right before teeth sink into your tail. An ancient warrior sneers at you with your tail in their maw before they put all their strength into shaking you by the limb. Your yowl thankfully brings assistance - it's r_c to the rescue! The two of you manage to battle off the foul, dark warrior, but your tail has seen better days..."
+                    "Your fur bristles up right before teeth sink into your tail. An ancient warrior sneers at you with your tail in their maw before they put all their strength into shaking you by the limb. Your yowl thankfully brings assistance - it's r_c0 to the rescue! The two of you manage to battle off the foul, dark warrior, but your tail has seen better days..."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -2611,7 +2646,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "Courage surges in you. You're not going to be cowed by a mere unsettling feeling! You yowl your challenge into the dark mists of the forest. As your gaze scans up you realize, with embarrassment hot on your pelt, that it's just r_c. You remember that {PRONOUN/r_c/subject} wanted to speak to you now that you see {PRONOUN/r_c/object}. {PRONOUN/r_c/subject/CAP} clearly {VERB/r_c/aren't/isn't} interested anymore, however, as {PRONOUN/r_c/subject} {VERB/r_c/hold/holds} back mirth at your paranoia..."
+                    "Courage surges in you. You're not going to be cowed by a mere unsettling feeling! You yowl your challenge into the dark mists of the forest. As your gaze scans up you realize, with embarrassment hot on your pelt, that it's just r_c0. You remember that {PRONOUN/r_c0/subject} wanted to speak to you now that you see {PRONOUN/r_c0/object}. {PRONOUN/r_c0/subject/CAP} clearly {VERB/r_c0/aren't/isn't} interested anymore, however, as {PRONOUN/r_c0/subject} {VERB/r_c0/hold/holds} back mirth at your paranoia..."
                 ],
                 "exp_gained": 10,
                 "relationship_changes": [
@@ -2620,7 +2655,7 @@
                             "p_l"
                         ],
                         "cats_from": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "mutual": false,
                         "values": [
@@ -2634,7 +2669,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "Your ears prick as you hear claws against bark. Your gaze spots a shadow in the tree above you. Remembering a trick from an ancient mentor, you spring at the tree and rush up - only to meet the startled face of r_c! Thankfully you registered it was {PRONOUN/r_c/object} before you could finish your attack. {PRONOUN/r_c/subject/CAP} {VERB/r_c/are/is} stunned for a moment before begging you to show {PRONOUN/r_c/object} the move you'd just done. You and r_c spend the rest of the night practicing."
+                    "Your ears prick as you hear claws against bark. Your gaze spots a shadow in the tree above you. Remembering a trick from an ancient mentor, you spring at the tree and rush up - only to meet the startled face of r_c0! Thankfully you registered it was {PRONOUN/r_c0/object} before you could finish your attack. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/are/is} stunned for a moment before begging you to show {PRONOUN/r_c0/object} the move you'd just done. You and r_c0 spend the rest of the night practicing."
                 ],
                 "exp_gained": 15,
                 "relationship_changes": [
@@ -2660,7 +2695,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You aren't about to let anything sneak up on you. The moment you see a shadow, you spring with claws unsheathed. Blood sprays as your strike finds the target - and to your horror you realize it's r_c. The wound isn't fatal but it's enough to send {PRONOUN/r_c/object} back to the waking world in a hurry. When {PRONOUN/r_c/subject} {VERB/r_c/see/sees} you in camp later, there is anger in {PRONOUN/r_c/poss} eyes..."
+                    "You aren't about to let anything sneak up on you. The moment you see a shadow, you spring with claws unsheathed. Blood sprays as your strike finds the target - and to your horror you realize it's r_c0. The wound isn't fatal but it's enough to send {PRONOUN/r_c0/object} back to the waking world in a hurry. When {PRONOUN/r_c0/subject} {VERB/r_c0/see/sees} you in camp later, there is anger in {PRONOUN/r_c0/poss} eyes..."
                 ],
                 "exp_gained": 0,
                 "relationship_changes": [
@@ -2682,7 +2717,7 @@
                 "condition": [
                     {
                         "cats": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "condition": [
                             "battle_injury"
@@ -2694,7 +2729,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "Your claws unsheathe as you prepare. It's too late - you hear the whistle of wind above you and try to move from your position. You're too slow. Your attacker lands upon you as your yowl is cut off. Your gaze manages to catch on your assailant. r_c's eyes gleam in the low light before {PRONOUN/r_c/poss} fangs meet your throat. In the morning, the Clan is horrified to find your cold body in your nest..."
+                    "Your claws unsheathe as you prepare. It's too late - you hear the whistle of wind above you and try to move from your position. You're too slow. Your attacker lands upon you as your yowl is cut off. Your gaze manages to catch on your assailant. r_c0's eyes gleam in the low light before {PRONOUN/r_c0/poss} fangs meet your throat. In the morning, the Clan is horrified to find your cold body in your nest..."
                 ],
                 "exp_gained": 0,
                 "death": [
@@ -2862,8 +2897,7 @@
                     "medicine cat",
                     "medicine cat apprentice"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "relationships": [
             {
@@ -2871,7 +2905,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "df mentor/df app"
@@ -2884,7 +2918,7 @@
             "You race through the Dark Forest, leaping over twisted vines and roots as you zip towards the training grounds. You're late for training, and you know that r_c0 won't be happy about it..."
         ],
         "decline_strings": [
-            "Breathing heavily, you slow to a stop. You're already late, so what's the point of even going? You're probably just going to get yelled at by p_l:0 anyway. Besides, you've wanted to explore this place for a while, and now's the perfect chance!"
+            "Breathing heavily, you slow to a stop. You're already late, so what's the point of even going? You're probably just going to get yelled at by r_c0 anyway. Besides, you've wanted to explore this place for a while, and now's the perfect chance!"
         ],
         "success_outcomes": [
             {
@@ -2956,7 +2990,6 @@
             ]
         },
         "random_cats": {
-            "r_c0": {},
             "r_c0": {}
         },
         "relationships": [
@@ -2965,7 +2998,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "df mentor/df app"
@@ -2978,7 +3011,7 @@
             "You're training with r_c0, when you see a StarClan cat, lost. r_c0 growls at the cat, before telling you to go kill them."
         ],
         "decline_strings": [
-            "You refuse, forcing yourself to wake up. p_l:0 won't be seeing you for a while."
+            "You refuse, forcing yourself to wake up. r_c0 won't be seeing you for a while."
         ],
         "success_outcomes": [
             {
@@ -3078,7 +3111,6 @@
             ]
         },
         "random_cats": {
-            "r_c0": {},
             "r_c0": {}
         },
         "relationships": [
@@ -3087,7 +3119,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "df mentor/df app"
@@ -3162,7 +3194,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "df mentor/df app"
@@ -3236,7 +3268,6 @@
             ]
         },
         "random_cats": {
-            "r_c0": {},
             "r_c0": {}
         },
         "relationships": [
@@ -3245,7 +3276,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "df mentor/df app"
@@ -3258,7 +3289,7 @@
             "The Dark Forest has been... quiet, lately. Usually, you can always make out the glinting eyes of r_c0 peering out at you, wreathed in mud and mist, but tonight, the forest is dark."
         ],
         "decline_strings": [
-            "p_l:0 must not be in the mood for training today. Pacing the training grounds, you wait until you eventually wake up."
+            "r_c0 must not be in the mood for training today. Pacing the training grounds, you wait until you eventually wake up."
         ],
         "success_outcomes": [
             {
@@ -3430,7 +3461,7 @@
                         "cats": [
                             "p_l"
                         ],
-                        "history": "m_c died after {PRONOUN/y_c/subject} froze to death in the Dark Forest."
+                        "history": "m_c died after {PRONOUN/p_l/subject} froze to death in the Dark Forest."
                     }
                 ]
             }
@@ -3442,41 +3473,46 @@
             "lifegen"
         ],
         "frequency": 4,
-        "tags": [
-            "fellowtrainee"
-        ],
+        "tags": [],
         "required_cat_types": {
             "patrol_cats": [
                 2,
                 2
             ]
         },
+        "random_cats": {
+            "r_c0": {
+                "rank": [
+                    "df_trainee"
+                ]
+            }
+        },
         "chance_of_success": 60,
         "patrol_art": "life_df_og11",
         "intro_strings": [
-            "You race through the Dark Forest, bounding with all the speed you can muster. r_c is just a few paw steps ahead of you, having challenged you to a race to the training grounds and taking off before you could answer. You push yourself harder, wanting to beat r_c there."
+            "You race through the Dark Forest, bounding with all the speed you can muster. r_c0 is just a few paw steps ahead of you, having challenged you to a race to the training grounds and taking off before you could answer. You push yourself harder, wanting to beat r_c0 there."
         ],
         "decline_strings": [
-            "You sigh frustratedly as r_c disappears ahead of you. It seems {PRONOUN/r_c/subject} had too much of a head start, and there's no way you can catch up to {PRONOUN/r_c/object}. You frown and drag your paws as you walk towards the training grounds after {PRONOUN/r_c/object}, not liking the feeling of being defeated... even if the race was unfair."
+            "You sigh frustratedly as r_c0 disappears ahead of you. It seems {PRONOUN/r_c0/subject} had too much of a head start, and there's no way you can catch up to {PRONOUN/r_c0/object}. You frown and drag your paws as you walk towards the training grounds after {PRONOUN/r_c0/object}, not liking the feeling of being defeated... even if the race was unfair."
         ],
         "success_outcomes": [
             {
                 "frequency": 4,
                 "strings": [
-                    "r_c might be ahead right now, but {PRONOUN/r_c/subject} {VERB/r_c/don't/doesn't} know about the shortcut through a tunnel that you found the other day. You scoff as r_c races past it, laughing to yourself as you dart into the tunnel's dark opening. You quickly make your way to the training grounds, smiling smugly as r_c breathlessly enters the clearing a couple minutes later."
+                    "r_c0 might be ahead right now, but {PRONOUN/r_c0/subject} {VERB/r_c0/don't/doesn't} know about the shortcut through a tunnel that you found the other day. You scoff as r_c0 races past it, laughing to yourself as you dart into the tunnel's dark opening. You quickly make your way to the training grounds, smiling smugly as r_c0 breathlessly enters the clearing a couple minutes later."
                 ],
                 "exp_gained": 10
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "You push forward, dodging spindly trees and hopping murky puddles. By the time you arrive at the training grounds, r_c is still right next to you, and you both collapse to the ground, laughing breathlessly. It's a tie!"
+                    "You push forward, dodging spindly trees and hopping murky puddles. By the time you arrive at the training grounds, r_c0 is still right next to you, and you both collapse to the ground, laughing breathlessly. It's a tie!"
                 ],
                 "exp_gained": 10,
                 "relationship_changes": [
                     {
                         "cats_to": [
-                            "r_c"
+                            "r_c0"
                         ],
                         "cats_from": [
                             "p_l"
@@ -3495,7 +3531,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You power ahead, knowing that you can beat r_c if you go just a little faster. After attempting to serve around {PRONOUN/r_c/object}, your paws trip out from under you and you tumble to the floor in a heap of arms and legs. With a frown, you pick yourself up and chase after r_c, but {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} already gone."
+                    "You power ahead, knowing that you can beat r_c0 if you go just a little faster. After attempting to serve around {PRONOUN/r_c0/object}, your paws trip out from under you and you tumble to the floor in a heap of arms and legs. With a frown, you pick yourself up and chase after r_c0, but {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} already gone."
                 ],
                 "exp_gained": 0
             }
@@ -3516,23 +3552,23 @@
         "chance_of_success": 60,
         "patrol_art": "life_df_og11",
         "intro_strings": [
-            "You pant heavily as you stalk out of the training grounds, declaring that you need to take a break. After padding down a path for a little bit, your whiskers flick in surprise as you see one of your Clanmates up ahead. r_c doesn't seem to see you, and you crouch down low, unsure of how to proceed."
+            "You pant heavily as you stalk out of the training grounds, declaring that you need to take a break. After padding down a path for a little bit, your whiskers flick in surprise as you see one of your Clanmates up ahead. r_c0 doesn't seem to see you, and you crouch down low, unsure of how to proceed."
         ],
         "decline_strings": [
-            "You carefully, quietly, slink away from r_c. Everycat has their own reasons for being here, and it's probably better to not pry to closely into anyone else's business."
+            "You carefully, quietly, slink away from r_c0. Everycat has their own reasons for being here, and it's probably better to not pry to closely into anyone else's business."
         ],
         "success_outcomes": [
             {
                 "frequency": 4,
                 "strings": [
-                    "You approach r_c cautiously, and ask {PRONOUN/r_c/object} what {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} doing here. r_c's eyes widen as {PRONOUN/r_c/subject} {VERB/r_c/explain/explains} how {PRONOUN/r_c/subject} thought {PRONOUN/r_c/subject} could use some extra training. You both run through some additional moves, giving each other tips and tricks on how to improve."
+                    "You approach r_c0 cautiously, and ask {PRONOUN/r_c0/object} what {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} doing here. r_c0's eyes widen as {PRONOUN/r_c0/subject} {VERB/r_c0/explain/explains} how {PRONOUN/r_c0/subject} thought {PRONOUN/r_c0/subject} could use some extra training. You both run through some additional moves, giving each other tips and tricks on how to improve."
                 ],
                 "exp_gained": 10
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "When you approach r_c to ask what {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} doing here, {PRONOUN/r_c/subject} {VERB/r_c/seem/seems} relieved to come across a familiar face. {PRONOUN/r_c/subject/CAP} {VERB/r_c/explain/explains} that {PRONOUN/r_c/subject} {VERB/r_c/were/was} told the training here was effective, but now that {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} here, it's very scary, and {PRONOUN/r_c/subject}'d like to go home. You lead {PRONOUN/r_c/object} to a good napping spot, where {PRONOUN/r_c/subject} can drift off and wake up back in camp."
+                    "When you approach r_c0 to ask what {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} doing here, {PRONOUN/r_c0/subject} {VERB/r_c0/seem/seems} relieved to come across a familiar face. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/explain/explains} that {PRONOUN/r_c0/subject} {VERB/r_c0/were/was} told the training here was effective, but now that {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} here, it's very scary, and {PRONOUN/r_c0/subject}'d like to go home. You lead {PRONOUN/r_c0/object} to a good napping spot, where {PRONOUN/r_c0/subject} can drift off and wake up back in camp."
                 ],
                 "exp_gained": 10
             }
@@ -3541,21 +3577,21 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "As you approach r_c, {PRONOUN/r_c/poss} eyes darken a little. {PRONOUN/r_c/subject/CAP} {VERB/r_c/hiss/hisses} out that {PRONOUN/r_c/poss} reason for being here is none of your business and you should keep to yourself. As {PRONOUN/r_c/subject} {VERB/r_c/slink/slinks} into the forest, you can't help but wonder what that was all about."
+                    "As you approach r_c0, {PRONOUN/r_c0/poss} eyes darken a little. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/hiss/hisses} out that {PRONOUN/r_c0/poss} reason for being here is none of your business and you should keep to yourself. As {PRONOUN/r_c0/subject} {VERB/r_c0/slink/slinks} into the forest, you can't help but wonder what that was all about."
                 ],
                 "exp_gained": 0
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "r_c startles as you pad up to {PRONOUN/r_c/object}, the fur along {PRONOUN/r_c/poss} neck and back prickling. Before you can say anything, {PRONOUN/r_c/subject} {VERB/r_c/mutter/mutters} something about training before bolting out into the forest. Your head tilts to the side as you watch {PRONOUN/r_c/object} go, wondering why {PRONOUN/r_c/subject} {VERB/r_c/were/was} acting so strangely."
+                    "r_c0 startles as you pad up to {PRONOUN/r_c0/object}, the fur along {PRONOUN/r_c0/poss} neck and back prickling. Before you can say anything, {PRONOUN/r_c0/subject} {VERB/r_c0/mutter/mutters} something about training before bolting out into the forest. Your head tilts to the side as you watch {PRONOUN/r_c0/object} go, wondering why {PRONOUN/r_c0/subject} {VERB/r_c0/were/was} acting so strangely."
                 ],
                 "exp_gained": 0
             },
             {
                 "frequency": 4,
                 "strings": [
-                    "You approach r_c curiously, but before you can say or do anything, {PRONOUN/r_c/subject} {VERB/r_c/lunge/lunges} at you, {PRONOUN/r_c/poss} claws catching in your pelt. You jump away from {PRONOUN/r_c/object} and blink in surprise as {PRONOUN/r_c/subject} {VERB/r_c/turn/turns} and {VERB/r_c/race/races} into the forest. You're sure {PRONOUN/r_c/subject} wouldn't have done that if {PRONOUN/r_c/subject} knew who you were, meaning the dimly lit forest must've shrouded your identity."
+                    "You approach r_c0 curiously, but before you can say or do anything, {PRONOUN/r_c0/subject} {VERB/r_c0/lunge/lunges} at you, {PRONOUN/r_c0/poss} claws catching in your pelt. You jump away from {PRONOUN/r_c0/object} and blink in surprise as {PRONOUN/r_c0/subject} {VERB/r_c0/turn/turns} and {VERB/r_c0/race/races} into the forest. You're sure {PRONOUN/r_c0/subject} wouldn't have done that if {PRONOUN/r_c0/subject} knew who you were, meaning the dimly lit forest must've shrouded your identity."
                 ],
                 "exp_gained": 0,
                 "condition": [
@@ -3603,7 +3639,7 @@
                     "r_c0"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "df mentor/df app"
@@ -3765,16 +3801,16 @@
         "chance_of_success": 50,
         "patrol_art": "df_default",
         "intro_strings": [
-            "You spot the Dark Forest inhabitant, r_c, slinking through the undergrowth nearby as you're exploring. {VERB/r_c/Are/Is} {PRONOUN/r_c/subject} watching you..?"
+            "You spot the Dark Forest inhabitant, r_c0, slinking through the undergrowth nearby as you're exploring. {VERB/r_c0/Are/Is} {PRONOUN/r_c0/subject} watching you..?"
         ],
         "decline_strings": [
-            "You decide to retreat. Whatever r_c wants, you're sure you can't supply it."
+            "You decide to retreat. Whatever r_c0 wants, you're sure you can't supply it."
         ],
         "success_outcomes": [
             {
                 "frequency": 4,
                 "strings": [
-                    "You call out to r_c, asking what {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} looking for. The cat emerges from the shadows, slowly dipping {PRONOUN/r_c/poss} head at you, and tells you {PRONOUN/r_c/subject}{VERB/r_c/'ve/'s} been watching your training, and {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} impressed. You're still a bit unsettled, but you thank {PRONOUN/r_c/object} politely, and {PRONOUN/r_c/subject} {VERB/r_c/retreat/retreats} back into the forest. Weird..."
+                    "You call out to r_c0, asking what {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} looking for. The cat emerges from the shadows, slowly dipping {PRONOUN/r_c0/poss} head at you, and tells you {PRONOUN/r_c0/subject}{VERB/r_c0/'ve/'s} been watching your training, and {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} impressed. You're still a bit unsettled, but you thank {PRONOUN/r_c0/object} politely, and {PRONOUN/r_c0/subject} {VERB/r_c0/retreat/retreats} back into the forest. Weird..."
                 ],
                 "exp_gained": 15
             }
@@ -3783,7 +3819,7 @@
             {
                 "frequency": 2,
                 "strings": [
-                    "You call out to r_c to ask what {PRONOUN/r_c/subject} {VERB/r_c/want/wants}, but the pair of gleaming eyes vanishes into the darkness without a word."
+                    "You call out to r_c0 to ask what {PRONOUN/r_c0/subject} {VERB/r_c0/want/wants}, but the pair of gleaming eyes vanishes into the darkness without a word."
                 ],
                 "exp_gained": 0
             }
@@ -3817,7 +3853,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You race forward, shoving a Dark Forest cat, s_c, out of the way, before {PRONOUN/s_c/subject} can land a blow on r_c. You're able to push r_c out of the crowd and into the safety of the undergrowth as s_c and {PRONOUN/s_c/poss} friends continue laughing behind you."
+                    "You race forward, shoving a Dark Forest cat, s_c, out of the way, before {PRONOUN/s_c/subject} can land a blow on r_c0. You're able to push r_c0 out of the crowd and into the safety of the undergrowth as s_c and {PRONOUN/s_c/poss} friends continue laughing behind you."
                 ],
                 "exp_gained": 10
             }
@@ -3826,7 +3862,7 @@
             {
                 "frequency": 4,
                 "strings": [
-                    "You call out to your Clanmate, s_c, hoping it might distract the Dark Forest cats and allow {PRONOUN/s_c/object} to escape. However, the Dark Forest warrior, r_c, sees right through you and breaks out of the crowd to chase you down. You're able to escape into the forest, hoping that s_c is safe."
+                    "You call out to your Clanmate, s_c, hoping it might distract the Dark Forest cats and allow {PRONOUN/s_c/object} to escape. However, the Dark Forest warrior, r_c0, sees right through you and breaks out of the crowd to chase you down. You're able to escape into the forest, hoping that s_c is safe."
                 ],
                 "exp_gained": 0
             }

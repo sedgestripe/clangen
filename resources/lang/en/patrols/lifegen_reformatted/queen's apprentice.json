@@ -30,7 +30,7 @@
                     "r_c2"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -132,7 +132,7 @@
                     "r_c1"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -218,7 +218,7 @@
                     "r_c2"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -297,8 +297,6 @@
                     "medicine cat apprentice"
                 ]
             },
-            "r_c2": {},
-            "r_c0": {},
             "r_c2": {}
         },
         "relationships": [
@@ -307,7 +305,7 @@
                     "r_c2"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -568,7 +566,6 @@
                     "leader"
                 ]
             },
-            "r_c2": {},
             "r_c2": {}
         },
         "relationships": [
@@ -577,7 +574,7 @@
                     "r_c2"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "mentor/app"
@@ -659,8 +656,7 @@
                 "age": [
                     "kitten"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "lg_default_sc",
@@ -668,7 +664,7 @@
             "You're taking care of a StarClan kit, when you see r_c0 peeking {PRONOUN/r_c0/poss} head into the Dark Forest."
         ],
         "decline_strings": [
-            "{PRONOUN/p_l:0/subject/CAP}'ll wake up soon enough. You don't need to pay {PRONOUN/p_l:0/object} any mind."
+            "{PRONOUN/r_c0/subject/CAP}'ll wake up soon enough. You don't need to pay {PRONOUN/r_c0/object} any mind."
         ],
         "success_outcomes": [
             {

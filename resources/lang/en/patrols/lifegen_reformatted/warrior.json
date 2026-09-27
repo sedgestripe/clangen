@@ -1483,7 +1483,7 @@
         "relationships": [
             {
                 "cats_from": [
-                    "y_c"
+                    "p_l"
                 ],
                 "cats_to": [
                     "r_c0"
@@ -1499,7 +1499,7 @@
             "You're sitting in camp in the afternoon when r_c0 returns home from a solo hunting patrol, carrying such a huge rabbit that {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} tripping over it. You wonder if you should get up to help."
         ],
         "decline_strings": [
-            "p_l:0 is plenty capable. You sit and watch {PRONOUN/p_l:0/object} stumble to the fresh-kill pile, snickering to yourself at the trouble {PRONOUN/p_l:0/subject}{VERB/p_l:0/'re/'s} having. Though you can't deny it's an impressive catch."
+            "r_c0 is plenty capable. You sit and watch {PRONOUN/r_c0/object} stumble to the fresh-kill pile, snickering to yourself at the trouble {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} having. Though you can't deny it's an impressive catch."
         ],
         "success_outcomes": [
             {
@@ -1523,7 +1523,7 @@
                             "r_c0"
                         ],
                         "cats_from": [
-                            "y_c"
+                            "p_l"
                         ],
                         "mutual": true,
                         "values": [

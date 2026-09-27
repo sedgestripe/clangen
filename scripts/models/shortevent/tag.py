@@ -25,6 +25,7 @@ class TagEnum(Enum):
     kit_manipulated = "kit_manipulated"
     romance = "romance"
     adoption = "adoption"
+    shunned = "shunned"
 
 
 class Tag(RootModel):

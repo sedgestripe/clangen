@@ -24,7 +24,7 @@
         }
     },
     {
-        "id": "dark_death_dark_forest_lifegen",
+        "event_id": "dark_death_dark_forest_lifegen",
         "strings": [
             "Is not surprised to find {PRONOUN/m_c/self} in the Dark Forest",
             "Grumbles as {PRONOUN/m_c/subject} {VERB/m_c/look/looks} around the blackened trees, realizing {PRONOUN/m_c/subject} failed"

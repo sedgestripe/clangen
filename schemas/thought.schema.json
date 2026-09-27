@@ -365,13 +365,6 @@
           "description": "Constrains the event to only happen if the cat matches with the dictated group standings. A group standing is the relationship between a cat and a group, for example: if they are an exile or lost",
           "title": "Standing"
         },
-        "min_max_faith": {
-          "items": {
-            "type": "integer"
-          },
-          "title": "Min Max Faith",
-          "type": "array"
-        },
         "stat": {
           "$ref": "#/$defs/StatDict",
           "description": "Constrains the event to only occur if the cat holds specific skills or traits. You can utilize exclusionary tags",
@@ -412,6 +405,14 @@
           "$ref": "#/$defs/NameCheckDict",
           "description": "Constrain per specific name states",
           "title": "Name"
+        },
+        "min_max_faith": {
+          "description": "Cat faith",
+          "items": {
+            "type": "integer"
+          },
+          "title": "Min Max Faith",
+          "type": "array"
         }
       },
       "title": "CatDict",
@@ -546,7 +547,7 @@
           "$ref": "#/$defs/GatherCatEnum"
         },
         {
-          "pattern": "^-?n_c:[0-9]+$",
+          "pattern": "^(n_c:|r_c:|o_c)[0-9]+$",
           "type": "string"
         },
         {
@@ -566,6 +567,8 @@
         "-p_l",
         "s_c",
         "-s_c",
+        "y_c",
+        "-y_c",
         "clan",
         "-clan",
         "some_clan",
@@ -1040,6 +1043,8 @@
         "exiled",
         "-left",
         "-lost",
+        "-exiled",
+        "shunned",
         "-exiled"
       ],
       "title": "Standing",
@@ -1188,7 +1193,12 @@
         "halloween",
         "april_fools",
         "new_years",
-        "disaster"
+        "disaster",
+        "shunned",
+        "df_lifegen",
+        "ur_lifegen",
+        "sc_lifegen",
+        "mc_death"
       ],
       "title": "TagEnum",
       "type": "string"

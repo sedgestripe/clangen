@@ -24,7 +24,7 @@
         ]
     },
     {
-        "id": "flamboyant_df_warrior_apprentice",
+        "event_id": "flamboyant_df_warrior_apprentice",
         "strings": [
             "Makes a stylish crown of thorns to show off",
             "Is satisfied knowing {PRONOUN/m_c/subject} stuck to {PRONOUN/m_c/poss} true self no matter what",

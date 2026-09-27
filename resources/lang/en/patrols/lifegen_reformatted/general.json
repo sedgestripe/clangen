@@ -98,7 +98,7 @@
             {
                 "frequency": 3,
                 "strings": [
-                    "You creep into the hollow, clawing spiderwebs out of your way. The air inside is uncomfortably cold, and when it brushes against your fur a chill shoots down your spine. You think that the faint noise you hear is just wind, but as it grows louder, you realize it's your name, somehow echoing all around you: <i>y_c. y_c!</i> You flee, running as fast as you can until you're back at camp."
+                    "You creep into the hollow, clawing spiderwebs out of your way. The air inside is uncomfortably cold, and when it brushes against your fur a chill shoots down your spine. You think that the faint noise you hear is just wind, but as it grows louder, you realize it's your name, somehow echoing all around you: <i>p_l. p_l!</i> You flee, running as fast as you can until you're back at camp."
                 ],
                 "exp_gained": 0
             }
@@ -124,7 +124,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "cluster": [
                     "neurotic"
@@ -134,8 +134,7 @@
                     "apprentice",
                     "deputy"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 30,
         "patrol_art": "LG_halloween_SQ2",
@@ -143,7 +142,7 @@
             "You're on a dawn patrol with r_c0. Fog hangs over the whole territory, turning familiar landmarks into ghostly silhouettes and making it hard to see even several tail-lengths in front of you. Suddenly, r_c0 gasps. With a jolt, you follow {PRONOUN/r_c0/poss} gaze and see an indistinct, cat-sized shadow with two glowing eyes, watching you. The figure turns and runs. A haunting jingling noise follows them."
         ],
         "decline_strings": [
-            "Absolutely not. It's too early for this! You turn away and lead p_l:0 the opposite direction."
+            "Absolutely not. It's too early for this! You turn away and lead r_c0 the opposite direction."
         ],
         "success_outcomes": [
             {
@@ -210,7 +209,7 @@
                 "relationship_changes": [
                     {
                         "cats_to": [
-                            "y_c"
+                            "p_l"
                         ],
                         "cats_from": [
                             "r_c0"
@@ -280,7 +279,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "cluster": [
                     "neurotic"
@@ -290,8 +289,7 @@
                     "apprentice",
                     "deputy"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 40,
         "patrol_art": "general_scare",
@@ -299,7 +297,7 @@
             "r_c0 has been insisting that a grove of trees on the territory is haunted. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/claim/claims} to hear strange noises whenever {PRONOUN/r_c0/subject} {VERB/r_c0/get/gets} close, and {VERB/r_c0/say/says} {PRONOUN/r_c0/subject} {VERB/r_c0/feel/feels} like {PRONOUN/r_c0/subject}{VERB/r_c0/'re/'s} being watched. After several days of this, you consider checking the grove out yourself."
         ],
         "decline_strings": [
-            "You don't have time to investigate every rumor you hear. If p_l:0 is really worried, {PRONOUN/p_l:0/subject} should ask someone to accompany {PRONOUN/p_l:0/object} {PRONOUN/p_l:0/self}."
+            "You don't have time to investigate every rumor you hear. If r_c0 is really worried, {PRONOUN/r_c0/subject} should ask someone to accompany {PRONOUN/r_c0/object} {PRONOUN/r_c0/self}."
         ],
         "success_outcomes": [
             {
@@ -602,7 +600,7 @@
             ]
         },
         "chance_of_success": 50,
-        "patrol_art": "gen_happy_cat5",
+        "patrol_art": "gen_happp_lat5",
         "intro_strings": [
             "While on a lone hunting excursion near the o_c_n border, you hear someone call out your name. On the border sits a o_c_n cat you've been friendly with at Gatherings, and they want to say hello!"
         ],
@@ -636,8 +634,8 @@
                         ],
                         "backstory": [
                             "otherclan1",
-                            " otherclan2",
-                            " otherclan7"
+                            "otherclan2",
+                            "otherclan7"
                         ]
                     }
                 },
@@ -711,7 +709,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "warrior",
@@ -825,7 +823,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "rank": [
                     "warrior",
@@ -835,13 +833,12 @@
                 "cluster": [
                     "silly"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "relationships": [
             {
                 "cats_from": [
-                    "y_c"
+                    "p_l"
                 ],
                 "cats_to": [
                     "r_c0"
@@ -857,7 +854,7 @@
             "You're enjoying a meal during a calm, snowy day in camp when suddenly, you receive a sharp and cold <i>thwap</i> to the back of your head. You turn to see r_c0 with a pawful of snow, snickering to {PRONOUN/r_c0/self}."
         ],
         "decline_strings": [
-            "You pick up your fresh-kill and head inside to finish it, ignoring your friend's disappointed face. {PRONOUN/p_l:0/subject/CAP} should know not to mess with a cat's mealtime!"
+            "You pick up your fresh-kill and head inside to finish it, ignoring your friend's disappointed face. {PRONOUN/r_c0/subject/CAP} should know not to mess with a cat's mealtime!"
         ],
         "success_outcomes": [
             {
@@ -923,8 +920,7 @@
                     "apprentice",
                     "deputy"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "lg_default_sc",
@@ -932,7 +928,7 @@
             "Dusk brings a surprise: you spot r_c0 making {PRONOUN/r_c0/poss} way to the Moonplace. You're unsure if you're even allowed to communicate with r_c0 - it's rare for StarClan to speak with anycat other than a leader or medicine cat, but surely ordinary warriors sometimes need guidance from their ancestors, too."
         ],
         "decline_strings": [
-            "Unsure what to do, you call over your fellow StarClan residents to let them know. Some other cat can decide how to respond to p_l:0."
+            "Unsure what to do, you call over your fellow StarClan residents to let them know. Some other cat can decide how to respond to r_c0."
         ],
         "success_outcomes": [
             {
@@ -994,8 +990,7 @@
                 "rank": [
                     "apprentice"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "lg_default_df",
@@ -1003,7 +998,7 @@
             "As you wander aimlessly through the Dark Forest, you spot an apprentice from c_n. {PRONOUN/r_c0/subject/CAP}{VERB/r_c0/'re/'s} alone, ears pinned back as {PRONOUN/r_c0/subject} cautiously {VERB/r_c0/sniff/sniffs} around the unforgiving landscape. You can't help but wonder if the apprentice has gotten lost."
         ],
         "decline_strings": [
-            "You flick your tail dismissively and continue on your way. If the apprentice can't find {PRONOUN/p_l:0/poss} way out, why should that be your problem?"
+            "You flick your tail dismissively and continue on your way. If the apprentice can't find {PRONOUN/r_c0/poss} way out, why should that be your problem?"
         ],
         "success_outcomes": [
             {
@@ -1110,9 +1105,7 @@
                 "standing": [
                     "lost"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "lg_default_df",
@@ -1120,7 +1113,7 @@
             "While just idly causing minor chaos, you stumble across r_c0 searching for a cat named r_c1. {PRONOUN/r_c0/subject/CAP} {VERB/r_c0/appear/appears} alone, and suddenly, you feel a large grin creep onto your face. This would be a great opportunity to have some fun!"
         ],
         "decline_strings": [
-            "Despite your initial excitement, even you can realize that getting in the way of p_l:0's search is not appropriate. You'd look for p_l:1 too, if you cared. Oh well!"
+            "Despite your initial excitement, even you can realize that getting in the way of r_c0's search is not appropriate. You'd look for p_l:1 too, if you cared. Oh well!"
         ],
         "success_outcomes": [
             {
@@ -1224,7 +1217,7 @@
                     "r_c1"
                 ],
                 "cats_to": [
-                    "y_c"
+                    "p_l"
                 ],
                 "relationship": [
                     "min_like_20"
@@ -1309,7 +1302,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {},
+            "p_l": {},
             "r_c0": {
                 "residence": [
                     "df"
@@ -1425,6 +1418,9 @@
         "types": [
             "lifegen"
         ],
+        "tags": [
+            "ur_lifegen"
+        ],
         "frequency": 4,
         "required_cat_types": {
             "patrol_cats": [
@@ -1433,9 +1429,9 @@
             ]
         },
         "random_cats": {
-            "y_c": {
-                "group": [
-                    "unknown_residence"
+            "p_l": {
+                "residence": [
+                    "ur"
                 ]
             }
         },
@@ -1478,6 +1474,9 @@
         "types": [
             "lifegen"
         ],
+        "tags": [
+            "sc_lifegen"
+        ],
         "frequency": 4,
         "required_cat_types": {
             "patrol_cats": [
@@ -1490,7 +1489,7 @@
             ]
         },
         "random_cats": {
-            "y_c": {
+            "p_l": {
                 "group": [
                     "starclan"
                 ]

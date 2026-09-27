@@ -749,7 +749,7 @@
         }
     },
     {
-        "id": "skill_sc_h1",
+        "event_id": "skill_sc_h1",
         "strings": [
             "Approves of StarClans theme of, well, stars",
             "Is a bit disappointed StarClan doesn't have proper dens to decorate",
@@ -772,7 +772,7 @@
         }
     },
     {
-        "id": "skill_sc_h2",
+        "event_id": "skill_sc_h2",
         "strings": [
             "Is a bit disappointed StarClan doesn't have proper dens",
             "Attempts to make a den out of the clouds",
@@ -791,7 +791,7 @@
         }
     },
     {
-        "id": "skill_camp_h1",
+        "event_id": "skill_camp_h1",
         "strings": [
             "Gives r_c dreams of a spectacular structural design",
             "Hopes r_c takes care of the dens in {PRONOUN/m_c/poss} steed",
@@ -818,7 +818,7 @@
         }
     },
     {
-        "id": "skill_sc_h3",
+        "event_id": "skill_sc_h3",
         "strings": [
             "Makes a game of guessing what c_n is going to do next",
             "Is in a perpetual state of second-hand embarrassment as c_n, once again, fails to see what is right in front of them"
@@ -837,7 +837,7 @@
         }
     },
     {
-        "id": "skill_sc_h4",
+        "event_id": "skill_sc_h4",
         "strings": [
             "Is quite happy about always being clean",
             "Thanks {PRONOUN/m_c/poss} lucky stars for not having to deal with the Dark Forests horrendous goop",

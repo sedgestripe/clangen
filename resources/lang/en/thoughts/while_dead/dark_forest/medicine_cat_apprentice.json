@@ -1,6 +1,6 @@
 [
     {
-        "id": "medicineapp_dark_forest_thoughts",
+        "event_id": "medicineapp_dark_forest_thoughts",
         "strings": [
             "Knows StarClan has abandoned {PRONOUN/m_c/object}",
             "Claims that StarClan never guided {PRONOUN/m_c/poss} paws",

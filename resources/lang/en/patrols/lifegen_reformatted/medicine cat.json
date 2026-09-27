@@ -562,8 +562,7 @@
                 "rank": [
                     "warrior"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "lg_medcat_default",
@@ -571,7 +570,7 @@
             "r_c0 enters your den complaining of pain and asking for some herbs that might help. When you ask what happened, though, {PRONOUN/r_c0/subject} {VERB/r_c0/clam/clams} up, seemingly too embarrassed to admit why {PRONOUN/r_c0/subject} {VERB/r_c0/need/needs} the herbs."
         ],
         "decline_strings": [
-            "Between your typical duties and the number of cats in the medicine den today, you don't have time to drag the story out of {PRONOUN/p_l:0/object}. Shaking your head, you tell p_l:0 that you aren't able to help."
+            "Between your typical duties and the number of cats in the medicine den today, you don't have time to drag the story out of {PRONOUN/r_c0/object}. Shaking your head, you tell r_c0 that you aren't able to help."
         ],
         "success_outcomes": [
             {

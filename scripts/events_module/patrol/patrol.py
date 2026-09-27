@@ -10,7 +10,7 @@ from typing import List, Tuple, Optional, Union, Literal, TypedDict
 import pygame
 
 from scripts.cat.cats import Cat
-from scripts.cat.enums import CatAge, CatRank, CatCompatibility
+from scripts.cat.enums import CatAge, CatRank, CatCompatibility, CatGroup
 from scripts.cat_relations.enums import RelType
 from scripts.clan import get_temper_alignment
 from scripts.clan_resources.point_of_interest import get_poi_from_constraints
@@ -108,6 +108,7 @@ class Patrol:
         :param patrol_type: Type of patrol
         """
         self.debug_patrol_id = get_config("patrol_generation.debug_ensure.patrol_id")
+        print("Debug patrol ID:", self.debug_patrol_id)
 
         print("PATROL START ---------------------------------------------------")
 
@@ -137,15 +138,22 @@ class Patrol:
             )
 
         # LG
-        full_cat_dict = self.involved_cats.copy()
-        for abbr, cat in self.patrol_event.chosen_lifegen_cats.items():
-            full_cat_dict[abbr] = cat
+        if switch_get_value(Switch.patrol_category) != "clangen":
+            self.involved_cats["patrol_cats"].remove(game.clan.your_cat)
+            for i, cat_obj in enumerate(self.involved_cats["patrol_cats"]):
+                print("Adding", cat_obj.name, "as", f"r_c{i}")
+                self.involved_cats[f"r_c{i}"] = cat_obj
+
+            for abbr, cat in self.patrol_event.chosen_lifegen_cats.items():
+                if abbr not in self.involved_cats:
+                    self.involved_cats[abbr] = cat
+            self.involved_cats["p_l"] = game.clan.your_cat
         # ---
         # Return text adjusted patrol intro
         return event_text_adjust(
             Cat,
             choice(self.patrol_event.intro_strings),
-            involved_cat_dict=full_cat_dict,
+            involved_cat_dict=self.involved_cats,
             clan=game.clan,
             other_clan=self.other_clan,
             chosen_poi=self.chosen_poi,
@@ -161,11 +169,7 @@ class Patrol:
                 print(
                     f"PATROL ID: {self.patrol_event.event_id} | SUCCESS: N/A (did not proceed)"
                 )
-                # LG
                 full_cat_dict = self.involved_cats.copy()
-                for abbr, cat in self.patrol_event.chosen_lifegen_cats.items():
-                    full_cat_dict[abbr] = cat
-                # ---
                 return (
                     event_text_adjust(
                         Cat,
@@ -412,7 +416,6 @@ class Patrol:
                 p, patrol_type, is_debug_patrol=p.event_id == self.debug_patrol_id
             )
         ]
-        print("Patrol Num:", len(possible_patrols))
         # make sure the hunting and herb patrols are balanced
         if patrol_type == "hunting" and not self.debug_patrol_id:
             possible_patrols = self._balance_hunting(possible_patrols)
@@ -431,6 +434,12 @@ class Patrol:
         print(
             f"Total Number of Possible Patrols | normal: {len(normal_patrols)}, romantic: {len(romantic_patrols)} "
         )
+
+        patrol_ids = [
+            p.event_id for p in normal_patrols + romantic_patrols
+        ]
+        print("Possible patrols:", patrol_ids)
+        print("Debug:", self.debug_patrol_id, (self.debug_patrol_id in patrol_ids))
 
         # GET PATROL
         chosen_patrol: Optional[PatrolEvent] = None
@@ -498,15 +507,34 @@ class Patrol:
         self.involved_cats = involved_cats
         return chosen_patrol
 
-    @staticmethod
+    # @staticmethod
     def _check_patrol_type(
         self, patrol: PatrolEvent, patrol_type: str, is_debug_patrol: bool
     ) -> bool:
         # CHECK PATROL TYPE
-        if patrol_type not in patrol.types:
-            if is_debug_patrol:
-                print("DEBUG: requested patrol does not meet constraints (patrol type)")
-            return False
+        if switch_get_value(Switch.patrol_category) == "clangen":
+            # we dgaf about patrol types
+            if patrol_type not in patrol.types:
+                if is_debug_patrol:
+                    print("DEBUG: requested patrol does not meet constraints (patrol type)")
+                return False
+        else:
+            if game.clan.your_cat.status.group == CatGroup.DARK_FOREST:
+                if "df_lifegen" not in patrol.tags:
+                    return False
+            elif game.clan.your_cat.status.group == CatGroup.UNKNOWN_RESIDENCE:
+                if "ur_lifegen" not in patrol.tags:
+                    return False
+            elif game.clan.your_cat.status.group == CatGroup.STARCLAN:
+                if "sc_lifegen" not in patrol.tags:
+                    return False
+            else:
+                if "df_lifegen" in patrol.tags:
+                    return False
+                if "ur_lifegen" in patrol.tags:
+                    return False
+                if "sc_lifegen" in patrol.tags:
+                    return False
 
         # ? idk
         if switch_get_value(Switch.patrol_category) != "clangen":
@@ -638,16 +666,10 @@ class Patrol:
             f"Outcome Frequency: {chosen_outcome.frequency} | Outcome Weight: {chosen_outcome.weight}"
         )
 
-        # LG
-        full_cat_dict = self.outcome_cats["success" if success else "failure"].copy()
-        for abbr, cat in self.patrol_event.chosen_lifegen_cats.items():
-            full_cat_dict[abbr] = cat
-        # ---
-
         # Run the chosen outcome
         return handle_consequences.execute_outcome(
             chosen_outcome,
-            full_cat_dict,
+            self.involved_cats,
             self.other_clan,
             self.chosen_poi,
         ) + (self.get_patrol_art(chosen_outcome),)
@@ -658,6 +680,11 @@ class Patrol:
         """Returns both the chosen outcome, and a boolean that's True if success, and False if failure."""
 
         patrol_size = len(self.patrol_cats)
+        # lg fuckery
+        if patrol_size == 0:
+            print("self.patrol_cats is empty?", self.patrol_cats)
+            patrol_size = 1
+        # ---
         total_exp = sum([x.experience for x in self.patrol_cats])
         path = (
             "patrol_generation.classic_difficulty_modifier"
@@ -849,6 +876,7 @@ class Patrol:
         # print("LG CAT FINDING", patrol.random_cats)
         return_dict = {}
         for abbrev in patrol.random_cats:
+            # LG TODO fix
             return_dict[abbrev] = random.choice(find_alive_cats_with_rank(Cat, [CatRank.WARRIOR]))
 
         # print("Returning dict:", return_dict)

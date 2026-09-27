@@ -1,6 +1,6 @@
 [
     {
-        "id": "gen_queen's_apprentice",
+        "event_id": "gen_queen's_apprentice",
         "strings": [
             "Soaks up knowledge about nurturing kits",
             "Is learning the subtle art of comforting upset kits",
@@ -23,7 +23,7 @@
         ]
     },
     {
-        "id": "flamboyant_queen's_apprentice",
+        "event_id": "flamboyant_queen's_apprentice",
         "strings": [
             "Engages the kits in an epic story game",
             "Enacts a theatric tale for all to watch",

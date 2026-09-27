@@ -117,6 +117,24 @@
         "-otherclan3",
         "otherclan4",
         "-otherclan4",
+        "otherclan5",
+        "-otherclan5",
+        "otherclan6",
+        "-otherclan6",
+        "otherclan7",
+        "-otherclan7",
+        "otherclan8",
+        "-otherclan8",
+        "otherclan9",
+        "-otherclan9",
+        "otherclan10",
+        "-otherclan10",
+        "otherclan11",
+        "-otherclan11",
+        "otherclan12",
+        "-otherclan12",
+        "otherclan13",
+        "-otherclan13",
         "ostracized_warrior",
         "-ostracized_warrior",
         "disgraced1",
@@ -182,7 +200,39 @@
         "baby_loner_backstories",
         "-baby_loner_backstories",
         "baby_kittypet_backstories",
-        "-baby_kittypet_backstories"
+        "-baby_kittypet_backstories",
+        "oldstarclan1",
+        "oldstarclan2",
+        "oldstarclan3",
+        "oldstarclan_backstories",
+        "dfkit1",
+        "dfkit2",
+        "dark_forest_kits",
+        "newscguide1",
+        "newscguide2",
+        "newscguide3",
+        "newscguide4",
+        "new_sc_guide_backstories",
+        "newdfguide1",
+        "newdfguide2",
+        "newdfguide3",
+        "newdfguide4",
+        "new_df_guide_backstories",
+        "dead1",
+        "dead2",
+        "dead3",
+        "dead4",
+        "dead5",
+        "dead6",
+        "dead7",
+        "dead8",
+        "dead9",
+        "dead10",
+        "dead11",
+        "dead12",
+        "dead_cat_backstories",
+        "starclan_backstories",
+        "df_backstories"
       ],
       "title": "Backstory",
       "type": "string"
@@ -247,7 +297,7 @@
           "$ref": "#/$defs/CatEnum"
         },
         {
-          "pattern": "^n_c:[0-9]+$",
+          "pattern": "^(n_c:|r_c:|o_c)[0-9]+$",
           "type": "string"
         }
       ],
@@ -367,6 +417,14 @@
           "$ref": "#/$defs/NameCheckDict",
           "description": "Constrain per specific name states",
           "title": "Name"
+        },
+        "min_max_faith": {
+          "description": "Cat faith",
+          "items": {
+            "type": "integer"
+          },
+          "title": "Min Max Faith",
+          "type": "array"
         }
       },
       "title": "CatDict",
@@ -854,7 +912,7 @@
           "$ref": "#/$defs/GatherCatEnum"
         },
         {
-          "pattern": "^-?n_c:[0-9]+$",
+          "pattern": "^(n_c:|r_c:|o_c)[0-9]+$",
           "type": "string"
         },
         {
@@ -874,6 +932,8 @@
         "-p_l",
         "s_c",
         "-s_c",
+        "y_c",
+        "-y_c",
         "clan",
         "-clan",
         "some_clan",
@@ -1274,7 +1334,21 @@
         "bossy",
         "-bossy",
         "noisy",
-        "-noisy"
+        "-noisy",
+        "smug",
+        "-smug",
+        "secretive",
+        "-secretive",
+        "manipulative",
+        "-manipulative",
+        "leader-like",
+        "-leader-like",
+        "passionate",
+        "-passionate",
+        "rebellious",
+        "-rebellious",
+        "honest",
+        "-honest"
       ],
       "title": "KitTrait",
       "type": "string"
@@ -1344,7 +1418,14 @@
         "healer cats",
         "normal adult",
         "all apprentices",
-        "patrol_cats"
+        "patrol_cats",
+        "kitten",
+        "mediator",
+        "queen",
+        "mediator apprentice",
+        "queen's apprentice",
+        "elder",
+        "df"
       ],
       "title": "MinMaxStatusDictKey",
       "type": "string"
@@ -1533,6 +1614,74 @@
           "description": "Used to add constraints for the various involved cats.",
           "title": "Involved Cats"
         },
+        "stat_residence": {
+          "description": "Dead residence the stat cat must be a part of.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Stat Residence",
+          "type": "array"
+        },
+        "stat_cluster": {
+          "description": "Cluster the stat cat must be a part of.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Stat Cluster",
+          "type": "array"
+        },
+        "stat_faith": {
+          "description": "Faith range the stat cat must be a part of.",
+          "items": {
+            "type": "integer"
+          },
+          "title": "Stat Faith",
+          "type": "array"
+        },
+        "murder": {
+          "description": "Indicates which cats will be murdered and by who.",
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Murder",
+          "type": "array"
+        },
+        "accessory": {
+          "description": "Indicates accessories gained from the outcome.",
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Accessory",
+          "type": "array"
+        },
+        "faith_effects": {
+          "description": "Indicates faith effects given.",
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Faith Effects",
+          "type": "array"
+        },
+        "convert": {
+          "description": "Indicates which cats were converted to the Dark Forest.",
+          "items": {
+            "type": "string"
+          },
+          "title": "Convert",
+          "type": "array"
+        },
+        "faith_effect": {
+          "description": "Indicates faith effects caused by the outcome.",
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Faith Effect",
+          "type": "array"
+        },
         "required_cat_types": {
           "additionalProperties": {
             "maxItems": 2,
@@ -1663,6 +1812,21 @@
           "title": "Required Cat Types",
           "type": "object"
         },
+        "random_cats": {
+          "additionalProperties": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "description": "LIFEGNE: Randomly mentioned cats.",
+          "title": "Random Cats",
+          "type": "object"
+        },
+        "relationships": {
+          "description": "LIFEGEN: Specified relationships between randomly mentioned cats.",
+          "items": {},
+          "title": "Relationships",
+          "type": "array"
+        },
         "frequency": {
           "default": 4,
           "description": "Controls how common a patrol is. 4 is the most common, 1 is the least.",
@@ -1767,7 +1931,10 @@
         "hunting",
         "herb_gathering",
         "border",
-        "training"
+        "training",
+        "lifegen",
+        "df",
+        "date"
       ],
       "title": "PatrolType",
       "type": "string"
@@ -2196,6 +2363,8 @@
         "exiled",
         "-left",
         "-lost",
+        "-exiled",
+        "shunned",
         "-exiled"
       ],
       "title": "Standing",
@@ -2287,6 +2456,10 @@
         "-leader",
         "elder",
         "-elder",
+        "queen",
+        "queen's apprentice",
+        "-queen",
+        "-queen's apprentice",
         "any",
         "kittypet",
         "-kittypet",
@@ -2394,7 +2567,12 @@
         "halloween",
         "april_fools",
         "new_years",
-        "disaster"
+        "disaster",
+        "shunned",
+        "df_lifegen",
+        "ur_lifegen",
+        "sc_lifegen",
+        "mc_death"
       ],
       "title": "TagEnum",
       "type": "string"
@@ -2520,7 +2698,45 @@
         "-gloomy",
         "-sincere",
         "-flamboyant",
-        "-rebellious"
+        "-rebellious",
+        "mellow",
+        "flexible",
+        "stoic",
+        "witty",
+        "methodical",
+        "aloof",
+        "justified",
+        "reserved",
+        "meek",
+        "cowardly",
+        "emotional",
+        "spontaneous",
+        "energetic",
+        "bouncy",
+        "trusting",
+        "disciplined",
+        "patient",
+        "humble",
+        "obsessive",
+        "-mellow",
+        "-flexible",
+        "-stoic",
+        "-witty",
+        "-methodical",
+        "-aloof",
+        "-justified",
+        "-reserved",
+        "-meek",
+        "-cowardly",
+        "-emotional",
+        "-spontaneous",
+        "-energetic",
+        "-bouncy",
+        "-trusting",
+        "-disciplined",
+        "-patient",
+        "-humble",
+        "-obsessive"
       ],
       "title": "Trait",
       "type": "string"

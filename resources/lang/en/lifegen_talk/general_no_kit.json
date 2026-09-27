@@ -7060,7 +7060,7 @@
                     "cool"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },
@@ -32805,7 +32805,7 @@
             },
             "t_c": {
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ],
                 "standing": [
                     "member",
@@ -37112,7 +37112,7 @@
                     "not_kitten"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ],
                 "standing": [
                     "member",
@@ -37147,7 +37147,7 @@
                     "not_kitten"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -37179,7 +37179,7 @@
                     "not_kitten"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -37216,7 +37216,7 @@
                 ],
                 "rank": [
                     "medicine cat",
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -37253,7 +37253,7 @@
                 ],
                 "rank": [
                     "warrior",
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -37332,7 +37332,7 @@
         "cats": {
             "y_c": {
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -37556,7 +37556,7 @@
                     "adult"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ],
                 "standing": [
                     "member",
@@ -37588,7 +37588,7 @@
                     "adult"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },
@@ -37615,7 +37615,7 @@
                     "adult"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },
@@ -37650,7 +37650,7 @@
                     "not_kitten"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },
@@ -37701,7 +37701,7 @@
                     "not_kitten"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },
@@ -37747,7 +37747,7 @@
                     "blind:any:false"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },
@@ -39029,7 +39029,7 @@
                     "unlawful"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },
@@ -44199,7 +44199,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -44220,7 +44220,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -44246,7 +44246,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -44272,7 +44272,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -45601,7 +45601,7 @@
                     "STORY,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },
@@ -51501,7 +51501,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -51523,7 +51523,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -51547,7 +51547,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -51572,7 +51572,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -51596,7 +51596,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -53104,7 +53104,7 @@
                     "adult"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },
@@ -62081,7 +62081,7 @@
                     "not_kitten"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "r_c:0": {

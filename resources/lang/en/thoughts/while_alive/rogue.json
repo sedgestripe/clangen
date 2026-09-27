@@ -30,7 +30,7 @@
         }
     },
     {
-        "id": "vengeful_rogue",
+        "event_id": "vengeful_rogue",
         "strings": [
             "Wants vengeance on {PRONOUN/m_c/poss} past Clan"
         ],
@@ -45,7 +45,7 @@
         }
     },
     {
-        "id": "strange_rogue",
+        "event_id": "strange_rogue",
         "strings": [
             "Crowns {PRONOUN/m_c/self} the ruler of all rogues"
         ],
@@ -60,7 +60,7 @@
         }
     },
     {
-        "id": "shameless_rogue",
+        "event_id": "shameless_rogue",
         "strings": [
             "Is eating kittypet kibble",
             "Stole some random kittypet's food",
@@ -78,7 +78,7 @@
         }
     },
     {
-        "id": "cold_rogue",
+        "event_id": "cold_rogue",
         "strings": [
             "Thinks about how {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} need anyone else"
         ],

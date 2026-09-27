@@ -6912,7 +6912,7 @@
                     "blind:any:false"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {

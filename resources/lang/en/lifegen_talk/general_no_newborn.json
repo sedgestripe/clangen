@@ -4930,7 +4930,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -4953,7 +4953,7 @@
                     "DARK,1"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {

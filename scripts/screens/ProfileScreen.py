@@ -1320,8 +1320,8 @@ class ProfileScreen(Screens):
         )
         # NEWLINE ----------
 
-        # LG: edited
         if the_cat.pelt.accessory:
+            cats_accs = list(deepcopy(the_cat.pelt.accessory))
             acc_list = []
             if sprites.COLLAR_DATA["palette_map"]:
                 for acc in the_cat.pelt.accessory:

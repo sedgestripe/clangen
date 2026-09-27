@@ -629,9 +629,7 @@
                 "rank": [
                     "warrior"
                 ]
-            },
-            "r_c0": {},
-            "r_c1": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "DefaultDeputy",
@@ -639,7 +637,7 @@
             "As you're leaving your den in the morning to assemble dawn patrols, r_c0 stops you, apologises for bothering you, and asks not to be put on patrol with r_c1 this morning."
         ],
         "decline_strings": [
-            "You wave p_l:0 off. All Clanmates must learn to work together, and if they end up on patrol together, {PRONOUN/p_l:0/subject}'ll have to deal with it!"
+            "You waver_c0 off. All Clanmates must learn to work together, and if they end up on patrol together, {PRONOUN/r_c0/subject}'ll have to deal with it!"
         ],
         "success_outcomes": [
             {
@@ -697,7 +695,7 @@
                 "relationship_changes": [
                     {
                         "cats_to": [
-                            "p_l"
+                            "r_c1"
                         ],
                         "cats_from": [
                             "r_c0"
@@ -752,7 +750,7 @@
             "It's frigid this morning. Your Clanmates wake with numb paws and drops of their breath frozen to their whiskers. You've organized a morning border patrol, but you're not sure whether to tell its members to stay home for their safety."
         ],
         "decline_strings": [
-            "You decide to let p_l:0 figure out this one. You have a lot of other things to do today."
+            "You decide to let r_c0 figure out this one. You have a lot of other things to do today."
         ],
         "success_outcomes": [
             {
@@ -845,8 +843,7 @@
                 "rank": [
                     "deputy"
                 ]
-            },
-            "r_c0": {}
+            }
         },
         "chance_of_success": 50,
         "patrol_art": "dead_patrol_J3",
@@ -854,7 +851,7 @@
             "Today, you've found yourself watching c_n through a puddle during a Clan meeting. You listen closely as r_c0 assembles today's patrols. Wait-- no, no, no! {PRONOUN/r_c0/subject/CAP}{VERB/r_c0/'re/'s} doing it all wrong!"
         ],
         "decline_strings": [
-            "You decide to walk away from the puddle and leave p_l:0 to it. If {PRONOUN/p_l:0/subject} {VERB/p_l:0/want/wants} to create inefficient patrols, that's {PRONOUN/p_l:0/poss} business."
+            "You decide to walk away from the puddle and leave r_c0 to it. If {PRONOUN/r_c0/subject} {VERB/r_c0/want/wants} to create inefficient patrols, that's {PRONOUN/r_c0/poss} business."
         ],
         "success_outcomes": [
             {
