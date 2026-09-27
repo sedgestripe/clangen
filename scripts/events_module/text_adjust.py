@@ -792,11 +792,13 @@ def ceremony_text_adjust(main_cat_trait: str, old_name: str, text: str):
     Handles the small ceremony-specific text adjustments. This being the random honors and the old name.
     """
     # get random honor!
+    # lg edited a bit
     if "r_h" in text:
-        try:
-            honors = load_lang_resource("events/ceremonies/ceremony_traits.json")
+        honors = load_lang_resource("events/ceremonies/ceremony_traits.json")
+        if main_cat_trait in honors:
             random_honor = choice(honors[main_cat_trait])
-        except FileNotFoundError or KeyError:
+        else:
+            print("Trait", main_cat_trait, "has no random honours!")
             random_honor = i18n.t("defaults.ceremony_honor")
 
         text = text.replace("r_h", random_honor)
