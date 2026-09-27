@@ -351,6 +351,10 @@ class Clan:
         self.add_cat(self.demon)
         self.all_other_clans = []
 
+        if not your_cat:
+            # for tests that create clans
+            your_cat = NewCatFactory.create_cat(rank=CatRank.KITTEN, moons=1)
+
         self.your_cat = your_cat
         if unborn:
             self.your_cat.moons = -1
