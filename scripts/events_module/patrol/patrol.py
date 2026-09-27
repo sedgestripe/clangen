@@ -438,8 +438,6 @@ class Patrol:
         patrol_ids = [
             p.event_id for p in normal_patrols + romantic_patrols
         ]
-        print("Possible patrols:", patrol_ids)
-        print("Debug:", self.debug_patrol_id, (self.debug_patrol_id in patrol_ids))
 
         # GET PATROL
         chosen_patrol: Optional[PatrolEvent] = None
