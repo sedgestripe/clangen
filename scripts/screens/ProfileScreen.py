@@ -56,9 +56,7 @@ from ..ui.icon import Icon
 from ..ui.windows.leave_clan import LeaveClanWindow
 from scripts.cat.sprites.display_sprites import generate_sprite
 from scripts.cat.skills import SkillPath
-from scripts.events_module.pregnancy.check_parents import (
-    check_if_can_have_kits
-)
+from scripts.events_module.pregnancy.check_parents import check_if_can_have_kits
 from scripts.lifegen_utility import get_cluster
 
 
@@ -3323,9 +3321,7 @@ class ProfileScreen(Screens):
             )
             self.have_kits_button.disable()
             if (
-                check_if_can_have_kits(
-                    cat=self.the_cat
-                )
+                check_if_can_have_kits(cat=self.the_cat)
                 and self.the_cat.status.alive_in_player_clan
                 and not switch_get_value(Switch.have_kits)
             ):

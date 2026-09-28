@@ -477,9 +477,8 @@ def event_for_cat(
         "has_apprentice": _check_cat_apprentice,
         "current_exp": _check_cat_exp,
         "name": _check_cat_name,
-
         # LG
-        "residence": _check_cat_residence
+        "residence": _check_cat_residence,
     }
 
     for param, func in func_lookup.items():
@@ -559,6 +558,7 @@ def _check_cat_name(cat, name_check: dict) -> bool:
 
     return True
 
+
 def _check_cat_residence(cat, residences: list) -> bool:
     # lifegen
     # this would be better in group but im in too deep now........
@@ -569,7 +569,7 @@ def _check_cat_residence(cat, residences: list) -> bool:
     res_dict = {
         "sc": CatGroup.STARCLAN,
         "ur": CatGroup.UNKNOWN_RESIDENCE,
-        "df": CatGroup.DARK_FOREST
+        "df": CatGroup.DARK_FOREST,
     }
     found_res = False
     for r in res_dict:
@@ -578,6 +578,7 @@ def _check_cat_residence(cat, residences: list) -> bool:
                 found_res = True
                 break
     return found_res
+
 
 def _check_cat_exp(cat, current_exp: list[str]) -> bool:
     if not current_exp:

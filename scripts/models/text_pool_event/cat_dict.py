@@ -81,7 +81,4 @@ class CatDict(BaseModel):
     )
 
     # LG
-    min_max_faith: List[int] | MISSING = Field(
-        MISSING,
-        description="Cat faith"
-    )
+    min_max_faith: List[int] | MISSING = Field(MISSING, description="Cat faith")

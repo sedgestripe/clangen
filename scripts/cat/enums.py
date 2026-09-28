@@ -201,6 +201,7 @@ class CatGroup(StrEnum):
             else:
                 return_groups.append(all_groups[i])
         return return_groups
+
     # ---
 
     def is_ID(self) -> bool:

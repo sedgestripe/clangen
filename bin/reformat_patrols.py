@@ -147,14 +147,22 @@ def reformat():
             if p.get("relationships"):
                 reformatted_patrol["relationships"] = p.get("relationships")
 
-            abbrevs = ["r_c:0", "r_c:1", "r_c:2", "r_c:3", "r_c:0", "r_c:1", "r_c:2", "r_c:3"]
+            abbrevs = [
+                "r_c:0",
+                "r_c:1",
+                "r_c:2",
+                "r_c:3",
+                "r_c:0",
+                "r_c:1",
+                "r_c:2",
+                "r_c:3",
+            ]
             for abbr in abbrevs:
                 if abbr in p.get("intro_text"):
                     if reformatted_patrol.get("random_cats"):
                         abbr = abbr.replace(":", "")
                         if abbr not in reformatted_patrol["random_cats"]:
                             reformatted_patrol["random_cats"][abbr] = {}
-
 
             text_to_search = p.get("intro_text") + p.get("decline_text")
             if "r_c" in text_to_search and p.get("max_cats") != 1:
@@ -591,10 +599,14 @@ def reformat_outcome(
         reformatted_outcome["condition"] = outcome.get("injury")
         for i, cond in enumerate(reformatted_outcome["condition"]):
             if "injuries" in cond:
-                reformatted_outcome["condition"][i]["condition"] = reformatted_outcome["condition"][i]["injuries"]
+                reformatted_outcome["condition"][i]["condition"] = reformatted_outcome[
+                    "condition"
+                ][i]["injuries"]
                 reformatted_outcome["condition"][i].pop("injuries")
             if "scars" in cond:
-                reformatted_outcome["condition"][i]["scar_pool_override"] = reformatted_outcome["condition"][i]["scars"]
+                reformatted_outcome["condition"][i][
+                    "scar_pool_override"
+                ] = reformatted_outcome["condition"][i]["scars"]
                 reformatted_outcome["condition"][i].pop("scars")
         reformatted_outcome.pop("injury")
 
@@ -657,7 +669,9 @@ def second_reformat():
             if "intro_text" in reformatted_patrol:
                 reformatted_patrol["intro_text"] = [reformatted_patrol["intro_text"]]
             if "decline_text" in reformatted_patrol:
-                reformatted_patrol["decline_text"] = [reformatted_patrol["decline_text"]]
+                reformatted_patrol["decline_text"] = [
+                    reformatted_patrol["decline_text"]
+                ]
 
             new_patrols.append(reformatted_patrol)
 

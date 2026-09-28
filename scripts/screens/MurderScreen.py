@@ -2777,7 +2777,10 @@ class MurderScreen(Screens):
                 text = text + f" Your attempt on their life has left {c_m} injured."
 
         game.cur_events_list.insert(
-            0, EventInformation(text, ["health"], [game.clan.your_cat.ID, cat_to_murder.ID])
+            0,
+            EventInformation(
+                text, ["health"], [game.clan.your_cat.ID, cat_to_murder.ID]
+            ),
         )
 
     status_chances = {

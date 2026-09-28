@@ -812,7 +812,7 @@ def gather_cat_objects(
     event,
     extra_cat=None,
     involved_cats: Optional[dict] = None,
-    dialogue_dict={}
+    dialogue_dict={},
 ) -> list:
     """
     gathers cat objects from list of abbreviations used within an event format block
@@ -997,7 +997,9 @@ def unpack_rel_block(
         cats_from_ob = gather_cat_objects(
             Cat, cats_from, event, extra_cat, involved_cats, dialogue_dict
         )
-        cats_to_ob = gather_cat_objects(Cat, cats_to, event, extra_cat, involved_cats, dialogue_dict)
+        cats_to_ob = gather_cat_objects(
+            Cat, cats_to, event, extra_cat, involved_cats, dialogue_dict
+        )
 
         # get rid of any Nones that might have snuck in
         cats_from_ob = [c for c in cats_from_ob if c is not None]

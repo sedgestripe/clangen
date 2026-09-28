@@ -34,7 +34,9 @@ def get_patrol_list(
     if switch_get_value(Switch.patrol_category) == "clangen":
         # TYPE PATROL
         biome = (
-            game.clan.biome if not game.clan.override_biome else game.clan.override_biome
+            game.clan.biome
+            if not game.clan.override_biome
+            else game.clan.override_biome
         )
         biome = biome.casefold()
         season = game.clan.current_season.casefold()
@@ -44,27 +46,37 @@ def get_patrol_list(
             # only one that doesn't match its path sadly
             patrol_type = "med"
 
-        possible_patrols.extend(_get_all_patrols_of_type(patrol_type, biome, path, season))
+        possible_patrols.extend(
+            _get_all_patrols_of_type(patrol_type, biome, path, season)
+        )
 
         # OTHER CLAN
         possible_patrols.extend(_load_file(f"{path}other_clan.json"))
         if other_clan_rep != "neutral":
-            possible_patrols.extend(_load_file(f"{path}other_clan_{other_clan_rep}.json"))
+            possible_patrols.extend(
+                _load_file(f"{path}other_clan_{other_clan_rep}.json")
+            )
 
         # OUTSIDER
         if outsider_rep:
             possible_patrols.extend(_load_file(f"{path}new_cat.json"))
             if outsider_rep != "neutral":
-                possible_patrols.extend(_load_file(f"{path}new_cat_{outsider_rep}.json"))
+                possible_patrols.extend(
+                    _load_file(f"{path}new_cat_{outsider_rep}.json")
+                )
 
         # DISASTERS
         if get_clan_setting("disasters"):
             possible_patrols.extend(_load_file(f"{path}disaster.json"))
     elif switch_get_value(Switch.patrol_category) == "lifegen":
-        possible_patrols.extend(_load_file(f"{path}lifegen/{game.clan.your_cat.status.rank}.json"))
+        possible_patrols.extend(
+            _load_file(f"{path}lifegen/{game.clan.your_cat.status.rank}.json")
+        )
         possible_patrols.extend(_load_file(f"{path}lifegen/general.json"))
     else:
-        possible_patrols.extend(_load_file(f"{path}lifegen/{switch_get_value(Switch.patrol_category)}.json"))
+        possible_patrols.extend(
+            _load_file(f"{path}lifegen/{switch_get_value(Switch.patrol_category)}.json")
+        )
 
     return possible_patrols
 

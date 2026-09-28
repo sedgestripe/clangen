@@ -135,7 +135,9 @@ class DeathScreen(GameWindow):
 
                 revival_json = load_lang_resource("events/lifegen_events/revival.json")
 
-                game.cur_events_list.append(EventInformation(choice(revival_json), "alert"))
+                game.cur_events_list.append(
+                    EventInformation(choice(revival_json), "alert")
+                )
                 self.begin_anew_button.kill()
                 self.pick_path_message.kill()
                 self.switch_cats_button.kill()

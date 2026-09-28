@@ -38,7 +38,7 @@ def get_kits(
     cat: Optional[Cat] = None,
     other_cat: Optional[Cat] = None,
     adoptive_parents: Optional[list] = None,
-    creating_your_siblings = False
+    creating_your_siblings=False,
 ):
     """
     Create some amount of kits

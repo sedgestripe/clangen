@@ -93,7 +93,9 @@ def generate_sprite(
 
     # generating the sprite
     try:
-        new_sprite = _draw_sprite(cat, cat_sprite, scars_hidden, dead, acc_hidden, only_accessory)
+        new_sprite = _draw_sprite(
+            cat, cat_sprite, scars_hidden, dead, acc_hidden, only_accessory
+        )
     except:
         traceback.print_exc()
         logger.exception("Failed to load sprite")
@@ -112,7 +114,12 @@ def generate_sprite(
 
 
 def _draw_sprite(
-    cat, cat_sprite: int, scars_hidden: bool, dead: bool, acc_hidden: bool, only_accessory: bool
+    cat,
+    cat_sprite: int,
+    scars_hidden: bool,
+    dead: bool,
+    acc_hidden: bool,
+    only_accessory: bool,
 ):
     # new_sprite = pygame.Surface(
     #        (sprites.size, sprites.size), pygame.HWSURFACE | pygame.SRCALPHA
@@ -336,8 +343,8 @@ def _draw_sprite(
     # LG edit
     # accessories r on a new sprite for inventory display reasons
     acc_sprite = pygame.Surface(
-            (sprites.size, sprites.size), pygame.HWSURFACE | pygame.SRCALPHA
-        )
+        (sprites.size, sprites.size), pygame.HWSURFACE | pygame.SRCALPHA
+    )
     if not acc_hidden and cat.pelt.accessory:
         cat_accessories = cat.pelt.accessory
         categories = [

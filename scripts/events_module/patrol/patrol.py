@@ -19,7 +19,7 @@ from scripts.events_module.consequences import gather_cat_objects
 from scripts.events_module.event_filters import (
     check_relationship_value,
     get_personality_compatibility,
-    event_for_cat
+    event_for_cat,
 )
 from scripts.events_module.patrol.enums import PatrolChoice
 from scripts.events_module.patrol.generate_patrol_list import (
@@ -40,7 +40,11 @@ from scripts.events_module.text_pool_event.text_pool_event import TextPoolEvent
 from scripts.game_structure import game
 from scripts.game_structure.game.settings import game_setting_get
 from scripts.special_dates import SpecialDate, is_today
-from scripts.game_structure.game.switches import switch_set_value, switch_get_value, Switch
+from scripts.game_structure.game.switches import (
+    switch_set_value,
+    switch_get_value,
+    Switch,
+)
 from scripts.clan_package.get_clan_cats import (
     get_living_clan_cat_count,
     find_alive_cats_with_rank,
@@ -100,7 +104,6 @@ class Patrol:
             "outcome_cats", {"success": dict[str, Cat], "failure": dict[str, Cat]}
         ) = {"success": {}, "failure": {}}
         self.chosen_poi = None
-        
 
     def begin_patrol(self, patrol_cats: List[Cat], patrol_type: str) -> str:
         """
@@ -446,9 +449,7 @@ class Patrol:
             f"Total Number of Possible Patrols | normal: {len(normal_patrols)}, romantic: {len(romantic_patrols)} "
         )
 
-        patrol_ids = [
-            p.event_id for p in normal_patrols + romantic_patrols
-        ]
+        patrol_ids = [p.event_id for p in normal_patrols + romantic_patrols]
 
         # GET PATROL
         chosen_patrol: Optional[PatrolEvent] = None
@@ -525,7 +526,9 @@ class Patrol:
             # we dgaf about patrol types
             if patrol_type not in patrol.types:
                 if is_debug_patrol:
-                    print("DEBUG: requested patrol does not meet constraints (patrol type)")
+                    print(
+                        "DEBUG: requested patrol does not meet constraints (patrol type)"
+                    )
                 return False
         else:
             # this sucks
@@ -896,7 +899,7 @@ class Patrol:
     def get_lifegen_patrol_cats(self, patrol):
         return_dict = {}
         test_cats = Cat.all_cats_list.copy()
-            
+
         for abbrev in patrol.random_cats:
             shuffle(test_cats)
             found_cat = None
@@ -904,14 +907,16 @@ class Patrol:
                 if not event_for_cat(
                     cat_info=patrol.random_cats[abbrev],
                     cat=i,
-                    p_l=self.involved_cats["p_l"]
+                    p_l=self.involved_cats["p_l"],
                 ):
                     continue
                 found_cat = i
                 break
             # LG TODO fix
             if not found_cat:
-                found_cat = random.choice(find_alive_cats_with_rank(Cat, [CatRank.WARRIOR]))
+                found_cat = random.choice(
+                    find_alive_cats_with_rank(Cat, [CatRank.WARRIOR])
+                )
             return_dict[abbrev] = found_cat
 
         return return_dict

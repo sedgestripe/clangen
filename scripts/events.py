@@ -1029,7 +1029,9 @@ def gain_acc():
     string = string.replace(
         "acc_singular", str(i18n.t(get_acc_name(acc).lower(), count=1))
     )
-    game.cur_events_list.insert(0, EventInformation(string, "alert", game.clan.your_cat.ID))
+    game.cur_events_list.insert(
+        0, EventInformation(string, "alert", game.clan.your_cat.ID)
+    )
 
 
 def get_acc_name(acc):
@@ -1093,7 +1095,7 @@ def generate_birth_event():
             cat=parent1,
             other_cat=parent2,
             adoptive_parents=adoptive_parents,
-            creating_your_siblings=True
+            creating_your_siblings=True,
         )
         for kit in kits:
             kit.status = deepcopy(game.clan.your_cat.status)
@@ -1901,7 +1903,10 @@ def generate_app_ceremony():
         )
 
         game.cur_events_list.insert(
-            0, EventInformation(ceremony_txt, ["alert", "ceremony"], game.clan.your_cat.ID)
+            0,
+            EventInformation(
+                ceremony_txt, ["alert", "ceremony"], game.clan.your_cat.ID
+            ),
         )
     except Exception as e:
         print("ERROR with app ceremony" + str(e))
@@ -2074,7 +2079,10 @@ def check_gain_app(checks):
             ceremony_txt,
         )
         game.cur_events_list.insert(
-            0, EventInformation(ceremony_txt, ["alert", "ceremony"], game.clan.your_cat.ID)
+            0,
+            EventInformation(
+                ceremony_txt, ["alert", "ceremony"], game.clan.your_cat.ID
+            ),
         )
 
 
@@ -3437,7 +3445,9 @@ def handle_disaster(current_disaster, resource=[]):
             secondary_event_string = ongoing_event_text_adjust(
                 Cat, secondary_event_string
             )
-            game.cur_events_list.append(EventInformation(secondary_event_string, "alert"))
+            game.cur_events_list.append(
+                EventInformation(secondary_event_string, "alert")
+            )
     else:
         event_string = random.choice(current_disaster["conclusion_events"])
         game.clan.disaster_moon = 0
@@ -3475,7 +3485,10 @@ def handle_disaster_impacts(current_disaster):
             if random.randint(1, 10) != 1:
                 if "injuries" in current_disaster["collateral_damage"]:
                     get_injured(
-                        cat, random.choice(current_disaster["collateral_damage"]["injuries"])
+                        cat,
+                        random.choice(
+                            current_disaster["collateral_damage"]["injuries"]
+                        ),
                     )
             else:
                 if "deaths" in current_disaster["collateral_damage"]:
@@ -3702,12 +3715,15 @@ def handle_outbreaks(cat):
             # game.health_events_list.append(event)
             break
 
+
 def change_group_events(new_group_ID):
     """
     LG: Events for when the MC successfully switches groups.
     """
     event = "You have joined a new group: " + game.used_group_IDs[new_group_ID]
-    game.cur_events_list.append(EventInformation(event, "alert", [game.clan.your_cat.ID]))
+    game.cur_events_list.append(
+        EventInformation(event, "alert", [game.clan.your_cat.ID])
+    )
 
 
 def exile_or_forgive(cat):
@@ -3760,7 +3776,9 @@ def exile_or_forgive(cat):
             clan=game.clan,
         )
 
-    game.cur_events_list.insert(0, EventInformation(text, ["alert", "misc"], involved_cats))
+    game.cur_events_list.insert(
+        0, EventInformation(text, ["alert", "misc"], involved_cats)
+    )
 
 
 def generate_faith_events(cat):
@@ -3773,6 +3791,7 @@ def generate_faith_events(cat):
     create_short_event(
         event_type="faith", main_cat=cat, random_cat=random_cat, sub_type=[]
     )
+
 
 def check_leader():
     """Checks if leader is missing."""
