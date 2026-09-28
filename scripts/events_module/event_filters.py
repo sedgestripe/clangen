@@ -458,6 +458,10 @@ def event_for_cat(
     func_lookup = {
         "age": _check_cat_age,
         "status": _check_cat_status,
+        # LG
+        # we use rank lol. i suck
+        "rank": _check_cat_status,
+        # ---
         "past_status": _check_cat_status_history,
         "stat": _check_cat_stat,  # TODO: should eventually replace "trait" and "skill"
         "trait": _check_cat_trait,
