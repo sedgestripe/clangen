@@ -1359,7 +1359,7 @@
                     "not_kitten"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "r_c:0": {
@@ -3499,7 +3499,7 @@
                     "not_kitten"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },
@@ -3533,7 +3533,7 @@
                     "apprentice",
                     "deputy",
                     "leader",
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "t_c": {
@@ -3649,7 +3649,7 @@
             },
             "t_c": {
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },

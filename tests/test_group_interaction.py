@@ -1,4 +1,3 @@
-import os
 import unittest
 from random import Random
 
@@ -11,11 +10,9 @@ from scripts.events_module.parameter_dicts import (
     RelationshipConstraintDict,
 )
 from scripts.events_module.relationship import generate_group_event
-from scripts.events_module.text_pool_event import TextPoolEvent
+from scripts.events_module.text_pool_event.text_pool_event import TextPoolEvent
 from scripts.game_structure import game
 
-os.environ["SDL_VIDEODRIVER"] = "dummy"
-os.environ["SDL_AUDIODRIVER"] = "dummy"
 
 from scripts.cat.factories.new_cat_factory import NewCatFactory
 from scripts.cat.cats import Relationship, Cat
@@ -61,7 +58,7 @@ class MainCatFiltering(unittest.TestCase):
         # test main cat needs a status and no one else
         with self.subTest("main cat needs certain status"):
             event1 = TextPoolEvent(
-                id="warrior",
+                event_id="warrior",
                 strings=["status"],
                 involved_cats={
                     "m_c": InvolvedCatDict(status=["warrior"]),
@@ -70,7 +67,7 @@ class MainCatFiltering(unittest.TestCase):
                 },
             )
             event2 = TextPoolEvent(
-                id="leader",
+                event_id="leader",
                 strings=["status"],
                 involved_cats={
                     "m_c": InvolvedCatDict(status=["leader"]),
@@ -88,7 +85,7 @@ class MainCatFiltering(unittest.TestCase):
         # test main cat and 2 random cats need a status
         with self.subTest("main cat and random cats need certain status"):
             event1 = TextPoolEvent(
-                id="2war_1app",
+                event_id="2war_1app",
                 strings=["status"],
                 involved_cats={
                     "m_c": InvolvedCatDict(status=["warrior"]),
@@ -97,7 +94,7 @@ class MainCatFiltering(unittest.TestCase):
                 },
             )
             event2 = TextPoolEvent(
-                id="lead_dep_war",
+                event_id="lead_dep_war",
                 strings=["status"],
                 involved_cats={
                     "m_c": InvolvedCatDict(status=["leader"]),
@@ -119,7 +116,7 @@ class MainCatFiltering(unittest.TestCase):
         # test main cat and multi_cat needs a status
         with self.subTest("main cat and multi cats need certain status"):
             event1 = TextPoolEvent(
-                id="war_meddies",
+                event_id="war_meddies",
                 strings=["status"],
                 involved_cats={
                     "m_c": InvolvedCatDict(status=["warrior"]),
@@ -127,7 +124,7 @@ class MainCatFiltering(unittest.TestCase):
                 },
             )
             event2 = TextPoolEvent(
-                id="leader_war",
+                event_id="leader_war",
                 strings=["status"],
                 involved_cats={
                     "m_c": InvolvedCatDict(status=["leader"]),
@@ -166,7 +163,7 @@ class MainCatFiltering(unittest.TestCase):
                 cat_from=main_cat, cat_to=rand2, like=-30
             )
             event1 = TextPoolEvent(
-                id="main_likes_random1",
+                event_id="main_likes_random1",
                 strings=["test"],
                 involved_cats={
                     "m_c": {},
@@ -189,7 +186,7 @@ class MainCatFiltering(unittest.TestCase):
                 ],
             )
             event2 = TextPoolEvent(
-                id="random2_likes_main",
+                event_id="random2_likes_main",
                 strings=["test"],
                 involved_cats={
                     "m_c": {},
@@ -231,7 +228,7 @@ class MainCatFiltering(unittest.TestCase):
             )
 
             event1 = TextPoolEvent(
-                id="many_likes_random1",
+                event_id="many_likes_random1",
                 strings=["test"],
                 involved_cats={"m_c": {}, "r_c1": {}, "r_c2": {}, "multi_cat": {}},
                 relationship_constraint=[
@@ -250,7 +247,7 @@ class MainCatFiltering(unittest.TestCase):
                 ],
             )
             event2 = TextPoolEvent(
-                id="many_likes_main",
+                event_id="many_likes_main",
                 strings=["test"],
                 involved_cats={"m_c": {}, "r_c1": {}, "r_c2": {}, "multi_cat": {}},
                 relationship_constraint=[
@@ -291,7 +288,7 @@ class MainCatFiltering(unittest.TestCase):
             )
 
             event1 = TextPoolEvent(
-                id="many_likes_random1",
+                event_id="many_likes_random1",
                 strings=["test"],
                 involved_cats={"m_c": {}, "r_c1": {}, "r_c2": {}, "multi_cat": {}},
                 relationship_constraint=[
@@ -310,7 +307,7 @@ class MainCatFiltering(unittest.TestCase):
                 ],
             )
             event2 = TextPoolEvent(
-                id="many_likes_main",
+                event_id="many_likes_main",
                 strings=["test"],
                 involved_cats={"m_c": {}, "r_c1": {}, "r_c2": {}, "multi_cat": {}},
                 relationship_constraint=[

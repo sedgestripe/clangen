@@ -1,6 +1,6 @@
 [
     {
-        "id": "general_med_cat_app_to_dead_starclan_newborn1",
+        "event_id": "general_med_cat_app_to_dead_starclan_newborn1",
         "strings": [
             "Wonders if {PRONOUN/m_c/subject} would have gotten the chance to do r_c's first check-up",
             "Can still smell the bitter herbs that {PRONOUN/m_c/subject} desperately fetched to try and save r_c's life",
@@ -35,7 +35,7 @@
         }
     },
     {
-        "id": "plain_med_cat_app_to_dead_starclan_newborn",
+        "event_id": "plain_med_cat_app_to_dead_starclan_newborn",
         "location": [
             "plains"
         ],
@@ -62,7 +62,7 @@
         }
     },
     {
-        "id": "med_cat_app_dead_app",
+        "event_id": "med_cat_app_dead_app",
         "strings": [
             "Is wondering if r_c would have been {PRONOUN/m_c/poss} friend",
             "Wonders if {PRONOUN/m_c/subject} would have swapped secrets with r_c"
@@ -81,7 +81,7 @@
         }
     },
     {
-        "id": "med_cat_app_gen",
+        "event_id": "med_cat_app_gen",
         "strings": [
             "Is wondering if {PRONOUN/m_c/subject} {VERB/m_c/are/is} good enough to become a medicine cat",
             "Helps apply a poultice to a small wound",
@@ -100,6 +100,12 @@
             "Is memorizing all the places catmint grows",
             "Wonders if StarClan will send {PRONOUN/m_c/object} a practice sign before a real one",
             "Is neatly stacking bundles of herbs after drying",
+            "Is cleaning out a patients bedding",
+            "Is clearing pests out of the herb stores",
+            "Is soaking moss balls",
+            "Is learning how to prepare a poultice",
+            "Is learning the right amount of herbs to use to treat different illnesses",
+            "Is counting herbs",
             "Helps apply a poultice to a small wound",
             "Is counting the numbers of herbs left",
             "Rounding out rowdy kits from the medicine den",
@@ -108,7 +114,7 @@
         ]
     },
     {
-        "id": "med_cat_alive_apprentice",
+        "event_id": "med_cat_alive_apprentice",
         "strings": [
             "Wonders if r_c would have been a better healer",
             "Wishes the other apprentices could understand how {PRONOUN/m_c/subject} {VERB/m_c/feel/feels}",
@@ -131,7 +137,7 @@
         }
     },
     {
-        "id": "medicine_cat_apprentice_alive_elder",
+        "event_id": "medicine_cat_apprentice_alive_elder",
         "strings": [
             "Was asked to gather fresh moss for the elders' bedding",
             "Plans to visit the elders soon",
@@ -157,7 +163,7 @@
         }
     },
     {
-        "id": "medicine_cat_apprentice_to_medicine_cat",
+        "event_id": "medicine_cat_apprentice_to_medicine_cat",
         "strings": [
             "Wants to help r_c gather fresh herbs",
             "Is watching r_c work",
@@ -183,7 +189,7 @@
         }
     },
     {
-        "id": "insecure_medicine_cat_apprentice",
+        "event_id": "insecure_medicine_cat_apprentice",
         "strings": [
             "Is wondering if {PRONOUN/m_c/subject} {VERB/m_c/are/is} a good enough medicine cat apprentice",
             "Is always worrying about {PRONOUN/m_c/poss} patients",
@@ -213,7 +219,7 @@
         }
     },
     {
-        "id": "meanie_medicine_cat_apprentice",
+        "event_id": "meanie_medicine_cat_apprentice",
         "strings": [
             "Is hoping {PRONOUN/m_c/poss} medicine cat name will end in -claw",
             "Wants to learn some battle moves... just in case",
@@ -238,7 +244,7 @@
         }
     },
     {
-        "id": "loving_medicine_cat_apprentice",
+        "event_id": "loving_medicine_cat_apprentice",
         "strings": [
             "Couldn't stand the sight of seeing beloved Clanmates limping towards the medicine den",
             "Gave a soft lick to a  wound, hoping it'll heal faster",
@@ -259,7 +265,7 @@
         }
     },
     {
-        "id": "grumpy_medicine_cat_apprentice",
+        "event_id": "grumpy_medicine_cat_apprentice",
         "strings": [
             "Told {PRONOUN/m_c/poss} Clanmate that they either eat the pungent herbs or don't get healed at all",
             "Coldly called a Clanmate a mouse-brain for getting injured so easily",
@@ -282,7 +288,7 @@
         }
     },
     {
-        "id": "arrogant_medicine_cat_apprentice",
+        "event_id": "arrogant_medicine_cat_apprentice",
         "strings": [
             "Smugly believes {PRONOUN/m_c/subject} can deny helping Clanmates {PRONOUN/m_c/subject} dislikes",
             "Thinks that since {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a medicine apprentice, {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} better than the other apprentices",
@@ -303,7 +309,7 @@
         }
     },
     {
-        "id": "rebellious_medicine_cat_apprentice",
+        "event_id": "rebellious_medicine_cat_apprentice",
         "strings": [
             "Is a bit skeptical of StarClan's intentions",
             "Snuck into a rival Clan's territory to steal plants and repot it in c_n's territory for later uses",
@@ -322,7 +328,7 @@
         }
     },
     {
-        "id": "lonesome_medicine_cat_apprentice",
+        "event_id": "lonesome_medicine_cat_apprentice",
         "strings": [
             "Feels more at home in the medicine den than anywhere else",
             "Quickly tries to heal injuries so cats can leave {PRONOUN/m_c/object} alone",
@@ -342,7 +348,7 @@
         }
     },
     {
-        "id": "strange_medicine_cat_apprentice",
+        "event_id": "strange_medicine_cat_apprentice",
         "strings": [
             "Told {PRONOUN/m_c/poss} Clanmates {PRONOUN/m_c/subject} could see dead StarClan cats dancing",
             "Was taste-testing berries",
@@ -361,7 +367,7 @@
         }
     },
     {
-        "id": "childish_medicine_cat_apprentice",
+        "event_id": "childish_medicine_cat_apprentice",
         "strings": [
             "Is telling jokes to sick Clanmates to brighten their day",
             "Covers {PRONOUN/m_c/self} with sticks and plants",
@@ -380,7 +386,7 @@
         }
     },
     {
-        "id": "mellow_medicine_cat_apprentice",
+        "event_id": "mellow_medicine_cat_apprentice",
         "strings": [
             "Is giving an injured Clanmate company with small talk",
             "Can easily wrap a wound in a single blink",
@@ -399,7 +405,7 @@
         }
     },
     {
-        "id": "flamboyant_medicine_cat_apprentice",
+        "event_id": "flamboyant_medicine_cat_apprentice",
         "strings": [
             "Proudly claims {PRONOUN/m_c/subject} can see r_c's future yet loudly vows silence.",
             "Is embellishing the epic tale of how {PRONOUN/m_c/subject} snuck honey from right under a hoard of angry bees",
@@ -423,7 +429,7 @@
         }
     },
     {
-        "id": "bold_medicine_cat_apprentice",
+        "event_id": "bold_medicine_cat_apprentice",
         "strings": [
             "Even if sick {PRONOUN/m_c/self}, {PRONOUN/m_c/subject} still wants to help {PRONOUN/m_c/poss} Clan",
             "Sneaks {PRONOUN/m_c/poss} way into a neighboring Clan to find rare herbs",
@@ -442,7 +448,7 @@
         }
     },
     {
-        "id": "daring_medicine_cat_apprentice",
+        "event_id": "daring_medicine_cat_apprentice",
         "strings": [
             "Brings back a bundle of random herbs sticking out from {PRONOUN/m_c/poss} mouth",
             "Believes {PRONOUN/m_c/subject} will tackle any unexpected sickness with {PRONOUN/m_c/poss} eyes closed",
@@ -461,7 +467,7 @@
         }
     },
     {
-        "id": "stoic_medicine_cat_apprentice",
+        "event_id": "stoic_medicine_cat_apprentice",
         "strings": [
             "Isn't seem bothered by the sick cats, very sure they'll be healed",
             "Doesn't twitch a whisker while witnessing a Clanmate writhe in pain",
@@ -478,7 +484,7 @@
         }
     },
     {
-        "id": "adventurous_medicine_cat_apprentice",
+        "event_id": "adventurous_medicine_cat_apprentice",
         "strings": [
             "Is taking the task of gathering herbs in dangerous heights",
             "Hopes the remedies are far so {PRONOUN/m_c/subject} can explore",
@@ -496,7 +502,7 @@
         }
     },
     {
-        "id": "charismatic_medicine_cat_apprentice",
+        "event_id": "charismatic_medicine_cat_apprentice",
         "strings": [
             "Knows the right words to calm down a crying kit to check their wounds",
             "Is trying to bribe the StarClan cats for a clearer message of omens",
@@ -513,7 +519,7 @@
         }
     },
     {
-        "id": "nice_medicine_cat_apprentice",
+        "event_id": "nice_medicine_cat_apprentice",
         "strings": [
             "Is vowing to help any cat in need",
             "Is looking to StarClan for guidance in a difficult decision",
@@ -536,7 +542,7 @@
         }
     },
     {
-        "id": "nice_medicine_cat_apprentice_to_meanie_med",
+        "event_id": "nice_medicine_cat_apprentice_to_meanie_med",
         "strings": [
             "Is unsure of r_c's treatment methods",
             "Wonders why r_c decided to be a medicine cat",
@@ -575,7 +581,7 @@
         }
     },
     {
-        "id": "medicine_cat_apprentice_meanie_to_meanie_med",
+        "event_id": "medicine_cat_apprentice_meanie_to_meanie_med",
         "strings": [
             "Is plotting the downfall of c_n with r_c",
             "Is meeting secretly with r_c to discuss a new 'treatment' method",
@@ -616,7 +622,7 @@
         }
     },
     {
-        "id": "meanie_medicine_cat_apprentice_to_nice_med",
+        "event_id": "meanie_medicine_cat_apprentice_to_nice_med",
         "strings": [
             "Thinks r_c is far too soft with {PRONOUN/r_c/poss} patients",
             "Wishes r_c wasn't so soft",
@@ -656,7 +662,7 @@
         }
     },
     {
-        "id": "med_cat_app_to_dead_SC_kit",
+        "event_id": "med_cat_app_to_dead_SC_kit",
         "strings": [
             "Is wondering if r_c would have bothered {PRONOUN/m_c/object} while {PRONOUN/m_c/subject} {VERB/m_c/were/was} sorting herbs",
             "Wonders if {PRONOUN/m_c/subject} would have had to treat r_c for kittencough",
@@ -674,7 +680,7 @@
         }
     },
     {
-        "id": "general_med_cat_app_to_dead_starclan_newborn1",
+        "event_id": "general_med_cat_app_to_dead_starclan_newborn1",
         "strings": [
             "Wonders if {PRONOUN/m_c/subject} would have gotten the chance to do r_c's first check-up",
             "Can still smell the bitter herbs that {PRONOUN/m_c/subject} desperately fetched to try and save r_c's life",
@@ -709,7 +715,7 @@
         }
     },
     {
-        "id": "plain_med_cat_app_to_dead_starclan_newborn",
+        "event_id": "plain_med_cat_app_to_dead_starclan_newborn",
         "location": [
             "plains"
         ],
@@ -736,7 +742,7 @@
         }
     },
     {
-        "id": "med_cat_app_dead_app",
+        "event_id": "med_cat_app_dead_app",
         "strings": [
             "Is wondering if r_c would have been {PRONOUN/m_c/poss} friend",
             "Wonders if {PRONOUN/m_c/subject} would have swapped secrets with r_c"
@@ -756,7 +762,7 @@
         }
     },
     {
-        "id": "med_cat_app_to_alive_non-medcat_crush",
+        "event_id": "med_cat_app_to_alive_non-medcat_crush",
         "strings": [
             "Brags to r_c about the important work {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} doing",
             "Gives r_c a tour of the medicine cat den to impress {PRONOUN/r_c/object}",

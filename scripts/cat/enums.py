@@ -202,6 +202,16 @@ class CatGroup(StrEnum):
                 return_groups.append(all_groups[i])
         return return_groups
 
+    # ---
+
+    def is_ID(self) -> bool:
+        return self in (
+            self.PLAYER_CLAN_ID,
+            self.STARCLAN_ID,
+            self.UNKNOWN_RESIDENCE_ID,
+            self.DARK_FOREST_ID,
+        )
+
 
 class CatCompatibility(Enum):
     NEGATIVE = auto()

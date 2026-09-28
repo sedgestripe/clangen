@@ -3852,7 +3852,7 @@
                 "rank": [
                     "medicine cat",
                     "medicine cat apprentice",
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             }
         },

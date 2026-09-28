@@ -19,9 +19,11 @@ from scripts.cat.cats import Cat, BACKSTORIES
 from scripts.clan_resources.freshkill import FRESHKILL_ACTIVE
 from scripts.game_structure import image_cache, game
 from scripts.ui.windows.cruel_locked_action import CruelLockedAction
+from ..events_module.thoughts.generate_thoughts import get_new_thought
 from ..ui.elements.modified_image import UIModifiedImage
 from ..ui.elements.text_box_tweaked import UITextBoxTweaked
 from ..ui.elements.image_button import UIImageButton
+from ..ui.elements.checkbox import UICheckbox
 from ..ui.elements.surface_image_button import UISurfaceImageButton
 from ..ui.theme import get_text_box_theme
 from ..events_module.text_adjust import (
@@ -54,7 +56,7 @@ from ..ui.icon import Icon
 from ..ui.windows.leave_clan import LeaveClanWindow
 from scripts.cat.sprites.display_sprites import generate_sprite
 from scripts.cat.skills import SkillPath
-from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
+from scripts.events_module.pregnancy.check_parents import check_if_can_have_kits
 from scripts.lifegen_utility import get_cluster
 
 
@@ -119,13 +121,11 @@ class ProfileScreen(Screens):
     def __init__(self, name=None):
         super().__init__(name)
         self.condition_data = {}
-        self.show_moons = None
-        self.no_moons = None
+        self.history_tab_checkbox = None
         self.help_button = None
         self.open_sub_tab = None
         self.editing_notes = False
         self.user_notes = None
-        self.save_text = None
         self.not_fav_tab = None
         self.fav_tab = None
         self.edit_text = None
@@ -555,7 +555,7 @@ class ProfileScreen(Screens):
                 elif self.the_cat.genderalign in ["trans female", "trans male"]:
                     self.the_cat.genderalign = "nonbinary"
                 self.the_cat.pronouns = get_new_pronouns(self.the_cat.genderalign)
-                self.the_cat.get_new_thought()
+                self.the_cat.assign_thought()
                 self.clear_profile()
                 self.build_profile()
                 self.update_disabled_buttons_and_text()
@@ -624,9 +624,10 @@ class ProfileScreen(Screens):
 
                         # refresh the guide's thought to reflect the new allegiance
                         if self.the_cat == game.clan.instructor:
-                            self.the_cat.get_new_thought(CatThought.IS_GUIDE)
+                            self.the_cat.assign_thought(CatThought.IS_GUIDE)
                         else:
-                            self.the_cat.get_new_thought(CatThought.IS_DF_GUIDE)
+                            self.the_cat.assign_thought(CatThought.IS_DF_GUIDE)
+                        self.the_cat.pelt.rebuild_sprite = True
                     else:
                         game.updated_afterlife_cats.add(self.the_cat)
                         # DF -> UR
@@ -644,8 +645,7 @@ class ProfileScreen(Screens):
                             self.the_cat.status.add_to_group(
                                 new_group_ID=CatGroup.DARK_FOREST_ID
                             )
-                        self.the_cat.history.reconcile_afterlife_acceptance()
-                        self.the_cat.get_new_thought(CatThought.ON_AFTERLIFE_CHANGE)
+                        self.the_cat.assign_thought(CatThought.ON_AFTERLIFE_CHANGE)
                         self.the_cat.pelt.rebuild_sprite = True
 
                 self.clear_profile()
@@ -661,14 +661,20 @@ class ProfileScreen(Screens):
                     self.display_notes.kill()
                     if self.edit_text:
                         self.edit_text.kill()
-                    if self.save_text:
-                        self.save_text.kill()
                     self.help_button.kill()
                 self.open_sub_tab = "life events"
                 self.toggle_history_sub_tab()
             elif event.ui_element == self.sub_tab_2:
                 if self.open_sub_tab == "life events":
                     self.history_text_box.kill()
+                    if self.history_tab_checkbox.checked:
+                        self.history_tab_checkbox.set_tooltip(
+                            "screens.profile.text_entry_edit_tooltip"
+                        )
+                    else:
+                        self.history_tab_checkbox.set_tooltip(
+                            "screens.profile.text_entry_save_tooltip"
+                        )
                 self.open_sub_tab = "user notes"
                 self.toggle_history_sub_tab()
             elif event.ui_element == self.fav_tab:
@@ -679,23 +685,36 @@ class ProfileScreen(Screens):
                 switch_set_value(Switch.favorite_sub_tab, self.open_sub_tab)
                 self.fav_tab.show()
                 self.not_fav_tab.hide()
-            elif event.ui_element == self.save_text:
-                self.user_notes = sub(
-                    r"[^A-Za-z0-9<->/.()*'&#!?,| _+=@~:;[]{}%$^`]+",
-                    "",
-                    self.notes_entry.get_text(),
-                )
-                self.save_user_notes()
-                self.editing_notes = False
-                self.update_disabled_buttons_and_text()
-            elif event.ui_element == self.edit_text:
-                self.editing_notes = True
-                self.update_disabled_buttons_and_text()
-            elif event.ui_element == self.no_moons:
-                switch_set_value(Switch.show_history_moons, True)
-                self.update_disabled_buttons_and_text()
-            elif event.ui_element == self.show_moons:
-                switch_set_value(Switch.show_history_moons, False)
+            elif event.ui_element == self.history_tab_checkbox:
+                if self.open_sub_tab == "life events":
+                    if self.history_tab_checkbox.checked:
+                        switch_set_value(Switch.show_history_moons, False)
+                        self.history_tab_checkbox.uncheck()
+                    else:
+                        switch_set_value(Switch.show_history_moons, True)
+                        self.history_tab_checkbox.check()
+                        self.history_tab_checkbox.set_tooltip(
+                            "screens.profile.show_moons_tooltip"
+                        )
+                if self.open_sub_tab == "user notes":
+                    if self.history_tab_checkbox.checked:
+                        self.editing_notes = True
+                        self.history_tab_checkbox.uncheck()
+                        self.history_tab_checkbox.set_tooltip(
+                            "screens.profile.text_entry_save_tooltip"
+                        )
+                    else:
+                        self.user_notes = sub(
+                            r"[^A-Za-z0-9<->/.()*'&#!?,| _+=@~:;[]{}%$^`]+",
+                            "",
+                            self.notes_entry.get_text(),
+                        )
+                        self.save_user_notes()
+                        self.editing_notes = False
+                        self.history_tab_checkbox.check()
+                        self.history_tab_checkbox.set_tooltip(
+                            "screens.profile.text_entry_edit_tooltip"
+                        )
                 self.update_disabled_buttons_and_text()
 
         # Conditions Tab
@@ -899,21 +918,10 @@ class ProfileScreen(Screens):
 
         # initialize thoughts if they have none
         if not self.the_cat.thought:
-            if self.the_cat is game.clan.instructor:
-                self.the_cat.get_new_thought(CatThought.IS_GUIDE)
-            elif self.the_cat is game.clan.demon:
-                self.the_cat.get_new_thought(CatThought.IS_DF_GUIDE)
-            elif self.the_cat.status.is_other_clancat:
-                # this isn't great, but it's only being run if someone checks an
-                # other clan cat when booting the game before doing a timeskip
-                other_clan_cats = [
-                    c for c in Cat.all_cats_list if c.status.is_other_clancat
-                ]
-                self.the_cat.get_new_thought(other_clan_cats=other_clan_cats)
-            elif self.the_cat.dead:
-                self.the_cat.get_new_thought(CatThought.WHILE_DEAD)
-            else:
-                self.the_cat.get_new_thought(CatThought.WHILE_ALIVE)
+            if not self.the_cat.next_thought_type:
+                self.the_cat.assign_thought()
+
+            get_new_thought(self.the_cat, self.the_cat.next_thought_type)
 
         # Info in string
         cat_name = str(self.the_cat.name)
@@ -1310,11 +1318,27 @@ class ProfileScreen(Screens):
         )
         # NEWLINE ----------
 
-        # LG: edited
         if the_cat.pelt.accessory:
+            cats_accs = list(deepcopy(the_cat.pelt.accessory))
             acc_list = []
-            for acc in the_cat.pelt.accessory:
-                acc_list.append(self.get_acc_name(acc).lower())
+            if sprites.COLLAR_DATA["palette_map"]:
+                for acc in the_cat.pelt.accessory:
+                    potential_collar = "".join(
+                        [x for x in acc if not x.islower() and not x.isdigit()]
+                    ).strip("_")
+                    for style in Pelt.collar_styles:
+                        if style == potential_collar:
+                            acc_list.append(
+                                i18n.t(f"cat.accessories.{potential_collar}", count=0)
+                            )
+                            cats_accs.remove(acc)
+                            break
+                    if acc_list:
+                        break
+
+            acc_list.extend(
+                [i18n.t(f"cat.accessories.{acc}", count=0) for acc in cats_accs]
+            )
             output += "\n"
             output += i18n.t(
                 "screens.profile.accessory_label",
@@ -1860,17 +1884,9 @@ class ProfileScreen(Screens):
                 self.history_text_box = pygame_gui.elements.UITextBox(
                     "", ui_scale(pygame.Rect((40, 240), (307, 71))), manager=MANAGER
                 )
-                self.no_moons = UIImageButton(
-                    ui_scale(pygame.Rect((52, 514), (34, 34))),
-                    "",
-                    object_id="@unchecked_checkbox",
-                    tool_tip_text="screens.profile.no_moons_tooltip",
-                    manager=MANAGER,
-                )
-                self.show_moons = UIImageButton(
-                    ui_scale(pygame.Rect((52, 514), (34, 34))),
-                    "",
-                    object_id="@checked_checkbox",
+                self.history_tab_checkbox = UICheckbox(
+                    position=(52, 514),
+                    check=Switch.show_history_moons,
                     tool_tip_text="screens.profile.show_moons_tooltip",
                     manager=MANAGER,
                 )
@@ -1949,32 +1965,6 @@ class ProfileScreen(Screens):
 
         elif self.open_sub_tab == "user notes":
             self.toggle_user_notes_tab()
-
-    # LG
-    def get_acc_name(self, acc):
-        """grabs accessory names for display in the customiser"""
-        acc_name = str(i18n.t(f"cat.accessories.{acc}", count=0)).capitalize()
-        collar_found = False
-        if acc in Pelt.collar_accessories:
-            for style_type in sprites.COLLAR_DATA["style_data"]:
-                for style, color_list in style_type.items():
-                    for colour in color_list:
-                        if f"{style}_{colour}" == acc:
-                            collar_found = True
-                            acc_name = str(
-                                i18n.t(f"cat.accessories.{style}", count=1)
-                            ).capitalize()
-                            break
-                        if collar_found:
-                            break
-                    if collar_found:
-                        break
-                if collar_found:
-                    break
-
-                # wtaf
-
-        return acc_name
 
     def get_all_history_text(self):
         """Generates a string with all important history information."""
@@ -3148,10 +3138,11 @@ class ProfileScreen(Screens):
             pass
         else:
             self.open_tab = "dangerous"
-            self.exile_cat_button = UIImageButton(
+            self.exile_cat_button = UISurfaceImageButton(
                 ui_scale(pygame.Rect((578, 450), (172, 36))),
                 "screens.profile.exile",
-                object_id="#exile_cat_button",
+                get_button_dict(ButtonStyles.LADDER_TOP, (172, 36)),
+                object_id="@buttonstyles_ladder_top",
                 tool_tip_text="screens.profile.exile_tooltip",
                 starting_height=2,
                 manager=MANAGER,
@@ -3330,12 +3321,7 @@ class ProfileScreen(Screens):
             )
             self.have_kits_button.disable()
             if (
-                Pregnancy_Events.check_if_can_have_kits(
-                    cat=self.the_cat,
-                    allow_single_parent=get_clan_setting("single parentage"),
-                    allow_unmated=True,
-                    allow_affair=get_clan_setting("affair"),
-                )
+                check_if_can_have_kits(cat=self.the_cat)
                 and self.the_cat.status.alive_in_player_clan
                 and not switch_get_value(Switch.have_kits)
             ):
@@ -3415,7 +3401,7 @@ class ProfileScreen(Screens):
                 self.exile_layer.kill()
             self.exile_cat_button = UISurfaceImageButton(
                 ui_scale(pygame.Rect((578, 450), (172, 36))),
-                "",
+                "screens.profile.exile",
                 get_button_dict(ButtonStyles.LADDER_TOP, (172, 36)),
                 object_id="@buttonstyles_ladder_top",
                 tool_tip_text=(
@@ -3577,35 +3563,11 @@ class ProfileScreen(Screens):
                     manager=MANAGER,
                 )
 
-                self.no_moons.kill()
-                self.show_moons.kill()
-                self.no_moons = UIImageButton(
-                    ui_scale(pygame.Rect((52, 514), (34, 34))),
-                    "",
-                    object_id="@unchecked_checkbox",
-                    tool_tip_text="screens.profile.show_moons_tooltip",
-                    manager=MANAGER,
-                )
-                self.show_moons = UIImageButton(
-                    ui_scale(pygame.Rect((52, 514), (34, 34))),
-                    "",
-                    object_id="@checked_checkbox",
-                    tool_tip_text="screens.profile.no_moons_tooltip",
-                    manager=MANAGER,
-                )
-                if switch_get_value(Switch.show_history_moons):
-                    self.no_moons.kill()
-                else:
-                    self.show_moons.kill()
             elif self.open_sub_tab == "user notes":
                 self.sub_tab_1.enable()
                 self.sub_tab_2.disable()
                 if self.history_text_box:
                     self.history_text_box.kill()
-                    self.no_moons.kill()
-                    self.show_moons.kill()
-                if self.save_text:
-                    self.save_text.kill()
                 if self.notes_entry:
                     self.notes_entry.kill()
                 if self.edit_text:
@@ -3622,15 +3584,8 @@ class ProfileScreen(Screens):
                     manager=MANAGER,
                     tool_tip_text="screens.profile.text_entry_help_tooltip",
                 )
-                if self.editing_notes is True:
-                    self.save_text = UIImageButton(
-                        ui_scale(pygame.Rect((52, 514), (34, 34))),
-                        "",
-                        object_id="@unchecked_checkbox",
-                        tool_tip_text="screens.profile.text_entry_help_tooltip",
-                        manager=MANAGER,
-                    )
 
+                if self.editing_notes:
                     self.notes_entry = pygame_gui.elements.UITextEntryBox(
                         ui_scale(pygame.Rect((100, 473), (600, 149))),
                         initial_text=self.user_notes,
@@ -3638,14 +3593,6 @@ class ProfileScreen(Screens):
                         manager=MANAGER,
                     )
                 else:
-                    self.edit_text = UIImageButton(
-                        ui_scale(pygame.Rect((52, 514), (34, 34))),
-                        "",
-                        object_id="@checked_checkbox_smalltooltip",
-                        tool_tip_text="screens.profile.text_entry_edit_tooltip",
-                        manager=MANAGER,
-                    )
-
                     self.display_notes = UITextBoxTweaked(
                         self.user_notes,
                         ui_scale(pygame.Rect((100, 473), (600, 149))),
@@ -3696,11 +3643,10 @@ class ProfileScreen(Screens):
             self.sub_tab_4.kill()
             self.fav_tab.kill()
             self.not_fav_tab.kill()
+            self.history_tab_checkbox.kill()
             if self.open_sub_tab == "user notes":
                 if self.edit_text:
                     self.edit_text.kill()
-                if self.save_text:
-                    self.save_text.kill()
                 if self.notes_entry:
                     self.notes_entry.kill()
                 if self.display_notes:
@@ -3709,8 +3655,6 @@ class ProfileScreen(Screens):
             elif self.open_sub_tab == "life events":
                 if self.history_text_box:
                     self.history_text_box.kill()
-                self.show_moons.kill()
-                self.no_moons.kill()
         elif self.open_tab == "accessories":
             self.backstory_background.kill()
             for i in self.cat_list_buttons:

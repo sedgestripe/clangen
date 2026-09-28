@@ -23,6 +23,8 @@ def _test():
         for file in files:
             if file.endswith(".json"):
                 path = os.path.join(root, file)
+                if "lifegen_old" in path:
+                    continue
                 with open(path, "r", encoding="utf-8") as file:
                     try:
                         contents = file.read()

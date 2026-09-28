@@ -1,6 +1,6 @@
 [
     {
-        "id": "general_dark_forest_thoughts",
+        "event_id": "general_dark_forest_thoughts",
         "strings": [
             "Is practicing battle moves",
             "Is sharpening {PRONOUN/m_c/poss} claws",
@@ -55,7 +55,7 @@
         ]
     },
     {
-        "id": "dark_forest_to_living_other",
+        "event_id": "dark_forest_to_living_other",
         "strings": [
             "Is thinking about walking in the dreams of r_c",
             "Watches r_c with malice in {PRONOUN/m_c/poss} eyes",
@@ -75,7 +75,7 @@
         }
     },
     {
-        "id": "dark_forest_founder_dead_to_dead_other",
+        "event_id": "dark_forest_founder_dead_to_dead_other",
         "strings": [
             "Is speaking with r_c how c_n came to be",
             "Is telling the other Dark Forest cats stories of c_n's beginning",
@@ -106,7 +106,7 @@
         }
     },
     {
-        "id": "darkforest_tostarclan_LG",
+        "event_id": "darkforest_tostarclan_LG",
         "strings": [
             "Is begging r_c to vouch for {PRONOUN/m_c/object} to join StarClan",
             "Is explaining to r_c about {PRONOUN/m_c/poss} backstory and why {PRONOUN/m_c/subject} {VERB/m_c/are/is} here"
@@ -120,7 +120,7 @@
         }
     },
     {
-        "id": "dark_forest_kind",
+        "event_id": "dark_forest_kind",
         "strings": [
             "Wishes {PRONOUN/m_c/subject} could go to StarClan",
             "Feels regret for {PRONOUN/m_c/poss} actions",
@@ -158,7 +158,7 @@
         }
     },
     {
-        "id": "dark_forest_evil",
+        "event_id": "dark_forest_evil",
         "strings": [
             "Is fighting with another member of the Dark Forest",
             "Wishes {PRONOUN/m_c/subject} could hurt those who have wronged {PRONOUN/m_c/object}",
@@ -208,7 +208,7 @@
         }
     },
     {
-        "id": "dark_forest_sneaky",
+        "event_id": "dark_forest_sneaky",
         "strings": [
             "Isn't surprised in the slightest as to why {PRONOUN/m_c/subject} ended up here",
             "Easily avoided encountering another shadowy cat",
@@ -231,7 +231,7 @@
         }
     },
     {
-        "id": "skill_thoughts_h1",
+        "event_id": "skill_thoughts_h1",
         "strings": [
             "Misses having a real den"
         ],
@@ -248,7 +248,7 @@
         }
     },
     {
-        "id": "skill_thoughts_h2",
+        "event_id": "skill_thoughts_h2",
         "strings": [
             "Imagines what the camp would look like if {PRONOUN/m_c/subject} had something to decorate it with",
             "Searches around for items that could be used as decorations",
@@ -269,7 +269,7 @@
         }
     },
     {
-        "id": "skill_thoughts_h3",
+        "event_id": "skill_thoughts_h3",
         "strings": [
             "Is frustrated as the black, goopy ground makes it impossible to build a solid structure",
             "Gives up as {PRONOUN/m_c/poss} attempt at fixing around the camp proves futile",
@@ -286,7 +286,7 @@
         }
     },
     {
-        "id": "skill_thoughts_h4",
+        "event_id": "skill_thoughts_h4",
         "strings": [
             "Finds it difficult to stay clean",
             "Feels gross as the black goop seems to permanently stay on {PRONOUN/m_c/poss} fur",
@@ -307,7 +307,7 @@
         }
     },
     {
-        "id": "skill_thoughts_h5",
+        "event_id": "skill_thoughts_h5",
         "strings": [
             "Tries to climb up the dark trees",
             "Misses sinking {PRONOUN/m_c/poss} claws in real wood",
@@ -324,7 +324,7 @@
         }
     },
     {
-        "id": "skill_thoughts_h6",
+        "event_id": "skill_thoughts_h6",
         "strings": [
             "Is curious on if the Dark Forest is anything more than a forest",
             "Peeks around the dark trees with wonder",
@@ -345,7 +345,7 @@
         }
     },
     {
-        "id": "skill_thoughts_h7",
+        "event_id": "skill_thoughts_h7",
         "strings": [
             "Is devastated to find there are no fish in the Dark Forest",
             "Fimshin' is life and {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not livin'",
@@ -362,7 +362,7 @@
         }
     },
     {
-        "id": "skill_thoughts_h8",
+        "event_id": "skill_thoughts_h8",
         "strings": [
             "Finds it impossible to dig in the goop",
             "Regrets trying to dig a hole as {PRONOUN/m_c/poss} paws blacken with goop",
@@ -380,7 +380,7 @@
         }
     },
     {
-        "id": "skill_thoughts_h9",
+        "event_id": "skill_thoughts_h9",
         "strings": [
             "Is saddened by the lack of trinkets or shiny things in the Dark Forest",
             "Misses {PRONOUN/m_c/poss} object collection dearly",
@@ -401,7 +401,7 @@
         }
     },
     {
-        "id": "skill_thoughts_h10",
+        "event_id": "skill_thoughts_h10",
         "strings": [
             "Feels lost as {PRONOUN/m_c/subject} {VERB/m_c/have/has} no sense of time in the Dark Forest",
             "Is desperate to see the sun fall and rise again",
@@ -421,7 +421,7 @@
         }
     },
     {
-        "id": "skill_thoughts_starghost",
+        "event_id": "skill_thoughts_starghost",
         "strings": [
             "Feels like {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} belong here",
             "Wonders if {PRONOUN/m_c/subject} {VERB/m_c/are/is} being punished",
@@ -439,7 +439,7 @@
         }
     },
     {
-        "id": "skill_thoughts_star",
+        "event_id": "skill_thoughts_star",
         "strings": [
             "Tries to ask StarClan for guidance",
             "Wonders if being sent to the Dark Forest is a test",
@@ -457,7 +457,7 @@
         }
     },
     {
-        "id": "skill_thoughts_dark",
+        "event_id": "skill_thoughts_dark",
         "strings": [
             "Dreadfully knows {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} exactly where {PRONOUN/m_c/subject} {VERB/m_c/are/is} meant to be",
             "Thought the Dark Forest was going to be much cooler",
@@ -476,7 +476,7 @@
         }
     },
     {
-        "id": "skill_thoughts_fighter",
+        "event_id": "skill_thoughts_fighter",
         "strings": [
             "Excited to be surrounded by other fighters like {PRONOUN/m_c/object}",
             "Doesn't think the Dark Forest is so bad",
@@ -501,7 +501,7 @@
         }
     },
     {
-        "id": "skill_thoughts_healer",
+        "event_id": "skill_thoughts_healer",
         "strings": [
             "Is unnerved with the lack of herbs in the Dark Forest",
             "Groans as r_c approaches {PRONOUN/m_c/object} with wounds",
@@ -528,7 +528,7 @@
         }
     },
     {
-        "id": "skill_thoughts_hunter",
+        "event_id": "skill_thoughts_hunter",
         "strings": [
             "Feels bored as there is nothing to hunt",
             "Is unnerved by the lack of animal life in the Dark Forest",
@@ -553,7 +553,7 @@
         }
     },
     {
-        "id": "to_living_thoughts",
+        "event_id": "to_living_thoughts",
         "strings": [
             "Wonders how r_c is fairing",
             "Whispers lies into r_c's ear to cause chaos",
@@ -572,7 +572,7 @@
         }
     },
     {
-        "id": "leader_df",
+        "event_id": "leader_df",
         "strings": [
             "Is glad to not have to rule c_n anymore",
             "Frowns upon c_n",
@@ -596,7 +596,7 @@
         }
     },
     {
-        "id": "introspective_df_warapp_h",
+        "event_id": "introspective_df_warapp_h",
         "strings": [
             "Thinks every cat is being a little too dramatic for {PRONOUN/m_c/poss} tastes",
             "Prefers to daydream than practice {PRONOUN/m_c/poss} fighting moves",
@@ -640,7 +640,7 @@
         }
     },
     {
-        "id": "df_familyalive1_h",
+        "event_id": "df_familyalive1_h",
         "strings": [
             "Wonders about r_c all the time",
             "Can't help but worry that r_c is forgetting {PRONOUN/m_c/poss}",
@@ -672,7 +672,7 @@
         ]
     },
     {
-        "id": "dark_forest_stealth",
+        "event_id": "dark_forest_stealth",
         "strings": [
             "Easily avoided encountering another shadowy cat",
             "Talked {PRONOUN/m_c/poss} way out of a training session",

@@ -3,12 +3,14 @@ import pygame_gui.elements
 from random import choice, randint
 import ujson
 import re
-from scripts.event_class import Single_Event
+from scripts.events_module.event_information import EventInformation
+
 from .Screens import Screens
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 from scripts.game_structure import game
-from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
+from scripts.events_module.pregnancy import pregnancy_events
+
 from scripts.game_structure.screen_settings import MANAGER
 from scripts.game_structure.localization import load_lang_resource
 from ..ui.elements.image_button import UIImageButton
@@ -16,7 +18,7 @@ from ..ui.elements.surface_image_button import UISurfaceImageButton
 from ..ui.elements.sprite_button import UISpriteButton
 from scripts.clan_package.settings import get_clan_setting
 from scripts.screens.enums import GameScreen
-
+from scripts.cat.microservices.conditions import get_ill
 from ..cat.enums import CatRank
 
 from scripts.game_structure import constants
@@ -213,7 +215,7 @@ class AffairScreen(Screens):
                 affair_relationship_chance_lb, affair_relationship_chance_ub
             )
             ceremony_txt = self.adjust_txt(choice(self.mu_txt["success"]), affair_cat)
-            game.cur_events_list.insert(0, Single_Event(ceremony_txt))
+            game.cur_events_list.insert(0, EventInformation(ceremony_txt))
             if (
                 randint(
                     1,
@@ -223,12 +225,12 @@ class AffairScreen(Screens):
                 )
                 == 1
             ):
-                Pregnancy_Events.handle_zero_moon_pregnant(
-                    game.clan.your_cat, affair_cat, game.clan
+                pregnancy_events.handle_zero_moon_pregnant(
+                    game.clan.your_cat, affair_cat
                 )
         else:
             ceremony_txt = self.adjust_txt(choice(self.mu_txt["fail"]), affair_cat)
-            game.cur_events_list.insert(0, Single_Event(ceremony_txt))
+            game.cur_events_list.insert(0, EventInformation(ceremony_txt))
             if self.get_fail_consequence() == 0:
                 ceremony_txt = self.adjust_txt(
                     choice(self.mu_txt["fail breakup"]), affair_cat
@@ -237,7 +239,7 @@ class AffairScreen(Screens):
                     mate = Cat.fetch_cat(i)
                     if mate is None:
                         continue
-                    mate.get_ill("heartbroken")
+                    get_ill(mate, "heartbroken")
                     mate.unset_mate(game.clan.your_cat)
                     rel = mate.relationships.get(game.clan.your_cat.ID)
                     if rel is None:
@@ -254,12 +256,12 @@ class AffairScreen(Screens):
                     rel.romance -= randint(
                         affair_relationship_chance_lb, affair_relationship_chance_ub
                     )
-                game.cur_events_list.insert(1, Single_Event(ceremony_txt))
+                game.cur_events_list.insert(1, EventInformation(ceremony_txt))
             else:
                 ceremony_txt = self.adjust_txt(
                     choice(self.mu_txt["fail none"]), affair_cat
                 )
-                game.cur_events_list.insert(1, Single_Event(ceremony_txt))
+                game.cur_events_list.insert(1, EventInformation(ceremony_txt))
                 for i in game.clan.your_cat.mate:
                     mate = Cat.fetch_cat(i)
                     if mate is None:

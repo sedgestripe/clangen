@@ -1,6 +1,6 @@
 [
     {
-        "id": "deputy_dark_forest_thoughts",
+        "event_id": "deputy_dark_forest_thoughts",
         "strings": [
             "Wants to control c_n",
             "Is angry that {PRONOUN/m_c/subject} never got to become leader",

@@ -54,6 +54,7 @@ class Switch(StrEnum):
     keybinds_live = auto()
     card_conflict_changes = auto()
     confirmed_deck_list = auto()
+    ceremony_accessory = auto()
 
     # LG
     attended_half_moon = auto()
@@ -115,6 +116,7 @@ _switches: Dict[str, Union[str, int, bool, list, dict, None]] = {
     "keybinds_live": False,
     "card_conflict_changes": {},
     "confirmed_deck_list": [],
+    "ceremony_accessory": False,
     # LIFEGEN
     "attended_half_moon": False,
     "other_meds": [],

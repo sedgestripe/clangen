@@ -16,7 +16,8 @@ from scripts.game_structure.game.switches import (
 from scripts.ui.icon import Icon
 from scripts.ui.scale import ui_scale
 from scripts.screens.enums import GameScreen
-from scripts.event_class import Single_Event
+from scripts.events_module.event_information import EventInformation
+
 from scripts.game_structure.localization import load_lang_resource
 
 
@@ -134,7 +135,9 @@ class DeathScreen(GameWindow):
 
                 revival_json = load_lang_resource("events/lifegen_events/revival.json")
 
-                game.cur_events_list.append(Single_Event(choice(revival_json), "alert"))
+                game.cur_events_list.append(
+                    EventInformation(choice(revival_json), "alert")
+                )
                 self.begin_anew_button.kill()
                 self.pick_path_message.kill()
                 self.switch_cats_button.kill()

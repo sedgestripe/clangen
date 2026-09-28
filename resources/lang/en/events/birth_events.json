@@ -59,7 +59,7 @@
     },
     "birth_no_parents": {
         "gen": [
-            "Despite not knowing your parents, {cap_insert} entered the world suddenly. A burning fire in your belly and a desire to rise beyond what you already know. If only your closed little eyes and tiny nose could lead you to your destiny right now. But the day is young; you'll have plenty of time to enjoy it, y_c.",
+            "Despite not knowing your parents, {insert}, entered the world suddenly. A burning fire in your belly and a desire to rise beyond what you already know. If only your closed little eyes and tiny nose could lead you to your destiny right now. But the day is young; you'll have plenty of time to enjoy it, y_c.",
             "With no parents to help guide you, {insert} will need all the help you can get making your way in the world. Despite the unfortunate circumstances of your arrival to the world, a spirit of determination roars inside of you. Good luck on your path, y_c.",
             "{cap_insert}, are welcomed into the world without parents to hold you, but that doesn't dampen your spirits. No matter how fierce a storm rages, light always returns. Your journey begins with muddied paws; nevertheless, you are certain that a bright future awaits you.",
             "Cats are not born equal. {cap_insert}, learn that hard truth as you awaken without parents to shelter you. However, you are stubborn and refuse to be defined by your rocky beginnings. There's nothing you can't do without determination. One day, you can make the world bow its head to you.",

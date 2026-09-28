@@ -1,6 +1,6 @@
 [
     {
-        "id": "leader_alive_kits",
+        "event_id": "leader_alive_kits",
         "strings": [
             "Has recently picked up the scent of mischievous kits in {PRONOUN/m_c/poss} den...",
             "Is pondering the next mentors for the kits of the Clan",
@@ -24,7 +24,7 @@
         }
     },
     {
-        "id": "gen_leader",
+        "event_id": "gen_leader",
         "strings": [
             "Is hoping for a sign from StarClan",
             "Is hoping that {PRONOUN/m_c/subject} {VERB/m_c/are/is} leading {PRONOUN/m_c/poss} Clan well",
@@ -53,7 +53,7 @@
         ]
     },
     {
-        "id": "leader_DF",
+        "event_id": "leader_DF",
         "strings": [
             "Thinks {PRONOUN/m_c/subject} {VERB/m_c/have/has} been hearing the voices of Dark Forest cats...",
             "Is pondering recent dreams {PRONOUN/m_c/subject} {VERB/m_c/have/has} had... perhaps from the Dark Forest?"
@@ -67,7 +67,7 @@
         }
     },
     {
-        "id": "leader_alive_kits",
+        "event_id": "leader_alive_kits",
         "strings": [
             "Has recently picked up the scent of mischievous kits in {PRONOUN/m_c/poss} den...",
             "Is pondering the next mentors for the kits of the Clan",
@@ -88,7 +88,7 @@
         }
     },
     {
-        "id": "leader_alive_apprentices",
+        "event_id": "leader_alive_apprentices",
         "strings": [
             "Is assessing some apprentices",
             "Is satisfied that r_c is doing well in {PRONOUN/r_c/poss} training",
@@ -96,6 +96,7 @@
             "Is having a serious discussion with r_c about being a warrior soon",
             "Is wondering if r_c is ready for the responsibility of being a warrior",
             "Is asking r_c if {PRONOUN/r_c/subject} {VERB/r_c/are/is} ready for an assessment",
+            "Is thinking up r_c's warrior name",
             "Is giving r_c a few tips on {PRONOUN/r_c/poss} hunting pounces",
             "In awe when r_c successfully captured a darting prey even {PRONOUN/m_c/subject} couldn't catch",
             "Wondering what kind of legacy r_c will make in the Clan's history",
@@ -113,7 +114,7 @@
         }
     },
     {
-        "id": "leader_alive_deputy",
+        "event_id": "leader_alive_deputy",
         "strings": [
             "Tries to set a good example for the deputy",
             "Has been letting {PRONOUN/m_c/poss} deputy call the shots recently and is proud of {PRONOUN/r_c/poss} initiative",
@@ -123,6 +124,7 @@
             "Is wondering if r_c will do a good job after {PRONOUN/m_c/object}",
             "Is teaching r_c about the small details of being a leader",
             "Is trusting r_c to take care of something important",
+            "Wonders if r_c would be ready to take over if {PRONOUN/m_c/subject} lost all {PRONOUN/m_c/poss} lives",
             "Listening intently to r_c's latest reports of the Clan's borders",
             "Adjure r_c to visit a neighboring Clan to deliver a message to their leader",
             "Is putting {PRONOUN/m_c/poss} trust in r_c whenever difficult events appear",
@@ -143,7 +145,7 @@
         }
     },
     {
-        "id": "leader_DF",
+        "event_id": "leader_DF",
         "strings": [
             "Thinks {PRONOUN/m_c/subject} {VERB/m_c/have/has} been hearing the voices of Dark Forest cats...",
             "Is pondering recent dreams {PRONOUN/m_c/subject} {VERB/m_c/have/has} had... perhaps from the Dark Forest?",
@@ -162,7 +164,7 @@
         }
     },
     {
-        "id": "adventurous_leader",
+        "event_id": "adventurous_leader",
         "strings": [
             "Gives a particularly rousing speech in a Clan meeting with a puffed chest",
             "Feels confident that the Clan admires {PRONOUN/m_c/object}",
@@ -185,7 +187,7 @@
         }
     },
     {
-        "id": "ambitious_leader",
+        "event_id": "ambitious_leader",
         "strings": [
             "Considers expanding the borders",
             "Makes sure all cats are battle ready",
@@ -213,7 +215,7 @@
         }
     },
     {
-        "id": "arrogant_leader",
+        "event_id": "arrogant_leader",
         "strings": [
             "Knows {PRONOUN/m_c/subject} didn't need anyone's assistance to become leader",
             "Feels a sense of pride in Clanmates respecting and admiring {PRONOUN/m_c/object}",
@@ -241,7 +243,7 @@
         }
     },
     {
-        "id": "bold_leader",
+        "event_id": "bold_leader",
         "strings": [
             "Considers expanding the borders",
             "Feels confident that the Clan admires {PRONOUN/m_c/object}",
@@ -268,7 +270,7 @@
         }
     },
     {
-        "id": "bloodthirsty_leader",
+        "event_id": "bloodthirsty_leader",
         "strings": [
             "Encourages warriors to start fights on border patrols",
             "Is debating if {PRONOUN/m_c/subject} should declare a war with another Clan",
@@ -298,7 +300,7 @@
         }
     },
     {
-        "id": "leader_bloodthirsty_goodintentions",
+        "event_id": "leader_bloodthirsty_goodintentions",
         "strings": [
             "Insists violence is just another method to future peace",
             "Doesn't realize {PRONOUN/m_c/poss} stories are scaring the kittens and apprentices",
@@ -310,7 +312,7 @@
         ]
     },
     {
-        "id": "calm_leader",
+        "event_id": "calm_leader",
         "strings": [
             "Stays composed when a cat comes to {PRONOUN/m_c/object} in a panic",
             "Watches over all the cats",
@@ -336,7 +338,7 @@
         }
     },
     {
-        "id": "careful_leader",
+        "event_id": "careful_leader",
         "strings": [
             "Reminds a patrol not to stray over the border",
             "Reminds Clanmates not to overgorge on prey",
@@ -362,7 +364,7 @@
         }
     },
     {
-        "id": "charismatic_leader",
+        "event_id": "charismatic_leader",
         "strings": [
             "Gives a particularly rousing speech at a Clan meeting",
             "Feels confident that the Clan admires {PRONOUN/m_c/object}",
@@ -387,7 +389,7 @@
         }
     },
     {
-        "id": "childish_leader",
+        "event_id": "childish_leader",
         "strings": [
             "Pranks r_c by switching {PRONOUN/r_c/poss} fresh-kill with crowfood",
             "is often confused for not being the leader of c_n by the other Clans",
@@ -401,7 +403,7 @@
         ]
     },
     {
-        "id": "cold_leader",
+        "event_id": "cold_leader",
         "strings": [
             "Rolls {PRONOUN/m_c/poss} eyes when r_c suggests sharing their fresh-kill with other Clans",
             "Brought forth a new law for c_n to be hostile to outsiders",
@@ -414,7 +416,7 @@
         ]
     },
     {
-        "id": "daring_leader",
+        "event_id": "daring_leader",
         "strings": [
             "Was practicing pulling off dangerous tricks and battle moves",
             "Is puffing out {PRONOUN/m_c/poss} chest, admiring the Clan",
@@ -438,7 +440,7 @@
         }
     },
     {
-        "id": "flamboyant_leader",
+        "event_id": "flamboyant_leader",
         "strings": [
             "Is giving others {PRONOUN/m_c/poss} insightful knowledge to boost their confidence",
             "Was too busy chatting to even begin a Clan meeting",
@@ -480,7 +482,7 @@
         }
     },
     {
-        "id": "gloomy_leader",
+        "event_id": "gloomy_leader",
         "strings": [
             "Is thinking out loud about the worst outcomes in hypothetical scenarios",
             "Would rather be in {PRONOUN/m_c/poss} nest than have to face whatever appears",
@@ -515,7 +517,7 @@
         }
     },
     {
-        "id": "humble_leader",
+        "event_id": "humble_leader",
         "strings": [
             "Is grateful to {PRONOUN/m_c/poss} Clanmates for allowing {PRONOUN/m_c/object} to lead c_n",
             "Is hoping the territory size is perfect for a growing Clan",
@@ -541,7 +543,7 @@
         }
     },
     {
-        "id": "insecure_leader",
+        "event_id": "insecure_leader",
         "strings": [
             "Thinks {PRONOUN/m_c/subject} {VERB/m_c/don't/doesn't} deserve StarClan's blessing of 9 lives",
             "Wonders if cats like {PRONOUN/m_c/object} as a leader",
@@ -569,7 +571,7 @@
         }
     },
     {
-        "id": "strange_leader",
+        "event_id": "strange_leader",
         "strings": [
             "No thoughts, head empty",
             "Insists that {PRONOUN/m_c/subject} received ten lives instead of nine",
@@ -596,7 +598,7 @@
         }
     },
     {
-        "id": "rebellious_leader",
+        "event_id": "rebellious_leader",
         "strings": [
             "Has no qualms about changing the Warrior Code to whatever fits {PRONOUN/m_c/poss} mood",
             "Believes changing the status quo over traditions will improve the Clans",
@@ -620,7 +622,7 @@
         }
     },
     {
-        "id": "righteous_leader",
+        "event_id": "righteous_leader",
         "strings": [
             "Is reliant on the Warrior Code",
             "Proclaims {PRONOUN/m_c/subject} {VERB/m_c/are/is} the judge and jury in the Clan",
@@ -645,7 +647,7 @@
         }
     },
     {
-        "id": "loving_leader",
+        "event_id": "loving_leader",
         "strings": [
             "Sometimes averts {PRONOUN/m_c/poss} eyes to codebreakers",
             "Is offering equal hugs to all the kits",
@@ -674,7 +676,7 @@
         }
     },
     {
-        "id": "troublesome_leader",
+        "event_id": "troublesome_leader",
         "strings": [
             "Rolls {PRONOUN/m_c/poss} eyes as r_c suggests sharing their fresh-kill with the other Clans",
             "Has convinced {PRONOUN/m_c/self} other cats are incompetent",
@@ -705,7 +707,7 @@
         }
     },
     {
-        "id": "sneaky_leader",
+        "event_id": "sneaky_leader",
         "strings": [
             "Is concealing more knowledge than what {PRONOUN/m_c/subject} show",
             "Is digging up long-forgotten knowledge about c_n's history",
@@ -739,7 +741,7 @@
         }
     },
     {
-        "id": "nervous_leader",
+        "event_id": "nervous_leader",
         "strings": [
             "Feels as if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} a constant target",
             "Doesn't feel like {PRONOUN/m_c/subject} {VERB/m_c/have/has} nine lives",
@@ -768,7 +770,7 @@
         }
     },
     {
-        "id": "strict_leader",
+        "event_id": "strict_leader",
         "strings": [
             "Is willing to discipline a Clanmate for disobeying both {PRONOUN/m_c/object} and the Code",
             "Will not allow Clanmates to proceed anything without {PRONOUN/m_c/poss} authorization",
@@ -790,7 +792,7 @@
         }
     },
     {
-        "id": "oblivious_leader",
+        "event_id": "oblivious_leader",
         "strings": [
             "Was found wandering about outside of camp",
             "Doesn't know personal boundaries",
@@ -821,7 +823,7 @@
         }
     },
     {
-        "id": "mellow_leader",
+        "event_id": "mellow_leader",
         "strings": [
             "Prefers going with the flow",
             "Is basking in the glowing sunlight and enjoying the soft breeze flowing through {PRONOUN/m_c/poss} coat",
@@ -845,7 +847,7 @@
         }
     },
     {
-        "id": "leader_meanie_deputy_meanie",
+        "event_id": "leader_meanie_deputy_meanie",
         "strings": [
             "Is pleased with r_c's ruthless treatment of the warriors",
             "Is sparring violently with r_c, both drawing blood",
@@ -887,7 +889,7 @@
         }
     },
     {
-        "id": "leader_meanie_med_meanie",
+        "event_id": "leader_meanie_med_meanie",
         "strings": [
             "Is pleased that r_c is withholding herbs from the weaker cats",
             "Instructs r_c to let a sick cat die",
@@ -927,7 +929,7 @@
         }
     },
     {
-        "id": "leader_nice_deputy_meanie",
+        "event_id": "leader_nice_deputy_meanie",
         "strings": [
             "Is wondering if {PRONOUN/m_c/subject} made a mistake by appointing r_c",
             "Is trying to teach r_c to lead with kindness",
@@ -968,7 +970,7 @@
         }
     },
     {
-        "id": "gen_former_kittypet_leader",
+        "event_id": "gen_former_kittypet_leader",
         "strings": [
             "Is proud of how far {PRONOUN/m_c/subject} {verb/m_c/have/has} come from {PRONOUN/m_c/poss} kittypet life",
             "Would never wish to return to {PRONOUN/m_c/poss} old kittypet life",
@@ -997,7 +999,7 @@
         }
     },
     {
-        "id": "leader_to_newborn",
+        "event_id": "leader_to_newborn",
         "strings": [
             "Believes c_n is thriving with the birth of the new litter",
             "Feels more pressure to protect c_n after meeting the new litter",

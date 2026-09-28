@@ -3661,7 +3661,7 @@
                     "blind:any:false"
                 ],
                 "rank": [
-                    "not_df_trainee"
+                    "-df_trainee"
                 ]
             },
             "r_c:0": {

@@ -17,7 +17,7 @@ from scripts.ui.icon import Icon
 from scripts.ui.scale import ui_scale, ui_scale_dimensions
 from scripts.ui.theme import get_text_box_theme
 from scripts.cat.cats import Cat
-from scripts.cat.names import names
+from scripts.cat.names import Name
 
 
 class ChooseYourNameScreen(MakeClanScreenBase):
@@ -28,7 +28,7 @@ class ChooseYourNameScreen(MakeClanScreenBase):
 
     def __init__(self, name="custom_cat_screen"):
         super().__init__(name)
-        self.prefixes = names.names_dict["clan_prefixes"]
+        self.prefixes = Name.names_dict["clan_prefixes"]
 
     def screen_switches(self):
         super().screen_switches()

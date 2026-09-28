@@ -1,6 +1,6 @@
 [
     {
-        "id": "deputy_dead_deputy",
+        "event_id": "deputy_dead_deputy",
         "strings": [
             "Wishes {PRONOUN/m_c/subject} could speak to r_c to learn how to assign patrols better",
             "Feels slightly guilty for replacing r_c",
@@ -19,7 +19,7 @@
         }
     },
     {
-        "id": "gen_deputy",
+        "event_id": "gen_deputy",
         "strings": [
             "Is assigning cats to a border patrol",
             "Is assigning cats to a hunting patrol",
@@ -34,7 +34,7 @@
         ]
     },
     {
-        "id": "deputy_alive_leader",
+        "event_id": "deputy_alive_leader",
         "strings": [
             "Is doing {PRONOUN/m_c/poss} best to honor {PRONOUN/m_c/poss} Clan and {PRONOUN/m_c/poss} leader",
             "Must speak with the leader soon about something {PRONOUN/m_c/subject} found while out on patrol",
@@ -53,7 +53,7 @@
         }
     },
     {
-        "id": "deputy_to_alive_apprentice",
+        "event_id": "deputy_to_alive_apprentice",
         "strings": [
             "Is assessing the apprentices",
             "Is making sure no apprentices are slacking off from training",
@@ -72,7 +72,7 @@
         }
     },
     {
-        "id": "bloodthirsty_deputy_to_gen",
+        "event_id": "bloodthirsty_deputy_to_gen",
         "strings": [
             "Is fantasizing about leading the Clan into a victorious battle",
             "Feels a thrill imagining the chaos of a large-scale battle",
@@ -91,7 +91,7 @@
         }
     },
     {
-        "id": "bloodthirsty_deputy_to_leader",
+        "event_id": "bloodthirsty_deputy_to_leader",
         "strings": [
             "Thinks about killing the leader and staging it as an accident",
             "Encourages the leader to start a war",
@@ -117,7 +117,7 @@
         }
     },
     {
-        "id": "strange_deputy_to_gen",
+        "event_id": "strange_deputy_to_gen",
         "strings": [
             "Accidentally assigns the same cat to three patrols",
             "Insists a hunting patrol needs to only bring back mice",
@@ -149,7 +149,7 @@
         }
     },
     {
-        "id": "insecure_deputy",
+        "event_id": "insecure_deputy",
         "strings": [
             "Hopes {PRONOUN/m_c/subject}'ll make a decent leader someday",
             "Wonders how {PRONOUN/m_c/subject} became deputy in the first place",
@@ -168,7 +168,7 @@
         }
     },
     {
-        "id": "insecure_deputy_to_leader",
+        "event_id": "insecure_deputy_to_leader",
         "strings": [
             "Keeps confirming with the leader that the patrols {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} organizing sound right"
         ],
@@ -188,7 +188,7 @@
         }
     },
     {
-        "id": "fierce_deputy",
+        "event_id": "fierce_deputy",
         "strings": [
             "Is sternly instructing a patrol about the importance of strength in defending the Clan",
             "Feels a rush of adrenaline at the thought of an upcoming battle",
@@ -205,7 +205,7 @@
         }
     },
     {
-        "id": "playful_deputy",
+        "event_id": "playful_deputy",
         "strings": [
             "Is inventing a fun game to make patrol assignments more engaging",
             "Is amused by the antics of the younger cats",
@@ -222,7 +222,7 @@
         }
     },
     {
-        "id": "oblivious_deputy",
+        "event_id": "oblivious_deputy",
         "strings": [
             "Didn't realize {PRONOUN/m_c/subject} sent out the same cats for another patrol",
             "Had forgotten to report to the leader",
@@ -244,7 +244,7 @@
         }
     },
     {
-        "id": "nervous_deputy",
+        "event_id": "nervous_deputy",
         "strings": [
             "Is fretting over a recent increase in fox sightings near the camp",
             "Feels a twinge of worry about an approaching storm",
@@ -265,7 +265,7 @@
         }
     },
     {
-        "id": "ambitious_deputy",
+        "event_id": "ambitious_deputy",
         "strings": [
             "Is imagining the respect {PRONOUN/m_c/subject}'d command as the leader of the Clan",
             "Is considering innovative strategies to earn more recognition",
@@ -282,7 +282,7 @@
         }
     },
     {
-        "id": "gloomy_deputy",
+        "event_id": "ambitious_teacher_deputy_to_leader",
         "strings": [
             "Shivers at the thought {PRONOUN/m_c/subject} will be leader some day",
             "Was found in {PRONOUN/m_c/poss} nest instead of organizing patrols",
@@ -304,7 +304,7 @@
         }
     },
     {
-        "id": "flamboyant_deputy",
+        "event_id": "flamboyant_deputy",
         "strings": [
             "Is telling r_c to add 'star' to {PRONOUN/m_c/poss} name to know how it sounds",
             "Dislikes how {PRONOUN/m_c/poss} name sounds with 'star'",
@@ -339,7 +339,7 @@
         }
     },
     {
-        "id": "grumpy_deputy",
+        "event_id": "grumpy_deputy",
         "strings": [
             "Takes {PRONOUN/m_c/poss} rank a bit too serious",
             "Growls at a patrol for their lack of prey",
@@ -364,7 +364,7 @@
         }
     },
     {
-        "id": "humble_deputy",
+        "event_id": "humble_deputy",
         "strings": [
             "Still brimming with joy becoming deputy for c_n",
             "Orders apprentices to feed the older cats first",
@@ -383,7 +383,7 @@
         }
     },
     {
-        "id": "arrogant_deputy",
+        "event_id": "arrogant_deputy",
         "strings": [
             "Sneering at those below {PRONOUN/m_c/poss} rank",
             "Is taking credits on victorious patrols",
@@ -407,7 +407,7 @@
         }
     },
     {
-        "id": "daring_deputy",
+        "event_id": "daring_deputy",
         "strings": [
             "Impressed {PRONOUN/m_c/poss} Clanmates by scaring off an intruder",
             "Was criticized for leading a patrol into a predator's den without a plan",
@@ -426,7 +426,7 @@
         }
     },
     {
-        "id": "strict_deputy",
+        "event_id": "strict_deputy",
         "strings": [
             "Is firm to {PRONOUN/m_c/poss} schedule",
             "Is willing to punish codebreakers however {PRONOUN/m_c/subject} see fit",
@@ -448,7 +448,7 @@
         }
     },
     {
-        "id": "adventurous_deputy",
+        "event_id": "adventurous_deputy",
         "strings": [
             "Is the first awake to pick {PRONOUN/m_c/self} for morning patrols",
             "Almost crashed into r_c from having too much energy",
@@ -468,7 +468,7 @@
         }
     },
     {
-        "id": "loyal_deputy",
+        "event_id": "loyal_deputy",
         "strings": [
             "Will always put c_n above everything else",
             "Doesn't see how allowing outsiders will improve c_n",
@@ -491,7 +491,7 @@
         }
     },
     {
-        "id": "sneaky_deputy",
+        "event_id": "sneaky_deputy",
         "strings": [
             "Was speaking to an unknown cat near the border alone",
             "Seems to be hiding more than what {PRONOUN/m_c/subject} {VERB/m_c/show/shows}",
@@ -512,7 +512,7 @@
         }
     },
     {
-        "id": "sneaky_deputy_leader",
+        "event_id": "sneaky_deputy_leader",
         "strings": [
             "Was whispering something into the leader's ear after following a Clanmate around",
             "Was snooping through r_c's nest then bolted to the leader's den"
@@ -533,13 +533,13 @@
         }
     },
     {
-        "id": "ambitious_deputy_teacher",
+        "event_id": "ambitious_deputy_teacher",
         "strings": [
             "Is planning a new training curriculum to impress the leader"
         ]
     },
     {
-        "id": "bloodthirsty_deputy_to_gen",
+        "event_id": "bloodthirsty_deputy_to_gen",
         "strings": [
             "Is fantasizing about leading the Clan into a victorious battle",
             "Feels a thrill imagining the chaos of a large-scale battle",
@@ -556,7 +556,7 @@
         }
     },
     {
-        "id": "bloodthirsty_deputy_to_leader",
+        "event_id": "bloodthirsty_deputy_to_leader",
         "strings": [
             "Thinks about killing the leader and staging it as an accident",
             "Encourages the leader to start a war"
@@ -580,7 +580,7 @@
         }
     },
     {
-        "id": "fierce_deputy",
+        "event_id": "fierce_deputy",
         "strings": [
             "Is sternly instructing a patrol about the importance of strength in defending the Clan",
             "Feels a rush of adrenaline at the thought of an upcoming battle",
@@ -597,7 +597,7 @@
         }
     },
     {
-        "id": "insecure_deputy",
+        "event_id": "insecure_deputy",
         "strings": [
             "Hopes {PRONOUN/m_c/subject}'ll make a decent leader someday",
             "Wonders how {PRONOUN/m_c/subject} became deputy in the first place",
@@ -616,7 +616,7 @@
         }
     },
     {
-        "id": "insecure_deputy_to_leader",
+        "event_id": "insecure_deputy_to_leader",
         "strings": [
             "Keeps confirming with the leader that the patrols {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} organizing sound right"
         ],
@@ -639,7 +639,24 @@
         }
     },
     {
-        "id": "playful_deputy",
+        "event_id": "nervous_deputy",
+        "strings": [
+            "Is fretting over a recent increase in fox sightings near the camp",
+            "Feels a twinge of worry about an approaching storm",
+            "Is overthinking a recent encounter with a rival Clan"
+        ],
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "nervous"
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "event_id": "playful_deputy",
         "strings": [
             "Is inventing a fun game to make patrol assignments more engaging",
             "Finds joy in the simple tasks of a deputy's duty"
@@ -655,7 +672,7 @@
         }
     },
     {
-        "id": "playful_deputy_to_younger",
+        "event_id": "playful_deputy_to_younger",
         "strings": [
             "Is amused by the antics of the younger cats"
         ],
@@ -672,7 +689,7 @@
         }
     },
     {
-        "id": "rebellious_deputy",
+        "event_id": "rebellious_deputy",
         "strings": [
             "Is questioning the necessity of an outdated tradition"
         ],
@@ -687,7 +704,7 @@
         }
     },
     {
-        "id": "rebellious_deputy_to_leader",
+        "event_id": "rebellious_deputy_to_leader",
         "strings": [
             "Feels an urge to challenge the leader's decision for the betterment of the Clan",
             "Decides to change patrol routes on {PRONOUN/m_c/poss} own, hoping the leader will see the benefits"
@@ -711,7 +728,7 @@
         }
     },
     {
-        "id": "strange_deputy",
+        "event_id": "strange_deputy",
         "strings": [
             "Accidentally assigns the same cat to three patrols",
             "Insists a hunting patrol needs to only bring back mice",
@@ -730,7 +747,7 @@
         }
     },
     {
-        "id": "wise_deputy",
+        "event_id": "wise_deputy",
         "strings": [
             "Is reflecting on a past lesson to make a crucial decision",
             "Ponders how {PRONOUN/m_c/poss} decisions will impact the Clan in the long term",
@@ -747,7 +764,7 @@
         }
     },
     {
-        "id": "wise_deputy_to_apprentice",
+        "event_id": "wise_deputy_to_apprentice",
         "strings": [
             "Is sharing words of wisdom with a confused apprentice",
             "Shares an embarrassing story from {PRONOUN/m_c/poss} youth to make r_c feel better about {PRONOUN/r_c/poss} mistake"
@@ -771,7 +788,7 @@
         }
     },
     {
-        "id": "clever_deputy",
+        "event_id": "clever_deputy",
         "strings": [
             "Is solving a complex problem that has been troubling the Clan",
             "Feels intrigued by a recent challenge and is strategizing solutions",
@@ -788,7 +805,7 @@
         }
     },
     {
-        "id": "fighter_deputy",
+        "event_id": "fighter_deputy",
         "strings": [
             "Is instructing a group of warriors in advanced combat techniques",
             "Feels a sense of protectiveness towards the Clan, ready to defend them at any moment",
@@ -806,7 +823,7 @@
         }
     },
     {
-        "id": "healer_deputy",
+        "event_id": "healer_deputy",
         "strings": [
             "Helps a Clanmate get a thorn out of their paw while out on patrol",
             "Feels empathy for a sick Clanmate and is thinking of ways to help",
@@ -823,7 +840,7 @@
         }
     },
     {
-        "id": "healer_deputy_to_medcat",
+        "event_id": "healer_deputy_to_medcat",
         "strings": [
             "Takes a patrol out to gather herbs for the medicine cat den"
         ],
@@ -846,7 +863,7 @@
         }
     },
     {
-        "id": "hunter_deputy",
+        "event_id": "hunter_deputy",
         "strings": [
             "Makes sure no area of the territory is overhunted",
             "Feels a rush of anticipation at the prospect of a successful hunt",
@@ -863,7 +880,7 @@
         }
     },
     {
-        "id": "story_deputy",
+        "event_id": "story_deputy",
         "strings": [
             "Is recalling an old story that might inspire the Clan in tough times",
             "Feels inspired to craft a new legend based on recent events",
@@ -880,7 +897,7 @@
         }
     },
     {
-        "id": "story_deputy_to_apprentice",
+        "event_id": "story_deputy_to_apprentice",
         "strings": [
             "Is sharing tales of the Clan's legacy with wide-eyed apprentices"
         ],
@@ -903,7 +920,7 @@
         }
     },
     {
-        "id": "teacher_deputy",
+        "event_id": "teacher_deputy",
         "strings": [
             "Is devising an effective teaching strategy for new skills",
             "Encourages the older cats to share their skills and techniques with the younger generations"
@@ -919,7 +936,7 @@
         }
     },
     {
-        "id": "teacher_deputy_to_apprentice",
+        "event_id": "teacher_deputy_to_apprentice",
         "strings": [
             "Feels satisfaction watching an apprentice master a lesson",
             "Guides an apprentice through {PRONOUN/r_c/poss} hunting assessment"
@@ -943,7 +960,7 @@
         }
     },
     {
-        "id": "deputy_dead_deputy",
+        "event_id": "deputy_dead_deputy",
         "strings": [
             "Wishes {PRONOUN/m_c/subject} could speak to r_c to learn how to assign patrols better"
         ],
@@ -959,7 +976,7 @@
         }
     },
     {
-        "id": "former_kittypet_deputy",
+        "event_id": "former_kittypet_deputy",
         "strings": [
             "Is proud of how far {PRONOUN/m_c/subject} {verb/m_c/have/has} come from {PRONOUN/m_c/poss} kittypet life",
             "Is annoyed to still hear gossip about {PRONOUN/m_c/poss} past",

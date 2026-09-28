@@ -276,7 +276,7 @@ class ChooseCatsScreen(MakeClanScreenBase):
             elif event.ui_element in (
                 self.elements["cat" + str(u)] for u in range(0, 12)
             ):
-                self.elements["roll_container"].hide()
+                # self.elements["roll_container"].hide()
 
                 self.selected_cat = event.ui_element.return_cat_object()
                 if self.selected_cat in self.clan_info.starting_members:

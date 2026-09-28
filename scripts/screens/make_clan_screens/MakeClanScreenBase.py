@@ -10,7 +10,7 @@ import pygame_gui
 from scripts.cat import save_load
 from scripts.cat.cats import Cat
 from scripts.cat.enums import CatAge, CatRank, CatSocial, CatGroup
-from scripts.cat.names import names
+from scripts.cat.names import Name
 from scripts.cat.status import Status
 from scripts.clan import Clan
 from scripts.clan_package.clan_names import get_possible_clan_names
@@ -259,7 +259,8 @@ class MakeClanScreenBase(Screens):
         game.just_died.clear()
         game.dead_cats_to_grieve.clear()
         save_load.faded_ids.clear()
-        Patrol.used_patrols.clear()
+        Patrol.used_patrols["normal"].clear()
+        Patrol.used_patrols["romance"].clear()
 
         # extra sanitization for filenames
         save_id = sub(r"[/\\?%*:|\"<>\x7F\x00-\x1F]", "-", self.clan_info.display_name)
@@ -324,6 +325,7 @@ class MakeClanScreenBase(Screens):
         self.clan_info.your_cat.name.give_prefix(
             self.clan_info.your_cat.pelt.eye_colour,
             self.clan_info.your_cat.pelt.colour,
+            self.clan_info.your_cat.pelt.name,
             game.clan.biome,
         )
         return self.clan_info.your_cat.name.prefix
