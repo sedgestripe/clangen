@@ -1662,7 +1662,7 @@ class Clan:
         if "war" in clan_data:
             game.clan.war = clan_data["war"]
 
-        load_faded_cat_ids(clan_data["clanname"])
+        load_faded_cat_ids(save_id)
 
         prune_dead_relationships(Cat)
 

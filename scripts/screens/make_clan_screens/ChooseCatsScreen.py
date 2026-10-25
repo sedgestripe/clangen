@@ -1,4 +1,4 @@
-from random import choice, randint
+from random import choice, randint, sample
 from typing import Optional
 
 import i18n
@@ -368,29 +368,25 @@ class ChooseCatsScreen(MakeClanScreenBase):
         maximum_needed = self.get_config_during_creation(
             "clan_creation.maximum_membership"
         ) - len(self.clan_info.get_all_cats())
-        for _ in range(randint(minimum_needed, maximum_needed)):
-            try:
-                self.clan_info.starting_members.append(
-                    choice(
-                        [
-                            c
-                            for c in possible_cats
-                            if c
-                            not in [
-                                self.clan_info.leader,
-                                self.clan_info.deputy,
-                                self.clan_info.medicine_cat,
-                            ]
-                            and c not in self.clan_info.starting_members
-                        ]
-                    )
-                )
-            except Exception as e:
-                print(f"LG: Failed to add Clan member #{_}")
-                print(e)
-            self.update_head_display()
-            self.refresh_cat_images_and_info()
-            self.refresh_text_and_buttons()
+        available_cats = [
+            c
+            for c in possible_cats
+            if c
+            not in [
+                self.clan_info.leader,
+                self.clan_info.deputy,
+                self.clan_info.medicine_cat,
+            ]
+        ]
+        # the pool is sized by the chosen starting size, so don't ask for more than it holds
+        amount = min(
+            randint(max(minimum_needed, 0), max(maximum_needed, 0)),
+            len(available_cats),
+        )
+        self.clan_info.starting_members = sample(available_cats, amount)
+        self.update_head_display()
+        self.refresh_cat_images_and_info()
+        self.refresh_text_and_buttons()
 
     def exit_screen(self):
         self.selected_cat = None

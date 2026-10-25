@@ -130,7 +130,7 @@ class UISurfaceImageButton(pygame_gui.elements.UIButton):
                 text_rect = pygame.Rect(
                     relative_rect[0], relative_rect[1], relative_rect[2], -1
                 )
-            if self.text in Icon:
+            if self.text in {icon.value for icon in Icon}:
                 text_rect.y -= ui_scale_value(1)
 
             self.set_text("")

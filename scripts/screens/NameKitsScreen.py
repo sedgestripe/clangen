@@ -82,7 +82,7 @@ class NameKitsScreen(Screens):
                     if (
                         cat.status.alive_in_player_clan
                         and cat.age == CatAge.NEWBORN
-                        and cat.ID in game.clan.your_cat.inheritance.get_children()
+                        and cat.ID in game.clan.your_cat.get_children()
                         and cat.name.prefix.strip() == ""
                     ):
                         cat.name.give_prefix(
@@ -334,7 +334,7 @@ class NameKitsScreen(Screens):
             if (
                 cat.status.alive_in_player_clan
                 and cat.age == CatAge.NEWBORN
-                and cat.ID in game.clan.your_cat.inheritance.get_children()
+                and cat.ID in game.clan.your_cat.get_children()
             ):
                 valid_mentors.append(cat)
                 cat.name.prefix = ""

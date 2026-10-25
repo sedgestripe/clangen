@@ -324,7 +324,7 @@ class MakeClanScreenBase(Screens):
         self.clan_info.your_cat.name.give_prefix(
             self.clan_info.your_cat.pelt.eye_colour,
             self.clan_info.your_cat.pelt.colour,
-            game.clan.biome,
+            self.clan_info.biome,
         )
         return self.clan_info.your_cat.name.prefix
 

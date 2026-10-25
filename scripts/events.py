@@ -242,7 +242,7 @@ def _one_moon_impl():
     ):
         switch_set_value(Switch.attended_half_moon, False)
 
-    if game.clan.game_mode in ("expanded", "cruel season") and game.clan.freshkill_pile:
+    if game.clan.game_mode in ("expanded", "cruel_season") and game.clan.freshkill_pile:
         # feed the cats and update the nutrient status
         relevant_cats = list(
             filter(
@@ -907,9 +907,9 @@ def generate_dialogue_focus():
     if game.clan.focus == "war" and not game.clan.war.get("at_war"):
         game.clan.focus = ""
         game.clan.focus_moons = 0
-    if (
-        game.clan.focus == "starving"
-        and game.clan.freshkill_pile.total_amount
+    if game.clan.focus == "starving" and (
+        not game.clan.freshkill_pile
+        or game.clan.freshkill_pile.total_amount
         > game.clan.freshkill_pile.amount_food_needed() * 0.5
     ):
         game.clan.focus = ""
@@ -945,7 +945,8 @@ def generate_dialogue_focus():
         elif game.clan.war.get("at_war"):
             game.clan.focus = "war"
         elif (
-            game.clan.freshkill_pile.total_amount
+            game.clan.freshkill_pile
+            and game.clan.freshkill_pile.total_amount
             < game.clan.freshkill_pile.amount_food_needed() * 0.5
         ):
             game.clan.focus = "starving"
@@ -2360,7 +2361,8 @@ def handle_focus():
 
         # finish
         total_amount = warrior_amount + app_amount
-        game.clan.freshkill_pile.add_freshkill(total_amount)
+        if game.clan.freshkill_pile:
+            game.clan.freshkill_pile.add_freshkill(total_amount)
         focus_text = i18n.t("hardcoded.focus_prey", count=total_amount)
         game.freshkill_event_list.append(focus_text)
 
@@ -2417,7 +2419,8 @@ def handle_focus():
             )
         )
         warrior_amount = len(healthy_warriors) * info_dict["prey_warrior"]
-        game.clan.freshkill_pile.add_freshkill(warrior_amount)
+        if game.clan.freshkill_pile:
+            game.clan.freshkill_pile.add_freshkill(warrior_amount)
         game.freshkill_event_list.append(
             i18n.t("hardcoded.focus_raid_prey", count=warrior_amount)
         )
@@ -4290,7 +4293,7 @@ def handle_disaster_impacts(current_disaster):
                         game.clan.herb_supply.entire_supply[herb] += adjust_by[0]
                         if game.clan.herb_supply.entire_supply[herb] <= 0:
                             game.clan.herb_supply.entire_supply.pop(herb)
-                if random.randint(1, 5) == 1:
+                if random.randint(1, 5) == 1 and game.clan.freshkill_pile:
                     game.clan.freshkill_pile.total_amount = (
                         game.clan.freshkill_pile.total_amount * 0.7
                     )

@@ -606,10 +606,16 @@ class ElderStoryScreen(Screens):
         self.update_list_cats()
 
     def update_list_cats(self):
+        # no elder is selected when the Clan has no elders available
+        elder_id = (
+            self.elders[self.selected_elder].ID
+            if self.selected_elder is not None
+            else None
+        )
         self.all_cats_list = [
             i
             for i in Cat.all_cats_list
-            if (i.ID != self.elders[self.selected_elder].ID)
+            if (i.ID != elder_id)
             and i.status.alive_in_player_clan
             and i.moons > 0
             and i.ID not in game.told_story
