@@ -33,6 +33,7 @@ from scripts.screens.enums import GameScreen
 from scripts.game_structure.game.settings import game_setting_get
 from scripts.game_structure.localization import load_lang_resource
 from scripts.lifegen_utility import get_cluster
+from scripts.cat_relations.relationship import create_one_relationship
 
 
 ACC_REACTION_TXT = load_lang_resource("events/lifegen_events/gift.json")
@@ -639,7 +640,7 @@ class GiftScreen(Screens):
 
         # make sure the relationship exists, then apply the reaction to it
         if you.ID not in cat.relationships:
-            cat.create_one_relationship(you)
+            create_one_relationship(cat, you)
 
         if reaction == "already_have":
             cat.relationships[you.ID].like += randint(0, 5)

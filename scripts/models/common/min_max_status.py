@@ -20,3 +20,4 @@ class MinMaxStatusDictKey(Enum):
     queens_apprentice = "queen's apprentice"
     elder = "elder"
     df = "df"
+    patrol_cats = "patrol_cats"

@@ -100,7 +100,7 @@
         "collateral_damage": {
             "injuries": [
                 "frostbite",
-                "shivering"
+                "dangerously_cold"
             ],
             "deaths": {
                 "death_text": [
@@ -147,7 +147,7 @@
         "secondary_disasters": [],
         "collateral_damage": {
             "injuries": [
-                "shivering",
+                "dangerously_cold",
                 "frostbite"
             ],
             "deaths": {
@@ -287,7 +287,7 @@
                 "sprain",
                 "bruises",
                 "scrapes",
-                "small cuts"
+                "small_cut"
             ]
         }
     },
@@ -320,8 +320,8 @@
         ],
         "collateral_damage": {
             "injuries": [
-                "heat exhaustion",
-                "heat stroke",
+                "heat_exhaustion",
+                "heat_stroke",
                 "dehydrated"
             ],
             "deaths": {
@@ -365,8 +365,8 @@
         ],
         "collateral_damage": {
             "injuries": [
-                "shivering",
-                "running nose"
+                "dangerously_cold",
+                "running_nose"
             ]
         },
         "secondary_disasters": {

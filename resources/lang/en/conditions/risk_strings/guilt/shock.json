@@ -1,0 +1,28 @@
+[
+    {
+        "event_id": "guilt_shock0",
+        "strings": [
+            "r_c0 tries to comfort m_c as {PRONOUN/m_c/subject} {VERB/m_c/grow/grows} more and more haunted by {PRONOUN/m_c/poss} crimes, but there are no herbs for guilt."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {
+                "status": [
+                    "medicine cat"
+                ],
+                "group": [
+                    "match:m_c"
+                ]
+            }
+        }
+    },
+    {
+        "event_id": "guilt_shock1",
+        "strings": [
+            "m_c is growing more and more haunted by what {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} done."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

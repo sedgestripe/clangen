@@ -1,0 +1,12 @@
+[
+    {
+        "event_id": "healed_guilt0",
+        "strings": [
+            "m_c has finally shaken the guilt for what {PRONOUN/m_c/subject} did.",
+            "m_c's troubling guilt has subsided, but {PRONOUN/m_c/subject} will never forget what {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} done."
+        ],
+        "involved_cats": {
+            "m_c": {}
+        }
+    }
+]

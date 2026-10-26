@@ -177,7 +177,8 @@ class FreshkillPile:
         """
         if apply_outsider_yield and self._is_mc_outside():
             amount = amount / self.OUTSIDER_YIELD_DIVISOR
-        self.active_pile["expires_in_3"] += amount
+        highest_rot = f"expires_in_{get_config('prey.time_to_rot')}"
+        self.active_pile[highest_rot] += amount
         self.total_amount += amount
         self.total_amount = round(self.total_amount, 2)
 
@@ -222,7 +223,7 @@ class FreshkillPile:
         pregnant_cats = [
             cat
             for cat in living_cats
-            if "pregnant" in cat.injuries
+            if "pregnant" in cat.temporary_conditions
             and cat.ID not in queen_dict.keys()
             and cat.status.alive_in_your_cat_group
         ]
@@ -259,7 +260,7 @@ class FreshkillPile:
                 lambda c: c.status.rank
                 in (CatRank.WARRIOR, CatRank.APPRENTICE, CatRank.LEADER, CatRank.DEPUTY)
                 and c.status.alive_in_player_clan
-                and not c.not_working(),
+                and c.can_work(),
                 Cat.all_cats.values(),
             )
         )
@@ -268,7 +269,7 @@ class FreshkillPile:
         if not possible_hunters:
             possible_hunters = list(
                 filter(
-                    lambda c: c.status.alive_in_player_clan and not c.not_working(),
+                    lambda c: c.status.alive_in_player_clan and c.can_work(),
                     Cat.all_cats.values(),
                 )
             )
@@ -320,6 +321,10 @@ class FreshkillPile:
                 amount = round(value, 2)
                 event_list.append(i18n.t("hardcoded.expired_prey", count=amount))
         self.total_amount = sum(active.values())
+        prey_loss = round(self.total_amount * get_config("prey.prey_loss.loss"))
+        if prey_loss > 0:
+            event_list.append(i18n.t("hardcoded.tribute_prey", count=prey_loss))
+        self.remove_freshkill(prey_loss)
         value_diff = self.total_amount
         self.timeskip_feed = True
         self.already_fed = []
@@ -416,7 +421,8 @@ class FreshkillPile:
         pregnant_cats = [
             cat
             for cat in cats_to_feed
-            if "pregnant" in cat.injuries and cat.ID not in queen_dict.keys()
+            if "pregnant" in cat.temporary_conditions
+            and cat.ID not in queen_dict.keys()
         ]
         relevant_queens.extend(pregnant_cats)
         return fed_kits, relevant_queens
@@ -531,7 +537,7 @@ class FreshkillPile:
 
         :param list cats_to_feed: Cats to feed
         """
-        sick_cats = [cat for cat in cats_to_feed if cat.is_ill() or cat.is_injured()]
+        sick_cats = [cat for cat in cats_to_feed if cat.temporary_conditions]
         self._feed_group(sick_cats)
 
     # ---------------------------------------------------------------------------- #
@@ -722,7 +728,10 @@ class FreshkillPile:
                     cat.moons > 114 and str(cat.status.rank) == CatRank.ELDER
                 ):
                     factor = 2
-                if cat.ID in queen_dict.keys() or "pregnant" in cat.injuries:
+                if (
+                    cat.ID in queen_dict.keys()
+                    or "pregnant" in cat.temporary_conditions
+                ):
                     status_ = "queen/pregnant"
 
                 # check if the max_score is correct, otherwise update
@@ -753,7 +762,7 @@ class FreshkillPile:
 
         queen_dict, kits = get_alive_clan_queens(self.living_cats)
         prey_status = cat.status.rank
-        if cat.ID in queen_dict.keys() or "pregnant" in cat.injuries:
+        if cat.ID in queen_dict.keys() or "pregnant" in cat.temporary_conditions:
             prey_status = "queen/pregnant"
         max_score = get_config("prey.prey_requirement")[prey_status] * factor
         nutrition.max_score = max_score
@@ -772,9 +781,7 @@ ADDITIONAL_PREY = constants.CONFIG["prey"]["additional_prey"]
 CONDITION_INCREASE = constants.CONFIG["prey"]["condition_increase"]
 HUNTER_BONUS = constants.CONFIG["prey"]["hunter_bonus"]
 HUNTER_EXP_BONUS = constants.CONFIG["prey"]["hunter_exp_bonus"]
-FRESHKILL_EVENT_TRIGGER_FACTOR = constants.CONFIG["prey"]["base_event_trigger_factor"]
 MAL_PERCENTAGE = constants.CONFIG["prey"]["nutrition_malnourished_percentage"]
 STARV_PERCENTAGE = constants.CONFIG["prey"]["nutrition_starving_percentage"]
-
 FRESHKILL_ACTIVE = constants.CONFIG["prey"]["activate_death"]
 FRESHKILL_EVENT_ACTIVE = constants.CONFIG["prey"]["activate_events"]

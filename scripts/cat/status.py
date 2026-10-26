@@ -666,10 +666,12 @@ class Status:
             return CatGroup.UNKNOWN_RESIDENCE_ID
 
         # meanwhile clan cats go wherever their guide points them
-        if game.clan.followingsc:
-            return CatGroup.STARCLAN_ID
-        else:
-            return CatGroup.DARK_FOREST_ID
+        if game.clan:
+            if game.clan.followingsc:
+                return CatGroup.STARCLAN_ID
+            else:
+                return CatGroup.DARK_FOREST_ID
+        return CatGroup.STARCLAN_ID
 
     def send_to_afterlife(self, target_ID: str = None):
         """

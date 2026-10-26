@@ -54,6 +54,7 @@ class Switch(StrEnum):
     keybinds_live = auto()
     card_conflict_changes = auto()
     confirmed_deck_list = auto()
+    ceremony_accessory = auto()
 
     # LG
     attended_half_moon = auto()
@@ -135,6 +136,7 @@ _switches: Dict[str, Union[str, int, bool, list, dict, None]] = {
     "talk_category": "talk",
     "accomplices": [],
     "change_group": None,
+    "ceremony_accessory": False,
 }
 """If you are somehow accessing this from outside game_switches.py, something has gone terribly wrong."""
 

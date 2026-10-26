@@ -192,12 +192,9 @@ class LeaderDenScreen(Screens):
 
         self.helper_cat = None
 
-        if self.no_leader or game.clan.leader.not_working():
+        if self.no_leader or not game.clan.leader.can_work():
             if game.clan.deputy:
-                if (
-                    not game.clan.deputy.not_working()
-                    and game.clan.deputy.status.alive_in_player_clan
-                ):
+                if game.clan.deputy.can_work():
                     self.helper_cat = game.clan.deputy  # if lead is sick, dep helps
             if not self.helper_cat:  # if dep is sick, med cat helps
                 meds = find_alive_cats_with_rank(
@@ -213,7 +210,7 @@ class LeaderDenScreen(Screens):
                         i
                         for i in Cat.all_cats.values()
                         if not i.dead
-                        and not i.not_working()
+                        and i.can_work()
                         and i.status.rank.is_any_mediator_rank()
                     ]
                     if mediators:
@@ -227,7 +224,7 @@ class LeaderDenScreen(Screens):
                     i
                     for i in Cat.all_cats.values()
                     if i.status.alive_in_player_clan
-                    and not i.not_working()
+                    and i.can_work()
                     and i.status.rank
                     not in [CatRank.NEWBORN, CatRank.KITTEN, CatRank.LEADER]
                 ]
@@ -306,7 +303,7 @@ class LeaderDenScreen(Screens):
                 "screens.leader_den.no_leader_outsider"
             )
         # if leader is sick but helper is available, give special notice
-        elif game.clan.leader.not_working() and self.helper_cat:
+        elif not game.clan.leader.can_work() and self.helper_cat:
             self.helper_name = self.helper_cat.name
             self.screen_elements["clan_notice_text"].set_text(
                 "screens.leader_den.clan_notice_text",
@@ -325,7 +322,7 @@ class LeaderDenScreen(Screens):
                 },
             )
         # if leader is sick but no helper is available, give special notice
-        elif game.clan.leader.not_working():
+        elif not game.clan.leader.can_work():
             self.no_leader = True
             self.screen_elements["clan_notice_text"].set_text(
                 "screens.leader_den.leader_sick_clan",
@@ -1194,7 +1191,7 @@ class LeaderDenScreen(Screens):
 
         # percentage of success
         success_chance = (int(game.clan.reputation) / 100) / 1.5
-        if game.clan.leader.not_working:
+        if not game.clan.leader.can_work():
             success_chance = success_chance / 1.2
         # searching should be extra hard, after all those kitties are LOST
         if action == "search":

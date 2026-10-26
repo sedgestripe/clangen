@@ -163,7 +163,7 @@
         "collateral_damage": {
             "injuries": [
                 "burn",
-                "severe burn"
+                "severe_burn"
             ],
             "deaths": {
                 "death_text": [
@@ -227,7 +227,7 @@
         },
         "collateral_damage": {
             "injuries": [
-                "water in their lungs"
+                "water_in_lungs"
             ],
             "deaths": {
                 "death_text": [
@@ -332,7 +332,7 @@
             "injuries": [
                 "scrapes",
                 "sprain",
-                "dislocated joint"
+                "dislocated_joint"
             ],
             "deaths": {
                 "death_text": [

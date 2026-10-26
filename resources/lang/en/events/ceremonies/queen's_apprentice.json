@@ -1,0 +1,121 @@
+[
+    {
+        "event_id": "queen_app_0",
+        "involved_cats": {
+            "m_c": {}
+        },
+        "strings": [
+            "Feeling a deep bond with the nursery, m_c has chosen to serve the Clan as a queen's apprentice. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} excited to begin {PRONOUN/m_c/poss} nurturing journey."
+        ]
+    },
+    {
+        "event_id": "queen_app_1",
+        "involved_cats": {
+            "m_c": {},
+            "r_c0": {}
+        },
+        "strings": [
+            "Rather than the thrill of the hunt or the heat of battle, m_c is drawn to the gentle rhythm of the nursery. With r_c0 by {PRONOUN/m_c/poss} side, {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} ready to learn the ways of the queens.",
+            "Having always felt a connection to the kits, m_c is inspired by r_c0's dedication in the nursery. Eager to follow in {PRONOUN/r_c0/poss} pawsteps, m_c is taken under r_c0's nurturing wing.",
+            "While m_c admires the bravery of warriors and the wisdom of elders, {PRONOUN/m_c/poss} heart lies with the young ones in the nursery. Under r_c0's guidance, m_c embarks on the path to become a devoted carer.",
+            "Despite some questioning looks, m_c is firm in {PRONOUN/m_c/poss} resolve to be under r_c0's tutelage: the future of the Clan lies in the paws of the kits, and that's where m_c wants to be.",
+            "It's a dream come true for m_c: to be under r_c0's guidance and be a queen's apprentice. For m_c, the nursery is where the heart of the Clan beats strongest.",
+            "Every Clan's strength lies in its young, and m_c wishes to be at the forefront of that, learning and growing as a queen's apprentice with r_c0 to guide the way."
+        ],
+        "relationship_constraint": [
+            {
+                "cats_from": [
+                    "m_c"
+                ],
+                "cats_to": [
+                    "r_c0"
+                ],
+                "mutual": false,
+                "constraints": [
+                    "app/mentor"
+                ]
+            }
+        ],
+        "relationship_changes": [
+            {
+                "cats_from": [
+                    "m_c"
+                ],
+                "cats_to": [
+                    "r_c0"
+                ],
+                "mutual": true,
+                "values": [
+                    "respect"
+                ],
+                "amount": 10,
+                "log": {
+                    "cats_from": "m_c was apprenticed to r_c0."
+                }
+            }
+        ]
+    },
+    {
+        "event_id": "queen_app_2",
+        "involved_cats": {
+            "m_c": {
+                "has_mentor": {
+                    "current": false
+                }
+            }
+        },
+        "strings": [
+            "With a heart full of compassion, m_c sees the importance of the next generation and decides to dedicate {PRONOUN/m_c/poss} life to the well-being of the Clan's kits.",
+            "m_c believes that being a queen's apprentice is {PRONOUN/m_c/poss} true calling; m_c hopes to make a lasting impact in the heart of the nursery."
+        ]
+    },
+    {
+        "event_id": "queen_app_3",
+        "involved_cats": {
+            "m_c": {
+                "stat": {
+                    "trait": [
+                        "compassionate"
+                    ]
+                }
+            },
+            "r_c0": {}
+        },
+        "strings": [
+            "Recognizing m_c's innate ability to care and nurture, r_c0 feels it's only natural to train m_c as the next queen's apprentice.",
+            "Captivated by the tales and warmth of the nursery, m_c has been shadowing r_c0, showing an interest in becoming a queen's apprentice. r_c0 welcomes the enthusiastic new pupil."
+        ],
+        "relationship_constraint": [
+            {
+                "cats_from": [
+                    "m_c"
+                ],
+                "cats_to": [
+                    "r_c0"
+                ],
+                "mutual": false,
+                "constraints": [
+                    "app/mentor"
+                ]
+            }
+        ],
+        "relationship_changes": [
+            {
+                "cats_from": [
+                    "m_c"
+                ],
+                "cats_to": [
+                    "r_c0"
+                ],
+                "mutual": true,
+                "values": [
+                    "respect"
+                ],
+                "amount": 10,
+                "log": {
+                    "cats_from": "m_c was apprenticed to r_c0."
+                }
+            }
+        ]
+    }
+]

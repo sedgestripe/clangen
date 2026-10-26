@@ -37,7 +37,7 @@
         ],
         "collateral_damage": {
             "injuries": [
-                "broken bone"
+                "broken_bone"
             ],
             "deaths": {
                 "death_text": [

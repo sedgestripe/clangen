@@ -1,0 +1,71 @@
+[
+    {
+        "event_id": "queen_0",
+        "involved_cats": {
+            "m_c": {}
+        },
+        "strings": [
+            "(old_name) has shown great devotion to the Clan by guiding the next generation. {PRONOUN/m_c/subject/CAP} {VERB/m_c/are/is} given the title of queen, and the Clan cherishes {PRONOUN/m_c/poss} new role.",
+            "With grace and patience, m_c has settled into {PRONOUN/m_c/poss} duties, nurturing the future of the Clan.",
+            "The Clan has watched (old_name) rise with strength and grace, choosing the path of a queen. {PRONOUN/m_c/poss/CAP} dedication is an inspiration to all, and {PRONOUN/m_c/subject} {VERB/m_c/are/is} warmly acknowledged as m_c."
+        ]
+    },
+    {
+        "event_id": "queen_1",
+        "involved_cats": {
+            "m_c": {
+                "past_status": [
+                    "-queen's apprentice"
+                ]
+            }
+        },
+        "strings": [
+            "It was not foreseen for (old_name) to become a queen, but fate has chosen {PRONOUN/m_c/poss} path. The Clan welcomes {PRONOUN/m_c/object} into the queens' den, hoping {PRONOUN/m_c/subject} {VERB/m_c/find/finds} comfort and peace in {PRONOUN/m_c/poss} new duties."
+        ]
+    },
+    {
+        "event_id": "queen_2",
+        "involved_cats": {
+            "m_c": {
+                "age": [
+                    "adolescent"
+                ],
+                "current_exp": [
+                    "prepared"
+                ]
+            }
+        },
+        "strings": [
+            "Young (old_name) is ready to embrace {PRONOUN/m_c/poss} role as a queen earlier than many expected. The Clan gathers to offer support and blessings for {PRONOUN/m_c/poss} new journey."
+        ]
+    },
+    {
+        "event_id": "queen_3",
+        "tags": [
+            "clan:leader"
+        ],
+        "involved_cats": {
+            "m_c": {
+                "current_exp": [
+                    "untrained",
+                    "learning"
+                ]
+            }
+        },
+        "strings": [
+            "Though some in the Clan whisper doubts of (old_name)'s new role, lead_name welcomes {PRONOUN/m_c/object} with warmth and hope, confident in {PRONOUN/m_c/poss} dedication as a queen."
+        ]
+    },
+    {
+        "event_id": "queen_4",
+        "tags": [
+            "clan:leader"
+        ],
+        "involved_cats": {
+            "m_c": {}
+        },
+        "strings": [
+            "Having shown unwavering love for the Clan's kits, (old_name) is embraced by lead_name as m_c, a symbol of life and hope for the Clan."
+        ]
+    }
+]

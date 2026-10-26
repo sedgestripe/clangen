@@ -23,6 +23,7 @@ from ..game_structure.game.switches import switch_get_value, Switch
 from scripts.screens.enums import GameScreen
 from scripts.clan_package.settings import get_clan_setting
 from scripts.game_structure.localization import load_lang_resource
+from scripts.cat_relations.relationship import create_one_relationship
 
 
 class QueenScreen(Screens):
@@ -310,12 +311,12 @@ class QueenScreen(Screens):
         if queen.ID in kit.relationships:
             rel1 = queen.relationships[kit.ID]
         else:
-            rel1 = queen.create_one_relationship(kit)
+            rel1 = create_one_relationship(queen, kit)
 
         if kit.ID in queen.relationships:
             rel2 = kit.relationships[queen.ID]
         else:
-            rel2 = kit.create_one_relationship(queen)
+            rel2 = create_one_relationship(kit, queen)
 
         compat = get_personality_compatibility(queen, kit)
         if compat is True:

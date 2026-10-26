@@ -70,7 +70,7 @@
         "collateral_damage": {
             "injuries": [
                 "burn",
-                "severe burn",
+                "severe_burn",
                 "poisoned"
             ],
             "deaths": {
@@ -126,9 +126,9 @@
             "injuries": [
                 "scrapes",
                 "sprain",
-                "small cuts",
-                "broken back",
-                "broken bone"
+                "small_cut",
+                "broken_back",
+                "broken_bone"
             ],
             "deaths": {
                 "death_text": [

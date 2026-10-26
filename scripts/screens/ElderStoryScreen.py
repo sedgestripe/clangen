@@ -546,7 +546,7 @@ class ElderStoryScreen(Screens):
 
                 text = elder.personality.trait + "\n" + elder.experience_level
 
-                if elder.not_working():
+                if not elder.can_work():
                     text += "\nThis cat isn't able to work"
                     self.starclan_story_button.disable()
                     self.df_story_button.disable()
@@ -891,7 +891,7 @@ class ElderStoryScreen(Screens):
 
         invalid_elder = False
         if self.selected_elder is not None:
-            if self.elders[self.selected_elder].not_working():
+            if not self.elders[self.selected_elder].can_work():
                 invalid_elder = True
             elif self.elders[self.selected_elder].ID in game.patrolled:
                 invalid_elder = True

@@ -1,6 +1,6 @@
 [
     {
-        "id": "shunned_general",
+        "event_id": "shunned_general",
         "strings": [
             "Is watching the rest of the Clan eat",
             "Is sitting alone",
@@ -43,7 +43,7 @@
         ]
     },
     {
-        "id": "shunned_vengeful_bloodthirsty",
+        "event_id": "shunned_vengeful_bloodthirsty",
         "strings": [
             "Is planning, plotting, observing...",
             "Digs {PRONOUN/m_c/poss} claws into the dirt as r_c walks by",
@@ -61,7 +61,7 @@
         }
     },
     {
-        "id": "shunned_not_vengeful_bloodthirsty",
+        "event_id": "shunned_not_vengeful_bloodthirsty",
         "strings": [
             "Feels a pit of guilt in {PRONOUN/m_c/poss} stomach",
             "Is pleading for forgiveness to any cat who will listen",
@@ -80,7 +80,7 @@
         }
     },
     {
-        "id": "shunned_kitten",
+        "event_id": "shunned_kitten",
         "strings": [
             "Misses being able to play freely",
             "Wonders if {PRONOUN/m_c/subject}'ll ever be an apprentice",
@@ -103,7 +103,7 @@
         }
     },
     {
-        "id": "shunned_app_general",
+        "event_id": "shunned_app_general",
         "strings": [
             "Feels as if {PRONOUN/m_c/poss} life is ruined",
             "Questions if {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} strong enough to become a rogue",
@@ -137,7 +137,7 @@
         }
     },
     {
-        "id": "shunned_meddie_sc",
+        "event_id": "shunned_meddie_sc",
         "strings": [
             "Wonders if StarClan will ever speak to {PRONOUN/m_c/object} again",
             "Tells {PRONOUN/m_c/self} that {PRONOUN/m_c/subject} {VERB/m_c/were/was} just trying to help the Clan",
@@ -162,7 +162,7 @@
         }
     },
     {
-        "id": "shunned_meddie_df",
+        "event_id": "shunned_meddie_df",
         "strings": [
             "Is spending more time than usual asleep ... for no particular reason.",
             "Knows this is just part of getting to the glory the Dark Forest promises",
@@ -189,7 +189,7 @@
         }
     },
     {
-        "id": "shunned_meddie_general",
+        "event_id": "shunned_meddie_general",
         "strings": [
             "Misses the medicine den",
             "Wonders what it'll take to make the Clan trust {PRONOUN/m_c/object} again",
@@ -210,7 +210,7 @@
         }
     },
     {
-        "id": "shunned_queen",
+        "event_id": "shunned_queen",
         "strings": [
             "Frowns when the kits {PRONOUN/m_c/subject} used to play with warily run off",
             "Knows {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} indefinitely destroyed the peace of the nursery",
@@ -228,7 +228,7 @@
         }
     },
     {
-        "id": "shunned_elder",
+        "event_id": "shunned_elder",
         "strings": [
             "Feels like {PRONOUN/m_c/subject}{VERB/m_c/'ve/'s} made a mistake",
             "Curses {PRONOUN/m_c/poss} years of knowledge for failing {PRONOUN/m_c/object}",
@@ -246,7 +246,7 @@
         }
     },
     {
-        "id": "sneaky_shunned",
+        "event_id": "sneaky_shunned",
         "strings": [
             "Manages to steal a piece of fresh prey from an incoming patrol",
             "Knows {PRONOUN/m_c/subject} could leave without anycat noticing until the next morning",
@@ -267,7 +267,7 @@
         }
     },
     {
-        "id": "adventurous_shunned",
+        "event_id": "adventurous_shunned",
         "strings": [
             "Can't wait to be free again",
             "Guesses {PRONOUN/m_c/subject} could consider this a new experience",

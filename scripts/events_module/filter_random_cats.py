@@ -1,5 +1,7 @@
 import random
 
+import ujson
+
 from scripts.game_structure import game
 from scripts.cat.enums import CatGroup, CatAge
 from scripts.cat.cats import Cat, BACKSTORIES
@@ -415,6 +417,63 @@ def __filter_faith(abbrev_block, cat):
     return True
 
 
+with open("resources/dicts/conversion_dict.json", "r", encoding="utf-8") as _read_file:
+    _CONDITION_NAME_MAP = ujson.loads(_read_file.read())["condition_map"]
+
+# conditions that counted as "illnesses" in the old condition system, so the
+# "illness"/"injury" constraints keep working with the new temporary conditions
+_OLD_ILLNESSES = {
+    "breathless_fit",
+    "carrionplace_disease",
+    "constant_nightmares",
+    "diarrhea",
+    "festering_wound",
+    "fleas",
+    "greencough",
+    "grief_stricken",
+    "heartbroken",
+    "heat_exhaustion",
+    "heat_stroke",
+    "infection",
+    "kittencough",
+    "malnourished",
+    "redcough",
+    "running_nose",
+    "seizure",
+    "starving",
+    "stomachache",
+    "tick_fever",
+    "whitecough",
+    "yellowcough",
+}
+
+
+def _condition_id(name: str) -> str:
+    """Converts an old-style condition name ("grief stricken") to its new id ("grief_stricken")"""
+    name = name.replace(" ", "_").replace("-", "_")
+    return _CONDITION_NAME_MAP.get(name, name)
+
+
+def _has_condition(cat, name: str) -> bool:
+    return _condition_id(name) in cat.temporary_conditions + cat.permanent_conditions
+
+
+def _is_ill(cat) -> bool:
+    return any(c.name in _OLD_ILLNESSES for c in cat.temporary_conditions)
+
+
+def _is_injured(cat) -> bool:
+    return any(c.name not in _OLD_ILLNESSES for c in cat.temporary_conditions)
+
+
+def _is_congenital(cat, name: str):
+    """Returns None if the cat lacks the permanent condition, otherwise whether it's congenital"""
+    condition = cat.get_condition(_condition_id(name))
+    if condition is None or condition not in cat.permanent_conditions:
+        return None
+    return condition.is_congenital
+
+
 def __filter_conditions(abbrev_block, cat):
     blind_tagged = False
     deaf_tagged = False
@@ -428,11 +487,7 @@ def __filter_conditions(abbrev_block, cat):
     for tag in condition_block:
         if isinstance(tag, list):
             for condition in tag:
-                if (
-                    condition not in cat.illnesses
-                    and condition not in cat.injuries
-                    and condition not in cat.permanent_condition
-                ):
+                if not _has_condition(cat, condition):
                     return False
         elif isinstance(tag, str):
             if ":" in tag:
@@ -451,71 +506,50 @@ def __filter_conditions(abbrev_block, cat):
                     exclusive = attributes[2]
 
                 # exclusionary
-                if condition == "not" and (
-                    born_with in cat.illnesses
-                    or born_with in cat.injuries
-                    or born_with in cat.permanent_condition
-                ):
+                if condition == "not" and _has_condition(cat, born_with):
                     return False
 
                 # gen injury/illness
                 if condition == "injury" and born_with == "any":
-                    if not cat.is_injured():
+                    if not _is_injured(cat):
                         return False
                 if condition == "illness" and born_with == "any":
-                    if not cat.is_ill():
+                    if not _is_ill(cat):
                         return False
                 if condition == "injury" and born_with == "none":
-                    if cat.is_injured():
+                    if _is_injured(cat):
                         return False
                 if condition == "illness" and born_with == "none":
-                    if cat.is_ill():
+                    if _is_ill(cat):
                         return False
 
                 # now blind/deaf
-                if exclusive == "true" and condition not in cat.permanent_condition:
+                if exclusive == "true" and _is_congenital(cat, condition) is None:
                     return False
 
                 if born_with == "true":
-                    if not (
-                        condition in cat.permanent_condition
-                        and cat.permanent_condition[condition]["born_with"] is True
-                    ):
+                    if _is_congenital(cat, condition) is not True:
                         return False
                 elif born_with == "false":
-                    if not (
-                        condition in cat.permanent_condition
-                        and cat.permanent_condition[condition]["born_with"] is False
-                    ):
+                    if _is_congenital(cat, condition) is not False:
                         return False
             else:
                 if tag == "hearing":
-                    if "deaf" in cat.permanent_condition:
+                    if "deaf" in cat.permanent_conditions:
                         deaf_tagged = False
                         return False
                 elif tag in exclusive_conditions:
-                    if not (
-                        tag in cat.permanent_condition
-                        or tag in cat.injuries
-                        or tag in cat.illnesses
-                    ):
+                    if not _has_condition(cat, tag):
                         return False
                 else:
                     reg_tagged = True
-                    if (
-                        tag in cat.permanent_condition
-                        or tag in cat.injuries
-                        or tag in cat.illnesses
-                    ):
+                    if _has_condition(cat, tag):
                         condition_true = True
                         break
 
-    if "blind" in cat.permanent_condition and not blind_tagged:
+    if "blind" in cat.permanent_conditions and not blind_tagged:
         return False
-    if (
-        "deaf" in cat.permanent_condition
-        and cat.permanent_condition["deaf"]["born_with"] is True
-    ) and not deaf_tagged:
+    if _is_congenital(cat, "deaf") is True and not deaf_tagged:
         return False
 
     if reg_tagged and not condition_true:
@@ -672,38 +706,11 @@ def __filter_relationships(
                                     rel_valid = to_cat.is_grandparent(from_cat)
                                 elif rel_tag == "half-siblings":
                                     rel_valid = to_cat.is_half_sibling(from_cat)
-                                elif rel_tag == "dead/grieving":
-                                    if "grief stricken" not in to_cat.illnesses:
-                                        rel_valid = False
-                                    elif (
-                                        "grief cat"
-                                        not in to_cat.illnesses["grief stricken"]
-                                    ):
-                                        rel_valid = False
-                                    elif (
-                                        to_cat.illnesses["grief stricken"]["grief cat"]
-                                        != from_cat.ID
-                                    ):
-                                        rel_valid = False
-                                    else:
-                                        rel_valid = True
-                                elif rel_tag == "grieving/dead":
-                                    if "grief stricken" not in from_cat.illnesses:
-                                        rel_valid = False
-                                    elif (
-                                        "grief cat"
-                                        not in from_cat.illnesses["grief stricken"]
-                                    ):
-                                        rel_valid = False
-                                    elif (
-                                        from_cat.illnesses["grief stricken"][
-                                            "grief cat"
-                                        ]
-                                        != to_cat.ID
-                                    ):
-                                        rel_valid = False
-                                    else:
-                                        rel_valid = True
+                                elif rel_tag in ("dead/grieving", "grieving/dead"):
+                                    # grief conditions don't record who is being grieved, so
+                                    # these can't be matched (they never matched before either:
+                                    # the old check looked for a "grief cat" key that was never set)
+                                    rel_valid = False
                                 elif rel_tag == "related":
                                     rel_valid = from_cat.is_related(
                                         to_cat, get_clan_setting("first cousin mates")

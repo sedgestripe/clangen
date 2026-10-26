@@ -583,5 +583,32 @@
         "You feel the chill of the final dusk seeping into your fur. The edges of your vision blur, the sounds of the territory soften. As the stars in the sky merge into a comforting blanket of light, you can't help but reflect on your life. Have you made a difference?",
         "An unusual calm washes over you, the sensation of paws barely grazing the earth. The world starts to spin, colors of the territory blending into a watercolor haze. As the darkness edges closer, you find peace in the memories of your life. The lives you've touched, the bonds you've built, the laughter, the love - it feels like an eternity lived in moments. You take one last breath and embrace the everlasting peace.",
         "The pull of the darkness is gentle, like the ebbing of a slow-moving stream. Your limbs grow heavy and you lay your head down, eyes fixed on the starry sky. A sense of peace washes over you as you take stock of your life, of the bonds you've formed, the lessons you've learned, and the legacy you're leaving behind. With a soft sigh, you let go, and embrace the serenity of the darkness."
+    ],
+    "kittypet_adol": [
+        "m_c finally feels like {PRONOUN/m_c/subject} {VERB/m_c/have/has} grown into {PRONOUN/m_c/poss} paws."
+    ],
+    "loner_adol": [
+        "m_c finally feels like {PRONOUN/m_c/subject} {VERB/m_c/have/has} grown into {PRONOUN/m_c/poss} paws."
+    ],
+    "rogue_adol": [
+        "m_c finally feels like {PRONOUN/m_c/subject} {VERB/m_c/have/has} grown into {PRONOUN/m_c/poss} paws."
+    ],
+    "kittypet_adult": [
+        "m_c's paws feel steadier than they ever have before."
+    ],
+    "loner_adult": [
+        "m_c's paws feel steadier than they ever have before."
+    ],
+    "rogue_adult": [
+        "m_c's paws feel steadier than they ever have before."
+    ],
+    "kittypet_senior": [
+        "m_c feels {PRONOUN/m_c/self} begin to slow down in {PRONOUN/m_c/poss} old age."
+    ],
+    "loner_senior": [
+        "m_c feels {PRONOUN/m_c/self} begin to slow down in {PRONOUN/m_c/poss} old age."
+    ],
+    "rogue_senior": [
+        "m_c feels {PRONOUN/m_c/self} begin to slow down in {PRONOUN/m_c/poss} old age."
     ]
 }

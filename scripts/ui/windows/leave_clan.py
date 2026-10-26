@@ -7,6 +7,7 @@ import pygame_gui
 
 from scripts.cat.cats import Cat
 from scripts.cat.enums import CatSocial, CatGroup
+from scripts.cat.microservices.add_to_clan import add_to_clan, add_dependents_to_clan
 from scripts.game_structure import game
 from scripts.game_structure.screen_settings import MANAGER
 from scripts.ui.elements.checkbox import UICheckbox
@@ -133,7 +134,8 @@ class LeaveClanWindow(GameWindow):
                     self.the_cat.status.add_to_group(str(self.new_group_ID))
                 else:
                     # this cat is joining the player clan
-                    self.the_cat.add_to_clan()
+                    add_to_clan(self.the_cat)
+                    add_dependents_to_clan(self.the_cat)
                 # ---
                 game.all_screens[GameScreen.PROFILE].exit_screen()
                 game.all_screens[GameScreen.PROFILE].screen_switches()
