@@ -3736,91 +3736,6 @@
             "[You and t_c have a long conversation about the other Clans. With each detail you share, {PRONOUN/t_c/poss} eyes grow bigger and bigger.]"
         ]
     },
-    "deadmed_connected_J1~1": {
-        "frequency": 2,
-        "cats": {
-            "y_c": {
-                "condition": [
-                    "blind:any:false"
-                ],
-                "min_max_dead_moons": [
-                    0,
-                    10
-                ],
-                "residence": [
-                    "sc"
-                ]
-            },
-            "t_c": {
-                "cluster": [
-                    "brooding"
-                ],
-                "condition": [
-                    "blind:any:false"
-                ],
-                "min_max_dead_moons": [
-                    40,
-                    -1
-                ],
-                "residence": [
-                    "sc"
-                ],
-                "rank": [
-                    "medicine cat"
-                ]
-            }
-        },
-        "intro": [
-            "[You're in pain, and you don't know why. Wasn't this supposed to stop in StarClan? You find the nearest medicine cat.]",
-            "Hello, y_c.",
-            "Pain? That's completely normal. You've experienced death-- your brain isn't quite caught up to the fact that you're here.",
-            "We all go through it. You'll feel better in a little bit.",
-            "[You suppose you should take {PRONOUN/t_c/poss} word for it... That wasn't very effective treatment, though.]"
-        ]
-    },
-    "deadmed_connected_J1~2": {
-        "frequency": 2,
-        "cats": {
-            "y_c": {
-                "condition": [
-                    "blind:any:false"
-                ],
-                "residence": [
-                    "sc"
-                ]
-            },
-            "t_c": {
-                "cluster": [
-                    "brooding"
-                ],
-                "condition": [
-                    "blind:any:false"
-                ],
-                "min_max_dead_moons": [
-                    40,
-                    -1
-                ],
-                "residence": [
-                    "sc"
-                ],
-                "rank": [
-                    "medicine cat"
-                ]
-            },
-            "r_c:0": {
-                "rank": [
-                    "medicine cat",
-                    "medicine cat apprentice"
-                ]
-            }
-        },
-        "intro": [
-            "Hey there, y_c. Feeling better?",
-            "[You remember when you told r_c:0 that you were feeling some pain left over from your death.]",
-            "[But now, you've been here long enough for it to go away.]",
-            "Gone? Good. That's good to hear."
-        ]
-    },
     "neurotic_medapp_SQ1": {
         "frequency": 2,
         "cats": {
@@ -4078,59 +3993,6 @@
         "intro": [
             "Why do warriors all think that herbs work like magic?",
             "Healing takes time and patience, two qualities you all seem to lack."
-        ]
-    },
-    "neurotic_skillhealer_SQ2_5": {
-        "frequency": 2,
-        "cats": {
-            "y_c": {
-                "condition": [
-                    "blind:any:false"
-                ],
-                "rank": [
-                    "medicine cat",
-                    "medicine cat apprentice"
-                ]
-            },
-            "t_c": {
-                "cluster": [
-                    "neurotic"
-                ],
-                "condition": [
-                    "blind:any:false"
-                ],
-                "skill": [
-                    "HEALER,1"
-                ],
-                "rank": [
-                    "warrior",
-                    "deputy",
-                    "apprentice",
-                    "mediator",
-                    "mediator apprentice",
-                    "queen",
-                    "queen's apprentice"
-                ]
-            },
-            "r_c:0": {}
-        },
-        "relationships": [
-            {
-                "cats_from": [
-                    "t_c"
-                ],
-                "cats_to": [
-                    "r_c:0"
-                ],
-                "relationship": [
-                    "min_like_50"
-                ]
-            }
-        ],
-        "intro": [
-            "Um... sorry, y_c? I don't mean to bother you, but r_c:0 has a bit of a sore throat. Could I have some honey from your stores to give them?",
-            "O-of course, you could give it to them, too! I don't mean to overstep.",
-            "[There's not much that can go terribly wrong with honey. Since t_c seems to know {PRONOUN/t_c/poss} way around medicine despite not being a medicine cat, you give {PRONOUN/t_c/object} a dollop of honey on a stick and send {PRONOUN/t_c/object} on {PRONOUN/t_c/poss} way.]"
         ]
     },
     "neurotic_skillsong_SQ8~1": {
@@ -4790,51 +4652,6 @@
         "intro": [
             "*Sigh* Can't you see I have important things to do, y_c?",
             "Go back to catching mice, or whatever it is you warriors do."
-        ]
-    },
-    "about_brooding_AJ1": {
-        "frequency": 2,
-        "cats": {
-            "y_c": {
-                "age": [
-                    "not_kitten"
-                ]
-            },
-            "t_c": {
-                "age": [
-                    "not_kitten"
-                ],
-                "rank": [
-                    "mediator",
-                    "mediator apprentice"
-                ]
-            },
-            "r_c:0": {
-                "rank": [
-                    "mediator"
-                ],
-                "cluster": [
-                    "brooding"
-                ]
-            }
-        },
-        "relationships": [
-            {
-                "cats_from": [
-                    "t_c"
-                ],
-                "cats_to": [
-                    "y_c"
-                ],
-                "relationship": [
-                    "min_trust_15"
-                ]
-            }
-        ],
-        "intro": [
-            "Oh, StarClan, did r_c:0 call yet another Clanmate a mousebrain? *Sigh* {PRONOUN/r_c:0/subject/CAP} sure {VERB/r_c:0/tend/tends} to do that a lot ...",
-            "Try not to take it too personally, y_c. I know {PRONOUN/r_c:0/poss} methods may seem ... unorthodox, but r_c:0 really isn't a bad cat. {PRONOUN/r_c:0/subject/CAP} just {VERB/r_c:0/want/wants} to keep everycat safe.",
-            "And if scaring cats stiff into confronting their problems is what it takes ... Well, then that's just what {PRONOUN/r_c:0/subject}'ll do."
         ]
     },
     "Grief_medicine_H1": {
@@ -5783,6 +5600,32 @@
         },
         "intro": [
             "[t_c notices you approach and turns to face you fully, head tilted in question.]"
+        ]
+    },
+    "medshunned_H4": {
+        "frequency": 2,
+        "cats": {
+            "y_c": {
+                "condition": [
+                    "injury:any"
+                ],
+                "standing": [
+                    "shunned"
+                ]
+            },
+            "t_c": {
+                "standing": [
+                    "shunned"
+                ],
+                "rank": [
+                    "medicine cat apprentice"
+                ]
+            }
+        },
+        "intro": [
+            "Stop squirming! I may have not finished my training before I was shunned, but I can still do some things!",
+            "Okay, would you rather beg for treatment or take treatment from a half trained apprentice?",
+            "... That's what I thought."
         ]
     }
 }

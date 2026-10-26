@@ -8439,7 +8439,7 @@
         ]
     },
     "neurotic_choice_nightapprentice_SQ38": {
-        "camp": [
+        "camp_scene": [
             "[You wordlessly turn and start back towards camp. It takes a moment for t_c to realize you're leaving, but when {PRONOUN/t_c/subject} {VERB/t_c/do/does}, {PRONOUN/t_c/subject} {VERB/t_c/gasp/gasps} and {VERB/t_c/race/races} to catch up.]",
             "y_c... um...",
             "[t_c falls silent. {PRONOUN/t_c/subject/CAP} {VERB/t_c/don't/doesn't} say anything for the rest of the walk, and can't look you in the eyes when {PRONOUN/t_c/subject} {VERB/t_c/mumble/mumbles} goodnight.]"
@@ -8485,7 +8485,7 @@
         "intro_choices": {
             "choice1": {
                 "text": "[Silently return to camp.]",
-                "next_scene": "camp"
+                "next_scene": "camp_scene"
             },
             "choice2": {
                 "text": "[Comfort {PRONOUN/t_c/object}.]",

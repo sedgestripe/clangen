@@ -4315,7 +4315,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_30",
+                    "max_like_-30",
                     "max_trust_30",
                     "max_like_30"
                 ]
@@ -4414,7 +4414,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_30",
+                    "max_like_-30",
                     "grandparent/grandchild",
                     "max_like_30"
                 ]
@@ -5133,16 +5133,18 @@
                 "age": ["senior"]
             }
         },
-        "relationship": [
-            {
-                "cats_from": ["t_c"],
-                "cats_to": ["r_c:0"],
-                "relationship": ["min_like_10"]
-            }
-        ],
         "intro": [
             "Be sure to watch your steps, y_c. Wouldn't want you to slip and fall off one of these edges.",
             "I've seen my fair share of ice-related injuries."
+        ],
+        "relationships": [
+            {
+                "cats_from": ["t_c"],
+                "cats_to": [
+                    "y_c"
+                ],
+                "relationship": ["min_like_10"]
+            }
         ]
     }
 }

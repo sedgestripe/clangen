@@ -24,6 +24,7 @@ def choose_random_cats(
     the_cat: Cat = None,
     cat_dict={},
     key="",
+    fixed_cats: dict = None,
 ):
     """
     Selects random cats for LG stuff!
@@ -33,6 +34,7 @@ def choose_random_cats(
     :param the_cat: Cat object for the talking cat. Outside of dialogue, this is None.
     :param cat_dict: Dict containing existing abbrevs and Cat objects as key-value pairs.
     :param key: Optional content key to pass for debugging.
+    :param fixed_cats: Optional dict of abbrevs that must be one specific cat.
 
     """
     possible_cats = Cat.all_cats_list.copy()
@@ -51,6 +53,10 @@ def choose_random_cats(
             possible_cats_dict[abbrev] = _validate_cat(
                 abbrev, cats_block, possible_cats, your_cat, the_cat
             )
+            if fixed_cats and abbrev in fixed_cats:
+                possible_cats_dict[abbrev] = [
+                    c for c in possible_cats_dict[abbrev] if c is fixed_cats[abbrev]
+                ]
             if not possible_cats_dict[abbrev]:
                 return {}
 
@@ -108,9 +114,10 @@ def _validate_cat(abbrev, cat_block, possible_cats, your_cat, the_cat):
             continue
 
         if "focus_cat" in cat_block[abbrev]:
-            if cat_block[abbrev]["focus_cat"] and cat.ID != game.clan.focus_cat:
+            is_focus_cat = cat is game.clan.focus_cat
+            if cat_block[abbrev]["focus_cat"] and not is_focus_cat:
                 continue
-            elif not cat_block[abbrev]["focus_cat"] and cat.ID == game.clan.focus_cat:
+            elif not cat_block[abbrev]["focus_cat"] and is_focus_cat:
                 continue
 
         new_possible_cats.append(cat)
@@ -132,10 +139,9 @@ def _validate_cat(abbrev, cat_block, possible_cats, your_cat, the_cat):
 
 def __filter_dead(abbrev_block, cat):
     if "min_max_dead_moons" in abbrev_block:
-        if (
-            abbrev_block["min_max_dead_moons"][0] > cat.dead_for
-            or abbrev_block["min_max_dead_moons"][1] < cat.dead_for
-        ):
+        min_moons, max_moons = abbrev_block["min_max_dead_moons"]
+        # a max of -1 means there is no upper limit
+        if min_moons > cat.dead_for or (max_moons != -1 and max_moons < cat.dead_for):
             return False
     if "residence" in abbrev_block:
         if not cat.dead:
@@ -277,21 +283,26 @@ def __filter_rank(abbrev_block, cat):
         or f"-{cat.status.rank.replace(' ', '_')}" in abbrev_block["rank"]
     ):
         return False
-    elif "df_trainee" in abbrev_block["rank"]:
-        if not cat.joined_df:
-            return False
-    elif "not_df_trainee" in abbrev_block["rank"]:
-        if cat.joined_df:
-            return False
-    elif "guide" in abbrev_block["rank"]:
-        if cat not in (game.clan.instructor, game.clan.demon):
-            return False
-    elif abbrev_block["rank"] and "any" not in abbrev_block["rank"]:
-        # "any" means no rank restriction (still subject to the not_/- exclusions above)
-        if (
-            cat.status.rank not in abbrev_block["rank"]
-            and cat.status.rank.replace(" ", "_") not in abbrev_block["rank"]
-        ):
+
+    # df_trainee/not_df_trainee/guide are extra
+    if "df_trainee" in abbrev_block["rank"] and not cat.joined_df:
+        return False
+    if "not_df_trainee" in abbrev_block["rank"] and cat.joined_df:
+        return False
+    if "guide" in abbrev_block["rank"] and cat not in (
+        game.clan.instructor,
+        game.clan.demon,
+    ):
+        return False
+
+    ranks = [
+        r
+        for r in abbrev_block["rank"]
+        if r not in ("df_trainee", "not_df_trainee", "guide")
+        and not r.startswith(("not_", "-"))
+    ]
+    if ranks and "any" not in ranks:
+        if cat.status.rank not in ranks and cat.status.rank.replace(" ", "_") not in ranks:
             return False
     return True
 
@@ -472,6 +483,11 @@ def _is_congenital(cat, name: str):
     if condition is None or condition not in cat.permanent_conditions:
         return None
     return condition.is_congenital
+
+
+def _is_grieving(grieving_cat, dead_cat) -> bool:
+    condition = grieving_cat.get_condition("grief_stricken")
+    return condition is not None and getattr(condition, "grief_cat", None) == dead_cat.ID
 
 
 def __filter_conditions(abbrev_block, cat):
@@ -706,11 +722,10 @@ def __filter_relationships(
                                     rel_valid = to_cat.is_grandparent(from_cat)
                                 elif rel_tag == "half-siblings":
                                     rel_valid = to_cat.is_half_sibling(from_cat)
-                                elif rel_tag in ("dead/grieving", "grieving/dead"):
-                                    # grief conditions don't record who is being grieved, so
-                                    # these can't be matched (they never matched before either:
-                                    # the old check looked for a "grief cat" key that was never set)
-                                    rel_valid = False
+                                elif rel_tag == "dead/grieving":
+                                    rel_valid = _is_grieving(to_cat, from_cat)
+                                elif rel_tag == "grieving/dead":
+                                    rel_valid = _is_grieving(from_cat, to_cat)
                                 elif rel_tag == "related":
                                     rel_valid = from_cat.is_related(
                                         to_cat, get_clan_setting("first cousin mates")

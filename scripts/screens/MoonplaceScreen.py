@@ -29,6 +29,7 @@ from scripts.game_structure import game
 from enum import Enum  # pylint: disable=no-name-in-module
 from scripts.cat.names import Name
 from scripts.game_structure.screen_settings import MANAGER
+from ..ui.elements.image_button import UIImageButton
 from ..ui.elements.surface_image_button import UISurfaceImageButton
 from ..ui.generate_button import ButtonStyles, get_button_dict
 from scripts.events_module.text_adjust import (
@@ -86,6 +87,7 @@ class MoonplaceScreen(Screens):
         self.choicepanel = False
         self.textbox_graphic = None
         self.starclan_cats = []
+        self.prophecy_scenes = None
 
     def screen_switches(self):
         super().screen_switches()
@@ -98,6 +100,8 @@ class MoonplaceScreen(Screens):
         self.choicepanel = False
         self.created_choice_buttons = False
         self.profile_elements = {}
+        self.prophecy_scenes = None
+        self.current_scene = "intro"
 
         self.starclan_cats = [
             cat
@@ -274,6 +278,8 @@ class MoonplaceScreen(Screens):
             if self.text_index == len(self.text_frames) - 1:
                 if self.frame_index == len(self.text_frames[self.text_index]) - 1:
                     self.paw.visible = True
+                    if not self.created_choice_buttons:
+                        self.create_choice_buttons()
 
         except:
             pass
@@ -292,6 +298,11 @@ class MoonplaceScreen(Screens):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if event.ui_element == self.back_button:
                 self.change_screen(GameScreen.PROFILE)
+            for scene, button in self.choice_buttons.items():
+                if event.ui_element == button:
+                    self.current_scene = scene
+                    self.refresh_current_scene()
+                    break
         elif event.type == pygame.KEYDOWN and game_setting_get("keybinds"):
             if event.key == pygame.K_ESCAPE:
                 self.change_screen(GameScreen.PROFILE)
@@ -308,6 +319,68 @@ class MoonplaceScreen(Screens):
             except:
                 pass
         return
+
+    def create_choice_buttons(self):
+        self.created_choice_buttons = True
+        if (
+            not self.prophecy_scenes
+            or f"{self.current_scene}_choices" not in self.prophecy_scenes
+        ):
+            return
+
+        y_pos = 0
+        for option in self.prophecy_scenes[f"{self.current_scene}_choices"].values():
+            scene = option["next_scene"]
+
+            self.choice_buttons[scene] = UIImageButton(
+                ui_scale(pygame.Rect((390, 427 + y_pos), (34, 34))),
+                text="",
+                object_id="#dialogue_choice_button",
+                manager=MANAGER,
+            )
+
+            self.option_bgs[scene] = pygame_gui.elements.UIImage(
+                ui_scale(pygame.Rect((430, 427 + y_pos), (270, 35))),
+                pygame.transform.scale(
+                    image_cache.load_image(
+                        "resources/images/option_bg.png"
+                    ).convert_alpha(),
+                    (270, 35),
+                ),
+                manager=MANAGER,
+            )
+
+            adjusted = self.get_adjusted_txt([option["text"]], self.the_cat)
+            self.text_choices[scene] = pygame_gui.elements.UITextBox(
+                adjusted[0] if adjusted else option["text"],
+                ui_scale(pygame.Rect((435, 428 + y_pos), (270, 35))),
+                object_id="#text_box_30_horizleft",
+                manager=MANAGER,
+            )
+
+            y_pos -= 40
+
+    def refresh_current_scene(self):
+        for element in (
+            *self.choice_buttons.values(),
+            *self.option_bgs.values(),
+            *self.text_choices.values(),
+        ):
+            element.kill()
+        self.choice_buttons = {}
+        self.option_bgs = {}
+        self.text_choices = {}
+
+        self.texts = self.get_adjusted_txt(
+            self.prophecy_scenes[self.current_scene], self.the_cat
+        )
+        self.text_frames = [
+            [text[: i + 1] for i in range(len(text))] for text in self.texts
+        ]
+        self.text_index = 0
+        self.frame_index = 0
+        self.paw.visible = False
+        self.created_choice_buttons = False
 
     def get_cluster_list(self):
         return [
@@ -437,8 +510,8 @@ class MoonplaceScreen(Screens):
             Switch.next_possible_disaster, choice(list(possible_texts2.keys()))
         )
 
-        prophecy = choice(
-            possible_texts2[switch_get_value(Switch.next_possible_disaster)]["text"]
+        prophecy, self.prophecy_scenes = self.get_prophecy(
+            switch_get_value(Switch.next_possible_disaster), possible_texts2
         )
 
         return self.get_adjusted_txt(
@@ -448,6 +521,26 @@ class MoonplaceScreen(Screens):
             + prophecy,
             cat,
         )
+
+    def get_prophecy(self, disaster, prophecies):
+        tag = disaster.lower().replace(" ", "_")
+        interactive = [
+            scenes
+            for scenes in load_lang_resource(
+                "events/lifegen_events/moonplace/prophecies_choices.json"
+            ).values()
+            if tag in scenes.get("tags", [])
+        ]
+        interactive_intros = [scenes["intro"] for scenes in interactive]
+
+        pool = [
+            (lines, None)
+            for lines in prophecies[disaster]["text"]
+            if lines not in interactive_intros
+        ]
+        pool.extend((scenes["intro"], scenes) for scenes in interactive)
+
+        return choice(pool)
 
     def get_adjusted_txt(self, text, cat):
         you = game.clan.your_cat

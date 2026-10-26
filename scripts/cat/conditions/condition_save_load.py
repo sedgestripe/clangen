@@ -166,6 +166,8 @@ def condition_convert(condition_info: dict) -> dict:
                     "omit_moonskip": con["event_triggered"],
                     "scar_pool_override": con.get("potential_scars"),
                     "is_complication": name in ("infection", "festering_wound"),
+                    # LG: old saves stored who a grief stricken cat was grieving
+                    "grief_cat": con.get("grief_cat"),
                 }
                 for risk in con["risks"]:
                     risk_name = _convert_name(risk["name"])

@@ -4127,122 +4127,6 @@
             "[{PRONOUN/t_c/subject/CAP} {VERB/t_c/turn/turns} and {VERB/t_c/run/runs} away. You'll have to keep your eye on {PRONOUN/t_c/object}...]"
         ]
     },
-    "deaddeputy_connected_J1~2_2": {
-        "frequency": 2,
-        "cats": {
-            "y_c": {
-                "cluster": [
-                    "cool"
-                ],
-                "age": [
-                    "adult"
-                ],
-                "min_max_dead_moons": [
-                    40,
-                    -1
-                ],
-                "residence": [
-                    "sc"
-                ]
-            },
-            "t_c": {
-                "cluster": [
-                    "upstanding"
-                ],
-                "condition": [
-                    "blind:any:false"
-                ],
-                "rank": [
-                    "deputy",
-                    "connected"
-                ],
-                "min_max_dead_moons": [
-                    10,
-                    -1
-                ],
-                "residence": [
-                    "sc"
-                ]
-            }
-        },
-        "intro": [
-            "[It's been a while since you've heard of t_c's escape attempts... Maybe {PRONOUN/t_c/subject} actually succeeded, you joke to yourself.]",
-            "Hi, y_c.",
-            "[Never mind. Here t_c is, looking just as starry as before.]",
-            "If you're here to make fun of me, save it. I couldn't find any way to get back to the Clan.",
-            "And I'm not saying you're right-- I just haven't figured it out yet.",
-            "Now, go away. I'm thinking."
-        ]
-    },
-    "deaddeputy_connected_J1~3_2": {
-        "frequency": 2,
-        "cats": {
-            "y_c": {
-                "cluster": [
-                    "cool"
-                ],
-                "age": [
-                    "adult"
-                ],
-                "min_max_dead_moons": [
-                    40,
-                    -1
-                ],
-                "residence": [
-                    "sc"
-                ]
-            },
-            "t_c": {
-                "cluster": [
-                    "upstanding"
-                ],
-                "condition": [
-                    "blind:any:false"
-                ],
-                "rank": [
-                    "deputy",
-                    "connected"
-                ],
-                "min_max_dead_moons": [
-                    10,
-                    -1
-                ],
-                "residence": [
-                    "sc"
-                ]
-            },
-            "r_c:0": {
-                "rank": [
-                    "medicine cat",
-                    "medicine cat apprentice"
-                ]
-            },
-            "r_c:1": {
-                "rank": [
-                    "deputy"
-                ]
-            },
-            "r_c:2": {
-                "rank": [
-                    "warrior"
-                ]
-            },
-            "r_c:3": {
-                "residence": [
-                    "sc"
-                ]
-            }
-        },
-        "intro": [
-            "y_c, y_c! Oh, guess what!",
-            "[t_c looks ecstatic!]",
-            "The half-moon meeting for the Clans was yesterday, and I got to visit r_c:0's dreams!",
-            "Yeah, I do still miss living with the Clan, but...",
-            "You never told me being a StarClan cat could be so fun!",
-            "I'm gonna go ask r_c:3 how {PRONOUN/r_c:3/subject} {VERB/r_c:3/make/makes} omens... I'm thinking of sending r_c:1 a sign that r_c:2 should be put on more patrols.",
-            "[Looks like {PRONOUN/t_c/subject} found some more work to do!]"
-        ]
-    },
     "neurotic_choice_foxtokit_SQ5~2_2": {
         "frequency": 2,
         "cats": {
@@ -6342,7 +6226,7 @@
             },
             "t_c": {
                 "condition": [
-                    "water in their lungs",
+                    "water in lungs",
                     "yellowcough",
                     "redcough",
                     "greencough",
@@ -6380,7 +6264,7 @@
             },
             "t_c": {
                 "condition": [
-                    "water in their lungs",
+                    "water in lungs",
                     "yellowcough",
                     "redcough",
                     "greencough",

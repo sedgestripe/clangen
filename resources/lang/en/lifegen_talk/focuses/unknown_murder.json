@@ -2985,7 +2985,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_10",
+                    "max_like_-10",
                     "max_like_30"
                 ]
             },
@@ -4348,11 +4348,15 @@
                     "neurotic"
                 ]
             },
-            "r_c:4": {}
+            "r_c:4": {
+                "cluster": [
+                    "upstanding"
+                ]
+            }
         },
         "intro": [
             "Everycat is thinking r_c:0 or r_c:1 murdered r_c:2.",
-            "But I think we need to think out of the box. What about r_c:3? Or r_c:4_upstanding?",
+            "But I think we need to think out of the box. What about r_c:3? Or r_c:4?",
             "Hey, I'm not weird for that! It's always the quiet, uptight ones...",
             "Huh? Oh, I didn't say anything! Ahaha..."
         ]

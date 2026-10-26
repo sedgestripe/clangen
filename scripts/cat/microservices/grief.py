@@ -104,6 +104,10 @@ def grief(dead_cat: "Cat", body: bool):
             gain_temporary_condition(
                 cat, "grief_stricken", omit_moonskip=True, severity="major"
             )
+            # LG: remember who is being grieved, for dialogue
+            grief_condition = cat.get_condition("grief_stricken")
+            if grief_condition and not grief_condition.grief_cat:
+                grief_condition.grief_cat = dead_cat.ID
 
         # If major grief fails, but there are still very_high or high values,
         # it can fail to minor grief. If they have a family relation, bypass the roll and guarantee it

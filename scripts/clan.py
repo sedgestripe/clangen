@@ -1544,7 +1544,7 @@ class Clan:
             if clan_data["focus_cat"] is None:
                 game.clan.focus_cat = None
             else:
-                game.clan.focus_cat = Cat.all_cats[clan_data["focus_cat"]]
+                game.clan.focus_cat = Cat.all_cats.get(clan_data["focus_cat"])
 
         switch_set_value(Switch.error_message, "")
 

@@ -7562,19 +7562,17 @@
                     "blind:any:false"
                 ],
                 "rank": [
-                    "older",
                     "not_newborn"
+                ],
+                "age": [
+                    "older"
                 ]
             }
         },
         "relationships": [
             {
-                "cats_from": [
-                    "t_c"
-                ],
-                "cats_to": [
-                    "y_c"
-                ],
+                "cats_from": ["t_c"],
+                "cats_to": ["y_c"],
                 "relationship": [
                     "max_like_-10"
                 ]

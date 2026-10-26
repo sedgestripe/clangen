@@ -1108,7 +1108,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_50",
+                    "max_like_-50",
                     "non-mates"
                 ]
             }
@@ -4438,7 +4438,7 @@
                 ],
                 "relationship": [
                     "mates",
-                    "max_dislike_25"
+                    "min_like_-25"
                 ]
             }
         ],
@@ -5341,7 +5341,7 @@
                 ],
                 "relationship": [
                     "non-mates",
-                    "min_dislike_25",
+                    "max_like_-25",
                     "min_romance_10"
                 ]
             }
@@ -5715,7 +5715,7 @@
                 ],
                 "relationship": [
                     "non-mates",
-                    "min_dislike_10"
+                    "max_like_-10"
                 ]
             }
         ],
@@ -5994,7 +5994,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_10"
+                    "max_like_-10"
                 ]
             }
         ],
@@ -8201,7 +8201,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_20",
+                    "max_like_-20",
                     "min_romance_20"
                 ]
             }
@@ -8542,7 +8542,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_50"
+                    "max_like_-50"
                 ]
             }
         ],
@@ -8650,7 +8650,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_50"
+                    "max_like_-50"
                 ]
             }
         ],
@@ -8826,7 +8826,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_30",
+                    "max_like_-30",
                     "non-mates"
                 ]
             },
@@ -8873,7 +8873,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_30",
+                    "max_like_-30",
                     "non-mates"
                 ]
             },
@@ -9078,7 +9078,7 @@
                 ],
                 "relationship": [
                     "non-mates",
-                    "min_dislike_10"
+                    "max_like_-10"
                 ]
             }
         ],
@@ -10668,7 +10668,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "max_dislike_5"
+                    "min_like_-5"
                 ]
             }
         ],
@@ -10704,7 +10704,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "max_dislike_5"
+                    "min_like_-5"
                 ]
             }
         ],
@@ -11203,7 +11203,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_30"
+                    "max_like_-30"
                 ]
             }
         ],
@@ -11724,7 +11724,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_10",
+                    "max_like_-10",
                     "non-mates"
                 ]
             }
@@ -11930,7 +11930,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_40"
+                    "max_like_-40"
                 ]
             }
         ],
@@ -12129,7 +12129,7 @@
                     "y_c"
                 ],
                 "relationship": [
-                    "min_dislike_25"
+                    "max_like_-25"
                 ]
             },
             {

@@ -14739,7 +14739,11 @@
                 ]
             }
         },
-        "relationship": [
+        "intro": [
+            "Ugh, this snow is such a nightmare. y_c, can you help me make sure all the exits are clear?",
+            "We need to be sure we can leave our tunnels in case of an emergency."
+        ],
+        "relationships": [
             {
                 "cats_from": [
                     "t_c"
@@ -14751,10 +14755,6 @@
                     "min_respect_5"
                 ]
             }
-        ],
-        "intro": [
-            "Ugh, this snow is such a nightmare. y_c, can you help me make sure all the exits are clear?",
-            "We need to be sure we can leave our tunnels in case of an emergency."
         ]
     }
 }

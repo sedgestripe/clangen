@@ -12847,7 +12847,7 @@
             "t_c": {
                 "condition": [
                     "paralyzed:any:true",
-                    "constant join pain:any:true",
+                    "constant joint pain:any:true",
                     "raspy lungs:any:true"
                 ],
                 "rank": [
@@ -14701,50 +14701,6 @@
             "r_c:1 was telling r_c:0 that I was, um, making little squeaking noises when I was asleep last night.",
             "{PRONOUN/r_c:1/subject/CAP} {VERB/t_c/were/was} laughing at me, I think? {PRONOUN/t_c/subject/CAP} said it was cute, and that's a good thing, right? But it made me feel weird.",
             "Can we play something? I don't wanna think about that anymore."
-        ]
-    },
-    "neurotic_fromparent_SQ1~1": {
-        "frequency": 2,
-        "cats": {
-            "y_c": {
-                "condition": [
-                    "blind:any:false"
-                ],
-                "age": [
-                    "kitten"
-                ]
-            },
-            "t_c": {
-                "cluster": [
-                    "neurotic"
-                ],
-                "age": [
-                    "adult"
-                ],
-                "condition": [
-                    "blind:any:false"
-                ]
-            }
-        },
-        "relationships": [
-            {
-                "cats_from": [
-                    "t_c"
-                ],
-                "cats_to": [
-                    "y_c"
-                ],
-                "relationship": [
-                    "parent/child",
-                    "adoptive parent/adoptive child",
-                    "min_like_50"
-                ]
-            }
-        ],
-        "intro": [
-            "y_c, my sweet kit... after you become an apprentice, and start spending all day with your mentor and the other apprentices...",
-            "Make sure to come tell me how everything's going. I want to hear about your training, and if anyone's being mean to you, and if you noticed something scary...",
-            "Oh! And the good things, too, of course!"
         ]
     },
     "neurotic_aboutshunned_SQ3": {
@@ -21995,6 +21951,9 @@
             "r_c:0": {
                 "rank": [
                     "kitten"
+                ],
+                "cluster": [
+                    "attention-seeker"
                 ]
             }
         },
@@ -22024,8 +21983,8 @@
             }
         ],
         "intro": [
-            "[t_c and r_c:0_attention-seeker have been playing together a lot lately.]",
-            "[It's an odd match, but maybe r_c:0_attention-seeker just knows how to bring your kit out of {PRONOUN/t_c/poss} shell.]"
+            "[t_c and r_c:0 have been playing together a lot lately.]",
+            "[It's an odd match, but maybe r_c:0 just knows how to bring your kit out of {PRONOUN/t_c/poss} shell.]"
         ]
     },
     "self-conscious_kitten_rad1": {
@@ -25238,7 +25197,7 @@
             }
         },
         "help": [
-            "[You take t_c by the paw and teach {PRONOUN/m_c/object} the ways of den repair.]",
+            "[You take t_c by the paw and teach {PRONOUN/t_c/object} the ways of den repair.]",
             "[The task takes a bit longer than it would on your own, but t_c is enthusiastic and picks up your lessons more quickly than expected.]",
             "y_c, this is so much fun! I wanna help a whole lot from now on, and get just as great at this as you someday!"
         ],
@@ -25754,18 +25713,18 @@
                 "age": ["not_kitten"]
             },
             "t_c": {
-              "age": ["kitten"]
+                "age": ["kitten"]
             }
         },
-        "relationship": [
+        "intro": [
+            "y_c!! When's the green gonna come back? I'm tired of so much grey!"
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_5"]
             }
-        ],
-        "intro": [
-            "y_c!! When's the green gonna come back? I'm tired of so much grey!"
         ]
     },
     "quarrycamp_avix1": {
@@ -25778,16 +25737,9 @@
                 "age": ["not_kitten"]
             },
             "t_c": {
-              "age": ["kitten"]
+                "age": ["kitten"]
             }
         },
-        "relationship": [
-            {
-                "cats_from": ["t_c"],
-                "cats_to": ["y_c"],
-                "relationship": ["min_like_20"]
-            }
-        ],
         "intro": [
             "[t_c has been brushing snow off the giant skeleton all day.]",
             "Hi!! I'm keeping them from being cold!! Wanna help?"
@@ -25803,12 +25755,19 @@
             }
         },
         "warm": [
-          "Yay!! You can get that side while I finish this side!",
-          "[Before too long, you and t_c have cleared off all the snow. The kit is clearly proud of your shared efforts!]"
+            "Yay!! You can get that side while I finish this side!",
+            "[Before too long, you and t_c have cleared off all the snow. The kit is clearly proud of your shared efforts!]"
         ],
         "cold": [
-          "Aw, okay...",
-          "[{PRONOUN/t_c/subject} {VERB/t_c/go/goes} back to wiping off snow, silently.]"
+            "Aw, okay...",
+            "[{PRONOUN/t_c/subject} {VERB/t_c/go/goes} back to wiping off snow, silently.]"
+        ],
+        "relationships": [
+            {
+                "cats_from": ["t_c"],
+                "cats_to": ["y_c"],
+                "relationship": ["min_like_20"]
+            }
         ]
     }
 }

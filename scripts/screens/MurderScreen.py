@@ -2155,6 +2155,10 @@ class MurderScreen(Screens):
                 cat_to_murder.history.add_death(f"{you.name} murdered this cat.")
             self.choose_discover_punishment(you, cat_to_murder, accomplice, accompliced)
         else:
+            # an unsolved murder becomes the Clan's dialogue focus
+            game.clan.focus = "unknown_murder"
+            game.clan.focus_moons = 0
+            game.clan.focus_cat = cat_to_murder
             if accomplice:
                 if accompliced:
                     cat_to_murder.history.add_death(

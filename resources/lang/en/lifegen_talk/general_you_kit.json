@@ -5567,52 +5567,6 @@
             "I can't help but wonder what compelled you to do it. The curiosity will eat at me but alas, I'm not looking forward to an answer."
         ]
     },
-    "strange_sh_H11": {
-        "frequency": 2,
-        "cats": {
-            "y_c": {
-                "cluster": [
-                    "strange"
-                ],
-                "condition": [
-                    "blind:any:false"
-                ],
-                "standing": [
-                    "shunned"
-                ],
-                "rank": [
-                    "warrior"
-                ]
-            },
-            "t_c": {
-                "cluster": [
-                    "strange"
-                ],
-                "condition": [
-                    "blind:any:false"
-                ]
-            }
-        },
-        "relationships": [
-            {
-                "cats_from": [
-                    "t_c"
-                ],
-                "cats_to": [
-                    "y_c"
-                ],
-                "relationship": [
-                    "min_trust_50"
-                ]
-            }
-        ],
-        "intro": [
-            "I still trust you, even after everything you did. I think it's hard to break my trust when it's really set in.",
-            "You were always the more impulsive one out of the two of us, more dangerous. I can only wonder what made you crack.",
-            "What, y_c? Don't look at me like that. Of course, I'm not going to question your motives.",
-            "... Well..."
-        ]
-    },
     "sc_kit_df": {
         "frequency": 2,
         "cats": {
@@ -15341,19 +15295,6 @@
             "[You feel like you might not have any left by the time it's over...]"
         ],
         "intro_scene_effects": {
-            "relationship": {
-                "cats_to": [
-                    "t_c"
-                ],
-                "cats_from": [
-                    "y_c"
-                ],
-                "values": {
-                    "like": 2,
-                    "comfort": -2
-                },
-                "mutual": false
-            },
             "relationships": [
                 {
                     "cats_from": ["y_c"],
@@ -15481,19 +15422,19 @@
                 "condition": ["grief stricken"]
             },
             "t_c": {
-              "age": ["not_kitten"]
+                "age": ["not_kitten"]
             }
         },
-        "relationship": [
+        "intro": [
+            "Hey, y_c. I found these cool gems earlier, they kinda look like stars, right?",
+            "I figured you might want to keep one. It might help ease your heart."
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_20"]
             }
-        ],
-        "intro": [
-            "Hey, y_c. I found these cool gems earlier, they kinda look like stars, right?",
-            "I figured you might want to keep one. It might help ease your heart."
         ]
     },
     "city_kitten_ashe1": {
@@ -15547,6 +15488,50 @@
             "Hey!",
             "[A weird seagull...]",
             "[You glance at the creaking boards, and it looks back.]"
+        ]
+    },
+    "neurotic_fromparent_SQ1~1": {
+        "frequency": 2,
+        "cats": {
+            "y_c": {
+                "condition": [
+                    "blind:any:false"
+                ],
+                "age": [
+                    "kitten"
+                ]
+            },
+            "t_c": {
+                "cluster": [
+                    "neurotic"
+                ],
+                "age": [
+                    "adult"
+                ],
+                "condition": [
+                    "blind:any:false"
+                ]
+            }
+        },
+        "relationships": [
+            {
+                "cats_from": [
+                    "t_c"
+                ],
+                "cats_to": [
+                    "y_c"
+                ],
+                "relationship": [
+                    "parent/child",
+                    "adoptive parent/adoptive child",
+                    "min_like_50"
+                ]
+            }
+        ],
+        "intro": [
+            "y_c, my sweet kit... after you become an apprentice, and start spending all day with your mentor and the other apprentices...",
+            "Make sure to come tell me how everything's going. I want to hear about your training, and if anyone's being mean to you, and if you noticed something scary...",
+            "Oh! And the good things, too, of course!"
         ]
     }
 }

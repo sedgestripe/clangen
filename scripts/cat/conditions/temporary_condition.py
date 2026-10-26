@@ -11,6 +11,8 @@ class TemporaryCondition(BaseCondition):
     infectiousness: float
     scar_pool_override: list[str]
     is_complication: bool = False
+    # LG: ID of the cat being grieved, for grief_stricken
+    grief_cat: str | None = None
 
     def __eq__(self, other):
         return other == self.name

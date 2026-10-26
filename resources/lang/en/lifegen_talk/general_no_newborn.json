@@ -8581,16 +8581,16 @@
             "y_c": {},
             "t_c": {}
         },
-        "relationship": [
+        "intro": [
+            "You don't think the bees are going to come back for their hive, do you?",
+            "N-no reason, I'm just wondering!"
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_10"]
             }
-        ],
-        "intro": [
-            "You don't think the bees are going to come back for their hive, do you?",
-            "N-no reason, I'm just wondering!"
         ]
     },
     "frogslakepine_JOL": {
@@ -8608,17 +8608,17 @@
                 "condition": ["hearing"]
             }
         },
-        "relationship": [
+        "intro": [
+            "The frogs are loud tonight.",
+            "[t_c falls silent and the two of you listen together. The fireflies seem to dance in time with the chorus of crickets and frogs.]",
+            "[It's mesmerizing. You reflect on how many cats must live too far from the water to enjoy nights like these, and feel a warm current of affection for your home.]"
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_0"]
             }
-        ],
-        "intro": [
-            "The frogs are loud tonight.",
-            "[t_c falls silent and the two of you listen together. The fireflies seem to dance in time with the chorus of crickets and frogs.]",
-            "[It's mesmerizing. You reflect on how many cats must live too far from the water to enjoy nights like these, and feel a warm current of affection for your home.]"
         ]
     },
    "quarry_kitten_H1": {
@@ -8658,16 +8658,16 @@
                 "age": ["not_kitten"]
             }
         },
-        "relationship": [
+        "intro": [
+            "It's so nice that the tide pulls back so far during Greenleaf.",
+            "Just look at all the hidden treasures we wouldn't have seen otherwise!"
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_10"]
             }
-        ],
-        "intro": [
-            "It's so nice that the tide pulls back so far during Greenleaf.",
-            "Just look at all the hidden treasures we wouldn't have seen otherwise!"
         ]
     },
     "forestcamps_avix1": {
@@ -8693,17 +8693,19 @@
     },
     "crystalcavecamp_avix1": {
         "frequency": 2,
-        "biome": ["mountain"],
+        "biome": [
+            "mountainous"
+        ],
         "camp": ["camp3"],
         "cats": {
             "y_c": {
                 "age": ["not_kitten"]
             },
             "t_c": {
-              "rank": ["kitten", "apprentice"]
+                "rank": ["kitten", "apprentice"]
             },
             "r_c:0": {
-              "rank": ["kitten", "apprentice"]
+                "rank": ["kitten", "apprentice"]
             }
         },
         "intro": [
@@ -8721,16 +8723,16 @@
             }
         },
         "seafoam": [
-          "Hooray!! I win! See, r_c:0, told you seafoam was cool!",
-          "|r_c:0|Congrats! I'll win next time, though. I'll find one way better than seafoam!",
-          "No way!",
-          "[They both wander off, laughing, leaving you with the two crystals.]"
+            "Hooray!! I win! See, r_c:0, told you seafoam was cool!",
+            "|r_c:0|Congrats! I'll win next time, though. I'll find one way better than seafoam!",
+            "No way!",
+            "[They both wander off, laughing, leaving you with the two crystals.]"
         ],
         "transluscent": [
-          "|r_c:0|Yes!! Look, t_c, I win! Translucent was the way to go!",
-          "Hooray! I'll find one way better next time, though!",
-          "|r_c:0|Nuh uh!",
-          "[They both wander off, laughing, leaving you with the two crystals.]"
+            "|r_c:0|Yes!! Look, t_c, I win! Translucent was the way to go!",
+            "Hooray! I'll find one way better next time, though!",
+            "|r_c:0|Nuh uh!",
+            "[They both wander off, laughing, leaving you with the two crystals.]"
         ],
         "seafoam_scene_effects": {
             "relationships": [
@@ -8812,13 +8814,16 @@
                 "condition": ["grief stricken"]
             },
             "t_c": {
-              "age": ["not_kitten"]
+                "age": ["not_kitten"]
             },
             "r_c:0": {
-              "condition": ["blind:any:false", "deaf:any:false"]
+                "condition": ["blind:any:false", "deaf:any:false"]
             }
         },
-        "relationship": [
+        "intro": [
+            "[t_c is sitting beside you, the two of you pointing out landmarks far below the cliffs. It was t_c's idea, in the hopes of taking your mind off of r_c:0.]"
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
@@ -8829,9 +8834,6 @@
                 "cats_to": ["r_c:0"],
                 "relationship": ["grieving/dead"]
             }
-        ],
-        "intro": [
-            "[t_c is sitting beside you, the two of you pointing out landmarks far below the cliffs. It was t_c's idea, in the hopes of taking your mind off of r_c:0.]"
         ]
     },
     "campsgrieving_avix5": {

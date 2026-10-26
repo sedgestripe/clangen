@@ -1,5 +1,8 @@
 {
     "no_disaster1": {
+        "tags": [
+            "no_disaster"
+        ],
         "intro": [
             "Beware the cat in the shadows."
         ],
@@ -400,6 +403,9 @@
         ]
     },
     "hurricane1": {
+        "tags": [
+            "hurricane"
+        ],
         "intro": [
             "Tempest comes. Tempest calls. Who are you to ignore the wind? Who are you to ignore the rain?"
         ],
@@ -428,6 +434,9 @@
         ]
     },
     "blizzard1": {
+        "tags": [
+            "great_blizzard"
+        ],
         "intro": [
             "Blind will you go, In the torrent of snow, In the darkness its seeds sow, Our light we will show, Should you let it be so"
         ],
@@ -456,6 +465,9 @@
         ]
     },
     "wildfire1": {
+        "tags": [
+            "wildfire"
+        ],
         "intro": [
             "The warmth is not safe."
         ],
@@ -485,6 +497,9 @@
         ]
     },
     "floods1": {
+        "tags": [
+            "floods"
+        ],
         "intro": [
             "Seeping and suffocating, rising and raising, our vital source will engulf our growth anew."
         ],
@@ -513,6 +528,9 @@
         ]
     },
     "floods2": {
+        "tags": [
+            "floods"
+        ],
         "intro": [
             "Bubbles will break the surface, rubble will flow and water will crush."
         ],
@@ -541,6 +559,9 @@
         ]
     },
     "floods3": {
+        "tags": [
+            "floods"
+        ],
         "intro": [
             "An unbreakable force will pull you down into the dark waters."
         ],
@@ -570,6 +591,9 @@
         ]
     },
     "terrible_cold1": {
+        "tags": [
+            "terrible_cold"
+        ],
         "intro": [
             "There is frost in your blood that no warmth can melt."
         ],
@@ -598,6 +622,9 @@
         ]
     },
     "terrible_cold2": {
+        "tags": [
+            "terrible_cold"
+        ],
         "intro": [
             "Nothing awaits but a cold embrace."
         ],
@@ -626,6 +653,9 @@
         ]
     },
     "terrible_cold3": {
+        "tags": [
+            "terrible_cold"
+        ],
         "intro": [
             "Like weeds to a garden, a host has been found."
         ],
@@ -654,6 +684,9 @@
         ]
     },
     "twoleg1": {
+        "tags": [
+            "twoleg_invasion"
+        ],
         "intro": [
             "Beings of two will march the land, bringing destruction where they stand."
         ],
@@ -682,6 +715,9 @@
         ]
     },
     "twoleg2": {
+        "tags": [
+            "twoleg_invasion"
+        ],
         "intro": [
             "Creatures, ignorant and vain, will settle in the land we claim."
         ],
@@ -710,6 +746,9 @@
         ]
     },
     "twoleg3": {
+        "tags": [
+            "twoleg_invasion"
+        ],
         "intro": [
             "Fear the ones built like trees, for they shall do what they please."
         ],
@@ -738,6 +777,9 @@
         ]
     },
     "twoleg4": {
+        "tags": [
+            "twoleg_invasion"
+        ],
         "intro": [
             "Shadows walk into your camp, uninvited and unwanted."
         ],
@@ -766,6 +808,9 @@
         ]
     },
     "twoleg5": {
+        "tags": [
+            "twoleg_invasion"
+        ],
         "intro": [
             "Like thorns, it's a grasp one cannot escape."
         ],

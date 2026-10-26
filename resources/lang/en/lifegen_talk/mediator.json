@@ -33,60 +33,6 @@
             "And I'm not afraid to tell you so."
         ]
     },
-    "assertivemediator_comfort_2": {
-        "frequency": 2,
-        "cats": {
-            "y_c": {
-                "condition": [
-                    "blind:any:false"
-                ],
-                "age": [
-                    "not_kitten"
-                ],
-                "rank": [
-                    "any"
-                ]
-            },
-            "t_c": {
-                "cluster": [
-                    "assertive"
-                ],
-                "condition": [
-                    "blind:any:false"
-                ],
-                "age": [
-                    "not_kitten"
-                ],
-                "rank": [
-                    "mediator apprentice"
-                ]
-            }
-        },
-        "relationships": [
-            {
-                "cats_from": [
-                    "t_c"
-                ],
-                "cats_to": [
-                    "y_c"
-                ],
-                "relationship": [
-                    "min_comfort_50",
-                    "min_like_50"
-                ]
-            }
-        ],
-        "intro": [
-            "Huh? Oh, nothing's wrong ...",
-            "Just ... had a bad day, is all ...",
-            "*Sigh* y_c, have you ever felt like you're not enough for anyone?",
-            "Usually, when it comes to making a decision, I never hesitate. Whatever the obstacle, I'll run headfirst into it, no questions asked.",
-            "But, today, when negotiating with an enemy Clan, I said something risky and it completely backfired. Luckily, I was able to smooth things over, but because of me, the Clan could've been hurt, or worse.",
-            "I just feel like such a failure. A liability. Everycat in the Clan is depending on me, but what if I keep falling short?",
-            "[You offer t_c words of reassurance, but {PRONOUN/t_c/subject} {VERB/t_c/seem/seems} troubled beyond comforting.]",
-            "[Still, you sit with {PRONOUN/t_c/object} through the night, hoping to stabilize {PRONOUN/t_c/object} through whatever storm {PRONOUN/t_c/subject} might be weathering right now.]"
-        ]
-    },
     "brooding_mediator_2": {
         "frequency": 2,
         "cats": {
@@ -2295,9 +2241,6 @@
                 ],
                 "condition": [
                     "blind:any:false"
-                ],
-                "rank": [
-                    "leaf-fall"
                 ]
             }
         },
@@ -4034,19 +3977,64 @@
                 "rank": ["mediator", "mediator_apprentice"]
             },
             "t_c": {
-              "rank": ["mediator", "mediator_apprentice"]
+                "rank": ["mediator", "mediator_apprentice"]
             }
         },
-        "relationship": [
+        "intro": [
+            "I've been thinking, what if we use some of these crystals in mediation sessions?",
+            "Looking at something pretty can help calm cats down, after all!"
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_5"]
             }
+        ]
+    },
+    "about_brooding_AJ1_2": {
+        "frequency": 2,
+        "cats": {
+            "y_c": {
+                "age": [
+                    "not_kitten"
+                ]
+            },
+            "t_c": {
+                "age": [
+                    "not_kitten"
+                ],
+                "rank": [
+                    "mediator",
+                    "mediator apprentice"
+                ]
+            },
+            "r_c:0": {
+                "rank": [
+                    "mediator"
+                ],
+                "cluster": [
+                    "brooding"
+                ]
+            }
+        },
+        "relationships": [
+            {
+                "cats_from": [
+                    "t_c"
+                ],
+                "cats_to": [
+                    "y_c"
+                ],
+                "relationship": [
+                    "min_trust_15"
+                ]
+            }
         ],
         "intro": [
-            "I've been thinking, what if we use some of these crystals in mediation sessions?",
-            "Looking at something pretty can help calm cats down, after all!"
+            "Oh, StarClan, did r_c:0 call yet another Clanmate a mousebrain? *Sigh* {PRONOUN/r_c:0/subject/CAP} sure {VERB/r_c:0/tend/tends} to do that a lot ...",
+            "Try not to take it too personally, y_c. I know {PRONOUN/r_c:0/poss} methods may seem ... unorthodox, but r_c:0 really isn't a bad cat. {PRONOUN/r_c:0/subject/CAP} just {VERB/r_c:0/want/wants} to keep everycat safe.",
+            "And if scaring cats stiff into confronting their problems is what it takes ... Well, then that's just what {PRONOUN/r_c:0/subject}'ll do."
         ]
     }
 }

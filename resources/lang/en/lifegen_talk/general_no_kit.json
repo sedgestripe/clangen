@@ -67005,7 +67005,7 @@
         "intro": [
             "y_c, I'm not going to go on patrol today.",
             "What do you mean, why not? With a runny nose like this, I can't smell anything.",
-            "On a border patrol, I might miss the scent markers and accidentally cross the border with o_c...",
+            "On a border patrol, I might miss the scent markers and accidentally cross the border with o_c_n...",
             "... And I'm no use on a hunting patrol. Even if I can scent prey, it'll be scared off by my sniffling.",
             "[You hate to admit that t_c has a point.]"
         ]
@@ -69500,7 +69500,7 @@
                 ],
                 "condition": [
                     "blind:any:false",
-                    "illness_any",
+                    "illness:any",
                     "injury:any"
                 ],
                 "rank": [
@@ -73797,7 +73797,7 @@
             },
             "choice2": {
                 "text": "r_c:0 is right.",
-                "next_scene": "parenting"
+                "next_scene": "no"
             }
         },
         "try": [
@@ -79005,7 +79005,7 @@
             "plains"
         ],
         "season": [
-            "leaf bare"
+            "leaf-bare"
         ],
         "frequency": 2,
         "cats": {
@@ -79036,12 +79036,8 @@
         },
         "relationships": [
             {
-                "cats_from": [
-                    "t_c"
-                ],
-                "cats_to": [
-                    "y_c"
-                ],
+                "cats_from": ["t_c"],
+                "cats_to": ["y_c"],
                 "relationship": [
                     "cousins"
                 ]
@@ -79155,12 +79151,8 @@
         },
         "relationships": [
             {
-                "cats_from": [
-                    "t_c"
-                ],
-                "cats_to": [
-                    "y_c"
-                ],
+                "cats_from": ["t_c"],
+                "cats_to": ["y_c"],
                 "relationship": [
                     "siblings",
                     "min_like_40",
@@ -79171,7 +79163,7 @@
         ],
         "intro": [
             "Ah, y_c! Perfect timing!",
-            "[The bundle of moss that t_c had been carrying falls to {PRONOUN/m_c/poss} paws.]",
+            "[The bundle of moss that t_c had been carrying falls to {PRONOUN/t_c/poss} paws.]",
             "I was just getting some fresh nesting materials for the little ones. I've got quite a bundle stacked near the camp's entrance- would you mind helping?",
             "You always have such an eye for these things."
         ],
@@ -79187,7 +79179,7 @@
         },
         "nurserybeddingJOL": [
             "Great! I knew I could count on you.",
-            "[t_c picks up {PRONOUN/t_c/poss} bundle of moss, shows you to {PRONOUN/t_c/poss} accumulated pile of bedding, and then makes {PRONOUN/m_c/poss} way to the nursery.]",
+            "[t_c picks up {PRONOUN/t_c/poss} bundle of moss, shows you to {PRONOUN/t_c/poss} accumulated pile of bedding, and then makes {PRONOUN/t_c/poss} way to the nursery.]",
             "[There's a lot. t_c really went wild here. You pick up a bundle of your own and follow {PRONOUN/t_c/object} to the nursery.]",
             "[As soon as you enter the den, it becomes clear that this is now the warmest place in the camp.]",
             "[Tufts of wool, fur, and downy plants line the lower rim of the den. The nests are plush with feathers and moss. Flowers speckle the walls.]"
@@ -79204,6 +79196,10 @@
             "choice2": {
                 "text": "Leave some work for the apprentices!",
                 "next_scene": "apprenticeworkJOL"
+            },
+            "choice3": {
+                "text": "Is my den next?",
+                "next_scene": "mydennextJOL"
             }
         },
         "goodworkJOL": [
@@ -79260,7 +79256,7 @@
                 }
             ]
         },
-        "refusenursery_scene_effects": {
+        "refusenurseryJOL_scene_effects": {
             "relationships": [
                 {
                     "cats_from": ["t_c"],
@@ -79292,12 +79288,10 @@
         },
         "kitplansJOL_scene_effects": {
             "inventory": {
-                "cats_to": [
-                    "y_c"
-                ],
+                "cats_to": ["y_c"],
                 "accessory": [
                     "BLEEDING HEARTS",
-                    "BLEEDING VINES",
+                    "BLEEDINGVINES",
                     "CHERRYPLUMLEAVES",
                     "WHITEWOOL",
                     "BEAR",
@@ -79323,16 +79317,14 @@
         },
         "queensappreciateJOL_scene_effects": {
             "inventory": {
-                "cats_to": [
-                    "y_c"
-                ],
+                "cats_to": ["y_c"],
                 "accessory": [
                     "GRAYWOOL",
                     "BLACKWOOL",
                     "CREAMWOOL",
                     "WHITEWOOL",
                     "VINE",
-                    "SPRINGFEATHERS",
+                    "SPINGFEATHERS",
                     "SPRINGFLOWERCORSAGE"
                 ],
                 "addition": "choice"
@@ -79354,17 +79346,15 @@
         },
         "mydennextJOL_scene_effects": {
             "inventory": {
-                "cats_to": [
-                    "y_c"
-                ],
+                "cats_to": ["y_c"],
                 "accessory": [
-                    "MOSSPELT",
+                    "MOSS PELT",
                     "JAY FEATHERS",
                     "YELLOWWISTERIA",
                     "RED FEATHERS",
                     "TULIPPETALS",
                     "GULL FEATHERS",
-                    "SPRINGFEATHERS"
+                    "SPINGFEATHERS"
                 ],
                 "addition": "choice"
             },
@@ -79636,25 +79626,40 @@
         ]
     },
 "cityleaffall1May": {
-       "season": ["leaf-fall"],
-       "biome": ["plains"],
-       "camp": ["camp6"],
-       "cats": {
-            "y_c": {
-                "status": ["not_kitten"]
-            },
-            "t_c": {
-                "status": ["not_kitten"]
-            }
+    "season": ["leaf-fall"],
+    "biome": ["plains"],
+    "camp": ["camp6"],
+    "cats": {
+        "y_c": {
+            "rank": [
+                "not_kitten"
+            ]
         },
-        "relationship": ["min_like_5"],
-        "intro": [
-            "y_c.",
-            "[t_c is crouched underneath a sleeping Twoleg monster, sheltered from the rain.]",
-            "Come join me. It's too cold and wet to get anything done right now.",
-            "Don't worry about the monster waking up. See the moss growing under it? This one's been asleep for a while. I don't think its Twolegs are coming back for it."
-        ]
+        "t_c": {
+            "rank": [
+                "not_kitten"
+            ]
+        }
     },
+    "intro": [
+        "y_c.",
+        "[t_c is crouched underneath a sleeping Twoleg monster, sheltered from the rain.]",
+        "Come join me. It's too cold and wet to get anything done right now.",
+        "Don't worry about the monster waking up. See the moss growing under it? This one's been asleep for a while. I don't think its Twolegs are coming back for it."
+    ],
+    "relationships": [
+        {
+            "cats_from": [
+                "t_c"
+            ],
+            "cats_to": [
+                "y_c"
+            ],
+            "relationship": ["min_like_5"]
+        }
+    ],
+    "frequency": 2
+},
     "lakesidecamp_avix1": {
         "frequency": 3,
         "season": ["leaf-fall"],
@@ -79668,16 +79673,16 @@
                 "cluster": ["upstanding", "cool", "stable"]
             }
         },
-        "relationship": [
+        "intro": [
+            "Awfully foggy today, isn't it?",
+            "Be sure to keep an ear out, y_c. Wouldn't want anything sneaking up on you when visibility is low."
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_20"]
             }
-        ],
-        "intro": [
-            "Awfully foggy today, isn't it?",
-            "Be sure to keep an ear out, y_c. Wouldn't want anything sneaking up on you when visibility is low."
         ]
     },
    "quay_sickboat_H1": {
@@ -79713,16 +79718,16 @@
                 "skill": ["SWIMMER,1"]
             }
         },
-        "relationship": [
+        "intro": [
+            "[t_c hauls {PRONOUN/t_c/poss} way out of the lake, eyes bright and fur streaming.]",
+            "You should go for a swim at some point today y_c, the water is great!"
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_1"]
             }
-        ],
-        "intro": [
-            "[t_c hauls {PRONOUN/t_c/poss} way out of the lake, eyes bright and fur streaming.]",
-            "You should go for a swim at some point today y_c, the water is great!"
         ]
     },
     "fisherlake1_JOL": {
@@ -79741,17 +79746,17 @@
                 "skill": ["FISHER,1"]
             }
         },
-        "relationship": [
+        "intro": [
+            "[t_c sits by the lakeside, paw poised over the water. Noticing your approach, {PRONOUN/t_c/subject} {VERB/t_c/flick/flicks} {PRONOUN/t_c/poss} ear in greeting.]",
+            "Do you want to do some fishing together, y_c?",
+            "Have our own little in-camp hunting patrol?"
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_5"]
             }
-        ],
-        "intro": [
-            "[t_c sits by the lakeside, paw poised over the water. Noticing your approach, {PRONOUN/t_c/subject} {VERB/t_c/flick/flicks} {PRONOUN/t_c/poss} ear in greeting.]",
-            "Do you want to do some fishing together, y_c?",
-            "Have our own little in-camp hunting patrol?"
         ]
     },
     "littermatelakegreenleaf1_JOL": {
@@ -79769,17 +79774,17 @@
                 "condition": ["hearing", "blind:any:false"]
             }
         },
-        "relationship": [
+        "intro": [
+            "[You're grooming your fur when t_c charges you, sending you both into the lake with a splash.]",
+            "[When you surface coughing and sputtering {PRONOUN/t_c/subject} {VERB/t_c/laugh/laughs}, pulling you close in the shallows and licking your forehead.]",
+            "You seemed like you could use some help."
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["littermates", "min_like_25"]
             }
-        ],
-        "intro": [
-            "[You're grooming your fur when t_c charges you, sending you both into the lake with a splash.]",
-            "[When you surface coughing and sputtering {PRONOUN/t_c/subject} {VERB/t_c/laugh/laughs}, pulling you close in the shallows and licking your forehead.]",
-            "You seemed like you could use some help."
         ]
     },
     "genleafbaretunnels_JOL1": {
@@ -79797,16 +79802,16 @@
                 "condition": ["hearing"]
             }
         },
-        "relationship": [
+        "intro": [
+            "Morning, y_c. Have you felt the wind at the entryway tunnel yet?",
+            "Watch your ears when you do. I doubt that anyone will be looking forward to going out in that today."
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_-10"]
             }
-        ],
-        "intro": [
-            "Morning, y_c. Have you felt the wind at the entryway tunnel yet?",
-            "Watch your ears when you do. I doubt that anyone will be looking forward to going out in that today."
         ]
     },
     "campgrieving_avix1": {
@@ -79823,15 +79828,15 @@
                 "condition": ["deaf:any:false"]
             }
         },
-        "relationship": [
+        "intro": [
+            "r_c:0 used to love the way those little waterfalls freeze..."
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["r_c:0"],
                 "relationship": ["grieving/dead"]
             }
-        ],
-        "intro": [
-            "r_c:0 used to love the way those little waterfalls freeze..."
         ]
     },
     "campgrieving_avix2": {
@@ -79847,16 +79852,16 @@
                 "condition": ["deaf:any:false"]
             }
         },
-        "relationship": [
+        "intro": [
+            "Me and r_c:0 once sat up all night together, doing nothing but watching the gentle flickering of those lights.",
+            "I wish I could do it again. Even if it's just once more."
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["r_c:0"],
                 "relationship": ["grieving/dead"]
             }
-        ],
-        "intro": [
-            "Me and r_c:0 once sat up all night together, doing nothing but watching the gentle flickering of those lights.",
-            "I wish I could do it again. Even if it's just once more."
         ]
     },
     "campgrieving_avix3": {
@@ -79873,16 +79878,16 @@
                 "condition": ["deaf:any:false"]
             }
         },
-        "relationship": [
+        "intro": [
+            "y_c... Do you remember how the lights looked on r_c:0's pelt? In {PRONOUN/r_c:0/poss} eyes?",
+            "I do. I'd do anything to see it all again. To tell {PRONOUN/r_c:0/object} how wonderful {PRONOUN/r_c:0/subject} {VERB/r_c:0/were/was}."
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["r_c:0"],
                 "relationship": ["grieving/dead"]
             }
-        ],
-        "intro": [
-            "y_c... Do you remember how the lights looked on r_c:0's pelt? In {PRONOUN/r_c:0/poss} eyes?",
-            "I do. I'd do anything to see it all again. To tell {PRONOUN/r_c:0/object} how wonderful {PRONOUN/r_c:0/subject} {VERB/r_c:0/were/was}."
         ]
     },
     "tidalcavecamp_avix1": {
@@ -79910,22 +79915,22 @@
         "camp": ["camp3"],
         "cats": {
             "y_c": {
-              "condition": ["blind:any:false"]
+                "condition": ["blind:any:false"]
             },
             "t_c": {
-              "condition": ["blind:any:false"]
+                "condition": ["blind:any:false"]
             }
         },
-        "relationship": [
+        "intro": [
+            "Brrr...",
+            "Do these crystals reflect the cold or something? It's always so, so chilly during leaf-bare..."
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_5"]
             }
-        ],
-        "intro": [
-            "Brrr...",
-            "Do these crystals reflect the cold or something? It's always so, so chilly during leaf-bare..."
         ]
     },
     "desertcamp_avix2": {
@@ -79977,19 +79982,19 @@
                 "age": ["not_kitten"]
             },
             "t_c": {
-              "age": ["not_kitten"],
-              "skill": ["CLAIRVOYANT,1"]
+                "age": ["not_kitten"],
+                "skill": ["CLAIRVOYANT,1"]
             }
         },
-        "relationship": [
+        "intro": [
+            "Try to keep cool today, y_c. It's looking like it's going to be overly hot today."
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["y_c"],
                 "relationship": ["min_like_10"]
             }
-        ],
-        "intro": [
-            "Try to keep cool today, y_c. It's looking like it's going to be overly hot today."
         ]
     },
     "campsgrieving_avix6": {
@@ -80001,20 +80006,20 @@
                 "age": ["not_kitten"]
             },
             "t_c": {
-              "age": ["not_kitten"],
-              "condition": ["grief stricken"]
+                "age": ["not_kitten"],
+                "condition": ["grief stricken"]
             },
             "r_c:0": {}
         },
-        "relationship": [
+        "intro": [
+            "I hope r_c:0's bones last as long as that skeleton's. They- They need to last forever. I can't lose all that's left of {PRONOUN/r_c:0/subject}, not now and not ever."
+        ],
+        "relationships": [
             {
                 "cats_from": ["t_c"],
                 "cats_to": ["r_c:0"],
                 "relationship": ["grieving/dead"]
             }
-        ],
-        "intro": [
-            "I hope r_c:0's bones last as long as that skeleton's. They- They need to last forever. I can't lose all that's left of {PRONOUN/r_c:0/subject}, not now and not ever."
         ]
     },
     "campsgrieving_avix8": {
@@ -80045,25 +80050,15 @@
             },
             "t_c": {
                 "age": ["not_kitten"],
-                "min_max_faith": [2,9]
+                "min_max_faith": [
+                    2,
+                    9
+                ]
             },
             "r_c:0": {
                 "age": ["not_kitten"]
             }
         },
-        "relationship": [
-            {
-                "cats_from": ["t_c"],
-                "cats_to": ["y_c"],
-                "relationship": ["min_like_10"]
-            },
-            {
-                "cats_from": ["r_c:0"],
-                "cats_to": ["y_c"],
-                "relationship": ["min_like_10"]
-            }
-
-        ],
         "intro": [
             "So... What do you think knocked all these huge trees down so perfectly? Personally, I think it was the work of Starclan.",
             "|r_c:0|Or a really big disaster! Maybe a massive earthquake hit and knocked them all down.",
@@ -80079,21 +80074,33 @@
                 "next_scene": "tsunami"
             },
             "choice3": {
-              "text": "Secret Third Option",
-              "next_scene": "mystery"
+                "text": "Secret Third Option",
+                "next_scene": "mystery"
             }
         },
         "harpyja": [
-          "|r_c:0|Ooh, maybe it used the trees as perches? And they couldn't support its weight?",
-          "That... sounds terrifying. I wouldn't want to meet a bird of that size!"
+            "|r_c:0|Ooh, maybe it used the trees as perches? And they couldn't support its weight?",
+            "That... sounds terrifying. I wouldn't want to meet a bird of that size!"
         ],
         "tsunami": [
-          "It'd have to be a really, really big flood. These are some big trees, after all.",
-          "|r_c:0|Maybe it was multiple disasters at once, like my earthquake and your flood. That could probably take down even bigger trees than these!"
+            "It'd have to be a really, really big flood. These are some big trees, after all.",
+            "|r_c:0|Maybe it was multiple disasters at once, like my earthquake and your flood. That could probably take down even bigger trees than these!"
         ],
         "mystery": [
-          "A secret, huh? You really think it's a mystery, or are you just out of ideas?",
-          "|r_c:0|What about cats who live on the moon? What if they came and took down the trees? That'd be pretty secret!"
+            "A secret, huh? You really think it's a mystery, or are you just out of ideas?",
+            "|r_c:0|What about cats who live on the moon? What if they came and took down the trees? That'd be pretty secret!"
+        ],
+        "relationships": [
+            {
+                "cats_from": ["t_c"],
+                "cats_to": ["y_c"],
+                "relationship": ["min_like_10"]
+            },
+            {
+                "cats_from": ["r_c:0"],
+                "cats_to": ["y_c"],
+                "relationship": ["min_like_10"]
+            }
         ]
     },
     "grottocamp_leaffall_ashe1": {
@@ -80112,13 +80119,6 @@
                 "cluster": ["introspective", "stable"]
             }
         },
-        "relationship": [
-            {
-                "cats_from": ["t_c"],
-                "cats_to": ["y_c"],
-                "relationship": ["min_comfort_10"]
-            }
-        ],
         "intro": [
             "[t_c sits at the edge of the camp, sheltered by the shadows of old stone and moss. You sit beside {PRONOUN/t_c/object} and follow {PRONOUN/t_c/poss} gaze to the crisp, falling leaves.]",
             "I wonder how many cats have watched the seasons change from this exact spot.",
@@ -80127,6 +80127,14 @@
             "[t_c's expression hardens, and silence consumes the conversation. Regardless, you continue to sit beside {PRONOUN/t_c/object} and wonder about the things you, too, cannot say aloud.]"
         ],
         "relationships": [
+            {
+                "cats_from": ["t_c"],
+                "cats_to": ["y_c"],
+                "relationship": ["min_comfort_10"]
+            }
+        ],
+        "intro_scene_effects": {
+            "relationships": [
                 {
                     "cats_from": ["y_c"],
                     "cats_to": ["t_c"],
@@ -80141,6 +80149,7 @@
                     }
                 }
             ]
+        }
     },
     "grottocamp_newleaf_introspective_ashe1": {
         "frequency": 2,
@@ -80202,6 +80211,52 @@
             "If they let me into StarClan, I want to know which of my ancestors decided a cave butted up to the sea was a great living space.",
             "The waves are constantly crashing, the nursery's wails reverberate, and peace isn't an option. Sometimes, the entrance to camp is <i>underwater!</i>",
             "Why are we still here, y_c? Just to suffer?"
+        ]
+    },
+    "strange_sh_H11": {
+        "frequency": 2,
+        "cats": {
+            "y_c": {
+                "cluster": [
+                    "strange"
+                ],
+                "condition": [
+                    "blind:any:false"
+                ],
+                "standing": [
+                    "shunned"
+                ],
+                "rank": [
+                    "warrior"
+                ]
+            },
+            "t_c": {
+                "cluster": [
+                    "strange"
+                ],
+                "condition": [
+                    "blind:any:false"
+                ]
+            }
+        },
+        "relationships": [
+            {
+                "cats_from": [
+                    "t_c"
+                ],
+                "cats_to": [
+                    "y_c"
+                ],
+                "relationship": [
+                    "min_trust_50"
+                ]
+            }
+        ],
+        "intro": [
+            "I still trust you, even after everything you did. I think it's hard to break my trust when it's really set in.",
+            "You were always the more impulsive one out of the two of us, more dangerous. I can only wonder what made you crack.",
+            "What, y_c? Don't look at me like that. Of course, I'm not going to question your motives.",
+            "... Well..."
         ]
     }
 }

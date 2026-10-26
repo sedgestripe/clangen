@@ -3523,5 +3523,50 @@
             "Ugh... My headache is messing with my ability to mediate arguments.",
             "How have I never noticed how loud arguments are?"
         ]
+    },
+    "about_brooding_AJ1": {
+        "frequency": 2,
+        "cats": {
+            "y_c": {
+                "age": [
+                    "not_kitten"
+                ]
+            },
+            "t_c": {
+                "age": [
+                    "not_kitten"
+                ],
+                "rank": [
+                    "mediator",
+                    "mediator apprentice"
+                ]
+            },
+            "r_c:0": {
+                "rank": [
+                    "mediator"
+                ],
+                "cluster": [
+                    "brooding"
+                ]
+            }
+        },
+        "relationships": [
+            {
+                "cats_from": [
+                    "t_c"
+                ],
+                "cats_to": [
+                    "y_c"
+                ],
+                "relationship": [
+                    "min_trust_15"
+                ]
+            }
+        ],
+        "intro": [
+            "Oh, StarClan, did r_c:0 call yet another Clanmate a mousebrain? *Sigh* {PRONOUN/r_c:0/subject/CAP} sure {VERB/r_c:0/tend/tends} to do that a lot ...",
+            "Try not to take it too personally, y_c. I know {PRONOUN/r_c:0/poss} methods may seem ... unorthodox, but r_c:0 really isn't a bad cat. {PRONOUN/r_c:0/subject/CAP} just {VERB/r_c:0/want/wants} to keep everycat safe.",
+            "And if scaring cats stiff into confronting their problems is what it takes ... Well, then that's just what {PRONOUN/r_c:0/subject}'ll do."
+        ]
     }
 }
